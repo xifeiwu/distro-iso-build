@@ -2,9 +2,6 @@
 ISOPATH=/home/j/Backup/linuxmint-15-cinnamon-dvd-32bit.iso
 echo warning:you should run as root. But be careful!
 
-
-cd $(dirname "$0")
-
 if [ ! -d mymint ] ; then
     if [ ! -e mintiso ] ; then
         echo mount iso to $PWD/mintiso

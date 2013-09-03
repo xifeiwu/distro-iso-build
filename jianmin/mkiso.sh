@@ -1,7 +1,5 @@
 #!/bin/echo warning:you should run as root. But be careful!
 
-cd $(dirname "$0")
-
 if [ ! -e $PWD/mymint ] ; then
     echo error: mymint does not exist. exit.
     exit

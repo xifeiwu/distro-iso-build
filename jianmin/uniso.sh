@@ -21,6 +21,12 @@ if [ ! -f $ISOPATH ] ; then
     exit
 fi
 
+echo uniso.sh will export iso file to $OUTPATH, the dir tree like this:
+echo +mkiso_out
+echo \|---mymint---------------  The files contained in iso.
+echo \|---initrd_lz------------  The files contained in iso/casper/initrd_lz
+echo \\---squashfs-root--------  The files contained in iso/casper/filesystem.squashfs
+
 if [ ! -d $OUTPATH ] ; then
     mkdir $OUTPATH
 fi

@@ -1,12 +1,11 @@
 #!/bin/sh
 ISOPATH=/home/j/Backup/linuxmint-15-cinnamon-dvd-32bit.iso
+echo warning:you should run as root and make sure you have executed su root. But be careful!
 
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute su ."
     exit
 fi
-
-echo warning:you should run as root. But be careful!
 
 if [ ! -d mymint ] ; then
     if [ ! -e mintiso ] ; then

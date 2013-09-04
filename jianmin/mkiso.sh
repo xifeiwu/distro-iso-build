@@ -1,4 +1,10 @@
-#!/bin/echo warning:you should run as root. But be careful!
+#!/bin/sh
+echo warning:you should run as root. But be careful!
+
+if [ "$USER" != "root" ] ; then
+    echo "error: you are not run as root user, you should excute su ."
+    exit
+fi
 
 if [ ! -e $PWD/mymint ] ; then
     echo error: mymint does not exist. exit.
@@ -7,6 +13,11 @@ fi
 
 if [ ! -e $PWD/mymint/casper ] ; then
     echo error: mymint/casper does not exist. exit.
+    exit
+fi
+
+if [ ! -e $PWD/initrd_lz ] ; then
+    echo error: initrd_lz does not exist. exit.
     exit
 fi
 
@@ -19,6 +30,13 @@ echo generate manifest.
 chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mymint/casper/filesystem.manifest
 cp mymint/casper/filesystem.manifest mymint/casper/filesystem.manifest-desktop
 
+echo gzip initrd
+cd initrd_lz
+find . | cpio --quiet --dereference -o -H newc>./initrd
+gzip initrd
+cp initrd.gz ../mymint/casper/initrd.lz
+cd ..
+
 echo mksquashfs
 rm -rf mymint/casper/filesystem.squashfs
 mksquashfs squashfs-root mymint/casper/filesystem.squashfs 
@@ -30,4 +48,5 @@ cd ..
 
 echo  mkisofs
 cd mymint
-mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "../mymint-1.0-i386.iso" .
+mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "../mymint-1.0-i386-`date +%Y%m%d%H%M`.iso" .
+echo mkiso has finished.

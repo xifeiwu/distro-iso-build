@@ -1,15 +1,35 @@
 #!/bin/sh
-ISOPATH=/home/j/Backup/linuxmint-15-cinnamon-dvd-32bit.iso
+OUTPATH=$PWD/mkiso_out
 echo warning:you should run as root and make sure you have executed su root. But be careful!
+echo warning:sudo is not supported.
 
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute su ."
     exit
 fi
 
+if [ -z "$1" ] ; then
+    echo "error: you should input isopath as first parameter. 
+    echo Just as: sh mkiso.sh filename.iso"
+    exit
+fi
+
+ISOPATH=$1
+
+if [ ! -f $ISOPATH ] ; then
+    echo error: iso is not exist, you should set it correctly. Wrong ISOPATH:$ISOPATH
+    exit
+fi
+
+if [ ! -d $OUTPATH ] ; then
+    mkdir $OUTPATH
+fi
+
+cd $OUTPATH
+
 if [ ! -d mymint ] ; then
     if [ ! -e mintiso ] ; then
-        echo mount iso to $PWD/mintiso
+        echo mount iso to $OUTPATH/mintiso
         mkdir mintiso
         mount -o loop $ISOPATH mintiso
     else

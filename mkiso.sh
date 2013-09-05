@@ -4,7 +4,7 @@ ISONAME="mymint-1.0-i386-`date +%Y%m%d%H%M`.iso"
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
-    echo "error: you are not run as root user, you should excute su ."
+    echo "error: you are not run as root user, you should excute sudo."
     exit
 fi
 
@@ -45,7 +45,7 @@ echo gzip initrd
 cd initrd_lz
 find . | cpio --quiet --dereference -o -H newc>./initrd
 gzip initrd
-cp initrd.gz ../mymint/casper/initrd.lz
+mv initrd.gz ../mymint/casper/initrd.lz
 cd ..
 
 echo mksquashfs

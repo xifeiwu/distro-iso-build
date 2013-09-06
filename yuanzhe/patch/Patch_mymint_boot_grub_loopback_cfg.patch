@@ -1,0 +1,16 @@
+1c1
+< menuentry "Start Linux Mint" {
+---
+> menuentry "Start COS_Linux" {
+6c6
+< menuentry "Start Linux Mint (compatibility mode)" {
+---
+> menuentry "Start COS_Linux (compatibility mode)" {
+10c10
+< menuentry "Check the integrity of the medium" {
+---
+> menuentry "Check the integrity of the mediumboot/grub/loopback" {
+14c14
+< menuentry "Test memory" {
+---
+> menuentry "Test memoryboot/grub/loopback" {

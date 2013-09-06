@@ -1,0 +1,8 @@
+6c6
+< menu title Welcome to Linux Mint 15 Cinnamon 32-bit
+---
+> menu title Welcome to COS_Linux 0.3v 32-bit
+30c30
+<   menu label Start Linux Mint
+---
+>   menu label Start COS_Linux

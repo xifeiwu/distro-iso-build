@@ -3,7 +3,7 @@ OUTPATH=$PWD/mkiso_out
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
-    echo "error: you are not run as root user, you should excute su ."
+    echo "error: you are not run as root user, you should excute sudo."
     exit
 fi
 
@@ -30,25 +30,25 @@ if [ ! -d $OUTPATH ] ; then
     mkdir $OUTPATH
 fi
 
-cd $OUTPATH
-
 if [ ! -d mymint ] ; then
     if [ ! -e mintiso ] ; then
         echo mount iso to $OUTPATH/mintiso
-        mkdir mintiso
-        mount -o loop $ISOPATH mintiso
+        mkdir $OUTPATH/mintiso
+        mount -o loop $ISOPATH $OUTPATH/mintiso
     else
         echo warning:mintiso has exist, it is expected iso has been mounted normally.
     fi
 
     echo copy iso/* to mymint, just wait for some minutes.
-    mkdir mymint
-    cp -r mintiso/. mymint
-    umount mintiso
-    rmdir mintiso
+    mkdir $OUTPATH/mymint
+    cp -r $OUTPATH/mintiso/. $OUTPATH/mymint
+    umount $OUTPATH/mintiso
+    rmdir $OUTPATH/mintiso
 else
     echo warning:mymint has exist, it is expected iso/* has been copied to mymint dir.
 fi
+
+cd $OUTPATH
 
 if [ ! -e initrd_lz ] ; then
     echo lzma initrd.lz

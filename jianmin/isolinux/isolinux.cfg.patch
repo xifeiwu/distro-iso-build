@@ -1,0 +1,20 @@
+--- mymint_raw/isolinux/isolinux.cfg	2013-09-06 14:39:33.876779779 +0800
++++ mymint/isolinux/isolinux.cfg	2013-09-05 15:31:14.926497808 +0800
+@@ -3,7 +3,7 @@
+ timeout 100
+ 
+ menu background splash.jpg
+-menu title Welcome to Linux Mint 15 Cinnamon 32-bit
++menu title Welcome to COS Desktop Iceblue 32-bit
+ 
+ menu color screen	37;40      #80ffffff #00000000 std
+ MENU COLOR border       30;44   #40ffffff #a0000000 std
+@@ -27,7 +27,7 @@
+ MENU HELPMSGENDROW 29
+ 
+ label live
+-  menu label Start Linux Mint
++  menu label Start COS Desktop
+   kernel /casper/vmlinuz
+   append  file=/cdrom/preseed/mint.seed boot=casper initrd=/casper/initrd.lz quiet splash --
+ menu default

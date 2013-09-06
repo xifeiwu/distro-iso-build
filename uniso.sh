@@ -1,10 +1,9 @@
 #!/bin/sh
 OUTPATH=$PWD/mkiso_out
-echo warning:you should run as root and make sure you have executed su root. But be careful!
-echo warning:sudo is not supported.
+echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
-    echo "error: you are not run as root user, you should excute su ."
+    echo "error: you are not run as root user, you should excute sudo."
     exit
 fi
 

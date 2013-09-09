@@ -1,0 +1,14 @@
+1.Replace the image in these path:
+  /myiso/mkiso_out/mymint/isolinux/splash.png
+  /myiso/mkiso_out/squashfs-root/lib/plymouth/themes/mint-logo/bootlogo.png
+  /myiso/mkiso_out/squashfs-root/lib/plymouth/themes/mint-logo/shutlogo.png
+  /myiso/mkiso_out/squashfs-root/lib/plymouth/themes/mint-logo/text.png
+  /myiso/mkiso_out/initrd_lz/lib/plymouth/themes/mint-logo/bootlogo.png
+  /myiso/mkiso_out/initrd_lz/lib/plymouth/themes/mint-logo/shutlogo.png
+  /myiso/mkiso_out/initrd_lz/lib/plymouth/themes/mint-logo/text.png
+
+2.There are still two places couldn't find to replace to our info, in the install process.
+
+3.In advanced, wo could make out COS_Linux introduction replace the slides in this path:
+  /myiso/mkiso_out/squashfs-root/usr/share/ubiquity-slideshow/slides
+  /myiso/mkiso_out/squashfs-root/usr/share/ubiquity-slideshow/slides/l10n/zh_CN

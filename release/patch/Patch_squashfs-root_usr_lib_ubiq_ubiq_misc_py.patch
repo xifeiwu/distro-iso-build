@@ -1,0 +1,11 @@
+--- squashfs-root_raw/usr/lib/ubiquity/ubiquity/misc.py	2013-05-08 03:48:01.000000000 +0800
++++ squashfs-root/usr/lib/ubiquity/ubiquity/misc.py	2013-09-09 16:07:42.571324741 +0800
+@@ -482,7 +482,7 @@
+         #     syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
+ 
+         # if not get_release.release_info:
+-        get_release.release_info = ReleaseInfo(name='Linux Mint', version='15')
++        get_release.release_info = ReleaseInfo(name='COS_Linux', version='0.3')
+     return get_release.release_info
+ 
+ get_release.release_info = None

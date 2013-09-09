@@ -1,0 +1,20 @@
+--- squashfs-root_raw/boot/grub/grub.cfg	2013-04-26 02:21:59.000000000 +0800
++++ squashfs-root/boot/grub/grub.cfg	2013-09-09 16:16:27.563313913 +0800
+@@ -122,7 +122,7 @@
+ fi
+ export linux_gfx_mode
+ if [ "$linux_gfx_mode" != "text" ]; then load_video; fi
+-menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
++menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
+ 	recordfail
+ 	gfxmode $linux_gfx_mode
+ 	insmod gzio
+@@ -137,7 +137,7 @@
+ 	linux	/boot/vmlinuz-3.8.0-19-generic root=UUID=ff4f9ece-3825-4e5f-8375-7d799f00f91b ro   quiet splash $vt_handoff
+ 	initrd	/boot/initrd.img-3.8.0-19-generic
+ }
+-menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
++menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
+ 	recordfail
+ 	insmod gzio
+ 	insmod part_msdos

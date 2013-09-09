@@ -2,7 +2,8 @@
 #change back_ground /usr/share/backgrounds/linuxmint-olivia
 
 OUTPATH=/home/j/pcos/mkiso_out
-DISTURBPATH=`dirname $0`
+DISTURBPATH=$(cd "$(dirname $0)"; pwd)
+
 
 CHROOTDIR=$OUTPATH/squashfs-root
 

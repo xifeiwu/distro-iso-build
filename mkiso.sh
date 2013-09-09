@@ -63,3 +63,4 @@ mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/
 echo mkiso has finished.
 cd ..
 ls -l $ISONAME
+echo you can test this iso by executing the command kvm -m 512 -cdrom $PWD/$ISONAME boot order=d

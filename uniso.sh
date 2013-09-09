@@ -30,7 +30,9 @@ if [ ! -d $OUTPATH ] ; then
     mkdir $OUTPATH
 fi
 
-if [ ! -d mymint ] ; then
+if [ ! -d $OUTPATH/mymint ] ; then
+    mkdir $OUTPATH/mymint
+
     if [ ! -e mintiso ] ; then
         echo mount iso to $OUTPATH/mintiso
         mkdir $OUTPATH/mintiso
@@ -40,7 +42,6 @@ if [ ! -d mymint ] ; then
     fi
 
     echo copy iso/* to mymint, just wait for some minutes.
-    mkdir $OUTPATH/mymint
     cp -r $OUTPATH/mintiso/. $OUTPATH/mymint
     umount $OUTPATH/mintiso
     rmdir $OUTPATH/mintiso

@@ -1,11 +1,26 @@
 #设置默认语言为中文简体，安装sogou中文输入法,把此脚本放在squashfs-root/../路径下,把app目录放在～/app下
+set -e
+
 CHROOTDIR=~/pcos/mkiso_out/squashfs-root
 DEBDIR=~/pcos/app
 DEBNAME=zh_CN.tar.gz
 
+if [ -z "$1" ] ; then
+    echo error: No chrootdir setting at first param.
+    exit -1
+fi
+
+if [ -z "$2" ] ; then
+    echo error: No deb dir setting at second param.
+    exit -1
+fi
+
+CHROOTDIR=$1/squashfs-root
+DEBDIR=$2
+
 if [ ! -e "${CHROOTDIR}" ]; then
     echo "squashfs-root not found"
-    exit
+    exit -1
 fi
 
 mkdir ${CHROOTDIR}/app

@@ -1,23 +1,24 @@
 #!/bin/sh
+set -e
 OUTPATH=$PWD/mkiso_out
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute sudo."
-    exit
+    exit -1
 fi
 
 if [ -z "$1" ] ; then
     echo "error: you should input isopath as first parameter. 
     echo Just as: sh mkiso.sh filename.iso"
-    exit
+    exit -1
 fi
 
 ISOPATH=$1
 
 if [ ! -f $ISOPATH ] ; then
     echo error: iso is not exist, you should set it correctly. Wrong ISOPATH:$ISOPATH
-    exit
+    exit -1
 fi
 
 echo uniso.sh will export iso file to $OUTPATH, the dir tree like this:

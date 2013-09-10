@@ -1,38 +1,40 @@
 #!/bin/sh
+set -e
+
 OUTPATH=$PWD/mkiso_out
 ISONAME="mymint-1.0-i386-`date +%Y%m%d%H%M`.iso"
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute sudo."
-    exit
+    exit -1
 fi
 
 if [ ! -d $OUTPATH ] ; then
     echo error: $OUTPATH does not exist. exit.
-    exit
+    exit -1
 fi
 
 cd $OUTPATH
 
 if [ ! -e mymint ] ; then
     echo error: mymint does not exist. exit.
-    exit
+    exit -1
 fi
 
 if [ ! -e mymint/casper ] ; then
     echo error: mymint/casper does not exist. exit.
-    exit
+    exit -1
 fi
 
 if [ ! -e initrd_lz ] ; then
     echo error: initrd_lz does not exist. exit.
-    exit
+    exit -1
 fi
 
 if [ ! -e squashfs-root ] ; then
     echo error: squashfs-root does not exist. exit.
-    exit
+    exit -1
 fi
 
 echo mkiso.sh will generate iso file $ISONAME in OUTPATH.

@@ -1,6 +1,12 @@
 #!/bin/sh
+set -e
 
-OUTPATH=/home/j/pcos/mkiso_out
+if [ -z "$1" ] ; then
+    echo error: No outpath setting at first param.
+    exit -1
+fi
+
+OUTPATH=$1
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
 echo change mymint/isolinux/splash.png

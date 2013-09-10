@@ -1,11 +1,17 @@
 #~/bin/sh
+set -e
 
+CURPATH=$PWD
 WORKPATH=$(cd "$(dirname $0)"; pwd)
+ISOPATH=/home/j/Backup/linuxmint-15-cinnamon-dvd-32bit.iso
+APPPATH=$CURPATH/app
+OUTPATH=$CURPATH/mkiso_out
 
-sudo sh $WORKPATH/uniso.sh /home/j/Backup/linuxmint-15-cinnamon-dvd-32bit.iso
-sudo sh $WORKPATH/release/installzh_CN.sh
-sudo sh $WORKPATH/release/installwps.sh
-sudo sh $WORKPATH/release/installchrome.sh
-sudo sh $WORKPATH/change_welcome_slide.sh
-sudo sh $WORKPATH/change_isolinux_splash.sh
+sudo sh $WORKPATH/uniso.sh $ISOPATH
+sudo sh $WORKPATH/release/installzh_CN.sh $OUTPATH $APPPATH
+sudo sh $WORKPATH/release/installwps.sh $OUTPATH $APPPATH
+sudo sh $WORKPATH/release/installchrome.sh $OUTPATH $APPPATH
+sudo sh $WORKPATH/release/change_welcome_slide.sh $OUTPATH
+sudo sh $WORKPATH/release/change_isolinux_splash.sh $OUTPATH
+sudo sh $WORKPATH/release/info_patch.sh $OUTPATH
 sudo sh $WORKPATH/mkiso.sh

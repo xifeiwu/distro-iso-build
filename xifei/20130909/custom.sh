@@ -1,6 +1,14 @@
 #!/bin/sh
 OUTPATH=$PWD/mkiso_out
-MATERIALPATH="./materials"
+
+if [ -z "$1" ] ; then
+    echo "error: you should input path as first parameter. 
+    echo Just as: sh custom.sh path/to/material"
+    exit
+fi
+MATERIALPATH=$1
+#"./materials"
+
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then

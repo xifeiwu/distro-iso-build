@@ -16,15 +16,24 @@ if [ "$USER" != "root" ] ; then
     exit
 fi
 
-cp ${MATERIALPATH}/* ./mkiso_out/squashfs-root/media
-deblist=`ls ${MATERIALPATH} | grep .deb`
+echo "custom initrd."
+if [ ! -e ${OUTPATH}/initrd_lz ]; then
+    echo "initrd_lz not found"
+    exit
+fi
+INITRDLOGO=${OUTPATH}/initrd_lz/lib/plymouth/themes
+cp ${MATERIALPATH}/bootlogo.png ${MATERIALPATH}/shutlogo.png ${INITRDLOGO}/mint-logo
+patch ${INITRDLOGO}/text.plymouth ${MATERIALPATH}/text.patch
+patch ${INITRDLOGO}/mint-text/mint-text.plymouth ${MATERIALPATH}/text.patch
 
-cd ${OUTPATH}
-if [ ! -e squashfs-root ]; then
+
+if [ ! -e ${OUTPATH}/squashfs-root ]; then
     echo "squashfs-root not found"
     exit
 fi
-
+cp ${MATERIALPATH}/* ./mkiso_out/squashfs-root/media
+deblist=`ls ${MATERIALPATH} | grep .deb`
+cd ${OUTPATH}
 sudo chroot squashfs-root /bin/bash -c "mount none  /proc -t proc"
 for file in $deblist
 do

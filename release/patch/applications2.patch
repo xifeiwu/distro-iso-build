@@ -1,0 +1,483 @@
+diff -uN squashfs-root/usr/share/applications_raw/icedtea-netx-javaws.desktop squashfs-root/usr/share/applications/icedtea-netx-javaws.desktop
+--- squashfs-root/usr/share/applications_raw/icedtea-netx-javaws.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/icedtea-netx-javaws.desktop	2013-09-12 13:25:09.158954558 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=IcedTea Java Web Start
++Name=启动IcedTea Java Web
+ Name[fi]=IcedTea Java - Web Start
+ Comment=IcedTea Java Web Start
+ Comment[fi]=IcedTea Java - Web Start
+diff -uN squashfs-root/usr/share/applications_raw/itweb-settings.desktop squashfs-root/usr/share/applications/itweb-settings.desktop
+--- squashfs-root/usr/share/applications_raw/itweb-settings.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/itweb-settings.desktop	2013-09-12 13:24:55.467342194 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=IcedTea Web Control Panel
++Name=设置IcedTea Web
+ Comment=Configure IcedTea Web (javaws and plugin)
+ Exec=/usr/bin/itweb-settings
+ Icon=javaws
+diff -uN squashfs-root/usr/share/applications_raw/language-selector.desktop squashfs-root/usr/share/applications/language-selector.desktop
+--- squashfs-root/usr/share/applications_raw/language-selector.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/language-selector.desktop	2013-09-12 13:25:34.919343753 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=Language Support
+-Comment=Configure multiple and native language support on your system
++Name=语言支持
++Comment=配置本地语言支持
+ Exec=/usr/bin/gnome-language-selector
+ Icon=preferences-desktop-locale
+ Terminal=false
+diff -uN squashfs-root/usr/share/applications_raw/mintBackup.desktop squashfs-root/usr/share/applications/mintBackup.desktop
+--- squashfs-root/usr/share/applications_raw/mintBackup.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintBackup.desktop	2013-09-12 13:29:57.318747604 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Backup Tool
++Name=备份工具
+ Name[en_GB]=Backup Tool
+ Name[ko]=백업 도구
+ Name[hr]=Alat za Kopiranje
+diff -uN squashfs-root/usr/share/applications_raw/mintBackup_mime.desktop squashfs-root/usr/share/applications/mintBackup_mime.desktop
+--- squashfs-root/usr/share/applications_raw/mintBackup_mime.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintBackup_mime.desktop	2013-09-12 13:30:13.993057342 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Backup Tool
++Name=备份工具
+ Name[en_GB]=Backup Tool
+ Name[ko]=백업 도구
+ Name[hr]=Alat za Kopiranje
+diff -uN squashfs-root/usr/share/applications_raw/mintdrivers.desktop squashfs-root/usr/share/applications/mintdrivers.desktop
+--- squashfs-root/usr/share/applications_raw/mintdrivers.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintdrivers.desktop	2013-09-12 13:31:21.934170427 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Driver Manager
++Name=驱动管理
+ Name[ro]=Driver Manager
+ Name[et]=Ajuri haldur
+ Name[sk]=Správca ovládačov
+@@ -29,6 +29,7 @@
+ Name[ms]=Pengurus Pemacu
+ Name[ca]=Driver Manager
+ Name[fr_CA]=Gestionnaire de pilotes
++Name[zh_CN]=驱动管理
+ Comment=Manage the drivers for your devices
+ Comment[ro]=Manage the drivers for your devices
+ Comment[et]=Halda ajureid oma seadmes
+diff -uN squashfs-root/usr/share/applications_raw/mintInstall.desktop squashfs-root/usr/share/applications/mintInstall.desktop
+--- squashfs-root/usr/share/applications_raw/mintInstall.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintInstall.desktop	2013-09-12 13:31:46.580671916 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Software Manager
++Name=软件管理
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+diff -uN squashfs-root/usr/share/applications_raw/mintInstall_kde.desktop squashfs-root/usr/share/applications/mintInstall_kde.desktop
+--- squashfs-root/usr/share/applications_raw/mintInstall_kde.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintInstall_kde.desktop	2013-09-12 13:32:10.352262174 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Software Manager
++Name=软件管理
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+diff -uN squashfs-root/usr/share/applications_raw/mintInstall_mime.desktop squashfs-root/usr/share/applications/mintInstall_mime.desktop
+--- squashfs-root/usr/share/applications_raw/mintInstall_mime.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintInstall_mime.desktop	2013-09-12 13:32:34.267837764 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Software Manager
++Name=软件管理
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+diff -uN squashfs-root/usr/share/applications_raw/mintNanny.desktop squashfs-root/usr/share/applications/mintNanny.desktop
+--- squashfs-root/usr/share/applications_raw/mintNanny.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintNanny.desktop	2013-09-12 13:33:00.358192914 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Domain Blocker
++Name=域名拦截工具
+ Name[en_GB]=Domain Blocker
+ Name[ko]=도메인 차단기
+ Name[hr]=Blokiranje domena
+diff -uN squashfs-root/usr/share/applications_raw/mintsources.desktop squashfs-root/usr/share/applications/mintsources.desktop
+--- squashfs-root/usr/share/applications_raw/mintsources.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintsources.desktop	2013-09-12 13:33:27.572434072 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Software Sources
++Name=软件源配置
+ Comment=Configure the sources for installable software and updates
+ Exec=software-sources
+ Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg
+diff -uN squashfs-root/usr/share/applications_raw/mintstick.desktop squashfs-root/usr/share/applications/mintstick.desktop
+--- squashfs-root/usr/share/applications_raw/mintstick.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintstick.desktop	2013-09-12 13:34:05.217617736 +0800
+@@ -4,7 +4,7 @@
+ Terminal=false
+ Icon=gtk-execute
+ Exec=mintstick
+-Name=USB Image Writer
++Name=刷写USB镜像工具
+ Name[fr]=Créateur de clé USB
+ Name[de]=USB Image-Aufzeichner
+ Comment=Make a bootable USB stick
+diff -uN squashfs-root/usr/share/applications_raw/mintstick-kde.desktop squashfs-root/usr/share/applications/mintstick-kde.desktop
+--- squashfs-root/usr/share/applications_raw/mintstick-kde.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintstick-kde.desktop	2013-09-12 13:34:30.406064181 +0800
+@@ -4,7 +4,7 @@
+ Terminal=false
+ Icon=system-run
+ Exec=mintstick
+-Name=USB Image Writer
++Name=刷写USB镜像工具
+ Name[fr]=Créateur de clé USB
+ Name[de]=USB Image-Aufzeichner
+ Comment=Make a bootable USB stick
+diff -uN squashfs-root/usr/share/applications_raw/mintUpdate.desktop squashfs-root/usr/share/applications/mintUpdate.desktop
+--- squashfs-root/usr/share/applications_raw/mintUpdate.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintUpdate.desktop	2013-09-12 13:34:50.185058999 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Update Manager
++Name=更新管理
+ Name[en_GB]=Update Manager
+ Name[ko]=업데이트 관리자
+ Name[hr]=Upravitelj nadogradnjama
+diff -uN squashfs-root/usr/share/applications_raw/mintWelcome.desktop squashfs-root/usr/share/applications/mintWelcome.desktop
+--- squashfs-root/usr/share/applications_raw/mintWelcome.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mintWelcome.desktop	2013-09-12 13:35:02.959763869 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Welcome Screen
++Name=欢迎屏幕
+ Name[da]=Velkomstskærm
+ Name[vi]=Màn hình Chào mừng
+ Name[te]=Welcome Screen
+diff -uN squashfs-root/usr/share/applications_raw/mono-runtime.desktop squashfs-root/usr/share/applications/mono-runtime.desktop
+--- squashfs-root/usr/share/applications_raw/mono-runtime.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mono-runtime.desktop	2013-09-12 13:35:21.217912879 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Mono Runtime
++Name=Mono运行时环境
+ Exec=mono
+ Terminal=false
+ Type=Application
+diff -uN squashfs-root/usr/share/applications_raw/mono-runtime-terminal.desktop squashfs-root/usr/share/applications/mono-runtime-terminal.desktop
+--- squashfs-root/usr/share/applications_raw/mono-runtime-terminal.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/mono-runtime-terminal.desktop	2013-09-12 13:35:46.970302057 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Mono Runtime (Terminal)
++Name=Mono运行时环境 (命令行)
+ Exec=mono
+ Terminal=true
+ Type=Application
+diff -uN squashfs-root/usr/share/applications_raw/ndisgtk.desktop squashfs-root/usr/share/applications/ndisgtk.desktop
+--- squashfs-root/usr/share/applications_raw/ndisgtk.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/ndisgtk.desktop	2013-09-12 13:36:07.050257172 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Windows Wireless Drivers
++Name=Windows兼容无线管理软件
+ Comment=Ndiswrapper driver installation tool
+ Exec=gksu /usr/sbin/ndisgtk
+ NotShowIn=KDE;
+diff -uN squashfs-root/usr/share/applications_raw/ndisgtk-kde.desktop squashfs-root/usr/share/applications/ndisgtk-kde.desktop
+--- squashfs-root/usr/share/applications_raw/ndisgtk-kde.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/ndisgtk-kde.desktop	2013-09-12 13:36:32.454638160 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Windows Wireless Drivers
++Name=Windows兼容无线管理工具
+ Comment=Ndiswrapper driver installation tool
+ Exec=kdesu /usr/sbin/ndisgtk -- --kde
+ Icon=ndisgtk.png
+diff -uN squashfs-root/usr/share/applications_raw/nemo-autorun-software.desktop squashfs-root/usr/share/applications/nemo-autorun-software.desktop
+--- squashfs-root/usr/share/applications_raw/nemo-autorun-software.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nemo-autorun-software.desktop	2013-09-12 13:37:14.905262084 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Autorun Prompt
++Name=自动提示
+ Name[af]=Autorun Prompt
+ Name[am]=Autorun Prompt
+ Name[ar]=محث التنفيذ التلقائي
+diff -uN squashfs-root/usr/share/applications_raw/nemo.desktop squashfs-root/usr/share/applications/nemo.desktop
+--- squashfs-root/usr/share/applications_raw/nemo.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nemo.desktop	2013-09-12 13:37:34.113282120 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Files
++Name=文件管理
+ Name[af]=Files
+ Name[am]=Files
+ Name[ar]=الملفات
+diff -uN squashfs-root/usr/share/applications_raw/nemo-folder-handler.desktop squashfs-root/usr/share/applications/nemo-folder-handler.desktop
+--- squashfs-root/usr/share/applications_raw/nemo-folder-handler.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nemo-folder-handler.desktop	2013-09-12 13:37:49.926652180 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Files
++Name=文件
+ Name[ar]=الملفات
+ Name[as]=নথিপত্ৰসমূহ
+ Name[be]=Файлы
+diff -uN squashfs-root/usr/share/applications_raw/nemo-home.desktop squashfs-root/usr/share/applications/nemo-home.desktop
+--- squashfs-root/usr/share/applications_raw/nemo-home.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nemo-home.desktop	2013-09-12 13:38:12.250351309 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Home Folder
++Name=主文件夹
+ Comment=Open your personal folder
+ Exec=nemo %U
+ Icon=folder
+diff -uN squashfs-root/usr/share/applications_raw/nemo-mount-archive.desktop squashfs-root/usr/share/applications/nemo-mount-archive.desktop
+--- squashfs-root/usr/share/applications_raw/nemo-mount-archive.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nemo-mount-archive.desktop	2013-09-12 13:38:52.406212664 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Archive Mounter
++Name=挂载压缩包
+ Exec=/usr/lib/gvfs/gvfsd-archive file=%u
+ MimeType=application/x-cd-image;application/x-bzip-compressed-tar;application/x-compressed-tar;application/x-tar;application/x-cpio;application/zip;
+ Terminal=false
+diff -uN squashfs-root/usr/share/applications_raw/nm-applet.desktop squashfs-root/usr/share/applications/nm-applet.desktop
+--- squashfs-root/usr/share/applications_raw/nm-applet.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nm-applet.desktop	2013-09-12 13:39:09.719428460 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Network
++Name=网络连接
+ Comment=Manage your network connections
+ Icon=nm-device-wireless
+ Exec=nm-applet
+diff -uN squashfs-root/usr/share/applications_raw/nm-connection-editor.desktop squashfs-root/usr/share/applications/nm-connection-editor.desktop
+--- squashfs-root/usr/share/applications_raw/nm-connection-editor.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/nm-connection-editor.desktop	2013-09-12 13:39:27.292617496 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Network Connections
++Name=网络连接管理
+ Comment=Manage and change your network connection settings
+ Icon=preferences-system-network
+ Exec=nm-connection-editor
+diff -uN squashfs-root/usr/share/applications_raw/openjdk-7-java.desktop squashfs-root/usr/share/applications/openjdk-7-java.desktop
+--- squashfs-root/usr/share/applications_raw/openjdk-7-java.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/openjdk-7-java.desktop	2013-09-12 13:39:52.688000582 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=OpenJDK Java 7 Runtime
++Name=Java7 运行环境
+ Name[fi]=OpenJDK Java 7 - ajonaikainen ympäristö
+ Comment=OpenJDK Java 7 Runtime
+ Comment[fi]=OpenJDK Java 7 - ajonaikainen ympäristö
+diff -uN squashfs-root/usr/share/applications_raw/openjdk-7-policytool.desktop squashfs-root/usr/share/applications/openjdk-7-policytool.desktop
+--- squashfs-root/usr/share/applications_raw/openjdk-7-policytool.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/openjdk-7-policytool.desktop	2013-09-12 13:40:11.677043922 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=OpenJDK Java 7 Policy Tool
++Name=Java策略工具
+ Name[fi]=OpenJDK Java 7 - käytäntötyökalu
+ Comment=OpenJDK Java 7 Policy Tool
+ Comment[fi]=OpenJDK Java 7 - käytäntötyökalu
+diff -uN squashfs-root/usr/share/applications_raw/pidgin.desktop squashfs-root/usr/share/applications/pidgin.desktop
+--- squashfs-root/usr/share/applications_raw/pidgin.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/pidgin.desktop	2013-09-12 13:40:26.943470875 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Pidgin Internet Messenger
++Name=Pidgin即时消息
+ GenericName=Internet Messenger
+ Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
+ Exec=pidgin
+diff -uN squashfs-root/usr/share/applications_raw/seahorse.desktop squashfs-root/usr/share/applications/seahorse.desktop
+--- squashfs-root/usr/share/applications_raw/seahorse.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/seahorse.desktop	2013-09-12 13:40:49.565140083 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Passwords and Keys
++Name=密码管理器
+ Comment=Manage your passwords and encryption keys
+ Exec=/usr/bin/seahorse
+ Terminal=false
+diff -uN squashfs-root/usr/share/applications_raw/session-properties.desktop squashfs-root/usr/share/applications/session-properties.desktop
+--- squashfs-root/usr/share/applications_raw/session-properties.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/session-properties.desktop	2013-09-12 13:41:11.584871409 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Startup Applications
++Name=开始程序
+ Comment=Choose what applications to start when you log in
+ Exec=gnome-session-properties
+ Icon=session-properties
+diff -uN squashfs-root/usr/share/applications_raw/simple-scan.desktop squashfs-root/usr/share/applications/simple-scan.desktop
+--- squashfs-root/usr/share/applications_raw/simple-scan.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/simple-scan.desktop	2013-09-12 13:41:26.950288413 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Simple Scan
++Name=简易扫描
+ Comment=Scan Documents
+ Exec=simple-scan
+ Icon=scanner
+diff -uN squashfs-root/usr/share/applications_raw/synaptic.desktop squashfs-root/usr/share/applications/synaptic.desktop
+--- squashfs-root/usr/share/applications_raw/synaptic.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/synaptic.desktop	2013-09-12 13:42:09.030953326 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Synaptic Package Manager
++Name=新立得包管理
+ GenericName=Package Manager
+ Comment=Install, remove and upgrade software packages
+ Exec=synaptic-pkexec
+diff -uN squashfs-root/usr/share/applications_raw/synaptic-kde.desktop squashfs-root/usr/share/applications/synaptic-kde.desktop
+--- squashfs-root/usr/share/applications_raw/synaptic-kde.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/synaptic-kde.desktop	2013-09-12 13:42:27.332068106 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Synaptic Package Manager
++Name=新立得包管理
+ Name[ar]=مدير الحزم التشابكي
+ Name[be]=Кіраўнік пакетаў Synaptic
+ Name[be@latin]=Kiraŭnik pakunkaŭ Synaptic
+diff -uN squashfs-root/usr/share/applications_raw/system-config-printer.desktop squashfs-root/usr/share/applications/system-config-printer.desktop
+--- squashfs-root/usr/share/applications_raw/system-config-printer.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/system-config-printer.desktop	2013-09-12 13:42:40.788681958 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Printers
++Name=打印机
+ Comment=Configure printers
+ Exec=system-config-printer
+ Terminal=false
+diff -uN squashfs-root/usr/share/applications_raw/thunderbird.desktop squashfs-root/usr/share/applications/thunderbird.desktop
+--- squashfs-root/usr/share/applications_raw/thunderbird.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/thunderbird.desktop	2013-09-12 13:42:58.316876472 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Thunderbird Mail
++Name=Thunderbird邮件客户端
+ Name[ast]=Veceru de corréu Thunderbird
+ Name[ca]=Client de correu Thunderbird
+ Name[cs]=Poštovní klient Thunderbird
+diff -uN squashfs-root/usr/share/applications_raw/tomboy.desktop squashfs-root/usr/share/applications/tomboy.desktop
+--- squashfs-root/usr/share/applications_raw/tomboy.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/tomboy.desktop	2013-09-12 13:43:20.414600402 +0800
+@@ -1,6 +1,6 @@
+ 
+ [Desktop Entry]
+-Name=Tomboy Notes
++Name=Tomboy记事本
+ Name[af]=Tomboy-notas
+ Name[ar]=ملاحظات تومبوي
+ Name[as]=Tomboy টোকাসমূহ
+diff -uN squashfs-root/usr/share/applications_raw/totem.desktop squashfs-root/usr/share/applications/totem.desktop
+--- squashfs-root/usr/share/applications_raw/totem.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/totem.desktop	2013-09-12 13:43:54.472092726 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Videos
++Name=视频
+ Comment=Play movies
+ Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
+ Exec=totem %U
+diff -uN squashfs-root/usr/share/applications_raw/transmission-gtk.desktop squashfs-root/usr/share/applications/transmission-gtk.desktop
+--- squashfs-root/usr/share/applications_raw/transmission-gtk.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/transmission-gtk.desktop	2013-09-12 13:44:16.548819038 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Transmission
++Name=BT下载器
+ GenericName=BitTorrent Client
+ X-GNOME-FullName=Transmission BitTorrent Client
+ X-GNOME-FullName[ar]=ترانزميشن، عميل «بت تورنت»
+diff -uN squashfs-root/usr/share/applications_raw/ubiquity-gtkui.desktop squashfs-root/usr/share/applications/ubiquity-gtkui.desktop
+--- squashfs-root/usr/share/applications_raw/ubiquity-gtkui.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/ubiquity-gtkui.desktop	2013-09-12 13:44:32.592166831 +0800
+@@ -2,7 +2,7 @@
+ Type=Application
+ Version=1.0
+ # Do not translate the word "RELEASE".  It is used as a marker by casper.
+-Name=Install RELEASE
++Name=安装Release
+ Name[am]=የተለቀቀውን መግጠሚያ
+ Name[ar]=ثبّت RELEASE
+ Name[ast]=Instalar RELEASE
+diff -uN squashfs-root/usr/share/applications_raw/upload-manager.desktop squashfs-root/usr/share/applications/upload-manager.desktop
+--- squashfs-root/usr/share/applications_raw/upload-manager.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/upload-manager.desktop	2013-09-12 13:55:52.940195124 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Upload Manager
++Name=上传管理
+ Name[en_GB]=Upload Manager
+ Name[ko]=업로드 관리자
+ Name[hr]=Menadžer Otpreme
+diff -uN squashfs-root/usr/share/applications_raw/vino-preferences.desktop squashfs-root/usr/share/applications/vino-preferences.desktop
+--- squashfs-root/usr/share/applications_raw/vino-preferences.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/vino-preferences.desktop	2013-09-12 13:56:20.420378829 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Desktop Sharing
++Name=桌面共享
+ Comment=Choose how other users can remotely view your desktop
+ Exec=vino-preferences
+ Icon=preferences-desktop-remote-desktop
+diff -uN squashfs-root/usr/share/applications_raw/vlc.desktop squashfs-root/usr/share/applications/vlc.desktop
+--- squashfs-root/usr/share/applications_raw/vlc.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/vlc.desktop	2013-09-12 13:56:56.514679893 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Version=1.0
+-Name=VLC media player
++Name=VLC媒体播放器
+ GenericName=Media player
+ Comment=Read, capture, broadcast your multimedia streams
+ Name[bn]=VLC মিডিয়া প্লেয়ার
+@@ -85,7 +85,7 @@
+ Name[wa]=Djouweu d' media VLC
+ GenericName[wa]=Djouweu d' media
+ Comment[wa]=Lét, egaloye, evoye vos floûs multimedia
+-Name[zh_CN]=VLC media player
++Name[zh_CN]=VLC媒体播放器
+ GenericName[zh_CN]=媒体播放器
+ Comment[zh_CN]=为您读取、捕获或发送多媒体流
+ Name[zh_TW]=VLC 媒體播放器
+diff -uN squashfs-root/usr/share/applications_raw/xchat.desktop squashfs-root/usr/share/applications/xchat.desktop
+--- squashfs-root/usr/share/applications_raw/xchat.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/xchat.desktop	2013-09-12 13:57:17.601518969 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=XChat IRC
++Name=XChat聊天
+ Name[zh_TW]=網路清談
+ Comment[de]=IRC-Client
+ Comment[es]=Aplicación de IRC
+diff -uN squashfs-root/usr/share/applications_raw/yelp.desktop squashfs-root/usr/share/applications/yelp.desktop
+--- squashfs-root/usr/share/applications_raw/yelp.desktop	2013-09-12 13:10:31.000000000 +0800
++++ squashfs-root/usr/share/applications/yelp.desktop	2013-09-12 13:57:35.874646430 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=Help
+-Comment=Get help with Linux Mint
++Name=帮助
++Comment=Linux Mint 帮助
+ OnlyShowIn=GNOME;Unity;
+ Exec=yelp %u
+ Icon=help-browser

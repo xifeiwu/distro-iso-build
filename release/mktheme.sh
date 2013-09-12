@@ -4,20 +4,18 @@ set -e
 OUTPATH=$PWD/mkiso_out
 echo warning:you should run as root. But be careful!
 
+DISTURBPATH=$(cd "$(dirname $0)"; pwd)
+
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute su ."
     exit
 fi
 
-if [ -z "$1" ] ; then
-    echo "error: you should input cinnamon theme path as first parameter. 
-    echo Just as: sh mkiso.sh theme paperpath"
-    exit
-fi
 
 
 
-THEMEPATH=$1
+
+THEMEPATH=$DISTURBPATH/Facebook
 
 
 if [ ! -d $THEMEPATH ] ; then

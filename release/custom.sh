@@ -1,12 +1,15 @@
 #!/bin/sh
 OUTPATH=$PWD/mkiso_out
 
-if [ -z "$1" ] ; then
-    echo "error: you should input path as first parameter. 
-    echo Just as: sh custom.sh path/to/material"
+DISTURBPATH=$(cd "$(dirname $0)"; pwd)
+
+MATERIALPATH=$DISTURBPATH/materials
+
+if [ ! -d $MATERIALPATH ] ; then
+    echo error: materials path is not exist, you should set it correctly. Wrong PATH:$MATERIALPATH
     exit
 fi
-MATERIALPATH=$1
+
 #"./materials"
 
 echo warning:you should run as root. But be careful!

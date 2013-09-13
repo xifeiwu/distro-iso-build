@@ -279,6 +279,16 @@ diff -uN squashfs-root/usr/share/applications_raw/gnome-system-monitor-kde.deskt
  Comment=View current processes and monitor system state
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
+diff -uN squashfs-root/usr/share/applications_raw/gnome-terminal.desktop squashfs-root/usr/share/applications/gnome-terminal.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-terminal.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gnome-terminal.desktop	2013-09-12 15:24:45.560712227 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Terminal
++Name=终端
+ Comment=Use the command line
+ TryExec=gnome-terminal
+ Exec=gnome-terminal
 diff -uN squashfs-root/usr/share/applications_raw/google-chrome.desktop squashfs-root/usr/share/applications/google-chrome.desktop
 --- squashfs-root/usr/share/applications_raw/google-chrome.desktop	2013-09-12 10:42:26.517000701 +0800
 +++ squashfs-root/usr/share/applications/google-chrome.desktop	2013-09-12 11:15:51.654778035 +0800

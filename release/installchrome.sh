@@ -26,6 +26,7 @@ fi
 mkdir ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
+chroot ${CHROOTDIR} /bin/bash -c "apt-get remove -y firefox"
 chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i google-chrome-stable_current_i386.deb"
 chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 

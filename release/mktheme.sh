@@ -1,7 +1,12 @@
 #!/bin/sh
 set -e
 
-OUTPATH=$PWD/mkiso_out
+if [ -z "$1" ] ; then
+    echo error: No outpath setting at first param.
+    exit -1
+fi
+
+OUTPATH=$1
 echo warning:you should run as root. But be careful!
 
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)

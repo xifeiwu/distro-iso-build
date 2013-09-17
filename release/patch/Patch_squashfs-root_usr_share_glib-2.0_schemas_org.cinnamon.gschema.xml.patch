@@ -1,0 +1,11 @@
+--- squashfs-root_raw/usr/share/glib-2.0/schemas/org.cinnamon.gschema.xml	2013-09-17 12:50:59.313084512 +0800
++++ squashfs-root/usr/share/glib-2.0/schemas/org.cinnamon.gschema.xml	2013-09-17 12:51:15.837085163 +0800
+@@ -316,7 +316,7 @@
+     </key>
+     
+     <key type="as" name="panel-launchers">
+-      <default>[ 'firefox.desktop', 'gnome-terminal.desktop', 'nemo.desktop']</default>
++      <default>[ 'google-chrome.desktop', 'thunderbird.desktop', 'gnome-terminal.desktop', 'nemo.desktop']</default>
+       <summary>Desktop files of the applications to put in the panel launchers applet</summary>
+       <description>Cinnamon allows to show applications launchers on the panel. This key lists the desktop files of the applications to show there.</description>
+     </key>

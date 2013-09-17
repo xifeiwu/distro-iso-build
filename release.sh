@@ -17,6 +17,6 @@ sudo sh $WORKPATH/release/change_help_slide.sh $OUTPATH
 sudo sh $WORKPATH/release/change_isolinux_splash.sh $OUTPATH
 sudo sh $WORKPATH/release/info_patch.sh $OUTPATH
 sudo sh $WORKPATH/release/application_patch.sh $OUTPATH
-sudo sh $WORKPATH/release/mktheme.sh 
-sudo sh $WORKPATH/release/custom.sh 
+sudo sh $WORKPATH/release/mktheme.sh $OUTPATH
+sudo sh $WORKPATH/release/custom.sh $OUTPATH
 sudo sh $WORKPATH/mkiso.sh

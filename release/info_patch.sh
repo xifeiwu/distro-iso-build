@@ -19,4 +19,5 @@ patch -d $OUTPATH -p0 < $DISTURBPATH/patch/Patch_squashfs-root_boot_grub_grub_cf
 patch -d $OUTPATH -p0 < $DISTURBPATH/patch/Patch_squashfs-root_usr_lib_ubiq_ubiq_misc_py.patch
 patch -d $OUTPATH -p0 < $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_l10n_zhCN_welcome_html.patch
 patch -d $OUTPATH -p0 < $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_welcome_html.patch
+patch -d $OUTPATH -p0 < $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_index_html.patch
 

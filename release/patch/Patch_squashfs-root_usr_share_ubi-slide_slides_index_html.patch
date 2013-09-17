@@ -1,0 +1,20 @@
+--- squashfs-root_raw/usr/share/ubiquity-slideshow/slides/index.html	2013-09-13 10:56:58.406667203 +0800
++++ squashfs-root/usr/share/ubiquity-slideshow/slides/index.html	2013-09-13 10:58:27.426665367 +0800
+@@ -31,7 +31,7 @@
+ <div id="wrapper">
+ 	<div id="slideshow">
+ 		<div><a href="welcome.html"></a></div>
+-		<div><a href="web.html"></a></div>
++		<!--<div><a href="web.html"></a></div>
+ 		<div><a href="music.html"></a></div>
+ 		<div><a href="video.html"></a></div>
+ 		<div><a href="photos.html"></a></div>
+@@ -41,7 +41,7 @@
+ 		<div><a href="windows.html"></a></div>
+ 		<div><a href="customize.html"></a></div>
+ 		<div><a href="updates.html"></a></div>
+-	    <div><a href="help.html"></a></div>
++	    <div><a href="help.html"></a></div>-->
+ 	</div>
+ 
+ 	<div id="controls">

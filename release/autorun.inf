@@ -1,0 +1,8 @@
+[autorun]
+label=Install COS Desktop
+
+[Content]
+MusicFiles=false
+PictureFiles=false
+VideoFiles=false
+

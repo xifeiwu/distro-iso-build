@@ -10,10 +10,24 @@ if [ "$USER" != "root" ] ; then
     exit -1
 fi
 
-if [ ! -d $OUTPATH ] ; then
-    echo error: $OUTPATH does not exist. exit.
+if [ $# -lt 2 ] ; then
+    echo You should execute this script with two param at least as follow:
+    echo sh $0 OUTPATH GENISOPATH
     exit -1
 fi
+
+if [ ! -d $1 ] ; then
+    echo You should make sure the outpath $1 is a dir that exists
+    exit -1
+fi
+
+if [ ! -d $2 ] ; then
+    echo You should make sure the getisopath $2 is a dir that exists
+    exit -1
+fi
+
+OUTPATH=$(cd $1; pwd)
+GENISOPATH=$(cd $2; pwd)
 
 cd $OUTPATH
 
@@ -61,8 +75,8 @@ cd ..
 
 echo  mkisofs
 cd mymint
-mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "../$ISONAME" .
+mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
 echo mkiso has finished.
 cd ..
 ls -l $ISONAME
-echo you can test this iso by executing the command kvm -m 512 -cdrom $PWD/$ISONAME boot order=d
+echo you can test this iso by executing the command kvm -m 512 -cdrom $GENISOPATH/$ISONAME boot order=d

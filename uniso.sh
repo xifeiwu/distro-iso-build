@@ -1,35 +1,39 @@
 #!/bin/sh
 set -e
-OUTPATH=$PWD/mkiso_out
-echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
     echo "error: you are not run as root user, you should excute sudo."
     exit -1
 fi
 
-if [ -z "$1" ] ; then
-    echo "error: you should input isopath as first parameter. 
-    echo Just as: sh mkiso.sh filename.iso"
+if [ $# -lt 2 ] ; then
+    echo You should execute this script with two param at least as follow:
+    echo sh $0 ISOPATH OUTPATH
     exit -1
+fi
+
+if [ ! -f $1 ] ; then
+    echo You should make sure the iso $1 is a file that exists
+    exit -1
+fi
+
+if [ -e $2 ] ; then
+    if [ ! -d $2 ] ; then
+        echo You should make sure the outpath $2 is a dir
+        exit -1
+    fi
+else
+    mkdir $2
 fi
 
 ISOPATH=$1
-
-if [ ! -f $ISOPATH ] ; then
-    echo error: iso is not exist, you should set it correctly. Wrong ISOPATH:$ISOPATH
-    exit -1
-fi
+OUTPATH=$(cd $2; pwd)
 
 echo uniso.sh will export iso file to $OUTPATH, the dir tree like this:
 echo +mkiso_out
 echo \|---mymint---------------  The files contained in iso.
 echo \|---initrd_lz------------  The files contained in iso/casper/initrd_lz
 echo \\---squashfs-root--------  The files contained in iso/casper/filesystem.squashfs
-
-if [ ! -d $OUTPATH ] ; then
-    mkdir $OUTPATH
-fi
 
 if [ ! -d $OUTPATH/mymint ] ; then
     mkdir $OUTPATH/mymint

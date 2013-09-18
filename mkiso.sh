@@ -78,5 +78,6 @@ cd mymint
 mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
 echo mkiso has finished.
 cd ..
-ls -l $ISONAME
-echo you can test this iso by executing the command kvm -m 512 -cdrom $GENISOPATH/$ISONAME boot order=d
+ls -l $GENISOPATH/$ISONAME
+echo you can test this iso by executing the command as follows:
+echo kvm -m 512 -cdrom $GENISOPATH/$ISONAME -boot order=d

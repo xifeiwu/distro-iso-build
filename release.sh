@@ -58,4 +58,6 @@ sudo sh $ScriptPATH/release/info_patch.sh $OUTPATH
 sudo sh $ScriptPATH/release/application_patch.sh $OUTPATH
 sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH
 sudo sh $ScriptPATH/release/custom.sh $OUTPATH
+sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
+sudo sh $ScriptPATH/release/delete_display_in_preferences.sh $OUTPATH
 sudo sh $ScriptPATH/mkiso.sh $OUTPATH $GENISOPATH

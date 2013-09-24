@@ -41,7 +41,7 @@ if [ ! -e ${OUTPATH}/squashfs-root ]; then
     echo "squashfs-root not found"
     exit
 fi
-cp ${MATERIALPATH}/* $OUTPATH/squashfs-root/media
+cp -r ${MATERIALPATH}/* $OUTPATH/squashfs-root/media
 deblist=`ls ${MATERIALPATH} | grep .deb`
 cd ${OUTPATH}
 sudo chroot squashfs-root /bin/bash -c "mount none  /proc -t proc"

@@ -57,7 +57,7 @@ fi
 cd $OUTPATH
 
 if [ ! -e initrd_lz ] ; then
-    echo lzma initrd.lz
+    echo gunzip initrd.lz
     mkdir initrd_lz
     cp mymint/casper/initrd.lz initrd_lz/initrd.lz
     echo warning: now, it is supported the format of initrd.lz is gzip, not lzma. If it is lzma, you should change it.

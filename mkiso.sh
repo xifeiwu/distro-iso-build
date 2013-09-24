@@ -51,7 +51,7 @@ if [ ! -e squashfs-root ] ; then
     exit -1
 fi
 
-echo mkiso.sh will generate iso file $ISONAME in $OUTPATH.
+echo mkiso.sh will generate iso file $ISONAME in $GENISOPATH.
 
 echo generate manifest.
 chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mymint/casper/filesystem.manifest

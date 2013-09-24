@@ -7,9 +7,23 @@ if [ -z "$1" ] ; then
     exit -1
 fi
 
+run_patch(){
+set +e
+patch --dry-run -N $*
+ERROR=$?
+set -e
+echo error:$ERROR.
+if [ $ERROR -eq 0 ] ; then
+    patch -N $*
+else
+    patch -R -N $*
+    patch -N $*
+fi
+}
+
 OUTPATH=$1
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
-patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications1.patch
-patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications2.patch
+run_patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications1.patch
+run_patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications2.patch
 

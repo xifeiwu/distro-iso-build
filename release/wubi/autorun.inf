@@ -1,4 +1,6 @@
 [autorun]
+open=cos4win.exe --force-wubi --cdmenu --skipmd5check
+icon=cos4win.exe,0
 label=Install COS Desktop
 
 [Content]

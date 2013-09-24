@@ -53,4 +53,4 @@ done
 sudo chroot squashfs-root /bin/bash -c "umount /proc/"
 
 sudo chroot squashfs-root /bin/bash -c "cp /media/lsb-release /media/issue /media/issue.net /etc/"
-sudo chroot squashfs-root /bin/bash -c "rm /media/*"
+sudo chroot squashfs-root /bin/bash -c "rm -rf /media/*"

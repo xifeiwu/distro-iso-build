@@ -75,7 +75,7 @@ cd ..
 
 echo  mkisofs
 cd mymint
-mkisofs -r -V "mymint" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
+mkisofs -r -V "COS Desktop" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
 echo mkiso has finished.
 cd ..
 ls -l $GENISOPATH/$ISONAME

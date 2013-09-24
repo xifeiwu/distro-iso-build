@@ -28,7 +28,10 @@ mkdir ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME2} ${CHROOTDIR}/app
 
-chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i wps-office_8.1.0.3724~b1p2_i386.deb && apt-get remove -y --purge libreoffice-*"
+#chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i wps-office_8.1.0.3724~b1p2_i386.deb && apt-get remove -y --purge libreoffice-*"
+chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i wps-office_8.1.0.3724~b1p2_i386.deb"
+
+
 #安装wps所需字体，该字体版权属于微软
 chroot ${CHROOTDIR} /bin/bash -c "cd app && tar xvf wps_symbol_fonts.tar.gz && cp wps_symbol_fonts/* /usr/share/fonts/wps-office"
 chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"

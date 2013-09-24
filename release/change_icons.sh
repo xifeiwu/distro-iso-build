@@ -45,9 +45,9 @@ echo "system shutdown icon changed!"
 
 echo changing: /usr/share/icons/Mint-X/actions/scalable/system-lock-screen.svg
 cp -f $DISTURBPATH/materials/icn/system-lock-screen1.svg $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/scalable/system-lock-screen.svg
-cp -f $DISTURBPATH/materials/system-lock-screen1-16.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/16/system-lock-screen.png
-cp -f $DISTURBPATH/materials/system-lock-screen1-22.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/22/system-lock-screen.png
-cp -f $DISTURBPATH/materials/system-lock-screen1-24.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/24/system-lock-screen.png
-cp -f $DISTURBPATH/materials/system-lock-screen1-32.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/32/system-lock-screen.png
-cp -f $DISTURBPATH/materials/system-lock-screen1-48.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/48/system-lock-screen.png
+cp -f $DISTURBPATH/materials/icn/system-lock-screen1-16.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/16/system-lock-screen.png
+cp -f $DISTURBPATH/materials/icn/system-lock-screen1-22.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/22/system-lock-screen.png
+cp -f $DISTURBPATH/materials/icn/system-lock-screen1-24.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/24/system-lock-screen.png
+cp -f $DISTURBPATH/materials/icn/system-lock-screen1-32.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/32/system-lock-screen.png
+cp -f $DISTURBPATH/materials/icn/system-lock-screen1-48.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/48/system-lock-screen.png
 echo "system lock screen icon changed!"

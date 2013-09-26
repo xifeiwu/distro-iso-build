@@ -39,10 +39,10 @@ ERROR=$?
 set -e
 echo error:$ERROR.
 if [ $ERROR -eq 0 ] ; then
-    patch $*
+    patch -N $*
 else
-    patch -R $*
-    patch $*
+    patch -R -N $*
+    patch -N $*
 fi
 }
 

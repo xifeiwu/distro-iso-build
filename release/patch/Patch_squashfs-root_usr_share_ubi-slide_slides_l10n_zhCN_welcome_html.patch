@@ -2,7 +2,7 @@
 +++ squashfs-root/usr/share/ubiquity-slideshow/slides/l10n/zh_CN/welcome.html	2013-09-09 16:12:06.207319303 +0800
 @@ -1,11 +1,11 @@
 -<div class="header"><h1 class="slidetitle">欢迎使用 Linux Mint</h1></div>
-+<div class="header"><h1 class="slidetitle">欢迎使用 COS_Linux</h1></div>
++<div class="header"><h1 class="slidetitle">欢迎使用 COS Linux</h1></div>
  
  <div class="main">
  
@@ -10,7 +10,7 @@
  
  <div>
 -<p>欢迎并感谢您选择使用 Linux Mint。Slideshow 将在安装系统的同时为您展示各种系统特性。</p>
-+<p>欢迎并感谢您选择使用 COS_Linux。Slideshow 将在安装系统的同时为您展示各种系统特性。</p>
++<p>欢迎并感谢您选择使用 COS Linux。Slideshow 将在安装系统的同时为您展示各种系统特性。</p>
  </div>
  
  </div>

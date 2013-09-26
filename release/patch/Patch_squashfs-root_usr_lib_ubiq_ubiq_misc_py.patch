@@ -5,7 +5,7 @@
  
          # if not get_release.release_info:
 -        get_release.release_info = ReleaseInfo(name='Linux Mint', version='15')
-+        get_release.release_info = ReleaseInfo(name='COS_Linux', version='0.3')
++        get_release.release_info = ReleaseInfo(name='COS Linux', version='0.5')
      return get_release.release_info
  
  get_release.release_info = None

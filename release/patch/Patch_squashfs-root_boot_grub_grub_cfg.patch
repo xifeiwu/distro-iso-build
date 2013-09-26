@@ -5,7 +5,7 @@
  export linux_gfx_mode
  if [ "$linux_gfx_mode" != "text" ]; then load_video; fi
 -menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
-+menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
++menuentry 'COS Linux 0.5 COS Linux 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
  	recordfail
  	gfxmode $linux_gfx_mode
  	insmod gzio
@@ -14,7 +14,7 @@
  	initrd	/boot/initrd.img-3.8.0-19-generic
  }
 -menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
-+menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
++menuentry 'COS Linux 0.5 COS Linux 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
  	recordfail
  	insmod gzio
  	insmod part_msdos

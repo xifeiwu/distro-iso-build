@@ -62,4 +62,5 @@ sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
 sudo sh $ScriptPATH/release/delete_display_in_preferences.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_start_menu.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_icons.sh $OUTPATH
+sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
 sudo sh $ScriptPATH/mkiso.sh $OUTPATH $GENISOPATH

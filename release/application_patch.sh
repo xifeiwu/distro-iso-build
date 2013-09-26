@@ -12,18 +12,17 @@ set +e
 patch --dry-run -N $*
 ERROR=$?
 set -e
-echo error:$ERROR.
 if [ $ERROR -eq 0 ] ; then
-    patch -N $*
+    patch $*
 else
-    patch -R -N $*
-    patch -N $*
+    patch -R $*
+    patch $*
 fi
 }
 
 OUTPATH=$1
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
-run_patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications1.patch
-run_patch -d $OUTPATH -p0 < $DISTURBPATH/patch/applications2.patch
+run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/applications1.patch
+run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/applications2.patch
 

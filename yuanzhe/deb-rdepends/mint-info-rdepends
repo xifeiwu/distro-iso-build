@@ -1,0 +1,38 @@
+mint-info
+  Reverse Depends: mint-meta-core (2013.05.27)
+  Reverse Depends: mintdesktop (3.3.1)
+  Reverse Depends: mintsystem (7.8.7)
+  Reverse Depends: mintwelcome (1.4.7)
+mint-meta-core
+  Reverse Depends: mint-meta-cinnamon (2013.05.27)（未安装）
+  Reverse Depends: mint-meta-mate (2013.05.27)（未安装）
+  Reverse Depends: mint-meta-xfce (2013.05.27)（未安装）
+mintdesktop
+  Reverse Depends: mint-meta-mate (2013.05.27)（未安装）
+mintsystem
+  Reverse Depends: mint-artwork-common (1.6.6)
+  Reverse Depends: mint-configuration-kde (5.0.18)（未安装）
+  Reverse Depends: mint-meta-core (2013.05.27)
+  Reverse Depends: mint-meta-kde (15.0.0)（未安装）
+  Reverse Depends: ubuntu-system-adjustments (2013.05.14)
+mint-artwork-common
+  Reverse Depends: mint-artwork-gnome (2.6.31)
+  Reverse Depends: mint-artwork-kde (2.0.5)（未安装）
+mint-artwork-gnome
+  Reverse Depends: mint-meta-cinnamon (2013.05.27)（未安装）
+  Reverse Depends: mint-meta-mate (2013.05.27)（未安装）
+ubuntu-system-adjustments
+  Reverse Depends: mint-meta-core (2013.05.27)
+mintwelcome
+  Reverse Depends: mint-meta-cinnamon (2013.05.27)（未安装）
+  Reverse Depends: mint-meta-kde (15.0.0)（未安装）
+  Reverse Depends: mint-meta-mate (2013.05.27)（未安装）
+
+综上：mint-info相关包如下：
+	mint-meta-core (2013.05.27)
+	mintdesktop (3.3.1)
+	mintsystem (7.8.7)
+	mintwelcome (1.4.7)
+	mint-artwork-common (1.6.6)
+	mint-artwork-gnome (2.6.31)
+	ubuntu-system-adjustments (2013.05.14)

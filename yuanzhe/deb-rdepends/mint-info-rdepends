@@ -28,11 +28,11 @@ mintwelcome
   Reverse Depends: mint-meta-kde (15.0.0)（未安装）
   Reverse Depends: mint-meta-mate (2013.05.27)（未安装）
 
-综上：mint-info相关包如下：
-	mint-meta-core (2013.05.27)
-	mintdesktop (3.3.1)
-	mintsystem (7.8.7)
-	mintwelcome (1.4.7)
-	mint-artwork-common (1.6.6)
-	mint-artwork-gnome (2.6.31)
-	ubuntu-system-adjustments (2013.05.14)
+综上：#mint-info相关包如下：
+	#mint-meta-core (2013.05.27)
+	#mintdesktop (3.3.1)
+	#mintsystem (7.8.7)  
+	#mint-artwork-common (1.6.6)  
+	#mint-artwork-gnome (2.6.31)
+	#ubuntu-system-adjustments (2013.05.14)
+	#mintwelcome (1.4.7)

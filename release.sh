@@ -51,6 +51,8 @@ sudo sh $ScriptPATH/release/installzh_CN.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installwps.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installchrome.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installvim.sh $OUTPATH $APPPATH
+sudo sh $ScriptPATH/release/installwineqq.sh $OUTPATH $APPPATH
+sudo sh $ScriptPATH/release/installopenoffice.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/change_welcome_slide.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_help_slide.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH

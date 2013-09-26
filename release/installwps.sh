@@ -29,7 +29,7 @@ cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME2} ${CHROOTDIR}/app
 
 #chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i wps-office_8.1.0.3724~b1p2_i386.deb && apt-get remove -y --purge libreoffice-*"
-chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i wps-office_8.1.0.3724~b1p2_i386.deb"
+chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i -E wps-office_8.1.0.3724~b1p2_i386.deb"
 
 
 #安装wps所需字体，该字体版权属于微软

@@ -36,7 +36,9 @@ fi
 
 
 DEFTHEMEPATH1=$OUTPATH/squashfs-root/usr/share/themes
-mv -f $DEFTHEMEPATH1/Linux\ Mint/ $DEFTHEMEPATH1/Linux\ iscas/
+if [ -d $DEFTHEMEPATH1/Linux\ Mint/ ] ; then
+    mv -f $DEFTHEMEPATH1/Linux\ Mint/ $DEFTHEMEPATH1/Linux\ iscas/
+fi
 rm -f $DEFTHEMEPATH1/Linux\ iscas/cinnamon/*.svg
 rm -f $DEFTHEMEPATH1/Linux\ iscas/cinnamon/*.png
 rm -f $DEFTHEMEPATH1/Linux\ iscas/cinnamon/*.css

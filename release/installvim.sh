@@ -28,7 +28,7 @@ cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
 chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
 chroot ${CHROOTDIR} /bin/bash -c "cd app && tar xvf vim-7.3.547.tar.gz"
-chroot ${CHROOTDIR} /bin/bash -c "dpkg -i app/vim-7.3.547/*.deb"
+chroot ${CHROOTDIR} /bin/bash -c "dpkg -i -E app/vim-7.3.547/*.deb"
 
 
 chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"

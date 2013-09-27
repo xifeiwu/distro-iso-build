@@ -59,12 +59,13 @@ cd $OUTPATH
 if [ ! -e initrd_lz ] ; then
     echo gunzip initrd.lz
     mkdir initrd_lz
-    cp mymint/casper/initrd.lz initrd_lz/initrd.lz
+    cp mymint/casper/initrd.lz initrd.lz
     echo warning: now, it is supported the format of initrd.lz is gzip, not lzma. If it is lzma, you should change it.
-    cd initrd_lz
     mv initrd.lz initrd.gz
     gunzip initrd.gz
-    cpio -id<./initrd
+    cd initrd_lz
+    cpio -id<../initrd
+    rm ../initrd
     cd ..
 else
     echo warning: initrd_lz has exist, it is expected initrd.lz has been decompressed normally.

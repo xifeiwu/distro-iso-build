@@ -59,6 +59,9 @@ cp mymint/casper/filesystem.manifest mymint/casper/filesystem.manifest-desktop
 
 echo gzip initrd
 cd initrd_lz
+if [ -f initrd ] ; then
+    rm initrd
+fi
 find . | cpio --quiet --dereference -o -H newc>./initrd
 gzip initrd
 mv initrd.gz ../mymint/casper/initrd.lz

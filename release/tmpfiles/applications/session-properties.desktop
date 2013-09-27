@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=开机启动项
+Comment=选择开机启动的程序
+Exec=gnome-session-properties
+Icon=session-properties
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;System;X-GNOME-PersonalSettings;
+OnlyShowIn=GNOME;Unity;
+NoDisplay=false
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-session
+X-GNOME-Bugzilla-Component=gnome-session-properties
+X-GNOME-Bugzilla-Version=3.6.2
+X-Ubuntu-Gettext-Domain=gnome-session-3.0

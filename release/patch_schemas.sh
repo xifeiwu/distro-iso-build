@@ -1,5 +1,5 @@
 #!/bin/sh
-#All patch is genereate by executing follow command.
+#All patch is genereate by executing likely follow command.
 #diff -uN ~/pcos/mymint_raw/squashfs-root/boot/grub/grub.cfg ~/pcos/mkiso_out/squashfs-root/boot/grub/grub.cfg > Patch_mymint_squashfs-root_boot_grub_grub_cfg.patch
 set -e
 if [ -z "$1" ] ; then
@@ -12,6 +12,7 @@ set +e
 patch --dry-run -N $*
 ERROR=$?
 set -e
+echo error:$ERROR.
 if [ $ERROR -eq 0 ] ; then
     patch -N $*
 else
@@ -20,9 +21,14 @@ else
 fi
 }
 
-OUTPATH=$1
+OUTPATH=$(cd $1; pwd)
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
-run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/applications1.patch
-run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/applications2.patch
-
+echo patching org.cinanmon.gschemas.xml
+cd $DISTURBPATH/schemas
+set +e
+diff -uN schemas_raw schemas >/tmp/new.patch
+set -e
+run_patch -p0 -d $OUTPATH/squashfs-root/usr/share/glib-2.0 -i /tmp/new.patch
+rm /tmp/new.patch
+echo finished.

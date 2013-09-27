@@ -27,7 +27,7 @@ mkdir ${CHROOTDIR}/app
 sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
 
-sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i WineQQ2012-20121221-Longene.deb"
+sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i -E WineQQ2012-20121221-Longene.deb"
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 
 

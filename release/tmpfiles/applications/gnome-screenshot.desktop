@@ -1,0 +1,30 @@
+[Desktop Entry]
+Name=截图工具
+Comment=保存屏幕图像
+Exec=gnome-screenshot --interactive
+Terminal=false
+Type=Application
+Icon=applets-screenshooter
+StartupNotify=true
+Categories=GTK;GNOME;Utility;
+NotShowIn=KDE;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-utils
+X-GNOME-Bugzilla-Component=screenshot
+Actions=Screen;Window;Area
+X-Ubuntu-Gettext-Domain=gnome-screenshot
+
+[Desktop Action Screen]
+Name=Take a Screenshot of the Whole Screen
+Exec=gnome-screenshot
+OnlyShowIn=Unity;
+
+[Desktop Action Window]
+Name=Take a Screenshot of the Current Window
+Exec=gnome-screenshot -w
+OnlyShowIn=Unity;
+
+[Desktop Action Area]
+Name=Take a Screenshot of a Selected Area
+Exec=gnome-screenshot -a
+OnlyShowIn=Unity;

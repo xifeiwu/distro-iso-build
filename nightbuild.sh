@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-APPPATH=/home/night/app
+APPPATH=/home/box/Workspace/Public/app
 WORKPATH=$(cd "$(dirname $0)"; pwd)
 OUTPATH=/home/night/out
 ISOPATH=/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit-1-4kernel.iso

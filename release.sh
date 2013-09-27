@@ -48,7 +48,6 @@ echo OUTPATH=$OUTPATH
 
 sudo sh $ScriptPATH/uniso.sh $ISOPATH $OUTPATH
 sudo sh $ScriptPATH/release/installzh_CN.sh $OUTPATH $APPPATH
-sudo sh $ScriptPATH/release/installopenoffice.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installwps.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installchrome.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installvim.sh $OUTPATH $APPPATH

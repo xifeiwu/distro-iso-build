@@ -57,14 +57,16 @@ if [ ! -e ${OUTPATH}/squashfs-root ]; then
     exit
 fi
 cp -r ${MATERIALPATH}/* $OUTPATH/squashfs-root/media
-deblist=`ls ${MATERIALPATH} | grep .deb`
+#deblist=`ls ${MATERIALPATH} | grep .deb`
 cd ${OUTPATH}
 sudo chroot squashfs-root /bin/bash -c "mount none  /proc -t proc"
-for file in $deblist
-do
-    #echo ${file}
-    sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/${file}"
-done
+#for file in $deblist
+#do
+#    sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/${file}"
+#done
+sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/cos-upgrade_2013.09.26_i386.deb"
+sudo chroot squashfs-root /bin/bash -c "cos-upgrade"
+
 sudo chroot squashfs-root /bin/bash -c "umount /proc/"
 
 sudo chroot squashfs-root /bin/bash -c "cp /media/lsb-release /media/issue /media/issue.net /etc/"

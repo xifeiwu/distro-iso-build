@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 APPPATH=/home/box/Workspace/Public/app
 WORKPATH=$(cd "$(dirname $0)"; pwd)
 OUTPATH=/home/night/out

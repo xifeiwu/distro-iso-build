@@ -41,7 +41,7 @@ echo "Patch mdm applications directory successfully!"
 cp $DISTURBPATH/tmpfiles/yelp.desktop $OUTPATH/squashfs-root/usr/share/ubuntu-system-adjustments/yelp/
 echo "Reconfig help menu succefully!"
 
-cp $DISTURBPATH/tmpfiles/org.cinnamon.gschema.xml $OUTPATH/squashfs-root/usr/share/glib-2.0/schemas/
+#cp $DISTURBPATH/tmpfiles/org.cinnamon.gschema.xml $OUTPATH/squashfs-root/usr/share/glib-2.0/schemas/
 echo "Reconfig favorite menu succefully!"
 
 cp $DISTURBPATH/tmpfiles/icon.png $OUTPATH/squashfs-root/usr/lib/linuxmint/mintInstall/

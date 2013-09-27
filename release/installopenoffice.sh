@@ -34,7 +34,7 @@ sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && tar xvf Apache_OpenOffice_4.0.0_Linux_x86_install-deb_zh-CN.tar.gz"
-sudo chroot ${CHROOTDIR} /bin/bash -c "dpkg -i app/zh-CN/DEBS/*.deb"
+sudo chroot ${CHROOTDIR} /bin/bash -c "dpkg -i -E app/zh-CN/DEBS/*.deb"
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 
 echo "openoffice installed successful!"

@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=System Log
+Comment=View or monitor system log files
+Exec=gnome-system-log
+Icon=logview
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;System;Monitor;
+NotShowIn=KDE;
+X-GNOME-DocPath=gnome-system-log/gnome-system-log.xml
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-utils
+X-GNOME-Bugzilla-Component=logview
+X-GNOME-Bugzilla-Version=3.6.1
+X-Ubuntu-Gettext-Domain=gnome-system-log

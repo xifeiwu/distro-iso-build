@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Windows兼容无线管理软件
+Comment=Ndiswrapper driver installation tool
+Exec=gksu /usr/sbin/ndisgtk
+NotShowIn=KDE;
+Icon=ndisgtk.png
+Terminal=false
+Type=Application
+Categories=System;Settings;
+X-Ubuntu-Gettext-Domain=ndisgtk
+

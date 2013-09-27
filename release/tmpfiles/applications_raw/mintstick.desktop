@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=gtk-execute
+Exec=mintstick
+Name=刷写USB镜像工具
+Name[fr]=Créateur de clé USB
+Name[de]=USB Image-Aufzeichner
+Comment=Make a bootable USB stick
+Comment[fr]=Créer une clé USB bootable
+Comment[nl]=Maak uw eigen opstart-USB stick
+Comment[de]="Einen bootfähigen USB-Stick erstellen"
+Categories=GNOME;GTK;Utility;
+NotShowIn=KDE;

@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[zh_CN]=使用 WPS 文字编写报告，排版文章
+Comment=Use Kingsoft Writer to edit articles and reports.
+Exec=/usr/bin/wps %f
+GenericName[zh_CN]=WPS 文字
+GenericName=Kingsoft Writer
+MimeType=application/wps-office.wps;application/wps-office.wpt;application/wps-office.doc;application/wps-office.dot;application/vnd.ms-word;application/msword;application/x-msword;application/msword-template;application/wps-office.docx;application/wps-office.dotx;
+Name[zh_CN]=WPS 文字
+Name=Kingsoft Writer
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Office;WordProcessor;Qt;
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Icon=wps-office-wpsmain
+InitialPreference=3

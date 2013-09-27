@@ -1,0 +1,2558 @@
+diff -uN applications_raw/aptoncd.desktop applications/aptoncd.desktop
+--- applications_raw/aptoncd.desktop	2013-09-27 09:13:48.314476506 +0800
++++ applications/aptoncd.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,12 +0,0 @@
+-[Desktop Entry]
+-Name=APTonCD
+-GenericName=Package Backup Tool
+-Comment=Create an Installation Disc
+-Version=1.0
+-Icon=aptoncd
+-Exec=/usr/bin/aptoncd
+-Terminal=false
+-Type=Application
+-StartupNotify=true
+-Categories=System;Settings;
+-X-Ubuntu-Gettext-Domain=aptoncd
+diff -uN applications_raw/brasero.desktop applications/brasero.desktop
+--- applications_raw/brasero.desktop	2013-09-27 09:13:48.742476499 +0800
++++ applications/brasero.desktop	2013-09-25 14:00:50.000000000 +0800
+@@ -2,7 +2,7 @@
+ Name=Brasero光盘刻录工具
+ GenericName=Disc Burner and Copier
+ Comment=Create and copy CDs and DVDs
+-Categories=GTK;GNOME;AudioVideo;DiscBurning;
++Categories=GTK;GNOME;System;DiscBurning;
+ MimeType=application/x-cd-image;application/x-cdrdao-toc;application/x-cue;application/x-toc;audio/x-scpls;audio/x-ms-asx;audio/x-mp3-playlist;audio/x-mpegurl;application/x-brasero;x-content/audio-cdda;x-content/video-dvd;x-content/video-vcd;x-content/video-svcd;x-content/image-picturecd;
+ Exec=brasero %U
+ Icon=brasero
+diff -uN applications_raw/cinnamon2d.desktop applications/cinnamon2d.desktop
+--- applications_raw/cinnamon2d.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/cinnamon2d.desktop	2013-06-06 23:48:10.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=Application
+-Name=Cinnamon 2D桌面管理器
++Name=Cinnamon 2D
+ Comment=Window management and application launching
+ Exec=/usr/bin/cinnamon2d
+ Categories=GNOME;GTK;System;Core;
+diff -uN applications_raw/cinnamon.desktop applications/cinnamon.desktop
+--- applications_raw/cinnamon.desktop	2013-09-27 09:13:48.390476504 +0800
++++ applications/cinnamon.desktop	2013-06-06 23:48:10.000000000 +0800
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+ Type=Application
+-Name=Cinnamon桌面管理器
++Name=Cinnamon
+ Comment=Window management and application launching
+ Exec=/usr/bin/cinnamon-launcher
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=cinnamon
+ X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=1.8.6
++X-GNOME-Bugzilla-Version=1.8.8
+ Categories=GNOME;GTK;System;Core;
+ OnlyShowIn=GNOME;
+ NoDisplay=true
+diff -uN applications_raw/cinnamon-display-panel.desktop applications/cinnamon-display-panel.desktop
+--- applications_raw/cinnamon-display-panel.desktop	1970-01-01 08:00:00.000000000 +0800
++++ applications/cinnamon-display-panel.desktop	2013-09-18 17:27:56.000000000 +0800
+@@ -0,0 +1,79 @@
++[Desktop Entry]
++Name=Displays
++Comment=Change resolution and position of monitors and projectors
++Exec=cinnamon-settings display
++Icon=preferences-desktop-display
++Terminal=false
++Type=Application
++StartupNotify=true
++Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
++OnlyShowIn=GNOME;
++X-Cinnamon-Settings-Panel=display
++# Translators: those are keywords for the display control-center panel
++Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[af]=Panel;Projector;xrandr;Screen;Resolution;Refresh;lcd;projektor;skerm;resolusie;vertoon
++Keywords[ar]=لوحة;عرض;شاشة;ميز;
++Keywords[as]=পেনেল;প্ৰজেক্টৰ;xrandr;পৰ্দা;বিভেদন;সতেজ কৰক;
++Keywords[ast]=Panel;Proyeutor;xranrd;Pantalla;Resolución;Anovar;
++Keywords[be]=Панэль;Праектар;xrandr;Экран;Распазнавальнасць;Абнаўленне экрана;
++Keywords[bg]=Панел;Проектор;xrandr;Екран;Разделителна способност;Опресняване;
++Keywords[bn]=প্যানেল;প্রজেক্টর,xrandr;স্ক্রীন,রেজল্যুশন;রিফ্রেশ;
++Keywords[ca]=Quadre;Projector;xrandr;Pantalla;Resolució;Refresca;
++Keywords[ca@valencia]=Quadre;Projector;xrandr;Pantalla;Resolució;Refresca;
++Keywords[crh]=Panel;Projektör;xrandr;Ekran;Çözünürlük;Tazeleme;
++Keywords[cs]=panel;projektor;xrandr;obrazovka;rozlišení;občerstvit;
++Keywords[da]=Panel;Projektor;xrandr;Skærm;Opløsning;Opdatering;
++Keywords[de]=Panel;Projektor;xrandr;Bildschirm;Auflösung;Aktualisieren;
++Keywords[el]=Πάνελ;Προβολέας;xrandr;Οθόνη;Ανάλυση;Ανανέωση;Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[en_GB]=Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[eo]=Panelo;Projekciilo;xrandr;Ekrano;Distingivo;Aktualigi;
++Keywords[es]=Panel;Proyector;xranrd;Pantalla;Resolución;Actualizar;
++Keywords[et]=Paneel;Projektor;xrandr;Ekraan;Resolutsioon;Eraldusvõime;Lahutusvõime;Värskendamissagedus;
++Keywords[eu]=Panela;Proiektagailua;xrandr;Pantaila;Bereizmena;Freskatu;
++Keywords[fa]=تابلو;پروژکتور;xrandr;نمایشگر;تفکیک‌پذیری;نوسازی;
++Keywords[fi]=Paneeli;Projektori;xrandr;Näyttö;Tarkkuus;Virkistystaajuus;
++Keywords[fr]=Panneau;Projecteur;xrandr;Écran;Définition;Résolution;Rafraîchissement;
++Keywords[gl]=Panel;Proxector;xrandr;Pantalla;Resolución;Refresco;
++Keywords[gu]=પેનલ;પ્રોજેક્ટર;xrandr;સ્ક્રીન;રિઝોલ્યુશન;તાજુ કરો;
++Keywords[he]=לוח;מקרן;xrandr;צג;מסך;רזולוציה;רענון;
++Keywords[hi]=पैनल;प्रोजेक्टर;xrandr;स्क्रीन;रिज़ॉल्यूशन;रिफ्रेश;
++Keywords[hu]=Panel;Projektor;xrandr;Képernyő;Felbontás;Frissítés;
++Keywords[id]=Panel;Projektor;xrandr;Layar;Resolusi;Segarkan;
++Keywords[it]=Pannello;Proiettore;xrandr;Schermo;Risoluzione;Dimensioni;Refresh;Display;
++Keywords[ja]=Panel;Projector;xrandr;Screen;Resolution;Refresh;パネル;プロジェクター;画面;解像度;リフレッシュ;
++Keywords[km]=Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[kn]=ಪ್ಯಾನಲ್;ಪ್ರೊಜೆಕ್ಟರ್;xrandr;ತೆರೆ;ರೆಸಲ್ಯೂಶನ್;ಪುನಶ್ಚೇತನ;
++Keywords[ko]=Panel;패널;Projector;프로젝터;xrandr;Screen;화면;Resolution;해상도;Refresh;주사율;
++Keywords[ky]=Панель;Проектор;xrandr;Экран;Ажырымдуулук;Жаңылоо;
++Keywords[lt]=Skydelis;Projektorius;xrandr;Ekranas;Raiška;Atnaujinimas;
++Keywords[lv]=Panelis;Projektors;xrandr;Ekrāns;Izšķirtspēja;Atsvaidzināt;Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[mk]=Панел;Проектор;xrandr;Екран;Резолуција;Освежи;
++Keywords[ml]=Panel;Projector;xrandr;Screen;Resolution;Refresh;
++Keywords[mr]=पॅनल;प्रोजेक्टर;xrandr;स्क्रीन;रेजोल्युशन;रिफ्रेश;
++Keywords[nb]=Panel;Prosjektor;xrandr;Skjerm;Oppløsning;Oppdater;
++Keywords[nl]=Panel;Projector;xrandr;Screen;Resolution;Refresh;Paneel;Scherm;Resolutie;Ververs;
++Keywords[nn]=Panel;Prosjektør;xrandr;Skjerm;Oppløysing;Oppfrisking;
++Keywords[or]=ପ୍ୟାନେଲ;ପ୍ରଦର୍ଶିକା;xrandr;ପରଦା;ବିଭେଦନ;ସତେଜ;
++Keywords[pa]=ਪੈਨਲ;ਪਰੋਜੈਕਟਰ;xrandr;ਸਕਰੀਨ;ਰੈਜ਼ੋਲੂਸ਼ਨ;ਤਾਜ਼ਾ;
++Keywords[pl]=Panel;Projektor;xrandr;Ekran;Rozdzielczość;Odświeżanie;
++Keywords[pt]=Painel;Projector;xrandr;Ecrã;Resolução;Actualizar;
++Keywords[pt_BR]=Painel;Projetor;xrandr;Tela;Resolução;Atualizar;
++Keywords[ro]=Panel;Projector;xrandr;Screen;Resolution;Refresh;Panou;Proiector;Ecran;Rezoluție;Reîmprospătare;Frecvență;Frecventa;Rezolutie
++Keywords[ru]=Панель;Проектор;xrandr;Экран;Разрешение;Обновить;
++Keywords[sk]=Panel;Projektor;xrandr;Obrazovka;Rozlíšenie;Obnovovanie;
++Keywords[sl]=Pult;Projektor;xrandr;Zaslon;Ločljivost;Osveževanje;
++Keywords[sr]=Панел;Пројектор;храндр;Екран;Резолуција;Освежавање;
++Keywords[sr@latin]=Panel;Projektor;hrandr;Ekran;Rezolucija;Osvežavanje;
++Keywords[sv]=Panel;Projektor;xrandr;Skärm;Upplösning;Uppdatering;
++Keywords[ta]=பலகம்;ஒளிப்படக்காட்டி;எக்ஸ்ரான்டர்;திரை;தெளிதிறன்;புதுப்பி
++Keywords[te]=పానల్;ప్రొజెక్టర్;xrandr;తెర;రిజొల్యూషన్;రీఫ్రెష్;
++Keywords[th]=แผงควบคุม;เครื่องฉาย;xrandr;หน้าจอ;ความละเอียด;รีเฟรช;
++Keywords[tr]=Panel;Projektör;xrandr;Ekran;Çözünürlük;Tazeleme;
++Keywords[ug]=تاختا;پرويېكتور;xrandr;ئېكران;ئېنىقلىق;يېڭىلا;
++Keywords[uk]=Панель;Проектори;xrandr;Екран;Роздільність;Оновлення;
++Keywords[vi]=Panel;Projector;Máy;chiếu;May;chieu;xrandr;Screen;Màn;hình;Man;hinh;Resolution;Độ;pân;giải;Do;phan;gia;Refresh;
++Keywords[zh_CN]=Panel;Projector;xrandr;Screen;Resolution;Refresh;面板;投影仪;屏幕;分辨率;刷新;
++Keywords[zh_HK]=Panel;Projector;xrandr;Screen;Resolution;Refresh;面板;投影機;螢幕;解像度;重新整理;
++Keywords[zh_TW]=Panel;Projector;xrandr;Screen;Resolution;Refresh;面板;投影機;螢幕;解析度;重新整理;
++X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
++
+diff -uN applications_raw/cinnamon-menu-editor.desktop applications/cinnamon-menu-editor.desktop
+--- applications_raw/cinnamon-menu-editor.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/cinnamon-menu-editor.desktop	2013-06-06 23:48:10.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Cinnamon菜单编辑器
++Name=Cinnamon Menu Editor
+ Comment=Edit the entries of the Cinnamon menu applet
+ Exec=cinnamon-menu-editor
+ Icon=alacarte
+diff -uN applications_raw/cinnamon-network-panel.desktop applications/cinnamon-network-panel.desktop
+--- applications_raw/cinnamon-network-panel.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/cinnamon-network-panel.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,72 +0,0 @@
+-[Desktop Entry]
+-Name=Network
+-Comment=Network settings
+-Exec=cinnamon-settings network
+-Icon=network-workgroup
+-Terminal=false
+-Type=Application
+-StartupNotify=true
+-Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=GNOME;
+-X-Cinnamon-Settings-Panel=network
+-# Translators: those are keywords for the network control-center panel
+-Keywords=Network;Wireless;IP;LAN;Proxy;
+-Keywords[ar]=الشبكة;لاسلكي;عنوان أي بي;بروتوكول الإنترنت;الشبكة المحلية;الوسيط
+-Keywords[as]=নেটৱাৰ্ক;বেতাঁৰ;IP;LAN;প্ৰক্সি;
+-Keywords[be]=Сетка;Сеціва;Бесправадное злучэнне;IP;LAN;Проксі
+-Keywords[bg]=Мрежа;Безжична;IP;LAN;Сървър-посредник;
+-Keywords[ca]=Xarxa;Sense fil;IP;LAN;Servidor intermediari;
+-Keywords[ca@valencia]=Xarxa;Sense fil;IP;LAN;Servidor intermediari;
+-Keywords[crh]=Şebeke;Kabelsiz;İP;LAN;Proksi;
+-Keywords[cs]=síť;bezdrátová;IP;LAN;proxy;
+-Keywords[da]=Netværk;Trådløs;IP;LAN;Proxy;
+-Keywords[de]=Netzwerk;Drahtlos;IP;LAN;Proxy;
+-Keywords[el]=Δίκτυο;Ασύρματο;IP;LAN;Proxy;Network;Wireless;Διαμεσολαβητής;
+-Keywords[en_GB]=Network;Wireless;IP;LAN;Proxy;
+-Keywords[es]=Red;Inalámbrica;IP;LAN;Proxy;
+-Keywords[et]=Võrk;Kohtvõrk;WiFi;juhtmevaba;IP;proksi;
+-Keywords[eu]=Sarea;Haririk gabea;IPa;Sare lokala;Proxy-a;
+-Keywords[fa]=شبکه;بیسیم;آی‌پی;لن;پیشکار;پروکسی;
+-Keywords[fi]=Verkko;Langaton;IP;LAN;lähiverkko;välityspalvelin;proxy;
+-Keywords[fr]=Réseau;Sans fil;WiFi;IP;LAN;Serveur;Mandataire;Proxy;Connexion;
+-Keywords[ga]=Líonra;Gan Sreang;IP;LAN;Seachfhreastalaí;
+-Keywords[gl]=Rede;Sen fíos;IP;LAN;Proxy;
+-Keywords[gu]=નેટવર્ક;વાયરલેસ;IP;LAN;પ્રોક્સી;
+-Keywords[he]=רשת;אלחוטי;IP;LAN;פרוקסי
+-Keywords[hi]=नेटवर्क;वायरलेस;आईपी;लैन;प्रॉक्सी;
+-Keywords[hu]=Hálózat;Vezeték nélküli;IP;LAN;Proxy;
+-Keywords[id]=Jaringan;Nirkabel;IP;LAN;Proksi;
+-Keywords[it]=Rete;Network;Wireless;IP;LAN;Proxy;
+-Keywords[ja]=Network;Wireless;IP;LAN;Proxy;ネットワーク;無線;プロキシ;
+-Keywords[km]=Network;Wireless;IP;LAN;Proxy;
+-Keywords[kn]=ಜಾಲಬಂಧ;ವೈರ್ಲೆಸ್;IP;LAN;ಪ್ರಾಕ್ಸಿ;
+-Keywords[ko]=Network;네트워크;Wireless;무선;IP;LAN;랜;Proxy;프록시
+-Keywords[lt]=Tinklas;Belaidis;IP;LAN;Tarpinisserveris;
+-Keywords[lv]=Tīkls;Bezvadu;IP;LAN;Starpnieks;Network;Wireless;Proxy;
+-Keywords[mk]=Мрежа;Безжичен;IP;LAN;Прокси;
+-Keywords[ml]=Network;Wireless;IP;LAN;Proxy;
+-Keywords[mr]=नेटवर्क;वायरलेस;IP;LAN;प्रॉक्सी;
+-Keywords[nb]=Nettverk;Trådløs;IP;LAN;Proxy;
+-Keywords[nl]=Network;Wireless;IP;LAN;Proxy;Netwerk;Draadloos;
+-Keywords[or]=ନେଟୱର୍କ;ବେତାର;IP;LAN;ପ୍ରକ୍ସି;
+-Keywords[pa]=Network;Wireless;IP;LAN;ਨੈੱਟਵਰਕ,ਬੇਤਾਰ,ਆਈਪੀ,ਲੈਨ,ਪਰਾਕਸੀ
+-Keywords[pl]=Sieć;Bezprzewodowa;IP;LAN;Pośrednik;Wi-Fi;WLAN;
+-Keywords[pt]=Rede;Sem-Fios;IP;LAN;Proxy;
+-Keywords[pt_BR]=Rede;Sem fio;IP;LAN;Proxy;
+-Keywords[ru]=Сеть;Беспроводная;IP;LAN;Прокси;
+-Keywords[sk]=Sieť;Bezdrôtová;IP;LAN;Proxy;
+-Keywords[sl]=Omrežje;Brezžično;IP;LAN;Posredniški strežnik
+-Keywords[sr]=Мрежа;Бежична;ИП;ЛАН;Посредник
+-Keywords[sr@latin]=Mreža;Bežična;IP;LAN;Posrednik
+-Keywords[sv]=Nätverk;Trådlöst;IP;LAN;Proxyserver;Proxy;
+-Keywords[ta]=பிணையம்;ஒயர்லெஸ்;ஐபி;லான்;ப்ராக்ஸி;
+-Keywords[te]=నెట్‌వర్కు;వైర్‌లెస్;IP;LAN;ప్రాక్సీ;
+-Keywords[th]=เครือข่าย;ไร้สาย;ไอพี;แลน;พร็อกซี;
+-Keywords[tr]=Ağ;Kablosuz;IP;LAN;Proxy;
+-Keywords[uk]=Мережа;Бездротова;IP;LAN;Проксі;
+-Keywords[vi]=Network;Mạng;Mang;Wireless;Không;dây;Khong;day;IP;LAN;Proxy;Uỷ;nhiệm
+-Keywords[zh_CN]=Network;Wireless;IP;LAN;Proxy;网络;无线;上网;局域网;代理;
+-Keywords[zh_HK]=Network;Wireless;IP;LAN;Proxy;網絡;無線;區域網絡;代理;代理伺服器
+-Keywords[zh_TW]=Network;Wireless;IP;LAN;Proxy;網路;無線;區域網路;代理;代理伺服器
+-X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
+-
+diff -uN applications_raw/cinnamon-settings.desktop applications/cinnamon-settings.desktop
+--- applications_raw/cinnamon-settings.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/cinnamon-settings.desktop	2013-09-25 15:41:26.000000000 +0800
+@@ -3,7 +3,7 @@
+ Icon=preferences-system
+ Terminal=false
+ Type=Application
+-Categories=GNOME;GTK;System;
++Categories=GNOME;GTK;Settings
+ StartupNotify=false
+ OnlyShowIn=GNOME;
+ Keywords=Preferences;Settings;
+@@ -46,10 +46,10 @@
+ Name[tr]=Sistem Ayarları
+ Name[ug]=سىستېما تەڭشىكى
+ Name[uk]=Системні параметри
+-Name[zh_CN]=系统设置
++Name[zh_CN]=系统设置面板
+ Name[zh_TW]=系統設定
+ 
+-Comment=Control Center
++Comment=系统控制中心
+ Comment[fr]=Centre de Contrôle
+ 
+ 
+diff -uN applications_raw/cinnamon-sound-nua-panel.desktop applications/cinnamon-sound-nua-panel.desktop
+--- applications_raw/cinnamon-sound-nua-panel.desktop	2013-09-27 09:13:48.890476496 +0800
++++ applications/cinnamon-sound-nua-panel.desktop	2013-09-24 16:20:26.000000000 +0800
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=Sound
++Name=声音
+ Comment=Change sound volume and sound events
+ Exec=cinnamon-settings sound
+ Icon=multimedia-volume-control
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
++Categories=GTK;Settings;HardwareSettings;
+ OnlyShowIn=GNOME;
+ X-Cinnamon-Settings-Panel=sound-nua
+ # Translators: those are keywords for the sound control-center panel
+diff -uN applications_raw/cinnamon-user-accounts-panel.desktop applications/cinnamon-user-accounts-panel.desktop
+--- applications_raw/cinnamon-user-accounts-panel.desktop	2013-09-27 09:13:48.422476504 +0800
++++ applications/cinnamon-user-accounts-panel.desktop	2013-09-24 16:23:54.000000000 +0800
+@@ -6,7 +6,7 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=System;Settings;X-Cinnamon-Settings-Panel;X-Cinnamon-SystemSettings
++Categories=Settings;X-Cinnamon-Settings-Panel;X-Cinnamon-SystemSettings
+ OnlyShowIn=GNOME;
+ X-Cinnamon-Settings-Panel=user-accounts
+ # Translators: those are keywords for the user accounts control-center panel
+diff -uN applications_raw/eog.desktop applications/eog.desktop
+--- applications_raw/eog.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/eog.desktop	2013-09-25 14:39:22.000000000 +0800
+@@ -1,13 +1,13 @@
+ [Desktop Entry]
+-Name=Image Viewer
+-Comment=Browse and rotate images
++Name=图片查看器
++Comment=图片查看
+ TryExec=eog
+ Exec=eog %U
+ Icon=eog
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+-Categories=GNOME;GTK;Graphics;2DGraphics;RasterGraphics;Viewer;
++Categories=GNOME;GTK;AudioVideo;2DGraphics;RasterGraphics;Viewer;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=EOG
+ X-GNOME-Bugzilla-Component=general
+diff -uN applications_raw/evince.desktop applications/evince.desktop
+--- applications_raw/evince.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/evince.desktop	2013-09-25 14:40:08.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=文档阅读器
+-Comment=View multi-page documents
++Name=PDF阅读器
++Comment=阅读PDF文档
+ TryExec=evince
+ Exec=evince %U
+ StartupNotify=true
+@@ -12,6 +12,6 @@
+ X-GNOME-Bugzilla-Product=evince
+ X-GNOME-Bugzilla-Component=BugBuddyBugs
+ X-GNOME-Bugzilla-Version=3.6.1
+-Categories=GNOME;GTK;Office;Viewer;Graphics;VectorGraphics;
++Categories=GNOME;GTK;Office;Viewer;VectorGraphics;
+ MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;application/x-xzpdf;application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;application/x-dvi;application/x-bzdvi;application/x-gzdvi;image/vnd.djvu;image/tiff;application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/oxps;application/vnd.ms-xpsdocument;
+ X-Ubuntu-Gettext-Domain=evince
+diff -uN applications_raw/fcitx-config-gtk3.desktop applications/fcitx-config-gtk3.desktop
+--- applications_raw/fcitx-config-gtk3.desktop	2013-09-27 09:13:48.634476501 +0800
++++ applications/fcitx-config-gtk3.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,11 +0,0 @@
+-[Desktop Entry]
+-Name=Fcitx输入法配置工具
+-Comment=Fcitx GUI Config Tool
+-Exec=fcitx-config-gtk3
+-Icon=fcitx
+-MimeType=
+-Type=Application
+-Categories=Settings;
+-NoDisplay=true
+-X-KDE-StartupNotify=false
+-StartupNotify=false
+diff -uN applications_raw/fcitx-configtool.desktop applications/fcitx-configtool.desktop
+--- applications_raw/fcitx-configtool.desktop	2013-09-27 09:13:48.514476502 +0800
++++ applications/fcitx-configtool.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,23 +0,0 @@
+-[Desktop Entry]
+-Name=Fcitx Configuration
+-Name[de]=Fcitx Konfiguration
+-Name[ja]=Fcitx 設定
+-Name[zh_CN]=Fcitx 配置
+-Name[zh_TW]=Fcitx 設定
+-GenericName=Input Method Configuration
+-GenericName[de]=Konfiguration Eingabemethode
+-GenericName[ja]=入力メソッドの設定
+-GenericName[zh_CN]=输入法配置
+-GenericName[zh_TW]=輸入法設定
+-Comment=Change Fcitx Configuration
+-Comment[de]=Wechsel der Fcitx Konfiguration
+-Comment[ja]=Fcitx 設定を変更
+-Comment[zh_CN]=修改 Fcitx 配置
+-Comment[zh_TW]=修改 Fcitx 設定
+-Exec=fcitx-configtool
+-Icon=fcitx
+-MimeType=
+-Type=Application
+-Categories=Settings;
+-X-KDE-StartupNotify=false
+-StartupNotify=false
+diff -uN applications_raw/file-roller.desktop applications/file-roller.desktop
+--- applications_raw/file-roller.desktop	2013-09-27 09:13:48.486476503 +0800
++++ applications/file-roller.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,18 +0,0 @@
+-[Desktop Entry]
+-Name=归档管理工具
+-Comment=Create and modify an archive
+-Keywords=zip;tar;extract;unpack;
+-TryExec=file-roller
+-Exec=file-roller %U
+-StartupNotify=true
+-Terminal=false
+-Type=Application
+-Icon=file-roller
+-Categories=GTK;GNOME;Utility;Archiving;Compression;
+-MimeType=application/x-7z-compressed;application/x-7z-compressed-tar;application/x-ace;application/x-alz;application/x-ar;application/x-arj;application/x-bzip;application/x-bzip-compressed-tar;application/x-bzip1;application/x-bzip1-compressed-tar;application/x-cabinet;application/x-cbr;application/x-cbz;application/x-cd-image;application/x-compress;application/x-compressed-tar;application/x-cpio;application/x-deb;application/x-ear;application/x-ms-dos-executable;application/x-gtar;application/x-gzip;application/x-gzpostscript;application/x-java-archive;application/x-lha;application/x-lhz;application/x-lrzip;application/x-lrzip-compressed-tar;application/x-lzip;application/x-lzip-compressed-tar;application/x-lzma;application/x-lzma-compressed-tar;application/x-lzop;application/x-lzop-compressed-tar;application/x-ms-wim;application/x-rar;application/x-rar-compressed;application/x-rpm;application/x-rzip;application/x-tar;application/x-tarz;application/x-stuffit;application/x-war;application/x-xz;application/x-xz-compressed-tar;application/x-zip;application/x-zip-compressed;application/x-zoo;application/zip;application/x-archive;application/vnd.ms-cab-compressed;
+-X-GNOME-DocPath=file-roller/file-roller.xml
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=file-roller
+-X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=3.6.3
+-X-Ubuntu-Gettext-Domain=file-roller
+diff -uN applications_raw/firefox.desktop applications/firefox.desktop
+--- applications_raw/firefox.desktop	2013-09-27 09:13:48.386476505 +0800
++++ applications/firefox.desktop	2013-09-11 23:56:16.000000000 +0800
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Name=Firefox Web Browser
+-Name[ar]=متصفح الوِب فَيَرفُكْس
++Name[ar]=متصفح الويب فَيَرفُكْس
+ Name[ast]=Restolador web Firefox
+ Name[bn]=ফায়ারফক্স ওয়েব ব্রাউজার
+ Name[ca]=Navegador web Firefox
+@@ -34,6 +34,7 @@
+ Name[sk]=Firefox - internetový prehliadač
+ Name[sl]=Firefox spletni brskalnik
+ Name[sv]=Firefox webbläsare
++Name[tr]=Firefox Web Tarayıcısı
+ Name[ug]=Firefox توركۆرگۈ
+ Name[uk]=Веб-браузер Firefox
+ Name[vi]=Trình duyệt web Firefox
+@@ -74,13 +75,14 @@
+ Comment[sk]=Prehliadanie internetu
+ Comment[sl]=Brskajte po spletu
+ Comment[sv]=Surfa på webben
++Comment[tr]=İnternet'te Gezinin
+ Comment[ug]=دۇنيادىكى توربەتلەرنى كۆرگىلى بولىدۇ
+ Comment[uk]=Перегляд сторінок Інтернету
+ Comment[vi]=Để duyệt các trang web
+ Comment[zh_CN]=浏览互联网
+ Comment[zh_TW]=瀏覽網際網路
+ GenericName=Web Browser
+-GenericName[ar]=متصفح وب
++GenericName[ar]=متصفح ويب
+ GenericName[ast]=Restolador Web
+ GenericName[bn]=ওয়েব ব্রাউজার
+ GenericName[ca]=Navegador web
+@@ -113,12 +115,14 @@
+ GenericName[sk]=Internetový prehliadač
+ GenericName[sl]=Spletni brskalnik
+ GenericName[sv]=Webbläsare
++GenericName[tr]=Web Tarayıcı
+ GenericName[ug]=توركۆرگۈ
+ GenericName[uk]=Веб-браузер
+ GenericName[vi]=Trình duyệt Web
+ GenericName[zh_CN]=网络浏览器
+ GenericName[zh_TW]=網路瀏覽器
+ Keywords=Internet;WWW;Browser;Web;Explorer
++Keywords[ar]=انترنت;إنترنت;متصفح;ويب;وب
+ Keywords[ast]=Internet;WWW;Restolador;Web;Esplorador
+ Keywords[ca]=Internet;WWW;Navegador;Web;Explorador;Explorer
+ Keywords[cs]=Internet;WWW;Prohlížeč;Web;Explorer
+@@ -141,9 +145,11 @@
+ Keywords[ru]=Internet;WWW;Browser;Web;Explorer;интернет;браузер;веб;файрфокс;огнелис
+ Keywords[sk]=Internet;WWW;Prehliadač;Web;Explorer
+ Keywords[sl]=Internet;WWW;Browser;Web;Explorer;Brskalnik;Splet
++Keywords[tr]=İnternet;WWW;Tarayıcı;Web;Gezgin;Web sitesi;Site;sörf;çevrimiçi;tara
+ Keywords[uk]=Internet;WWW;Browser;Web;Explorer;Інтернет;мережа;переглядач;оглядач;браузер;веб;файрфокс;вогнелис;перегляд
+ Keywords[vi]=Internet;WWW;Browser;Web;Explorer;Trình duyệt;Trang web
+ Keywords[zh_CN]=Internet;WWW;Browser;Web;Explorer;网页;浏览;上网;火狐;Firefox;ff;互联网;网站;
++Keywords[zh_TW]=Internet;WWW;Browser;Web;Explorer;網際網路;網路;瀏覽器;上網;網頁;火狐
+ Exec=firefox %u
+ Terminal=false
+ X-MultipleArgs=false
+@@ -156,6 +162,7 @@
+ 
+ [Desktop Action NewWindow]
+ Name=Open a New Window
++Name[ar]=افتح نافذة جديدة
+ Name[ast]=Abrir una ventana nueva
+ Name[bn]=Abrir una ventana nueva
+ Name[ca]=Obre una finestra nova
+@@ -180,9 +187,11 @@
+ Name[pt]=Abrir nova janela
+ Name[pt_BR]=Abrir nova janela
+ Name[ro]=Deschide o fereastră nouă
+-Name[ru]=Открыть новое окно
++Name[ru]=Новое окно
+ Name[sk]=Otvoriť nové okno
++Name[sl]=Odpri novo okno
+ Name[sv]=Öppna ett nytt fönster
++Name[tr]=Yeni pencere aç 
+ Name[ug]=يېڭى كۆزنەك ئېچىش
+ Name[uk]=Відкрити нове вікно
+ Name[vi]=Mở cửa sổ mới
+@@ -193,5 +202,20 @@
+ 
+ [Desktop Action NewPrivateWindow]
+ Name=Open a New Private Window
++Name[ar]=افتح نافذة جديدة للتصفح الخاص
++Name[ca]=Obre una finestra nova en mode d'incògnit
++Name[de]=Ein neues privates Fenster öffnen
++Name[es]=Abrir una ventana privada nueva
++Name[fi]=Avaa uusi yksityinen ikkuna
++Name[fr]=Ouvrir une nouvelle fenêtre de navigation privée
++Name[he]=פתיחת חלון גלישה פרטית חדש
++Name[hu]=Új privát ablak nyitása
++Name[it]=Apri una nuova finestra anonima
++Name[nb]=Åpne et nytt privat vindu
++Name[ru]=Новое приватное окно
++Name[sl]=Odpri novo okno zasebnega brskanja
++Name[tr]=Yeni bir pencere aç
++Name[uk]=Відкрити нове вікно у потайливому режимі
++Name[zh_TW]=開啟新隱私瀏覽視窗
+ Exec=firefox -private-window
+ OnlyShowIn=Unity;
+diff -uN applications_raw/gdebi.desktop applications/gdebi.desktop
+--- applications_raw/gdebi.desktop	2013-09-27 09:13:48.542476502 +0800
++++ applications/gdebi.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,13 +0,0 @@
+-[Desktop Entry]
+-Name=GDebi Package Installer
+-GenericName=Package Installer
+-Comment=Install and view software packages
+-Exec=gdebi-gtk %f
+-Icon=gnome-mime-application-x-deb
+-Terminal=false
+-Type=Application
+-Categories=System;
+-MimeType=application/x-deb;application/x-debian-package;
+-NotShowIn=KDE;
+-X-Ubuntu-Gettext-Domain=gdebi
+-StartupNotify=true
+diff -uN applications_raw/gimp.desktop applications/gimp.desktop
+--- applications_raw/gimp.desktop	2013-09-27 09:13:48.238476507 +0800
++++ applications/gimp.desktop	2013-09-25 14:35:52.000000000 +0800
+@@ -3,12 +3,12 @@
+ Type=Application
+ Name=GIMP图片编辑器
+ GenericName=Image Editor
+-Comment=Create images and edit photographs
++Comment=创建并编辑图片
+ Exec=gimp-2.8 %U
+ TryExec=gimp-2.8
+ Icon=gimp
+ Terminal=false
+-Categories=Graphics;2DGraphics;RasterGraphics;GTK;
++Categories=AudioVideo;2DGraphics;RasterGraphics;GTK;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=GIMP
+ X-GNOME-Bugzilla-Component=General
+diff -uN applications_raw/gnome-disks.desktop applications/gnome-disks.desktop
+--- applications_raw/gnome-disks.desktop	2013-09-27 09:13:48.854476497 +0800
++++ applications/gnome-disks.desktop	2013-09-24 17:41:44.000000000 +0800
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+ Name=磁盘
+-Comment=Manage Drives and Media
++Comment=管理驱动和媒体
+ Exec=gnome-disks
+ Icon=gnome-disks
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+ X-GNOME-DocPath=palimpsest/palimpsest.xml
+-Categories=GNOME;GTK;Utility;HardwareSettings;Settings;HardwareSettings;
++Categories=GNOME;GTK;Utility;HardwareSettings;System;HardwareSettings;
+ X-Ubuntu-Gettext-Domain=gnome-disk-utility
+diff -uN applications_raw/gnome-font-viewer.desktop applications/gnome-font-viewer.desktop
+--- applications_raw/gnome-font-viewer.desktop	2013-09-27 09:13:48.614476501 +0800
++++ applications/gnome-font-viewer.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,17 +0,0 @@
+-[Desktop Entry]
+-Name=字体
+-Comment=View fonts on your system
+-Keywords=fonts;fontface;
+-Icon=preferences-desktop-font
+-Exec=gnome-font-viewer %u
+-Terminal=false
+-Type=Application
+-StartupNotify=true
+-Categories=GTK;GNOME;Utility;
+-MimeType=application/x-font-ttf;application/x-font-pcf;application/x-font-type1;application/x-font-otf;
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=gnome-font-viewer
+-X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-OtherBinaries=gnome-thumbnail-font
+-X-GNOME-Bugzilla-Version=3.7.5
+-X-Ubuntu-Gettext-Domain=gnome-font-viewer
+diff -uN applications_raw/gnome-power-statistics.desktop applications/gnome-power-statistics.desktop
+--- applications_raw/gnome-power-statistics.desktop	2013-09-27 09:13:48.386476505 +0800
++++ applications/gnome-power-statistics.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,16 +0,0 @@
+-[Desktop Entry]
+-Name=Power Statistics
+-Comment=Observe power management
+-Icon=gnome-power-statistics
+-Exec=gnome-power-statistics
+-Terminal=false
+-Type=Application
+-Categories=GNOME;GTK;System;Monitor;
+-OnlyShowIn=GNOME;Unity;
+-StartupNotify=true
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=gnome-power-manager
+-X-GNOME-Bugzilla-Component=gnome-power-statistics
+-X-GNOME-Bugzilla-Version=3.6.0
+-X-Desktop-File-Install-Version=0.10
+-X-Ubuntu-Gettext-Domain=gnome-power-manager
+diff -uN applications_raw/gnome-screenshot.desktop applications/gnome-screenshot.desktop
+--- applications_raw/gnome-screenshot.desktop	2013-09-27 09:13:48.210476507 +0800
++++ applications/gnome-screenshot.desktop	2013-09-25 14:08:24.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=Screenshot
+-Comment=Save images of your screen or individual windows
++Name=截图工具
++Comment=保存屏幕图像
+ Exec=gnome-screenshot --interactive
+ Terminal=false
+ Type=Application
+diff -uN applications_raw/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
+--- applications_raw/gnome-system-monitor.desktop	2013-09-27 09:13:48.266476506 +0800
++++ applications/gnome-system-monitor.desktop	2013-09-25 13:49:04.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=System Monitor
++Name=任务管理器
+ Comment=View current processes and monitor system state
+ TryExec=gnome-system-monitor
+ Exec=gnome-system-monitor
+diff -uN applications_raw/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
+--- applications_raw/gnome-user-share-properties.desktop	2013-09-27 09:13:48.942476496 +0800
++++ applications/gnome-user-share-properties.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,15 +0,0 @@
+-[Desktop Entry]
+-Name=Personal File Sharing
+-Comment=Preferences for sharing of files
+-Exec=gnome-file-share-properties
+-Icon=folder-remote
+-StartupNotify=true
+-Terminal=false
+-Type=Application
+-Categories=GNOME;Settings;X-GNOME-NetworkSettings;
+-OnlyShowIn=GNOME;Unity;
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=gnome-user-share
+-X-GNOME-Bugzilla-Component=general
+-X-Ubuntu-Gettext-Domain=gnome-user-share
+-
+diff -uN applications_raw/google-chrome.desktop applications/google-chrome.desktop
+--- applications_raw/google-chrome.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/google-chrome.desktop	2013-09-25 14:18:56.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Version=1.0
+-Name=Google Chrome网络浏览器
++Name=Google浏览器
+ # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+ # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+ GenericName=Web Browser
+diff -uN applications_raw/gparted.desktop applications/gparted.desktop
+--- applications_raw/gparted.desktop	2013-09-27 09:13:49.026476494 +0800
++++ applications/gparted.desktop	2013-09-24 17:00:52.000000000 +0800
+@@ -7,6 +7,6 @@
+ Icon=gparted
+ Terminal=false
+ Type=Application
+-Categories=GNOME;System;Filesystem;Settings;
++Categories=GNOME;System;Filesystem;
+ StartupNotify=true
+ X-Ubuntu-Gettext-Domain=gparted
+diff -uN applications_raw/gthumb.desktop applications/gthumb.desktop
+--- applications_raw/gthumb.desktop	2013-09-27 09:13:48.314476506 +0800
++++ applications/gthumb.desktop	2013-09-25 14:37:44.000000000 +0800
+@@ -56,9 +56,9 @@
+ Name[uk]=gThumb
+ Name[vi]=gThumb
+ Name[xh]=i-gThumb
+-Name[zh_CN]=gThumb
+-Name[zh_HK]=gThumb
+-Name[zh_TW]=gThumb
++Name[zh_CN]=gThumb图片浏览器
++Name[zh_HK]=gThumb图片浏览器
++Name[zh_TW]=gThumb图片浏览器
+ GenericName=Image Viewer
+ GenericName[ar]=عارض الصّور
+ GenericName[ca]=Visualitzador d'imatges
+@@ -223,7 +223,7 @@
+ Comment[zh_CN]=查看及管理图像
+ Comment[zh_HK]=檢視和組織你的圖片
+ Comment[zh_TW]=檢視和組織您的圖片
+-Categories=GNOME;GTK;Graphics;Viewer;RasterGraphics;2DGraphics;Photography;
++Categories=GNOME;GTK;AudioVideo;Viewer;RasterGraphics;2DGraphics;Photography;
+ Exec=gthumb %U
+ Icon=gthumb
+ MimeType=image/bmp;image/jpeg;image/gif;image/png;image/tiff;image/x-bmp;image/x-ico;image/x-png;image/x-pcx;image/x-tga;image/xpm;image/svg+xml;
+diff -uN applications_raw/gucharmap.desktop applications/gucharmap.desktop
+--- applications_raw/gucharmap.desktop	2013-09-27 09:13:49.026476494 +0800
++++ applications/gucharmap.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,14 +0,0 @@
+-[Desktop Entry]
+-Name=字符映射表
+-Comment=Insert special characters into documents
+-Exec=gucharmap
+-Icon=accessories-character-map
+-Terminal=false
+-Type=Application
+-Categories=GNOME;GTK;Utility;
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=gucharmap
+-X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=3.6.1
+-StartupNotify=true
+-X-Ubuntu-Gettext-Domain=gucharmap
+diff -uN applications_raw/gufw.desktop applications/gufw.desktop
+--- applications_raw/gufw.desktop	2013-09-27 09:13:48.302476506 +0800
++++ applications/gufw.desktop	2013-09-24 17:51:08.000000000 +0800
+@@ -3,7 +3,7 @@
+ Type=Application
+ Terminal=false
+ Exec=gufw
+-Name=Firewall设定
++Name=防火墙设定
+ Name[zh_TW]=防火牆設定
+ Name[vi]=Cấu hình tường lửa
+ Name[uk]=Конфігурація брандмауера
+@@ -34,7 +34,7 @@
+ Name[bg]=Конфигуриране на защитна стена
+ Name[ast]=Configuración del tornafueos
+ Name[ar]=إعدادات الجدار الناري
+-Comment=Allows you to configure ufw firewall
++Comment=设定防火墙
+ Comment[zh_TW]=允許您設定 ufw 防火牆
+ Comment[vi]=Cho phép bạn cấu hình tường lửa ufw
+ Comment[uk]=Дозволяє налаштувати брандмауер uwf
+@@ -66,5 +66,5 @@
+ Comment[ast]=Permite configurar el tornafuéu ufw
+ Comment[ar]=يسٌمح لك بإعداد الجدار الناري UFW
+ Icon=gufw.png
+-Categories=System;Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
++Categories=Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
+ X-GNOME-Settings-Panel=gufw.png
+diff -uN applications_raw/icedtea-netx-javaws.desktop applications/icedtea-netx-javaws.desktop
+--- applications_raw/icedtea-netx-javaws.desktop	2013-09-27 09:13:48.266476506 +0800
++++ applications/icedtea-netx-javaws.desktop	2013-07-02 03:31:42.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=启动IcedTea Java Web
++Name=IcedTea Java Web Start
+ Name[fi]=IcedTea Java - Web Start
+ Comment=IcedTea Java Web Start
+ Comment[fi]=IcedTea Java - Web Start
+diff -uN applications_raw/im-config.desktop applications/im-config.desktop
+--- applications_raw/im-config.desktop	2013-09-27 09:13:48.190476508 +0800
++++ applications/im-config.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,21 +0,0 @@
+-[Desktop Entry]
+-Name=Input Method
+-Name[ja]=入力メソッド
+-Name[zh_TW]=輸入法
+-Name[zh_HK]=輸入法
+-Name[zh_CN]=输入法
+-Name[ko]=입력기
+-Name[vi]=Trình chuyển cách nhập liệu
+-Name[fr]=Méthode d'entrée
+-Name[de]=Eingabemethode
+-Comment=Set Keyboard Input Method
+-Comment[ja]=キーボード入力メソッドの設定
+-Comment[zh_TW]=設定鍵盤輸入模式
+-Comment[zh_HK]=設定鍵盤輸入模式
+-Comment[zh_CN]=设定键盘输入模式
+-Comment[vi]=Chọn kiểu nhập bàn phím
+-Type=Application
+-Exec=im-config
+-Terminal=false
+-Icon=input-keyboard
+-Categories=Settings
+diff -uN applications_raw/itweb-settings.desktop applications/itweb-settings.desktop
+--- applications_raw/itweb-settings.desktop	2013-09-27 09:13:48.686476500 +0800
++++ applications/itweb-settings.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,8 +0,0 @@
+-[Desktop Entry]
+-Name=设置IcedTea Web
+-Comment=Configure IcedTea Web (javaws and plugin)
+-Exec=/usr/bin/itweb-settings
+-Icon=javaws
+-Terminal=false
+-Type=Application
+-Categories=Settings;
+diff -uN applications_raw/language-selector.desktop applications/language-selector.desktop
+--- applications_raw/language-selector.desktop	2013-09-27 09:13:48.430476504 +0800
++++ applications/language-selector.desktop	2013-09-14 01:32:06.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=语言支持
+-Comment=配置本地语言支持
++Name=Language Support
++Comment=Configure multiple and native language support on your system
+ Exec=/usr/bin/gnome-language-selector
+ Icon=preferences-desktop-locale
+ Terminal=false
+diff -uN applications_raw/mimeinfo.cache applications/mimeinfo.cache
+--- applications_raw/mimeinfo.cache	2013-09-27 09:13:48.942476496 +0800
++++ applications/mimeinfo.cache	2013-09-26 09:20:10.000000000 +0800
+@@ -1,14 +1,12 @@
+ [MIME Cache]
+-application/csv=libreoffice-calc.desktop;
+-application/excel=libreoffice-calc.desktop;
+ application/java-archive=openjdk-7-java.desktop;
+-application/msexcel=libreoffice-calc.desktop;wps-office-et.desktop;
+-application/mspowerpoint=libreoffice-impress.desktop;wps-office-wpp.desktop;
+-application/msword=wps-office-wps.desktop;libreoffice-writer.desktop;
++application/msexcel=wps-office-et.desktop;
++application/mspowerpoint=wps-office-wpp.desktop;
++application/msword=wps-office-wps.desktop;
+ application/msword-template=wps-office-wps.desktop;
+ application/musepack=banshee.desktop;
+ application/mxf=totem.desktop;
+-application/ogg=totem.desktop;vlc.desktop;banshee.desktop;
++application/ogg=totem.desktop;banshee.desktop;vlc.desktop;
+ application/oxps=evince.desktop;
+ application/pdf=evince.desktop;gimp.desktop;gimp.desktop;
+ application/pkcs10=gcr-viewer.desktop;
+@@ -28,75 +26,18 @@
+ application/ram=totem.desktop;
+ application/rdf+xml=firefox.desktop;
+ application/rss+xml=firefox.desktop;banshee.desktop;
+-application/rtf=libreoffice-writer.desktop;
+ application/sdp=totem.desktop;
+ application/smil=totem.desktop;
+ application/smil+xml=totem.desktop;
+-application/tab-separated-values=libreoffice-calc.desktop;
+ application/vnd.apple.mpegurl=totem.desktop;
+ application/vnd.emusic-emusic_list=banshee.desktop;
+-application/vnd.lotus-1-2-3=libreoffice-calc.desktop;
+-application/vnd.lotus-wordpro=libreoffice-writer.desktop;
+-application/vnd.ms-cab-compressed=file-roller.desktop;
+-application/vnd.ms-excel=libreoffice-calc.desktop;wps-office-et.desktop;
+-application/vnd.ms-excel.sheet.binary.macroenabled.12=libreoffice-calc.desktop;
+-application/vnd.ms-excel.sheet.macroenabled.12=libreoffice-calc.desktop;
+-application/vnd.ms-excel.template.macroenabled.12=libreoffice-calc.desktop;
+-application/vnd.ms-powerpoint=libreoffice-impress.desktop;wps-office-wpp.desktop;
+-application/vnd.ms-powerpoint.presentation.macroenabled.12=libreoffice-impress.desktop;
+-application/vnd.ms-powerpoint.slideshow.macroEnabled.12=libreoffice-impress.desktop;
+-application/vnd.ms-powerpoint.template.macroenabled.12=libreoffice-impress.desktop;
+-application/vnd.ms-word=wps-office-wps.desktop;libreoffice-writer.desktop;
+-application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop;
+-application/vnd.ms-word.template.macroenabled.12=libreoffice-writer.desktop;
+-application/vnd.ms-works=libreoffice-writer.desktop;
++application/vnd.ms-excel=wps-office-et.desktop;
++application/vnd.ms-powerpoint=wps-office-wpp.desktop;
++application/vnd.ms-word=wps-office-wps.desktop;
+ application/vnd.ms-wpl=totem.desktop;
+ application/vnd.ms-xpsdocument=evince.desktop;
+ application/vnd.mspowerpoint=wps-office-wpp.desktop;
+-application/vnd.oasis.opendocument.chart=libreoffice-calc.desktop;
+-application/vnd.oasis.opendocument.chart-template=libreoffice-calc.desktop;
+-application/vnd.oasis.opendocument.database=libreoffice-base.desktop;
+-application/vnd.oasis.opendocument.formula=libreoffice-math.desktop;
+-application/vnd.oasis.opendocument.formula-template=libreoffice-math.desktop;
+-application/vnd.oasis.opendocument.graphics=libreoffice-draw.desktop;
+-application/vnd.oasis.opendocument.graphics-flat-xml=libreoffice-xsltfilter.desktop;
+-application/vnd.oasis.opendocument.graphics-template=libreoffice-draw.desktop;
+-application/vnd.oasis.opendocument.presentation=libreoffice-impress.desktop;
+-application/vnd.oasis.opendocument.presentation-flat-xml=libreoffice-xsltfilter.desktop;
+-application/vnd.oasis.opendocument.presentation-template=libreoffice-impress.desktop;
+-application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
+-application/vnd.oasis.opendocument.spreadsheet-flat-xml=libreoffice-xsltfilter.desktop;
+-application/vnd.oasis.opendocument.spreadsheet-template=libreoffice-calc.desktop;
+-application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
+-application/vnd.oasis.opendocument.text-flat-xml=libreoffice-xsltfilter.desktop;
+-application/vnd.oasis.opendocument.text-master=libreoffice-writer.desktop;
+-application/vnd.oasis.opendocument.text-template=libreoffice-writer.desktop;
+-application/vnd.oasis.opendocument.text-web=libreoffice-writer.desktop;
+-application/vnd.openofficeorg.extension=libreoffice-startcenter.desktop;
+-application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
+-application/vnd.openxmlformats-officedocument.presentationml.slide=libreoffice-impress.desktop;
+-application/vnd.openxmlformats-officedocument.presentationml.slideshow=libreoffice-impress.desktop;
+-application/vnd.openxmlformats-officedocument.presentationml.template=libreoffice-impress.desktop;
+-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+-application/vnd.openxmlformats-officedocument.spreadsheetml.template=libreoffice-calc.desktop;
+-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+-application/vnd.openxmlformats-officedocument.wordprocessingml.template=libreoffice-writer.desktop;
+ application/vnd.rn-realmedia=totem.desktop;vlc.desktop;
+-application/vnd.stardivision.writer-global=libreoffice-writer.desktop;
+-application/vnd.sun.xml.base=libreoffice-base.desktop;
+-application/vnd.sun.xml.calc=libreoffice-calc.desktop;
+-application/vnd.sun.xml.calc.template=libreoffice-calc.desktop;
+-application/vnd.sun.xml.draw=libreoffice-draw.desktop;
+-application/vnd.sun.xml.draw.template=libreoffice-draw.desktop;
+-application/vnd.sun.xml.impress=libreoffice-impress.desktop;
+-application/vnd.sun.xml.impress.template=libreoffice-impress.desktop;
+-application/vnd.sun.xml.math=libreoffice-math.desktop;
+-application/vnd.sun.xml.writer=libreoffice-writer.desktop;
+-application/vnd.sun.xml.writer.global=libreoffice-writer.desktop;
+-application/vnd.sun.xml.writer.template=libreoffice-writer.desktop;
+-application/vnd.visio=libreoffice-draw.desktop;
+-application/vnd.wordperfect=libreoffice-writer.desktop;
+-application/wordperfect=libreoffice-writer.desktop;
+ application/wps-office.doc=wps-office-wps.desktop;
+ application/wps-office.docx=wps-office-wps.desktop;
+ application/wps-office.dot=wps-office-wps.desktop;
+@@ -113,128 +54,72 @@
+ application/wps-office.wpt=wps-office-wps.desktop;
+ application/wps-office.xls=wps-office-et.desktop;
+ application/wps-office.xlt=wps-office-et.desktop;
+-application/x-123=libreoffice-calc.desktop;
+-application/x-7z-compressed=file-roller.desktop;
+-application/x-7z-compressed-tar=file-roller.desktop;
+-application/x-ace=file-roller.desktop;
+-application/x-alz=file-roller.desktop;
+ application/x-ape=banshee.desktop;
+-application/x-ar=file-roller.desktop;
+-application/x-archive=file-roller.desktop;
+-application/x-arj=file-roller.desktop;
+ application/x-backup=mintBackup_mime.desktop;
+ application/x-bittorrent=transmission-gtk.desktop;
+ application/x-brasero=brasero.desktop;
+ application/x-bzdvi=evince.desktop;
+-application/x-bzip=file-roller.desktop;
+-application/x-bzip-compressed-tar=nemo-mount-archive.desktop;file-roller.desktop;
+-application/x-bzip1=file-roller.desktop;
+-application/x-bzip1-compressed-tar=file-roller.desktop;
++application/x-bzip-compressed-tar=nemo-mount-archive.desktop;
+ application/x-bzpdf=evince.desktop;
+ application/x-bzpostscript=evince.desktop;
+-application/x-cabinet=file-roller.desktop;
+ application/x-cb7=evince.desktop;
+-application/x-cbr=evince.desktop;file-roller.desktop;
++application/x-cbr=evince.desktop;
+ application/x-cbt=evince.desktop;
+-application/x-cbz=evince.desktop;file-roller.desktop;
+-application/x-cd-image=gnome-disk-image-mounter.desktop;nemo-mount-archive.desktop;brasero.desktop;file-roller.desktop;
++application/x-cbz=evince.desktop;
++application/x-cd-image=nemo-mount-archive.desktop;brasero.desktop;gnome-disk-image-mounter.desktop;
+ application/x-cdrdao-toc=brasero.desktop;
+-application/x-compress=file-roller.desktop;
+-application/x-compressed-tar=nemo-mount-archive.desktop;file-roller.desktop;
+-application/x-cpio=nemo-mount-archive.desktop;file-roller.desktop;
++application/x-compressed-tar=nemo-mount-archive.desktop;
++application/x-cpio=nemo-mount-archive.desktop;
+ application/x-cue=brasero.desktop;
+-application/x-dbase=libreoffice-calc.desktop;
+-application/x-dbf=libreoffice-calc.desktop;
+-application/x-deb=gdebi.desktop;file-roller.desktop;
+-application/x-debian-package=gdebi.desktop;
+ application/x-democracy=banshee.desktop;
+-application/x-doc=libreoffice-writer.desktop;
+-application/x-dos_ms_excel=libreoffice-calc.desktop;
+ application/x-dvi=evince.desktop;
+-application/x-ear=file-roller.desktop;
+-application/x-excel=libreoffice-calc.desktop;
+ application/x-extension-m4a=totem.desktop;banshee.desktop;
+-application/x-extension-mp4=totem.desktop;vlc.desktop;banshee.desktop;
+-application/x-extension-txt=libreoffice-writer.desktop;
+-application/x-flac=totem.desktop;vlc.desktop;banshee.desktop;
++application/x-extension-mp4=totem.desktop;banshee.desktop;vlc.desktop;
++application/x-flac=totem.desktop;banshee.desktop;vlc.desktop;
+ application/x-flash-video=totem.desktop;banshee.desktop;
+-application/x-font-otf=gnome-font-viewer.desktop;
+-application/x-font-pcf=gnome-font-viewer.desktop;
+-application/x-font-ttf=gnome-font-viewer.desktop;
+-application/x-font-type1=gnome-font-viewer.desktop;
+ application/x-fskin=fcitx-skin-installer.desktop;
+ application/x-gnome-saved-search=nemo.desktop;nemo-folder-handler.desktop;
+-application/x-gtar=file-roller.desktop;
+ application/x-gzdvi=evince.desktop;
+-application/x-gzip=file-roller.desktop;
+ application/x-gzpdf=evince.desktop;
+-application/x-gzpostscript=evince.desktop;file-roller.desktop;
+-application/x-hwp=libreoffice-writer.desktop;
++application/x-gzpostscript=evince.desktop;
+ application/x-id3=banshee.desktop;
+ application/x-jar=openjdk-7-java.desktop;
+-application/x-java-archive=openjdk-7-java.desktop;file-roller.desktop;
++application/x-java-archive=openjdk-7-java.desktop;
+ application/x-java-jnlp-file=icedtea-netx-javaws.desktop;
+-application/x-lha=file-roller.desktop;
+-application/x-lhz=file-roller.desktop;
+ application/x-linguist=banshee.desktop;
+-application/x-lrzip=file-roller.desktop;
+-application/x-lrzip-compressed-tar=file-roller.desktop;
+-application/x-lzip=file-roller.desktop;
+-application/x-lzip-compressed-tar=file-roller.desktop;
+-application/x-lzma=file-roller.desktop;
+-application/x-lzma-compressed-tar=file-roller.desktop;
+-application/x-lzop=file-roller.desktop;
+-application/x-lzop-compressed-tar=file-roller.desktop;
+-application/x-matroska=totem.desktop;vlc.desktop;banshee.desktop;
++application/x-matroska=totem.desktop;banshee.desktop;vlc.desktop;
+ application/x-mint=mintInstall_mime.desktop;
+ application/x-miro=banshee.desktop;
+-application/x-ms-dos-executable=mono-runtime-terminal.desktop;mono-runtime.desktop;file-roller.desktop;
+-application/x-ms-excel=libreoffice-calc.desktop;
+-application/x-ms-wim=file-roller.desktop;
+-application/x-msexcel=libreoffice-calc.desktop;wps-office-et.desktop;
++application/x-ms-dos-executable=mono-runtime-terminal.desktop;mono-runtime.desktop;
++application/x-msexcel=wps-office-et.desktop;
+ application/x-mspowerpoint=wps-office-wpp.desktop;
+ application/x-msword=wps-office-wps.desktop;
+ application/x-musepack=banshee.desktop;
+ application/x-netshow-channel=totem.desktop;banshee.desktop;
+-application/x-ogg=totem.desktop;vlc.desktop;banshee.desktop;
++application/x-ogg=totem.desktop;banshee.desktop;vlc.desktop;
+ application/x-pem-file=gcr-viewer.desktop;
+ application/x-pem-key=gcr-viewer.desktop;
+ application/x-pkcs12=gcr-viewer.desktop;
+ application/x-pkcs7-certificates=gcr-viewer.desktop;
+-application/x-quattropro=libreoffice-calc.desktop;
+ application/x-quicktime-media-link=totem.desktop;banshee.desktop;
+ application/x-quicktimeplayer=totem.desktop;banshee.desktop;
+-application/x-rar=file-roller.desktop;
+-application/x-rar-compressed=file-roller.desktop;
+-application/x-rpm=file-roller.desktop;
+-application/x-rzip=file-roller.desktop;
+ application/x-shockwave-flash=vlc.desktop;
+ application/x-shorten=totem.desktop;banshee.desktop;
+ application/x-smil=totem.desktop;
+ application/x-spkac=gcr-viewer.desktop;
+ application/x-spkac+base64=gcr-viewer.desktop;
+-application/x-stuffit=file-roller.desktop;
+-application/x-t602=libreoffice-writer.desktop;
+-application/x-tar=nemo-mount-archive.desktop;file-roller.desktop;
+-application/x-tarz=file-roller.desktop;
++application/x-tar=nemo-mount-archive.desktop;
+ application/x-toc=brasero.desktop;
+ application/x-troff-msvideo=banshee.desktop;
+-application/x-war=file-roller.desktop;
+-application/x-wpg=libreoffice-draw.desktop;
+ application/x-x509-ca-cert=gcr-viewer.desktop;
+ application/x-x509-user-cert=gcr-viewer.desktop;
+-application/x-xpinstall=firefox.desktop;thunderbird.desktop;
+-application/x-xz=file-roller.desktop;
+-application/x-xz-compressed-tar=file-roller.desktop;
++application/x-xpinstall=thunderbird.desktop;firefox.desktop;
+ application/x-xzpdf=evince.desktop;
+-application/x-zip=file-roller.desktop;
+-application/x-zip-compressed=file-roller.desktop;
+-application/x-zoo=file-roller.desktop;
+ application/xhtml+xml=firefox.desktop;
+ application/xhtml_xml=google-chrome.desktop;
+ application/xml=firefox.desktop;
+-application/xspf+xml=totem.desktop;vlc.desktop;banshee.desktop;
+-application/zip=nemo-mount-archive.desktop;file-roller.desktop;
++application/xspf+xml=totem.desktop;banshee.desktop;vlc.desktop;
++application/zip=nemo-mount-archive.desktop;
+ audio/3gpp=totem.desktop;banshee.desktop;
+ audio/AMR=totem.desktop;banshee.desktop;
+ audio/AMR-WB=totem.desktop;banshee.desktop;
+@@ -249,10 +134,10 @@
+ audio/mp=banshee.desktop;
+ audio/mp2=totem.desktop;banshee.desktop;
+ audio/mp3=banshee.desktop;
+-audio/mp4=totem.desktop;vlc.desktop;banshee.desktop;
++audio/mp4=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/mp4a-latm=banshee.desktop;
+ audio/mpc=banshee.desktop;
+-audio/mpeg=totem.desktop;vlc.desktop;banshee.desktop;
++audio/mpeg=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/mpeg3=banshee.desktop;
+ audio/mpegurl=totem.desktop;banshee.desktop;
+ audio/musepack=banshee.desktop;
+@@ -266,63 +151,63 @@
+ audio/x-aiff=totem.desktop;
+ audio/x-amzxml=banshee.desktop;
+ audio/x-ape=totem.desktop;banshee.desktop;
+-audio/x-flac=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-flac=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-gsm=totem.desktop;
+ audio/x-it=totem.desktop;banshee.desktop;
+-audio/x-m4a=totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-matroska=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-m4a=totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-matroska=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-mod=totem.desktop;banshee.desktop;
+ audio/x-mp=banshee.desktop;
+-audio/x-mp3=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-mp3=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-mp3-playlist=brasero.desktop;
+ audio/x-mpc=banshee.desktop;
+-audio/x-mpeg=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-mpeg=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-mpeg-3=banshee.desktop;
+-audio/x-mpegurl=brasero.desktop;totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-ms-asf=totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-ms-asx=brasero.desktop;totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-ms-wax=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-mpegurl=brasero.desktop;totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-ms-asf=totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-ms-asx=brasero.desktop;totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-ms-wax=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-ms-wma=totem.desktop;banshee.desktop;
+ audio/x-musepack=totem.desktop;banshee.desktop;
+ audio/x-ogg=banshee.desktop;
+-audio/x-pn-aiff=totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-pn-au=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-pn-aiff=totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-pn-au=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-pn-realaudio=totem.desktop;vlc.desktop;
+ audio/x-pn-realaudio-plugin=totem.desktop;vlc.desktop;
+-audio/x-pn-wav=totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-pn-windows-acm=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-pn-wav=totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-pn-windows-acm=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-real-audio=totem.desktop;vlc.desktop;
+ audio/x-realaudio=totem.desktop;
+ audio/x-s3m=totem.desktop;banshee.desktop;
+ audio/x-sbc=totem.desktop;banshee.desktop;
+-audio/x-scpls=brasero.desktop;totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-scpls=brasero.desktop;totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-speex=totem.desktop;banshee.desktop;
+ audio/x-stm=totem.desktop;
+ audio/x-tta=totem.desktop;banshee.desktop;
+ audio/x-vorbis=totem.desktop;banshee.desktop;
+-audio/x-vorbis+ogg=totem.desktop;vlc.desktop;banshee.desktop;
+-audio/x-wav=totem.desktop;vlc.desktop;banshee.desktop;
++audio/x-vorbis+ogg=totem.desktop;banshee.desktop;vlc.desktop;
++audio/x-wav=totem.desktop;banshee.desktop;vlc.desktop;
+ audio/x-wavpack=totem.desktop;banshee.desktop;
+ audio/x-xm=totem.desktop;banshee.desktop;
+ image/avi=banshee.desktop;
+-image/bmp=eog.desktop;gthumb.desktop;gimp.desktop;
++image/bmp=gthumb.desktop;eog.desktop;gimp.desktop;
+ image/g3fax=gimp.desktop;
+-image/gif=eog.desktop;firefox.desktop;gthumb.desktop;gimp.desktop;
++image/gif=gthumb.desktop;eog.desktop;gimp.desktop;firefox.desktop;
+ image/jp2=gimp.desktop;
+-image/jpeg=eog.desktop;firefox.desktop;gthumb.desktop;gimp.desktop;
++image/jpeg=gthumb.desktop;eog.desktop;gimp.desktop;firefox.desktop;
+ image/jpeg2000=gimp.desktop;
+ image/jpg=eog.desktop;
+ image/jpx=gimp.desktop;
+ image/pjpeg=eog.desktop;
+-image/png=eog.desktop;firefox.desktop;gthumb.desktop;gimp.desktop;
+-image/svg+xml=eog.desktop;gthumb.desktop;gimp.desktop;
++image/png=gthumb.desktop;eog.desktop;gimp.desktop;firefox.desktop;
++image/svg+xml=gthumb.desktop;eog.desktop;gimp.desktop;
+ image/svg+xml-compressed=eog.desktop;
+-image/tiff=eog.desktop;evince.desktop;gthumb.desktop;gimp.desktop;
++image/tiff=gthumb.desktop;evince.desktop;eog.desktop;gimp.desktop;
+ image/vnd.djvu=evince.desktop;
+ image/vnd.rn-realpix=totem.desktop;vlc.desktop;
+ image/vnd.wap.wbmp=eog.desktop;
+ image/webp=google-chrome.desktop;
+-image/x-bmp=eog.desktop;gthumb.desktop;
++image/x-bmp=gthumb.desktop;eog.desktop;
+ image/x-bzeps=evince.desktop;
+ image/x-compressed-xcf=gimp.desktop;
+ image/x-eps=evince.desktop;
+@@ -333,11 +218,11 @@
+ image/x-gray=eog.desktop;
+ image/x-gzeps=evince.desktop;
+ image/x-icb=eog.desktop;
+-image/x-ico=eog.desktop;gthumb.desktop;
++image/x-ico=gthumb.desktop;eog.desktop;
+ image/x-icon=gimp.desktop;
+-image/x-pcx=eog.desktop;gthumb.desktop;gimp.desktop;
++image/x-pcx=gthumb.desktop;eog.desktop;gimp.desktop;
+ image/x-pict=totem.desktop;banshee.desktop;
+-image/x-png=eog.desktop;gthumb.desktop;
++image/x-png=gthumb.desktop;eog.desktop;
+ image/x-portable-anymap=eog.desktop;gimp.desktop;
+ image/x-portable-bitmap=eog.desktop;gimp.desktop;
+ image/x-portable-graymap=eog.desktop;gimp.desktop;
+@@ -354,19 +239,11 @@
+ image/x-xwindowdump=gimp.desktop;
+ image/xpm=gthumb.desktop;
+ inode/directory=nemo.desktop;baobab.desktop;nemo-folder-handler.desktop;
+-misc/ultravox=totem.desktop;vlc.desktop;banshee.desktop;
+-text/comma-separated-values=libreoffice-calc.desktop;
+-text/csv=libreoffice-calc.desktop;
++misc/ultravox=totem.desktop;banshee.desktop;vlc.desktop;
+ text/google-video-pointer=totem.desktop;banshee.desktop;
+ text/html=google-chrome.desktop;firefox.desktop;
+-text/mathml=libreoffice-math.desktop;
+-text/plain=gedit.desktop;libreoffice-writer.desktop;
+-text/rtf=libreoffice-writer.desktop;
+-text/spreadsheet=libreoffice-calc.desktop;
+-text/tab-separated-values=libreoffice-calc.desktop;
++text/plain=gedit.desktop;
+ text/x-apt-sources-list=mintsources.desktop;
+-text/x-comma-separated-values=libreoffice-calc.desktop;
+-text/x-csv=libreoffice-calc.desktop;
+ text/x-google-video-pointer=totem.desktop;banshee.desktop;
+ text/x-opml+xml=banshee.desktop;
+ text/xml=google-chrome.desktop;firefox.desktop;
+@@ -374,46 +251,46 @@
+ video/3gpp=totem.desktop;banshee.desktop;
+ video/avi=banshee.desktop;
+ video/divx=totem.desktop;
+-video/dv=totem.desktop;vlc.desktop;banshee.desktop;
++video/dv=totem.desktop;banshee.desktop;vlc.desktop;
+ video/fli=totem.desktop;banshee.desktop;
+ video/flv=totem.desktop;banshee.desktop;
+ video/mp2t=totem.desktop;vlc.desktop;
+-video/mp4=totem.desktop;vlc.desktop;banshee.desktop;
+-video/mp4v-es=totem.desktop;vlc.desktop;banshee.desktop;
+-video/mpeg=totem.desktop;vlc.desktop;banshee.desktop;
+-video/msvideo=totem.desktop;vlc.desktop;banshee.desktop;
++video/mp4=totem.desktop;banshee.desktop;vlc.desktop;
++video/mp4v-es=totem.desktop;banshee.desktop;vlc.desktop;
++video/mpeg=totem.desktop;banshee.desktop;vlc.desktop;
++video/msvideo=totem.desktop;banshee.desktop;vlc.desktop;
+ video/ogg=totem.desktop;banshee.desktop;
+-video/quicktime=totem.desktop;vlc.desktop;banshee.desktop;
++video/quicktime=totem.desktop;banshee.desktop;vlc.desktop;
+ video/vivo=totem.desktop;banshee.desktop;
+ video/vnd.divx=totem.desktop;banshee.desktop;
+ video/vnd.mpegurl=totem.desktop;
+ video/vnd.rn-realvideo=totem.desktop;vlc.desktop;
+ video/vnd.vivo=totem.desktop;banshee.desktop;
+-video/webm=firefox.desktop;totem.desktop;vlc.desktop;
+-video/x-anim=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-avi=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-flc=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-fli=totem.desktop;vlc.desktop;banshee.desktop;
++video/webm=totem.desktop;firefox.desktop;vlc.desktop;
++video/x-anim=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-avi=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-flc=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-fli=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-flic=totem.desktop;banshee.desktop;
+-video/x-flv=totem.desktop;vlc.desktop;banshee.desktop;
++video/x-flv=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-m4v=totem.desktop;banshee.desktop;
+-video/x-matroska=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-mpeg=totem.desktop;vlc.desktop;banshee.desktop;
++video/x-matroska=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-mpeg=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-mpeg2=totem.desktop;
+ video/x-mpg=banshee.desktop;
+-video/x-ms-asf=totem.desktop;vlc.desktop;banshee.desktop;
++video/x-ms-asf=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-ms-asx=totem.desktop;
+ video/x-ms-wm=totem.desktop;banshee.desktop;
+-video/x-ms-wmv=totem.desktop;vlc.desktop;banshee.desktop;
++video/x-ms-wmv=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-ms-wmx=totem.desktop;banshee.desktop;
+ video/x-ms-wvx=totem.desktop;banshee.desktop;
+-video/x-msvideo=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-nsv=totem.desktop;vlc.desktop;banshee.desktop;
+-video/x-ogm+ogg=totem.desktop;vlc.desktop;banshee.desktop;
++video/x-msvideo=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-nsv=totem.desktop;banshee.desktop;vlc.desktop;
++video/x-ogm+ogg=totem.desktop;banshee.desktop;vlc.desktop;
+ video/x-theora=banshee.desktop;
+ video/x-theora+ogg=totem.desktop;banshee.desktop;
+ video/x-totem-stream=totem.desktop;
+-x-content/audio-cdda=brasero.desktop;banshee-audiocd.desktop;vlc.desktop;
++x-content/audio-cdda=brasero.desktop;vlc.desktop;banshee-audiocd.desktop;
+ x-content/audio-player=banshee-media-player.desktop;vlc.desktop;
+ x-content/blank-bd=brasero-nautilus.desktop;
+ x-content/blank-cd=brasero-nautilus.desktop;
+diff -uN applications_raw/mintBackup.desktop applications/mintBackup.desktop
+--- applications_raw/mintBackup.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/mintBackup.desktop	2013-09-24 17:13:24.000000000 +0800
+@@ -138,4 +138,4 @@
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings
++Categories=Application;System;
+diff -uN applications_raw/mintBackup_mime.desktop applications/mintBackup_mime.desktop
+--- applications_raw/mintBackup_mime.desktop	2013-09-27 09:13:48.854476497 +0800
++++ applications/mintBackup_mime.desktop	2013-09-24 17:13:40.000000000 +0800
+@@ -138,6 +138,6 @@
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings
++Categories=Application;System;
+ NoDisplay=true
+ MimeType=application/x-backup;
+diff -uN applications_raw/mintdrivers.desktop applications/mintdrivers.desktop
+--- applications_raw/mintdrivers.desktop	2013-09-27 09:13:48.486476503 +0800
++++ applications/mintdrivers.desktop	2013-09-24 17:49:12.000000000 +0800
+@@ -29,8 +29,7 @@
+ Name[ms]=Pengurus Pemacu
+ Name[ca]=Driver Manager
+ Name[fr_CA]=Gestionnaire de pilotes
+-Name[zh_CN]=驱动管理
+-Comment=Manage the drivers for your devices
++Comment=管理设备驱动
+ Comment[ro]=Manage the drivers for your devices
+ Comment[et]=Halda ajureid oma seadmes
+ Comment[sk]=Správa ovládačov pre vaše zariadenia
+@@ -61,11 +60,11 @@
+ Comment[ca]=Manage the drivers for your devices
+ Comment[fr_CA]=Gérer les pilotes de vos périphériques
+ Exec=driver-manager
+-Icon=jockey
++Icon=/usr/share/icons/hicolor/scalable/apps/driver-manager.svg
+ Terminal=false
+ X-MultipleArgs=false
+ Type=Application
+-Categories=GNOME;GTK;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
++Categories=GNOME;GTK;Settings;
+ X-GNOME-Settings-Panel=driver-manager
+ X-KDE-SubstituteUID=true
+ X-Ubuntu-Gettext-Domain=mintdrivers
+diff -uN applications_raw/mintInstall.desktop applications/mintInstall.desktop
+--- applications_raw/mintInstall.desktop	2013-09-27 09:13:48.302476506 +0800
++++ applications/mintInstall.desktop	2013-09-26 15:16:48.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=软件管理
++Name=软件中心
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+@@ -44,7 +44,7 @@
+ Name[ko]=소프트웨어 관리자
+ Name[is]=Hugbúnaðarstjórnun
+ Name[fi]=Ohjelmistohallinta
+-Name[zh_CN]=软件管理器
++Name[zh_CN]=软件中心
+ Name[fr]=Gestionnaire de logiciels
+ Name[lv]=Programmatūras pārvaldnieks
+ Name[hy]=Ծրագրերի կառավարիչ
+@@ -166,9 +166,9 @@
+ Comment[gl]=Instalar novos aplicativos
+ Comment[hr]=Instaliraj nove aplikacije
+ Exec=gksu mintinstall
+-Icon=/usr/lib/linuxmint/mintInstall/icon.svg
++Icon=/usr/lib/linuxmint/mintInstall/icon.png
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings
++Categories=Application;System;
+ NotShowIn=KDE;
+diff -uN applications_raw/mintInstall_kde.desktop applications/mintInstall_kde.desktop
+--- applications_raw/mintInstall_kde.desktop	2013-09-27 09:13:48.242476507 +0800
++++ applications/mintInstall_kde.desktop	2013-09-25 13:52:58.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=软件管理
++Name=软件中心
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+@@ -44,7 +44,7 @@
+ Name[ko]=소프트웨어 관리자
+ Name[is]=Hugbúnaðarstjórnun
+ Name[fi]=Ohjelmistohallinta
+-Name[zh_CN]=软件管理器
++Name[zh_CN]=软件中心
+ Name[fr]=Gestionnaire de logiciels
+ Name[lv]=Programmatūras pārvaldnieks
+ Name[hy]=Ծրագրերի կառավարիչ
+@@ -170,5 +170,5 @@
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings
++Categories=Application;System;
+ OnlyShowIn=KDE;
+diff -uN applications_raw/mintInstall_mime.desktop applications/mintInstall_mime.desktop
+--- applications_raw/mintInstall_mime.desktop	2013-09-27 09:13:48.834476497 +0800
++++ applications/mintInstall_mime.desktop	2013-09-25 13:52:18.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=软件管理
++Name=软件中心
+ Name[ms]=Pengurus Perisian
+ Name[hi]=सॉफ्टवेयर प्रबंधक
+ Name[lb]=Software Manager
+@@ -44,7 +44,7 @@
+ Name[ko]=소프트웨어 관리자
+ Name[is]=Hugbúnaðarstjórnun
+ Name[fi]=Ohjelmistohallinta
+-Name[zh_CN]=软件管理器
++Name[zh_CN]=软件中心
+ Name[fr]=Gestionnaire de logiciels
+ Name[lv]=Programmatūras pārvaldnieks
+ Name[hy]=Ծրագրերի կառավարիչ
+@@ -170,6 +170,6 @@
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings
++Categories=Application;System;
+ NoDisplay=true
+ MimeType=application/x-mint;
+diff -uN applications_raw/mintNanny.desktop applications/mintNanny.desktop
+--- applications_raw/mintNanny.desktop	2013-09-27 09:13:48.834476497 +0800
++++ applications/mintNanny.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,134 +0,0 @@
+-[Desktop Entry]
+-Name=域名拦截工具
+-Name[en_GB]=Domain Blocker
+-Name[ko]=도메인 차단기
+-Name[hr]=Blokiranje domena
+-Name[ms]=Penghalang domain
+-Name[nds]=Domain Blocker
+-Name[bs]=Bloker domena.
+-Name[he]=חוסם מתחם
+-Name[oc]=Blocador de Domeni
+-Name[tr]=Alan Adı Engelleyici
+-Name[fo]=Økis blokkari
+-Name[id]=Pemblok Domain
+-Name[fr]=Bloqueur de domaine
+-Name[ar]=حاجب النطاقات
+-Name[pl]=Blokowanie domen
+-Name[sk]=Blokovanie Domén
+-Name[bg]=Приложение за блокиране на домейни
+-Name[es]=Bloqueador de dominio
+-Name[fa]=مسدود کننده دامنه
+-Name[hi]=डोमेन ब्लॉकर
+-Name[vi]=Chặn tên miền
+-Name[mk]=Домен блокер
+-Name[nb]=Domene-blokker
+-Name[cs]=Blokování domén
+-Name[mr]=डोमेन अवरोधक
+-Name[is]=Lénalás
+-Name[eu]=Doimenu blokeatzailea
+-Name[sl]=Blokator domen
+-Name[fi]=Verkkoaluesuodatin
+-Name[lb]=Domän Blocker
+-Name[pt]=Bloqueador de Domínios
+-Name[sr]=Blokiranje Domena
+-Name[af]=Domein Blokker
+-Name[uk]=Блокувальник доменів
+-Name[am]=ግዛት ከልካይ
+-Name[et]=Domeeniblokeerija
+-Name[pt_PT]=Bloqueador de Domínios
+-Name[ast]=Torgador de dominiu
+-Name[csb]=Blokòwanié domenów
+-Name[ru]=Блокировщик доменов
+-Name[zh_TW]=網域封鎖器
+-Name[ja]=ドメインブロッカー
+-Name[ca]=Bloquejador de dominis
+-Name[th]=โปรแแกรมบล็อคโดเมน
+-Name[ur]=Domain Blocker
+-Name[en_AU]=Domain Blocker
+-Name[zh_CN]=域名拦截工具
+-Name[nl]=Domeinblokkeerder
+-Name[el]=Μπλοκάρισμα Τομέα
+-Name[it]=Blocco domini
+-Name[sv]=Domänblockerare
+-Name[da]=Domæneblokering
+-Name[de]=Internetadresse sperren
+-Name[sq]=Bllokues i Domeineve
+-Name[ml]=ഡൊമെയിന്‍ ബ്ലോക്കെര്‍
+-Name[nn]=Domeneblokkerar
+-Name[kk]=Домендер бөгеттеуші
+-Name[lt]=Srities blokiklis
+-Name[pt_BR]=Bloqueador de domínio
+-Name[hu]=Weboldalblokkoló
+-Name[ro]=Blocare domenii
+-Name[zh_HK]=域名封鎖器
+-Name[gl]=Bloqueador de dominios
+-Comment=Block access to selected domain names
+-Comment[en_GB]=Block access to selected domain names
+-Comment[ko]=선택된 도메인으로의 접근을 차단합니다
+-Comment[hr]=Blokiraj pristup izabranim domenama
+-Comment[ms]=Halang laluan kepada nama domain yang dipilih
+-Comment[nds]=Block access to selected domain names
+-Comment[bs]=Blokiraj pristup označenim imenima domena
+-Comment[he]=חסימת גישה לשמות מתחם נבחרים
+-Comment[oc]=Blocar l'acces aus noms de domenis seleccionats
+-Comment[tr]=Seçili alan adlarına erişimi engelle
+-Comment[fo]=Blokka atgongd til úrvald økisnøvn
+-Comment[id]=Blok akses terhadap nama-nama domain yang dipilih
+-Comment[fr]=Bloquer l'accès à certains noms de domaine
+-Comment[ar]=منع الوصول الى اختيار أسماء النطاقات
+-Comment[pl]=Blokuj dostęp do wybranych domen
+-Comment[sk]=Blokovať prístup k vybraným názvom domén
+-Comment[bg]=Спиране на достъпа до избраните имена на домейни
+-Comment[es]=Bloquear acceso a dominios seleccionados
+-Comment[fa]=مسدود کردن دسترسی به دامنه های انتخابی
+-Comment[hi]=चयनित डोमेन नेम को ब्लॉक करें
+-Comment[vi]=Ngăn chặn truy cập những tên miền đã chọn
+-Comment[mk]=Блокирај пристап до одбраните домени
+-Comment[nb]=Blokker tilgangen til valgte domenenavn
+-Comment[cs]=Blokovat přístup k vybraným názvům domén
+-Comment[mr]=निवडक डोमेन वरील प्रवेश अवरुद्ध करा
+-Comment[is]=Hindra aðgang að völdum lénum
+-Comment[eu]=Hautatako doimenuak blokeatu
+-Comment[sl]=Blokira dostop do izbranih domenskih imen
+-Comment[fi]=Estä pääsy valituille verkkosivuille
+-Comment[lb]=Blockeier den Accès op ausgewielten Domän Nimm
+-Comment[pt]=Bloquear acesso aos domínios seleccionados
+-Comment[sr]=Blokirati pristup ka izabranim domenima
+-Comment[af]=Blok toegang na sekere domeinname
+-Comment[uk]=Блокувати доступ до обраних доменів
+-Comment[am]=የተወሰኑ ግዛቶችን ስም መከልከል
+-Comment[et]=Blokeeri juurdepääs valitud domeeninimedele
+-Comment[pt_PT]=Bloquear acesso aos domínios seleccionados
+-Comment[ast]=Torgar accesu a dominios esbillaos
+-Comment[csb]=Blokùjë przëstãp do wëbrónych domenów
+-Comment[ru]=Блокирование доступа к выбранным доменам
+-Comment[zh_TW]=禁止存取選擇的網域名稱
+-Comment[ja]=選択したドメイン名をブロック
+-Comment[ca]=Bloquejar l'accés als noms de domini seleccionats
+-Comment[th]=บล็อคการเข้า ด้ายการเลือชื่อโดเมน
+-Comment[ur]=Block access to selected domain names
+-Comment[en_AU]=Block access to selected domain names
+-Comment[zh_CN]=拦截对选中域名的访问
+-Comment[nl]=Blokkeer toegang tot geselecteerde domeinnamen
+-Comment[el]=Εμποδίστε την πρόσβαση σε επιλεγμένα ονόματα τομέων
+-Comment[it]=Blocca l'accesso a determinati nomi di dominio
+-Comment[sv]=Blockera åtkomst till valda domännamn
+-Comment[da]=Bloker adgang til valgte domæner
+-Comment[de]=Zugang zu ausgewählten Internetadressen sperren
+-Comment[sq]=Blloko hyrjen në erma të zgjedhur domeinesh
+-Comment[ml]=തിരഞ്ഞെടുക്കപെട്ട ഡൊമെയിന്‍ നാമങ്ങളിലേക്കുള്ള പ്രവേശനം തടയുക
+-Comment[nn]=Blokkerer tilgangen til dei valde domenenamna
+-Comment[kk]=Таңдалған домендерге жетімдігін бөгеттеу
+-Comment[lt]=Drausti priėjimą prie pasirinktų sričių
+-Comment[pt_BR]=Bloquear acesso aos domínios selecionados
+-Comment[hu]=Nem kívánt weboldalak elérésének tiltása
+-Comment[ro]=Blochează accesul la domeniile selectate
+-Comment[zh_HK]=禁止前往指定的域名
+-Comment[gl]=Bloquear o acceso aos dominios seleccionados
+-Exec=mintnanny
+-Icon=/usr/lib/linuxmint/mintNanny/icon.svg
+-Terminal=false
+-Type=Application
+-Encoding=UTF-8
+-Categories=Application;System;Settings;
+-StartupNotify=false
+diff -uN applications_raw/mintsources.desktop applications/mintsources.desktop
+--- applications_raw/mintsources.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/mintsources.desktop	2013-09-25 13:59:06.000000000 +0800
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=软件源配置
+-Comment=Configure the sources for installable software and updates
++Name=软件源
++Comment=设置软件安装和更新源
+ Exec=software-sources
+ Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg
+ Terminal=false
+ X-MultipleArgs=false
+ Type=Application
+-Categories=GNOME;GTK;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
++Categories=GNOME;GTK;System;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
+ X-GNOME-Settings-Panel=software-properties
+ MimeType=text/x-apt-sources-list;
+ X-KDE-SubstituteUID=true
+diff -uN applications_raw/mintstick.desktop applications/mintstick.desktop
+--- applications_raw/mintstick.desktop	2013-09-27 09:13:48.854476497 +0800
++++ applications/mintstick.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,15 +0,0 @@
+-[Desktop Entry]
+-Version=1.0
+-Type=Application
+-Terminal=false
+-Icon=gtk-execute
+-Exec=mintstick
+-Name=刷写USB镜像工具
+-Name[fr]=Créateur de clé USB
+-Name[de]=USB Image-Aufzeichner
+-Comment=Make a bootable USB stick
+-Comment[fr]=Créer une clé USB bootable
+-Comment[nl]=Maak uw eigen opstart-USB stick
+-Comment[de]="Einen bootfähigen USB-Stick erstellen"
+-Categories=GNOME;GTK;Utility;
+-NotShowIn=KDE;
+diff -uN applications_raw/mintstick-kde.desktop applications/mintstick-kde.desktop
+--- applications_raw/mintstick-kde.desktop	2013-09-27 09:13:48.422476504 +0800
++++ applications/mintstick-kde.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,15 +0,0 @@
+-[Desktop Entry]
+-Version=1.0
+-Type=Application
+-Terminal=false
+-Icon=system-run
+-Exec=mintstick
+-Name=刷写USB镜像工具
+-Name[fr]=Créateur de clé USB
+-Name[de]=USB Image-Aufzeichner
+-Comment=Make a bootable USB stick
+-Comment[fr]=Créer une clé USB bootable
+-Comment[nl]=Maak uw eigen opstart-USB stick
+-Comment[de]="Einen bootfähigen USB-Stick erstellen"
+-Categories=System;
+-OnlyShowIn=KDE;
+diff -uN applications_raw/mintUpdate.desktop applications/mintUpdate.desktop
+--- applications_raw/mintUpdate.desktop	2013-09-27 09:13:48.682476500 +0800
++++ applications/mintUpdate.desktop	2013-09-24 17:06:38.000000000 +0800
+@@ -130,5 +130,5 @@
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
+-Categories=Application;System;Settings;
++Categories=Application;System;
+ StartupNotify=false
+diff -uN applications_raw/mintWelcome.desktop applications/mintWelcome.desktop
+--- applications_raw/mintWelcome.desktop	2013-09-27 09:13:48.714476499 +0800
++++ applications/mintWelcome.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,168 +0,0 @@
+-[Desktop Entry]
+-Name=Welcome Screen
+-Name[da]=Velkomstskærm
+-Name[vi]=Màn hình Chào mừng
+-Name[te]=Welcome Screen
+-Name[en_AU]=Welcome Screen
+-Name[ja]=Welcome Screen
+-Name[ko]=Welcome Screen
+-Name[eo]=Welcome Screen
+-Name[lv]=Welcome Screen
+-Name[ro]=Welcome Screen
+-Name[tl]=Welcome Screen
+-Name[ast]=Welcome Screen
+-Name[mr]=Welcome Screen
+-Name[bg]=Welcome Screen
+-Name[ru]=Экран приветствия
+-Name[uk]=Екран привітання
+-Name[pa]=ਜੀ ਆਇਆਂ ਨੂੰ ਸਕਰੀਨ
+-Name[ml]=Welcome Screen
+-Name[zh_TW]=歡迎視窗
+-Name[sq]=Welcome Screen
+-Name[pt_BR]=Bem vindo
+-Name[sl]=Welcome Screen
+-Name[kn]=Welcome Screen
+-Name[he]=Welcome Screen
+-Name[fo]=Welcome Screen
+-Name[nn]=Welcome Screen
+-Name[hu]=Welcome Screen
+-Name[es]=Pantalla de bienvenida
+-Name[bs]=Ekran dobrodošlice
+-Name[ta]=Welcome Screen
+-Name[pt]=Ecrã de Boas-vindas
+-Name[fr]=Écran d'accueil
+-Name[nl]=Welkomstscherm
+-Name[fi]=Tervetuloa näyttö
+-Name[ar]=شاشة الترحيب
+-Name[hy]=Welcome Screen
+-Name[en_CA]=Welcome Screen
+-Name[fa]=Welcome Screen
+-Name[cs]=Welcome Screen
+-Name[ca]=Pantalla de benvinguda
+-Name[be]=Welcome Screen
+-Name[nds]=Welcome Screen
+-Name[mk]=Welcome Screen
+-Name[pap]=Welcome Screen
+-Name[gl]=Pantalla de benvida
+-Name[oc]=Welcome Screen
+-Name[eu]=Ongi etorri pantaila
+-Name[am]=እንኳን ደህና መጡ
+-Name[gv]=Welcome Screen
+-Name[el]=Οθόνη Καλωσορίσματος
+-Name[zh_HK]=Welcome Screen
+-Name[id]=Welcome Screen
+-Name[nb]=Welcome Screen
+-Name[jv]=Welcome Screen
+-Name[it]=Welcome Screen
+-Name[sk]=Welcome Screen
+-Name[si]=Welcome Screen
+-Name[csb]=Welcome Screen
+-Name[hi]=Welcome Screen
+-Name[sr@latin]=Welcome Screen
+-Name[hr]=Welcome Screen
+-Name[de]=Willkommensbildschirm
+-Name[th]=Welcome Screen
+-Name[tr]=Hoşgeldiniz Ekranı
+-Name[lb]=Welcome Screen
+-Name[bn]=ওয়েলকাম স্ক্রিন
+-Name[af]=Welcome Screen
+-Name[ur]=Welcome Screen
+-Name[en_GB]=Welcome Screen
+-Name[zh_CN]=Welcome Screen
+-Name[cy]=Welcome Screen
+-Name[et]=Tervituskuva
+-Name[pt_PT]=Ecrã de Boas-vindas
+-Name[sr]=Welcome Screen
+-Name[pl]=Ekran powitalny
+-Name[ms]=Skrin Aluan
+-Name[is]=Upphafsskjár
+-Name[kk]=Welcome Screen
+-Name[sv]=Välkomstskärm
+-Name[lt]=Welcome Screen
+-Comment=Introduction to Linux Mint
+-Comment[da]=Introduktion til Linux Mint
+-Comment[vi]=Giới thiệu Linux Mint
+-Comment[te]=Introduction to Linux Mint
+-Comment[en_AU]=Introduction to Linux Mint
+-Comment[ja]=Linux Mint のご紹介
+-Comment[ko]=리눅스 민트 소개
+-Comment[eo]=Introduction to Linux Mint
+-Comment[lv]=Introduction to Linux Mint
+-Comment[ro]=Introduction to Linux Mint
+-Comment[tl]=Introduction to Linux Mint
+-Comment[ast]=Introduction to Linux Mint
+-Comment[mr]=Introduction to Linux Mint
+-Comment[bg]=Introduction to Linux Mint
+-Comment[ru]=Введение в Linux Mint
+-Comment[uk]=Знайомство з Linux Mint
+-Comment[pa]=ਲੀਨਕਸ ਮਿਟ ਨਾਲ ਜਾਣ ਪਛਾਣ
+-Comment[ml]=Introduction to Linux Mint
+-Comment[zh_TW]=Linux Mint 的介紹
+-Comment[sq]=Introduction to Linux Mint
+-Comment[pt_BR]=Introdução ao Linux Mint
+-Comment[sl]=Introduction to Linux Mint
+-Comment[kn]=Introduction to Linux Mint
+-Comment[he]=Introduction to Linux Mint
+-Comment[fo]=Introduction to Linux Mint
+-Comment[nn]=Introduction to Linux Mint
+-Comment[hu]=Introduction to Linux Mint
+-Comment[es]=Introducción a Linux Mint
+-Comment[bs]=Uvod u Linux Mint
+-Comment[ta]=Introduction to Linux Mint
+-Comment[pt]=Introdução ao Linux Mint
+-Comment[fr]=Introduction à Linux Mint
+-Comment[nl]=Introductie van Linux Mint
+-Comment[fi]=Linux Mint Esittely
+-Comment[ar]=مقدمة لـ Linux Mint
+-Comment[hy]=Introduction to Linux Mint
+-Comment[en_CA]=Introduction to Linux Mint
+-Comment[fa]=Introduction to Linux Mint
+-Comment[cs]=Introduction to Linux Mint
+-Comment[ca]=Introducció a Linux Mint
+-Comment[be]=Introduction to Linux Mint
+-Comment[nds]=Introduction to Linux Mint
+-Comment[mk]=Introduction to Linux Mint
+-Comment[pap]=Introduction to Linux Mint
+-Comment[gl]=Introdución a Linux Mint
+-Comment[oc]=Introduction to Linux Mint
+-Comment[eu]=Linux Mint-era sarrera
+-Comment[am]=ሊነክስ ሚንትን ይተዋወቁ
+-Comment[gv]=Introduction to Linux Mint
+-Comment[el]=Εισαγωγή στο Linux Mint
+-Comment[zh_HK]=Introduction to Linux Mint
+-Comment[id]=Introduction to Linux Mint
+-Comment[nb]=Introduction to Linux Mint
+-Comment[jv]=Introduction to Linux Mint
+-Comment[it]=Introduction to Linux Mint
+-Comment[sk]=Introduction to Linux Mint
+-Comment[si]=Introduction to Linux Mint
+-Comment[csb]=Introduction to Linux Mint
+-Comment[hi]=Introduction to Linux Mint
+-Comment[sr@latin]=Introduction to Linux Mint
+-Comment[hr]=Introduction to Linux Mint
+-Comment[de]=Einführung in Linux Mint
+-Comment[th]=Introduction to Linux Mint
+-Comment[tr]=Linux Mint'e Giriş
+-Comment[lb]=Introduction to Linux Mint
+-Comment[bn]=লিনাক্স মিন্ট পরিচিতি
+-Comment[af]=Introduction to Linux Mint
+-Comment[ur]=Introduction to Linux Mint
+-Comment[en_GB]=Introduction to Linux Mint
+-Comment[zh_CN]=Introduction to Linux Mint
+-Comment[cy]=Introduction to Linux Mint
+-Comment[et]=Sissejuhatus Linux Minti
+-Comment[pt_PT]=Introdução ao Linux Mint
+-Comment[sr]=Introduction to Linux Mint
+-Comment[pl]=Wprowadzenie do Linux Mint
+-Comment[ms]=Pengenalan ke Linux Mint
+-Comment[is]=Kynning á Linux Mint
+-Comment[kk]=Introduction to Linux Mint
+-Comment[sv]=Introduktion till Linux Mint
+-Comment[lt]=Introduction to Linux Mint
+-Exec=mintwelcome
+-Icon=/usr/lib/linuxmint/mintWelcome/templates/logo.svg
+-Terminal=false
+-Type=Application
+-Encoding=UTF-8
+-Categories=GNOME;GTK;Settings;DesktopSettings;
+-StartupNotify=false
+diff -uN applications_raw/ndisgtk.desktop applications/ndisgtk.desktop
+--- applications_raw/ndisgtk.desktop	2013-09-27 09:13:48.566476502 +0800
++++ applications/ndisgtk.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,11 +0,0 @@
+-[Desktop Entry]
+-Name=Windows兼容无线管理软件
+-Comment=Ndiswrapper driver installation tool
+-Exec=gksu /usr/sbin/ndisgtk
+-NotShowIn=KDE;
+-Icon=ndisgtk.png
+-Terminal=false
+-Type=Application
+-Categories=System;Settings;
+-X-Ubuntu-Gettext-Domain=ndisgtk
+-
+diff -uN applications_raw/nemo-autorun-software.desktop applications/nemo-autorun-software.desktop
+--- applications_raw/nemo-autorun-software.desktop	2013-09-27 09:13:48.266476506 +0800
++++ applications/nemo-autorun-software.desktop	2013-06-01 20:10:48.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=自动提示
++Name=Autorun Prompt
+ Name[af]=Autorun Prompt
+ Name[am]=Autorun Prompt
+ Name[ar]=محث التنفيذ التلقائي
+@@ -148,4 +148,4 @@
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=nemo
+ X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=1.8.2
++X-GNOME-Bugzilla-Version=1.8.3
+diff -uN applications_raw/nemo.desktop applications/nemo.desktop
+--- applications_raw/nemo.desktop	2013-09-27 09:13:49.034476494 +0800
++++ applications/nemo.desktop	2013-09-25 14:10:14.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=文件管理
++Name=资源管理器
+ Name[af]=Files
+ Name[am]=Files
+ Name[ar]=الملفات
+@@ -132,8 +132,8 @@
+ Name[wa]=Files
+ Name[yi]=Files
+ Name[yo]=Files
+-Name[zh]=文件
+-Name[zh_CN]=文件
++Name[zh]=资源管理器
++Name[zh_CN]=资源管理器
+ Name[zh_HK]=檔案
+ Name[zh_TW]=檔案
+ Name[zu]=Files
+@@ -286,6 +286,6 @@
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=nemo
+ X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=1.8.2
++X-GNOME-Bugzilla-Version=1.8.3
+ 
+ 
+diff -uN applications_raw/nemo-folder-handler.desktop applications/nemo-folder-handler.desktop
+--- applications_raw/nemo-folder-handler.desktop	2013-09-27 09:13:48.742476499 +0800
++++ applications/nemo-folder-handler.desktop	2013-06-01 19:48:14.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=文件
++Name=Files
+ Name[ar]=الملفات
+ Name[as]=নথিপত্ৰসমূহ
+ Name[be]=Файлы
+diff -uN applications_raw/nemo-home.desktop applications/nemo-home.desktop
+--- applications_raw/nemo-home.desktop	2013-09-27 09:13:48.634476501 +0800
++++ applications/nemo-home.desktop	2013-06-01 19:48:14.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=主文件夹
++Name=Home Folder
+ Comment=Open your personal folder
+ Exec=nemo %U
+ Icon=folder
+diff -uN applications_raw/nemo-mount-archive.desktop applications/nemo-mount-archive.desktop
+--- applications_raw/nemo-mount-archive.desktop	2013-09-27 09:13:48.854476497 +0800
++++ applications/nemo-mount-archive.desktop	2013-06-01 19:48:14.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=挂载压缩包
++Name=Archive Mounter
+ Exec=/usr/lib/gvfs/gvfsd-archive file=%u
+ MimeType=application/x-cd-image;application/x-bzip-compressed-tar;application/x-compressed-tar;application/x-tar;application/x-cpio;application/zip;
+ Terminal=false
+diff -uN applications_raw/nm-connection-editor.desktop applications/nm-connection-editor.desktop
+--- applications_raw/nm-connection-editor.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/nm-connection-editor.desktop	2013-09-24 17:40:24.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=网络连接管理
+-Comment=Manage and change your network connection settings
++Comment=管理并修改网络连接
+ Icon=preferences-system-network
+ Exec=nm-connection-editor
+ Terminal=false
+diff -uN applications_raw/openjdk-7-java.desktop applications/openjdk-7-java.desktop
+--- applications_raw/openjdk-7-java.desktop	2013-09-27 09:13:48.742476499 +0800
++++ applications/openjdk-7-java.desktop	2013-07-04 03:59:22.000000000 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Java7 运行环境
++Name=OpenJDK Java 7 Runtime
+ Name[fi]=OpenJDK Java 7 - ajonaikainen ympäristö
+ Comment=OpenJDK Java 7 Runtime
+ Comment[fi]=OpenJDK Java 7 - ajonaikainen ympäristö
+diff -uN applications_raw/openjdk-7-policytool.desktop applications/openjdk-7-policytool.desktop
+--- applications_raw/openjdk-7-policytool.desktop	2013-09-27 09:13:48.430476504 +0800
++++ applications/openjdk-7-policytool.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,10 +0,0 @@
+-[Desktop Entry]
+-Name=Java策略工具
+-Name[fi]=OpenJDK Java 7 - käytäntötyökalu
+-Comment=OpenJDK Java 7 Policy Tool
+-Comment[fi]=OpenJDK Java 7 - käytäntötyökalu
+-Exec=/usr/bin/policytool
+-Terminal=false
+-Type=Application
+-Icon=openjdk-7
+-Categories=Settings;
+diff -uN applications_raw/qq2012-test.desktop applications/qq2012-test.desktop
+--- applications_raw/qq2012-test.desktop	2013-09-27 09:13:48.374476505 +0800
++++ applications/qq2012-test.desktop	2013-09-25 14:23:50.000000000 +0800
+@@ -1,7 +1,7 @@
+ 
+ [Desktop Entry]
+ Categories=Network;InstantMessaging;
+-Name=QQ2012
++Name=腾讯QQ2012
+ Icon=/opt/longene/qq2012/qq2012.png
+ Exec=/opt/longene/qq2012/qq2012.sh
+ StartupNotify=true
+@@ -9,3 +9,4 @@
+ Type=Application
+ Name[en]=QQ2012
+ Name[en_US]=QQ2012
++Comment=腾讯QQ2012
+diff -uN applications_raw/seahorse.desktop applications/seahorse.desktop
+--- applications_raw/seahorse.desktop	2013-09-27 09:13:48.982476495 +0800
++++ applications/seahorse.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,15 +0,0 @@
+-[Desktop Entry]
+-Name=密码管理器
+-Comment=Manage your passwords and encryption keys
+-Exec=/usr/bin/seahorse
+-Terminal=false
+-Type=Application
+-Icon=seahorse
+-Categories=GNOME;GTK;Security;Settings;
+-StartupNotify=true
+-X-GNOME-Bugzilla-Bugzilla=GNOME
+-X-GNOME-Bugzilla-Product=seahorse
+-X-GNOME-Bugzilla-Component=general
+-X-GNOME-Bugzilla-Version=3.6.3
+-X-GNOME-DocPath=seahorse/seahorse.xml
+-X-Ubuntu-Gettext-Domain=seahorse
+diff -uN applications_raw/session-properties.desktop applications/session-properties.desktop
+--- applications_raw/session-properties.desktop	2013-09-27 09:13:48.682476500 +0800
++++ applications/session-properties.desktop	2013-09-25 14:45:52.000000000 +0800
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=开始程序
+-Comment=Choose what applications to start when you log in
++Name=开机启动项
++Comment=选择开机启动的程序
+ Exec=gnome-session-properties
+ Icon=session-properties
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;GNOME;Settings;X-GNOME-PersonalSettings;
++Categories=GTK;GNOME;System;X-GNOME-PersonalSettings;
+ OnlyShowIn=GNOME;Unity;
+ NoDisplay=false
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+diff -uN applications_raw/simple-scan.desktop applications/simple-scan.desktop
+--- applications_raw/simple-scan.desktop	2013-09-27 09:13:48.834476497 +0800
++++ applications/simple-scan.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,10 +0,0 @@
+-[Desktop Entry]
+-Name=简易扫描
+-Comment=Scan Documents
+-Exec=simple-scan
+-Icon=scanner
+-Terminal=false
+-Type=Application
+-StartupNotify=true
+-Categories=GNOME;GTK;Graphics;Scanning;
+-X-GNOME-Gettext-Domain=simple-scan
+diff -uN applications_raw/synaptic.desktop applications/synaptic.desktop
+--- applications_raw/synaptic.desktop	2013-09-27 09:13:48.454476503 +0800
++++ applications/synaptic.desktop	2013-09-25 15:07:06.000000000 +0800
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+-Name=新立得包管理
++Name=新立得软件包管理器
+ GenericName=Package Manager
+-Comment=Install, remove and upgrade software packages
++Comment=安装，卸载，升级软件包
+ Exec=synaptic-pkexec
+ Icon=synaptic
+ Terminal=false
+ Type=Application
+-Categories=PackageManager;GTK;System;Settings;
++Categories=PackageManager;GTK;System;
+ NotShowIn=KDE;
+ X-Ubuntu-Gettext-Domain=synaptic
+diff -uN applications_raw/synaptic-kde.desktop applications/synaptic-kde.desktop
+--- applications_raw/synaptic-kde.desktop	2013-09-27 09:13:48.230476507 +0800
++++ applications/synaptic-kde.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,168 +0,0 @@
+-[Desktop Entry]
+-Name=新立得包管理
+-Name[ar]=مدير الحزم التشابكي
+-Name[be]=Кіраўнік пакетаў Synaptic
+-Name[be@latin]=Kiraŭnik pakunkaŭ Synaptic
+-Name[bg]=Мениджър на пакети (Synaptic)
+-Name[br]=Merour pakadoù Synaptic
+-Name[bs]=Upravnik paketa „Synaptic“
+-Name[ca]=Gestor de paquets Synaptic
+-Name[ca@valencia]=Gestor de paquets Synaptic
+-Name[cs]=Správce balíků Synaptic
+-Name[da]=Synaptic - pakkehåndtering
+-Name[de]=Synaptic-Paketverwaltung
+-Name[el]=Διαχείριση πακέτων Synaptic
+-Name[en_AU]=Synaptic Package Manager
+-Name[en_GB]=Synaptic Package Manager
+-Name[eo]=La pakaĵmastrumilo Sinaptiko
+-Name[es]=Gestor de paquetes Synaptic
+-Name[et]=Synaptic paketihaldur
+-Name[eu]=Synaptic pakete-kudeatzailea
+-Name[fi]=Synaptic-pakettienhallinta
+-Name[fr]=Gestionnaire de paquets Synaptic
+-Name[gl]=Xestor de paquetes Synaptic
+-Name[he]=מנהל החבילות Synaptic
+-Name[hi]=सिनेप्टिक पैकेज प्रबन्धक
+-Name[hu]=Synaptic csomagkezelő
+-Name[ia]=Administrator de pacchettos Synaptic
+-Name[id]=Synaptic Manajer Paket
+-Name[it]=Gestore pacchetti
+-Name[ja]=Synaptic パッケージマネージャ
+-Name[ko]=시냅틱 패키지 관리자
+-Name[ku]=Rêveberê Pakêtan Synaptic
+-Name[lt]=Paketų tvarkyklė Synaptic
+-Name[mk]=Менаџер за пакети - Синаптик
+-Name[ms]=Pengurus Pakej Synaptic
+-Name[nb]=Synaptic pakkebehandler
+-Name[nl]=Synaptic Pakketbeheer
+-Name[no]=Synaptic Pakkeadministrasjon
+-Name[pl]=Synaptic Menedżer Pakietów
+-Name[pt]=Gestor de Pacotes Synaptic
+-Name[pt_BR]=Gerenciador de pacotes Synaptic
+-Name[ro]=Synaptic - administrator de pachete
+-Name[ru]=Менеджер пакетов Synaptic
+-Name[sk]=Synaptic - správca balíkov
+-Name[sl]=Upravljalnik paketov Synaptic
+-Name[sr]=Синаптик — управник пакета
+-Name[sr@Latn]=Upravnik paketa „Synaptic“
+-Name[sv]=Pakethanteraren Synaptic
+-Name[te]=సినాప్టిక్ ప్యాకేజీ నిర్వాహకం
+-Name[th]=เครื่องมือจัดการแพกเกจ Synaptic
+-Name[tr]=Synaptic Paket Yöneticisi
+-Name[uk]=Менеджер пакунків Synaptic
+-Name[xh]=UMlawuli woMqulu we-Synaptic
+-Name[zh_CN]=新立得软件包管理器
+-Name[zh_TW]=Synaptic 套件管理程式
+-GenericName=Package Manager
+-GenericName[ar]=مدير الحزم
+-GenericName[be]=Кіраўнік пакетамі
+-GenericName[be@latin]=Kiraŭnik pakunkaŭ
+-GenericName[bg]=Мениджър на пакети
+-GenericName[br]=Merour pakadoù
+-GenericName[bs]=Upravnik paketa
+-GenericName[ca]=Gestor de paquets
+-GenericName[ca@valencia]=Gestor de paquets
+-GenericName[cs]=Správce balíků
+-GenericName[da]=Pakkehåndteringsprogram
+-GenericName[de]=Paketverwaltung
+-GenericName[el]=Διαχείριση πακέτων
+-GenericName[en_AU]=Package Manager
+-GenericName[en_GB]=Package Manager
+-GenericName[eo]=Pakaĵmastrumilo
+-GenericName[es]=Gestor de paquetes
+-GenericName[et]=Paketihaldur
+-GenericName[eu]=Pakete-kudeatzailea
+-GenericName[fi]=Pakettienhallinta
+-GenericName[fr]=Gestionnaire de paquets
+-GenericName[gl]=Xestor de paquetes
+-GenericName[he]=מנהל חבילות
+-GenericName[hi]=पैकेज प्रबन्धक
+-GenericName[hu]=Csomagkezelő
+-GenericName[ia]=Administrator de pacchettos
+-GenericName[id]=Manajer Paket
+-GenericName[it]=Gestore pacchetti
+-GenericName[ja]=パッケージマネージャ
+-GenericName[ko]=패키지 관리자
+-GenericName[ku]=Rêveberê Pakêtan
+-GenericName[lt]=Paketų tvarkyklė
+-GenericName[mk]=Менаџер за пакети
+-GenericName[ms]=Pengurusan Pakej
+-GenericName[nb]=Pakkebehandler
+-GenericName[nl]=Pakketbeheerder
+-GenericName[pl]=Menedżer pakietów
+-GenericName[pt]=Gestor de Pacotes
+-GenericName[pt_BR]=Gerenciador de pacotes
+-GenericName[ro]=Administrator de pachete
+-GenericName[ru]=Менеджер пакетов
+-GenericName[sk]=Správca balíkov
+-GenericName[sl]=Upravljalnik paketov
+-GenericName[sr]=Управник пакета
+-GenericName[sr@Latn]=Upravnik paketa
+-GenericName[sv]=Pakethanterare
+-GenericName[te]=ప్యాకేజీ నిర్వాహకం
+-GenericName[th]=เครื่องมือจัดการแพกเกจ
+-GenericName[tr]=Paket Yöneticisi
+-GenericName[uk]=Менеджер пакунків
+-GenericName[xh]=UMlawuli woMqulu
+-GenericName[zh_CN]=软件包管理器
+-GenericName[zh_TW]=套件管理程式
+-Comment=Install, remove and upgrade software packages
+-Comment[ar]=ثبّت، أزل وحدّث حزم البرامج
+-Comment[be]=Усталёўвае, выдаляе і абнаўляе пакеты
+-Comment[be@latin]=Instaluj, vydalaj i aktualizuj prahramnyja pakunki
+-Comment[bg]=Инсталиране, премахване и актуализиране на софтуерни пакети
+-Comment[bn]=সফটওয়্যার প্যাকেজ ইনস্টল, অপসারণ এবং আপগ্রেড
+-Comment[br]=Staliañ, dilemel hag hizivaat meziantoù
+-Comment[bs]=Instaliraj, ukloni i nadogradi softverske pakete
+-Comment[ca]=Instal·la, elimina i actualitza paquets de programari
+-Comment[ca@valencia]=Instal·la, elimina i actualitza paquets de programari
+-Comment[cs]=Nainstalovat, odstranit a aktualizovat balíky
+-Comment[da]=Installér, fjern og opgradér softwarepakker
+-Comment[de]=Software-Pakete installieren, entfernen und aktualisieren
+-Comment[el]=Εγκατάσταση, απομάκρυνση και αναβάθμιση πακέτων λογισμικού
+-Comment[en_AU]=Install, remove and upgrade software packages
+-Comment[en_GB]=Install, remove and upgrade software packages
+-Comment[eo]=Instali, forigi kaj promocii programarajn pakaĵojn
+-Comment[es]=Instalar, desinstalar y actualizar los paquetes de software
+-Comment[et]=Paigalda, eemalda ja uuenda tarkvarapakette
+-Comment[eu]=Instalatu, kendu eta bertsio-berritu software-paketeak
+-Comment[fi]=Asenna, poista ja päivitä ohjelmistopaketteja
+-Comment[fr]=Installer, désinstaller et mettre à jour les paquets de logiciels
+-Comment[gl]=Instalar, retirar e anovar os paquetes de software
+-Comment[he]=התקנה, הסרה ושדרוג חבילות תכנה.
+-Comment[hi]=सॉफ्टवेयर पैकेजों की स्थापना, अद्यतन करें या उन्हें हटाएं.
+-Comment[hu]=Csomagok telepítése, törlése és frissítése
+-Comment[it]=Installa, rimuove e aggiorna i pacchetti software
+-Comment[ja]=ソフトウェアパッケージのインストール、削除またはアップグレード
+-Comment[ko]=소프트웨어 패키지를 설치, 지우기, 업그레이드
+-Comment[ku]=Pakêtên nivîsbariyê saz bike, jê bibe û bilindbike
+-Comment[lt]=Įdiekite, šalinkite ir atnaujinkite programų paketus
+-Comment[mk]=Инсталирајте, отстранете или надградете софтверски пакети
+-Comment[ms]=Pasang, buang dan tatar pakej perisian
+-Comment[nb]=Installer, fjern eller oppgrader programpakker
+-Comment[nl]=Softwarepakketten installeren, verwijderen en opwaarderen
+-Comment[no]=Installer, fjern eller oppgrader programvare pakker
+-Comment[pl]=Instalacja, usuwanie i aktualizacja pakietów z oprogramowaniem
+-Comment[pt]=Instalar, remover e actualizar pacotes
+-Comment[pt_BR]=Instalar, remover e atualizar pacotes de software
+-Comment[ro]=Instalează, dezinstalează și actualizează pachete de programe
+-Comment[ru]=Установить, удалить и обновить пакеты
+-Comment[sk]=Inštalovať, odstrániť alebo aktualizovať softvérové balíky
+-Comment[sl]=Namestitev, odstranjevanje in nadgradnja programskih paketov
+-Comment[sr]=Инсталирајте, уклоните и надоградите пакете програма
+-Comment[sr@Latn]=Instaliraj, ukloni i nadogradi softverske pakete
+-Comment[sv]=Installera, ta bort och uppgradera programpaket
+-Comment[te]=సాఫ్ట్‍వేర్ ప్యాకేజీలను స్థాపించండి, తొలగించండి, ఉన్నతీకరించండి
+-Comment[th]=ติดตั้ง ถอดถอน และปรับรุ่นแพกเกจซอฟต์แวร์
+-Comment[tr]=Paketleri kur, kaldır ya da yükselt
+-Comment[uk]=Встановлення, вилучення та оновлення пакунків програмного забезпечення
+-Comment[xh]=Faka, susa uze uphucule imiqulu yesoftware
+-Comment[zh_CN]=安装，删除和升级软件包
+-Comment[zh_TW]=安裝、移除及升級套件
+-Exec=synaptic
+-Icon=synaptic
+-Terminal=false
+-Type=Application
+-Categories=PackageManager;System;
+-X-KDE-SubstituteUID=true
+-OnlyShowIn=KDE;
+diff -uN applications_raw/system-config-printer.desktop applications/system-config-printer.desktop
+--- applications_raw/system-config-printer.desktop	2013-09-27 09:13:48.922476496 +0800
++++ applications/system-config-printer.desktop	2013-09-24 17:48:04.000000000 +0800
+@@ -1,15 +1,15 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ Name=打印机
+-Comment=Configure printers
++Comment=配置打印机
+ Exec=system-config-printer
+ Terminal=false
+ Type=Application
+ Icon=printer
+ StartupNotify=true
+-NotShowIn=KDE;GNOME;
++#NotShowIn=KDE;GNOME;
+ X-Ubuntu-Gettext-Domain=system-config-printer
+-Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;System;Printing;
++Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;Printing;
+ X-GNOME-Settings-Panel=printing
+ Keywords=Printer;Queue;Print;Paper;Ink;Toner;
+ X-Desktop-File-Install-Version=0.21
+diff -uN applications_raw/thunderbird.desktop applications/thunderbird.desktop
+--- applications_raw/thunderbird.desktop	2013-09-27 09:13:48.386476505 +0800
++++ applications/thunderbird.desktop	2013-09-13 23:00:00.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Thunderbird邮件客户端
++Name=Thunderbird Mail
+ Name[ast]=Veceru de corréu Thunderbird
+ Name[ca]=Client de correu Thunderbird
+ Name[cs]=Poštovní klient Thunderbird
+diff -uN applications_raw/tomboy.desktop applications/tomboy.desktop
+--- applications_raw/tomboy.desktop	2013-09-27 09:13:48.354476505 +0800
++++ applications/tomboy.desktop	2013-09-25 14:11:38.000000000 +0800
+@@ -73,7 +73,7 @@
+ Name[ug]=Tomboy ئىزاھلىرى
+ Name[uk]=Примітки Tomboy
+ Name[vi]=Ghi chú Tomboy
+-Name[zh_CN]=阿帖便笺
++Name[zh_CN]=笔记便笺
+ Name[zh_HK]=Tomboy 筆記
+ Name[zh_TW]=Tomboy 筆記
+ Comment=Take notes, link ideas, and stay organized
+diff -uN applications_raw/transmission-gtk.desktop applications/transmission-gtk.desktop
+--- applications_raw/transmission-gtk.desktop	2013-09-27 09:13:48.514476502 +0800
++++ applications/transmission-gtk.desktop	2013-09-25 14:22:30.000000000 +0800
+@@ -64,7 +64,7 @@
+ X-GNOME-FullName[vi]=Trình khách BitTorrent Transmission
+ X-GNOME-FullName[zh_CN]=Transmission BitTorrent 客户端
+ X-GNOME-FullName[zh_TW]=Transmission BitTorrent 用戶端
+-Comment=Download and share files over BitTorrent
++Comment=下载和分享文件
+ Exec=transmission-gtk %U
+ Icon=transmission
+ Terminal=false
+diff -uN applications_raw/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
+--- applications_raw/ubiquity-gtkui.desktop	2013-09-27 09:13:48.386476505 +0800
++++ applications/ubiquity-gtkui.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,130 +0,0 @@
+-[Desktop Entry]
+-Type=Application
+-Version=1.0
+-# Do not translate the word "RELEASE".  It is used as a marker by casper.
+-Name=安装Release
+-Name[am]=የተለቀቀውን መግጠሚያ
+-Name[ar]=ثبّت RELEASE
+-Name[ast]=Instalar RELEASE
+-Name[be]=Усталяваць RELEASE
+-Name[bg]=Инсталиране на RELEASE
+-Name[bn]=RELEASE ইনস্টল করুন
+-Name[bs]=Instaliraj izdanje
+-Name[ca]=Instal·la la versió RELEASE
+-Name[cs]=Nainstalovat RELEASE
+-Name[da]=Installér RELEASE
+-Name[de]=RELEASE installieren
+-Name[el]=Εγκατάσταση RELEASE
+-Name[eo]=Instali RELEASE
+-Name[es]=Instalar RELEASE
+-Name[et]=Paigalda RELEASE
+-Name[eu]=Instalatu RELEASE
+-Name[fi]=Asenna RELEASE
+-Name[fr]=Installer RELEASE
+-Name[ga]=Suiteáil RELEASE
+-Name[gl]=Instalar RELEASE
+-Name[gu]=રિલીઝ નું સ્થાપન કરો.
+-Name[he]=התקנת RELEASE
+-Name[hi]=RELEASE को संस्थापित करें
+-Name[hr]=Instaliraj RELEASE
+-Name[hu]=RELEASE telepítése
+-Name[id]=Pasang RELEASE
+-Name[it]=Installa RELEASE
+-Name[ja]=RELEASE のインストール
+-Name[ka]=RELEASE-ის დაყენება
+-Name[kk]=RELEASE орнату
+-Name[km]=ដំឡើង​ឯកសារ​ចេញ​ផ្សាយ
+-Name[ko]=RELEASE 설치
+-Name[ku]=RELEASE saz bike
+-Name[lt]=Įdiegti RELEASE į kompiuterį
+-Name[lv]=Instalēt RELEASE
+-Name[mk]=Инсталирај RELEASE
+-Name[ml]=RELEASE സജ്ജമാക്കുക
+-Name[mr]=स्थापित RELEASE
+-Name[nl]=RELEASE installeren
+-Name[pa]=RELEASE ਰੀਲਿਜ਼
+-Name[pl]=Zainstaluj RELEASE
+-Name[pt]=Instalar RELEASE
+-Name[pt_BR]=Instalar o RELEASE
+-Name[ro]=Instalare RELEASE
+-Name[ru]=Установить RELEASE
+-Name[sk]=Inštalovať RELEASE
+-Name[sl]=Namesti RELEASE
+-Name[sq]=Instalo RELEASE
+-Name[sr]=Инсталирајте RELEASE
+-Name[sv]=Installera RELEASE
+-Name[ta]=RELEASEஐ நிறுவு
+-Name[th]=ติดตั้ง RELEASE
+-Name[tl]=Iluklok ang RELEASE
+-Name[tr]=RELEASE Kurulumu
+-Name[uk]=Встановити RELEASE
+-Name[vi]=Cài đặt RELEASE
+-Name[zh_CN]=安装 RELEASE
+-Name[zh_TW]=安裝 RELEASE
+-Comment=Install this system permanently to your hard disk
+-Comment[am]=ይኼን ሲስተም ሀርድ ዲስክዎ ላይ በቋሚነት ይጫኑት
+-Comment[ar]=ثبّت هذا النظام على القرص الصلب
+-Comment[ast]=Instalar permanentemente esti sistema nel to discu duru
+-Comment[be]=Усталяваць сістэму на жорсткі дыск
+-Comment[bg]=Инсталиране на тази система за постоянно на твърдия диск
+-Comment[bn]=এই সিস্টেমটি আপনার হার্ডডিস্কে স্থায়ীভাবে ইনস্টল করুন।
+-Comment[bs]=Instaliraj ovaj sistem trajno na hard disk
+-Comment[ca]=Instal·leu aquest sistema permanentment al vostre disc dur
+-Comment[cs]=Nainstalovat tento systém natrvalo na váš disk
+-Comment[da]=Installér dette system permanent på din harddisk
+-Comment[de]=Dieses System dauerhaft auf der Festplatte installieren
+-Comment[el]=Εγκαταστήστε αυτό το σύστημα μόνιμα στο σκληρό σας δίσκο
+-Comment[eo]=Instali ĉi tiun sistemon daŭre en via disko
+-Comment[es]=Instalar este sistema permanentemente en su disco duro
+-Comment[et]=Paigalda see süsteem jäädavalt oma kõvakettale
+-Comment[eu]=Sistema hau betiko instalatu disko gogorrean
+-Comment[fi]=Asenna tämä järjestelmä pysyvästi kiintolevyllesi
+-Comment[fr]=Installer ce système de façon permanente sur votre disque dur
+-Comment[ga]=Suiteáil an córas seo go buan ar do chruadhiosca
+-Comment[gl]=Instalar o sistema de xeito permanente no disco ríxido
+-Comment[gu]=આ સિસ્ટમ તમારી હાર્ડ ડિસ્ક પર હંમેશ માટે સ્થાપિત કરો
+-Comment[he]=התקנת המערכת באופן קבוע על הכונן הקשיח
+-Comment[hi]=इस तंत्र को आपके हार्ड डिस्क में स्थायी रूप से संस्थापित करें
+-Comment[hr]=Trajno instaliraj sustav na čvrsti disk
+-Comment[hu]=A rendszer telepítése merevlemezre
+-Comment[id]=Memasang sistem ini secara permanen pada diska Anda
+-Comment[it]=Installa questo sistema in modo permanente sul disco rigido
+-Comment[ja]=このシステムをハードディスクにインストールします
+-Comment[ka]=მოცემული სისტემის მყარ დისკზე ჩაყენება
+-Comment[kk]=Осы жүйені қатқыл дискіңізге тұрақты орнату
+-Comment[km]=ដំឡើង​ប្រព័ន្ធ​នេះ​ជា​អចិន្ត្រៃយ៍​ទៅ​កាន់​ថាស​រឹង​របស់​អ្នក
+-Comment[ko]=이 시스템을 하드 디스크에 설치합니다.
+-Comment[ku]=Sîstemê di hard dîskê xwe de saz bike
+-Comment[lt]=Įdiegti Linux operacinę sistemą į kompiuterio (standųjį) diską
+-Comment[lv]=Instalēt šo sistēmu cietajā diskā
+-Comment[mk]=Инсталирајте го системот трајно на Вашиот тврд диск
+-Comment[ml]=സ്ഥിരമായി ഹാര്‍ഡ് ഡിസ്കിലേക്ക് ഇന്‍സ്റ്റാള്‍ ചെയ്യുക
+-Comment[mr]=ही प्रणाली कायमची तुमच्या हार्ड डिस्कवर स्थापित करा
+-Comment[ne]=यो प्रणाली तपाईको हार्ड डिस्कमा स्थाई रुपमा प्रतिस्थापन गर्नुहोस्
+-Comment[nl]=Dit systeem definitief op uw harde schijf installeren
+-Comment[pa]=ਇਹ ਸਿਸਟਮ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਆਪਣੀ ਹਾਰਡ ਡਿਸਕ ਉੱਤੇ ਇੰਸਟਾਲ
+-Comment[pl]=Instaluje system na dysku twardym
+-Comment[pt]=Instalar este sistema permanentemente no disco rígido
+-Comment[pt_BR]=Instalar este sistema de maneira permanente no seu disco rígido
+-Comment[ro]=Instalați acest sistem pe discul calculatorului
+-Comment[ru]=Установить эту систему на жёсткий диск
+-Comment[sk]=Nainštalovať systém natrvalo na pevný disk
+-Comment[sl]=Trajno namesti sistem na trdi disk
+-Comment[sq]=Instalo këtë sistem përgjithmonë në Hard Disk
+-Comment[sr]=Инсталирајте овај систем трајно на ваш хард диск
+-Comment[sv]=Installera detta system permanent på din hårddisk
+-Comment[ta]=இந்த நிலையை நிரந்தரமாக தங்களது கணினியில் நிறுவுக
+-Comment[th]=ติดตั้งระบบนี้อย่างถาวรลงบนฮาร์ดดิสก์ของคุณ
+-Comment[tl]=Iluklok ng permanente ang systema sa iyong hard disk
+-Comment[tr]=Bu sistemi sabit diskinize kalıcı olarak kurun
+-Comment[uk]=Встановити цю систему на жорсткий диск
+-Comment[vi]=Cài hệ thống vào đĩa cứng
+-Comment[zh_CN]=将这个系统永久安装在您的硬盘上
+-Comment[zh_TW]=將此系統安裝到您的硬碟中
+-Exec=ubiquity --desktop %k gtk_ui
+-Icon=ubiquity
+-Terminal=false
+-Categories=GTK;System;Settings;
+-NotShowIn=KDE;
+-#X-Ubuntu-Gettext-Domain=ubiquity-desktop
+-X-Ayatana-Appmenu-Show-Stubs=False
+diff -uN applications_raw/upload-manager.desktop applications/upload-manager.desktop
+--- applications_raw/upload-manager.desktop	2013-09-27 09:13:48.266476506 +0800
++++ applications/upload-manager.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,130 +0,0 @@
+-[Desktop Entry]
+-Name=上传管理
+-Name[en_GB]=Upload Manager
+-Name[ko]=업로드 관리자
+-Name[hr]=Menadžer Otpreme
+-Name[ms]=Pengurus Muatnaik
+-Name[nds]=Uploadmanager
+-Name[bs]=Menadžer za upload
+-Name[he]=מנהל העלאות
+-Name[oc]=Upload Manager
+-Name[tr]=Yükleme Yöneticisi
+-Name[fo]=Uppsendinga Leiðari
+-Name[id]=Manajer upload
+-Name[fr]=Gestionnaire de téléversement
+-Name[ar]=مدير رفع الملفات
+-Name[pl]=Menedżer Wysyłania
+-Name[sk]=Správca Prenosu Súborov
+-Name[bg]=Управление на качванията
+-Name[es]=Gestor de subidas
+-Name[fa]=مدیریت ارسال
+-Name[hi]=Upload Manager
+-Name[vi]=Trình Quản lý Tải lên
+-Name[mk]=Менаџер за поставување датотеки
+-Name[nb]=Opplastingsveiviser
+-Name[cs]=Správce nahrávání
+-Name[mr]=अपलोड प्रबंधक
+-Name[is]=Sendingastjóri
+-Name[eu]=Igotze Kudeatzailea
+-Name[sl]=Upravitelj poišiljanja
+-Name[fi]=Lähetystenhallinta
+-Name[pt]=Gestor de Envios
+-Name[sr]=Menadzer slanja
+-Name[af]=Oplaai Bestuurder
+-Name[uk]=Менеджер завантажень
+-Name[am]=የመጫኛ አስተዳዳሪ
+-Name[et]=Üleslaadimishaldur
+-Name[pt_PT]=Gestor de Envios
+-Name[ast]=Alministrador de xubíes
+-Name[csb]=Menadżera sélaniô
+-Name[ru]=Менеджер загрузок
+-Name[zh_TW]=上傳管理員
+-Name[ja]=アップロードマネージャ
+-Name[ca]=Gestor de càrregues
+-Name[en_AU]=Upload Manager
+-Name[bn]=Upload Manager
+-Name[zh_CN]=上传管理器
+-Name[nl]=Uploadbeheer
+-Name[el]=Διαχειριστής Ανεβάσματος Αρχείων
+-Name[it]=Upload Manager
+-Name[sv]=Uppladdningshanterare
+-Name[da]=Uploadhåndtering
+-Name[de]=Uploadmanager
+-Name[sq]=Menaxhuesi i Ngarkimeve
+-Name[ml]=അപ്‌ലോഡ്‌ മാനേജര്‍
+-Name[nn]=Opplastingsrettleiar
+-Name[kk]=Құю менеджері
+-Name[lt]=Įkėlimo tvarkyklė
+-Name[pt_BR]=Gerenciador de Upload
+-Name[hu]=Feltöltéskezelő
+-Name[ro]=Manager de încărcări
+-Name[zh_HK]=上載管理員
+-Name[gl]=Xestor de subidas
+-Comment=Define upload services
+-Comment[en_GB]=Define upload services
+-Comment[ko]=업로드 서비스 추가
+-Comment[hr]=Definiraj otpremne servise
+-Comment[ms]=Tentukan servis muatnaik
+-Comment[nds]=Bestimme Dienste zum Hochladen
+-Comment[bs]=Definiraj upload servise
+-Comment[he]=הגדרת שירותי העלאה
+-Comment[oc]=Define upload services
+-Comment[tr]=Yükleme hizmetlerini tanımlayın
+-Comment[fo]=Skilmarka uppsendinga tænastur
+-Comment[id]=Definisikan layanan unggah
+-Comment[fr]=Définissez les services de téléversement
+-Comment[ar]=حدد خدمات رفع الملفات
+-Comment[pl]=Określ usługi wysyłania
+-Comment[sk]=Definovať služby prenosu
+-Comment[bg]=Задаване на услуги на качване
+-Comment[es]=Definir servicio de subida
+-Comment[fa]=سرویسهای ارسال را مشخص کن
+-Comment[hi]=Define upload services
+-Comment[vi]=Chỉ định dịch vụ tải lên
+-Comment[mk]=Дефинирај сервис за поставување
+-Comment[nb]=Definer opplastingstjenester
+-Comment[cs]=Definovat nahrávací služby
+-Comment[mr]=Define upload services
+-Comment[is]=Sskilgreindu sendingaþjónustur
+-Comment[eu]=Igotzeko zerbizuak definitu
+-Comment[sl]=Določi storitev pošiljanja
+-Comment[fi]=Määritä lähetyspalvelut
+-Comment[pt]=Definir serviço de envios
+-Comment[sr]=Definisite servise slanja
+-Comment[af]=Definieer oplaai dienste
+-Comment[uk]=Визначити служби завантаження
+-Comment[am]=መግለጽ የመጫኛ አገልግሎቶች
+-Comment[et]=Defineeri üleslaadimisteenused
+-Comment[pt_PT]=Definir serviço de envios
+-Comment[ast]=Definir serviciu de xubida
+-Comment[csb]=Definiujë ùsłëżnotë sélaniô
+-Comment[ru]=Назначить службы загрузки
+-Comment[zh_TW]=定義上傳服務
+-Comment[ja]=アップロードサービスを定義する
+-Comment[ca]=Defineix serveis de càrrega
+-Comment[en_AU]=Define upload services
+-Comment[bn]=Define upload services
+-Comment[zh_CN]=定义上传服务
+-Comment[nl]=Uploadservices bepalen
+-Comment[el]=Καθορίστε τις υπηρεσίες ανεβάσματος
+-Comment[it]=Definisci i servizi di upload
+-Comment[sv]=Definera uppladdningstjänster
+-Comment[da]=Sæt uploadtjenesterne op
+-Comment[de]=Bestimme Dienste zum Hochladen
+-Comment[sq]=Përkufizo shërbimet e ngarkimit
+-Comment[ml]=അപ്‌ലോഡ്‌ സെര്‍വിസുകളെ നിര്‍വചിക്കുക
+-Comment[nn]=Definer opplastingstenester
+-Comment[kk]=Файл құю қызметтерін белгілеу
+-Comment[lt]=Nustatyti įkėlimo paslaugas
+-Comment[pt_BR]=Definir serviços de upload
+-Comment[hu]=Feltöltőszolgáltatások beállítása
+-Comment[ro]=Numiți serviciile de încărcare
+-Comment[zh_HK]=設定上載服務
+-Comment[gl]=Definir servizos de subida
+-Exec=mintupload-manager
+-Icon=/usr/lib/linuxmint/mintUpload/icon.svg
+-Terminal=false
+-Type=Application
+-Encoding=UTF-8
+-Categories=Application;System;Settings
+-StartupNotify=false
+diff -uN applications_raw/vino-preferences.desktop applications/vino-preferences.desktop
+--- applications_raw/vino-preferences.desktop	2013-09-27 09:13:48.542476502 +0800
++++ applications/vino-preferences.desktop	2013-09-25 14:21:00.000000000 +0800
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=桌面共享
++Name=远程桌面
+ Comment=Choose how other users can remotely view your desktop
+ Exec=vino-preferences
+ Icon=preferences-desktop-remote-desktop
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;RemoteAccess;Network;
++Categories=GNOME;GTK;System;X-GNOME-NetworkSettings;RemoteAccess;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=vino
+ X-GNOME-Bugzilla-Component=Preferences Dialog
+diff -uN applications_raw/vlc.desktop applications/vlc.desktop
+--- applications_raw/vlc.desktop	2013-09-27 09:13:48.266476506 +0800
++++ applications/vlc.desktop	2013-09-25 14:34:08.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Version=1.0
+-Name=VLC媒体播放器
++Name=VLC播放器
+ GenericName=Media player
+ Comment=Read, capture, broadcast your multimedia streams
+ Name[bn]=VLC মিডিয়া প্লেয়ার
+@@ -11,7 +11,7 @@
+ Name[ca]=Reproductor multimèdia VLC
+ GenericName[ca]=Reproductor multimèdia
+ Comment[ca]=Reproduïu, captureu i difoneu fluxos multimèdia
+-Name[de]=VLC Media Player
++Name[de]=VLC播放器
+ GenericName[de]=Medienwiedergabe
+ Comment[de]=Wiedergabe, Aufnahme und Verbreitung Ihrer Multimedia-Streams
+ Name[es]=Reproductor multimedia VLC
+@@ -54,7 +54,7 @@
+ Name[lt]=VLC leistuvė 
+ GenericName[lt]=Leistuvė
+ Comment[lt]=Groti, įrašyti, siųsti įvairialypės terpės kūrinius
+-Name[nl]=VLC Media Player
++Name[nl]=VLC播放器
+ GenericName[nl]=Mediaspeler
+ Comment[nl]=Uw multimediastreams afspelen, opnemen en uitzenden
+ Name[nn]=VLC mediespelar
+@@ -62,7 +62,7 @@
+ Comment[nn]=Spel av, ta opp og send ut multimedia
+ Name[pa]=VLC ਮੀਡਿਆ ਪਲੇਅਰ
+ Comment[pa]=ਆਪਣੀ ਮਲਟੀਮੀਡਿਆ ਸਟਰੀਮ ਪੜ੍ਹੋ, ਕੈਪਚਰ ਤੇ ਬਰਾਡਕਾਸਟ ਕਰੋ 
+-Name[pl]=VLC media player
++Name[pl]=VLC播放器
+ GenericName[pl]=Odtwarzacz multimedialny
+ Comment[pl]=Odczytywanie, przechwytywanie i nadawanie strumieni multimedialnych
+ Name[pt_BR]=Reprodutor de Mídias VLC
+@@ -71,7 +71,7 @@
+ Name[ru]=Медиаплеер VLC
+ GenericName[ru]=Медиаплеер
+ Comment[ru]=Универсальный проигрыватель видео и аудио
+-Name[sk]=VLC media player
++Name[sk]=VLC播放器
+ Comment[sk]=Naèítavajte, zaznamenávajte, vysielajte svoje multimediálne streamy
+ Name[sv]=Mediaspelaren VLC
+ GenericName[sv]=Mediaspelaren
+@@ -85,7 +85,7 @@
+ Name[wa]=Djouweu d' media VLC
+ GenericName[wa]=Djouweu d' media
+ Comment[wa]=Lét, egaloye, evoye vos floûs multimedia
+-Name[zh_CN]=VLC媒体播放器
++Name[zh_CN]=VLC播放器
+ GenericName[zh_CN]=媒体播放器
+ Comment[zh_CN]=为您读取、捕获或发送多媒体流
+ Name[zh_TW]=VLC 媒體播放器
+diff -uN applications_raw/xchat.desktop applications/xchat.desktop
+--- applications_raw/xchat.desktop	2013-09-27 09:13:48.814476498 +0800
++++ applications/xchat.desktop	1970-01-01 08:00:00.000000000 +0800
+@@ -1,23 +0,0 @@
+-[Desktop Entry]
+-Encoding=UTF-8
+-Name=XChat聊天
+-Name[zh_TW]=網路清談
+-Comment[de]=IRC-Client
+-Comment[es]=Aplicación de IRC
+-Comment[fi]=IRC-sovellus
+-Comment[fr]=Client IRC
+-Comment[hu]=IRC-kliens
+-Comment[lt]=IRC klientas
+-Comment[no]=IRC-klient
+-Comment[pt_BR]=Cliente de IRC
+-Comment[sl]=Odjemalec IRC
+-Comment[sv]=IRC-klient
+-Comment[ro]=Client de IRC
+-Comment[zh_TW]=X-Chat 聊天程式
+-Comment=Chat with other people using Internet Relay Chat
+-Exec=xchat
+-Icon=xchat
+-Terminal=false
+-Type=Application
+-Categories=Network;
+-StartupNotify=true
+diff -uN applications_raw/yelp.desktop applications/yelp.desktop
+--- applications_raw/yelp.desktop	2013-09-27 09:13:48.958476495 +0800
++++ applications/yelp.desktop	2013-09-26 18:40:54.000000000 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=Help
+-Comment=Get help with Linux Mint
++Comment=获取COS Desktop帮助
+ OnlyShowIn=GNOME;Unity;
+ Exec=yelp %u
+ Icon=help-browser

@@ -1,0 +1,23 @@
+[Desktop Entry]
+Name=Fcitx Configuration
+Name[de]=Fcitx Konfiguration
+Name[ja]=Fcitx 設定
+Name[zh_CN]=Fcitx 配置
+Name[zh_TW]=Fcitx 設定
+GenericName=Input Method Configuration
+GenericName[de]=Konfiguration Eingabemethode
+GenericName[ja]=入力メソッドの設定
+GenericName[zh_CN]=输入法配置
+GenericName[zh_TW]=輸入法設定
+Comment=Change Fcitx Configuration
+Comment[de]=Wechsel der Fcitx Konfiguration
+Comment[ja]=Fcitx 設定を変更
+Comment[zh_CN]=修改 Fcitx 配置
+Comment[zh_TW]=修改 Fcitx 設定
+Exec=fcitx-configtool
+Icon=fcitx
+MimeType=
+Type=Application
+Categories=Settings;
+X-KDE-StartupNotify=false
+StartupNotify=false

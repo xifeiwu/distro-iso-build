@@ -1,0 +1,56 @@
+diff -uN desktop-directories_raw/cinnamon-audio-video.directory desktop-directories/cinnamon-audio-video.directory
+--- desktop-directories_raw/cinnamon-audio-video.directory	2013-09-27 09:25:41.834465116 +0800
++++ desktop-directories/cinnamon-audio-video.directory	2013-09-24 16:09:48.000000000 +0800
+@@ -96,9 +96,9 @@
+ Name[vi]=Âm thanh và Ảnh động
+ Name[xh]=Isandi neVidiyo
+ Name[yo]=Ìró & Fídíò
+-Name[zh_CN]=影音
+-Name[zh_HK]=影音
+-Name[zh_TW]=影音
++Name[zh_CN]=多媒体中心
++Name[zh_HK]=多媒体中心
++Name[zh_TW]=多媒体中心
+ Comment=Multimedia menu
+ Comment[af]=Multimediakieslys
+ Comment[an]=Menú de programas multimedia
+diff -uN desktop-directories_raw/cinnamon-settings.directory desktop-directories/cinnamon-settings.directory
+--- desktop-directories_raw/cinnamon-settings.directory	2013-09-27 09:25:41.826465116 +0800
++++ desktop-directories/cinnamon-settings.directory	2013-09-24 15:56:54.000000000 +0800
+@@ -96,7 +96,7 @@
+ Name[vi]=Tùy thích
+ Name[xh]=Uluhlu lwezinto ezikhethwayo
+ Name[yo]=Àwọn ìkúndùn
+-Name[zh_CN]=首选项
++Name[zh_CN]=系统设置
+ Name[zh_HK]=偏好設定
+ Name[zh_TW]=偏好設定
+ Comment=Personal preferences
+diff -uN desktop-directories_raw/cinnamon-settings-system.directory desktop-directories/cinnamon-settings-system.directory
+--- desktop-directories_raw/cinnamon-settings-system.directory	2013-09-27 09:25:41.830465116 +0800
++++ desktop-directories/cinnamon-settings-system.directory	2013-09-24 16:04:24.000000000 +0800
+@@ -97,7 +97,7 @@
+ Name[vi]=Quản lý
+ Name[xh]=Ulawulo
+ Name[yo]=Ìṣàkóso
+-Name[zh_CN]=系统管理
++Name[zh_CN]=系统管理工具
+ Name[zh_HK]=管理
+ Name[zh_TW]=管理
+ Comment=Change system-wide settings (affects all users)
+diff -uN desktop-directories_raw/cinnamon-system-tools.directory desktop-directories/cinnamon-system-tools.directory
+--- desktop-directories_raw/cinnamon-system-tools.directory	2013-09-27 09:25:41.834465116 +0800
++++ desktop-directories/cinnamon-system-tools.directory	2013-09-25 13:28:30.000000000 +0800
+@@ -95,9 +95,9 @@
+ Name[vi]=Công cụ hệ thống
+ Name[xh]=Izixhobo Zeenkqubo
+ Name[yo]=Àwọn Irinṣẹ́ Ètò Kọ̀ǹpútà
+-Name[zh_CN]=系统工具
+-Name[zh_HK]=系統工具
+-Name[zh_TW]=系統工具
++Name[zh_CN]=系统管理工具
++Name[zh_HK]=系統管理工具
++Name[zh_TW]=系統管理工具
+ Comment=System configuration and monitoring
+ Comment[af]=Stelselopstelling en monitering
+ Comment[an]=Configuracion y monitorizacion d'o sistema

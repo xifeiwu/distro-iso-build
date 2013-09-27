@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=网络连接管理
+Comment=管理并修改网络连接
+Icon=preferences-system-network
+Exec=nm-connection-editor
+Terminal=false
+StartupNotify=true
+Type=Application
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=NetworkManager
+X-GNOME-Bugzilla-Component=general
+Categories=GNOME;GTK;Settings;X-GNOME-NetworkSettings;
+NotShowIn=KDE;
+X-Ubuntu-Gettext-Domain=nm-applet

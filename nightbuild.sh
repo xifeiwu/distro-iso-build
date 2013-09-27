@@ -4,7 +4,7 @@ APPPATH=/home/night/app
 WORKPATH=$(cd "$(dirname $0)"; pwd)
 OUTPATH=/home/night/out
 ISOPATH=/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit-1-4kernel.iso
-LOGNAME="log`date +%Y%m%d`.txt"
+LOGNAME="log`date +%Y%m%d%H%M`.txt"
 ISOOUTPATH=/home/night/isout
 if [ -d $OUTPATH/squashfs-root ] ; then
     rm -f -r $OUTPATH/squashfs-root

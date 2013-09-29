@@ -460,7 +460,7 @@
     </key>
 
     <key type="b" name="cinnamon-settings-advanced">
-      <default>false</default>
+      <default>true</default>
       <summary>Whether advanced mode is enabled in cinnamon-settings</summary>
     </key>
     <key type="b" name="run-dialog-show-completions">

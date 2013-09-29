@@ -1,5 +1,5 @@
 diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
---- applications_old/aptoncd.desktop	2013-09-29 10:44:02.173340239 +0800
+--- applications_old/aptoncd.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/aptoncd.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,12 +0,0 @@
 -[Desktop Entry]
@@ -15,8 +15,8 @@ diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
 -Categories=System;Settings;
 -X-Ubuntu-Gettext-Domain=aptoncd
 diff -uN applications_old/banshee-audiocd.desktop applications/banshee-audiocd.desktop
---- applications_old/banshee-audiocd.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/banshee-audiocd.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/banshee-audiocd.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/banshee-audiocd.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -3,7 +3,7 @@
  NoDisplay=true
  MimeType=x-content/audio-cdda;
@@ -27,8 +27,8 @@ diff -uN applications_old/banshee-audiocd.desktop applications/banshee-audiocd.d
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/banshee.desktop applications/banshee.desktop
---- applications_old/banshee.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/banshee.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/banshee.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/banshee.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,7 +1,7 @@
  [Desktop Entry]
  Exec=banshee --redirect-log --play-enqueued %U
@@ -39,8 +39,8 @@ diff -uN applications_old/banshee.desktop applications/banshee.desktop
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/banshee-media-player.desktop applications/banshee-media-player.desktop
---- applications_old/banshee-media-player.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/banshee-media-player.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/banshee-media-player.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/banshee-media-player.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -3,7 +3,7 @@
  NoDisplay=true
  MimeType=x-content/audio-player;
@@ -51,8 +51,8 @@ diff -uN applications_old/banshee-media-player.desktop applications/banshee-medi
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/baobab.desktop applications/baobab.desktop
---- applications_old/baobab.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/baobab.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/baobab.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/baobab.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Disk Usage Analyzer
@@ -61,8 +61,8 @@ diff -uN applications_old/baobab.desktop applications/baobab.desktop
  TryExec=baobab
  Exec=baobab
 diff -uN applications_old/bluetooth-sendto.desktop applications/bluetooth-sendto.desktop
---- applications_old/bluetooth-sendto.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/bluetooth-sendto.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/bluetooth-sendto.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/bluetooth-sendto.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Bluetooth Transfer
@@ -71,8 +71,8 @@ diff -uN applications_old/bluetooth-sendto.desktop applications/bluetooth-sendto
  Icon=bluetooth
  Exec=bluetooth-sendto
 diff -uN applications_old/bluetooth-wizard.desktop applications/bluetooth-wizard.desktop
---- applications_old/bluetooth-wizard.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/bluetooth-wizard.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/bluetooth-wizard.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/bluetooth-wizard.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Bluetooth Device Setup
@@ -81,8 +81,8 @@ diff -uN applications_old/bluetooth-wizard.desktop applications/bluetooth-wizard
  Icon=bluetooth
  Exec=bluetooth-wizard
 diff -uN applications_old/brasero.desktop applications/brasero.desktop
---- applications_old/brasero.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/brasero.desktop	2013-09-25 14:00:50.000000000 +0800
+--- applications_old/brasero.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/brasero.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,8 +1,8 @@
  [Desktop Entry]
 -Name=Brasero
@@ -95,8 +95,8 @@ diff -uN applications_old/brasero.desktop applications/brasero.desktop
  Exec=brasero %U
  Icon=brasero
 diff -uN applications_old/brasero-nautilus.desktop applications/brasero-nautilus.desktop
---- applications_old/brasero-nautilus.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/brasero-nautilus.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/brasero-nautilus.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/brasero-nautilus.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=CD/DVD Creator
@@ -105,8 +105,8 @@ diff -uN applications_old/brasero-nautilus.desktop applications/brasero-nautilus
  Categories=GNOME;GTK;System;
  TryExec=nautilus
 diff -uN applications_old/caribou.desktop applications/caribou.desktop
---- applications_old/caribou.desktop	2013-09-29 10:44:02.189340238 +0800
-+++ applications/caribou.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/caribou.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/caribou.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Caribou
@@ -115,8 +115,8 @@ diff -uN applications_old/caribou.desktop applications/caribou.desktop
  Comment=Enter text with a virtual keyboard
  Exec=caribou
 diff -uN applications_old/cinnamon-control-center.desktop applications/cinnamon-control-center.desktop
---- applications_old/cinnamon-control-center.desktop	2013-09-29 10:44:02.201340238 +0800
-+++ applications/cinnamon-control-center.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/cinnamon-control-center.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/cinnamon-control-center.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Cinnamon Control Center
@@ -125,8 +125,8 @@ diff -uN applications_old/cinnamon-control-center.desktop applications/cinnamon-
  Exec=cinnamon-control-center --overview
  Terminal=false
 diff -uN applications_old/cinnamon.desktop applications/cinnamon.desktop
---- applications_old/cinnamon.desktop	2013-09-29 10:44:02.233340238 +0800
-+++ applications/cinnamon.desktop	2013-06-06 23:48:10.000000000 +0800
+--- applications_old/cinnamon.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/cinnamon.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -6,7 +6,7 @@
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=cinnamon
@@ -137,84 +137,18 @@ diff -uN applications_old/cinnamon.desktop applications/cinnamon.desktop
  OnlyShowIn=GNOME;
  NoDisplay=true
 diff -uN applications_old/cinnamon-network-panel.desktop applications/cinnamon-network-panel.desktop
---- applications_old/cinnamon-network-panel.desktop	2013-09-29 10:44:02.217340238 +0800
-+++ applications/cinnamon-network-panel.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,72 +0,0 @@
--[Desktop Entry]
+--- applications_old/cinnamon-network-panel.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/cinnamon-network-panel.desktop	2013-09-29 16:51:56.924559868 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
 -Name=Network
--Comment=Network settings
--Exec=cinnamon-settings network
--Icon=network-workgroup
--Terminal=false
--Type=Application
--StartupNotify=true
--Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
--OnlyShowIn=GNOME;
--X-Cinnamon-Settings-Panel=network
--# Translators: those are keywords for the network control-center panel
--Keywords=Network;Wireless;IP;LAN;Proxy;
--Keywords[ar]=الشبكة;لاسلكي;عنوان أي بي;بروتوكول الإنترنت;الشبكة المحلية;الوسيط
--Keywords[as]=নেটৱাৰ্ক;বেতাঁৰ;IP;LAN;প্ৰক্সি;
--Keywords[be]=Сетка;Сеціва;Бесправадное злучэнне;IP;LAN;Проксі
--Keywords[bg]=Мрежа;Безжична;IP;LAN;Сървър-посредник;
--Keywords[ca]=Xarxa;Sense fil;IP;LAN;Servidor intermediari;
--Keywords[ca@valencia]=Xarxa;Sense fil;IP;LAN;Servidor intermediari;
--Keywords[crh]=Şebeke;Kabelsiz;İP;LAN;Proksi;
--Keywords[cs]=síť;bezdrátová;IP;LAN;proxy;
--Keywords[da]=Netværk;Trådløs;IP;LAN;Proxy;
--Keywords[de]=Netzwerk;Drahtlos;IP;LAN;Proxy;
--Keywords[el]=Δίκτυο;Ασύρματο;IP;LAN;Proxy;Network;Wireless;Διαμεσολαβητής;
--Keywords[en_GB]=Network;Wireless;IP;LAN;Proxy;
--Keywords[es]=Red;Inalámbrica;IP;LAN;Proxy;
--Keywords[et]=Võrk;Kohtvõrk;WiFi;juhtmevaba;IP;proksi;
--Keywords[eu]=Sarea;Haririk gabea;IPa;Sare lokala;Proxy-a;
--Keywords[fa]=شبکه;بیسیم;آی‌پی;لن;پیشکار;پروکسی;
--Keywords[fi]=Verkko;Langaton;IP;LAN;lähiverkko;välityspalvelin;proxy;
--Keywords[fr]=Réseau;Sans fil;WiFi;IP;LAN;Serveur;Mandataire;Proxy;Connexion;
--Keywords[ga]=Líonra;Gan Sreang;IP;LAN;Seachfhreastalaí;
--Keywords[gl]=Rede;Sen fíos;IP;LAN;Proxy;
--Keywords[gu]=નેટવર્ક;વાયરલેસ;IP;LAN;પ્રોક્સી;
--Keywords[he]=רשת;אלחוטי;IP;LAN;פרוקסי
--Keywords[hi]=नेटवर्क;वायरलेस;आईपी;लैन;प्रॉक्सी;
--Keywords[hu]=Hálózat;Vezeték nélküli;IP;LAN;Proxy;
--Keywords[id]=Jaringan;Nirkabel;IP;LAN;Proksi;
--Keywords[it]=Rete;Network;Wireless;IP;LAN;Proxy;
--Keywords[ja]=Network;Wireless;IP;LAN;Proxy;ネットワーク;無線;プロキシ;
--Keywords[km]=Network;Wireless;IP;LAN;Proxy;
--Keywords[kn]=ಜಾಲಬಂಧ;ವೈರ್ಲೆಸ್;IP;LAN;ಪ್ರಾಕ್ಸಿ;
--Keywords[ko]=Network;네트워크;Wireless;무선;IP;LAN;랜;Proxy;프록시
--Keywords[lt]=Tinklas;Belaidis;IP;LAN;Tarpinisserveris;
--Keywords[lv]=Tīkls;Bezvadu;IP;LAN;Starpnieks;Network;Wireless;Proxy;
--Keywords[mk]=Мрежа;Безжичен;IP;LAN;Прокси;
--Keywords[ml]=Network;Wireless;IP;LAN;Proxy;
--Keywords[mr]=नेटवर्क;वायरलेस;IP;LAN;प्रॉक्सी;
--Keywords[nb]=Nettverk;Trådløs;IP;LAN;Proxy;
--Keywords[nl]=Network;Wireless;IP;LAN;Proxy;Netwerk;Draadloos;
--Keywords[or]=ନେଟୱର୍କ;ବେତାର;IP;LAN;ପ୍ରକ୍ସି;
--Keywords[pa]=Network;Wireless;IP;LAN;ਨੈੱਟਵਰਕ,ਬੇਤਾਰ,ਆਈਪੀ,ਲੈਨ,ਪਰਾਕਸੀ
--Keywords[pl]=Sieć;Bezprzewodowa;IP;LAN;Pośrednik;Wi-Fi;WLAN;
--Keywords[pt]=Rede;Sem-Fios;IP;LAN;Proxy;
--Keywords[pt_BR]=Rede;Sem fio;IP;LAN;Proxy;
--Keywords[ru]=Сеть;Беспроводная;IP;LAN;Прокси;
--Keywords[sk]=Sieť;Bezdrôtová;IP;LAN;Proxy;
--Keywords[sl]=Omrežje;Brezžično;IP;LAN;Posredniški strežnik
--Keywords[sr]=Мрежа;Бежична;ИП;ЛАН;Посредник
--Keywords[sr@latin]=Mreža;Bežična;IP;LAN;Posrednik
--Keywords[sv]=Nätverk;Trådlöst;IP;LAN;Proxyserver;Proxy;
--Keywords[ta]=பிணையம்;ஒயர்லெஸ்;ஐபி;லான்;ப்ராக்ஸி;
--Keywords[te]=నెట్‌వర్కు;వైర్‌లెస్;IP;LAN;ప్రాక్సీ;
--Keywords[th]=เครือข่าย;ไร้สาย;ไอพี;แลน;พร็อกซี;
--Keywords[tr]=Ağ;Kablosuz;IP;LAN;Proxy;
--Keywords[uk]=Мережа;Бездротова;IP;LAN;Проксі;
--Keywords[vi]=Network;Mạng;Mang;Wireless;Không;dây;Khong;day;IP;LAN;Proxy;Uỷ;nhiệm
--Keywords[zh_CN]=Network;Wireless;IP;LAN;Proxy;网络;无线;上网;局域网;代理;
--Keywords[zh_HK]=Network;Wireless;IP;LAN;Proxy;網絡;無線;區域網絡;代理;代理伺服器
--Keywords[zh_TW]=Network;Wireless;IP;LAN;Proxy;網路;無線;區域網路;代理;代理伺服器
--X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
--
++Name=网络设置
+ Comment=Network settings
+ Exec=cinnamon-settings network
+ Icon=network-workgroup
 diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settings.desktop
---- applications_old/cinnamon-settings.desktop	2013-09-29 10:44:02.229340238 +0800
-+++ applications/cinnamon-settings.desktop	2013-09-25 15:41:26.000000000 +0800
+--- applications_old/cinnamon-settings.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/cinnamon-settings.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -3,7 +3,7 @@
  Icon=preferences-system
  Terminal=false
@@ -238,8 +172,8 @@ diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settin
  
  
 diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon-sound-nua-panel.desktop
---- applications_old/cinnamon-sound-nua-panel.desktop	2013-09-29 10:44:02.229340238 +0800
-+++ applications/cinnamon-sound-nua-panel.desktop	2013-09-24 16:20:26.000000000 +0800
+--- applications_old/cinnamon-sound-nua-panel.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/cinnamon-sound-nua-panel.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Sound
@@ -256,8 +190,8 @@ diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon
  X-Cinnamon-Settings-Panel=sound-nua
  # Translators: those are keywords for the sound control-center panel
 diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinnamon-user-accounts-panel.desktop
---- applications_old/cinnamon-user-accounts-panel.desktop	2013-09-29 10:44:02.233340238 +0800
-+++ applications/cinnamon-user-accounts-panel.desktop	2013-09-24 16:23:54.000000000 +0800
+--- applications_old/cinnamon-user-accounts-panel.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/cinnamon-user-accounts-panel.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -6,7 +6,7 @@
  Terminal=false
  Type=Application
@@ -268,8 +202,8 @@ diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinn
  X-Cinnamon-Settings-Panel=user-accounts
  # Translators: those are keywords for the user accounts control-center panel
 diff -uN applications_old/eog.desktop applications/eog.desktop
---- applications_old/eog.desktop	2013-09-29 10:44:02.233340238 +0800
-+++ applications/eog.desktop	2013-09-29 09:11:06.645429239 +0800
+--- applications_old/eog.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/eog.desktop	2013-09-27 16:11:25.100158051 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Image Viewer
@@ -280,8 +214,8 @@ diff -uN applications_old/eog.desktop applications/eog.desktop
  Exec=eog %U
  Icon=eog
 diff -uN applications_old/evince.desktop applications/evince.desktop
---- applications_old/evince.desktop	2013-09-29 10:44:02.233340238 +0800
-+++ applications/evince.desktop	2013-09-25 14:40:08.000000000 +0800
+--- applications_old/evince.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/evince.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Document Viewer
@@ -300,7 +234,7 @@ diff -uN applications_old/evince.desktop applications/evince.desktop
  MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;application/x-xzpdf;application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;application/x-dvi;application/x-bzdvi;application/x-gzdvi;image/vnd.djvu;image/tiff;application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/oxps;application/vnd.ms-xpsdocument;
  X-Ubuntu-Gettext-Domain=evince
 diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gtk3.desktop
---- applications_old/fcitx-config-gtk3.desktop	2013-09-29 10:44:02.233340238 +0800
+--- applications_old/fcitx-config-gtk3.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/fcitx-config-gtk3.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -315,7 +249,7 @@ diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gt
 -X-KDE-StartupNotify=false
 -StartupNotify=false
 diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool.desktop
---- applications_old/fcitx-configtool.desktop	2013-09-29 10:44:02.249340237 +0800
+--- applications_old/fcitx-configtool.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/fcitx-configtool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -342,8 +276,8 @@ diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool
 -X-KDE-StartupNotify=false
 -StartupNotify=false
 diff -uN applications_old/fcitx.desktop applications/fcitx.desktop
---- applications_old/fcitx.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/fcitx.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/fcitx.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/fcitx.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Fcitx
@@ -352,7 +286,7 @@ diff -uN applications_old/fcitx.desktop applications/fcitx.desktop
  Name[es]=Fcitx
  Name[ja]=Fcitx
 diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
---- applications_old/file-roller.desktop	2013-09-29 10:44:02.253340237 +0800
+--- applications_old/file-roller.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/file-roller.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,18 +0,0 @@
 -[Desktop Entry]
@@ -374,8 +308,8 @@ diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
 -X-GNOME-Bugzilla-Version=3.6.3
 -X-Ubuntu-Gettext-Domain=file-roller
 diff -uN applications_old/firefox.desktop applications/firefox.desktop
---- applications_old/firefox.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/firefox.desktop	2013-09-11 23:56:16.000000000 +0800
+--- applications_old/firefox.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/firefox.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,7 +1,7 @@
  [Desktop Entry]
  Version=1.0
@@ -479,8 +413,8 @@ diff -uN applications_old/firefox.desktop applications/firefox.desktop
  Exec=firefox -private-window
  OnlyShowIn=Unity;
 diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
---- applications_old/gcalctool.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gcalctool.desktop	2013-09-29 13:38:06.841173513 +0800
+--- applications_old/gcalctool.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gcalctool.desktop	2013-09-29 14:46:55.688714580 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Calculator
@@ -491,8 +425,8 @@ diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
  Exec=gnome-calculator
  Icon=accessories-calculator
 diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
---- applications_old/gcr-prompter.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gcr-prompter.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/gcr-prompter.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gcr-prompter.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Access Prompt
@@ -501,7 +435,7 @@ diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
  Icon=security-medium
  Exec=/usr/lib/gcr/gcr-prompter
 diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
---- applications_old/gdebi.desktop	2013-09-29 10:44:02.253340237 +0800
+--- applications_old/gdebi.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/gdebi.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,13 +0,0 @@
 -[Desktop Entry]
@@ -518,8 +452,8 @@ diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
 -X-Ubuntu-Gettext-Domain=gdebi
 -StartupNotify=true
 diff -uN applications_old/gedit.desktop applications/gedit.desktop
---- applications_old/gedit.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gedit.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/gedit.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gedit.desktop	2013-09-27 14:41:08.104269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=gedit
@@ -528,8 +462,8 @@ diff -uN applications_old/gedit.desktop applications/gedit.desktop
  Comment=Edit text files
  Exec=gedit %U
 diff -uN applications_old/gimp.desktop applications/gimp.desktop
---- applications_old/gimp.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gimp.desktop	2013-09-29 09:11:06.645429239 +0800
+--- applications_old/gimp.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gimp.desktop	2013-09-27 16:09:21.580160599 +0800
 @@ -1,9 +1,9 @@
  [Desktop Entry]
  Version=1.0
@@ -543,8 +477,8 @@ diff -uN applications_old/gimp.desktop applications/gimp.desktop
  TryExec=gimp-2.8
  Icon=gimp
 diff -uN applications_old/gnome-disk-image-mounter.desktop applications/gnome-disk-image-mounter.desktop
---- applications_old/gnome-disk-image-mounter.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gnome-disk-image-mounter.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/gnome-disk-image-mounter.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gnome-disk-image-mounter.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Encoding=UTF-8
@@ -554,8 +488,8 @@ diff -uN applications_old/gnome-disk-image-mounter.desktop applications/gnome-di
  Exec=gnome-disk-image-mounter %U
  Icon=drive-removable-media
 diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
---- applications_old/gnome-disks.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gnome-disks.desktop	2013-09-24 17:41:44.000000000 +0800
+--- applications_old/gnome-disks.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gnome-disks.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,11 +1,11 @@
  [Desktop Entry]
 -Name=Disks
@@ -572,7 +506,7 @@ diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
 +Categories=GNOME;GTK;Utility;HardwareSettings;System;HardwareSettings;
  X-Ubuntu-Gettext-Domain=gnome-disk-utility
 diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-viewer.desktop
---- applications_old/gnome-font-viewer.desktop	2013-09-29 10:44:02.257340237 +0800
+--- applications_old/gnome-font-viewer.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/gnome-font-viewer.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,17 +0,0 @@
 -[Desktop Entry]
@@ -593,7 +527,7 @@ diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-view
 -X-GNOME-Bugzilla-Version=3.7.5
 -X-Ubuntu-Gettext-Domain=gnome-font-viewer
 diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-power-statistics.desktop
---- applications_old/gnome-power-statistics.desktop	2013-09-29 10:44:02.257340237 +0800
+--- applications_old/gnome-power-statistics.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/gnome-power-statistics.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,16 +0,0 @@
 -[Desktop Entry]
@@ -613,8 +547,8 @@ diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-powe
 -X-Desktop-File-Install-Version=0.10
 -X-Ubuntu-Gettext-Domain=gnome-power-manager
 diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot.desktop
---- applications_old/gnome-screenshot.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-screenshot.desktop	2013-09-25 14:08:24.000000000 +0800
+--- applications_old/gnome-screenshot.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gnome-screenshot.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Screenshot
@@ -625,8 +559,8 @@ diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot
  Terminal=false
  Type=Application
 diff -uN applications_old/gnome-system-log.desktop applications/gnome-system-log.desktop
---- applications_old/gnome-system-log.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-system-log.desktop	2013-09-29 13:00:03.213209966 +0800
+--- applications_old/gnome-system-log.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gnome-system-log.desktop	2013-09-29 14:02:35.020769456 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=System Log
@@ -637,8 +571,8 @@ diff -uN applications_old/gnome-system-log.desktop applications/gnome-system-log
  Icon=logview
  Terminal=false
 diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
---- applications_old/gnome-system-monitor.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-system-monitor.desktop	2013-09-29 13:39:46.577171921 +0800
+--- applications_old/gnome-system-monitor.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gnome-system-monitor.desktop	2013-09-29 14:46:55.688714580 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=System Monitor
@@ -649,8 +583,8 @@ diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system
  Exec=gnome-system-monitor
  Icon=utilities-system-monitor
 diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-system-monitor-kde.desktop
---- applications_old/gnome-system-monitor-kde.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-system-monitor-kde.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/gnome-system-monitor-kde.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gnome-system-monitor-kde.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=GNOME System Monitor
@@ -659,8 +593,8 @@ diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-sy
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
 diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.desktop
---- applications_old/gnome-terminal.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-terminal.desktop	2013-09-29 13:32:49.337178581 +0800
+--- applications_old/gnome-terminal.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gnome-terminal.desktop	2013-09-29 14:46:55.688714580 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Terminal
@@ -671,7 +605,7 @@ diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.des
  Exec=gnome-terminal
  Icon=utilities-terminal
 diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
---- applications_old/gnome-user-share-properties.desktop	2013-09-29 10:44:02.257340237 +0800
+--- applications_old/gnome-user-share-properties.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/gnome-user-share-properties.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -690,19 +624,19 @@ diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome
 -X-Ubuntu-Gettext-Domain=gnome-user-share
 -
 diff -uN applications_old/google-chrome.desktop applications/google-chrome.desktop
---- applications_old/google-chrome.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/google-chrome.desktop	2013-09-25 14:18:56.000000000 +0800
+--- applications_old/google-chrome.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/google-chrome.desktop	2013-09-29 13:47:18.328788362 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Version=1.0
 -Name=Google Chrome
-+Name=Google浏览器
++Name=Google 浏览器
  # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
  # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
  GenericName=Web Browser
 diff -uN applications_old/gparted.desktop applications/gparted.desktop
---- applications_old/gparted.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gparted.desktop	2013-09-24 17:00:52.000000000 +0800
+--- applications_old/gparted.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gparted.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=GParted
@@ -719,8 +653,8 @@ diff -uN applications_old/gparted.desktop applications/gparted.desktop
  StartupNotify=true
  X-Ubuntu-Gettext-Domain=gparted
 diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
---- applications_old/gthumb.desktop	2013-09-29 10:44:02.261340237 +0800
-+++ applications/gthumb.desktop	2013-09-29 09:11:06.645429239 +0800
+--- applications_old/gthumb.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/gthumb.desktop	2013-09-27 16:08:06.240162153 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=gThumb
@@ -742,7 +676,7 @@ diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
  GenericName[ar]=عارض الصّور
  GenericName[ca]=Visualitzador d'imatges
 diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
---- applications_old/gucharmap.desktop	2013-09-29 10:44:02.261340237 +0800
+--- applications_old/gucharmap.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/gucharmap.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,14 +0,0 @@
 -[Desktop Entry]
@@ -760,8 +694,8 @@ diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
 -StartupNotify=true
 -X-Ubuntu-Gettext-Domain=gucharmap
 diff -uN applications_old/gufw.desktop applications/gufw.desktop
---- applications_old/gufw.desktop	2013-09-29 10:44:02.261340237 +0800
-+++ applications/gufw.desktop	2013-09-24 17:51:08.000000000 +0800
+--- applications_old/gufw.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/gufw.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -3,7 +3,7 @@
  Type=Application
  Terminal=false
@@ -788,7 +722,7 @@ diff -uN applications_old/gufw.desktop applications/gufw.desktop
 +Categories=Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
  X-GNOME-Settings-Panel=gufw.png
 diff -uN applications_old/im-config.desktop applications/im-config.desktop
---- applications_old/im-config.desktop	2013-09-29 10:44:02.261340237 +0800
+--- applications_old/im-config.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/im-config.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,21 +0,0 @@
 -[Desktop Entry]
@@ -813,7 +747,7 @@ diff -uN applications_old/im-config.desktop applications/im-config.desktop
 -Icon=input-keyboard
 -Categories=Settings
 diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.desktop
---- applications_old/itweb-settings.desktop	2013-09-29 10:44:02.261340237 +0800
+--- applications_old/itweb-settings.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/itweb-settings.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,8 +0,0 @@
 -[Desktop Entry]
@@ -825,8 +759,8 @@ diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.des
 -Type=Application
 -Categories=Settings;
 diff -uN applications_old/mintBackup.desktop applications/mintBackup.desktop
---- applications_old/mintBackup.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintBackup.desktop	2013-09-24 17:13:24.000000000 +0800
+--- applications_old/mintBackup.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/mintBackup.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Backup Tool
@@ -841,8 +775,8 @@ diff -uN applications_old/mintBackup.desktop applications/mintBackup.desktop
 -Categories=Application;System;Settings
 +Categories=Application;System;
 diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.desktop
---- applications_old/mintBackup_mime.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintBackup_mime.desktop	2013-09-24 17:13:40.000000000 +0800
+--- applications_old/mintBackup_mime.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/mintBackup_mime.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Backup Tool
@@ -859,8 +793,8 @@ diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.d
  NoDisplay=true
  MimeType=application/x-backup;
 diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
---- applications_old/mintdrivers.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintdrivers.desktop	2013-09-24 17:49:12.000000000 +0800
+--- applications_old/mintdrivers.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/mintdrivers.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Driver Manager
@@ -892,8 +826,8 @@ diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
  X-KDE-SubstituteUID=true
  X-Ubuntu-Gettext-Domain=mintdrivers
 diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
---- applications_old/mintInstall.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintInstall.desktop	2013-09-26 15:16:48.000000000 +0800
+--- applications_old/mintInstall.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/mintInstall.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -923,8 +857,8 @@ diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
 +Categories=Application;System;
  NotShowIn=KDE;
 diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.desktop
---- applications_old/mintInstall_kde.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintInstall_kde.desktop	2013-09-25 13:52:58.000000000 +0800
+--- applications_old/mintInstall_kde.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/mintInstall_kde.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -949,8 +883,8 @@ diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.d
 +Categories=Application;System;
  OnlyShowIn=KDE;
 diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime.desktop
---- applications_old/mintInstall_mime.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintInstall_mime.desktop	2013-09-25 13:52:18.000000000 +0800
+--- applications_old/mintInstall_mime.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/mintInstall_mime.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -976,7 +910,7 @@ diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime
  NoDisplay=true
  MimeType=application/x-mint;
 diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
---- applications_old/mintNanny.desktop	2013-09-29 10:44:02.265340237 +0800
+--- applications_old/mintNanny.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/mintNanny.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,134 +0,0 @@
 -[Desktop Entry]
@@ -1114,8 +1048,8 @@ diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
 -Categories=Application;System;Settings;
 -StartupNotify=false
 diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
---- applications_old/mintsources.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintsources.desktop	2013-09-25 13:59:06.000000000 +0800
+--- applications_old/mintsources.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/mintsources.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Software Sources
@@ -1133,7 +1067,7 @@ diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
  MimeType=text/x-apt-sources-list;
  X-KDE-SubstituteUID=true
 diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
---- applications_old/mintstick.desktop	2013-09-29 10:44:02.265340237 +0800
+--- applications_old/mintstick.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/mintstick.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1152,7 +1086,7 @@ diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
 -Categories=GNOME;GTK;Utility;
 -NotShowIn=KDE;
 diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.desktop
---- applications_old/mintstick-kde.desktop	2013-09-29 10:44:02.265340237 +0800
+--- applications_old/mintstick-kde.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/mintstick-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1171,8 +1105,8 @@ diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.deskt
 -Categories=System;
 -OnlyShowIn=KDE;
 diff -uN applications_old/mintUpdate.desktop applications/mintUpdate.desktop
---- applications_old/mintUpdate.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mintUpdate.desktop	2013-09-24 17:06:38.000000000 +0800
+--- applications_old/mintUpdate.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/mintUpdate.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Update Manager
@@ -1188,7 +1122,7 @@ diff -uN applications_old/mintUpdate.desktop applications/mintUpdate.desktop
 +Categories=Application;System;
  StartupNotify=false
 diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
---- applications_old/mintWelcome.desktop	2013-09-29 10:44:02.265340237 +0800
+--- applications_old/mintWelcome.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/mintWelcome.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -1360,8 +1294,8 @@ diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
 -Categories=GNOME;GTK;Settings;DesktopSettings;
 -StartupNotify=false
 diff -uN applications_old/mono-runtime.desktop applications/mono-runtime.desktop
---- applications_old/mono-runtime.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mono-runtime.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/mono-runtime.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/mono-runtime.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Mono Runtime
@@ -1370,8 +1304,8 @@ diff -uN applications_old/mono-runtime.desktop applications/mono-runtime.desktop
  Terminal=false
  Type=Application
 diff -uN applications_old/mono-runtime-terminal.desktop applications/mono-runtime-terminal.desktop
---- applications_old/mono-runtime-terminal.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/mono-runtime-terminal.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/mono-runtime-terminal.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/mono-runtime-terminal.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Mono Runtime (Terminal)
@@ -1380,7 +1314,7 @@ diff -uN applications_old/mono-runtime-terminal.desktop applications/mono-runtim
  Terminal=true
  Type=Application
 diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
---- applications_old/ndisgtk.desktop	2013-09-29 10:44:02.269340237 +0800
+--- applications_old/ndisgtk.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/ndisgtk.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -1395,8 +1329,8 @@ diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
 -X-Ubuntu-Gettext-Domain=ndisgtk
 -
 diff -uN applications_old/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
---- applications_old/ndisgtk-kde.desktop	2013-09-29 10:44:02.265340237 +0800
-+++ applications/ndisgtk-kde.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/ndisgtk-kde.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/ndisgtk-kde.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Windows Wireless Drivers
@@ -1405,8 +1339,8 @@ diff -uN applications_old/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
  Exec=kdesu /usr/sbin/ndisgtk -- --kde
  Icon=ndisgtk.png
 diff -uN applications_old/nemo-autorun-software.desktop applications/nemo-autorun-software.desktop
---- applications_old/nemo-autorun-software.desktop	2013-09-29 10:44:02.269340237 +0800
-+++ applications/nemo-autorun-software.desktop	2013-06-01 20:10:48.000000000 +0800
+--- applications_old/nemo-autorun-software.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/nemo-autorun-software.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -148,4 +148,4 @@
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=nemo
@@ -1414,8 +1348,8 @@ diff -uN applications_old/nemo-autorun-software.desktop applications/nemo-autoru
 -X-GNOME-Bugzilla-Version=1.8.2
 +X-GNOME-Bugzilla-Version=1.8.3
 diff -uN applications_old/nemo.desktop applications/nemo.desktop
---- applications_old/nemo.desktop	2013-09-29 10:44:02.269340237 +0800
-+++ applications/nemo.desktop	2013-09-25 14:10:14.000000000 +0800
+--- applications_old/nemo.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/nemo.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Files
@@ -1443,8 +1377,8 @@ diff -uN applications_old/nemo.desktop applications/nemo.desktop
  
  
 diff -uN applications_old/nm-applet.desktop applications/nm-applet.desktop
---- applications_old/nm-applet.desktop	2013-09-29 10:44:02.269340237 +0800
-+++ applications/nm-applet.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/nm-applet.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/nm-applet.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Network
@@ -1453,8 +1387,8 @@ diff -uN applications_old/nm-applet.desktop applications/nm-applet.desktop
  Icon=nm-device-wireless
  Exec=nm-applet
 diff -uN applications_old/nm-connection-editor.desktop applications/nm-connection-editor.desktop
---- applications_old/nm-connection-editor.desktop	2013-09-29 10:44:02.269340237 +0800
-+++ applications/nm-connection-editor.desktop	2013-09-24 17:40:24.000000000 +0800
+--- applications_old/nm-connection-editor.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/nm-connection-editor.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Network Connections
@@ -1465,7 +1399,7 @@ diff -uN applications_old/nm-connection-editor.desktop applications/nm-connectio
  Exec=nm-connection-editor
  Terminal=false
 diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-policytool.desktop
---- applications_old/openjdk-7-policytool.desktop	2013-09-29 10:44:02.269340237 +0800
+--- applications_old/openjdk-7-policytool.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/openjdk-7-policytool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -1479,8 +1413,8 @@ diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-po
 -Icon=openjdk-7
 -Categories=Settings;
 diff -uN applications_old/pidgin.desktop applications/pidgin.desktop
---- applications_old/pidgin.desktop	2013-09-29 10:44:02.269340237 +0800
-+++ applications/pidgin.desktop	2013-09-13 10:00:16.000000000 +0800
+--- applications_old/pidgin.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/pidgin.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Pidgin Internet Messenger
@@ -1489,8 +1423,8 @@ diff -uN applications_old/pidgin.desktop applications/pidgin.desktop
  Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
  Exec=pidgin
 diff -uN applications_old/qq2012-test.desktop applications/qq2012-test.desktop
---- applications_old/qq2012-test.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/qq2012-test.desktop	2013-09-25 14:23:50.000000000 +0800
+--- applications_old/qq2012-test.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/qq2012-test.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,7 +1,7 @@
  
  [Desktop Entry]
@@ -1506,7 +1440,7 @@ diff -uN applications_old/qq2012-test.desktop applications/qq2012-test.desktop
  Name[en_US]=QQ2012
 +Comment=腾讯QQ2012
 diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
---- applications_old/seahorse.desktop	2013-09-29 10:44:02.273340237 +0800
+--- applications_old/seahorse.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/seahorse.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1525,8 +1459,8 @@ diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
 -X-GNOME-DocPath=seahorse/seahorse.xml
 -X-Ubuntu-Gettext-Domain=seahorse
 diff -uN applications_old/session-properties.desktop applications/session-properties.desktop
---- applications_old/session-properties.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/session-properties.desktop	2013-09-25 14:45:52.000000000 +0800
+--- applications_old/session-properties.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/session-properties.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Startup Applications
@@ -1544,7 +1478,7 @@ diff -uN applications_old/session-properties.desktop applications/session-proper
  NoDisplay=false
  X-GNOME-Bugzilla-Bugzilla=GNOME
 diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
---- applications_old/simple-scan.desktop	2013-09-29 10:44:02.273340237 +0800
+--- applications_old/simple-scan.desktop	2013-09-29 09:41:58.537091956 +0800
 +++ applications/simple-scan.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -1558,8 +1492,8 @@ diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
 -Categories=GNOME;GTK;Graphics;Scanning;
 -X-GNOME-Gettext-Domain=simple-scan
 diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
---- applications_old/synaptic.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/synaptic.desktop	2013-09-25 15:07:06.000000000 +0800
+--- applications_old/synaptic.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/synaptic.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,11 +1,11 @@
  [Desktop Entry]
 -Name=Synaptic Package Manager
@@ -1576,7 +1510,7 @@ diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
  NotShowIn=KDE;
  X-Ubuntu-Gettext-Domain=synaptic
 diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
---- applications_old/synaptic-kde.desktop	2013-09-29 10:44:02.273340237 +0800
+--- applications_old/synaptic-kde.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/synaptic-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -1748,8 +1682,8 @@ diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
 -X-KDE-SubstituteUID=true
 -OnlyShowIn=KDE;
 diff -uN applications_old/system-config-printer.desktop applications/system-config-printer.desktop
---- applications_old/system-config-printer.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/system-config-printer.desktop	2013-09-24 17:48:04.000000000 +0800
+--- applications_old/system-config-printer.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/system-config-printer.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,15 +1,15 @@
  [Desktop Entry]
  Encoding=UTF-8
@@ -1771,8 +1705,8 @@ diff -uN applications_old/system-config-printer.desktop applications/system-conf
  Keywords=Printer;Queue;Print;Paper;Ink;Toner;
  X-Desktop-File-Install-Version=0.21
 diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
---- applications_old/tomboy.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/tomboy.desktop	2013-09-25 14:11:38.000000000 +0800
+--- applications_old/tomboy.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/tomboy.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,6 +1,6 @@
  
  [Desktop Entry]
@@ -1791,8 +1725,8 @@ diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
  Name[zh_TW]=Tomboy 筆記
  Comment=Take notes, link ideas, and stay organized
 diff -uN applications_old/totem.desktop applications/totem.desktop
---- applications_old/totem.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/totem.desktop	2013-09-29 13:34:47.133176701 +0800
+--- applications_old/totem.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/totem.desktop	2013-09-29 14:46:55.688714580 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Videos
@@ -1803,8 +1737,8 @@ diff -uN applications_old/totem.desktop applications/totem.desktop
  Exec=totem %U
  Icon=totem
 diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk.desktop
---- applications_old/transmission-gtk.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/transmission-gtk.desktop	2013-09-25 14:22:30.000000000 +0800
+--- applications_old/transmission-gtk.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/transmission-gtk.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Transmission
@@ -1822,8 +1756,8 @@ diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk
  Icon=transmission
  Terminal=false
 diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
---- applications_old/ubiquity-gtkui.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/ubiquity-gtkui.desktop	2013-09-29 12:30:33.773238211 +0800
+--- applications_old/ubiquity-gtkui.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/ubiquity-gtkui.desktop	2013-09-29 14:02:35.020769456 +0800
 @@ -2,7 +2,7 @@
  Type=Application
  Version=1.0
@@ -1843,7 +1777,7 @@ diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.des
  #X-Ubuntu-Gettext-Domain=ubiquity-desktop
  X-Ayatana-Appmenu-Show-Stubs=False
 diff -uN applications_old/upload-manager.desktop applications/upload-manager.desktop
---- applications_old/upload-manager.desktop	2013-09-29 10:44:02.273340237 +0800
+--- applications_old/upload-manager.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/upload-manager.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,130 +0,0 @@
 -[Desktop Entry]
@@ -1977,8 +1911,8 @@ diff -uN applications_old/upload-manager.desktop applications/upload-manager.des
 -Categories=Application;System;Settings
 -StartupNotify=false
 diff -uN applications_old/vino-preferences.desktop applications/vino-preferences.desktop
---- applications_old/vino-preferences.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/vino-preferences.desktop	2013-09-25 14:21:00.000000000 +0800
+--- applications_old/vino-preferences.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/vino-preferences.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Desktop Sharing
@@ -1995,8 +1929,8 @@ diff -uN applications_old/vino-preferences.desktop applications/vino-preferences
  X-GNOME-Bugzilla-Product=vino
  X-GNOME-Bugzilla-Component=Preferences Dialog
 diff -uN applications_old/vlc.desktop applications/vlc.desktop
---- applications_old/vlc.desktop	2013-09-29 10:44:02.277340237 +0800
-+++ applications/vlc.desktop	2013-09-25 14:34:08.000000000 +0800
+--- applications_old/vlc.desktop	2013-09-29 09:41:58.537091956 +0800
++++ applications/vlc.desktop	2013-09-27 14:41:08.108269776 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Version=1.0
@@ -2051,7 +1985,7 @@ diff -uN applications_old/vlc.desktop applications/vlc.desktop
  Comment[zh_CN]=为您读取、捕获或发送多媒体流
  Name[zh_TW]=VLC 媒體播放器
 diff -uN applications_old/xchat.desktop applications/xchat.desktop
---- applications_old/xchat.desktop	2013-09-29 10:44:02.277340237 +0800
+--- applications_old/xchat.desktop	2013-09-29 09:41:58.525091956 +0800
 +++ applications/xchat.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -2078,12 +2012,13 @@ diff -uN applications_old/xchat.desktop applications/xchat.desktop
 -Categories=Network;
 -StartupNotify=true
 diff -uN applications_old/yelp.desktop applications/yelp.desktop
---- applications_old/yelp.desktop	2013-09-29 10:44:02.293340237 +0800
-+++ applications/yelp.desktop	2013-09-26 18:40:54.000000000 +0800
+--- applications_old/yelp.desktop	2013-09-29 09:41:58.525091956 +0800
++++ applications/yelp.desktop	2013-09-29 14:46:55.688714580 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
- Name=Help
+-Name=Help
 -Comment=Get help with Linux Mint
++Name=帮助
 +Comment=获取COS Desktop帮助
  OnlyShowIn=GNOME;Unity;
  Exec=yelp %u

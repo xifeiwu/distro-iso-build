@@ -1,5 +1,5 @@
 diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
---- applications_old/aptoncd.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/aptoncd.desktop	2013-09-29 10:44:02.173340239 +0800
 +++ applications/aptoncd.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,12 +0,0 @@
 -[Desktop Entry]
@@ -15,8 +15,8 @@ diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
 -Categories=System;Settings;
 -X-Ubuntu-Gettext-Domain=aptoncd
 diff -uN applications_old/banshee-audiocd.desktop applications/banshee-audiocd.desktop
---- applications_old/banshee-audiocd.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/banshee-audiocd.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/banshee-audiocd.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/banshee-audiocd.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -3,7 +3,7 @@
  NoDisplay=true
  MimeType=x-content/audio-cdda;
@@ -27,8 +27,8 @@ diff -uN applications_old/banshee-audiocd.desktop applications/banshee-audiocd.d
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/banshee.desktop applications/banshee.desktop
---- applications_old/banshee.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/banshee.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/banshee.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/banshee.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,7 +1,7 @@
  [Desktop Entry]
  Exec=banshee --redirect-log --play-enqueued %U
@@ -39,8 +39,8 @@ diff -uN applications_old/banshee.desktop applications/banshee.desktop
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/banshee-media-player.desktop applications/banshee-media-player.desktop
---- applications_old/banshee-media-player.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/banshee-media-player.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/banshee-media-player.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/banshee-media-player.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -3,7 +3,7 @@
  NoDisplay=true
  MimeType=x-content/audio-player;
@@ -51,8 +51,8 @@ diff -uN applications_old/banshee-media-player.desktop applications/banshee-medi
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
 diff -uN applications_old/baobab.desktop applications/baobab.desktop
---- applications_old/baobab.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/baobab.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/baobab.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/baobab.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Disk Usage Analyzer
@@ -61,8 +61,8 @@ diff -uN applications_old/baobab.desktop applications/baobab.desktop
  TryExec=baobab
  Exec=baobab
 diff -uN applications_old/bluetooth-sendto.desktop applications/bluetooth-sendto.desktop
---- applications_old/bluetooth-sendto.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/bluetooth-sendto.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/bluetooth-sendto.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/bluetooth-sendto.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Bluetooth Transfer
@@ -71,8 +71,8 @@ diff -uN applications_old/bluetooth-sendto.desktop applications/bluetooth-sendto
  Icon=bluetooth
  Exec=bluetooth-sendto
 diff -uN applications_old/bluetooth-wizard.desktop applications/bluetooth-wizard.desktop
---- applications_old/bluetooth-wizard.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/bluetooth-wizard.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/bluetooth-wizard.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/bluetooth-wizard.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Bluetooth Device Setup
@@ -81,8 +81,8 @@ diff -uN applications_old/bluetooth-wizard.desktop applications/bluetooth-wizard
  Icon=bluetooth
  Exec=bluetooth-wizard
 diff -uN applications_old/brasero.desktop applications/brasero.desktop
---- applications_old/brasero.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/brasero.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/brasero.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/brasero.desktop	2013-09-25 14:00:50.000000000 +0800
 @@ -1,8 +1,8 @@
  [Desktop Entry]
 -Name=Brasero
@@ -95,8 +95,8 @@ diff -uN applications_old/brasero.desktop applications/brasero.desktop
  Exec=brasero %U
  Icon=brasero
 diff -uN applications_old/brasero-nautilus.desktop applications/brasero-nautilus.desktop
---- applications_old/brasero-nautilus.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/brasero-nautilus.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/brasero-nautilus.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/brasero-nautilus.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=CD/DVD Creator
@@ -105,8 +105,8 @@ diff -uN applications_old/brasero-nautilus.desktop applications/brasero-nautilus
  Categories=GNOME;GTK;System;
  TryExec=nautilus
 diff -uN applications_old/caribou.desktop applications/caribou.desktop
---- applications_old/caribou.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/caribou.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/caribou.desktop	2013-09-29 10:44:02.189340238 +0800
++++ applications/caribou.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Caribou
@@ -115,8 +115,8 @@ diff -uN applications_old/caribou.desktop applications/caribou.desktop
  Comment=Enter text with a virtual keyboard
  Exec=caribou
 diff -uN applications_old/cinnamon-control-center.desktop applications/cinnamon-control-center.desktop
---- applications_old/cinnamon-control-center.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/cinnamon-control-center.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/cinnamon-control-center.desktop	2013-09-29 10:44:02.201340238 +0800
++++ applications/cinnamon-control-center.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Cinnamon Control Center
@@ -125,8 +125,8 @@ diff -uN applications_old/cinnamon-control-center.desktop applications/cinnamon-
  Exec=cinnamon-control-center --overview
  Terminal=false
 diff -uN applications_old/cinnamon.desktop applications/cinnamon.desktop
---- applications_old/cinnamon.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/cinnamon.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/cinnamon.desktop	2013-09-29 10:44:02.233340238 +0800
++++ applications/cinnamon.desktop	2013-06-06 23:48:10.000000000 +0800
 @@ -6,7 +6,7 @@
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=cinnamon
@@ -137,7 +137,7 @@ diff -uN applications_old/cinnamon.desktop applications/cinnamon.desktop
  OnlyShowIn=GNOME;
  NoDisplay=true
 diff -uN applications_old/cinnamon-network-panel.desktop applications/cinnamon-network-panel.desktop
---- applications_old/cinnamon-network-panel.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/cinnamon-network-panel.desktop	2013-09-29 10:44:02.217340238 +0800
 +++ applications/cinnamon-network-panel.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,72 +0,0 @@
 -[Desktop Entry]
@@ -213,8 +213,8 @@ diff -uN applications_old/cinnamon-network-panel.desktop applications/cinnamon-n
 -X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
 -
 diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settings.desktop
---- applications_old/cinnamon-settings.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/cinnamon-settings.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/cinnamon-settings.desktop	2013-09-29 10:44:02.229340238 +0800
++++ applications/cinnamon-settings.desktop	2013-09-25 15:41:26.000000000 +0800
 @@ -3,7 +3,7 @@
  Icon=preferences-system
  Terminal=false
@@ -238,8 +238,8 @@ diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settin
  
  
 diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon-sound-nua-panel.desktop
---- applications_old/cinnamon-sound-nua-panel.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/cinnamon-sound-nua-panel.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/cinnamon-sound-nua-panel.desktop	2013-09-29 10:44:02.229340238 +0800
++++ applications/cinnamon-sound-nua-panel.desktop	2013-09-24 16:20:26.000000000 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Sound
@@ -256,8 +256,8 @@ diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon
  X-Cinnamon-Settings-Panel=sound-nua
  # Translators: those are keywords for the sound control-center panel
 diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinnamon-user-accounts-panel.desktop
---- applications_old/cinnamon-user-accounts-panel.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/cinnamon-user-accounts-panel.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/cinnamon-user-accounts-panel.desktop	2013-09-29 10:44:02.233340238 +0800
++++ applications/cinnamon-user-accounts-panel.desktop	2013-09-24 16:23:54.000000000 +0800
 @@ -6,7 +6,7 @@
  Terminal=false
  Type=Application
@@ -268,8 +268,8 @@ diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinn
  X-Cinnamon-Settings-Panel=user-accounts
  # Translators: those are keywords for the user accounts control-center panel
 diff -uN applications_old/eog.desktop applications/eog.desktop
---- applications_old/eog.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/eog.desktop	2013-09-27 16:11:25.100158051 +0800
+--- applications_old/eog.desktop	2013-09-29 10:44:02.233340238 +0800
++++ applications/eog.desktop	2013-09-29 09:11:06.645429239 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Image Viewer
@@ -280,8 +280,8 @@ diff -uN applications_old/eog.desktop applications/eog.desktop
  Exec=eog %U
  Icon=eog
 diff -uN applications_old/evince.desktop applications/evince.desktop
---- applications_old/evince.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/evince.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/evince.desktop	2013-09-29 10:44:02.233340238 +0800
++++ applications/evince.desktop	2013-09-25 14:40:08.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Document Viewer
@@ -300,7 +300,7 @@ diff -uN applications_old/evince.desktop applications/evince.desktop
  MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;application/x-xzpdf;application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;application/x-dvi;application/x-bzdvi;application/x-gzdvi;image/vnd.djvu;image/tiff;application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/oxps;application/vnd.ms-xpsdocument;
  X-Ubuntu-Gettext-Domain=evince
 diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gtk3.desktop
---- applications_old/fcitx-config-gtk3.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/fcitx-config-gtk3.desktop	2013-09-29 10:44:02.233340238 +0800
 +++ applications/fcitx-config-gtk3.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -315,7 +315,7 @@ diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gt
 -X-KDE-StartupNotify=false
 -StartupNotify=false
 diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool.desktop
---- applications_old/fcitx-configtool.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/fcitx-configtool.desktop	2013-09-29 10:44:02.249340237 +0800
 +++ applications/fcitx-configtool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -342,8 +342,8 @@ diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool
 -X-KDE-StartupNotify=false
 -StartupNotify=false
 diff -uN applications_old/fcitx.desktop applications/fcitx.desktop
---- applications_old/fcitx.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/fcitx.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/fcitx.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/fcitx.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Fcitx
@@ -352,7 +352,7 @@ diff -uN applications_old/fcitx.desktop applications/fcitx.desktop
  Name[es]=Fcitx
  Name[ja]=Fcitx
 diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
---- applications_old/file-roller.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/file-roller.desktop	2013-09-29 10:44:02.253340237 +0800
 +++ applications/file-roller.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,18 +0,0 @@
 -[Desktop Entry]
@@ -374,8 +374,8 @@ diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
 -X-GNOME-Bugzilla-Version=3.6.3
 -X-Ubuntu-Gettext-Domain=file-roller
 diff -uN applications_old/firefox.desktop applications/firefox.desktop
---- applications_old/firefox.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/firefox.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/firefox.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/firefox.desktop	2013-09-11 23:56:16.000000000 +0800
 @@ -1,7 +1,7 @@
  [Desktop Entry]
  Version=1.0
@@ -479,8 +479,8 @@ diff -uN applications_old/firefox.desktop applications/firefox.desktop
  Exec=firefox -private-window
  OnlyShowIn=Unity;
 diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
---- applications_old/gcalctool.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gcalctool.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/gcalctool.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gcalctool.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Calculator
@@ -489,8 +489,8 @@ diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
  Keywords=calculation;arithmetic;scientific;financial;
  Exec=gnome-calculator
 diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
---- applications_old/gcr-prompter.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gcr-prompter.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/gcr-prompter.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gcr-prompter.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Access Prompt
@@ -499,7 +499,7 @@ diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
  Icon=security-medium
  Exec=/usr/lib/gcr/gcr-prompter
 diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
---- applications_old/gdebi.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/gdebi.desktop	2013-09-29 10:44:02.253340237 +0800
 +++ applications/gdebi.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,13 +0,0 @@
 -[Desktop Entry]
@@ -516,8 +516,8 @@ diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
 -X-Ubuntu-Gettext-Domain=gdebi
 -StartupNotify=true
 diff -uN applications_old/gedit.desktop applications/gedit.desktop
---- applications_old/gedit.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gedit.desktop	2013-09-27 14:41:08.104269776 +0800
+--- applications_old/gedit.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gedit.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=gedit
@@ -526,8 +526,8 @@ diff -uN applications_old/gedit.desktop applications/gedit.desktop
  Comment=Edit text files
  Exec=gedit %U
 diff -uN applications_old/gimp.desktop applications/gimp.desktop
---- applications_old/gimp.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gimp.desktop	2013-09-27 16:09:21.580160599 +0800
+--- applications_old/gimp.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gimp.desktop	2013-09-29 09:11:06.645429239 +0800
 @@ -1,9 +1,9 @@
  [Desktop Entry]
  Version=1.0
@@ -541,8 +541,8 @@ diff -uN applications_old/gimp.desktop applications/gimp.desktop
  TryExec=gimp-2.8
  Icon=gimp
 diff -uN applications_old/gnome-disk-image-mounter.desktop applications/gnome-disk-image-mounter.desktop
---- applications_old/gnome-disk-image-mounter.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gnome-disk-image-mounter.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-disk-image-mounter.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gnome-disk-image-mounter.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Encoding=UTF-8
@@ -552,8 +552,8 @@ diff -uN applications_old/gnome-disk-image-mounter.desktop applications/gnome-di
  Exec=gnome-disk-image-mounter %U
  Icon=drive-removable-media
 diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
---- applications_old/gnome-disks.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gnome-disks.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-disks.desktop	2013-09-29 10:44:02.253340237 +0800
++++ applications/gnome-disks.desktop	2013-09-24 17:41:44.000000000 +0800
 @@ -1,11 +1,11 @@
  [Desktop Entry]
 -Name=Disks
@@ -570,7 +570,7 @@ diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
 +Categories=GNOME;GTK;Utility;HardwareSettings;System;HardwareSettings;
  X-Ubuntu-Gettext-Domain=gnome-disk-utility
 diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-viewer.desktop
---- applications_old/gnome-font-viewer.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/gnome-font-viewer.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-font-viewer.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,17 +0,0 @@
 -[Desktop Entry]
@@ -591,7 +591,7 @@ diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-view
 -X-GNOME-Bugzilla-Version=3.7.5
 -X-Ubuntu-Gettext-Domain=gnome-font-viewer
 diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-power-statistics.desktop
---- applications_old/gnome-power-statistics.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/gnome-power-statistics.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-power-statistics.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,16 +0,0 @@
 -[Desktop Entry]
@@ -611,8 +611,8 @@ diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-powe
 -X-Desktop-File-Install-Version=0.10
 -X-Ubuntu-Gettext-Domain=gnome-power-manager
 diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot.desktop
---- applications_old/gnome-screenshot.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gnome-screenshot.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-screenshot.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gnome-screenshot.desktop	2013-09-25 14:08:24.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Screenshot
@@ -623,8 +623,8 @@ diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot
  Terminal=false
  Type=Application
 diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
---- applications_old/gnome-system-monitor.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gnome-system-monitor.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-system-monitor.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gnome-system-monitor.desktop	2013-09-25 13:49:04.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=System Monitor
@@ -633,8 +633,8 @@ diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
 diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-system-monitor-kde.desktop
---- applications_old/gnome-system-monitor-kde.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gnome-system-monitor-kde.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-system-monitor-kde.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gnome-system-monitor-kde.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=GNOME System Monitor
@@ -643,8 +643,8 @@ diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-sy
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
 diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.desktop
---- applications_old/gnome-terminal.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gnome-terminal.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gnome-terminal.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gnome-terminal.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Terminal
@@ -653,7 +653,7 @@ diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.des
  TryExec=gnome-terminal
  Exec=gnome-terminal
 diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
---- applications_old/gnome-user-share-properties.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/gnome-user-share-properties.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-user-share-properties.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -672,8 +672,8 @@ diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome
 -X-Ubuntu-Gettext-Domain=gnome-user-share
 -
 diff -uN applications_old/google-chrome.desktop applications/google-chrome.desktop
---- applications_old/google-chrome.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/google-chrome.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/google-chrome.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/google-chrome.desktop	2013-09-25 14:18:56.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Version=1.0
@@ -683,8 +683,8 @@ diff -uN applications_old/google-chrome.desktop applications/google-chrome.deskt
  # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
  GenericName=Web Browser
 diff -uN applications_old/gparted.desktop applications/gparted.desktop
---- applications_old/gparted.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gparted.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gparted.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gparted.desktop	2013-09-24 17:00:52.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=GParted
@@ -701,8 +701,8 @@ diff -uN applications_old/gparted.desktop applications/gparted.desktop
  StartupNotify=true
  X-Ubuntu-Gettext-Domain=gparted
 diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
---- applications_old/gthumb.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/gthumb.desktop	2013-09-27 16:08:06.240162153 +0800
+--- applications_old/gthumb.desktop	2013-09-29 10:44:02.261340237 +0800
++++ applications/gthumb.desktop	2013-09-29 09:11:06.645429239 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=gThumb
@@ -724,7 +724,7 @@ diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
  GenericName[ar]=عارض الصّور
  GenericName[ca]=Visualitzador d'imatges
 diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
---- applications_old/gucharmap.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/gucharmap.desktop	2013-09-29 10:44:02.261340237 +0800
 +++ applications/gucharmap.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,14 +0,0 @@
 -[Desktop Entry]
@@ -742,8 +742,8 @@ diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
 -StartupNotify=true
 -X-Ubuntu-Gettext-Domain=gucharmap
 diff -uN applications_old/gufw.desktop applications/gufw.desktop
---- applications_old/gufw.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/gufw.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/gufw.desktop	2013-09-29 10:44:02.261340237 +0800
++++ applications/gufw.desktop	2013-09-24 17:51:08.000000000 +0800
 @@ -3,7 +3,7 @@
  Type=Application
  Terminal=false
@@ -770,7 +770,7 @@ diff -uN applications_old/gufw.desktop applications/gufw.desktop
 +Categories=Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
  X-GNOME-Settings-Panel=gufw.png
 diff -uN applications_old/im-config.desktop applications/im-config.desktop
---- applications_old/im-config.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/im-config.desktop	2013-09-29 10:44:02.261340237 +0800
 +++ applications/im-config.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,21 +0,0 @@
 -[Desktop Entry]
@@ -795,7 +795,7 @@ diff -uN applications_old/im-config.desktop applications/im-config.desktop
 -Icon=input-keyboard
 -Categories=Settings
 diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.desktop
---- applications_old/itweb-settings.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/itweb-settings.desktop	2013-09-29 10:44:02.261340237 +0800
 +++ applications/itweb-settings.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,8 +0,0 @@
 -[Desktop Entry]
@@ -806,2116 +806,9 @@ diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.des
 -Terminal=false
 -Type=Application
 -Categories=Settings;
-diff -uN applications_old/libreoffice-base.desktop applications/libreoffice-base.desktop
---- applications_old/libreoffice-base.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-base.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,296 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-base
--Type=Application
--Categories=Office;Database;
--Exec=libreoffice --base %U
--MimeType=application/vnd.oasis.opendocument.database;application/vnd.sun.xml.base;
--Name=LibreOffice Base
--GenericName=Database Development
--GenericName[ne]=डेटाबेस विकास
--GenericName[tr]=Veritabanı Geliştirme
--GenericName[da]=Databaseudvikling
--GenericName[ug]=ساندان ئىجادىيىتى
--GenericName[ru]=База данных
--GenericName[gl]=Desenvolvemento de bases de datos
--GenericName[nb]=Databaseutvikling
--GenericName[ro]=Dezvoltare de baze de date
--GenericName[nso]=Tšwetšopele ya dathapeisi
--GenericName[ku]=Pêşdebirê Danegeh
--GenericName[vi]=Phát triển cơ sở dữ liệu
--GenericName[tn]=Database Development
--GenericName[ta]=தரவுத்தள உருவாக்கம்
--GenericName[rw]=Gukora ububikoshingiro
--GenericName[nr]=Database Development
--GenericName[br]=Diorren ar stlennvon
--GenericName[ts]=Database Development
--GenericName[ml]=ഡേറ്റാബെയിസ് ഡവലപ്മെന്റ്
--GenericName[cy]=Datblygu Cronfa Ddata
--GenericName[zh_CN]=数据库开发
--GenericName[st]=Database Development
--GenericName[en_GB]=Database Development
--GenericName[ko]=데이터베이스 개발
--GenericName[uz]=Maʼlumot bazasi
--GenericName[cs]=Vývoj databáze
--GenericName[km]=ការ​អភិវឌ្ឍន៍​មូលដ្ឋាន​ទិន្នន័យ
--GenericName[af]=Databasisontwikkeling
--GenericName[pa_IN]=ਡਾਟਾਬੇਸ ਡਿਵੈਲਮੈਂਟ
--GenericName[is]=Hönnun gagnagrunna
--GenericName[bs]=Razvoj baza podataka
--GenericName[ca_XV]=Desenvolupament de bases de dades
--GenericName[ga]=Forbairt Bunachar Sonraí
--GenericName[ka]=Database Development
--GenericName[eu]=Datu-baseen garapena
--GenericName[oc]=Desvolopament de banca de donadas
--GenericName[bg]=Разработване на бази от данни
--GenericName[gu]=ડેટાબેઝ ડેવલોપમેન્ટ
--GenericName[sv]=Databasutveckling
--GenericName[it]=Sviluppo di database
--GenericName[hu]=Adatbázis-fejlesztés
--GenericName[pl]=Opracowanie i rozwój bazy danych
--GenericName[ca]=Desenvolupament de bases de dades
--GenericName[fa]=تولید پایگاه داده
--GenericName[zh_TW]=資料庫開發
--GenericName[sk]=Vývoj databáz
--GenericName[ve]=Database Development
--GenericName[uk]=База даних
--GenericName[hi]=डेटाबेस विकास
--GenericName[pt]=Desenvolvimento da base de dados
--GenericName[es]=Desarrollo de bases de datos
--GenericName[ast]=Desendolcu de bases de datos
--GenericName[lv]=Datubāžu izstrāde
--GenericName[fr]=Développement de base de données
--GenericName[ss]=Database Development
--GenericName[or]=ତଥ୍ୟାଧାର ବିକାଶ
--GenericName[id]=Pengembangan Basis Data
--GenericName[xh]=Database Development
--GenericName[th]=Database Development
--GenericName[sr]=Развој база података
--GenericName[si]=දත්තසමුදාය සංවර්ධනය
--GenericName[et]=Andmebaasihaldus
--GenericName[om]=Uuminsa Kuusaa Deetaa
--GenericName[mk]=Развој на база на податоци
--GenericName[en]=Database Development
--GenericName[fi]=Tietokantakehitys
--GenericName[lt]=Duomenų bazės kūrimas
--GenericName[de]=Datenbankentwicklung
--GenericName[hr]=Razvoj baze podataka
--GenericName[be]=База даных
--GenericName[zu]=Database Development
--GenericName[sl]=Razvoj zbirk podatkov
--GenericName[nn]=Databaseutvikling
--GenericName[bn]=ডাটাবেস ডেভেলপমেন্ট
--GenericName[ja]=データベース開発
--GenericName[tg]=Database Development
--GenericName[mr]=कोष विकास
--GenericName[en_ZA]=Database Development
--GenericName[dz]=Database Development
--GenericName[te]=డాటాబేస్ డెవలప్‌మెంట్
--GenericName[he]=פיתוח מסדי נתונים
--GenericName[eo]=Datumbaza evoluigo
--GenericName[ar]=تطوير قواعد البيانات
--GenericName[nl]=Databaseontwikkeling
--GenericName[mn]=Өгөгдлийн сангийн хөгжүүлэлт
--GenericName[as]=ডাটাবেইচ বিকাশ
--GenericName[el]=Ανάπτυξη βάσεων δεδομένων
--GenericName[pt_BR]=Desenvolvimento de banco de dados
--Comment=Manage databases, create queries and reports to track and manage your information by using Base.
--Comment[ne]=बेसको प्रयोगद्वारा डाटाबेसहरू प्रबन्ध गर्नुहोस्, ट्रयाकमा क्वेरीहरू र प्रतिवेदन सिर्जना गर्नुहोस् र तपाईंको सूचना प्रबन्ध गर्नुहोस् ।
--Comment[tr]=Base kullanarak veritabanlarını yönetebilir, sorgular ve raporlar oluşturarak bilgilerinizi takip edebilirsiniz.
--Comment[da]=Administrer databaser, opret forespørgsler og rapporter til at spore og administrere dine informationer ved at bruge Base.
--Comment[ug]=سانداننى باشقۇرۇش، سۈرۈشتۈرۈش ۋە دوكلات قۇرۇش شۇنداقلا ئۇچۇرنى ئىز قوغلاش ۋە باشقۇرۇش ئېلىپ بېرىشتا Base ئىشلىتىدۇ.
--Comment[ru]=Управление базами данных, создание запросов и отчётов для слежения и управления вашей информацией при помощи Base.
--Comment[gl]=Xestionar bases de datos, crear consultas e informes para rastrexar e xestionar a súa información usando Base.
--Comment[nb]=Håndter databaser, lag spørringer og rapporter og håndter informasjon ved hjelp av Base.
--Comment[ro]=Gestionați baze de date, creați interogări și rapoarte pentru a urmări și gestiona informațiile dumneavoastră folosind Base.
--Comment[nso]=Laola didathapeisi, hlama dipotšišo le dipego bakeng sa go latedišiša le go laola tshedimošo ya gago o diriša Base.
--Comment[ku]=Danegehan bi rê ve bibe, jêpirsînan bike, raporan bişopîne û zanîna xwe ya Base bikar bîne.
--Comment[vi]=Quản lý cơ sở dữ liệu, tạo truy vấn và báo cáo để theo dõi và quản lý thông tin bằng Base.
--Comment[tn]=Manage databases, create queries and reports to track and manage your information by using Base.
--Comment[ta]=தரவுத்தளங்களை மேலாளவும், வினவல்கள் அறிக்கைகள் கொண்டு உங்கள் தகவலை மேலாளவும் பேஸைப் பயன்படுத்துக.
--Comment[rw]=Kuyobora ububikoshingiro, kurema ibibazo na raporo kugira ngo ugenzure kandi uyobore ibyatanzwe byawe ukoresheje Base.
--Comment[nr]=Phatha amabulungelo wekhompyutha, enza imibuzo nemibiko nokulandela nokuphatha ilwazi lakho ngokusebenzisa iBulungelo lekhompyutha.
--Comment[br]=Base - Ardeiñ stlennvonoù, krouiñ azgoulennoù ha danevelloù
--Comment[ts]=Tirhisa swihlayisela-rungula, endla mindzavisiso ni swiviko leswaku u landzelerisisa rungula ra wena hi ku tirhisa Base.
--Comment[ml]=അടിസ്ഥാനമുപയോഗിച്ച്  ഡേറ്റാബേസ് കൈകാര്യം ചെയ്യുകയും ചോദ്യം സൃഷ്ടിക്കുകയും ട്രാക്കില് റിപ്പോര്ട്ട് ചെയ്യുകയും താങ്കളുടെ വിവരങ്ങള്  കൈകാര്യം ചെയ്യുകയും ചെയ്യാം.
--Comment[cy]=Rheoli cronfeydd data, creu ymholiadau ac adroddiadau i ddilyn a rheoli eich gwybodaeth drwy ddefnyddio Base.
--Comment[zh_CN]=使用 Base 管理数据库并创建查询和报表，以对信息进行跟踪和管理。
--Comment[st]=Laola didatapeisi, bopa ditletlebo le ditlaleho bakeng sa ho latedisisa le ho laola tlhahisoleseding ya hao ka ho sebedisa Base.
--Comment[en_GB]=Manage databases, create queries and reports to track and manage your information using Base.
--Comment[ko]=Base를 사용하여 데이터베이스를 관리하고, 추적할 쿼리와 보고서를 만들며, 정보를 관리합니다.
--Comment[uz]=Base rdamida hisobotlar, maʼlumotar bazasini boshqarish.
--Comment[cs]=Base umožňuje vytvářet a spravovat databáze a vytvářet dotazy a sestavy pro sledování a správu vašich informací.
--Comment[km]=គ្រប់គ្រង​មូលដ្ឋាន​ទិន្នន័យ បង្កើត​សំណួរ និង​របាយការណ៍ ដើម្បី​តាមដាន និង​ចាត់ចែង​ព័ត៌មាន​ដោយ​ប្រើ Base ។
--Comment[af]=Bestuur databasisse, skep navrae en verslae om u inligting na te speur en te bestuur, met Base.
--Comment[pa_IN]=ਬੇਸ (Base) ਨਾਲ ਆਪਣਾ ਡਾਟਾਬੇਸ ਸੰਭਾਲੋ, ਸਵਾਲ ਬਣਾਓ ਅਤੇ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨੂੰ ਜਾਂਚਿਆ ਅਤੇ ਪ੍ਰਬੰਧ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
--Comment[is]=Meðhöndla gagnagrunna, búa til fyrirspurnir og skýrslur til að hafa stjórn á upplýsingaflæði með Base.
--Comment[bs]=Upravljanje bazama podataka, kreiranje upita i izvještaja radi praćenja i upravljanja vašim informacijama koristeći Base.
--Comment[ca_XV]=Gestioneu bases de dades i creeu consultes i informes per fer el seguiment i gestionar informació amb el Base.
--Comment[ga]=Bainistigh bunachair shonraí, cruthaigh iarratais agus tuairiscí chun do chuid faisnéise a láimhseáil le Base.
--Comment[ka]=მართავს მონაცემთა ბაზებს, ქმნის მოთხოვნებს და მოხსენებებს რათა ჩაიწეროს და მართოს თქვენი ინფორმაცია  Base-ის გამოყენებით.
--Comment[eu]=Datu-baseak kudeatu eta kontsultak eta txostenak sortu Base erabiliz informazioaren segimendua egiteko eta hura kudeatzeko.
--Comment[oc]=Base - Gestion de bancas de donadas, creacion de requèstas e rapòrts.
--Comment[bg]=С Base можете да управлявате бази от данни и да създавате заявки и справки, за да следите и управлявате Вашата информация.
--Comment[gu]=બેઝ વડે ડેટાબેઝોનું વ્યવસ્થાપન, પ્રશ્ર્નો બનાવવા અને અહેવાલોનું ઘ્યાન અને માહિતીનું વ્યવસ્થાપન કરવામાં આવે છે.
--Comment[sv]=Hantera databaser, skapa sökningar och rapporter för att spåra och hantera information med hjälp av Base.
--Comment[it]=Usando Base, potete gestire i database e creare interrogazioni e rapporti per controllare e organizzare le vostre informazioni.
--Comment[hu]=Adatbázisok kezelése, lekérdezések és jelentések készítése a Base használatával.
--Comment[pl]=Administruj bazami danych, twórz kwerendy i raporty aby efektywnie zarządzać informacją używając programu Base.
--Comment[ca]=Gestioneu bases de dades i creeu consultes i informes per fer el seguiment i gestionar informació amb el Base.
--Comment[fa]=با استفاده از دادگان، پایگاه‌داده‌ها را اداره کنید و برای ردیابی و مدیریت اطلاعاتتان پرس و جو و گزارش ایجاد کنید.
--Comment[zh_TW]=使用 Base 來管理資料庫、建立查詢與報告，以追蹤及管理您的資訊。
--Comment[sk]=Spravujte databázy, vytvárajte dotazy a správy pre správu a analýzu vašich informácií s použitím Base.
--Comment[ve]=Langani dzidatabase, vhumbani dzimbudziso na mivhigo u itela u londa na u langa vhuṱanzi haṅu nga u shumisa Base.
--Comment[uk]=Керування базами даних, створення запитів та звітів для стеження та керування вашою інформацією.
--Comment[hi]=बेस के प्रयोग से डेटाबेस प्रबंधित करता है, प्रश्न बनाता है, ट्रैक रिपोर्ट करता है आपकी सूचना की देखभाल करता है.
--Comment[pt]=Gestão de bases de dados, criar consultas e relatórios para controlar e gerir as informações através do Base.
--Comment[es]=Gestione bases de datos, cree consultas e informes para controlar y editar información con Base.
--Comment[ast]=Alministrar bases de datos, crear consultes ya informes pa siguir y alministrar información emplegando Base.
--Comment[lv]=Pārvaldiet datubāzes, veidojiet vaicājumus un atskaites, lai izsekot un vadītu informāciju, lietojot Base.
--Comment[fr]=Base - Gestion de bases de données, création de requêtes et rapports.
--Comment[ss]=Phatsa idathabhesi, yakha sibuti bese uyabuta imibiko yekulandzelela nekuphatsa lwati lwakho ngekusebentisa Base.
--Comment[or]= ଆଧାର ଉପୟୋଗ କରି ତଥ୍ଯ ସଞ୍ଚଯଗୁଡିକ ପରିଚାଳନା ,ପ୍ରଶ୍ନଗୁଡିକୁ ସୃଷ୍ଟି ଏବଂ ରିପୋର୍ଟଗୁଡିକୁ ଚିହ୍ନଟ କର ଏବଂ   ତୁମ ସୂଚନାକୁ ପରିଚାଳନା କର।
--Comment[id]=Mengelola basis data, membuat kuiri, dan laporan untuk melacak dan mengelola informasi menggunakan Base.
--Comment[xh]=Lawula iziseko zeenkcukacha, dala iintandabuzo neengxelo ukuze ulande ekhondweni ngokunjalo ulawule ulwazi lwakho ngokusebenzisa u-Base.
--Comment[th]=จัดการฐานข้อมูล สร้างข้อคำถามและรายงานไปยังแทร็ก และจัดการข้อมูลของคุณโดยการใช้ Base
--Comment[sr]=Управљајте базама података, направите упите и извештаје за праћење података у програму База.
--Comment[si]=Base භාවිතා කරමින් දත්ත ගබඩා පාලනය කරන්න, ඔබගේ තොරතුරු හඹා යාමට සහ පාලනය කරීමට විමසුම් සහ වාර්තා සාදන්න.
--Comment[et]=Base võimaldab kasutada andmebaase ja luua andmete jälgimiseks ning haldamiseks päringuid ja aruandeid.
--Comment[om]=Base fayyadamuun kuusaa deetaa taligi, gaafataa fi gabaasota odeeffannoo kee hordofuu fi taliguuf oolan uumi.
--Comment[mk]=Уредувајте бази на податоци, креирајте барања и извештаи за следење и управување на вашите информации со користење на Base.
--Comment[en]=Manage databases, create queries and reports to track and manage your information by using Base.
--Comment[fi]=Hallinnoi tietokantoja, luo kyselyjä ja seurantaraportteja, ja hallinnoi tietojasi käyttämällä Base -ohjelmaa.
--Comment[lt]=Duomenų bazių programa galima tvarkyti duomenų bazes, rašyti užklausas ir ataskaitas.
--Comment[de]=Verwalten von Datenbanken, Erstellen von Abfragen und Berichten - Base macht's möglich.
--Comment[hr]=Upravlja bazama, stvara upite i izvještaje za praćenje, te upravlja vašim informacijama.
--Comment[be]=Кіруйце базамі даных, стварайце звароты і справаздачы, каб зважаць на, і кіраваць інфармацыяй з дапамогаю Base.
--Comment[zu]=Lawula idatabheyzi, yenza amakhwiri nemibiko ukuze uthole futhi ulawule ukwaziswa kwakho ngokusebenzisa iBheysi.
--Comment[sl]=S programom Base upravljajte z zbirkami podatkov, ustvarjajte poizvedbe in poročila za sledenje in upravljanje s podatki.
--Comment[nn]=Med Base kan du handtera databasar, laga spørjingar og rapportar for sporing og handtering av informasjon.
--Comment[bn]=বেস ব্যবহার করে আপনার তথ্য অনুসরণ এবং ব্যবস্থাপনা করতে, ডাটাবেস ব্যবস্থাপনা, কোয়েরি এবং প্রতিবেদন তৈরি করুন।
--Comment[ja]=Base を使用することで、データベースを管理し、クエリーとレポートを作成して、情報を追跡および管理します。
--Comment[tg]=Идоракунии МД, сохтани дархостҳо ва ҳисобот, идоракунии маълумот таввасути Base сурат мегиранд.
--Comment[mr]=Base चा वापर करून कोष व्यवस्थापीत करा, तसेच माहिती नियंत्रण व व्यवस्थापन करीता चौकशी व अहवाल बनवा.
--Comment[en_ZA]=Manage databases, create queries and reports to track and manage your information by using Base.
--Comment[dz]=གཞི་རྟན་ལག་ལེན་འཐབ་ཐོག་ལས་ གནས་སྡུད་གཞི་རྟན་ཚུ་འཛིན་སྐྱོང་འབད་ནི་དང་ དྲི་དཔྱད་ཚུ་བཟོ་ནི་ རྗེས་ལམ་ལུ་སྙན་ཞུ་འབད་ནི་ རང་དོན་བརྡ་དོན་འཛིན་སྐྱོང་འབད་ནི།
--Comment[te]=దత్తంశస్థానముల నిర్వాహణ,ప్రశ్నలు మరియు నివేదనలు మరియు స్థానము తో ఉపయోగించిన మీ సమాచారమును నిర్మించు.
--Comment[he]=ניהול מסדי נתונים, יצירת שאילתות ודוחות כדי לעקוב ולנהל את המידע שלך באמצעות תוכנת מסד הנתונים.
--Comment[eo]=Administri datumbazojn, krei informpetojn kaj raportojn por kontroli kaj administri viajn informojn per Datumbazo.
--Comment[ar]=إدارة قواعد البيانات، وإنشاء الاستعلامات والتقارير وتتبّع وإدارة معلومات باستخدام بيز.
--Comment[nl]=Met Base kunt u databases beheren, query's en rapporten maken om uw gegevens te controleren en beheren.
--Comment[mn]=Base танд өгөгдлийн сангууд зохицуулах, асуулга болон тайлан үүсгэх боломж олгоно.
--Comment[as]=Base ব্যৱহাৰ কৰি ডাটাবেইচবোৰ পৰিচালনা কৰক, ট্ৰেক আৰু পৰিচালনা কৰিবলৈ প্ৰশ্ন আৰু সংবাদবোৰ সৃষ্টি কৰক।
--Comment[el]=Διαχείριση βάσεων δεδομένων, δημιουργία ερωτημάτων και αναφορών και διαχείριση πληροφοριών με τη χρήση της Base.
--Comment[pt_BR]=Gerencie bancos de dados, crie consultas e relatórios para rastrear e gerenciar suas informações por meio do Base.
--Keywords=Data;SQL;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Database
--Name[ne]=नयाँ डाटाबेस
--Name[tr]=Yeni Veritabanı
--Name[da]=Ny database
--Name[ug]=يېڭى ساندان
--Name[ru]=Создать базу данных
--Name[gl]=Nova base de datos
--Name[nb]=Ny database
--Name[ro]=Baze de date nouă
--Name[nso]=Datapeisi e Mpsha
--Name[ku]=Danegeha Nû
--Name[vi]=Cơ sở dữ liệu mới
--Name[tn]=New Database
--Name[ta]=புதிய தரவுத்தளம்
--Name[rw]=ubushyinguro bushya
--Name[nr]=Iziko ledatha elitjha
--Name[br]=Stlennvon nevez
--Name[ts]=Vuhlayisela-rungula lebyintshwa
--Name[ml]=പുതിയ ഡേറ്റാബെയിസ്
--Name[cy]=Cronfa Ddata Newydd
--Name[zh_CN]=新建数据库
--Name[st]=Datapeisi e Ntjha
--Name[en_GB]=New Database
--Name[ko]=새 데이터베이스
--Name[uz]=Yangi maʼlumot bazasi
--Name[cs]=Nová databáze
--Name[km]=មូលដ្ឋាន​ទិន្នន័យ​ថ្មី
--Name[af]=Nuwe databasis
--Name[pa_IN]=ਨਵਾ ਡਾਟਾਬੈਸ
--Name[is]=Nýr gagnagrunnur
--Name[bs]=Nova baza podataka
--Name[ca_XV]=Base de dades nova
--Name[ga]=Bunachar Sonraí Nua
--Name[ka]=ახალი მონაცემთა ბაზა
--Name[eu]=Datu-base berria
--Name[oc]=Banca de donadas novèla
--Name[bg]=Нова база от данни
--Name[gu]=નવો ડેટાબેઝ
--Name[sv]=Ny databas
--Name[it]=Nuovo database
--Name[hu]=Új adatbázis
--Name[pl]=Nowa baza danych
--Name[ca]=Base de dades nova
--Name[fa]=پایگاه داده جدید
--Name[zh_TW]=新增資料庫
--Name[sk]=Nová databáza
--Name[ve]=Database Ntswa
--Name[uk]=Нова база даних
--Name[hi]=नया डेटाबेस
--Name[pt]=Nova base de dados
--Name[es]=Base de datos nueva
--Name[ast]=Base de datos nueva
--Name[lv]=Jauna datubāze
--Name[fr]=Nouvelle base de données
--Name[ss]=Idathabhesi lensha
--Name[or]=ନୂଆ ତଥ୍ଯାଧାର
--Name[id]=Basis Data Baru
--Name[xh]=Isiseko Seenkcukacha Ezintsha
--Name[th]=ฐานข้อมูลใหม่
--Name[sr]=Нова база података
--Name[si]=නව දත්ත සමුදාය
--Name[et]=Uus andmebaas
--Name[om]=Kuusa Daata Haara
--Name[mk]=Нова база на податоци
--Name[en]=New Database
--Name[fi]=Uusi tietokanta
--Name[lt]=Nauja duomenų bazė
--Name[de]=Neue Datenbank
--Name[hr]=Nova baza podataka
--Name[be]=Новая база даных
--Name[zu]=Idatabheysi Entsha
--Name[sl]=Nova zbirka podatkov
--Name[nn]=Ny database
--Name[bn]=নতুন ডাটাবেস
--Name[ja]=新規のデータベース
--Name[tg]=МД-и нав
--Name[mr]=नवीन डाटाबेस
--Name[en_ZA]=New Database
--Name[dz]=གནད་སྡུད་གཞི་རྟེན་གསརཔ།
--Name[te]=కొత్తడాటాబేస్
--Name[he]=מסד נתונים חדש
--Name[eo]=Nova datumbazo
--Name[ar]=قاعدة بيانات جديدة
--Name[nl]=Nieuwe database
--Name[mn]=Шинэ өгөгдлийн сан
--Name[as]=নতুন ডাটাবেইচ
--Name[el]=Νέα βάση δεδομένων
--Name[pt_BR]=Novo banco de dados
--Exec=libreoffice --base %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-calc.desktop applications/libreoffice-calc.desktop
---- applications_old/libreoffice-calc.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-calc.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,296 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-calc
--Type=Application
--Categories=Office;Spreadsheet;
--Exec=libreoffice --calc %U
--MimeType=application/vnd.oasis.opendocument.spreadsheet;application/vnd.oasis.opendocument.spreadsheet-template;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/msexcel;application/vnd.ms-excel;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.ms-excel.sheet.macroenabled.12;application/vnd.openxmlformats-officedocument.spreadsheetml.template;application/vnd.ms-excel.template.macroenabled.12;application/vnd.ms-excel.sheet.binary.macroenabled.12;text/csv;application/x-dbf;text/spreadsheet;application/csv;application/excel;application/tab-separated-values;application/vnd.lotus-1-2-3;application/vnd.oasis.opendocument.chart;application/vnd.oasis.opendocument.chart-template;application/x-dbase;application/x-dos_ms_excel;application/x-excel;application/x-msexcel;application/x-ms-excel;application/x-quattropro;application/x-123;text/comma-separated-values;text/tab-separated-values;text/x-comma-separated-values;text/x-csv;
--Name=LibreOffice Calc
--GenericName=Spreadsheet
--GenericName[ne]=स्प्रेडसीट
--GenericName[tr]=Hesap Tablosu
--GenericName[da]=Regneark
--GenericName[ug]=ئېلېكترونلۇق جەدۋەل
--GenericName[ru]=Электронная таблица
--GenericName[gl]=Folla de cálculo
--GenericName[nb]=Regneark
--GenericName[ro]=Foaie de calcul
--GenericName[nso]=Letlakala-kalo
--GenericName[ku]=Tabloya Hesêb
--GenericName[vi]=Bảng tính
--GenericName[tn]=Spreadsheet
--GenericName[ta]=விரிதாள்
--GenericName[rw]=Urupapurotuzu
--GenericName[nr]=Spreadsheet
--GenericName[br]=Renkell
--GenericName[ts]=Spreadsheet
--GenericName[ml]=സ്പ്രെഡ്ഷീറ്റ്
--GenericName[cy]=Taenlen
--GenericName[zh_CN]=电子表格
--GenericName[st]=Spreadsheet
--GenericName[en_GB]=Spreadsheet
--GenericName[ko]=스프레드시트
--GenericName[uz]=Elektro jadval
--GenericName[cs]=Sešit
--GenericName[km]=សៀវភៅ​បញ្ជី
--GenericName[af]=Sigblad
--GenericName[pa_IN]=ਸਪਰੈੱਡ ਸ਼ੀਟ
--GenericName[is]=Töflureiknir
--GenericName[bs]=Proračunska tablica
--GenericName[ca_XV]=Full de càlcul
--GenericName[ga]=Scarbhileog
--GenericName[ka]=Spreadsheet
--GenericName[eu]=Kalkulu-orria
--GenericName[oc]=Classador
--GenericName[bg]=Електронна таблица
--GenericName[gu]=સ્પ્રેડશીટ
--GenericName[sv]=Kalkylblad
--GenericName[it]=Foglio elettronico
--GenericName[hu]=Munkafüzet
--GenericName[pl]=Arkusz kalkulacyjny
--GenericName[ca]=Full de càlcul
--GenericName[fa]=صفحه‌گسترده
--GenericName[zh_TW]=試算表
--GenericName[sk]=Zošit
--GenericName[ve]=Spreadsheet
--GenericName[uk]=Електронна таблиця
--GenericName[hi]=स्प्रेडशीट
--GenericName[pt]=Folha de cálculo
--GenericName[es]=Hoja de cálculo
--GenericName[ast]=Fueya de cálculu
--GenericName[lv]=Izklājlapa
--GenericName[fr]=Classeur
--GenericName[ss]=Liphephacansi
--GenericName[or]=Spreadsheet
--GenericName[id]=Lembar Kerja
--GenericName[xh]=Spreadsheet
--GenericName[th]=ตารางคำนวณ
--GenericName[sr]=Таблица
--GenericName[si]=පැතුරුම්පත
--GenericName[et]=Tabelarvutus
--GenericName[om]=Wardii
--GenericName[mk]=Табеларна пресметка
--GenericName[en]=Spreadsheet
--GenericName[fi]=Taulukkolaskenta
--GenericName[lt]=Skaičiuoklė
--GenericName[de]=Tabellenkalkulation
--GenericName[hr]=Proračunska tablica
--GenericName[be]=Разліковы аркуш
--GenericName[zu]=Ikhasi lokubala
--GenericName[sl]=Preglednica
--GenericName[nn]=Rekneark
--GenericName[bn]=স্প্রেডশীট
--GenericName[ja]=表計算ドキュメント
--GenericName[tg]=Spreadsheet
--GenericName[mr]=स्प्रेडशीट्
--GenericName[en_ZA]=Spreadsheet
--GenericName[dz]=ཤོག་ཁྲམ།
--GenericName[te]=స్ర్పెడ్ షీట్
--GenericName[he]=גיליון אלקטרוני
--GenericName[eo]=Kalkultabelo
--GenericName[ar]=جدول بيانات
--GenericName[nl]=Werkblad
--GenericName[mn]=Хүснэгт баримт
--GenericName[as]=স্প্ৰেডশ্বীট
--GenericName[el]=Υπολογιστικό φύλλο
--GenericName[pt_BR]=Planilha
--Comment=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ne]=Calc को प्रयोगद्वारा स्प्रेडसिटहरूमा गणना कार्यसम्पादन, सूचना विश्लेषण र सूचीहरू प्रबन्ध गर्नुहोस्।
--Comment[tr]=Calc kullanarak çalışma sayfasında performans hesaplamak, bilgi analiz etmek ve listeleri yönetmek.
--Comment[da]=Udfør beregning, analyser information og administrer lister i regneark ved brug af Calc.
--Comment[ug]=Calc ئىشلىتىپ ئۇچۇر ھېسابلاش ۋە ئانالىز ئېلىپ بېرىلىدۇ ھەمدە ئېلېكترونلۇق جەدۋەلدىكى تىزىملىك باشقۇرۇلىدۇ.
--Comment[ru]=Выполнение вычислений, анализ информации и управление списками в электронных таблицах с помощью Calc.
--Comment[gl]=Facer cálculos, analizar información e xestionar listas en follas de cálculo con Calc.
--Comment[nb]=Utfør beregninger, analyser informasjon og håndter lister i regneark ved å bruke Calc.
--Comment[ro]=Efectuați calcule, analizați informații și gestionați liste în foi de calcul folosind Calc.
--Comment[nso]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ku]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[vi]=Dùng Calc tính toán, phân tích thông tin và quản lý danh sách trong bảng tính.
--Comment[tn]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ta]=கணக்கிடவும், தகவலை ஆயவும், விரிதாள்களிலுள்ள பட்டியல்களை மேலாளவும் கால்கைப் பயன்படுத்துக.
--Comment[rw]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[nr]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[br]=Ober jedadurioù, dezrannañ stlennoù hag ardeiñ rolladoù er renkelloù dre ober gant Calc.
--Comment[ts]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ml]=കണക്കുകൂട്ടലുകള്‍, കാല്ക് ഉപയോഗിച്ച് വിവരങ്ങള്‍ അവലോകനം ചെയ്യുകയും സ്പ്രെഡ്ഷീറ്റിലെ ലിസ്റ്റ് കൈകാര്യം ചെയ്യുകയും ചെയ്യാം.
--Comment[cy]=Cyfrifo, dadansoddi data a rheoli rhestrau mewn taenlenni gan ddefnyddio Calc.
--Comment[zh_CN]=使用 Calc 进行计算、分析信息以及管理电子表格中的列表。
--Comment[st]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[en_GB]=Perform calculations, analyse information and manage lists in spreadsheets using Calc.
--Comment[ko]=Calc를 사용하여 스프레드시트에서 계산, 정보 분석 및 목록 관리를 수행합니다.
--Comment[uz]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[cs]=Calc umožňuje vytvářet a spravovat tabulkové seznamy a provádět na těchto datech výpočty a analýzu informací.
--Comment[km]=ធ្វើ​ការ​គណនា​​ វិភាគ​ព័ត៌មាន និង​គ្រប់គ្រង​បញ្ជី​ក្នុង​សៀវភៅ​បញ្ជី ដោយ​ប្រើ Calc ។
--Comment[af]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[pa_IN]=ਕੈਲਸ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਸਪਰੈੱਡਸ਼ੀਟ ਨਾਲ ਗਣਨਾ, ਜਾਣਕਾਰੀ ਦੀ ਸਮੀਖਿਆ ਅਤੇ ਸੂਚੀਆਂ ਨੂੰ ਰੱਖਿਆ ਜਾ ਸਕਦਾ ਹੈ।
--Comment[is]=Gera útreikninga, greina gögn og meðhöndla lista í töflureikni með því að nota Calc.
--Comment[bs]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ca_XV]=Feu càlculs, analitzeu informació i gestioneu llistes en fulls de càlcul amb el Calc.
--Comment[ga]=Déan ríomhaireacht, déan anailís agus bainistigh liostaí i scarbhileoga trí úsáid a bhaint as Calc.
--Comment[ka]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[eu]=Kalkuluak egin, informazioa aztertu eta kalkulu-orrietako zerrendak kudeatu Calc erabiliz.
--Comment[oc]=Calc - Calculs, analisis e gestion de listas dins de fuèlhs de calcul.
--Comment[bg]=С Calc можете да извършвате изчисления, да анализирате информация и да организирате списъци в електронни таблици.
--Comment[gu]=કૅલ્ક વડે સ્પ્રેડશીટમાં ગણતરીઓ, માહીતી પૃથ્થકરણ અને યાદીઓ બનાવો.
--Comment[sv]=Utför beräkningar, anaysera information och hantera listor i kalkylblad med hjälp av Calc.
--Comment[it]=Calc può essere usato per eseguire calcoli, analizzare informazioni e gestire elenchi nei fogli elettronici.
--Comment[hu]=Számítások végrehajtása, adatok elemzése és listák kezelése munkafüzetekben a Calc használatával.
--Comment[pl]=Przeprowadzaj obliczenia, analizuj informacje i zarządzaj listami w arkuszach kalkulacyjnych używając programu Calc.
--Comment[ca]=Feu càlculs, analitzeu informació i gestioneu llistes en fulls de càlcul amb el Calc.
--Comment[fa]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[zh_TW]=使用 Calc 可在試算表中執行計算、分析資訊與管理清單。
--Comment[sk]=Počítajte, analyzujte informácie a spravujte zoznamy v zošitoch s použitím Calc.
--Comment[ve]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[uk]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[hi]=गणना करता है, सूचना विश्लेषण करता है, और Calc के प्रयोग से स्प्रेडशीट में सूची प्रबंधित करता है.
--Comment[pt]=Efetue cálculos, analise informações e faça a gestão de listas em folhas de cálculo através do Calc.
--Comment[es]=Realice cálculos, analice información y maneje listas en hojas de cálculo con Calc.
--Comment[ast]=Facer cálculos, analizar información y editar llistes en fueyes de cálculu con Calc.
--Comment[lv]=Veikt aprēķinus, analizēt informāciju un pārvaldīt sarakstus izklājlapās, lietojot Calc.
--Comment[fr]=Calc - Calculs, analyses et gestion de listes dans des feuilles de calcul.
--Comment[ss]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[or]=Calc ବ୍ୟବହାର କରି ସ୍ପ୍ରେଡ୍ସିଟରେ ଗଣନା ସମ୍ପାଦନ, ସୂଚନା ବିଶ୍ଳେଷଣ ଏବଂ ତାଲିକା ପରିଚାଳନା  କରନ୍ତୁ।
--Comment[id]=Melakukan perhitungan, analisa informasi, dan kelola daftar di lembar kerja menggunakan Calc.
--Comment[xh]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[th]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[sr]=Изведите прорачуне, анализирајте податке и управљајте листама у таблицама уз Рачун.
--Comment[si]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[et]=Calc võimaldab arvutustabelite abiga teha arvutusi, analüüsida teavet ja hallata loendeid.
--Comment[om]=Calc fayyadamuun herrega hojjedhu, odeeffannoo xiinxali, tarreewwan wardii keessaa taligi.
--Comment[mk]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[en]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[fi]=Calcin avulla voit tehdä laskutoimituksia, analysoida tietoja ja hallita listoja laskentataulukoissa.
--Comment[lt]=Skaičiuokle galima atlikti įvairius skaičiavimus, analizuoti informaciją, tvarkyti sąrašus lentelėse.
--Comment[de]=Berechnungen ausführen, Informationen analysieren und Listen in Tabellenform verwalten - Calc macht's möglich.
--Comment[hr]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[be]=Праводзьце вылічэнні, аналізуйце інфармацыю і кіруйце спісамі ў разліковых аркушах з дапамогаю Calc.
--Comment[zu]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[sl]=S programom Calc izvajajte računske operacije, analizirajte podatke in upravljajte sezname v preglednicah.
--Comment[nn]=Med Calc kan du gjera utrekningar, analysere informasjon og handtere lister i rekneark.
--Comment[bn]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[ja]=Calc を使用して、スプレッドシートで計算を実行し、情報を分析し、リストを管理します。
--Comment[tg]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[mr]=Calc चा वापर करून स्प्रेडशीट् अंतर्गत गणना, माहिती विश्लेषण व यादी व्यवस्थापीत करा.
--Comment[en_ZA]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[dz]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[te]=Calc వినియోగించి స్ర్పెడ్‌షీట్‌లలో జాబితాలను నిర్వహించును,సమాచారమును విశ్లేషించును మరియు గణలను జరుపును.
--Comment[he]=ביצוע חישובים, ניתוח מידע וניהול רשימות בגיליונות אלקטרוניים באמצעות Calc.
--Comment[eo]=Kalkuladi, analizi informojn kaj administri listojn en kalkultabeloj per Tabelilo.
--Comment[ar]=إنجاز العمليات الحسابية، وتحليل المعلومات وإدارة القوائم في جداول البيانات باستخدام كالك.
--Comment[nl]=Met Calc kunt u in werkbladen berekeningen uitvoeren, gegevens analyseren en lijsten beheren.
--Comment[mn]=Perform calculations, analyze information and manage lists in spreadsheets by using Calc.
--Comment[as]=Calc ব্যৱহাৰ কৰি স্প্ৰেডশ্বিটসমূহত গণনাসমূহ কৰক, তথ্য বিশ্লেষণ কৰক আৰু তালিকাসমূহ ব্যৱস্থাপনা কৰক।
--Comment[el]=Εκτέλεση υπολογισμών, ανάλυσης πληροφοριών και διαχείρισης λιστών σε υπολογιστικά φύλλα με τη χρήση του Calc.
--Comment[pt_BR]=Efetue cálculos, analise informações e gerencie listas em planilhas utilizando o Calc.
--Keywords=Accounting;Stats;OpenDocument Spreadsheet;Chart;Microsoft Excel;Microsoft Works;OpenOffice Calc;ods;xls;xlsx;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Spreadsheet
--Name[ne]=New Spreadsheet
--Name[tr]=Yeni Çalışma Sayfası
--Name[da]=Nyt regneark
--Name[ug]=يېڭى ئېلېكترونلۇق جەدۋەل
--Name[ru]=Создать эл.таблицу
--Name[gl]=Nova folla de cálculo
--Name[nb]=Nytt regneark
--Name[ro]=Foaie de calcul nouă
--Name[nso]=New Spreadsheet
--Name[ku]=New Spreadsheet
--Name[vi]=Bảng tính mới
--Name[tn]=New Spreadsheet
--Name[ta]=புதிய விரிதாள்
--Name[rw]=New Spreadsheet
--Name[nr]=New Spreadsheet
--Name[br]=Renkell nevez
--Name[ts]=New Spreadsheet
--Name[ml]=പുതിയ സ്പ്രെഡ്ഷീറ്റ്
--Name[cy]=Taenlen Newydd
--Name[zh_CN]=新建电子表格
--Name[st]=New Spreadsheet
--Name[en_GB]=New Spreadsheet
--Name[ko]=새 스프레드시트
--Name[uz]=New Spreadsheet
--Name[cs]=Nový sešit
--Name[km]=សៀវភៅ​បញ្ជី​ថ្មី
--Name[af]=New Spreadsheet
--Name[pa_IN]=ਨਵੀ ਸਪ੍ਰੈਡਸੀਟ
--Name[is]=Nýr töflureiknir
--Name[bs]=New Spreadsheet
--Name[ca_XV]=Full de càlcul nou
--Name[ga]=Scarbhileog Nua
--Name[ka]=New Spreadsheet
--Name[eu]=New Spreadsheet
--Name[oc]=Novèl Classador
--Name[bg]=Нова електронна таблица
--Name[gu]=નવી સ્પ્રેડશીટ
--Name[sv]=Nytt kalkylblad
--Name[it]=Nuovo foglio elettronico
--Name[hu]=Új munkafüzet
--Name[pl]=Nowy arkusz kalkulacyjny
--Name[ca]=Full de càlcul nou
--Name[fa]=صفحه گسترده جدید
--Name[zh_TW]=新增試算表
--Name[sk]=Nový tabuľkový dokument
--Name[ve]=New Spreadsheet
--Name[uk]=New Spreadsheet
--Name[hi]=नया स्प्रेडशीट
--Name[pt]=Nova folha de cálculo
--Name[es]=Hoja de cálculo nueva
--Name[ast]=Fueya de cálculu nueva
--Name[lv]=Jauna izklājlapa
--Name[fr]=Nouveau classeur
--Name[ss]=New Spreadsheet
--Name[or]=ନୂତନ ସ୍ପ୍ରେଡସିଟ
--Name[id]=Lembar Kerja Baru
--Name[xh]=New Spreadsheet
--Name[th]=New Spreadsheet
--Name[sr]=Нова таблица
--Name[si]=New Spreadsheet
--Name[et]=Uus arvutustabel
--Name[om]=Gabatee Herregaa haara
--Name[mk]=New Spreadsheet
--Name[en]=New Spreadsheet
--Name[fi]=Uusi laskentataulukko
--Name[lt]=Naujas skaičiuoklės dokumentas
--Name[de]=Neues Tabellendokument
--Name[hr]=New Spreadsheet
--Name[be]=Новы разліковы аркуш
--Name[zu]=New Spreadsheet
--Name[sl]=Nova preglednica
--Name[nn]=Nytt rekneark
--Name[bn]=New Spreadsheet
--Name[ja]=新規の表計算文書
--Name[tg]=New Spreadsheet
--Name[mr]=नवीन स्प्रेडशीट
--Name[en_ZA]=New Spreadsheet
--Name[dz]=New Spreadsheet
--Name[te]=కొత్త స్ప్రెడ్ షీట్
--Name[he]=גיליון אלקטרוני חדש
--Name[eo]=Nova kalkultabelo
--Name[ar]=جدول بيانات جديد
--Name[nl]=Nieuw werkblad
--Name[mn]=New Spreadsheet
--Name[as]=নতুন স্প্ৰেডশ্বিট
--Name[el]=Νέο υπολογιστικό φύλλο
--Name[pt_BR]=Nova planilha
--Exec=libreoffice --calc %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-draw.desktop applications/libreoffice-draw.desktop
---- applications_old/libreoffice-draw.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-draw.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,296 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-draw
--Type=Application
--Categories=Office;Graphics;FlowChart;Graphics;2DGraphics;VectorGraphics;
--Exec=libreoffice --draw %U
--MimeType=application/vnd.oasis.opendocument.graphics;application/vnd.oasis.opendocument.graphics-template;application/vnd.sun.xml.draw;application/vnd.sun.xml.draw.template;application/vnd.visio;application/x-wpg;
--Name=LibreOffice Draw
--GenericName=Drawing Program
--GenericName[ne]=रेखाचित्र कार्यक्रम
--GenericName[tr]=Çizim Programı
--GenericName[da]=Tegneprogram
--GenericName[ug]=سىزمىچىلىق پروگراممىسى
--GenericName[ru]=Редактор рисунков
--GenericName[gl]=Programa de debuxo
--GenericName[nb]=Tegneprogram
--GenericName[ro]=Program de desenare
--GenericName[nso]=Lenaneo la go thala
--GenericName[ku]=Bernameya Xêzkirinê
--GenericName[vi]=Chương trình vẽ
--GenericName[tn]=Drawing Program
--GenericName[ta]=வரைபட செயலி
--GenericName[rw]=Drawing Program
--GenericName[nr]=Drawing Program
--GenericName[br]=Goulev tresañ
--GenericName[ts]=Drawing Program
--GenericName[ml]=ചിത്രരചനയ്ക്കുള്ള പ്രോഗ്രാം
--GenericName[cy]=Rhaglen Lluniadu
--GenericName[zh_CN]=绘图程序
--GenericName[st]=Drawing Program
--GenericName[en_GB]=Drawing Program
--GenericName[ko]=그리기 프로그램
--GenericName[uz]=Rasmlar tahrirchisi
--GenericName[cs]=Kreslící program
--GenericName[km]=កម្មវិធី​គូរ
--GenericName[af]=Tekenprogram
--GenericName[pa_IN]=ਡਰਾਇੰਗ ਪਰੋਗਰਾਮ
--GenericName[is]=Teikniforrit
--GenericName[bs]=Program za crtanje
--GenericName[ca_XV]=Programa de dibuix
--GenericName[ga]=Ríomhchlár Líníochta
--GenericName[ka]=Drawing Program
--GenericName[eu]=Marrazketa programa
--GenericName[oc]=Programa de dessenh
--GenericName[bg]=Програма за чертане
--GenericName[gu]=પ્રક્રિયાનું ચિત્ર દોરી રહ્યા છે
--GenericName[sv]=Ritprogram
--GenericName[it]=Programma di disegno
--GenericName[hu]=Rajzolóprogram
--GenericName[pl]=Program graficzny
--GenericName[ca]=Programa de dibuix
--GenericName[fa]=برنامه طراحی
--GenericName[zh_TW]=繪圖程式
--GenericName[sk]=Kresliaci program
--GenericName[ve]=Drawing Program
--GenericName[uk]=Drawing Program
--GenericName[hi]=रेखाचित्र प्रोग्राम
--GenericName[pt]=Programa de desenho
--GenericName[es]=Programa de dibujo
--GenericName[ast]=Programa de dibuxu
--GenericName[lv]=Zīmēšanas lietotne
--GenericName[fr]=Programme de dessin
--GenericName[ss]=Drawing Program
--GenericName[or]=ପ୍ରଗ୍ରାମ ଆଙ୍କୁଅଛି
--GenericName[id]=Program Menggambar
--GenericName[xh]=Drawing Program
--GenericName[th]=Drawing Program
--GenericName[sr]=Програм за цртање
--GenericName[si]=ඇදිමේ වැඩසටහන
--GenericName[et]=Skeemilooja
--GenericName[om]=Sagantaa Fakkii Kaasu
--GenericName[mk]=Програма за цртање
--GenericName[en]=Drawing Program
--GenericName[fi]=Piirrosohjelma
--GenericName[lt]=Grafikos rengyklė
--GenericName[de]=Zeichenprogramm
--GenericName[hr]=Program za crtanje
--GenericName[be]=Праграма рысавання
--GenericName[zu]=Drawing Program
--GenericName[sl]=Program za risanje
--GenericName[nn]=Teikneprogram
--GenericName[bn]=অঙ্কন প্রোগ্রাম
--GenericName[ja]=図形描画プログラム
--GenericName[tg]=Drawing Program
--GenericName[mr]=चित्ररेखा कार्यक्रम
--GenericName[en_ZA]=Drawing Program
--GenericName[dz]=Drawing Program
--GenericName[te]=చిత్రలేఖక ప్రోగ్రాము
--GenericName[he]=תוכנת רשום
--GenericName[eo]=Desegna programo
--GenericName[ar]=برنامج الرسم
--GenericName[nl]=Tekenrogramma
--GenericName[mn]=Drawing Program
--GenericName[as]=ড্রয়িং কাৰ্যক্ৰম
--GenericName[el]=Πρόγραμμα σχεδίασης
--GenericName[pt_BR]=Programa de desenho
--Comment=Create and edit drawings, flow charts and logos by using Draw.
--Comment[ne]=चित्रको प्रयोगद्वारा रेखाचित्रहरू, फ्लो चित्रपटहरू र लोगोहरू सिर्जना तथा सम्पादन गर्नुहोस् ।
--Comment[tr]=Draw kullanarak akış çizelgeleri ve logolar oluşturabilir ve düzenleyebilirsiniz.
--Comment[da]=Opret og rediger tegninger, rutediagrammer og logoer ved brug af Draw.
--Comment[ug]=Draw ئىشلىتىپ سىزمىچىلىق، دىئاگرامما ۋە تۇغ قۇرۇپ ۋە تەھرىرلىيەلەيسىز.
--Comment[ru]=Создание и редактирование рисунков, блок-схем и логотипов.
--Comment[gl]=Crear e editar debuxos, fluxogramas e logotipos con Draw.
--Comment[nb]=Opprett og rediger tegninger, flytdiagrammer og logoer ved å bruke Draw.
--Comment[ro]=Creați și editați desene, diagrame și sigle folosind Draw.
--Comment[nso]=Hlama le go lokiša dithalwa, ditšhate tša go elela, le maswao ka go diriša Draw.
--Comment[ku]=Xêzkirinan, xanxankên herikînê û logoyan bi Drawê çêbike û sererast bike.
--Comment[vi]=Tạo và sửa bản vẽ, lưu đồ và biểu hình, dùng trình Draw.
--Comment[tn]=Create and edit drawings, flow charts, and logos by using Draw.
--Comment[ta]=வரைபடங்கள், செயல்வழிப்படங்கள், லோகோ ஆகியவற்றை உருவாக்கவும் தொகுக்கவும் டிராவைப் பயன்படுத்துக.
--Comment[rw]=Kurema no guhindura ibishushanyo, ibishushanyo by'ikurikirana, n'ikirango ukoresheje Draw
--Comment[nr]=Enza nokuhlela imigwalo, amaflowtjhati namalogo ngokusebenzisa i-Draw.
--Comment[br]=Draw - Krouiñ hag embann tresadennoù, frammlunioù ha sielloù.
--Comment[ts]=Endla ni ku lulamisa Vudirowi, tichati ta ntlhandlamano ni mimfungho hi ku tirhisa Draw.
--Comment[ml]=ചിത്രരചന ഉപയോഗിച്ച് ചിത്രങ്ങള്, ഫ്‍ളോചാര്ട്ടുകള്, ലോഗോകള് സൃഷ്ടിക്കുകയും എഡിറ്റു ചെയ്യുകയും ചെയ്യുക.
--Comment[cy]=Creu a golygu darluniau, siartiau llif a logos drwy ddefnyddio Draw.
--Comment[zh_CN]=使用 Draw 创建并编辑图形、流程图和徽标。
--Comment[st]=Bopa le ho lokisa tse torowilweng, ditjhate tse phallang, le di-logo ka ho sebedisa Draw.
--Comment[en_GB]=Create and edit drawings, flow charts and logos using Draw.
--Comment[ko]=그리기를 사용하여 그리기, 순서도 및 로고를 만들고 편집합니다.
--Comment[uz]=Draw yordamida chizmalar. grafiklar va logolar yaratish va tahrirlash.
--Comment[cs]=Draw umožňuje vytvářet a upravovat kresby, vývojové diagramy a loga.
--Comment[km]=បង្កើត និង​កែ​សម្រួល​គំនូរ គំនូស​តាង​​លំហូរ និង​រូបសញ្ញា​ដោយ​ប្រើ Draw ។
--Comment[af]=Skep en redigeer tekeninge, vloeigrafieke en logo's met Draw.
--Comment[pa_IN]=ਡਰਾਇੰਗ ਨਾਲ ਸ਼ਕਲਾਂ, ਵਹਾ-ਚਾਰਟ ਅਤੇ ਲੋਗੋ ਬਣਾਏ ਅਤੇ ਸੋਧੇ ਜਾ ਸਕਦੇ ਹਨ।
--Comment[is]=Búa til og breyta teikningum, flæðiritum og merkjum með því að nota Draw.
--Comment[bs]=Kreiranje i uređivanje crteža, dijagrama toka i amblema koristeći Draw.
--Comment[ca_XV]=Creeu i editeu dibuixos, diagrames de flux i logotips amb el Draw.
--Comment[ga]=Cruthaigh líníochtaí, sreabhchairteacha, agus lógónna, agus cuir iad in eagar le Draw.
--Comment[ka]=ქმნის და ასწორებს ნახატებს, დინების სქემებს და ლოგოებს Draw-ს გამოყენებით.
--Comment[eu]=Marrazkiak, fluxu-diagramak eta logotipoak sortu eta editatu Draw erabiliz.
--Comment[oc]=Draw - Creacion e edicion de dessenhs, d'organigramas e de lògos.
--Comment[bg]=С Draw можете да създавате и редактирате рисунки, блок-схеми и емблеми.
--Comment[gu]=ચિત્ર દ્દારા ચિત્રો, ફલો ચાર્ટ, અને લોગો બનાવો અને સુઘારો.
--Comment[sv]=Skapa och redigera teckningar, flödesdiagram och logotyper med hjälp av Draw.
--Comment[it]=Con Draw potete creare e modificate disegni, diagrammi di flusso e logo.
--Comment[hu]=Rajzok, folyamatábrák és logók létrehozása és szerkesztése a Draw használatával.
--Comment[pl]=Twórz i edytuj rysunki, wykresy i znaki graficzne używając programu Draw.
--Comment[ca]=Creeu i editeu dibuixos, diagrames de flux i logotips amb el Draw.
--Comment[fa]=با استفاده از نقاش، نقاشی، روندنما و علامت تجاری طراحی یا ویرایش کنید.
--Comment[zh_TW]=使用 Draw 可建立與編輯繪圖、流程圖以及標誌。
--Comment[sk]=Vytvárajte a upravujte obrázky, postupové diagramy a logá s použitím Draw.
--Comment[ve]=Vhumbani nahone ni lulamise nyolo, tshati dza kusuvhele, na dziḽogo nga u shumisa Draw.
--Comment[uk]=Створення та редагування малюнків, діаграми та емблем.
--Comment[hi]=ड्रॉ के प्रयोग से रेखाचित्र, फ्लोचार्ट, और लोगो बनाता और संपादित करता है.
--Comment[pt]=Criar e editar desenhos, fluxogramas e logótipos através do Draw.
--Comment[es]=Cree y edite dibujos, diagramas de flujo y logotipos con Draw.
--Comment[ast]=Crear y editar dibuxos, diagrames de fluxu y logos emplegando Draw.
--Comment[lv]=Veidot un rediģēt zīmējumus, norises shēmas un firmas zīmes, lietojot Draw.
--Comment[fr]=Draw - Création et édition de dessins, d'organigrammes et de logos.
--Comment[ss]=Yakha u-edithe kudvweba, ndizisa emashati, neticubulo ngekusebentisa Draw.
--Comment[or]=ଅଙ୍କନ ଉପୟୋଗକରି ଚିତ୍ରାଙ୍କନ, ଫ୍ଲୋ ଚାର୍ଟ ଏବଂ ଚିହ୍ନଗୁଡିକୁ ସୃଷ୍ଟି ଏବଂ ସମ୍ପାଦନ କର।
--Comment[id]=Mengolah gambar, diagram alur, dan logo menggunakan Draw.
--Comment[xh]=Dala uze uhlele imizobo, iitshati zomqukuqelo, kunye nee-logo ngokusebenza u-Draw.
--Comment[th]=สร้างและแก้ไขการวาด แผนภูมิงาน และโลโก้ โดยการใช้ Draw
--Comment[sr]=Направите и уређујте цртеже, дијаграме тока и логотипе у Цртању.
--Comment[si]=Draw භාවිතා කරමින් ඇඳීම්, ගැලීම් සටහන් සහ ලාංඡන සාදන්න සහ වෙනස් කරන්න.
--Comment[et]=Draw võimaldab luua ja redigeerida joonistusi, vooskeeme ning logosid.
--Comment[om]=Draw fayyadamuun fakkasaawwan, yaa'insa taattoowwanii fi asxaa uumi, gulaali.
--Comment[mk]=Креирајте и уредувајте цртежи, графикони и логоа со користење на Draw.
--Comment[en]=Create and edit drawings, flow charts, and logos by using Draw.
--Comment[fi]=Luo ja muokkaa piirroksia, vuokaavioita ja logoja Draw-ohjelmalla.
--Comment[lt]=Grafikos rengykle galima braižyti brėžinius, blokines schemas, kurti logotipus.
--Comment[de]=Zeichnungen erstellen und bearbeiten, Flussdiagramme entwerfen und Logos kreieren - Draw macht's möglich.
--Comment[hr]=Stvorite i uredite crteže, dijagrame toka i logo-e.
--Comment[be]=Стварайце і рэдагуйце рысункі, блок-схемы і лагатыпы з дапамогаю Draw-а.
--Comment[zu]=Yenza futhi ulungise imidwebo, amaflowchadi, namalogo ngokusebenzisa into yokuDweba.
--Comment[sl]=S programom Draw ustvarjajte in urejajte risbe, slike, diagrame poteka in logotipe.
--Comment[nn]=Med Draw kan du laga og redigera teikningar, flytdiagram og logoar.
--Comment[bn]=ড্র ব্যবহার করে অঙ্কন, প্রবাহ চিত্র, এবং লোগো তৈরি এবং সম্পাদনা করুন।
--Comment[ja]=Draw を使用して、図形描画、フローチャート、およびロゴを作成および編集します。
--Comment[tg]=Бо ёрии Draw тасвирҳо, нақшаҳо, логотипҳо сохтан мумкин аст.
--Comment[mr]=Draw चा वापरून रेखाचित्र, फ्लोचार्ट, व प्रतिक बनवा आणि संपादीत करा.
--Comment[en_ZA]=Create and edit drawings, flow charts, and logos by using Draw.
--Comment[dz]=ཌཱ་ི་པ་ལག་ལེན་འཐབ་ཐོག་པར་རིས་དང་འབབ་རྒྱུན་དཔེ་རིས་ ལེགས་རྟགས་ཚུ་་ཚད་རིས་ཚུ་བཟོ་ནི་དང་ཞུན་དག་རྐྱབ་ནི།
--Comment[te]=చిత్రలేఖనము,ఫ్లోచార్ట్ మరియు,దేవుని చిత్రములను నిర్మించి సరిచేయుము.
--Comment[he]=יצירה ועריכה של ציורים, תרשימי זרימה וסמלים מסחריים באמצעות תוכנת הציור.
--Comment[eo]=Krei kaj redakti desegnaĵojn, stirfluajn diagramojn, kaj emblemojn per Desegnilo.
--Comment[ar]=إنشاء الرسوم وتحريرها، ورسوم الدفق البيانية، والشعارات باستخدام درو.
--Comment[nl]=Met Draw kunt u tekeningen, stroomdiagrammen en logo's maken en bewerken.
--Comment[mn]=Draw ашиглан зураг, урсгал диаграмм ба лого үүсгэх болон засварлах.
--Comment[as]=Draw ব্যৱহাৰ কৰি ড্ৰয়িং, ফ্ল' ছাৰ্ট আৰু ল'গ'বোৰ সৃষ্টি আৰু সম্পাদনা কৰক।
--Comment[el]=Δημιουργία και επεξεργασία σχεδίων, διαγραμμάτων ροής, και λογοτύπων με τη χρήση του Draw.
--Comment[pt_BR]=Crie e edite desenhos, fluxogramas e logotipos por meio do Draw.
--Keywords=Vector;Schema;Diagram;Layout;OpenDocument Graphics;Microsoft Publisher;Corel Draw;cdr;odg;svg;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Drawing
--Name[ne]=New Drawing
--Name[tr]=Yeni Çizim
--Name[da]=Ny tegning
--Name[ug]=يېڭى سىزما
--Name[ru]=Создать рисунок
--Name[gl]=Novo debuxo
--Name[nb]=Ny tegning
--Name[ro]=Desen nou
--Name[nso]=New Drawing
--Name[ku]=New Drawing
--Name[vi]=Bản vẽ mới
--Name[tn]=New Drawing
--Name[ta]=புதிய வரைபடம்
--Name[rw]=New Drawing
--Name[nr]=New Drawing
--Name[br]=Tresadenn nevez
--Name[ts]=New Drawing
--Name[ml]=പുതിയ ഡ്രോയിങ്
--Name[cy]=Lluniad Newydd
--Name[zh_CN]=新建绘图
--Name[st]=New Drawing
--Name[en_GB]=New Drawing
--Name[ko]=새 드로잉
--Name[uz]=New Drawing
--Name[cs]=Nová kresba
--Name[km]=គំនូរ​ថ្មី
--Name[af]=New Drawing
--Name[pa_IN]=ਨਵੀ ਡਰਾਇੰਗ 
--Name[is]=Ný teikning
--Name[bs]=New Drawing
--Name[ca_XV]=Dibuix nou
--Name[ga]=Líníocht Nua
--Name[ka]=New Drawing
--Name[eu]=New Drawing
--Name[oc]=Novèl Dessenh
--Name[bg]=Нова рисунка
--Name[gu]=નવુ ચિત્રકામ
--Name[sv]=Ny teckning
--Name[it]=Nuovo disegno
--Name[hu]=Új rajz
--Name[pl]=Nowy Rysunek
--Name[ca]=Dibuix nou
--Name[fa]=طراحی جدید
--Name[zh_TW]=新增繪圖
--Name[sk]=Nová kresba
--Name[ve]=New Drawing
--Name[uk]=New Drawing
--Name[hi]=नया रेखाचित्र
--Name[pt]=Novo desenho
--Name[es]=Dibujo nuevo
--Name[ast]=Dibuxu nuevu
--Name[lv]=Jauns zīmējums
--Name[fr]=Nouveau dessin
--Name[ss]=New Drawing
--Name[or]=ନୂଆ ଚିତ୍ର
--Name[id]=Gambar Baru
--Name[xh]=New Drawing
--Name[th]=New Drawing
--Name[sr]=Нови цртеж
--Name[si]=New Drawing
--Name[et]=Uus joonistus
--Name[om]=Fakkii Haara
--Name[mk]=New Drawing
--Name[en]=New Drawing
--Name[fi]=Uusi piirros
--Name[lt]=Naujas grafikos dokumentas
--Name[de]=Neue Zeichnung
--Name[hr]=New Drawing
--Name[be]=Новы рысунак
--Name[zu]=New Drawing
--Name[sl]=Nova risba
--Name[nn]=Ny teikning
--Name[bn]=New Drawing
--Name[ja]=新規の図形描画
--Name[tg]=New Drawing
--Name[mr]=नवीन रेखाचित्र
--Name[en_ZA]=New Drawing
--Name[dz]=New Drawing
--Name[te]=కొత్త చిత్రలేఖనము
--Name[he]=ציור חדש
--Name[eo]=Nova desegnaĵo
--Name[ar]=رسم جديد
--Name[nl]=Nieuwe tekening
--Name[mn]=New Drawing
--Name[as]=নতুন অঙ্কণ
--Name[el]=Νέο σχέδιο
--Name[pt_BR]=Novo desenho
--Exec=libreoffice --draw %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-impress.desktop applications/libreoffice-impress.desktop
---- applications_old/libreoffice-impress.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-impress.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,296 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-impress
--Type=Application
--Categories=Office;Presentation;
--Exec=libreoffice --impress %U
--MimeType=application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-template;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/mspowerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint.presentation.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.ms-powerpoint.template.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.slide;application/vnd.openxmlformats-officedocument.presentationml.slideshow;application/vnd.ms-powerpoint.slideshow.macroEnabled.12;
--Name=LibreOffice Impress
--GenericName=Presentation
--GenericName[ne]=प्रस्तुतिकरण
--GenericName[tr]=Sunum
--GenericName[da]=Præsentation
--GenericName[ug]=كۆرسەتمە
--GenericName[ru]=Презентация
--GenericName[gl]=Presentación
--GenericName[nb]=Presentasjon
--GenericName[ro]=Prezentare
--GenericName[nso]=Tlhagišo
--GenericName[ku]=Pêşkêşî
--GenericName[vi]=Trình chiếu
--GenericName[tn]=Presentation
--GenericName[ta]=வழங்கல்
--GenericName[rw]=Iyerekana
--GenericName[nr]=Presentation
--GenericName[br]=Kinnigadenn
--GenericName[ts]=Presentation
--GenericName[ml]=പ്രസന്റേഷന്‍
--GenericName[cy]=Cyflwyno
--GenericName[zh_CN]=演示文稿
--GenericName[st]=Presentation
--GenericName[en_GB]=Presentation
--GenericName[ko]=프레젠테이션
--GenericName[uz]=Namoyish
--GenericName[cs]=Prezentace
--GenericName[km]=ការ​បង្ហាញ
--GenericName[af]=Voorlegging
--GenericName[pa_IN]=ਪਰਿਜੈਂਟੇਸ਼ਨ
--GenericName[is]=Kynning
--GenericName[bs]=Prezentacija
--GenericName[ca_XV]=Presentació
--GenericName[ga]=Láithreoireacht
--GenericName[ka]=Presentation
--GenericName[eu]=Aurkezpena
--GenericName[oc]=Presentacion
--GenericName[bg]=Презентация
--GenericName[gu]=પ્રેઝન્ટેશન
--GenericName[sv]=Presentation
--GenericName[it]=Presentazione
--GenericName[hu]=Bemutató
--GenericName[pl]=Prezentacja
--GenericName[ca]=Presentació
--GenericName[fa]=ارائه
--GenericName[zh_TW]=簡報
--GenericName[sk]=Prezentácia
--GenericName[ve]=Presentation
--GenericName[uk]=Презентація
--GenericName[hi]=प्रस्तुति
--GenericName[pt]=Apresentação
--GenericName[es]=Presentación
--GenericName[ast]=Presentación
--GenericName[lv]=Prezentācija
--GenericName[fr]=Présentation
--GenericName[ss]=Presentation
--GenericName[or]=ଉପସ୍ଥାପନା
--GenericName[id]=Presentasi
--GenericName[xh]=Presentation
--GenericName[th]=Presentation
--GenericName[sr]=Презентација
--GenericName[si]=ඉදිරිපත් කිරීම
--GenericName[et]=Esitlus
--GenericName[om]=Dhiheessa
--GenericName[mk]=Презентација
--GenericName[en]=Presentation
--GenericName[fi]=Esitys
--GenericName[lt]=Pateiktis
--GenericName[de]=Präsentation
--GenericName[hr]=Prezentacija
--GenericName[be]=Прэзентацыя
--GenericName[zu]=Ukunikezwa kolwazi
--GenericName[sl]=Predstavitev
--GenericName[nn]=Presentasjon
--GenericName[bn]=উপস্থাপনা
--GenericName[ja]=プレゼンテーション
--GenericName[tg]=Баёния
--GenericName[mr]=सादरीकरण
--GenericName[en_ZA]=Presentation
--GenericName[dz]=Presentation
--GenericName[te]=ప్రజంటేషన్ 
--GenericName[he]=מצגת
--GenericName[eo]=Prezentaĵo
--GenericName[ar]=عرض تقديمي
--GenericName[nl]=Presentatie
--GenericName[mn]=Үзүүлэн
--GenericName[as]=পৰিৱেশন
--GenericName[el]=Παρουσίαση
--GenericName[pt_BR]=Apresentação
--Comment=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
--Comment[ne]=इम्प्रेसको प्रयोगद्वारा स्लाईड शोहरू, बैठक र वेब पृष्ठहरूका लागि प्रस्तुतीकरण सिर्जना तथा सम्पादन गर्नुहोस् ।
--Comment[tr]=Impress kullanarak sunum, toplantı, belge ve Web sayfaları oluşturabilir ve düzenleyebilirsiniz.
--Comment[da]=Opret og rediger præsentationer til oplæg, møder og websider ved brug af Impress.
--Comment[ug]=Impress ئىشلىتىپ كۆرسەتمە قۇرۇشقا، تام تەسۋىر، يىغىن ۋە تور بەتتە ئىشلىتىدىغان كۆرسەتمە تەھرىرلەشكە بولىدۇ.
--Comment[ru]=Создание и редактирование презентаций для слайдшоу, встреч и веб-страниц.
--Comment[gl]=Crear e editar presentacións para reunións, páxinas web e presentacións de diapositivas con Impress.
--Comment[nb]=Opprett og rediger presentasjoner for lysbildeframvisning, møter og nettsider ved å bruke Impress.
--Comment[ro]=Creați și editați prezentări pentru întâlniri și pagini web folosind Impress.
--Comment[nso]=Hlama le go lokiša ditlhagišo bakeng sa dipontšho tša selaete, dikopano le matlakala a wepe ka go diriša Impress.
--Comment[ku]=Pêşkêşiyan, nîşandayînên slaytan, civînan û rûpelên Webê bi Impress çêbike û sererast bike.
--Comment[vi]=Tạo và sửa các trình chiếu cho chiếu ảnh, hội họp và trang Web, bằng Impress.
--Comment[tn]=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
--Comment[ta]=வில்லைக்காட்சிகள், கூட்டம், வலைப்பக்கங்கள் ஆகியவற்றிற்கான வழங்கலை உருவாக்கவும் தொகுக்கவும் இம்பிரெசைப் பயன்படுத்துக.
--Comment[rw]=Kurema no guhindura amayerekana y'amagaragazabice, inama n'impapuro Rubuga ukoresheje Impress.
--Comment[nr]=Enza nokuhlela amphrizentheyitjhini wamaslayidishowu, imihlangano namakahsi we-Webh ngokusebenzisa i-Impress.
--Comment[br]=Impress - Krouiñ hag embann kinnigadennoù evit treyonennaouegoù, emvodoù ha pajennoù Web.
--Comment[ts]=Endla ni ku lulamisa Minkombiso ya tislayidi, tipheji ta minhlangani ni ta Web hi ku tirhisa Impress.
--Comment[ml]=ഇംപ്രസ് ഉപയോഗിച്ച് സ്ലൈഡ് പ്രദര്ശനങ്ങളിലെയും, മീറ്റിങ്ങിന്റെയും വെബ്പേജിന്റെയും അവതരണങ്ങള് സൃഷ്ടിക്കുകയും എഡിറ്റു ചെയ്യുകയും ചെയ്യുക.
--Comment[cy]=Creu a golygu cyflwyniadau ar gyfer sioeau sleidiau, cyfarfodydd a thudalennau Gwe gan ddefnyddio Impress.
--Comment[zh_CN]=使用 Impress 创建并编辑幻灯片、会议和网页中使用的演示文稿。
--Comment[st]=Bopa le ho lokisa dinehelano tsa dipontsho tsa selaete, dikopano le maqephe a Wepe ka ho sebedisa Impress.
--Comment[en_GB]=Create and edit presentations for slideshows, meeting and Web pages using Impress.
--Comment[ko]=Impress를 사용하여 슬라이드 쇼, 회의 및 웹 페이지에 대한 프레젠테이션을 만들고 편집합니다.
--Comment[uz]=Impress yordamida slaydlar, uchrashuvlar va veb sahifalar yaratish va oʻzgartirish.
--Comment[cs]=Impress umožňuje vytvářet a upravovat prezentace pro přednášky, porady a webové stránky.
--Comment[km]=បង្កើត និង​កែ​សម្រួល​ការ​បង្ហាញ​សម្រាប់​បង្ហាញ​ស្លាយ កិច្ច​ប្រជុំ និង​ទំព័រ​បណ្តាញ​ដោយ​ប្រើ Impress ។
--Comment[af]=Skep en redigeer voorleggings vir skyfievertonings, vergaderings en webbladsye met Impress.
--Comment[pa_IN]=ਇੰਪਰੈੱਸ ਨਾਲ ਸਲਾਈਡ-ਸ਼ੋ, ਮੀਟਿੰਗ ਅਤੇ ਵੈੱਬਸਫ਼ੇ ਨੂੰ ਬਣਾਇਆ ਅਤੇ ਸੋਧਿਆ ਜਾ ਸਕਦਾ ਹੈ।
--Comment[is]=Búa til og breyta glærukynningum fyrir skyggnusýningar, fundi og vefsíður með því að nota Impress.
--Comment[bs]=Kreiranje i uređivanje prezentacija za prikaze, sastanke i Web stranice koristeći Impress.
--Comment[ca_XV]=Creeu i editeu presentacions per a diapositives, pàgines web i conferències amb l'Impress.
--Comment[ga]=Cruthaigh láithreoireachtaí agus cuir in eagar iad le haghaidh taispeántas sleamhnán, cruinnithe agus leathanaigh Ghréasán le hImpress.
--Comment[ka]=ქმნის და ასწორებს პრეზენტაციებს სლაიდების ჩვენებისთვის,შეხვედრებისა და ვებ-გვერდებისთვის Impress-ის მეშვეობით.
--Comment[eu]=Aurkezpenak sortu eta editatu diapositiba-aurkezpenetarako, bileretarako eta web orrietarako Impress erabiliz.
--Comment[oc]=Impress - Creacion e edicion de presentacions per diaporamas, acamps e paginas Web.
--Comment[bg]=С Impress можете да създавате и редактирате презентации за прожекции, събрания и уебстраници.
--Comment[gu]=ઇમ્પ્રેસ દ્દારા સ્લાઇડ શો, મુલાકાતો અને વેબ પાનાઓ બનાવો અને સુઘારો.
--Comment[sv]=Skapa och redigera presentationer för bildskärmspresentationer, möten och webbsidor med hjälp av Impress.
--Comment[it]=Impress vi permette di creare e modificare presentazioni, diapositive e pagine Web.
--Comment[hu]=Bemutatók készítése és szerkesztése diavetítésekhez vagy a webre az Impress használatával.
--Comment[pl]=Twórz i edytuj prezentacje, które będziesz mógł wykorzystać podczas pokazów, spotkań oraz na stronach www przy pomocy programu Impress.
--Comment[ca]=Creeu i editeu presentacions per a diapositives, pàgines web i conferències amb l'Impress.
--Comment[fa]=با جلوه، ارائه‌هایی برای نمایش‌های اسلایدی، جلسات و صفحات وب ایجاد یا ویرایش کنید.
--Comment[zh_TW]=使用 Impress 可建立與編輯用於投影片、會議和網頁的簡報。
--Comment[sk]=Vytvárajte a upravujte prezentácie pre porady s stretnutia s použitím Impress.
--Comment[ve]=Vhumbani nahone ni lulamise nzudzanyo u itela misumbedzo ya siḽaidi, muṱangano na masiaṱari a Web nga u shumisa Impress.
--Comment[uk]=Створення та редагування презентацій для показу слайдів, зустрічей та веб-сторінок.
--Comment[hi]=इम्प्रेस के प्रयोग से स्लाइडशो, बैठक, और वेब पेज के लिए प्रस्तुति बनाता है और संपादन करता है.
--Comment[pt]=Criar e editar apresentações para reuniões, conferências e páginas web através do Impress.
--Comment[es]=Cree y edite presentaciones para charlas, reuniones y páginas Web con Impress.
--Comment[ast]=Crear y editar presentaciones pa diapositives, aconceyamientos y páxines Web emplegando Impress.
--Comment[lv]=Veidot un rediģēt vizuālos uzskates un prezentāciju līdzekļus, lietojot Impress.
--Comment[fr]=Impress - Création et édition de présentations pour diaporamas, réunions et pages Web.
--Comment[ss]=Yakha u-edithe kwetfulwa kwetitfuntishelela, kuhlangana nemapheji ewebhu ngekusebentisa Impress.
--Comment[or]=ଇମ୍ଫ୍ରେସ୍ ଉପୟୋଗକରି ସ୍ଲାଇଡ୍ ଦୃଶ୍ଯ,ମିଟିଙ୍ଗ ଏବଂ ଉଏବ୍ ପୃଷ୍ଠାଗୁଡିକ ପାଇଁ ଉପସ୍ଥାପନାଗୁଡିକୁ ସୃଷ୍ଟି ଏବଂ ସମ୍ପାଦନ କର।
--Comment[id]=Mengolah presentasi untuk pertunjukan salindia, rapat, dan halaman Web menggunakan Impress.
--Comment[xh]=Dala uze uhlele iinkcazelo-mboniso yemiboniso yezlayidi, iintlanganiso namakhasi Othungelwano ngokusebenzisa i-Impress.
--Comment[th]=สร้างและแก้ไขงานนำเสนอภาพนิ่ง การประชุม และหน้าเว็บโดยการใช้ Impress
--Comment[sr]=Направите и уређујте презентације за пројекције, састанке и Интернет у Презентацији.
--Comment[si]=Impress භාවිතා කරමින් ඉදිරිපත් කිරීම් සඳහා තිරපෙන්නුම්, හමුවීම් සහ වියුණු පිටු සාදන්න සහ වෙනස් කරන්න. 
--Comment[et]=Impress võimaldab luua ja redigeerida esitlusi slaidiseansside, koosolekute ning veebilehtede jaoks.
--Comment[om]=Impress fayyadamuun agarsiisa islaayidiiwwanii, walga'ii fi fuulota saphaphuuf uumi, gulaali.
--Comment[mk]=Креирајте и уредувајте презентации за слајдови, состаноци и веб-страници со користење на Impress.
--Comment[en]=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
--Comment[fi]=Luo ja muokkaa esitys- ja kokouskalvoja sekä web-sivuja käyttämällä Impress -ohjelmaa.
--Comment[lt]=Pateikčių rengykle rengiamos pateiktys pranešimams, pateiktis galima įkelti į tinklalapį.
--Comment[de]=Erstellen und bearbeiten von Präsentationen für Dia-Vorführungen, Meetings und Web-Auftritte mithilfe von Impress.
--Comment[hr]=Stvorite i uredite prezentacije za prikazivanje i web stranice.
--Comment[be]=Стварайце і рэдагуйце прэзентацыі для слайдавых паказаў, сустрэч і старонак Сеціва з дапамогаю Impress-а.
--Comment[zu]=Yenza futhi ulungise imiboniso amaslaydi, amakhasi emihlangano naweWebhu ngokusebenzisa i-Impress.
--Comment[sl]=S programom Impress ustvarjajte in urejajte predstavitve, prosojnice in spletne strani.
--Comment[nn]=Med Impress kan du laga og redigera presentasjonar for framvisingar, møte og nettsider.
--Comment[bn]=ইমপ্রেস ব্যবহার করে স্লাইড-প্রদর্শনী, মিটিং এবং ওয়েবপেজের জন্য উপস্থাপনা তৈরি এবং সম্পাদনা করুন।
--Comment[ja]=Impress を使用して、スライドショー、ミーティングおよび Web ページ用のプレゼンテーションを作成して編集します。
--Comment[tg]=Бо ёрии Impress баёнияҳо сохтан, онҳоро ислоҳ кардан мумкин аст.
--Comment[mr]=Impress चा वापरून स्लाइडशो, भेटी व वेब पान करीता सादरीकरण बनवा व संपादीत करा.
--Comment[en_ZA]=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
--Comment[dz]=ཨིམ་པི་རས་ི་པ་ལག་ལེན་འཐབ་ཐོག་བཤུད་བརྙན་དང་ཞལ་འཛོམས་ ལས་ ཝེབ་པཚུ་གི་དོན་ལས་གསལ་སྟོན་ཚིག་ཡིག་དང་ཚད་རིས་ཚུ་བཟོ་ནི་དང་ཞུན་དག་རྐྱབ་ནི།
--Comment[te]=స్లైడ్ షోలు యొక్క ప్రజంటేషన్ లు,సభ మరియు వెబ్  పుటలును ఇంప్రెస్ వుపయోగించినిర్మించి, సరిచేయుము.
--Comment[he]=יצירה ועריכה של מצגות לתצוגת שקופיות, פגישות ודפי אינטרנט באמצעות Impress.
--Comment[eo]=Krei kaj redakti prezentaĵojn por prezentadoj, renkontiĝoj kaj TTT-paĝoj per Prezentilo.
--Comment[ar]=تحرير العروض التقديمية لعروض الشرائح، والاجتماعات وصفحات ويب وإنشاؤها باستخدام امبريس.
--Comment[nl]=Met Impress kunt u presentaties voor diavoorstellingen, vergaderingen en webpagina's maken en bewerken.
--Comment[mn]=Impress ашиглан үзүүлэн хуудас, уулзалт ба вэб хуудаснууд үүсгэх болон засварлах.
--Comment[as]=Impress ব্যৱহাৰ কৰি শ্লাইডশ্ব', মিটিং আৰু ৱেব পৃষ্ঠা সৃষ্টি আৰু সম্পাদনা কৰক।
--Comment[el]=Δημιουργία και επεξεργασία παρουσιάσεων για προβολή διαφανειών, συναντήσεων και ιστοσελίδων με τη χρήση του Impress.
--Comment[pt_BR]=Crie e edite apresentações para slides, reuniões e páginas da Web por meio do Impress.
--Keywords=Slideshow;Slides;OpenDocument Presentation;Microsoft PowerPoint;Microsoft Works;OpenOffice Impress;odp;ppt;pptx;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Presentation
--Name[ne]=New Presentation
--Name[tr]=Yeni Sunum
--Name[da]=Ny præsentation
--Name[ug]=يېڭى كۆرسەتمە
--Name[ru]=Создать презентацию
--Name[gl]=Presentación
--Name[nb]=Ny presentasjon
--Name[ro]=Prezentare nouă
--Name[nso]=New Presentation
--Name[ku]=New Presentation
--Name[vi]=Trình chiếu mới
--Name[tn]=New Presentation
--Name[ta]=புதிய விளக்கக்காட்சி
--Name[rw]=New Presentation
--Name[nr]=New Presentation
--Name[br]=Kinnigadenn nevez
--Name[ts]=New Presentation
--Name[ml]=പുതിയ പ്രസന്റേഷന്‍
--Name[cy]=Cyflwyniad Newydd
--Name[zh_CN]=新建演示文稿
--Name[st]=New Presentation
--Name[en_GB]=New Presentation
--Name[ko]=새 프레젠테이션
--Name[uz]=New Presentation
--Name[cs]=Nová prezentace
--Name[km]=ការ​បង្ហាញ​ថ្មី
--Name[af]=New Presentation
--Name[pa_IN]=ਨਵਾ ਸਲਾਈਡ-ਸ਼ੋ
--Name[is]=Ný kynning
--Name[bs]=New Presentation
--Name[ca_XV]=Presentació nova
--Name[ga]=Láithreoireacht Nua
--Name[ka]=New Presentation
--Name[eu]=New Presentation
--Name[oc]=Novèla presentacion 
--Name[bg]=Нова презентация
--Name[gu]=નવી રજૂઆત
--Name[sv]=Ny presentation
--Name[it]=Nuova presentazione
--Name[hu]=Új bemutató
--Name[pl]=Nowa prezentacja
--Name[ca]=Presentació nova
--Name[fa]=ارائه جدید
--Name[zh_TW]=新增簡報
--Name[sk]=Nová prezentácia
--Name[ve]=New Presentation
--Name[uk]=New Presentation
--Name[hi]=नई प्रस्तुति
--Name[pt]=Nova apresentação
--Name[es]=Presentación nueva
--Name[ast]=Presentación nueva
--Name[lv]=Jauna prezentācija
--Name[fr]=Nouvelle présentation
--Name[ss]=New Presentation
--Name[or]=ନୂଆ ଉପସ୍ଥାପନା
--Name[id]=Presentasi Baru
--Name[xh]=New Presentation
--Name[th]=New Presentation
--Name[sr]=Нова презентација
--Name[si]=New Presentation
--Name[et]=Uus esitlus
--Name[om]=Dhiheessa
--Name[mk]=New Presentation
--Name[en]=New Presentation
--Name[fi]=Uusi esitys
--Name[lt]=Nauja pateiktis
--Name[de]=Neue Präsentation
--Name[hr]=New Presentation
--Name[be]=Новая прэзентацыя
--Name[zu]=New Presentation
--Name[sl]=Nova predstavitev
--Name[nn]=Ny presentasjon
--Name[bn]=New Presentation
--Name[ja]=新規のプレゼンテーション
--Name[tg]=New Presentation
--Name[mr]=नवीन सादरीकरण
--Name[en_ZA]=New Presentation
--Name[dz]=New Presentation
--Name[te]=కొత్త ప్రజంటేషన్ 
--Name[he]=מצגת חדשה
--Name[eo]=Nova prezentaĵo
--Name[ar]=عرض تقديمي جديد
--Name[nl]=Nieuwe presentatie
--Name[mn]=New Presentation
--Name[as]=নতুন পৰিৱেশন
--Name[el]=Νέα παρουσίαση
--Name[pt_BR]=Nova apresentação
--Exec=libreoffice --impress %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-math.desktop applications/libreoffice-math.desktop
---- applications_old/libreoffice-math.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-math.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,297 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--NoDisplay=true
--Icon=libreoffice-math
--Type=Application
--Categories=Office;Education;Science;Math;
--Exec=libreoffice --math %U
--MimeType=application/vnd.oasis.opendocument.formula;application/vnd.sun.xml.math;application/vnd.oasis.opendocument.formula-template;text/mathml;
--Name=LibreOffice Math
--GenericName=Formula Editor
--GenericName[ne]=सूत्र सम्पादक
--GenericName[tr]=Formül Düzenleyici
--GenericName[da]=Formeleditor
--GenericName[ug]=فورمۇلا تەھرىرلىگۈچ
--GenericName[ru]=Редактор формул
--GenericName[gl]=Editor de fórmulas
--GenericName[nb]=Formelredigering
--GenericName[ro]=Editor de formule
--GenericName[nso]=Morulaganyi wa fomula
--GenericName[ku]=Edîtorê Formulan
--GenericName[vi]=Trình soạn công thức 
--GenericName[tn]=Formula Editor
--GenericName[ta]=சூத்திரத் தொகுப்பி
--GenericName[rw]=Formula Editor
--GenericName[nr]=Formula Editor
--GenericName[br]=Embanner reollunioù
--GenericName[ts]=Formula Editor
--GenericName[ml]=ഫോര്‍മുലാ എഡിറ്റര്‍
--GenericName[cy]=Golygydd Fformiwla
--GenericName[zh_CN]=公式编辑器
--GenericName[st]=Formula Editor
--GenericName[en_GB]=Formula Editor
--GenericName[ko]=수식 편집기
--GenericName[uz]=Formula tahrirchisi
--GenericName[cs]=Editor vzorců
--GenericName[km]=កម្មវិធី​កែសម្រួល​រូបមន្ដ
--GenericName[af]=Formule-redigeerder
--GenericName[pa_IN]=ਫਾਰਮੂਲਾ ਐਡੀਟਰ
--GenericName[is]=Formúluritill
--GenericName[bs]=Editor za formule
--GenericName[ca_XV]=Editor de fórmules
--GenericName[ga]=Eagarthóir Foirmlí
--GenericName[ka]=Formula Editor
--GenericName[eu]=Formula editorea
--GenericName[oc]=Editor de formula
--GenericName[bg]=Редактор на формули
--GenericName[gu]=સૂત્ર સંપાદક
--GenericName[sv]=Formelredigerare
--GenericName[it]=Elaboratore di formule
--GenericName[hu]=Képletszerkesztő
--GenericName[pl]=Edytor formuł
--GenericName[ca]=Editor de fórmules
--GenericName[fa]=ویرایش‌گر فرمول
--GenericName[zh_TW]=公式編輯器
--GenericName[sk]=Editor vzorcov
--GenericName[ve]=Formula Editor
--GenericName[uk]=Formula Editor
--GenericName[hi]=सूत्र संपादक
--GenericName[pt]=Editor de fórmulas
--GenericName[es]=Editor de fórmulas
--GenericName[ast]=Editor de fórmules
--GenericName[lv]=Formulu redaktors
--GenericName[fr]=Éditeur de formule
--GenericName[ss]=Formula Editor
--GenericName[or]=ସୂତ୍ର ସମ୍ପାଦକ
--GenericName[id]=Penyunting Rumus
--GenericName[xh]=Formula Editor
--GenericName[th]=Formula Editor
--GenericName[sr]=Уређивач формуле
--GenericName[si]=සූත්‍ර සකසනය
--GenericName[et]=Valemiredaktor
--GenericName[om]=Gulaalaa Foormulaa
--GenericName[mk]=Уредувач на формула
--GenericName[en]=Formula Editor
--GenericName[fi]=Kaavaeditori
--GenericName[lt]=Formulių rengyklė
--GenericName[de]=Formeleditor
--GenericName[hr]=Uređivač matematičkih formula
--GenericName[be]=Рэдактар формул
--GenericName[zu]=Formula Editor
--GenericName[sl]=Urejevalnik formul
--GenericName[nn]=Formelredigering
--GenericName[bn]=সূত্র সম্পাদক
--GenericName[ja]=数式エディター
--GenericName[tg]=Formula Editor
--GenericName[mr]=सूत्र संपादक
--GenericName[en_ZA]=Formula Editor
--GenericName[dz]=Formula Editor
--GenericName[te]=ఫార్ములా సరికూర్పరి
--GenericName[he]=עורך נוסחאות
--GenericName[eo]=Formuloredaktilo
--GenericName[ar]=محرر الصيغة
--GenericName[nl]=Formule-bewerler
--GenericName[mn]=Formula Editor
--GenericName[as]=সূত্র সম্পাদক
--GenericName[el]=Επεξεργαστής τύπων
--GenericName[pt_BR]=Editor de fórmulas
--Comment=Create and edit scientific formulas and equations by using Math.
--Comment[ne]=गणितको प्रयोगद्वारा वैज्ञानिक सूत्रहरू र समीकरणहरू सिर्जना तथा सम्पादन गर्नुहोस् ।
--Comment[tr]=Math kullanarak bilimsel formülleri ve eşitlikleri oluşturabilir ve düzenleyebilirsiniz.
--Comment[da]=Opret og rediger videnskabelige formler ved brug af Math.
--Comment[ug]=Math ئىشلىتىپ ئىلىم-پەن فورمۇلاسى ۋە ئىپادىسى قۇرىدۇ، تەھرىرلەيدۇ.
--Comment[ru]=Создание и редактирование научных формул и уравнений.
--Comment[gl]=Crear e editar fórmulas científicas e ecuacións con Math.
--Comment[nb]=Opprett og rediger vitenskapelige formler og ligninger ved bruk av Math.
--Comment[ro]=Creați și editați formule științifice și ecuații folosind Math.
--Comment[nso]=Hlama le go lokiša difomula tša saense le diekhoišene ka go diriša Math.
--Comment[ku]=Wekhevîn û formulên zanistî bi Mathê çê bike û sererast bike.
--Comment[vi]=Tạo và sửa công thức và phương trình khoa học, dùng trình Math.
--Comment[tn]=Create and edit scientific formulas and equations by using Math.
--Comment[ta]=அறிவியல் சூத்திரங்களையும் சமன்பாடுகளையும் உருவாக்க, தொகுக்க மேத்தைப் பயன்படுத்துக.
--Comment[rw]=Kurema no guhindura inzira n'inganyagaciro bya gihanga ukoresheje Math.
--Comment[nr]=Enza nokuhlela amafomula namakhotheyitjhini ngokusebenzisa i-Math.
--Comment[br]=Math. - Krouiñ hag embann reollunioù skiantel hag ataladoù.
--Comment[ts]=Endla ni ku lulamisa Tifomula ta vutshila bya sayense ni tinhlayo hi ku tirhisa Math.
--Comment[ml]=കണക്ക് ഉപയോഗിച്ച് ശാസ്ത്രീയ സൂത്രവാക്യങ്ങളും  സമവാക്യങ്ങളും സൃഷ്ടിക്കുകയും എഡിറ്റു ചെയ്യുകയും ചെയ്യാം.
--Comment[cy]=Creu a golygu fformiwlâu gwyddonol a hafaliadau gan ddefnyddio Math.
--Comment[zh_CN]=使用 Math 创建并编辑科学公式和方程式。
--Comment[st]=Bopa le ho lokisa difomula tsa saense le diekweishene ka ho sebedisa Math.
--Comment[en_GB]=Create and edit scientific formulae and equations using Math.
--Comment[ko]=Math를 사용하여 수식 및 공학용 수식을 만들고 편집합니다.
--Comment[uz]=Math yordamida ilmiy formulalarni tuzish va tahrirlash.
--Comment[cs]=Math umožňuje vytvářet a upravovat vědecké vzorce a rovnice.
--Comment[km]=បង្កើត និង​កែ​សម្រួល​រូបមន្ត​វិទ្យាសាស្ត្រ និង​សមីការ​ដោយ​ប្រើ Math ។
--Comment[af]=Skep en redigeer wetenskaplike formules en vergelykings met Math.
--Comment[pa_IN]=ਗਣਿਤ (Math) ਨਾਲ ਵਿਗਿਆਨਕ ਫਾਰਮੂਲੇ ਅਤੇ ਸਮੀਕਰਨ ਬਣਾਓ।
--Comment[is]=Búa til og breyta vísindaformúlum og jöfnum með því að nota Math.
--Comment[bs]=Kreiranje i uređivanje naučnih formula i jednačina koristeći Math.
--Comment[ca_XV]=Creeu i editeu fórmules científiques i equacions amb el Math.
--Comment[ga]=Cruthaigh foirmlí eolaíocha agus cothromóidí agus cuir iad in eagar le Math.
--Comment[ka]=ქმნის და ასწორებს სამეცნიერო ფორმულებს და განტოლებებს Math-ის გამოყენებით.
--Comment[eu]=Formula zientifikoak eta ekuazioak sortu eta editatu Math erabiliz.
--Comment[oc]=Math - Creacion e edicion de formulas scientificas e d'eqüacions.
--Comment[bg]=С Math можете да създавате и редактирате математически формули и уравнения.
--Comment[gu]=ગણિત વડે વૈજ્ઞાનિક સુત્રો અને સમીકરણો બનાવો.
--Comment[sv]=Skapa och redigera vetenskapliga formler och ekvationer med hjälp av Math.
--Comment[it]=Math vi permette di creare e modificare formule scientifiche ed equazioni.
--Comment[hu]=Képletek és egyenletek létrehozása és szerkesztése a Math használatával.
--Comment[pl]=Twórz i edytuj wzory matematyczne i naukowe używając programu Math.
--Comment[ca]=Creeu i editeu fórmules científiques i equacions amb el Math.
--Comment[fa]=با استفاده از ریاضی، فرمول‌ها و معادلات ریاضی ایجاد یا ویرایش کنید.
--Comment[zh_TW]=使用 Math 可建立與編輯科學公式與方程式。
--Comment[sk]=Vytvárajte a upravujte vedecké vzorce a výrazy s použitím Math.
--Comment[ve]=Vhumbani na u lumalamisa dzifomuḽa dza sainthifiki na dziikhwesheni nga u shumisa Math.
--Comment[uk]=Створення та редагування наукових формул та рівнянь.
--Comment[hi]=गणित के प्रयोग से वैज्ञानिक सूत्र बनाएं और संपादित करें.
--Comment[pt]=Criar e editar fórmulas e equações científicas através do Math.
--Comment[es]=Cree y edite fórmulas científicas y ecuaciones con Math.
--Comment[ast]=Crear y editar fórmules científiques y ecuaciones emplegando Math.
--Comment[lv]=Veidot un rediģēt formulas un vienādojumus, lietojot Math.
--Comment[fr]=Math - Création et édition de formules scientifiques et d'équations.
--Comment[ss]=Yakha u-edithe ngekwesayensi yemafomula nemakhweshini ngakusebentisa Math.
--Comment[or]=ଗଣିତ ଉପୟୋଗକରି ବୌଜ୍ଞାନିକ ସୂତ୍ର ଏବଂ ସମିକରଣଗୁଡିକୁ   ସୃଷ୍ଟି ଏବଂ ସମ୍ପାଦନ କର ।
--Comment[id]=Mengolah rumus ilmiah maupun persamaannya menggunakan Math.
--Comment[xh]=Dala uze uhlele iindlela zokusebenzisa inzululwazi nongqinelaniso ngokusebenzisa u-Math.
--Comment[th]=สร้างและแก้ไขสูตรและสมการทางวิทยาศาสตร์โดยการใช้ Math
--Comment[sr]=Направите и уређујте научне формуле и једначине у Математици.
--Comment[si]=Math භාවිතා කරමින් විද්‍යාත්මක සූත්‍ර සහ සමීකරණ සාදන්න සහ වෙනස් කරන්න.
--Comment[et]=Math võimaldab luua ja redigeerida teaduslikke valemeid ning võrrandeid.
--Comment[om]=Math fayyadamuun foormulaawwan saayinsaawaa fi himoota qixxaatoo uumi, gulaali.
--Comment[mk]=Креирајте и уредувајте научни формули и равенки користејќи Math.
--Comment[en]=Create and edit scientific formulas and equations by using Math.
--Comment[fi]=Luo ja muokkaa tieteellisiä kaavioita ja yhtälöitä käyttämällä Math -ohjelmaa.
--Comment[lt]=Formulių rengyklė skirta formulėms ir lygtims rašyti.
--Comment[de]=Wissenschaftliche Formeln setzen und bearbeiten - Math macht's möglich.
--Comment[hr]=Stvorite i uredite znanstvene formule i jednadžbe.
--Comment[be]=Стварайце і рэдагуйце навуковыя формулы і ўраўненні з дапамогаю Math-а.
--Comment[zu]=Yenza futhi ulungise amafomula ezesayensi nama-ikhuweyjini ngokusebenzisa into yeziBalo.
--Comment[sl]=S programom Math ustvarjajte in urejajte znanstvene formule in enačbe.
--Comment[nn]=Med Math kan du laga og redigera vitskaplege formlar og likningar.
--Comment[bn]=ম্যাথ ব্যবহার করে বৈজ্ঞানিক ফর্মূলা এবং সমীকরণ তৈরি এবং সম্পাদনা করুন। 
--Comment[ja]=Math を使用して、科学の公式や方程式を作成し、編集します。
--Comment[tg]=Бо ёрии Math формулаҳои илмӣ сохтан, онҳоро ислоҳ кардан мумкин аст.
--Comment[mr]=Math चा वापर करून वैज्ञानिक सूत्रे व समीकरणे बनवा व संपादीत करा.
--Comment[en_ZA]=Create and edit scientific formulae and equations by using Math.
--Comment[dz]=ཨང་རྩིས་ལག་ལེན་འཐབ་ཐོག་ལས་ ཚན་རིག་དང་འབྲེལ་བའི་མན་ངག་དང་ཨི་ཀུའེ་ཊེ་ཤཱན་བཟོ་ནི་དང་ཞུན་དག་རྐྱབ་ནི།
--Comment[te]=శాస్త్ర సూత్రములు మరియు   సమీకరణములను  మేథ్ తో నిర్మించి, సరిచేయుము
--Comment[he]=יצירה ועריכה של נוסחאות ומשוואות מדעיות באמצעות תוכנת הנוסחאות.
--Comment[eo]=Krei kaj redakti sciencajn formulojn kaj ekvaciojn per Formulilo.
--Comment[ar]=إنشاء الصيغ العلمية والمعادلات وتحريرها باستخدام ماث.
--Comment[nl]=Met Math kunt u wiskundige formules en vergelijkingen maken en bewerken.
--Comment[mn]=Math ашиглан шинжлэх ухааны томьёо ба тэнцэтгэл биш үүсгэх болон засварлах.
--Comment[as]=Math ব্যৱহাৰ কৰি বৈজ্ঞানিক সূত্ৰ আৰু সমীকৰণবোৰ সৃষ্টি আৰু সম্পাদনা কৰক।
--Comment[el]=Δημιουργία και επεξεργασία επιστημονικών τύπων και εξισώσεων με τη χρήση του Math.
--Comment[pt_BR]=Crie e edite fórmulas científicas e equações por meio do Math.
--Keywords=Equation;OpenDocument Formula;Formula;odf;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Formula
--Name[ne]=New Formula
--Name[tr]=Yeni Formül
--Name[da]=Ny formel
--Name[ug]=يېڭى فورمۇلا
--Name[ru]=Создать формулу
--Name[gl]=Nova fórmula
--Name[nb]=Ny formel
--Name[ro]=Formulă nouă
--Name[nso]=New Formula
--Name[ku]=New Formula
--Name[vi]=Công thức mới
--Name[tn]=New Formula
--Name[ta]=புதிய சூத்திரம்
--Name[rw]=New Formula
--Name[nr]=New Formula
--Name[br]=Reollun nevez
--Name[ts]=New Formula
--Name[ml]=പുതിയ ഫോര്‍മുലാ
--Name[cy]=Fformiwla Newydd
--Name[zh_CN]=新建公式
--Name[st]=New Formula
--Name[en_GB]=New Formula
--Name[ko]=새 수식
--Name[uz]=New Formula
--Name[cs]=Nový vzorec
--Name[km]=រូបមន្ត​ថ្មី
--Name[af]=New Formula
--Name[pa_IN]=ਨਵਾ ਫਾਰਮੁੱਲਾ
--Name[is]=Ný formúla
--Name[bs]=New Formula
--Name[ca_XV]=Fórmula nova
--Name[ga]=Foirmle Nua
--Name[ka]=New Formula
--Name[eu]=New Formula
--Name[oc]=Novèla formula
--Name[bg]=Нова формула
--Name[gu]=નવુ સૂત્ર
--Name[sv]=Nytt formelblad
--Name[it]=Nuova formula
--Name[hu]=Új képlet
--Name[pl]=Nowa formuła
--Name[ca]=Fórmula nova
--Name[fa]=فرمول جدید
--Name[zh_TW]=新增公式
--Name[sk]=Nový vzorec
--Name[ve]=New Formula
--Name[uk]=New Formula
--Name[hi]=नया सूत्र
--Name[pt]=Nova fórmula
--Name[es]=Fórmula nueva
--Name[ast]=Fórmula nueva
--Name[lv]=Jauna formula
--Name[fr]=Nouvelle formule
--Name[ss]=New Formula
--Name[or]=ନୂଆ ସୂତ୍ର
--Name[id]=Rumus Baru
--Name[xh]=New Formula
--Name[th]=New Formula
--Name[sr]=Нова формула
--Name[si]=New Formula
--Name[et]=Uus valem
--Name[om]=Formulaa Haara
--Name[mk]=New Formula
--Name[en]=New Formula
--Name[fi]=Uusi kaava
--Name[lt]=Naujas formulių dokumentas
--Name[de]=Neue Formel
--Name[hr]=New Formula
--Name[be]=Новая формула
--Name[zu]=New Formula
--Name[sl]=Nova formula
--Name[nn]=Ny formel
--Name[bn]=New Formula
--Name[ja]=新規の数式
--Name[tg]=New Formula
--Name[mr]=नवीन सूत्र
--Name[en_ZA]=New Formula
--Name[dz]=New Formula
--Name[te]=కొత్త సూత్రం
--Name[he]=נוסחה חדשה
--Name[eo]=Nova formulo
--Name[ar]=معادلة جديدة
--Name[nl]=Nieuwe formule
--Name[mn]=New Formula
--Name[as]=নতুন সুত্ৰ
--Name[el]=Νέος τύπος
--Name[pt_BR]=Nova fórmula
--Exec=libreoffice --math %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-startcenter.desktop applications/libreoffice-startcenter.desktop
---- applications_old/libreoffice-startcenter.desktop	2013-04-12 02:18:31.000000000 +0800
-+++ applications/libreoffice-startcenter.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,202 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-startcenter
--Type=Application
--Categories=Office;X-Red-Hat-Base;X-SuSE-Core-Office;X-MandrivaLinux-Office-Other;
--Exec=libreoffice %U
--MimeType=application/vnd.openofficeorg.extension;
--Name=LibreOffice
--GenericName=Office
--GenericName[ne]=कार्यालय
--GenericName[tr]=Ofis
--GenericName[da]=Kontor
--GenericName[ug]=ئىشخانا
--GenericName[ru]=Офис
--GenericName[gl]=Oficina
--GenericName[nb]=Kontor
--GenericName[ro]=Birou
--GenericName[nso]=Ofisi
--GenericName[ku]=Nivîsgeh
--GenericName[vi]=Văn phòng 
--GenericName[tn]=Kantoro/Ofisi
--GenericName[ta]=அலுவலகம்
--GenericName[rw]=Ofise
--GenericName[nr]=i-Ofisi
--GenericName[br]=Burev
--GenericName[ts]=Ofisi
--GenericName[ml]=ഓഫീസ്
--GenericName[cy]=Swyddfa
--GenericName[zh_CN]=办公室
--GenericName[st]=Ofisi
--GenericName[en_GB]=Office
--GenericName[ko]=오피스
--GenericName[uz]=Ofis
--GenericName[cs]=Kancelář
--GenericName[km]=ការិយាល័យ
--GenericName[af]=Kantoor
--GenericName[pa_IN]=ਆਫਿਸ
--GenericName[is]=Skrifstofa
--GenericName[bs]=Office
--GenericName[ca_XV]=Oficina
--GenericName[ga]=Oifig
--GenericName[ka]=ოფისი
--GenericName[eu]=Bulegoa
--GenericName[oc]=Burotica
--GenericName[bg]=Офис пакет
--GenericName[gu]=ઓફિસે
--GenericName[sv]=Kontor
--GenericName[it]=Ufficio
--GenericName[hu]=Iroda
--GenericName[pl]=Biuro
--GenericName[ca]=Oficina
--GenericName[fa]=اداری
--GenericName[zh_TW]=辦公室
--GenericName[sk]=Kancelária
--GenericName[ve]=Ofisi
--GenericName[uk]=Офіс
--GenericName[hi]=ऑफ़िस
--GenericName[pt]=Escritório
--GenericName[es]=Office
--GenericName[ast]=Oficina
--GenericName[lv]=Birojs
--GenericName[fr]=Bureau
--GenericName[ss]=Lihhovisi
--GenericName[or]=କାର୍ଯ୍ୟାଳୟ
--GenericName[id]=Perkantoran
--GenericName[xh]=Iofisi
--GenericName[th]=ที่ทำงาน
--GenericName[sr]=Канцеларија
--GenericName[si]=කාර්‍යයාලීය
--GenericName[et]=Kontoritöö
--GenericName[om]=Waajjira
--GenericName[mk]=Канцеларија
--GenericName[en]=Office
--GenericName[fi]=Toimisto
--GenericName[lt]=Raštinės programos
--GenericName[de]=Office
--GenericName[hr]=Ured
--GenericName[be]=Office
--GenericName[zu]=Ihhovisi
--GenericName[sl]=Pisarniški paket
--GenericName[nn]=Kontor
--GenericName[bn]=অফিস
--GenericName[ja]=Office
--GenericName[tg]=Офис
--GenericName[mr]=ऑफिस
--GenericName[en_ZA]=Office
--GenericName[dz]=ཡིག་ཚང་།
--GenericName[te]=కార్యాలయం
--GenericName[he]=משרד
--GenericName[eo]=Oficejo
--GenericName[ar]=مكتب
--GenericName[nl]=Kantoor
--GenericName[mn]=Офис
--GenericName[as]=অফিচ 
--GenericName[el]=Γραφείο
--GenericName[pt_BR]=Office
--Comment=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[ne]=यो कार्यालय उपयोगिता सुइट खुला र स्तरीय ODF कागजातको ढाँचा संग मिल्दो छ। The Document Foundation द्वारा समर्थित।
--Comment[tr]=Ofis üretkenlik takımı açık ve standartlaşmış ODF doküman biçemi ile uyumludur. The Document Foundation tarafından desteklenmektedir.
--Comment[da]=Kontorpakken er kompatibel med den åbne standard ODF. Støttes af The Document Foundation.
--Comment[ug]=بۇ ئىشخانا يۈرۈشلۇك دېتالى ئوچۇق بولغان ODF پۈتۈك پىچىمىنىڭ ئۆلچىمى بىلەن ماسلىشىدۇ. The Document Foundation قوللاش بىلەن تەمىنلەيدۇ.
--Comment[ru]=Офисный пакет совместим с открытым и стандартизованным форматом документов ODF. Поддерживается The Document Foundation.
--Comment[gl]=A suite de produtividade de oficina compatíbel co formato de documento estándar ODF. Promovida por The Document Foundation.
--Comment[nb]=Kontorpakken som bruker det åpne og standardiserte dokumentformatet ODF. Støttet av The Document Foundation.
--Comment[ro]=Suita de productivitate pentru birou compatibilă cu formatul deschis și standardizat ODF. Sprijinită de The Document Foundation.
--Comment[nso]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[ku]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[vi]=Bộ công cụ văn phòng này tương thích với các chuẩn ODF. Được hỗ trợ bởi The Document Foundation.
--Comment[tn]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[ta]=இந்த அலுவலக உற்பத்தித்திறன் தொகுப்பு, திறந்த மற்றும் தரப்படுத்தப்பட்ட ODF ஆவண வடிவமைப்புடன் ஒத்திசைகிறது. டொகுமண்ட் பவுண்டேஷனால் ஆதரிக்கப்படுகிறது.
--Comment[rw]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[nr]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[br]=An heuliad burevek keverlec'h gant ar mentrezh teul ODF skoueriekaet ha digor. Skoret eo gant The Document Foundation.
--Comment[ts]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[ml]=സ്വതന്ത്രവും നിലവാരവുമുള്ള ഒഡിഎഫ് ശൈലിയ്ക്കു് ഉചിതമായ ഓഫീസ് പ്രൊഡക്ടിവിറ്റി സ്യൂട്ട്. ഇതിനെ ഡോക്യുമെന്റ് ഫൌണ്ടേഷന്‍ പിന്തുണയ്ക്കുന്നു.
--Comment[cy]=Y casgliad o ragerlnni swyddfa sy'n gydnaws a'r ffprmat Dogfen ODF safonol. Cefnogir gan Supported by The Document Foundation.
--Comment[zh_CN]=本办公生产套件与开放的 ODF 文档格式标准兼容。由 The Document Foundation 提供支持。
--Comment[st]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[en_GB]=The office productivity suite compatible to the open and standardised ODF document format. Supported by The Document Foundation.
--Comment[ko]=개방되고 표준화된 ODF 문서 포맷과 호환되는 오피스 생산성 스위트입니다. The Document Foundation에서 지원합니다.
--Comment[uz]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[cs]=Kancelářský balík kompatibilní s otevřeným a standardizovaným formátem dokumentů ODF. Podporován The Document Foundation.
--Comment[km]=ឈុតកម្មវិធី​ការិយាល័យ​ឆប​គ្នា​ជា​មួយ​នឹង​ទ្រង់ទ្រាយ​ឯកសារ​ស្តង់ដារ​​ និង​ឥតគិត​ថ្លៃ ODF ។ ដែល​បាន​គាំទ្រ​ដោយ The Document Foundation ។
--Comment[af]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[pa_IN]=ਆਫਿਸ ਪੈਕੇਜ, ਜੋ ਕਿ ਓਪਨ ਤੇ ਸਟੈਂਡਰਡ ODF ਦਸਤਾਵੇਜ਼ ਫਾਰਮੈਟ ਲਈ ਅਨੁਕੂਲ ਹੈ। ਇਹ ਡੌਕੂਮੈਂਟ ਫਾਊਂਡੇਸ਼ਨ ਵਲੋਂ ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਹੈ।
--Comment[is]=Skrifstofuhugbúnaður sem samræmist opna og staðlaða ODF skjalasniðinu. Stutt af The Document Foundation.
--Comment[bs]=Uredski paket kompatibilan sa otvorenim i standardnim ODF formatom dokumenata. Podržan od strane Dokument fondacije.
--Comment[ca_XV]=El paquet ofimàtic compatible amb el format de document obert i estàndard ODF. Amb el suport de The Document Foundation.
--Comment[ga]=Sraith feidhmchlár le haghaidh táirgiúlachta oifige atá comhoiriúnach don fhormáid oscailte chaighdeánach ODF. Tacaíonn The Document Foundation leis.
--Comment[ka]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[eu]=ODF dokumentu-formatu ireki eta estandarrarekin bateragarria den bulegotikako suitea. The Document Foundation-ek sustatuta.
--Comment[oc]=La seguida burotica compatibla amb lo format de document ODF estandardisada e dobèrt. Presa en carga per The Document Foundation.
--Comment[bg]=Офис пакетът, съвместим с отворения и стандартизиран формат за документи ODF. Поддържа се от The Document Foundation.
--Comment[gu]=ઑફિસ પ્રોડક્ટીવીટી સ્યૂટ ઓપન અને મૂળભૂત થયેલ ODF દસ્તાવેજ બંધારણ સાથે સુસંગત છે. દસ્તાવેજ ફાઉન્ડેશન દ્દારા આધારભૂત છે.
--Comment[sv]=Kontorssviten som är kompatibel med det öppna och standardiserade filformatet ODF. Ges ut av The Document Foundation.
--Comment[it]=La suite di produttività per l'ufficio compatibile con il formato standard aperto ODF. Supportata da The Document Foundation.
--Comment[hu]=Az irodai programcsomag kompatibilis a nyílt és a szabványosított ODF dokumentumformátummal. A The Document Foundation támogatja.
--Comment[pl]=Wydajny pakiet biurowy, kompatybilny z otwartym i znormalizowanym formatem ODF. Rozwijany przez The Document Foundation.
--Comment[ca]=El paquet ofimàtic compatible amb el format de document obert i estàndard ODF. Amb el suport de The Document Foundation.
--Comment[fa]=مجموعه نرم‌افزار اداری سازگار با قالب سند آزاد و استاندارد شده ODF. پشتیبانی شده توسط بنیاد اسناد.
--Comment[zh_TW]=與開放且標準化的 ODF 文件格式相容的辦公生產力套件。由文件基金會提供支援。
--Comment[sk]=Kancelársky balík kompatibilný s otvoreným a štandardizovným formátom ODF. Podporovaný nadáciou The Document Foundation
--Comment[ve]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[uk]=Офісний пакет сумісний з відкритим і стандартизованим форматом документів ODF. Підтримується The Document Foundation.
--Comment[hi]=मुक्त और मानकीकृत ODF दस्तावेज़ प्रारूप के सुसंगत ऑफिस उत्पादकता सूइट. डॉक्यूमेंट फाउंडेशन द्वारा समर्थित.
--Comment[pt]=O conjunto de aplicações de escritório, compatíveis com o formato de documentos padrão ODF. Suportado pela The Document Foundation.
--Comment[es]=El conjunto de aplicaciones de productividad ofimática compatible con el formato de documentos abierto y estandarizado ODF. Con el apoyo de The Document Foundation.
--Comment[ast]=La suite de productividá d'oficina compatible col formatu de documentos abiertu y estandarizáu ODF. Col sofitu de The Document Foundation.
--Comment[lv]=Biroja programmatūras komplekts, kas ir savietojams ar atvērto un standartizēto ODF dokumentu formātu. Atbalsta The Document Foundation.
--Comment[fr]=La suite de productivité bureautique compatible avec le format de document ODF standardisé et ouvert. Prise en charge par The Document Foundation.
--Comment[ss]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[or]=କାର୍ଯ୍ୟାଳୟ ଉତ୍ପାଦନ ମୁକ୍ତ ଏବଂ ମାନକ ODF ଦଲିଲ ଶୈଳୀ ସହିତ ସୁସଂଗତ ମେଳଖାଇଥାଏ। ଏହା ଦଲିଲ ଅନୁଷ୍ଠାନ ଦ୍ୱାରା ସମର୍ଥିତ।
--Comment[id]=Paket aplikasi kantor ini kompatibel dengan format dokumen ODF. Didukung oleh The Document Foundation.
--Comment[xh]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[th]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[sr]=Канцеларијски пакет сагласан са стандардизованим отвореним документ-форматом. Подржан од стране „Документ фондације“.
--Comment[si]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[et]=Kontoritarkvara komplekt, mis ühildub avatud ja standardiseeritud ODF-dokumendivorminguga. Toetab Document Foundation.
--Comment[om]=Gartuu sirna offisii gulantaa banaan walsimatee fi ODF fayyadamu. Dokumant Faawundeeshiniin kan deeggaramu.
--Comment[mk]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[en]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[fi]=Avoimen ODF-asiakirjastandardin kanssa yhteensopiva, The Document Foundationin tukema toimisto-ohjelmisto.
--Comment[lt]=Raštinės programų rinkinys, suderinamas su atviruoju standartizuotu ODF dokumentų formatu. Rinkinį kuria „The Document Foundation“ bendruomenė.
--Comment[de]=Die produktive Bürosoftware ist kompatibel zu dem offenen und standardisierten OpenDocument Format (ODF). Unterstützt von The Document Foundation.
--Comment[hr]=Uredski paket je usklađen s otvorenim i standardiziranim ODF formatom dokumenta. Podržan od strane The Document Foundation.
--Comment[be]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[zu]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[sl]=Pisarniški paket, združljiv z odprto in standardizirano vrsto datotek dokumentov ODF. Projekt je podprla The Document Foundation.
--Comment[nn]=Kontorpakka som bruker det opne og standardiserte dokumentformatet ODF. Støtta av The Document Foundation.
--Comment[bn]=অফিস প্রোডাক্টিভিটি স্যুট মুক্ত ও আদর্শ ODF নথি বিন্যাসের সাথে সঙ্গতিপূর্ণ। নথি ফাউন্ডেশন দ্বারা সমর্থিত।
--Comment[ja]=オープンで標準化された ODF ドキュメント形式に準拠したオフィススイートです。The Document Foundation によってサポートされています。
--Comment[tg]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[mr]=ओपन व मानक ODF दस्तऐवज रूपणशी सहत्व ऑफिस प्रोडक्टिविटि संच. डॉक्युमेंट फाँडेशनद्वारे समर्थीत.
--Comment[en_ZA]=The office productivity suite compatible to the open and standardised ODF document format. Supported by The Document Foundation.
--Comment[dz]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[te]=కార్యాలయ ఉత్పాదక ఉపకరణాల సమదాయం  అరక్షిత మరియు ప్రామాణీకరించబడిన ODF పత్ర తీరుతో సరిపోలినది. ద డాక్యుమెంట్ ఫౌండేషన్ మద్దతు కలిగినది
--Comment[he]=חבילת כלי המשרד תואמת למבנה הקבצים התקני והפתוח ODF. כאשר התמיכה הנה מצד The Document Foundation (קרן המסמך).
--Comment[eo]=La oficeja programaro kongrua kun la malferma kaj norma ODF-dokumenta formato. Subtenata de la Document Foundation. 
--Comment[ar]=الحقيبة اﻻنتاجية المكتبية متوافقة مع صيغ الوثائق المفتوحة المدعومة من مؤسسة الوثائق المفتوحة المصدر.
--Comment[nl]=De suite voor productiviteit op kantoor, compatibel met het open en gestandaardiseerde ODF documentformat. Ondersteund door \"The Document Foundation\".
--Comment[mn]=The office productivity suite compatible to the open and standardized ODF document format. Supported by The Document Foundation.
--Comment[as]=মুক্ত আৰু প্ৰামাণিত ODF দস্তাবেজ বিন্যাসৰ লগত সংগত অফিচ উৎপাদনা চুইট। Document Foundation -ৰ দ্বাৰা সমৰ্থিত।
--Comment[el]=Το συμβατό πακέτο παραγωγικότητας γραφείου στην ανοιχτή και τυποποιημένη μορφή εγγράφου ODF. Υποστηρίζεται από το Document Foundation.
--Comment[pt_BR]=A suite de produtividade de escritório compatível com o formato aberto e padronizado ODF. Com o apoio da The Document Foundation.
-diff -uN applications_old/libreoffice-writer.desktop applications/libreoffice-writer.desktop
---- applications_old/libreoffice-writer.desktop	2013-04-12 02:21:44.000000000 +0800
-+++ applications/libreoffice-writer.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,296 +0,0 @@
--#
--# This file is part of the LibreOffice project.
--#
--# This Source Code Form is subject to the terms of the Mozilla Public
--# License, v. 2.0. If a copy of the MPL was not distributed with this
--# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--#
--# This file incorporates work covered by the following license notice:
--#
--#   Licensed to the Apache Software Foundation (ASF) under one or more
--#   contributor license agreements. See the NOTICE file distributed
--#   with this work for additional information regarding copyright
--#   ownership. The ASF licenses this file to you under the Apache
--#   License, Version 2.0 (the "License"); you may not use this file
--#   except in compliance with the License. You may obtain a copy of
--#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
--#
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Icon=libreoffice-writer
--Type=Application
--Categories=Office;WordProcessor;
--Exec=libreoffice --writer %U
--MimeType=application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.oasis.opendocument.text-web;application/vnd.oasis.opendocument.text-master;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.sun.xml.writer.global;application/msword;application/vnd.ms-word;application/x-doc;application/x-hwp;application/rtf;text/rtf;application/vnd.wordperfect;application/wordperfect;application/vnd.lotus-wordpro;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.ms-word.document.macroenabled.12;application/vnd.openxmlformats-officedocument.wordprocessingml.template;application/vnd.ms-word.template.macroenabled.12;application/vnd.ms-works;application/vnd.stardivision.writer-global;application/x-extension-txt;application/x-t602;text/plain;
--Name=LibreOffice Writer
--GenericName=Word Processor
--GenericName[ne]=वर्ड प्रोसेसर
--GenericName[tr]=Kelime İşlemci
--GenericName[da]=Tekstbehandling
--GenericName[ug]=يېزىق بىر تەرەپ قىلىش
--GenericName[ru]=Текстовый процессор
--GenericName[gl]=Procesador de textos
--GenericName[nb]=Skriveprogram
--GenericName[ro]=Procesor de text
--GenericName[nso]=Sebopi sa mantšu
--GenericName[ku]=Kiryarê Peyvan
--GenericName[vi]=Xử lý từ
--GenericName[tn]=Word Processor
--GenericName[ta]=சொற்செயலி
--GenericName[rw]=Musesenguramagambo
--GenericName[nr]=Word Processor
--GenericName[br]=Kewerier testenn
--GenericName[ts]=Word Processor
--GenericName[ml]=വേര്‍ഡ് പ്രൊസസ്സര്‍
--GenericName[cy]=Prosesydd Geiriau
--GenericName[zh_CN]=字处理器
--GenericName[st]=Word Processor
--GenericName[en_GB]=Word Processor
--GenericName[ko]=워드 프로세서
--GenericName[uz]=Matn protsessori
--GenericName[cs]=Textový procesor
--GenericName[km]=កម្មវិធី​វាយ​អត្ថបទ
--GenericName[af]=Woordverwerker
--GenericName[pa_IN]=ਵਰਡ ਪਰੋਸੈਸਰ
--GenericName[is]=Ritvinnsluforrit
--GenericName[bs]=Program za obradu teksta
--GenericName[ca_XV]=Processador de textos
--GenericName[ga]=Próiseálaí Focal
--GenericName[ka]=Word Processor
--GenericName[eu]=Testu prozesatzailea
--GenericName[oc]=Tractament de tèxte
--GenericName[bg]=Текстообработка
--GenericName[gu]=વર્ડ પ્રોસેસર
--GenericName[sv]=Ordbehandlare
--GenericName[it]=Elaboratore di testo
--GenericName[hu]=Szövegszerkesztő
--GenericName[pl]=Word Processor
--GenericName[ca]=Processador de textos
--GenericName[fa]=واژه‌پرداز
--GenericName[zh_TW]=文書處理器
--GenericName[sk]=Textový procesor
--GenericName[ve]=Word Processor
--GenericName[uk]=Текстовий процесор
--GenericName[hi]=वर्ड प्रोसेसर
--GenericName[pt]=Processador de texto
--GenericName[es]=Procesador de texto
--GenericName[ast]=Procesador de testos
--GenericName[lv]=Tekstapstrādes programma
--GenericName[fr]=Traitement de texte
--GenericName[ss]=Word Processor
--GenericName[or]=ଶବ୍ଦ ସଞ୍ଚାଳକ
--GenericName[id]=Pengolah Kata
--GenericName[xh]=Word Processor
--GenericName[th]=Word Processor
--GenericName[sr]=Уређивач текста
--GenericName[si]=ලිපි සකසනය
--GenericName[et]=Tekstitöötlus
--GenericName[om]=Hujeessaa Jecha
--GenericName[mk]=Обработка на текст
--GenericName[en]=Word Processor
--GenericName[fi]=Tekstinkäsittely
--GenericName[lt]=Tekstų rengyklė
--GenericName[de]=Textverarbeitung
--GenericName[hr]=Program za obradu teksta
--GenericName[be]=Тэкставы працэсар
--GenericName[zu]=Word Processor
--GenericName[sl]=Urejevalnik besedila
--GenericName[nn]=Teksthandsamar
--GenericName[bn]=ওয়ার্ড প্রসেসর
--GenericName[ja]=ワードプロセッサ
--GenericName[tg]=Word Processor
--GenericName[mr]=वर्ड प्रोसेसर
--GenericName[en_ZA]=Word Processor
--GenericName[dz]=Word Processor
--GenericName[te]=వర్డ్ ప్రాసెసర్
--GenericName[he]=מעבד תמלילים
--GenericName[eo]=Verkilo
--GenericName[ar]=معالج المستندات
--GenericName[nl]=Tekstverwerker
--GenericName[mn]=Ворд боловсруулагч
--GenericName[as]=Word প্ৰচেছৰ
--GenericName[el]=Επεξεργαστής Word
--GenericName[pt_BR]=Editor de texto
--Comment=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
--Comment[ne]=लेखकको प्रयोगद्वारा चिठ्ठीहरू, प्रतिवेदनहरू, कागजातहरू र वेब पृष्ठहरूमा पाठ तथा ग्राफिक्स सिर्जना तथा सम्पादन गर्नुहोस् ।
--Comment[tr]=Writer kullanarak mektuplardaki metin ve grafikleri, rapor, belge ve Web sayfaları oluşturabilir ve düzenleyebilirsiniz.
--Comment[da]=LibreOffice-tekstdokument
--Comment[ug]=Writer ئىشلىتىپ خەت-چەك، دوكلات جەدۋىلى، پۈتۈك ۋە تور بەتتىكى تېكست ۋە گرافىكلارنى قۇرۇپ تەھرىرلىگىلى بولىدۇ.
--Comment[ru]=Создание и редактирование текста и рисунков в письмах, отчётах, документах или веб-страницах.
--Comment[gl]=Crear e editar texto ou imaxes en cartas, informes, documentos e páxinas web usando Writer.
--Comment[nb]=Opprett og rediger tekst og bilder i brev, rapporter, dokumenter og nettsider ved å bruke Writer.
--Comment[ro]=Creați și editați textele și grafica din documente, scrisori, rapoarte și pagini web folosind Writer.
--Comment[nso]=Hlama le go lokiša sengwalwa le dikrafiki mangwalong, dipegong, ditokumenteng le matlakaleng a wepe ka go diriša Writer.
--Comment[ku]=Nivîs û grafîkên di name, rapor, belge û rûpelên torê de bî Writerê çêbike û sererast bike.
--Comment[vi]=Tạo và sửa văn bản và đồ họa trong lá thư, báo cáo, tài liệu và trang Web bằng Writer.
--Comment[tn]=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
--Comment[ta]=கடிதங்கள், அறிக்கைகள், ஆவணங்கள், வலைப்பக்கங்கள் ஆகியவற்றின் உரை, படங்கள் இவற்றை உருவாக்கவும் தொகுக்கவும் ரைட்டரைப் பயன்படுத்துக.
--Comment[rw]=Kurema no guhindura umwandiko n'ibishushanyo mu mabaruwa, raporo, inyandiko na paji Rubuga ukoresheje Writer.
--Comment[nr]=Enza nokuhlela itheksti neentjengiso eziseencwadini, emibikweni, emitlolweni nemakhasini weWebh ngokusebenzisa i-Writer.
--Comment[br]=Writer - Krouiñ hag embann testennoù ha skeudennoù evit lizhiri, danevelloù, teulioù ha pajennoù Web.
--Comment[ts]=Cinca ni ku lulamisa marito ni vudirowi eka mapapila, swiviko, tidokumente ni tipheji ta Web hi ku tirhisa Writer.
--Comment[ml]=റൈറ്റര് ഉപയോഗിച്ച്  കത്തുകളിലെയും റിപ്പോര്ട്ടുകളിലെയും ഡോക്കുമെന്റിലെയും വെബ് പേജിലെയും  ടെക്സ്റ്റും ഗ്രാഫിക്സും സൃഷ്ടിക്കുകയും എഡിറ്റു ചെയ്യുകയും ചെയ്യുക.
--Comment[cy]=Creu a golygu testun a graffigau mewn llythyron, adroddiadau, dogfennau a thudalennau Gwe gyda Writer.
--Comment[zh_CN]=使用 Writer 创建并编辑信函、报表、文档和网页中的文本和图形。
--Comment[st]=Bopa le ho lokisa mongolo le ditshwantsho mangolong, ditlalehong, ditokomaneng le maqepheng a Wepe ka ho sebedisa Writer.
--Comment[en_GB]=Create and edit text and graphics in letters, reports, documents and Web pages using Writer.
--Comment[ko]=Writer를 사용하여 편지, 보고서, 문서 및 웹 페이지에서 텍스트와 그림을 만들고 편집할 수 있습니다.
--Comment[uz]=Writer yordamida hisobotlar, matn hujjatlari, veb sahifalar yaratish va tahrirlash.
--Comment[cs]=Writer umožňuje vytvářet a upravovat text a grafiku v dopisech, sestavách, dokumentech a webových stránkách.
--Comment[km]=បង្កើត និង​កែ​សម្រួល​អត្ថបទ និង​ក្រាហ្វិក​ក្នុង​សំបុត្រ របាយការណ៍ ឯកសារ និង​ទំព័រ​បណ្តាញ​ដោយ​ប្រើ Writer ។
--Comment[af]=Skep en redigeer teks en grafika in briewe, verslae, dokumente en webbladsye met Writer.
--Comment[pa_IN]=ਰਾਇਟਰ ਨਾਲ ਪੱਤਰਾਂ, ਰਿਪੋਰਟਾਂ, ਡੌਕੂਮੈਂਟਾਂ ਅਤੇ ਵੈੱਬ ਸਫ਼ਿਆਂ ਵਿੱਚ ਟੈਕਸਟ ਅਤੇ ਚਿੱਤਰ ਬਣਾਏ ਅਤੇ ਸੋਧੇ ਜਾ ਸਕਦੇ ਹਨ।
--Comment[is]=Búa til og breyta texta og myndefni í bréfum, skýrslum, skjölum og vefsíðum með því að nota Writer.
--Comment[bs]=Kreiranje i uređivanje teksta i grafike u pismima, izvještajima, dokumentima i Web stranicama koristeći Writer.
--Comment[ca_XV]=Creeu i editeu textos i gràfics en cartes, informes, documents i pàgines web amb el Writer.
--Comment[ga]=Cruthaigh téacs agus grafaicí i litreacha, tuairiscí, cáipéisí, agus leathanaigh Ghréasáin le Writer.
--Comment[ka]=ქმნის და ასწორებს დოკუმენტებსა და დიაგრამებს წერილებში, მოხსენებებში, დოკუმენტებში და ვებ-გვერდებში Writer-ის მეშვეობით.
--Comment[eu]=Testua eta grafikoak sortu eta editatu gutunetan, txostenetan, dokumentuetan eta web orrietan Writer erabiliz.
--Comment[oc]=Writer - Creacion e edicion de tèxtes e d'imatges per corrièrs, rapòrts, documents e paginas Web.
--Comment[bg]=С Writer можете да създавате и редактирате текст и графики в писма, отчети, документи и уебстраници.
--Comment[gu]=લખાણ દ્દારા પત્રો, અહેવાલો, દસ્તાવેજો અને વેબ પાનાઓમાં લખાણ અને ચિત્રો બનાવો અને સુઘારો.
--Comment[sv]=Skapa och redigera text och grafik i brev, rapporter, dokument och webbsidor med hjälp av Writer.
--Comment[it]=Usando Writer, potete creare e modificare il testo e le immagini di lettere, rapporti, documenti e pagine Web.
--Comment[hu]=Levelek, jelentések, dokumentumok és weboldalak szövegének és grafikájának létrehozása és szerkesztése a Writer használatával.
--Comment[pl]=Twórz i edytuj listy, raporty, dokumenty i strony www wykorzystując program Writer.
--Comment[ca]=Creeu i editeu textos i gràfics en cartes, informes, documents i pàgines web amb el Writer.
--Comment[fa]=با استفاده از کاتب، متن و گرافیک نامه‌ها، گزارش‌ها، نوشتارها و صفحات وب را ایجاد یا ویرایش کنید.
--Comment[zh_TW]=使用 Writer 可以在信件、報告、文件和網頁中建立與編輯文字和圖形。
--Comment[sk]=Vytvárajte a upravujte textové a grafické listy, správy, dokumenty a webové stránky s použitím Writer.
--Comment[ve]=Vhumbani ni dovhe ni lulamise ḽiṅwalwa na dzigirafiki kha maṅwalo, mivhigo, maṅwalo na masiaṱari a Web nga u shumisa Writer.
--Comment[uk]=Створення та редагування тексту та графіки у листах, звітах, документах та веб-сторінках.
--Comment[hi]=लेखक के प्रयोग से पत्र, रिपोर्ट, दस्तावेज़ में पाठ और आरेख बनाता है और संपादित करता है.
--Comment[pt]=Criar e editar texto e objetos gráficos em cartas, relatórios, documentos e páginas web através do Writer.
--Comment[es]=Cree y edite texto y gráficos en cartas, informes, documentos y páginas Web con Writer.
--Comment[ast]=Crear y editar testos y gráficos de cartes, informes, documentos y páxines Web usando Writer.
--Comment[lv]=Veidot un rediģēt tekstu un grafisku vēstulēs, atskaitēs, dokumentos un tīmekļa lapās, lietojot Writer.
--Comment[fr]=Writer - Création et édition de textes et d'images pour courriers, rapports, documents et pages Web.
--Comment[ss]=Yakha u-edithe umbhalo nemagrafiki etincwadzini, umbiko, wemadokhumenti nemapheji eWebhu ngekusebentisa Writer.
--Comment[or]=ରାଇଟର ଉପୟୋଗ କରି ପତ୍ରଗୁଡିକରେ, ରିପୋର୍ଟରେ,ଦଲିଲଗୁଡିକରେ ଏବଂ ଉଏବ୍ ପୃଷ୍ଠାଗୁଡିକରେ ଟେକ୍ସଟ ଏବଂ ଲେଖାଚିତ୍ରଗୁଡିକୁ ସୃଷ୍ଟି ଏବଂ ସମ୍ପାଦନ କରନ୍ତୁ।
--Comment[id]=Mengolah teks dan gambar pada surat, laporan, dokumen, dan halaman Web menggunakan Writer.
--Comment[xh]=Dala uze uhlele isiqendu nezazobe zegrafu ezileteni, iingxelo, amaxwebhu namakhasi Othungelwano ngokusebenzisa i-Writer.
--Comment[th]=สร้างและแก้ไขข้อความและกราฟิกส์ในจดหมาย รายงาน เอกสาร และหน้าเว็บโดยการใช้ Writer
--Comment[sr]=Пишите и уређујте текст и графику у писмима, извештајима и веб страницама у Писцу.
--Comment[si]=Writer භාවිතා කරමින් ලිපි වල පෙළ සහ චිත්‍රක, වාර්තා, ලිපි සහ වියුණු පිටු සාදන්න සහ වෙනස් කරන්න.
--Comment[et]=Writer võimaldab luua ja redigeerida kirjade, aruannete, dokumentide ning veebilehtede teksti ja pilte.
--Comment[om]=Bareessaa fayyadamuun xalayaalee, gabasota, galmeewwanii fi fuulota saphaphuu irratti barruu fi saxxatoo uumi, gulaali.
--Comment[mk]=Креирајте и уредувајте текст и графика во писма, извештаи, документи и веб-страници со користење на Writer.
--Comment[en]=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
--Comment[fi]=Luo ja muokkaa tekstiä ja grafiikkaa kirjeisiin, raportteihin, tekstiasiakirjoihin ja internet-sivuihin Writer-ohjelmalla.
--Comment[lt]=Tekstų rengykle galima kurti laiškus, ataskaitas, kitus dokumentus ir tinklalapius, įterpti į juos paveikslus.
--Comment[de]=Erstellen und bearbeiten von Text und Grafiken in Briefen, Reports, Dokumenten und Web-Seiten - Writer macht's möglich.
--Comment[hr]=Stvorite i uredite tekst i slike u pisma, izvješćima, dokumentima i web stranicama.
--Comment[be]=Стварайце і рэдагуйце тэкст і графіку ў лістах, справаздачах, дакументах і старонках Сеціва з дапамогаю Writer-а.
--Comment[zu]=Yenza futhi ulungise umbhalo nemidwebo esezinhlamvini zamagama, emibikweni, emafayelini nasemakhasini eWebhu ngokusebenzisa i-Writer.
--Comment[sl]=S programom Writer ustvarjajte in urejajte besedilo in slike v pismih, poročilih, dokumentih in spletnih straneh.
--Comment[nn]=Med Writer kan du laga og redigera tekst og bilete i brev, rapportar, dokument og nettsider.
--Comment[bn]=রাইটার ব্যবহার করে চিঠিপত্র, রিপোর্ট, নথি এবং ওয়েবপেজের লেখা ও ছবি তৈরি এবং সম্পাদনা করুন।
--Comment[ja]=Writer を使用して、レター、レポート、ドキュメントおよび Web ページのテキストおよび図を作成および編集します。
--Comment[tg]=Бо ёрии Writer матн ва тасвир сохтан, онҳоро ислоҳ кардан мумкин аст.
--Comment[mr]=Writer चा वापरून पत्रं, अहवाल, दस्तऐवज व वेब पान अंतर्गत पाठ्य व चित्रलेख बनवा व संपादीत करा.
--Comment[en_ZA]=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
--Comment[dz]=རྩོམ་འབྲི་པ་ལག་ལེན་འཐབ་ཐོག་ལས་ ཝེབ་པེཇི་དང་ ཡིག་ཆའི་རིགས་ སྙན་ཞུའི་རིགས་ ཡི་གུའི་རིགས་ཚུ་ནང་ལུ་ ཚིག་ཡིག་དང་ཚད་རིས་ཚུ་བཟོ་ནི་དང་ཞུན་དག་རྐྱབ་ནི།
--Comment[te]=పత్రము మరియు లేఖ యొక్క చిత్రరూపములు,నివేదనలు,పత్రములు మరియు వ్రాయు యంత్రమును ఉపయోగించిన వెబ్  పుటలును నిర్మించి సరిచేయుము. 
--Comment[he]=יצירה ועריכה של טקסט וגרפיקה במכתבים, דוחות, מסמכים ודפי אינטרנט באמצעות Writer.
--Comment[eo]=Krei kaj redakti tekston kaj grafikaĵojn en leteroj, raportoj, dokumentoj kaj TTT-paĝoj per Verkilo.
--Comment[ar]=إنشاء النصوص والرسومات في الخطابات، والتقارير، والمستندات وصفحات ويب وتحريرها باستخدام رايتر.
--Comment[nl]=Met Writer kunt u tekst en afbeeldingen in brieven, rapporten, documenten en webpagina's maken en bewerken.
--Comment[mn]=Writer ашиглан захиа, тайлан, баримт дахь бичвэр ба график үүсгэх болон засварлах.
--Comment[as]=Writer ব্যৱহাৰ কৰি চিঠি, সংবাদ, দস্তাবেজ আৰু পৃষ্ঠাবোৰত থকা লিখনী আৰু গ্ৰাফিক্স সৃষ্টি আৰু সম্পাদনা কৰক।
--Comment[el]=Δημιουργία και επεξεργασία κειμένου και γραφικών σε επιστολές, αναφορές, έγγραφα και ιστοσελίδες με τη χρήση του Writer.
--Comment[pt_BR]=Crie e edite textos e figuras em cartas, relatórios, documentos e páginas da Web por meio do Writer.
--Keywords=Text;Letter;Fax;Document;OpenDocument Text;Microsoft Word;Microsoft Works;Lotus WordPro;OpenOffice Writer;CV;odt;doc;docx;rtf;
--InitialPreference=5
--X-Ayatana-Desktop-Shortcuts=X-New
--[X-New Shortcut Group]
--Name=New Document
--Name[ne]=नयाँ कागजात
--Name[tr]=Yeni Belge
--Name[da]=Nyt dokument
--Name[ug]=يېڭى پۈتۈك
--Name[ru]=Создать документ
--Name[gl]=Novo documento
--Name[nb]=Nytt dokument
--Name[ro]=Document nou
--Name[nso]=Tokumente e mpsha
--Name[ku]=Belgeya Nû
--Name[vi]=Tài liệu mới
--Name[tn]=New Document
--Name[ta]=புதிய ஆவணம்
--Name[rw]=Inyandiko Nshya
--Name[nr]=Umtlolo Omutjha
--Name[br]=Teul nevez
--Name[ts]=Dokumente yintshwa
--Name[ml]=പുതിയ രേഖ
--Name[cy]=Dogfen Newydd
--Name[zh_CN]=新建文档
--Name[st]=New Document
--Name[en_GB]=New Document
--Name[ko]=새 문서
--Name[uz]=New Document
--Name[cs]=Nový dokument
--Name[km]=ឯកសារ​ថ្មី
--Name[af]=Nuwe dokument
--Name[pa_IN]=ਨਵਾ ਦਸਤਾਵੇਜ
--Name[is]=Nýtt skjal
--Name[bs]=Novi dokument
--Name[ca_XV]=Document nou
--Name[ga]=Cáipéis Nua
--Name[ka]=New Document
--Name[eu]=Dokumentu berria
--Name[oc]=Document novèl
--Name[bg]=Нов документ
--Name[gu]=નવું દસ્તાવેજ
--Name[sv]=Nytt dokument
--Name[it]=Nuovo documento
--Name[hu]=Új dokumentum
--Name[pl]=Nowy dokument
--Name[ca]=Document nou
--Name[fa]=پرونده جدید
--Name[zh_TW]=新增文件
--Name[sk]=Nový dokument
--Name[ve]=Ḽiṅwalwa Ḽiswa
--Name[uk]=New Document
--Name[hi]=नया दस्तावेज़
--Name[pt]=Novo documento
--Name[es]=Documento nuevo
--Name[ast]=Documentu nuevu
--Name[lv]=Jauns dokuments
--Name[fr]=Nouveau document
--Name[ss]=Idokhumenti lensha
--Name[or]=ନୂଆ ଦଲିଲ
--Name[id]=Dokumen Baru
--Name[xh]=Uxwebhu Olutsha
--Name[th]=New Document
--Name[sr]=Нови документ
--Name[si]=New Document
--Name[et]=Uus dokument
--Name[om]=Faayilii Haara
--Name[mk]=Нов документ
--Name[en]=New Document
--Name[fi]=Uusi asiakirja
--Name[lt]=Naujas dokumentas
--Name[de]=Neues Dokument
--Name[hr]=Novi dokument
--Name[be]=Новы дакумент
--Name[zu]=Ushicilelo olusha
--Name[sl]=Nov dokument
--Name[nn]=Nytt dokument
--Name[bn]=নতুন নথি
--Name[ja]=新規の文書ドキュメント
--Name[tg]=Ҳуҷҷати нав
--Name[mr]=नवीन दस्तऐवज
--Name[en_ZA]=New Document
--Name[dz]=ཡིག་ཆ་གསརཔ།
--Name[te]=కొత్త పత్రం
--Name[he]=מסמך חדש
--Name[eo]=Nova dokumento
--Name[ar]=مستند جديد
--Name[nl]=Nieuw document
--Name[mn]=New Document
--Name[as]=নতুন দস্তাবেজ
--Name[el]=Νέο έγγραφο
--Name[pt_BR]=Novo documento
--Exec=libreoffice --writer %U
--TargetEnvironment=Unity
-diff -uN applications_old/libreoffice-xsltfilter.desktop applications/libreoffice-xsltfilter.desktop
---- applications_old/libreoffice-xsltfilter.desktop	2013-04-12 02:18:31.000000000 +0800
-+++ applications/libreoffice-xsltfilter.desktop	1970-01-01 08:00:00.000000000 +0800
-@@ -1,96 +0,0 @@
--[Desktop Entry]
--Version=1.0
--Terminal=false
--Type=Application
--Exec=libreoffice %U
--MimeType=application/vnd.oasis.opendocument.text-flat-xml;application/vnd.oasis.opendocument.spreadsheet-flat-xml;application/vnd.oasis.opendocument.graphics-flat-xml;application/vnd.oasis.opendocument.presentation-flat-xml;
--Name=LibreOffice XSLT based filters
--GenericName=XSLT based filters
--GenericName[ne]=XSLT based filters
--GenericName[tr]=XSLT tabanlı süzgeçler
--GenericName[da]=XSLT baserede filtre
--GenericName[ug]=XSLT ئاساسىدىكى سۈزگۈچلەر
--GenericName[ru]=Фильтры XSLT
--GenericName[gl]=Filtros baseados en XSLT
--GenericName[nb]=XSLT-baserte filtre
--GenericName[ro]=Filtru bazat pe XSLT
--GenericName[nso]=XSLT based filters
--GenericName[ku]=XSLT based filters
--GenericName[vi]=Trình lọc theo XSLT
--GenericName[tn]=XSLT based filters
--GenericName[ta]=XSLT அடிப்படையிலான வடிப்பான்கள்
--GenericName[rw]=XSLT based filters
--GenericName[nr]=XSLT based filters
--GenericName[br]=Siloù diazezet war XSLT
--GenericName[ts]=XSLT based filters
--GenericName[ml]=എക്സ്എസ്എല്‍റ്റി അടിസ്ഥാനത്തിലുള്ള ഫില്‍റ്ററുകള്‍
--GenericName[cy]=Hidlau yn seiliedig ar XSLT
--GenericName[zh_CN]=基于 XSLT 的过滤器
--GenericName[st]=XSLT based filters
--GenericName[en_GB]=XSLT based filters
--GenericName[ko]=XSLT 기반 필터
--GenericName[uz]=XSLT based filters
--GenericName[cs]=Filtry používající XSLT
--GenericName[km]=តម្រង​មាន​មូលដ្ឋាន​លើ XSLT
--GenericName[af]=XSLT based filters
--GenericName[pa_IN]=XSLT ਅਧਾਰਿਤ ਫਿਲਟਰ
--GenericName[is]=Síur byggðar á XSLT
--GenericName[bs]=XSLT based filters
--GenericName[ca_XV]=Filtres basats en XLST
--GenericName[ga]=Scagairí bunaithe ar XSLT
--GenericName[ka]=XSLT based filters
--GenericName[eu]=XSLT based filters
--GenericName[oc]=Filtres basats sus XSLT
--GenericName[bg]=XSLT филтри
--GenericName[gu]=XSLT આધારિત ફિલ્ટરો
--GenericName[sv]=XSLT-baserade filter
--GenericName[it]=Filtri basati su XSLT
--GenericName[hu]=XSLT-alapú szűrők
--GenericName[pl]=filtry bazujące na XSLT
--GenericName[ca]=Filtres basats en XLST
--GenericName[fa]=XSLT based filters
--GenericName[zh_TW]=基於 XSLT 的過濾器
--GenericName[sk]=Filtre používajúce XSLT
--GenericName[ve]=XSLT based filters
--GenericName[uk]=XSLT based filters
--GenericName[hi]=XSLT आधारित फिल्टर
--GenericName[pt]=Filtros baseados em XSLT
--GenericName[es]=Filtros basados en XSLT
--GenericName[ast]=Peñeres basaes en XSLT
--GenericName[lv]=Uz XSLT balstīts filtrs
--GenericName[fr]=Filtres basés sur XSLT
--GenericName[ss]=XSLT based filters
--GenericName[or]=XSLT ଆଧାରିତ ଛାଣକଗୁଡ଼ିକ
--GenericName[id]=Penyaring berbasis XSLT
--GenericName[xh]=XSLT based filters
--GenericName[th]=XSLT based filters
--GenericName[sr]=Филтери засновани на XSLT
--GenericName[si]=XSLT based filters
--GenericName[et]=XSLT-põhised filtrid
--GenericName[om]=Gingilchaa XSLT
--GenericName[mk]=XSLT based filters
--GenericName[en]=XSLT based filters
--GenericName[fi]=XSLT-muotoiset suodattimet
--GenericName[lt]=XSLT filtrai
--GenericName[de]=XSLT basierte Filter
--GenericName[hr]=XSLT based filters
--GenericName[be]=Фільтры на аснове XSLT
--GenericName[zu]=XSLT based filters
--GenericName[sl]=Filtri na osnovi XSLT
--GenericName[nn]=XSLT-baserte filter
--GenericName[bn]=XSLT based filters
--GenericName[ja]=XSLT ベースのフィルター
--GenericName[tg]=XSLT based filters
--GenericName[mr]=XSLT आधारित फिल्टरस्
--GenericName[en_ZA]=XSLT based filters
--GenericName[dz]=XSLT based filters
--GenericName[te]=XSLT ఆధారిత ఫిల్టర్స్
--GenericName[he]=מסננים מבוססי XSLT
--GenericName[eo]=XSLT-bazitaj filtriloj
--GenericName[ar]=مرشحات القائمة على XSLT
--GenericName[nl]=Filters gebaseerd op XSLT
--GenericName[mn]=XSLT based filters
--GenericName[as]=XSLT ভিত্তিয় ফিল্টাৰসমূহ
--GenericName[el]=Φίλτρα με βάση XSLT
--GenericName[pt_BR]=Filtros baseados em XSLT
--NoDisplay=true
 diff -uN applications_old/mintBackup.desktop applications/mintBackup.desktop
---- applications_old/mintBackup.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/mintBackup.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintBackup.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintBackup.desktop	2013-09-24 17:13:24.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Backup Tool
@@ -2930,8 +823,8 @@ diff -uN applications_old/mintBackup.desktop applications/mintBackup.desktop
 -Categories=Application;System;Settings
 +Categories=Application;System;
 diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.desktop
---- applications_old/mintBackup_mime.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/mintBackup_mime.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintBackup_mime.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintBackup_mime.desktop	2013-09-24 17:13:40.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Backup Tool
@@ -2948,8 +841,8 @@ diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.d
  NoDisplay=true
  MimeType=application/x-backup;
 diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
---- applications_old/mintdrivers.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/mintdrivers.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintdrivers.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintdrivers.desktop	2013-09-24 17:49:12.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Driver Manager
@@ -2981,8 +874,8 @@ diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
  X-KDE-SubstituteUID=true
  X-Ubuntu-Gettext-Domain=mintdrivers
 diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
---- applications_old/mintInstall.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/mintInstall.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintInstall.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintInstall.desktop	2013-09-26 15:16:48.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -3012,8 +905,8 @@ diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
 +Categories=Application;System;
  NotShowIn=KDE;
 diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.desktop
---- applications_old/mintInstall_kde.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/mintInstall_kde.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintInstall_kde.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintInstall_kde.desktop	2013-09-25 13:52:58.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -3038,8 +931,8 @@ diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.d
 +Categories=Application;System;
  OnlyShowIn=KDE;
 diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime.desktop
---- applications_old/mintInstall_mime.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/mintInstall_mime.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintInstall_mime.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintInstall_mime.desktop	2013-09-25 13:52:18.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Software Manager
@@ -3065,7 +958,7 @@ diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime
  NoDisplay=true
  MimeType=application/x-mint;
 diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
---- applications_old/mintNanny.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/mintNanny.desktop	2013-09-29 10:44:02.265340237 +0800
 +++ applications/mintNanny.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,134 +0,0 @@
 -[Desktop Entry]
@@ -3203,8 +1096,8 @@ diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
 -Categories=Application;System;Settings;
 -StartupNotify=false
 diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
---- applications_old/mintsources.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/mintsources.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintsources.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintsources.desktop	2013-09-25 13:59:06.000000000 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Software Sources
@@ -3222,7 +1115,7 @@ diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
  MimeType=text/x-apt-sources-list;
  X-KDE-SubstituteUID=true
 diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
---- applications_old/mintstick.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/mintstick.desktop	2013-09-29 10:44:02.265340237 +0800
 +++ applications/mintstick.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -3241,7 +1134,7 @@ diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
 -Categories=GNOME;GTK;Utility;
 -NotShowIn=KDE;
 diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.desktop
---- applications_old/mintstick-kde.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/mintstick-kde.desktop	2013-09-29 10:44:02.265340237 +0800
 +++ applications/mintstick-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -3260,8 +1153,8 @@ diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.deskt
 -Categories=System;
 -OnlyShowIn=KDE;
 diff -uN applications_old/mintUpdate.desktop applications/mintUpdate.desktop
---- applications_old/mintUpdate.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/mintUpdate.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mintUpdate.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mintUpdate.desktop	2013-09-24 17:06:38.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Update Manager
@@ -3277,7 +1170,7 @@ diff -uN applications_old/mintUpdate.desktop applications/mintUpdate.desktop
 +Categories=Application;System;
  StartupNotify=false
 diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
---- applications_old/mintWelcome.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/mintWelcome.desktop	2013-09-29 10:44:02.265340237 +0800
 +++ applications/mintWelcome.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -3449,8 +1342,8 @@ diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
 -Categories=GNOME;GTK;Settings;DesktopSettings;
 -StartupNotify=false
 diff -uN applications_old/mono-runtime.desktop applications/mono-runtime.desktop
---- applications_old/mono-runtime.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/mono-runtime.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mono-runtime.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mono-runtime.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Mono Runtime
@@ -3459,8 +1352,8 @@ diff -uN applications_old/mono-runtime.desktop applications/mono-runtime.desktop
  Terminal=false
  Type=Application
 diff -uN applications_old/mono-runtime-terminal.desktop applications/mono-runtime-terminal.desktop
---- applications_old/mono-runtime-terminal.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/mono-runtime-terminal.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/mono-runtime-terminal.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/mono-runtime-terminal.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Mono Runtime (Terminal)
@@ -3469,7 +1362,7 @@ diff -uN applications_old/mono-runtime-terminal.desktop applications/mono-runtim
  Terminal=true
  Type=Application
 diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
---- applications_old/ndisgtk.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/ndisgtk.desktop	2013-09-29 10:44:02.269340237 +0800
 +++ applications/ndisgtk.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -3484,8 +1377,8 @@ diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
 -X-Ubuntu-Gettext-Domain=ndisgtk
 -
 diff -uN applications_old/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
---- applications_old/ndisgtk-kde.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/ndisgtk-kde.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/ndisgtk-kde.desktop	2013-09-29 10:44:02.265340237 +0800
++++ applications/ndisgtk-kde.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Windows Wireless Drivers
@@ -3494,8 +1387,8 @@ diff -uN applications_old/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
  Exec=kdesu /usr/sbin/ndisgtk -- --kde
  Icon=ndisgtk.png
 diff -uN applications_old/nemo-autorun-software.desktop applications/nemo-autorun-software.desktop
---- applications_old/nemo-autorun-software.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/nemo-autorun-software.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/nemo-autorun-software.desktop	2013-09-29 10:44:02.269340237 +0800
++++ applications/nemo-autorun-software.desktop	2013-06-01 20:10:48.000000000 +0800
 @@ -148,4 +148,4 @@
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=nemo
@@ -3503,8 +1396,8 @@ diff -uN applications_old/nemo-autorun-software.desktop applications/nemo-autoru
 -X-GNOME-Bugzilla-Version=1.8.2
 +X-GNOME-Bugzilla-Version=1.8.3
 diff -uN applications_old/nemo.desktop applications/nemo.desktop
---- applications_old/nemo.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/nemo.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/nemo.desktop	2013-09-29 10:44:02.269340237 +0800
++++ applications/nemo.desktop	2013-09-25 14:10:14.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Files
@@ -3532,8 +1425,8 @@ diff -uN applications_old/nemo.desktop applications/nemo.desktop
  
  
 diff -uN applications_old/nm-applet.desktop applications/nm-applet.desktop
---- applications_old/nm-applet.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/nm-applet.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/nm-applet.desktop	2013-09-29 10:44:02.269340237 +0800
++++ applications/nm-applet.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Network
@@ -3542,8 +1435,8 @@ diff -uN applications_old/nm-applet.desktop applications/nm-applet.desktop
  Icon=nm-device-wireless
  Exec=nm-applet
 diff -uN applications_old/nm-connection-editor.desktop applications/nm-connection-editor.desktop
---- applications_old/nm-connection-editor.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/nm-connection-editor.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/nm-connection-editor.desktop	2013-09-29 10:44:02.269340237 +0800
++++ applications/nm-connection-editor.desktop	2013-09-24 17:40:24.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Network Connections
@@ -3554,7 +1447,7 @@ diff -uN applications_old/nm-connection-editor.desktop applications/nm-connectio
  Exec=nm-connection-editor
  Terminal=false
 diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-policytool.desktop
---- applications_old/openjdk-7-policytool.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/openjdk-7-policytool.desktop	2013-09-29 10:44:02.269340237 +0800
 +++ applications/openjdk-7-policytool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -3568,8 +1461,8 @@ diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-po
 -Icon=openjdk-7
 -Categories=Settings;
 diff -uN applications_old/pidgin.desktop applications/pidgin.desktop
---- applications_old/pidgin.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/pidgin.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/pidgin.desktop	2013-09-29 10:44:02.269340237 +0800
++++ applications/pidgin.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Pidgin Internet Messenger
@@ -3578,8 +1471,8 @@ diff -uN applications_old/pidgin.desktop applications/pidgin.desktop
  Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
  Exec=pidgin
 diff -uN applications_old/qq2012-test.desktop applications/qq2012-test.desktop
---- applications_old/qq2012-test.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/qq2012-test.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/qq2012-test.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/qq2012-test.desktop	2013-09-25 14:23:50.000000000 +0800
 @@ -1,7 +1,7 @@
  
  [Desktop Entry]
@@ -3595,7 +1488,7 @@ diff -uN applications_old/qq2012-test.desktop applications/qq2012-test.desktop
  Name[en_US]=QQ2012
 +Comment=腾讯QQ2012
 diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
---- applications_old/seahorse.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/seahorse.desktop	2013-09-29 10:44:02.273340237 +0800
 +++ applications/seahorse.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -3614,8 +1507,8 @@ diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
 -X-GNOME-DocPath=seahorse/seahorse.xml
 -X-Ubuntu-Gettext-Domain=seahorse
 diff -uN applications_old/session-properties.desktop applications/session-properties.desktop
---- applications_old/session-properties.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/session-properties.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/session-properties.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/session-properties.desktop	2013-09-25 14:45:52.000000000 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Startup Applications
@@ -3633,7 +1526,7 @@ diff -uN applications_old/session-properties.desktop applications/session-proper
  NoDisplay=false
  X-GNOME-Bugzilla-Bugzilla=GNOME
 diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
---- applications_old/simple-scan.desktop	2013-09-29 09:41:58.537091956 +0800
+--- applications_old/simple-scan.desktop	2013-09-29 10:44:02.273340237 +0800
 +++ applications/simple-scan.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -3647,8 +1540,8 @@ diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
 -Categories=GNOME;GTK;Graphics;Scanning;
 -X-GNOME-Gettext-Domain=simple-scan
 diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
---- applications_old/synaptic.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/synaptic.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/synaptic.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/synaptic.desktop	2013-09-25 15:07:06.000000000 +0800
 @@ -1,11 +1,11 @@
  [Desktop Entry]
 -Name=Synaptic Package Manager
@@ -3665,7 +1558,7 @@ diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
  NotShowIn=KDE;
  X-Ubuntu-Gettext-Domain=synaptic
 diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
---- applications_old/synaptic-kde.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/synaptic-kde.desktop	2013-09-29 10:44:02.273340237 +0800
 +++ applications/synaptic-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -3837,8 +1730,8 @@ diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
 -X-KDE-SubstituteUID=true
 -OnlyShowIn=KDE;
 diff -uN applications_old/system-config-printer.desktop applications/system-config-printer.desktop
---- applications_old/system-config-printer.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/system-config-printer.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/system-config-printer.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/system-config-printer.desktop	2013-09-24 17:48:04.000000000 +0800
 @@ -1,15 +1,15 @@
  [Desktop Entry]
  Encoding=UTF-8
@@ -3860,8 +1753,8 @@ diff -uN applications_old/system-config-printer.desktop applications/system-conf
  Keywords=Printer;Queue;Print;Paper;Ink;Toner;
  X-Desktop-File-Install-Version=0.21
 diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
---- applications_old/tomboy.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/tomboy.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/tomboy.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/tomboy.desktop	2013-09-25 14:11:38.000000000 +0800
 @@ -1,6 +1,6 @@
  
  [Desktop Entry]
@@ -3880,8 +1773,8 @@ diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
  Name[zh_TW]=Tomboy 筆記
  Comment=Take notes, link ideas, and stay organized
 diff -uN applications_old/totem.desktop applications/totem.desktop
---- applications_old/totem.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/totem.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/totem.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/totem.desktop	2013-09-13 10:00:16.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Videos
@@ -3890,8 +1783,8 @@ diff -uN applications_old/totem.desktop applications/totem.desktop
  Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
  Exec=totem %U
 diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk.desktop
---- applications_old/transmission-gtk.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/transmission-gtk.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/transmission-gtk.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/transmission-gtk.desktop	2013-09-25 14:22:30.000000000 +0800
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Transmission
@@ -3909,8 +1802,8 @@ diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk
  Icon=transmission
  Terminal=false
 diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
---- applications_old/ubiquity-gtkui.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/ubiquity-gtkui.desktop	2013-09-27 16:05:51.264164937 +0800
+--- applications_old/ubiquity-gtkui.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/ubiquity-gtkui.desktop	2013-09-29 10:46:55.949337465 +0800
 @@ -2,7 +2,7 @@
  Type=Application
  Version=1.0
@@ -3920,8 +1813,17 @@ diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.des
  Name[am]=የተለቀቀውን መግጠሚያ
  Name[ar]=ثبّت RELEASE
  Name[ast]=Instalar RELEASE
+@@ -124,7 +124,7 @@
+ Exec=ubiquity --desktop %k gtk_ui
+ Icon=ubiquity
+ Terminal=false
+-Categories=GTK;System;Settings;
++Categories=GTK;Documentation;
+ NotShowIn=KDE;
+ #X-Ubuntu-Gettext-Domain=ubiquity-desktop
+ X-Ayatana-Appmenu-Show-Stubs=False
 diff -uN applications_old/upload-manager.desktop applications/upload-manager.desktop
---- applications_old/upload-manager.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/upload-manager.desktop	2013-09-29 10:44:02.273340237 +0800
 +++ applications/upload-manager.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,130 +0,0 @@
 -[Desktop Entry]
@@ -4055,8 +1957,8 @@ diff -uN applications_old/upload-manager.desktop applications/upload-manager.des
 -Categories=Application;System;Settings
 -StartupNotify=false
 diff -uN applications_old/vino-preferences.desktop applications/vino-preferences.desktop
---- applications_old/vino-preferences.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/vino-preferences.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/vino-preferences.desktop	2013-09-29 10:44:02.273340237 +0800
++++ applications/vino-preferences.desktop	2013-09-25 14:21:00.000000000 +0800
 @@ -1,12 +1,12 @@
  [Desktop Entry]
 -Name=Desktop Sharing
@@ -4073,8 +1975,8 @@ diff -uN applications_old/vino-preferences.desktop applications/vino-preferences
  X-GNOME-Bugzilla-Product=vino
  X-GNOME-Bugzilla-Component=Preferences Dialog
 diff -uN applications_old/vlc.desktop applications/vlc.desktop
---- applications_old/vlc.desktop	2013-09-29 09:41:58.537091956 +0800
-+++ applications/vlc.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/vlc.desktop	2013-09-29 10:44:02.277340237 +0800
++++ applications/vlc.desktop	2013-09-25 14:34:08.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Version=1.0
@@ -4129,7 +2031,7 @@ diff -uN applications_old/vlc.desktop applications/vlc.desktop
  Comment[zh_CN]=为您读取、捕获或发送多媒体流
  Name[zh_TW]=VLC 媒體播放器
 diff -uN applications_old/xchat.desktop applications/xchat.desktop
---- applications_old/xchat.desktop	2013-09-29 09:41:58.525091956 +0800
+--- applications_old/xchat.desktop	2013-09-29 10:44:02.277340237 +0800
 +++ applications/xchat.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -4156,8 +2058,8 @@ diff -uN applications_old/xchat.desktop applications/xchat.desktop
 -Categories=Network;
 -StartupNotify=true
 diff -uN applications_old/yelp.desktop applications/yelp.desktop
---- applications_old/yelp.desktop	2013-09-29 09:41:58.525091956 +0800
-+++ applications/yelp.desktop	2013-09-27 14:41:08.108269776 +0800
+--- applications_old/yelp.desktop	2013-09-29 10:44:02.293340237 +0800
++++ applications/yelp.desktop	2013-09-26 18:40:54.000000000 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Name=Help

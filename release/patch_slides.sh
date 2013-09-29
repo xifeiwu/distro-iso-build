@@ -26,7 +26,7 @@ DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 echo patching org.cinanmon.gschemas.xml
 cd $DISTURBPATH/patch_slides
 set +e
-diff -uN slides_raw slides >/tmp/new.patch
+diff -urNa slides_raw slides >/tmp/new.patch
 set -e
 run_patch -p0 -d $OUTPATH/squashfs-root/usr/share/ubiquity-slideshow -i /tmp/new.patch
 rm /tmp/new.patch

@@ -1,0 +1,1491 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cosdesktop\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-04-30 17:30-0400\n"
+"PO-Revision-Date: 2013-01-31 09:06+0000\n"
+"Last-Translator: Wylmer Wang <Unknown>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2013-05-04 16:17+0000\n"
+"X-Generator: Launchpad (build 16598)\n"
+
+msgid " (%s minute ago)"
+msgstr " (%s 分钟前)"
+
+msgid " (%s minutes ago)"
+msgstr " (%s 分钟前)"
+
+msgid " (%s seconds ago)"
+msgstr " (%s 秒前)"
+
+msgid " (Just now)"
+msgstr " (刚刚)"
+
+msgid " notification"
+msgstr " 通知"
+
+msgid " notifications"
+msgstr " 通知"
+
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+msgid "%d %s %d %s remaining"
+msgstr "剩余 %d %s %d %s"
+
+msgid "%d hour remaining"
+msgid_plural "%d hours remaining"
+msgstr[0] "还剩 %d 小时"
+
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "剩余 %d 分钟"
+
+msgid "%s will be logged out automatically in %d second."
+msgid_plural "%s will be logged out automatically in %d seconds."
+msgstr[0] "%s 将在 %d 秒后自动注销。"
+
+msgid "%u Input"
+msgid_plural "%u Inputs"
+msgstr[0] "%u 路输入"
+
+msgid "%u Output"
+msgid_plural "%u Outputs"
+msgstr[0] "%u 路输出"
+
+msgid "<unknown>"
+msgstr "<未知>"
+
+msgid "A password is required to connect to '%s'."
+msgstr "连接到“%s”需要密码。"
+
+msgid "AC adapter"
+msgstr "交流电源适配器"
+
+msgid "Accessibility"
+msgstr "辅助功能"
+
+msgid "Activation of network connection failed"
+msgstr "网络连接启用失败"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Add applets to the panel"
+msgstr "向面板添加小程序"
+
+msgid "Add new launcher"
+msgstr "添加新启动器"
+
+msgid "Add panel launcher..."
+msgstr "添加面板启动器..."
+
+msgid "Add to desktop"
+msgstr "添加到桌面"
+
+msgid "Add to favorites"
+msgstr "添加到收藏夹"
+
+msgid "Add to panel"
+msgstr "添加到面板"
+
+msgid "Administrator"
+msgstr "管理员"
+
+msgid "All Applications"
+msgstr "所有应用程序"
+
+msgid "All Settings"
+msgstr "全部设置"
+
+msgid "All settings"
+msgstr "全部设置"
+
+msgid "All windows"
+msgstr "全部窗口"
+
+msgid "Always grant access"
+msgstr "总是允许访问"
+
+msgid "Applets"
+msgstr "小程序"
+
+msgid "Application"
+msgstr "应用程序"
+
+msgid "Are you sure you want to delete all items from the trash?"
+msgstr "您确定要删除回收站里的所有项目吗？"
+
+msgid ""
+"Are you sure you want to remove workspace \"%s\"?\n"
+"\n"
+msgstr ""
+"您确定要移除工作区“%s”吗？\n"
+"\n"
+
+msgid "Authenticate"
+msgstr "认证"
+
+msgid "Authentication Required"
+msgstr "需要认证"
+
+msgid "Authentication dialog was dismissed by the user"
+msgstr "用户关掉了认证对话框"
+
+msgid "Authentication required by wireless network"
+msgstr "无线网络需要认证"
+
+msgid "Authorization request from %s"
+msgstr "收到 %s 的认证请求"
+
+msgid "Auto %s"
+msgstr "自动 %s"
+
+msgid "Auto Ethernet"
+msgstr "自动以太网"
+
+msgid "Auto bluetooth"
+msgstr "自动蓝牙"
+
+msgid "Auto broadband"
+msgstr "自动宽带"
+
+msgid "Auto dial-up"
+msgstr "自动拨号"
+
+msgid "Auto wireless"
+msgstr "自动无线网"
+
+msgid "Bluetooth"
+msgstr "蓝牙"
+
+msgid "Bluetooth Settings"
+msgstr "蓝牙设置"
+
+msgid "Bounce Keys"
+msgstr "回弹键"
+
+msgid "Brightness"
+msgstr "亮度"
+
+msgid "Brightness not available"
+msgstr "亮度调节不可用"
+
+msgid "Browse Files..."
+msgstr "浏览文件..."
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cell phone"
+msgstr "手机"
+
+msgid "Clear list"
+msgstr "清除列表"
+
+msgid "Clear notifications"
+msgstr "清除通知"
+
+msgid "Click Log Out to quit these applications and log out of the system."
+msgstr "点击“注销”以退出应用程序并注销系统。"
+
+msgid "Click Power Off to quit these applications and power off the system."
+msgstr "点击“关机”退出应用程序并关闭系统。"
+
+msgid "Click Restart to quit these applications and restart the system."
+msgstr "点击“重启”退出应用程序并重启系统。"
+
+msgid "Clock"
+msgstr "时钟"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Close all"
+msgstr "全部关闭"
+
+msgid "Close others"
+msgstr "关闭其他"
+
+msgid "Command not found"
+msgstr "找不到命令"
+
+msgid "Computer"
+msgstr "计算机"
+
+msgid "Configure display settings..."
+msgstr "配置显示器设置..."
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "Connect to..."
+msgstr "连接到..."
+
+msgid "Connected (private)"
+msgstr "已连接(个人)"
+
+msgid "Connected to the VPN"
+msgstr "已连接 VPN"
+
+msgid "Connected to the cellular network"
+msgstr "已连接蜂窝网络"
+
+msgid "Connected to the network"
+msgstr "已连接网络"
+
+msgid "Connected to the wired network"
+msgstr "已连接有线网络"
+
+msgid "Connected to the wireless network"
+msgstr "已连接无线网络"
+
+msgid "Connecting to the VPN..."
+msgstr "正在连接 VPN..."
+
+msgid "Connecting to the cellular network..."
+msgstr "正在连接蜂窝网络..."
+
+msgid "Connecting to the network..."
+msgstr "正在连接网络..."
+
+msgid "Connecting to the wired network..."
+msgstr "正在连接有线网络..."
+
+msgid "Connecting to the wireless network..."
+msgstr "正在连接无线网络..."
+
+msgid "Connection"
+msgstr "连接"
+
+msgid "Connection failed"
+msgstr "连接失败"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "Could not parse command:"
+msgstr "无法解析命令："
+
+msgid "Custom Launcher"
+msgstr "自定义启动器"
+
+msgid "DSL authentication"
+msgstr "DSL 认证"
+
+msgid "Date and Time Settings"
+msgstr "日期和时间设备"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Device %s wants access to the service '%s'"
+msgstr "设备 %s 想要访问服务 \"%s\""
+
+msgid "Device %s wants to pair with this computer"
+msgstr "设备 %s 想要与这台计算机配对"
+
+msgid "Dim screen on AC power"
+msgstr "使用交流电源时调暗屏幕"
+
+msgid "Dim screen on battery"
+msgstr "使用电池时调暗屏幕"
+
+msgid "Dimming settings"
+msgstr "亮度调节设置"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+msgid "Display"
+msgstr "显示"
+
+msgid "Does not match"
+msgstr "不匹配"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Edit launcher"
+msgstr "编辑启动器"
+
+msgid "Edit menu"
+msgstr "编辑菜单"
+
+msgid "Eject"
+msgstr "弹出"
+
+msgid "Empty"
+msgstr "清空"
+
+msgid "Empty Trash"
+msgstr "清空回收站"
+
+msgid "Empty Trash?"
+msgstr "清空回收站？"
+
+msgid "Enable networking"
+msgstr "启用网络"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Error browsing device"
+msgstr "浏览设备出错"
+
+msgid "Estimating..."
+msgstr "正在估计..."
+
+msgid "Execution of '%s' failed:"
+msgstr "\"%s\" 执行失败："
+
+msgid "Expo"
+msgstr "展示"
+
+msgid "Failed to launch '%s'"
+msgstr "无法启动 '%s'"
+
+msgid "Failed to unmount '%s'"
+msgstr "卸载“%s”失败"
+
+msgid "File System"
+msgstr "文件系统"
+
+msgid "Grant this time only"
+msgstr "仅授权一次"
+
+msgid "Hide Text"
+msgstr "隐藏文本"
+
+msgid "Hide label"
+msgstr "隐藏标签"
+
+msgid "High Contrast"
+msgstr "高对比度"
+
+msgid "Home"
+msgstr "主目录"
+
+msgid "Icon"
+msgstr "图标"
+
+msgid "Identity: "
+msgstr "标识： "
+
+msgid "Initializing"
+msgstr "正在初始化"
+
+msgid "Invalid overview options: Incorrect number of corners"
+msgstr "无效的概览选项：桌角的数量不正确。"
+
+msgid "Key: "
+msgstr "密钥： "
+
+msgid "Keyboard"
+msgstr "键盘"
+
+msgid "Keyboard Settings"
+msgstr "键盘设置"
+
+msgid "Laptop battery"
+msgstr "笔记本电池"
+
+msgid "Large Text"
+msgstr "大号文本"
+
+msgid "Launch"
+msgstr "启动"
+
+msgid "Launch player..."
+msgstr "启动播放器..."
+
+msgid "Leave the session"
+msgstr "离开会话"
+
+msgid "Loaded"
+msgstr "已加载"
+
+msgid "Lock screen"
+msgstr "锁定屏幕"
+
+msgid "Lock the screen"
+msgstr "锁定屏幕"
+
+msgid "Log Out"
+msgstr "注销"
+
+msgid "Log Out %s"
+msgstr "注销 %s"
+
+msgid "Logging out of the system."
+msgstr "注销系统。"
+
+msgid "Logout"
+msgstr "注销"
+
+msgid "Looking Glass"
+msgstr "Looking Glass"
+
+msgid "Matches"
+msgstr "匹配"
+
+msgid "Maximize"
+msgstr "最大化"
+
+msgid "Media player"
+msgstr "媒体播放器"
+
+msgid "Menu"
+msgstr "菜单"
+
+msgid "Menu settings"
+msgstr "菜单设置"
+
+msgid "Microphone"
+msgstr "麦克风"
+
+msgid "Minimize"
+msgstr "最小化"
+
+msgid "Mobile broadband"
+msgstr "移动宽带"
+
+msgid "Mobile broadband network password"
+msgstr "移动宽带网络密码"
+
+msgid "Monitor"
+msgstr "显示器"
+
+msgid "More..."
+msgstr "更多..."
+
+msgid "Mouse"
+msgstr "鼠标"
+
+msgid "Mouse Keys"
+msgstr "鼠标键"
+
+msgid "Mouse Settings"
+msgstr "鼠标设置"
+
+msgid "Move to a new workspace"
+msgstr "移到新工作区"
+
+msgid "Move to left workspace"
+msgstr "移至左侧工作区"
+
+msgid "Move to monitor %d"
+msgstr "移到显示器 %d"
+
+msgid "Move to right workspace"
+msgstr "移至右侧工作区"
+
+msgid "Mute input"
+msgstr "输入静音"
+
+msgid "Mute output"
+msgstr "输出静音"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Network Manager"
+msgstr "网络管理器"
+
+msgid "Network Settings"
+msgstr "网络设置"
+
+msgid "Network name: "
+msgstr "网络名称： "
+
+msgid "Networking is disabled"
+msgstr "网络已禁用"
+
+msgid "Next"
+msgstr "下一曲"
+
+msgid "Next week"
+msgstr "下周"
+
+msgid "No"
+msgstr "取消"
+
+msgid "No connection"
+msgstr "无连接"
+
+msgid "No extensions installed"
+msgstr "未安装扩展"
+
+msgid "No notifications"
+msgstr "无通知"
+
+msgid "No open windows"
+msgstr "没有打开的窗口"
+
+msgid "No recent documents"
+msgstr "无最近文档"
+
+msgid "Nothing Scheduled"
+msgstr "没有计划"
+
+msgid "Notifications"
+msgstr "通知"
+
+msgid "OK"
+msgstr "确定"
+
+msgid "Only on this workspace"
+msgstr "仅在此工作区"
+
+msgid "Open"
+msgstr "打开"
+
+msgid "Open Player"
+msgstr "打开播放器"
+
+msgid "Open Trash"
+msgstr "打开回收站"
+
+msgid "Open file manager"
+msgstr "打开文件管理器"
+
+msgid "Open with %s"
+msgstr "使用 %s 打开"
+
+msgid "Out of date"
+msgstr "已过期"
+
+msgid "Output device..."
+msgstr "输出设备..."
+
+msgid "PDA"
+msgstr "PDA"
+
+msgid "PIN code is needed for the mobile broadband device"
+msgstr "移动宽带设备需要 PIN 码。"
+
+msgid "PIN code required"
+msgstr "需要 PIN 码"
+
+msgid "PIN: "
+msgstr "PIN: "
+
+msgid "Pairing confirmation for %s"
+msgstr "%s 的配对确认"
+
+msgid "Pairing request for %s"
+msgstr "%s 配对请求"
+
+msgid "Panel"
+msgstr "面板"
+
+msgid "Panel Edit mode"
+msgstr "面板编辑模式"
+
+msgid "Panel settings"
+msgstr "面板设置"
+
+msgid "Password:"
+msgstr "密码:"
+
+msgid "Password: "
+msgstr "密码： "
+
+msgid ""
+"Passwords or encryption keys are required to access the wireless network "
+"'%s'."
+msgstr "需要密码或密钥来访问无线网络“%s”。"
+
+msgid "Paste"
+msgstr "粘贴"
+
+msgid "Paused"
+msgstr "已暂停"
+
+msgid "Photo Frame"
+msgstr "相框"
+
+msgid "Places"
+msgstr "位置"
+
+msgid "Play"
+msgstr "播放"
+
+msgid "Playing"
+msgstr "正在播放"
+
+msgid "Please confirm whether the PIN '%s' matches the one on the device."
+msgstr "请确认 PIN 码“%s” 是否与设备匹配。"
+
+msgid "Please enter a command:"
+msgstr "请输入命令："
+
+msgid "Please enter the PIN mentioned on the device."
+msgstr "请输入设备上提示的 PIN 码。"
+
+msgid "Please type an away message for the lock screen"
+msgstr "请输入锁屏上要显示的离开消息"
+
+msgid "Power Off"
+msgstr "关机"
+
+msgid "Power Settings"
+msgstr "电源设置"
+
+msgid "Powering off the system."
+msgstr "关闭系统。"
+
+msgid "Previous"
+msgstr "上一曲"
+
+msgid "Private key password: "
+msgstr "私人密钥密码： "
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Quit Player"
+msgstr "退出播放器"
+
+msgid "Recent Files"
+msgstr "最近的文件"
+
+msgid "Recent documents"
+msgstr "最近的文档"
+
+msgid "Region and Language Settings"
+msgstr "区域和语言设置"
+
+msgid "Reject"
+msgstr "拒绝"
+
+msgid "Reload Code"
+msgstr "重新加载代码"
+
+msgid "Removable Devices"
+msgstr "可移动设备"
+
+msgid "Removable drives"
+msgstr "可移动磁盘"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Remove from favorites"
+msgstr "从收藏中删除"
+
+msgid "Remove this applet"
+msgstr "移除该小程序"
+
+msgid "Remove this desklet"
+msgstr "移除此桌面小工具"
+
+msgid "Restart"
+msgstr "重新启动"
+
+msgid "Restart Cinnamon"
+msgstr "重启 Cinnamon"
+
+msgid "Restarting the system."
+msgstr "重启系统。"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "Restore all settings to default"
+msgstr "恢复所有设置为默认值"
+
+msgid "Retry"
+msgstr "重试"
+
+msgid "Scale"
+msgstr "缩放"
+
+msgid "Screen Keyboard"
+msgstr "屏幕键盘"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Send Files to Device..."
+msgstr "发送文件到设备..."
+
+msgid "Send Files..."
+msgstr "发送文件..."
+
+msgid "Service: "
+msgstr "服务： "
+
+msgid "Set up a New Device..."
+msgstr "设置一个新设备..."
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Show Character Table"
+msgstr "显示字符表"
+
+msgid "Show Keyboard Layout"
+msgstr "显示键盘布局"
+
+msgid "Show Text"
+msgstr "显示文本"
+
+msgid "Show desktop"
+msgstr "显示桌面"
+
+msgid "Show flags"
+msgstr "显示标记"
+
+msgid "Show percentage"
+msgstr "显示百分比"
+
+msgid "Show time remaining"
+msgstr "显示剩余时间"
+
+msgid "Shutdown the computer"
+msgstr "关闭计算机"
+
+msgid "Slow Keys"
+msgstr "慢速键"
+
+msgid "Sorry, that didn't work. Please try again."
+msgstr "对不起，操作无效。请重试。"
+
+msgid "Sound Settings"
+msgstr "声音设置"
+
+msgid "Sticky Keys"
+msgstr "粘滞键"
+
+msgid "Stop"
+msgstr "停止"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "Switch workspace"
+msgstr "切换工作区"
+
+msgid "System Information"
+msgstr "系统信息"
+
+msgid "System Sounds"
+msgstr "系统声音"
+
+msgid "Tablet"
+msgstr "平板设备"
+
+msgid "The requested device cannot be browsed, error is '%s'"
+msgstr "无法浏览请求的设备，错误为“%s”"
+
+msgid "The system will power off automatically in %d second."
+msgid_plural "The system will power off automatically in %d seconds."
+msgstr[0] "系统将在 %d 秒后自动关机。"
+
+msgid "The system will restart automatically in %d second."
+msgid_plural "The system will restart automatically in %d seconds."
+msgstr[0] "系统将在 %d 秒后自动重启。"
+
+msgid "Themes"
+msgstr "主题"
+
+msgid "This operation cannot be undone."
+msgstr "该操作无法撤消。"
+
+msgid "This week"
+msgstr "本周"
+
+msgid "Today"
+msgstr "今天"
+
+msgid "Tomorrow"
+msgstr "明天"
+
+msgid "Trash"
+msgstr "回收站"
+
+msgid "Troubleshoot"
+msgstr "故障排查"
+
+msgid "Type to search..."
+msgstr "输入进行搜索..."
+
+msgid "UPS"
+msgstr "UPS"
+
+msgid "United Kingdom"
+msgstr "英国"
+
+msgid "Universal Access Settings"
+msgstr "通用访问设置"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Unknown Album"
+msgstr "未知专辑"
+
+msgid "Unknown Artist"
+msgstr "未知艺人"
+
+msgid "Unknown Title"
+msgstr "未知标题"
+
+msgid "Unmaximize"
+msgstr "取消最大化"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Username: "
+msgstr "用户名： "
+
+msgid "VPN Connections"
+msgstr "VPN 连接"
+
+msgid "View Source"
+msgstr "查看源文件"
+
+msgid "Visibility"
+msgstr "可见性"
+
+msgid "Visible on all workspaces"
+msgstr "在所有工作区可见"
+
+msgid "Visual Alerts"
+msgstr "视觉警告"
+
+msgid "Volume"
+msgstr "音量"
+
+msgid "WORKSPACE"
+msgstr "工作区"
+
+msgid "Web Page"
+msgstr "网页"
+
+msgid "Wired"
+msgstr "有线"
+
+msgid "Wired 802.1X authentication"
+msgstr "有线 802.1X 认证"
+
+msgid "Wireless"
+msgstr "无线"
+
+msgid "Wireless connection"
+msgstr "无线连接"
+
+msgid "Wrong password, please try again"
+msgstr "密码错误，请重试"
+
+msgid "Yes"
+msgstr "确定"
+
+msgid "You will be logged out automatically in %d second."
+msgid_plural "You will be logged out automatically in %d seconds."
+msgstr[0] "您将在 %d 秒后自动注销。"
+
+msgid "Zoom"
+msgstr "缩放"
+
+msgid "authentication required"
+msgstr "需要验证"
+
+msgid "cable unplugged"
+msgstr "线缆被拔出"
+
+msgid "connecting..."
+msgstr "正在连接..."
+
+msgid "connection failed"
+msgstr "连接失败"
+
+msgid "disabled"
+msgstr "已禁用"
+
+msgid "disconnecting..."
+msgstr "正在断开连接..."
+
+msgid "firmware missing"
+msgstr "固件缺失"
+
+msgid "hardware disabled"
+msgstr "硬件已禁用"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "小时"
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "分钟"
+
+msgid "tray"
+msgstr "托盘"
+
+msgid "unavailable"
+msgstr "不可用"
+
+msgid "unmanaged"
+msgstr "未管理"
+
+msgid "Backgrounds"
+msgstr "背景"
+
+msgid "Effects"
+msgstr "特效"
+
+msgid "Fonts"
+msgstr "字体"
+
+msgid "Calendar"
+msgstr "日历"
+
+msgid "Applications & Removable Media"
+msgstr "默认打开设置"
+
+msgid "Desklets"
+msgstr "小工具"
+
+msgid "Desktop"
+msgstr "桌面"
+
+msgid "Extensions"
+msgstr "扩展"
+
+msgid "General"
+msgstr "杂项"
+
+msgid "Hot Corners"
+msgstr "边角动作设置"
+
+msgid "Screensaver & Lock Settings"
+msgstr "屏保锁屏"
+
+msgid "Windows"
+msgstr "窗口"
+
+msgid "Workspaces"
+msgstr "工作台"
+
+msgid "Regional Settings"
+msgstr "区域与语言"
+
+msgid "Universal Access"
+msgstr "辅助工具"
+
+msgid "User Accounts"
+msgstr "用户"
+
+msgid "Firewall"
+msgstr "防火墙"
+
+msgid "Languages"
+msgstr "语言"
+
+msgid "Login Screen"
+msgstr "登陆界面"
+
+msgid "Startup Programs"
+msgstr "开机启动程序"
+
+msgid "Software Sources"
+msgstr "软件源"
+
+msgid "System Info"
+msgstr "系统信息"
+
+msgid "Mouse and Touchpad"
+msgstr "鼠标与触控"
+
+msgid "Networking"
+msgstr "网络"
+
+msgid "Power Management"
+msgstr "电源管理"
+
+msgid "Sound"
+msgstr "声音"
+
+msgid "Color"
+msgstr "颜色"
+
+msgid "Printers"
+msgstr "打印机"
+
+msgid "Device Drivers"
+msgstr "设备驱动"
+
+msgid "Switch to Normal Mode"
+msgstr "切换为普通设置"
+
+msgid "Switch to Advanced Mode"
+msgstr "切换为高级设置"
+
+msgid "System Settings"
+msgstr "系统设置"
+
+msgid "Appearance"
+msgstr "外观"
+
+msgid "Preferences"
+msgstr "系统配置"
+
+msgid "Hardware"
+msgstr "硬件"
+
+msgid "Advanced options"
+msgstr "更多设置"
+
+msgid "Picture aspect"
+msgstr "图片排列方式"
+
+msgid "Gradient"
+msgstr "方向"
+
+msgid "None"
+msgstr "无"
+
+msgid "Colors"
+msgstr "颜色"
+
+msgid "Horizontal"
+msgstr "水平"
+
+msgid "Vertical"
+msgstr "垂直"
+
+msgid "No picture"
+msgstr "无图片"
+
+msgid "Mosaic"
+msgstr "平铺"
+
+msgid "Centered"
+msgstr "居中"
+
+msgid "Scaled"
+msgstr "图片缩放"
+
+msgid "Default font"
+msgstr "默认字体"
+
+msgid "Document font"
+msgstr "文档字体"
+
+msgid "Monospace font"
+msgstr "等宽字体"
+
+msgid "Window title font"
+msgstr "标题字体"
+
+msgid "Text scaling factor"
+msgstr "文本放大倍数"
+
+msgid "Antialiasing"
+msgstr "平滑"
+
+msgid "Enable desktop effects"
+msgstr "开启桌面效果"
+
+msgid "Enable desktop effects on dialog boxes"
+msgstr "对话框开启桌面效果"
+
+msgid "Closing windows:"
+msgstr "关闭窗口"
+
+msgid "milliseconds:"
+msgstr "毫秒"
+
+msgid "Mapping windows:"
+msgstr "打开窗口"
+
+msgid "Minimizing windows:"
+msgstr "最小化窗口"
+
+msgid "Maximizing windows:"
+msgstr "最大化窗口"
+
+msgid "Unmaximizing windows:"
+msgstr "还原窗口"
+
+msgid "Enable fade effect on Cinnamon scrollboxes (like the Menu application list)"
+msgstr "开启滚动列表的淡入淡出效果(如菜单程序列表)"
+
+msgid "Installed"
+msgstr "已安装"
+
+msgid "Get more online"
+msgstr "获取更多"
+
+msgid "Other settings"
+msgstr "其他设置"
+
+msgid "Show"
+msgstr "显示"
+
+msgid "Apply theme"
+msgstr "应用主题"
+
+msgid "Restore default theme"
+msgstr "恢复默认"
+
+msgid "Restore to default"
+msgstr "恢复默认"
+
+msgid "Use network time"
+msgstr "使用网络时间"
+
+msgid "Date : "
+msgstr "日期:"
+
+msgid "Time : "
+msgstr "时间:"
+
+msgid "Show week numbers in calendar"
+msgstr "日历中显示星期数"
+
+msgid "Date format for the panel"
+msgstr "面板上日期格式"
+
+msgid "Date format inside the date applet"
+msgstr "日期组件中的日期格式"
+
+msgid "Generate your own date formats"
+msgstr "生成自定义的日期格式"
+
+msgid "Default Applications"
+msgstr "默认程序"
+
+msgid "Select how media should be handled"
+msgstr "选择媒介设备打开方式"
+
+msgid "Never prompt or start programs on media insertion"
+msgstr "当插入媒介时从不提示或打开程序"
+
+msgid "Select how other media should be handled"
+msgstr "选择其他媒介设备打开方式"
+
+msgid "General Desklets Settings"
+msgstr "一般桌面组件设置"
+
+msgid "Show a computer icon"
+msgstr "显示计算机图标"
+
+msgid "Show a home icon"
+msgstr "显示主目录图标"
+
+msgid "Show the trash"
+msgstr "显示回收站"
+
+msgid "Show mounted volumes"
+msgstr "显示已挂载的卷"
+
+msgid "Show network servers"
+msgstr "显示网络服务器"
+
+msgid "Log LookingGlass output to ~/.cinnamon/glass.log (Requires Cinnamon restart)"
+msgstr "记录LookingGlass输入至~/.cinnamon/glass.log文件中（需要重启Cinnamon）"
+
+msgid "Display notifications"
+msgstr "显示通知"
+
+msgid "Icon visible"
+msgstr "显示图标"
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "Text"
+msgstr "文本"
+
+msgid "Show bookmarks and places"
+msgstr "显示书签和位置"
+
+msgid "Show recent files"
+msgstr "显示最近的文件"
+
+msgid "Enable auto-scrolling in application list"
+msgstr "开启程序列表的自动滚动"
+
+msgid "Open menu when I move my mouse over it"
+msgstr "当鼠标划过时开启菜单"
+
+msgid "Enable filesystem path entry in search box"
+msgstr "搜索框中可输入文件路径"
+
+msgid "Menu hover delay"
+msgstr "菜单延迟"
+
+msgid "milliseconds"
+msgstr "毫秒"
+
+msgid "Panel layout"
+msgstr "面板排列"
+
+msgid "Traditional (panel at the bottom)"
+msgstr "传统型（显示在底部）"
+
+msgid "Flipped (panel at the top)"
+msgstr "悬浮型（显示在顶部）"
+
+msgid "Classic (panels at the top and at the bottom)"
+msgstr "经典型（同时显示在顶部和底部）"
+
+msgid "Note: If you change the layout you will need to restart Cinnamon and Cinnamon Settings"
+msgstr "注：如果改变此项，需要重启Cinnamon后生效"
+
+msgid "Auto-hide panel"
+msgstr "自动隐藏面板"
+
+msgid "Auto-hide top panel"
+msgstr "自动隐藏顶部面板"
+
+msgid "Auto-hide bottom panel"
+msgstr "自动隐藏底部面板"
+
+msgid "Show delay"
+msgstr "显示延迟"
+
+msgid "Hide delay"
+msgstr "隐藏延迟"
+
+msgid "Use customized panel size (otherwise it's defined by the theme)"
+msgstr "使用自定义面板大小（否则按主题设置）"
+
+msgid "Allow Cinnamon to scale panel text and icons according to the panel heights"
+msgstr "允许Cinnamon根据面板高度对文本和图标大小进行缩放"
+
+msgid "Top panel height"
+msgstr "顶部面板高度"
+
+msgid "Bottom panel height"
+msgstr "底部面板高度"
+
+msgid "Pixels"
+msgstr "像素"
+
+msgid "Panel edit mode"
+msgstr "面板编辑模式"
+
+msgid "Ask for an away message when locking the screen from the menu"
+msgstr "锁屏时询问用户离开消息"
+
+msgid "Default away message"
+msgstr "默认的离开消息"
+
+msgid "Require my password when waking from suspend"
+msgstr "当从锁屏恢复时要求密码"
+
+msgid "Typing"
+msgstr "输入"
+
+msgid "Enable key repeat"
+msgstr "开启重复按键"
+
+msgid "Text cursor blinks"
+msgstr "输入光标闪烁"
+
+msgid "Repeat delay:"
+msgstr "重复延迟"
+
+msgid "Repeat speed:"
+msgstr "重复频率"
+
+msgid "Blink speed:"
+msgstr "闪烁频率"
+
+msgid "Short"
+msgstr "短"
+
+msgid "Long"
+msgstr "长"
+
+msgid "Slow"
+msgstr "慢"
+
+msgid "Fast"
+msgstr "快"
+
+msgid "Test Box"
+msgstr "测试框"
+
+msgid "Keyboard shortcuts"
+msgstr "键盘快捷键"
+
+msgid "Categories"
+msgstr "种类"
+
+msgid "To edit a keyboard binding, click it and press the new keys, or press backspace to clear it."
+msgstr "为编辑一个键盘绑定，需要点击它并按下新的键或者按回退键清空"
+
+msgid "Keyboard bindings"
+msgstr "键盘绑定"
+
+msgid "Add custom shortcut"
+msgstr "增加自定义快捷"
+
+msgid "Remove custom shortcut"
+msgstr "删除自定义快捷"
+
+msgid "Left handed (mouse buttons inverted)"
+msgstr "习惯左手（鼠标按键反转）"
+
+msgid "Show position of pointer when the Control key is pressed"
+msgstr "当按下控制键时显示指针位置"
+
+msgid "Emulate middle click by clicking both left and right buttons"
+msgstr "同时按下左键和右键模拟按下中键"
+
+msgid "Pointer Speed"
+msgstr "指针速度"
+
+msgid "Low"
+msgstr "低"
+
+msgid "High"
+msgstr "高"
+
+msgid "Acceleration:"
+msgstr "加速:"
+
+msgid "Sensitivity:"
+msgstr "敏感度:"
+
+msgid "Double-Click Timeout"
+msgstr "双击延迟"
+
+msgid "Timeout:"
+msgstr "延迟:"
+
+msgid "Double-click test"
+msgstr "双击测试"
+
+msgid "Drag and drop"
+msgstr "拖拽"
+
+msgid "Cinnamon drag threshold"
+msgstr "Cinnamon拖拽阈值"
+
+msgid "GTK drag threshold"
+msgstr "GTK拖拽阈值"
+
+msgid "Touchpad"
+msgstr "触控板"
+
+msgid "Enable touchpad"
+msgstr "开启触控板"
+
+msgid "Disable touchpad while typing"
+msgstr "输入时关闭触控板"
+
+msgid "Enable mouseclicks with touchpad"
+msgstr "开启用触控板点击"
+
+msgid "Scrolling"
+msgstr "滚动"
+
+msgid "Enable horizontal scrolling"
+msgstr "开启水平滚动"
+
+msgid "Edge Scrolling"
+msgstr "边缘滚动"
+
+msgid "Device Name"
+msgstr "设备名称"
+
+msgid "Distribution"
+msgstr "版本"
+
+msgid "Kernel / Build"
+msgstr "内核版本/构建时间"
+
+msgid "Processor"
+msgstr "处理器"
+
+msgid "Memory"
+msgstr "内存"
+
+msgid "Disk Size"
+msgstr "磁盘空间"
+
+msgid "Enable workspace OSD"
+msgstr "开启工作区OSD"
+
+msgid "Workspace OSD duration"
+msgstr "工作区OSD持续"
+
+msgid "Workspace OSD horizontal position"
+msgstr "工作区OSD水平位置"
+
+msgid "Workspace OSD vertical position"
+msgstr "工作区OSD垂直位置"
+
+msgid "percent of the monitor's width"
+msgstr "% 屏幕宽度的百分比"
+
+msgid "percent of the monitor's height"
+msgstr "% 屏幕高度的百分比"
+
+msgid "Allow cycling through workspaces"
+msgstr "允许通过工作区循环"
+
+msgid "Only use workspaces on primary monitor (requires Cinnamon restart)"
+msgstr "只在第一个屏幕使用工作区 （需要重启Cinnamon生效）"
+
+msgid "Display Expo view as a grid"
+msgstr "网格显示Expo"
+
+msgid "Action on title bar double-click"
+msgstr "动作"
+
+msgid "Action on title bar middle-click"
+msgstr "双击标题栏动作"
+
+msgid "Action on title bar right-click"
+msgstr "右键单机标题栏动作"
+
+msgid "Window focus mode"
+msgstr "窗口激活模式"
+
+msgid "Modifier to use for modified window click actions"
+msgstr "窗口单击修改按键"
+
+msgid "Left side title bar buttons"
+msgstr "左侧标题栏按键"
+
+msgid "Right side title bar buttons"
+msgstr "右侧标题栏按键"
+
+msgid "Enable Edge Tiling (\"Aero Snap\")"
+msgstr "允许边缘平铺"
+
+msgid "Enable Edge Flip"
+msgstr "允许边缘翻动"
+
+msgid "Window edge tile theshold"
+msgstr "窗口标题边缘厚度"
+
+msgid "Window drag detach threshold"
+msgstr "窗口拖拽附属厚度"
+
+msgid "Attach dialog windows to their parent window's titlebar"
+msgstr "将对话框附着于父窗口标题栏"
+
+msgid "ALT-tab switcher style"
+msgstr "ALT和tab组合键风格"
+
+msgid "Enforce displaying the alt-tab switcher on the primary monitor instead of the active one"
+msgstr "强迫alt和tab组合键显示在主显示屏上而不是激活的显示屏上"
+
+msgid "Enable mouse-wheel scrolling in Window List applet"
+msgstr "在窗口列表控件上激活鼠标滑轮滚动"
+
+msgid "Bring windows which require attention to the current workspace (instead of switching to the window's workspace)"
+msgstr "将激活的窗口带到当前的工作区（而不是切换到另一个工作区中）"

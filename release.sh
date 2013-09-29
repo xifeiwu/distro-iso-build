@@ -59,6 +59,7 @@ sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_schemas.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_info.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_slides.sh $OUTPATH
+sudo sh $ScriptPATH/release/patch_settings_zh_CN.sh $OUTPATH
 sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH
 sudo sh $ScriptPATH/release/custom.sh $OUTPATH
 sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH

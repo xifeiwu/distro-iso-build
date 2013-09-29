@@ -31,4 +31,5 @@ diff -uN schemas_raw schemas >/tmp/new.patch
 set -e
 run_patch -p0 -d $OUTPATH/squashfs-root/usr/share/glib-2.0 -i /tmp/new.patch
 rm /tmp/new.patch
+rm $OUTPATH/squashfs-root/usr/share/glib-2.0/schemas/10_cinnamon.gschema.override
 echo finished.

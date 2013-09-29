@@ -1,10 +1,10 @@
-#安装google-chrome,把此脚本放在squashfs-root/../路径下,把app目录放在～/app下
+#安装rdpdesk
 
 set -e
 
 CHROOTDIR=~/customize/mkiso_out/squashfs-root
 DEBDIR=~/app
-DEBNAME=rdpdesk_3.2-0_i386.deb
+DEBNAME=rdpdesk_3.2-0_i386.tar.gz
 
 if [ ! -e "${CHROOTDIR}" ]; then
     echo "squashfs-root not found"
@@ -24,13 +24,16 @@ fi
 CHROOTDIR=$1/squashfs-root
 DEBDIR=$2
 
-
 mkdir ${CHROOTDIR}/app
 sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
-sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i ${DEBNAME}"
+sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
+sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && tar xvf rdpdesk_3.2-0_i386.tar.gz"
+sudo chroot ${CHROOTDIR} /bin/bash -c "dpkg -i app/rdpdesk/*.deb"
+
+
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 
+echo "Rdpdesk installed successful!"
 
 
-echo "Rdpdesktop installed successful!"

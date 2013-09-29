@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=APTonCD
+GenericName=Package Backup Tool
+Comment=Create an Installation Disc
+Version=1.0
+Icon=aptoncd
+Exec=/usr/bin/aptoncd
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=System;Settings;
+X-Ubuntu-Gettext-Domain=aptoncd

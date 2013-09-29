@@ -30,6 +30,3 @@ run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_mymint_disk_mint4win.patch
 run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_mymint_disk_release_notes_url.patch
 run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_mymint_isolinux_isolinux_cfg.patch
 run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_squashfs-root_usr_lib_ubiq_ubiq_misc_py.patch
-run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_l10n_zhCN_welcome_html.patch
-run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_welcome_html.patch
-run_patch -d $OUTPATH -p0 -i $DISTURBPATH/patch/Patch_squashfs-root_usr_share_ubi-slide_slides_index_html.patch

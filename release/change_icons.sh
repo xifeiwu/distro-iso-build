@@ -51,3 +51,7 @@ cp -f $DISTURBPATH/materials/icn/system-lock-screen1-24.png $OUTPATH/squashfs-ro
 cp -f $DISTURBPATH/materials/icn/system-lock-screen1-32.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/32/system-lock-screen.png
 cp -f $DISTURBPATH/materials/icn/system-lock-screen1-48.png $OUTPATH/squashfs-root/usr/share/icons/Mint-X/actions/48/system-lock-screen.png
 echo "system lock screen icon changed!"
+
+echo changing: /usr/share/linuxmint/logo.png
+cp -f $DISTURBPATH/materials/logo.png $OUTPATH/squashfs-root/usr/share/linuxmint/logo.png
+echo "linuxmint welcome icon changed!"

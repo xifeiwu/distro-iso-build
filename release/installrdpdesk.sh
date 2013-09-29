@@ -6,10 +6,6 @@ CHROOTDIR=~/customize/mkiso_out/squashfs-root
 DEBDIR=~/app
 DEBNAME=rdpdesk_3.2-0_i386.tar.gz
 
-if [ ! -e "${CHROOTDIR}" ]; then
-    echo "squashfs-root not found"
-    exit
-fi
 
 if [ -z "$1" ] ; then
     echo error: No chrootdir setting at first param.
@@ -23,6 +19,11 @@ fi
 
 CHROOTDIR=$1/squashfs-root
 DEBDIR=$2
+
+if [ ! -e "${CHROOTDIR}" ]; then
+    echo "squashfs-root not found"
+    exit
+fi
 
 mkdir ${CHROOTDIR}/app
 sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app

@@ -622,6 +622,18 @@ diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot
  Exec=gnome-screenshot --interactive
  Terminal=false
  Type=Application
+diff -uN applications_old/gnome-system-log.desktop applications/gnome-system-log.desktop
+--- applications_old/gnome-system-log.desktop	2013-09-29 10:44:02.257340237 +0800
++++ applications/gnome-system-log.desktop	2013-09-29 13:00:03.213209966 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-Name=System Log
+-Comment=View or monitor system log files
++Name=系统日志
++Comment=查看并管理系统日志
+ Exec=gnome-system-log
+ Icon=logview
+ Terminal=false
 diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
 --- applications_old/gnome-system-monitor.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-system-monitor.desktop	2013-09-25 13:49:04.000000000 +0800
@@ -1803,7 +1815,7 @@ diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk
  Terminal=false
 diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
 --- applications_old/ubiquity-gtkui.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/ubiquity-gtkui.desktop	2013-09-29 10:46:55.949337465 +0800
++++ applications/ubiquity-gtkui.desktop	2013-09-29 12:30:33.773238211 +0800
 @@ -2,7 +2,7 @@
  Type=Application
  Version=1.0
@@ -1818,7 +1830,7 @@ diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.des
  Icon=ubiquity
  Terminal=false
 -Categories=GTK;System;Settings;
-+Categories=GTK;Documentation;
++Categories=GTK;Utility;
  NotShowIn=KDE;
  #X-Ubuntu-Gettext-Domain=ubiquity-desktop
  X-Ayatana-Appmenu-Show-Stubs=False

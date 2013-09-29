@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Help
+Name=帮助
 Comment=获取COS Desktop帮助
 OnlyShowIn=GNOME;Unity;
 Exec=yelp %u

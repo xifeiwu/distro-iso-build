@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=视频
-Comment=Play movies
+Comment=播放电影
 Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
 Exec=totem %U
 Icon=totem

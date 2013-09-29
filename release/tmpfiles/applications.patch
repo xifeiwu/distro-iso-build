@@ -480,14 +480,16 @@ diff -uN applications_old/firefox.desktop applications/firefox.desktop
  OnlyShowIn=Unity;
 diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
 --- applications_old/gcalctool.desktop	2013-09-29 10:44:02.253340237 +0800
-+++ applications/gcalctool.desktop	2013-09-13 10:00:16.000000000 +0800
-@@ -1,5 +1,5 @@
++++ applications/gcalctool.desktop	2013-09-29 13:38:06.841173513 +0800
+@@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Calculator
+-Comment=Perform arithmetic, scientific or financial calculations
 +Name=计算器
- Comment=Perform arithmetic, scientific or financial calculations
++Comment=计算器
  Keywords=calculation;arithmetic;scientific;financial;
  Exec=gnome-calculator
+ Icon=accessories-calculator
 diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
 --- applications_old/gcr-prompter.desktop	2013-09-29 10:44:02.253340237 +0800
 +++ applications/gcr-prompter.desktop	2013-09-13 10:00:16.000000000 +0800
@@ -636,14 +638,16 @@ diff -uN applications_old/gnome-system-log.desktop applications/gnome-system-log
  Terminal=false
 diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
 --- applications_old/gnome-system-monitor.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-system-monitor.desktop	2013-09-25 13:49:04.000000000 +0800
-@@ -1,5 +1,5 @@
++++ applications/gnome-system-monitor.desktop	2013-09-29 13:39:46.577171921 +0800
+@@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=System Monitor
+-Comment=View current processes and monitor system state
 +Name=任务管理器
- Comment=View current processes and monitor system state
++Comment=查看当前进程并管理计算机状态
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
+ Icon=utilities-system-monitor
 diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-system-monitor-kde.desktop
 --- applications_old/gnome-system-monitor-kde.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-system-monitor-kde.desktop	2013-09-13 10:00:16.000000000 +0800
@@ -656,14 +660,16 @@ diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-sy
  Exec=gnome-system-monitor
 diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.desktop
 --- applications_old/gnome-terminal.desktop	2013-09-29 10:44:02.257340237 +0800
-+++ applications/gnome-terminal.desktop	2013-09-13 10:00:16.000000000 +0800
-@@ -1,5 +1,5 @@
++++ applications/gnome-terminal.desktop	2013-09-29 13:32:49.337178581 +0800
+@@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Terminal
+-Comment=Use the command line
 +Name=终端
- Comment=Use the command line
++Comment=使用控制台
  TryExec=gnome-terminal
  Exec=gnome-terminal
+ Icon=utilities-terminal
 diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
 --- applications_old/gnome-user-share-properties.desktop	2013-09-29 10:44:02.257340237 +0800
 +++ applications/gnome-user-share-properties.desktop	1970-01-01 08:00:00.000000000 +0800
@@ -1786,14 +1792,16 @@ diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
  Comment=Take notes, link ideas, and stay organized
 diff -uN applications_old/totem.desktop applications/totem.desktop
 --- applications_old/totem.desktop	2013-09-29 10:44:02.273340237 +0800
-+++ applications/totem.desktop	2013-09-13 10:00:16.000000000 +0800
-@@ -1,5 +1,5 @@
++++ applications/totem.desktop	2013-09-29 13:34:47.133176701 +0800
+@@ -1,6 +1,6 @@
  [Desktop Entry]
 -Name=Videos
+-Comment=Play movies
 +Name=视频
- Comment=Play movies
++Comment=播放电影
  Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
  Exec=totem %U
+ Icon=totem
 diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk.desktop
 --- applications_old/transmission-gtk.desktop	2013-09-29 10:44:02.273340237 +0800
 +++ applications/transmission-gtk.desktop	2013-09-25 14:22:30.000000000 +0800

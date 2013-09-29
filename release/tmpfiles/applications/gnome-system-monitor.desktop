@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=任务管理器
-Comment=View current processes and monitor system state
+Comment=查看当前进程并管理计算机状态
 TryExec=gnome-system-monitor
 Exec=gnome-system-monitor
 Icon=utilities-system-monitor

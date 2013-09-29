@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=终端
-Comment=Use the command line
+Comment=使用控制台
 TryExec=gnome-terminal
 Exec=gnome-terminal
 Icon=utilities-terminal

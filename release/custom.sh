@@ -64,7 +64,7 @@ sudo chroot squashfs-root /bin/bash -c "mount none  /proc -t proc"
 #do
 #    sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/${file}"
 #done
-sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/cos-upgrade_2013.09.26_i386.deb"
+sudo chroot squashfs-root /bin/bash -c "dpkg -i /media/cos-upgrade_2013.09.30_i386.deb"
 sudo chroot squashfs-root /bin/bash -c "cos-upgrade"
 
 sudo chroot squashfs-root /bin/bash -c "umount /proc/"

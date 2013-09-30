@@ -5,7 +5,7 @@
  
  menu background splash.jpg
 -menu title Welcome to Linux Mint 15 Cinnamon 32-bit
-+menu title Welcome to COS Linux 0.5 32-bit
++menu title Welcome to COS Desktop 0.5 32-bit
  
  menu color screen	37;40      #80ffffff #00000000 std
  MENU COLOR border       30;44   #40ffffff #a0000000 std
@@ -14,7 +14,7 @@
  
  label live
 -  menu label Start Linux Mint
-+  menu label Start COS Linux
++  menu label Start COS Desktop 
    kernel /casper/vmlinuz
    append  file=/cdrom/preseed/mint.seed boot=casper initrd=/casper/initrd.lz quiet splash --
  menu default

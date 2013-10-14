@@ -1,0 +1,9 @@
+{
+    "last-edited": "1357777176", 
+    "gettext-domain": "WindowListGroup", 
+    "uuid": "WindowListGroup@jake.phy@gmail.com", 
+    "name": "Window List With App Grouping", 
+    "settings-schema": "org.cinnamon.applets.windowListGroup", 
+    "schema-file": "org.cinnamon.applets.windowListGroup.gschema.xml", 
+    "description": "Window List with App Grouping an Window Thumbnails"
+}

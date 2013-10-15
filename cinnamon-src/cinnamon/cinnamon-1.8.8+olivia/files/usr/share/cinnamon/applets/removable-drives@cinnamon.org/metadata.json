@@ -1,6 +1,0 @@
-{
- "uuid": "removable-drives@cinnamon.org",
- "name": "Removable drives",
- "description": "Access removable drives",
- "icon": "media-eject"
-}

@@ -1,7 +1,0 @@
-{
-    "last-edited": "1343810253", 
-    "description": "Main Cinnamon window list with window preview", 
-    "icon": "gnome-panel-window-list", 
-    "uuid": "windowPreviewWindowList@dalcde", 
-    "name": "Window list with window preview"
-}

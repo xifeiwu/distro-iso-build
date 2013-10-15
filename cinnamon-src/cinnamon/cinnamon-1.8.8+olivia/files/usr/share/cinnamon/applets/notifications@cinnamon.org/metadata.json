@@ -1,6 +1,0 @@
-{
-"uuid": "notifications@cinnamon.org",
-"name": "Notifications Applet",
-"description": "Click to display and manage system notifications",
-"role": "notifications"
-}

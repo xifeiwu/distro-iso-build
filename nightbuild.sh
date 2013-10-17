@@ -4,7 +4,7 @@ WORKPATH=$(cd "$(dirname $0)"; pwd)
 OUTPATH=/home/night/out
 ISOPATH=/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-1.iso
 LOGNAME="log`date +%Y%m%d%H%M`.txt"
-MAILNAME="《IBP-COS-buildlog》`date +%Y%m%d%H%M`"
+MAILNAME="[IBP-COS-buildlog]`date +%Y%m%d%H%M`"
 ISOOUTPATH=/home/night/isout
 if [ -d $OUTPATH/squashfs-root ] ; then
     rm -f -r $OUTPATH/squashfs-root

@@ -56,6 +56,11 @@ echo mkiso.sh will generate iso file $ISONAME in $GENISOPATH.
 echo generate manifest.
 chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mymint/casper/filesystem.manifest
 cp mymint/casper/filesystem.manifest mymint/casper/filesystem.manifest-desktop
+sed -i '/ubiquity/d' mymint/casper/filesystem.manifest-desktop
+sed -i '/casper/d' mymint/casper/filesystem.manifest-desktop
+sed -i '/gparted/d' mymint/casper/filesystem.manifest-desktop
+sed -i '/libdebian-installer/d' mymint/casper/filesystem.manifest-desktop
+sed -i '/user-setup/d' mymint/casper/filesystem.manifest-desktop
 
 echo gzip initrd
 cd initrd_lz

@@ -67,4 +67,5 @@ sudo sh $ScriptPATH/release/change_start_menu.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_icons.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
 sudo sh $ScriptPATH/release/reconfig_start_menu.sh $OUTPATH
+sudo sh $ScriptPATH/release/patch_mdm_clouds.sh $OUTPATH
 sudo sh $ScriptPATH/mkiso.sh $OUTPATH $GENISOPATH

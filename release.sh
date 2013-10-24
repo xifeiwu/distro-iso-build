@@ -46,26 +46,51 @@ echo ISOPATH=$ISOPATH
 echo APPPATH=$APPPATH
 echo OUTPATH=$OUTPATH
 
+######
+#Unzip iso
+######
 sudo sh $ScriptPATH/uniso.sh $ISOPATH $OUTPATH
+
+#Build and install cinnamon and cinnamon-common
 sudo sh $ScriptPATH/release/install_deb_cinnamon.sh $OUTPATH
+
+#Install zh_CN deb and Input Method deb.
 sudo sh $ScriptPATH/release/installzh_CN.sh $OUTPATH $APPPATH
+
+#Install popular software
 sudo sh $ScriptPATH/release/installwps.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installchrome.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installvim.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installwineqq.sh $OUTPATH $APPPATH
+
+#Install ssh and close root user with ssh authority.
 sudo sh $ScriptPATH/release/installssh.sh $OUTPATH $APPPATH
+
+#Install Self software
 sudo sh $ScriptPATH/release/installrdpdesk.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installqtadb.sh $OUTPATH $APPPATH
+
+#Change start and install step
 sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_info.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_slides.sh $OUTPATH
-sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH
+
+#Change system name in some where. This shell file also will install some software in cos source list.
 sudo sh $ScriptPATH/release/custom.sh $OUTPATH
-sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
+
+#Change some icon\theme\applications name and so on.
+sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_start_menu.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_icons.sh $OUTPATH
-sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
 sudo sh $ScriptPATH/release/reconfig_start_menu.sh $OUTPATH
-#xifei has done with this bug by deb. So ...
-#sudo sh $ScriptPATH/release/patch_mdm_clouds.sh $OUTPATH
+
+#fix a bug of wps when first opened.
+sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
+
+#Remove wubi
+sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
+
+######
+#Make iso.
+######
 sudo sh $ScriptPATH/mkiso.sh $OUTPATH $GENISOPATH

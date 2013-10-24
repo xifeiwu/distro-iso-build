@@ -12,7 +12,6 @@ set +e
 patch --dry-run -N $*
 ERROR=$?
 set -e
-echo error:$ERROR.
 if [ $ERROR -eq 0 ] ; then
     patch -N $*
 else

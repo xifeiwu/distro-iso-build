@@ -6,6 +6,19 @@ if [ -z "$1" ] ; then
     exit -1
 fi
 
+run_patch(){
+set +e
+patch --dry-run -N $*
+ERROR=$?
+set -e
+if [ $ERROR -eq 0 ] ; then
+    patch -N $*
+else
+    patch -R -N $*
+    patch -N $*
+fi
+}
+
 OUTPATH=$(cd $1; pwd)
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
@@ -17,7 +30,7 @@ if [ ! -x "$applicationPath" ] ; then
     exit -1
 fi
 cd $OUTPATH/squashfs-root/usr/share
-patch -p0 < $DISTURBPATH/tmpfiles/applications.patch
+run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
 echo "Patch applications directory successfully!"
 
 directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories
@@ -26,7 +39,7 @@ if [ ! -x "$directoryPath" ] ; then
     exit -1
 fi
 cd $OUTPATH/squashfs-root/usr/share
-patch -p0 < $DISTURBPATH/tmpfiles/desktop-directories.patch
+run_patch -p0 -i $DISTURBPATH/tmpfiles/desktop-directories.patch
 echo "Patch desktop directory successfully!"
 
 mdmApplicationsPath=$OUTPATH/squashfs-root/usr/share/mdm/applications
@@ -35,7 +48,7 @@ if [ ! -x "$mdmApplicationsPath" ] ; then
     exit -1
 fi
 cd $OUTPATH/squashfs-root/usr/share
-patch -p0 < $DISTURBPATH/tmpfiles/mdm_applications.patch
+run_patch -p0 -i $DISTURBPATH/tmpfiles/mdm_applications.patch
 echo "Patch mdm applications directory successfully!"
 
 cp $DISTURBPATH/tmpfiles/yelp.desktop $OUTPATH/squashfs-root/usr/share/ubuntu-system-adjustments/yelp/

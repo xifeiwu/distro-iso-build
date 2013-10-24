@@ -47,6 +47,7 @@ echo APPPATH=$APPPATH
 echo OUTPATH=$OUTPATH
 
 sudo sh $ScriptPATH/uniso.sh $ISOPATH $OUTPATH
+sudo sh $ScriptPATH/release/install_deb_cinnamon.sh $OUTPATH
 sudo sh $ScriptPATH/release/installzh_CN.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installwps.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installchrome.sh $OUTPATH $APPPATH

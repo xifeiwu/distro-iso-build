@@ -33,14 +33,14 @@ cd $OUTPATH/squashfs-root/usr/share
 run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
 echo "Patch applications directory successfully!"
 
-directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories
-if [ ! -x "$directoryPath" ] ; then
-    echo "The desktop directory does not exist!"
-    exit -1
-fi
-cd $OUTPATH/squashfs-root/usr/share
-run_patch -p0 -i $DISTURBPATH/tmpfiles/desktop-directories.patch
-echo "Patch desktop directory successfully!"
+#directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories
+#if [ ! -x "$directoryPath" ] ; then
+#    echo "The desktop directory does not exist!"
+#    exit -1
+#fi
+#cd $OUTPATH/squashfs-root/usr/share
+#run_patch -p0 -i $DISTURBPATH/tmpfiles/desktop-directories.patch
+#echo "Patch desktop directory successfully!"
 
 mdmApplicationsPath=$OUTPATH/squashfs-root/usr/share/mdm/applications
 if [ ! -x "$mdmApplicationsPath" ] ; then

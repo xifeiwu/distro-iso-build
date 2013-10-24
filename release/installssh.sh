@@ -30,6 +30,7 @@ sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd app && tar xvf ssh.tar.gz"
 sudo chroot ${CHROOTDIR} /bin/bash -c "dpkg -i app/ssh/*.deb"
+sudo chroot ${CHROOTDIR} /bin/bash -c "sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' etc/ssh/sshd_config"
 
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"

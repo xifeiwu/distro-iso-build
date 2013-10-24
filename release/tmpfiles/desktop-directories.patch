@@ -1,6 +1,6 @@
 diff -uN desktop-directories_raw/cinnamon-audio-video.directory desktop-directories/cinnamon-audio-video.directory
---- desktop-directories_raw/cinnamon-audio-video.directory	2013-09-27 09:25:41.834465116 +0800
-+++ desktop-directories/cinnamon-audio-video.directory	2013-09-24 16:09:48.000000000 +0800
+--- desktop-directories_raw/cinnamon-audio-video.directory	2013-10-24 14:55:56.383081726 +0800
++++ desktop-directories/cinnamon-audio-video.directory	2013-10-23 16:09:32.250757970 +0800
 @@ -96,9 +96,9 @@
  Name[vi]=Âm thanh và Ảnh động
  Name[xh]=Isandi neVidiyo
@@ -15,8 +15,8 @@ diff -uN desktop-directories_raw/cinnamon-audio-video.directory desktop-director
  Comment[af]=Multimediakieslys
  Comment[an]=Menú de programas multimedia
 diff -uN desktop-directories_raw/cinnamon-settings.directory desktop-directories/cinnamon-settings.directory
---- desktop-directories_raw/cinnamon-settings.directory	2013-09-27 09:25:41.826465116 +0800
-+++ desktop-directories/cinnamon-settings.directory	2013-09-29 12:17:30.569250713 +0800
+--- desktop-directories_raw/cinnamon-settings.directory	2013-10-24 14:56:08.595082117 +0800
++++ desktop-directories/cinnamon-settings.directory	2013-10-23 16:09:32.250757970 +0800
 @@ -96,7 +96,7 @@
  Name[vi]=Tùy thích
  Name[xh]=Uluhlu lwezinto ezikhethwayo
@@ -34,13 +34,13 @@ diff -uN desktop-directories_raw/cinnamon-settings.directory desktop-directories
 +Icon=applications-system
  Type=Directory
 diff -uN desktop-directories_raw/cinnamon-settings-system.directory desktop-directories/cinnamon-settings-system.directory
---- desktop-directories_raw/cinnamon-settings-system.directory	2013-09-27 09:25:41.830465116 +0800
-+++ desktop-directories/cinnamon-settings-system.directory	2013-09-29 13:59:10.625153340 +0800
+--- desktop-directories_raw/cinnamon-settings-system.directory	2013-10-24 14:56:33.363082909 +0800
++++ desktop-directories/cinnamon-settings-system.directory	2013-10-23 16:09:32.250757970 +0800
 @@ -97,7 +97,7 @@
  Name[vi]=Quản lý
  Name[xh]=Ulawulo
  Name[yo]=Ìṣàkóso
--Name[zh_CN]=系统管理
+-Name[zh_CN]=其他系统工具
 +Name[zh_CN]=系统管理工具
  Name[zh_HK]=管理
  Name[zh_TW]=管理
@@ -49,19 +49,17 @@ diff -uN desktop-directories_raw/cinnamon-settings-system.directory desktop-dire
  Comment[zh_CN]=更改系统设置（影响所有用户）
  Comment[zh_HK]=更改全系統設定值（影響所有用戶）
  Comment[zh_TW]=更改全系統設定值（影響所有用戶）
--Icon=preferences-system
+-Icon=revenge
 +Icon=preferences-desktop
 diff -uN desktop-directories_raw/cinnamon-system-tools.directory desktop-directories/cinnamon-system-tools.directory
---- desktop-directories_raw/cinnamon-system-tools.directory	2013-09-27 09:25:41.834465116 +0800
-+++ desktop-directories/cinnamon-system-tools.directory	2013-09-29 13:59:45.001152791 +0800
-@@ -95,9 +95,9 @@
- Name[vi]=Công cụ hệ thống
+--- desktop-directories_raw/cinnamon-system-tools.directory	2013-10-24 14:57:01.339083805 +0800
++++ desktop-directories/cinnamon-system-tools.directory	2013-10-23 16:09:32.250757970 +0800
+@@ -96,8 +96,8 @@
  Name[xh]=Izixhobo Zeenkqubo
  Name[yo]=Àwọn Irinṣẹ́ Ètò Kọ̀ǹpútà
--Name[zh_CN]=系统工具
--Name[zh_HK]=系統工具
--Name[zh_TW]=系統工具
-+Name[zh_CN]=系统管理工具
+ Name[zh_CN]=系统管理工具
+-Name[zh_HK]=系统管理工具
+-Name[zh_TW]=系统管理工具
 +Name[zh_HK]=系統管理工具
 +Name[zh_TW]=系統管理工具
  Comment=System configuration and monitoring
@@ -75,8 +73,8 @@ diff -uN desktop-directories_raw/cinnamon-system-tools.directory desktop-directo
 +Icon=preferences-desktop
  Type=Directory
 diff -uN desktop-directories_raw/System-Tools.directory desktop-directories/System-Tools.directory
---- desktop-directories_raw/System-Tools.directory	2013-09-27 09:25:41.834465116 +0800
-+++ desktop-directories/System-Tools.directory	2013-09-29 12:28:13.485240451 +0800
+--- desktop-directories_raw/System-Tools.directory	2013-10-23 16:09:32.250757970 +0800
++++ desktop-directories/System-Tools.directory	2013-10-23 16:09:32.250757970 +0800
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Name=System Tools

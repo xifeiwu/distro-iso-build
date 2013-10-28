@@ -23,7 +23,7 @@ fi
 OUTPATH=$(cd $1; pwd)
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
 
-echo patching org.cinanmon.gschemas.xml
+echo patching 
 cd $DISTURBPATH/patch_slides
 set +e
 diff -urNa slides_raw slides >/tmp/new.patch

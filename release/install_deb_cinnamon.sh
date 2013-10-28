@@ -36,7 +36,7 @@ apt-get -y install debhelper dh-autoreconf python-dev gnome-pkg-tools intltool l
 echo build-depends is already installed
 
 # build an install deb
-cd ${CHROOTDIR}/cinnamon/cinnamon-1.8.8+olivia && dpkg-buildpackage
+cd ${CHROOTDIR}/cinnamon/cinnamon-1.8.8+olivia && dpkg-buildpackage  -uc -us
 
 chroot ${CHROOTDIR} /bin/bash -c "cd cinnamon && dpkg -i -E cinnamon-common_1.8.8+iceblue_all.deb"
 echo "cinnamon-common installed successful!"

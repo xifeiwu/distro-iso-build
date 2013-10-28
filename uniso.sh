@@ -56,20 +56,20 @@ fi
 
 cd $OUTPATH
 
-if [ ! -e initrd_lz ] ; then
-    echo gunzip initrd.lz
-    mkdir initrd_lz
-    cp mymint/casper/initrd.lz initrd.lz
-    echo warning: now, it is supported the format of initrd.lz is gzip, not lzma. If it is lzma, you should change it.
-    mv initrd.lz initrd.gz
-    gunzip initrd.gz
-    cd initrd_lz
-    cpio -id<../initrd
-    rm ../initrd
-    cd ..
-else
-    echo warning: initrd_lz has exist, it is expected initrd.lz has been decompressed normally.
-fi
+#if [ ! -e initrd_lz ] ; then
+#    echo gunzip initrd.lz
+#    mkdir initrd_lz
+#    cp mymint/casper/initrd.lz initrd.lz
+#    echo warning: now, it is supported the format of initrd.lz is gzip, not lzma. If it is lzma, you should change it.
+#    mv initrd.lz initrd.gz
+#    gunzip initrd.gz
+#    cd initrd_lz
+#    cpio -id<../initrd
+#    rm ../initrd
+#    cd ..
+#else
+#    echo warning: initrd_lz has exist, it is expected initrd.lz has been decompressed normally.
+#fi
 
 if [ ! -e squashfs-root ] ; then
     echo unsquashfs mymint/casper/filesystem.squashfs
@@ -79,4 +79,4 @@ else
     echo warning:squashfs-root has exist, it is expected filesystem.squashfs has been executed unsquashfs normally.    
 fi
 
-echo uniso has finished.
+#echo uniso has finished.

@@ -41,10 +41,10 @@ if [ ! -e mymint/casper ] ; then
     exit -1
 fi
 
-if [ ! -e initrd_lz ] ; then
-    echo error: initrd_lz does not exist. exit.
-    exit -1
-fi
+#if [ ! -e initrd_lz ] ; then
+#    echo error: initrd_lz does not exist. exit.
+#    exit -1
+#fi
 
 if [ ! -e squashfs-root ] ; then
     echo error: squashfs-root does not exist. exit.
@@ -62,15 +62,15 @@ sed -i '/gparted/d' mymint/casper/filesystem.manifest-desktop
 sed -i '/libdebian-installer/d' mymint/casper/filesystem.manifest-desktop
 sed -i '/user-setup/d' mymint/casper/filesystem.manifest-desktop
 
-echo gzip initrd
-cd initrd_lz
-if [ -f initrd ] ; then
-    rm initrd
-fi
-find . | cpio --quiet --dereference -o -H newc>./initrd
-gzip initrd
-mv initrd.gz ../mymint/casper/initrd.lz
-cd ..
+#echo gzip initrd
+#cd initrd_lz
+#if [ -f initrd ] ; then
+#    rm initrd
+#fi
+#find . | cpio --quiet --dereference -o -H newc>./initrd
+#gzip initrd
+#mv initrd.gz ../mymint/casper/initrd.lz
+#cd ..
 
 echo mksquashfs
 rm -rf mymint/casper/filesystem.squashfs

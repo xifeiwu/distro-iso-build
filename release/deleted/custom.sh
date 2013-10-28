@@ -26,11 +26,11 @@ if [ "$USER" != "root" ] ; then
     exit
 fi
 
-echo "custom initrd."
-if [ ! -e ${OUTPATH}/initrd_lz ]; then
-    echo "initrd_lz not found"
-    exit
-fi
+#echo "custom initrd."
+#if [ ! -e ${OUTPATH}/initrd_lz ]; then
+#    echo "initrd_lz not found"
+#    exit
+#fi
 
 run_patch(){
 set +e
@@ -46,10 +46,10 @@ else
 fi
 }
 
-INITRDLOGO=${OUTPATH}/initrd_lz/lib/plymouth/themes
-cp ${MATERIALPATH}/bootlogo.png ${MATERIALPATH}/shutlogo.png ${INITRDLOGO}/mint-logo
-run_patch ${INITRDLOGO}/text.plymouth ${MATERIALPATH}/text.patch
-run_patch ${INITRDLOGO}/mint-text/mint-text.plymouth ${MATERIALPATH}/text.patch
+#INITRDLOGO=${OUTPATH}/initrd_lz/lib/plymouth/themes
+#cp ${MATERIALPATH}/bootlogo.png ${MATERIALPATH}/shutlogo.png ${INITRDLOGO}/mint-logo
+#run_patch ${INITRDLOGO}/text.plymouth ${MATERIALPATH}/text.patch
+#run_patch ${INITRDLOGO}/mint-text/mint-text.plymouth ${MATERIALPATH}/text.patch
 
 
 if [ ! -e ${OUTPATH}/squashfs-root ]; then

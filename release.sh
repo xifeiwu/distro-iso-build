@@ -51,9 +51,6 @@ echo OUTPATH=$OUTPATH
 ######
 sudo sh $ScriptPATH/uniso.sh $ISOPATH $OUTPATH
 
-#Install cos boot splash
-#sudo sh $ScriptPATH/release/installcossplash.sh $OUTPATH $APPPATH
-
 #Build and install cinnamon and cinnamon-common
 sudo sh $ScriptPATH/release/install_deb_cinnamon.sh $OUTPATH
 
@@ -97,6 +94,9 @@ sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
 
 #Remove wubi
 sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
+
+#Install cos boot splash
+sudo sh $ScriptPATH/release/installcossplash.sh $OUTPATH $APPPATH
 
 ######
 #Make iso.

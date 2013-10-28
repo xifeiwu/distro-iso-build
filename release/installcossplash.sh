@@ -37,6 +37,7 @@ sudo chroot ${CHROOTDIR} /bin/bash -c "update-alternatives --remove  default.ply
 sudo chroot ${CHROOTDIR} /bin/bash -c "update-alternatives --config default.plymouth"
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
+sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /home/v1"
 sudo chroot ${CHROOTDIR} /bin/bash -c "update-initramfs -u"
 sudo chroot ${CHROOTDIR} /bin/bash -c "mkinitramfs -o /initrd.gz 3.8.0-cos-v0.5-i686"
 

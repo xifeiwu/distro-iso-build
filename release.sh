@@ -73,15 +73,14 @@ sudo sh $ScriptPATH/release/installqtadb.sh $OUTPATH $APPPATH
 #Change start and install step
 sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH
 sudo sh $ScriptPATH/release/patch_info.sh $OUTPATH
-sudo sh $ScriptPATH/release/patch_slides.sh $OUTPATH
 
 #Change some zh_CN LC_MESSAGES
 sudo sh $ScriptPATH/release/change_zh_CN.sh $OUTPATH
 
 #Change system name in some where. This shell file also will install some software in cos source list.
 #sudo sh $ScriptPATH/release/custom.sh $OUTPATH
-sudo sh $ScriptPATH/release/ubiquity.sh $ScriptPATH/release/ $OUTPATH
-sudo sh $ScriptPATH/release/packages.sh $ScriptPATH/release/ $OUTPATH
+sh $ScriptPATH/release/ubiquity.sh $ScriptPATH/release/ $OUTPATH
+sh $ScriptPATH/release/packages.sh $ScriptPATH/release/ $OUTPATH
 
 #Change some icon\theme\applications name and so on.
 sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH

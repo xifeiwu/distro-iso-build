@@ -39,7 +39,7 @@ sudo chroot ${CHROOTDIR} /bin/bash -c "update-alternatives --config default.plym
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /home/v1"
 sudo chroot ${CHROOTDIR} /bin/bash -c "update-initramfs -u"
-sudo chroot ${CHROOTDIR} /bin/bash -c "mkinitramfs -o /initrd.gz 3.8.0-cos-v0.5-i686"
+sudo chroot ${CHROOTDIR} /bin/bash -c "mkinitramfs -o /initrd.gz 3.8.0-19-generic"
 
 sudo cp ${CHROOTDIR}/initrd.gz ${CHROOTDIR}/boot/initrd.lz
 sudo mv ${CHROOTDIR}/initrd.gz ${CHROOTDIR}/../mymint/casper/initrd.lz

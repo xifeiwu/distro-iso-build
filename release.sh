@@ -72,7 +72,7 @@ sudo sh $ScriptPATH/release/installqtadb.sh $OUTPATH $APPPATH
 
 #Change start and install step
 sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH
-sudo sh $ScriptPATH/release/patch_info.sh $OUTPATH
+sudo sh $ScriptPATH/release/change_info.sh $OUTPATH
 
 #Change some zh_CN LC_MESSAGES
 sudo sh $ScriptPATH/release/change_zh_CN.sh $OUTPATH
@@ -92,7 +92,7 @@ sudo sh $ScriptPATH/release/reconfig_start_menu.sh $OUTPATH
 sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
 
 #Remove wubi
-sudo sh $ScriptPATH/release/change_wubi.sh $OUTPATH
+sudo sh $ScriptPATH/release/remove_wubi.sh $OUTPATH
 
 #Install cos boot splash
 sudo sh $ScriptPATH/release/installcossplash.sh $OUTPATH $APPPATH

@@ -31,7 +31,7 @@ fi
 
 #ubiquity_slideshow_dir="squashfs-root/usr/share/ubiquity-slideshow"
 #cp -r ${MATERIALDIR}/${ubiquity_slideshow_dir}/* ${WORKDIR}/${ubiquity_slideshow_dir}/
-function run_patch(){
+run_patch(){
     set +e
     patch --dry-run -N $*
     ERROR=$?

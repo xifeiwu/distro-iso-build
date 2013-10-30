@@ -33,3 +33,7 @@ sed -i 's/Linux Mint/COS Desktop/' $OUTPATH/mymint/boot/grub/loopback.cfg
 sed -i 's/Linux Mint 15 Cinnamon/COS Desktop "$COSVERSION"/' $OUTPATH/mymint/isolinux/isolinux.cfg
 sed -i 's/Linux Mint/COS Desktop/' $OUTPATH/mymint/isolinux/isolinux.cfg
 echo Success generating info file.
+
+echo change mymint/isolinux/splash.png
+cp $DISTURBPATH/isolinux/splash.jpg $OUTPATH/mymint/isolinux/splash.jpg
+echo success changing splash.jpg

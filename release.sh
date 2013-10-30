@@ -70,9 +70,9 @@ sudo sh $ScriptPATH/release/installssh.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installrdpdesk.sh $OUTPATH $APPPATH
 sudo sh $ScriptPATH/release/installqtadb.sh $OUTPATH $APPPATH
 
-#Change start and install step
-sudo sh $ScriptPATH/release/change_isolinux_splash.sh $OUTPATH
-sudo sh $ScriptPATH/release/change_info.sh $OUTPATH
+#Change iso files
+sudo sh $ScriptPATH/release/change_iso_files.sh $OUTPATH
+sudo sh $ScriptPATH/release/remove_wubi.sh $OUTPATH
 
 #Change some zh_CN LC_MESSAGES
 sudo sh $ScriptPATH/release/change_zh_CN.sh $OUTPATH
@@ -84,15 +84,11 @@ sh $ScriptPATH/release/packages.sh $ScriptPATH/release/ $OUTPATH
 
 #Change some icon\theme\applications name and so on.
 sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH
+sudo sh $ScriptPATH/release/change_start_menu_icons.sh $OUTPATH
 sudo sh $ScriptPATH/release/change_start_menu.sh $OUTPATH
-sudo sh $ScriptPATH/release/change_icons.sh $OUTPATH
-sudo sh $ScriptPATH/release/reconfig_start_menu.sh $OUTPATH
 
 #fix a bug of wps when first opened.
 sudo sh $ScriptPATH/release/set_username_for_WPS.sh $OUTPATH
-
-#Remove wubi
-sudo sh $ScriptPATH/release/remove_wubi.sh $OUTPATH
 
 #Install cos boot splash
 sudo sh $ScriptPATH/release/installcossplash.sh $OUTPATH $APPPATH

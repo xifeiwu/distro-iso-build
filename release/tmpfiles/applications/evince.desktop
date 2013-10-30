@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=PDF阅读器
-Comment=阅读PDF文档
+Name=Document Viewer
+Name[zh_CN]=PDF阅读器
+Comment=View multi-page documents
+Comment[zh_CN]=阅读PDF文档
 TryExec=evince
 Exec=evince %U
 StartupNotify=true

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Fcitx输入法配置工具
+Name=Fcitx Config Tool
 Comment=Fcitx GUI Config Tool
 Exec=fcitx-config-gtk3
 Icon=fcitx

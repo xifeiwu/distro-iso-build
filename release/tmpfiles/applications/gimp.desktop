@@ -1,9 +1,11 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=GIMP图片编辑器
+Name=GIMP Image Editor
+Nam[zh_CN]e=GIMP图片编辑器
 GenericName=Image Editor
-Comment=创建并编辑图片
+Comment=Create images and edit photographs
+Comment[zh_CN]=创建并编辑图片
 Exec=gimp-2.8 %U
 TryExec=gimp-2.8
 Icon=gimp

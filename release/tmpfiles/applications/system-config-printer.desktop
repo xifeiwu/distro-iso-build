@@ -1,7 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=打印机
-Comment=配置打印机
+Name=Printers
+Name[zh_CN]=打印机
+Comment=Configure printers
+Comment[zh_CN]=配置打印机
 Exec=system-config-printer
 Terminal=false
 Type=Application

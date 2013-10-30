@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=CD/DVD 刻录工具
+Name=CD/DVD Creator
+Name[zh_CN]=CD/DVD 刻录工具
 Comment=Create CDs and DVDs
 Categories=GNOME;GTK;System;
 TryExec=nautilus

@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=Caribou屏幕键盘
+Name=Caribou
+Name[zh_CN]=Caribou屏幕键盘
 GenericName=Virtual on-screen keyboard
 Comment=Enter text with a virtual keyboard
 Exec=caribou

@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=驱动管理
+Name=Driver Manager
+Name[zh_CN]=驱动管理
 Name[ro]=Driver Manager
 Name[et]=Ajuri haldur
 Name[sk]=Správca ovládačov
@@ -29,7 +30,8 @@ Name[pt]=Gestor de controladores
 Name[ms]=Pengurus Pemacu
 Name[ca]=Driver Manager
 Name[fr_CA]=Gestionnaire de pilotes
-Comment=管理设备驱动
+Comment=Manage the drivers for your devices
+Comment[zh_CN]=管理设备驱动
 Comment[ro]=Manage the drivers for your devices
 Comment[et]=Halda ajureid oma seadmes
 Comment[sk]=Správa ovládačov pre vaše zariadenia

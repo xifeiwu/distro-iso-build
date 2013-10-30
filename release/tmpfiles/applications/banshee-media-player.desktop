@@ -4,6 +4,7 @@ NoDisplay=true
 MimeType=x-content/audio-player;
 Version=1.0
 Name=Banshee音乐播放器
+Name[zh_CN]=Banshee音乐播放器
 GenericName=Media Player
 X-GNOME-FullName=Banshee Media Player
 Comment=Play and organize your media collection

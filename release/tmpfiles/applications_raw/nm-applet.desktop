@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=网络连接
+Name=Network
 Comment=Manage your network connections
 Icon=nm-device-wireless
 Exec=nm-applet

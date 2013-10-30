@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=BT下载器
+Name=Transmission
+Name[zh_CN]=BT下载器
 GenericName=BitTorrent Client
 X-GNOME-FullName=Transmission BitTorrent Client
 X-GNOME-FullName[ar]=ترانزميشن، عميل «بت تورنت»
@@ -64,7 +65,8 @@ X-GNOME-FullName[uk]=BitTorrent-клієнт Transmission
 X-GNOME-FullName[vi]=Trình khách BitTorrent Transmission
 X-GNOME-FullName[zh_CN]=Transmission BitTorrent 客户端
 X-GNOME-FullName[zh_TW]=Transmission BitTorrent 用戶端
-Comment=下载和分享文件
+Comment=Download and share files over BitTorrent
+Comment[zh_CN]=下载和分享文件
 Exec=transmission-gtk %U
 Icon=transmission
 Terminal=false

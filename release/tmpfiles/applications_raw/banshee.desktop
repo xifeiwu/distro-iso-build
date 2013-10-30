@@ -1,7 +1,7 @@
 [Desktop Entry]
 Exec=banshee --redirect-log --play-enqueued %U
 Version=1.0
-Name=Banshee音乐播放器
+Name=Banshee
 GenericName=Media Player
 X-GNOME-FullName=Banshee Media Player
 Comment=Play and organize your media collection

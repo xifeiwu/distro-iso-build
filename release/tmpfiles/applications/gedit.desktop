@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=gedit编辑器
+Name=Gedit
+Name[zh_CN]=Gedit编辑器
 GenericName=Text Editor
 Comment=Edit text files
 Exec=gedit %U

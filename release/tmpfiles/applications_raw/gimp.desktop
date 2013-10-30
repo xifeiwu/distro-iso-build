@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=GIMP图片编辑器
+Name=GIMP Image Editor
 GenericName=Image Editor
 Comment=Create images and edit photographs
 Exec=gimp-2.8 %U

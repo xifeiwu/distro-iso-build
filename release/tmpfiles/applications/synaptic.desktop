@@ -1,7 +1,9 @@
 [Desktop Entry]
-Name=新立得软件包管理器
+Name=Synaptic Package Manager
+Name[zh_CN]=新立得软件包管理器
 GenericName=Package Manager
-Comment=安装，卸载，升级软件包
+Comment=Install, remove and upgrade software packages
+Comment[zh_CN]=安装，卸载，升级软件包
 Exec=synaptic-pkexec
 Icon=synaptic
 Terminal=false

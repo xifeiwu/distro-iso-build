@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=GNOME系统监视器
+Name=GNOME System Monitor
 Comment=View current processes and monitor system state
 TryExec=gnome-system-monitor
 Exec=gnome-system-monitor

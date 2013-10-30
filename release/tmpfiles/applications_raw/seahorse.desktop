@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=密码管理器
+Name=Passwords and Keys
 Comment=Manage your passwords and encryption keys
 Exec=/usr/bin/seahorse
 Terminal=false

@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=蓝牙传输
+Name=Bluetooth Transfer
+Name[zh_CN]=蓝牙传输
 Comment=Send files via Bluetooth
 Icon=bluetooth
 Exec=bluetooth-sendto

@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=蓝牙设备安装
+Name=Bluetooth Device Setup
+Name[zh_CN]=蓝牙设备安装
 Comment=Setup Bluetooth devices
 Icon=bluetooth
 Exec=bluetooth-wizard

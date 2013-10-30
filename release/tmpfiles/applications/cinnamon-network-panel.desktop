@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=网络设置
+Name=Network
+Name[zh_CN]=网络设置
 Comment=Network settings
 Exec=cinnamon-settings network
 Icon=network-workgroup

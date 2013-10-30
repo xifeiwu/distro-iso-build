@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=软件源
-Comment=设置软件安装和更新源
+Name=Software Sources
+Name[zh_CN]=软件源
+Comment=Configure the sources for installable software and updates
+Comment[zh_CN]=设置软件安装和更新源
 Exec=software-sources
 Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg
 Terminal=false

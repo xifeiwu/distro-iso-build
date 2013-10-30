@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=声音
+Name=Sound
+Name[zh_CN]=声音
 Comment=Change sound volume and sound events
 Exec=cinnamon-settings sound
 Icon=multimedia-volume-control

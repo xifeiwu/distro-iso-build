@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=软件源配置
+Name=Software Sources
 Comment=Configure the sources for installable software and updates
 Exec=software-sources
 Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg

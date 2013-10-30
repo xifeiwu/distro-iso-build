@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=终端
+Name=Terminal
 Comment=Use the command line
 TryExec=gnome-terminal
 Exec=gnome-terminal

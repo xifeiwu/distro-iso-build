@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=字符映射表
+Name=Character Map
 Comment=Insert special characters into documents
 Exec=gucharmap
 Icon=accessories-character-map

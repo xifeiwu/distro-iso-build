@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=主文件夹
+Name=Home Folder
 Comment=Open your personal folder
 Exec=nemo %U
 Icon=folder

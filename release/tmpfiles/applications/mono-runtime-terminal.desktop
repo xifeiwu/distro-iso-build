@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=Mono运行时环境 (命令行)
+Name=Mono Runtime (Terminal)
+Name[zh_CN]=Mono运行时环境 (命令行)
 Exec=mono
 Terminal=true
 Type=Application

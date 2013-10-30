@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=设置IcedTea Web
+Name=IcedTea Web Control Panel
 Comment=Configure IcedTea Web (javaws and plugin)
 Exec=/usr/bin/itweb-settings
 Icon=javaws

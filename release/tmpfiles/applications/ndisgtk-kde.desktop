@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=Windows兼容无线管理工具
+Name=Windows Wireless Drivers
+Name[zh_CN]=Windows兼容无线管理工具
 Comment=Ndiswrapper driver installation tool
 Exec=kdesu /usr/sbin/ndisgtk -- --kde
 Icon=ndisgtk.png

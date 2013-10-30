@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=磁盘
-Comment=管理驱动和媒体
+Name=Disks
+Name[zh_CN]=磁盘
+Comment=Manage Drives and Media
+Comment[zh_CN]=管理驱动和媒体
 Exec=gnome-disks
 Icon=gnome-disks
 Terminal=false

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=桌面共享
+Name=Desktop Sharing
 Comment=Choose how other users can remotely view your desktop
 Exec=vino-preferences
 Icon=preferences-desktop-remote-desktop

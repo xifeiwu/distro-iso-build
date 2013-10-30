@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=开始程序
+Name=Startup Applications
 Comment=Choose what applications to start when you log in
 Exec=gnome-session-properties
 Icon=session-properties

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=网络连接管理
+Name=Network Connections
 Comment=Manage and change your network connection settings
 Icon=preferences-system-network
 Exec=nm-connection-editor

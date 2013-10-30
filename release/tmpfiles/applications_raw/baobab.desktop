@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=硬盘分析工具
+Name=Disk Usage Analyzer
 Comment=Check folder sizes and available disk space
 TryExec=baobab
 Exec=baobab

@@ -2,7 +2,7 @@
 Type=Application
 Version=1.0
 # Do not translate the word "RELEASE".  It is used as a marker by casper.
-Name=安装Release
+Name=Install RELEASE
 Name[am]=የተለቀቀውን መግጠሚያ
 Name[ar]=ثبّت RELEASE
 Name[ast]=Instalar RELEASE

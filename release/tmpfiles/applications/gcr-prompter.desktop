@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=访问提示
+Name=Access Prompt
+Name[zh_CN]=访问提示
 Comment=Unlock access to passwords and other secrets
 Icon=security-medium
 Exec=/usr/lib/gcr/gcr-prompter

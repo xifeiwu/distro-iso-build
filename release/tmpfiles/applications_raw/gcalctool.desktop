@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=计算器
+Name=Calculator
 Comment=Perform arithmetic, scientific or financial calculations
 Keywords=calculation;arithmetic;scientific;financial;
 Exec=gnome-calculator

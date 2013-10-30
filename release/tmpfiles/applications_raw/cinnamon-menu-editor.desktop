@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Cinnamon菜单编辑器
+Name=Cinnamon Menu Editor
 Comment=Edit the entries of the Cinnamon menu applet
 Exec=cinnamon-menu-editor
 Icon=alacarte

@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=图片查看器
-Comment=图片查看
+Name=Image Viewer
+Name[zh_CN]=图片查看器
+Comment=Browse and rotate images
+Comment[zh_CN]=图片查看
 TryExec=eog
 Exec=eog %U
 Icon=eog

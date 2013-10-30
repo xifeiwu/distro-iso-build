@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=Brasero光盘刻录工具
+Name=Brasero
+Name[zh_CN]=Brasero光盘刻录工具
 GenericName=Disc Burner and Copier
 Comment=Create and copy CDs and DVDs
 Categories=GTK;GNOME;System;DiscBurning;

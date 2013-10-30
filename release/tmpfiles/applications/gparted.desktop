@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=GParted磁盘分区工具
+Name=GParted
+Name[zh_CN]=GParted磁盘分区工具
 GenericName=Partition Editor
 X-GNOME-FullName=GParted Partition Editor
 Comment=Create, reorganize, and delete partitions

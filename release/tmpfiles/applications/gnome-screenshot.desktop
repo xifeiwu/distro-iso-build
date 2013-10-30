@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=截图工具
-Comment=保存屏幕图像
+Name=Screenshot
+Name[zh_CN]=截图工具
+Comment=Save images of your screen or individual windows
+Comment[zh_CN]=保存屏幕图像
 Exec=gnome-screenshot --interactive
 Terminal=false
 Type=Application

@@ -1,6 +1,8 @@
 [Desktop Entry]
-Name=开机启动项
-Comment=选择开机启动的程序
+Name=Startup Applications
+Name[zh_CN]=开机启动项
+Comment=Choose what applications to start when you log in
+Comment[zh_CN]=选择开机启动的程序
 Exec=gnome-session-properties
 Icon=session-properties
 Terminal=false

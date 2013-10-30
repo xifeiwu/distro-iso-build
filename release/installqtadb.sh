@@ -3,7 +3,7 @@ set -e
 
 CHROOTDIR=~/pcos/mkiso_out/squashfs-root
 DEBDIR=~/pcos/app
-DEBNAME=qtadb_0.1-2_.deb
+DEBNAME=qtadbdeb_2.0_i386.deb
 
 if [ -z "$1" ] ; then
     echo error: No chrootdir setting at first param.
@@ -26,7 +26,7 @@ fi
 mkdir ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
-chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i qtadb_0.1-2_.deb"
+chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i qtadbdeb_2.0_i386.deb"
 chroot ${CHROOTDIR} /bin/bash -c "rm -rf app"
 
 echo "Qtadb installed successful!"

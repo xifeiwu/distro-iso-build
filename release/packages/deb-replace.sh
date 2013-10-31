@@ -20,7 +20,8 @@ wget -q -O - http://${COSREPOIP}/cos/project/keyring.gpg | apt-key add -
 #
 #' /etc/apt/preferences
 
-apt-get update
+rm -rf /var/lib/apt/lists/*
+apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"
 
 apt-get install cos-upgrade
 

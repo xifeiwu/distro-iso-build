@@ -38,10 +38,10 @@ echo build-depends is already installed
 # build an install deb
 cd ${CHROOTDIR}/cinnamon/cinnamon-1.8.8+olivia && dpkg-buildpackage  -uc -us
 
-chroot ${CHROOTDIR} /bin/bash -c "cd cinnamon && dpkg -i -E cinnamon-common_1.8.8+iceblue_all.deb"
+chroot ${CHROOTDIR} /bin/bash -c "cd cinnamon && dpkg -i -E cinnamon-common_1.8.9+iceblue_all.deb"
 echo "cinnamon-common installed successful!"
 
-chroot ${CHROOTDIR} /bin/bash -c "cd cinnamon && dpkg -i -E cinnamon_1.8.8+iceblue_i386.deb"
+chroot ${CHROOTDIR} /bin/bash -c "cd cinnamon && dpkg -i -E cinnamon_1.8.9+iceblue_i386.deb"
 echo "cinnamon installed successful!"
 
 chroot ${CHROOTDIR} /bin/bash -c "rm -rf cinnamon"

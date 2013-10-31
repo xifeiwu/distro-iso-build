@@ -2,7 +2,7 @@
 APPPATH=/home/box/Workspace/Public/app
 WORKPATH=$(cd "$(dirname $0)"; pwd)
 OUTPATH=/home/night/out
-ISOPATH=/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit.iso
+ISOPATH=/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-2.iso
 LOGNAME="log`date +%Y%m%d%H%M`.txt"
 MAILNAME="[IBP-COS-buildlog]`date +%Y%m%d%H%M`"
 ISOOUTPATH=/home/night/isout

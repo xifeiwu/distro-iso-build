@@ -14,11 +14,15 @@ echo "deb http://${COSREPOIP}/cos iceblue main" > /etc/apt/sources.list.d/cos-re
 wget -q -O - http://${COSREPOIP}/cos/project/keyring.gpg | apt-key add -
 
 #为新加源赋予优先级
-#sed -i '1i\Package: *\
-#Pin: release o=cos\
-#Pin-Priority: 700\
-#
-#' /etc/apt/preferences
+origin=`sed -n '2p' /etc/apt/preferences | awk '{print $3}'`
+if [ ${origin} != "o=cos" ] ; then
+sed -i '1i\Package: *\
+Pin: release o=cos\
+Pin-Priority: 700\
+
+' /etc/apt/preferences
+fi
+perl /tmp/repos-conf.pl
 
 rm -rf /var/lib/apt/lists/*
 apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"
@@ -53,5 +57,5 @@ for pkg in ${cospackages[*]}; do
 done
 
 apt-get clean
-
+rm /tmp/repos-conf.pl
 echo -e "\033[31m upgrade for COS Desktop v0.5 success. \033[0m"

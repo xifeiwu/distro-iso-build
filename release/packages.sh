@@ -16,6 +16,7 @@ fi
 
 echo -e "\033[31m - custom packages. \033[0m"
 cp -r ${MATERIALDIR}/packages/deb-replace.sh ${WORKDIR}/squashfs-root/tmp/
+cp -r ${MATERIALDIR}/packages/repos-conf.pl ${WORKDIR}/squashfs-root/tmp/
 
 cd ${WORKDIR}
 chroot squashfs-root /bin/bash -c "[ -e /proc/mounts ] && umount /proc/"

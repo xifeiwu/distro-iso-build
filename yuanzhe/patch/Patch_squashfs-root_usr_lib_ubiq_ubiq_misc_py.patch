@@ -1,4 +1,0 @@
-485c485
-<         get_release.release_info = ReleaseInfo(name='Linux Mint', version='15')
----
->         get_release.release_info = ReleaseInfo(name='COS_Linux', version='0.3')

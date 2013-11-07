@@ -1,8 +1,0 @@
-1c1
-< <div class="header"><h1 class="slidetitle">Welcome to Linux Mint</h1></div>
----
-> <div class="header"><h1 class="slidetitle">Welcome to COS_Linux</h1></div>
-8c8
-< <p>Welcome and thank you for choosing Linux Mint. This slideshow will show you around while the system is being installed on your computer.</p>
----
-> <p>Welcome and thank you for choosing COS_Linux. This slideshow will show you around while the system is being installed on your computer.</p>

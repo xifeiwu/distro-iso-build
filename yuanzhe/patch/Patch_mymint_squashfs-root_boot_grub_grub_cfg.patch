@@ -1,8 +1,0 @@
-125c125
-< menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
----
-> menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7)' --class linuxmint --class gnu-linux --class gnu --class os {
-140c140
-< menuentry 'Linux Mint 15 Cinnamon 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {
----
-> menuentry 'COS_Linux 0.3 COS_Linux 32-bit, 3.8.0-19-generic (/dev/sda7) -- recovery mode' --class linuxmint --class gnu-linux --class gnu --class os {

@@ -1,0 +1,14 @@
+--- mymint_raw/boot/grub/loopback.cfg	2013-09-02 17:40:13.223684167 +0800
++++ mymint/boot/grub/loopback.cfg	2013-09-09 15:50:01.307346629 +0800
+@@ -1,9 +1,9 @@
+-menuentry "Start Linux Mint" {
++menuentry "Start COS Desktop" {
+ 	set gfxpayload=keep
+ 	linux	/casper/vmlinuz  file=/cdrom/preseed/mint.seed boot=casper iso-scan/filename=${iso_path} quiet splash --
+ 	initrd	/casper/initrd.lz
+ }
+-menuentry "Start Linux Mint (compatibility mode)" {
++menuentry "Start COS Desktop (compatibility mode)" {
+ 	linux	/casper/vmlinuz  file=/cdrom/preseed/mint.seed boot=casper xforcevesa iso-scan/filename=${iso_path} ramdisk_size=1048576 root=/dev/ram rw noapic noapci nosplash irqpoll --
+ 	initrd	/casper/initrd.lz
+ }

@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Network
+Name[zh_CN]=网络连接
+Comment=Manage your network connections
+Icon=nm-device-wireless
+Exec=nm-applet
+Terminal=false
+Type=Application
+NoDisplay=true
+NotShowIn=KDE;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=NetworkManager
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Autostart-enabled=true
+X-GNOME-UsesNotifications=true
+X-Ubuntu-Gettext-Domain=nm-applet

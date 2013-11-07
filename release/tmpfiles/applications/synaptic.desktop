@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Synaptic Package Manager
+Name[zh_CN]=新立得软件包管理器
+GenericName=Package Manager
+Comment=Install, remove and upgrade software packages
+Comment[zh_CN]=安装，卸载，升级软件包
+Exec=synaptic-pkexec
+Icon=synaptic
+Terminal=false
+Type=Application
+Categories=PackageManager;GTK;System;
+NotShowIn=KDE;
+X-Ubuntu-Gettext-Domain=synaptic

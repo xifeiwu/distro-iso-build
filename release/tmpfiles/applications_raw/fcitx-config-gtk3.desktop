@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Fcitx Config Tool
+Comment=Fcitx GUI Config Tool
+Exec=fcitx-config-gtk3
+Icon=fcitx
+MimeType=
+Type=Application
+Categories=Settings;
+NoDisplay=true
+X-KDE-StartupNotify=false
+StartupNotify=false

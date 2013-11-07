@@ -1,0 +1,29 @@
+[Desktop Entry]
+Name=Sound
+Name[zh_CN]=声音
+Comment=Change sound volume and sound events
+Exec=cinnamon-settings sound
+Icon=multimedia-volume-control
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Settings;HardwareSettings;
+OnlyShowIn=GNOME;
+X-Cinnamon-Settings-Panel=sound-nua
+# Translators: those are keywords for the sound control-center panel
+Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
+Keywords[af]=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;kaart;mikrofoon;uitdoof;balans;kopstuk
+Keywords[ast]=tarxeta;micrófonu;volume;esvanecer;balance;altavoz;bluetooth;cascos;auriculares;
+Keywords[bn]=কার্ড;মাইক্রোফোন;ভলিউম;বিবর্ণ;ভারসাম্য;ব্লুটুথ;হেডসেট;
+Keywords[crh]=Kart;Mikrofon;Ses;Kaybolma;Denge;Bluetooth;Kulaklık Seti;
+Keywords[eo]=Karto;Mikrofono;Laŭteco;Dissolvo;Ekvilibro;Bludento;Kapaŭskultilo;
+Keywords[eu]=Txartela;Mikrofonoa;Bolumena;Iraungitu;Balantzea;Bluetooth;Aurikularrak;
+Keywords[it]=Scheda;Microfono;Volume;Fade;Dissolvenza;Bilanciamento;Bluetooth;Auricolare;Cuffie;
+Keywords[mk]=Картичка;Микрофон;Звук;Намалување;Баланс;Bluetooth;Слушалки;
+Keywords[nn]=Kort;Mikrofon;Volum;Feiding;Fading;Fade;Balanse;Blåtann;Bluetooth;Headset;Hovudsett;Hovudtelefonar;
+Keywords[ro]=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Microfon;Volum;Estompare;Balans;Căști;
+Keywords[sv]=Kort;Mikrofon;Volym;Tona;Balans;Bluetooth;Headset;
+Keywords[tr]=Kart;Mikrofon;Ses;Kaybolma;Denge;Bluetooth;Kulaklık Seti;
+Keywords[ug]=كارتا;مىكروفون;ئاۋاز مىقدارى;سۇسلاشتۇر;تەڭپۇڭلۇق;كۆكچىش;تىڭشىغۇچ;
+X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
+

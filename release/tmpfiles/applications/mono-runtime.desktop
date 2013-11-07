@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Mono Runtime
+Name[zh_CN]=Mono运行时环境
+Exec=mono
+Terminal=false
+Type=Application
+Icon=mono-runtime
+MimeType=application/x-ms-dos-executable;
+NoDisplay=true

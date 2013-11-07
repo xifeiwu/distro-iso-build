@@ -1,0 +1,16 @@
+--- squashfs-root_raw/usr/share/ubiquity-slideshow/slides/welcome.html	2013-05-08 04:55:48.000000000 +0800
++++ squashfs-root/usr/share/ubiquity-slideshow/slides/welcome.html	2013-09-09 16:13:35.439317463 +0800
+@@ -1,11 +1,11 @@
+-<div class="header"><h1 class="slidetitle">Welcome to Linux Mint</h1></div>
++<div class="header"><h1 class="slidetitle">Welcome to COS Linux</h1></div>
+ 
+ <div class="main">
+ 
+ <div class="text">
+ 
+ <div>
+-<p>Welcome and thank you for choosing Linux Mint. This slideshow will show you around while the system is being installed on your computer.</p>
++<p>Welcome and thank you for choosing COS Linux. This slideshow will show you around while the system is being installed on your computer.</p>
+ </div>
+ 
+ </div>

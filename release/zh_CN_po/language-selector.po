@@ -1,0 +1,267 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: language-selector\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-09 14:32+0000\n"
+"PO-Revision-Date: 2012-12-23 19:18+0000\n"
+"Last-Translator: John Lu <johnlu1991@qq.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2013-04-17 08:09+0000\n"
+"X-Generator: Launchpad (build 16567)\n"
+"Language: \n"
+
+msgid "%(INSTALL)d to install"
+msgid_plural "%(INSTALL)d to install"
+msgstr[0] "将安装 %(INSTALL)d 个"
+
+msgid "%(REMOVE)d to remove"
+msgid_plural "%(REMOVE)d to remove"
+msgstr[0] "将移除 %(REMOVE)d 个"
+
+msgid "%s, %s"
+msgstr "%s，%s"
+
+msgid "<b>Example</b>"
+msgstr "<b>范例</b>"
+
+msgid ""
+"<big><b>Checking available language support</b></big>\n"
+"\n"
+"The availability of translations or writing aids can differ between "
+"languages."
+msgstr ""
+"<big><b>检查可用的语言支持</b></big>\n"
+"\n"
+"不同语言里的翻译和写作助手的支持程度可能不同。"
+
+msgid "<small>Changes take effect next time you log in.</small>"
+msgstr "<small>更改将会在您下次登录时生效。</small>"
+
+msgid ""
+"<small>Use the same format choice for startup and the login screen.</small>"
+msgstr "<small>启动和登录界面使用相同样式。</small>"
+
+msgid ""
+"<small>Use the same language choices for startup and the login screen.</"
+"small>"
+msgstr "<small>启动和登录界面使用同一语言。</small>"
+
+msgid "Apply Changes"
+msgstr "应用变更"
+
+msgid "Apply System-Wide"
+msgstr "应用到整个系统"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Chinese (simplified)"
+msgstr "中文(简体)"
+
+msgid "Chinese (traditional)"
+msgstr "中文(繁体)"
+
+msgid "Configure multiple and native language support on your system"
+msgstr "配置您系统的多语言和本地语言支持"
+
+msgid "Could not install the full language support"
+msgstr "无法安装完整的语言支持"
+
+msgid "Could not install the selected language support"
+msgstr "无法安装选定的语言支持"
+
+msgid "Currency:"
+msgstr "货币："
+
+msgid "Date:"
+msgstr "日期："
+
+msgid "Details"
+msgstr "详细信息"
+
+msgid "Display numbers, dates and currency amounts in the usual format for:"
+msgstr "显示数字，日期和货币数额的格式："
+
+msgid ""
+"Failed to apply the '%s' format\n"
+"choice. The examples may show up if you\n"
+"close and re-open Language Support."
+msgstr ""
+"无法使用选择的 %s 格式。\n"
+"当您关闭并重新打开语言\n"
+"支持程序时将会看到样例。"
+
+msgid "Failed to authorize to install packages."
+msgstr "安装包验证失败。"
+
+msgid "Incomplete Language Support"
+msgstr "不完整的语言支持"
+
+msgid "Install / Remove Languages..."
+msgstr "添加或删除语言..."
+
+msgid "Installed"
+msgstr "已安装"
+
+msgid "Installed Languages"
+msgstr "已安装语言"
+
+msgid ""
+"It is impossible to install or remove any software. Please use the package "
+"manager \"Synaptic\" or run \"sudo apt-get install -f\" in a terminal to fix "
+"this issue at first."
+msgstr ""
+"无法安装或删除任何软件。请先使用新立得软件包管理器或在终端运行 \"sudo apt-"
+"get install -f\" 来修正这个问题。"
+
+msgid "Keyboard input method system:"
+msgstr "键盘输入方式系统："
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Language Support"
+msgstr "语言支持"
+
+msgid "Language for menus and windows:"
+msgstr "菜单和窗口的语言："
+
+msgid "No language information available"
+msgstr "没有可用的语言信息"
+
+msgid "Number:"
+msgstr "数字："
+
+msgid "Regional Formats"
+msgstr "地区格式"
+
+msgid "Session Restart Required"
+msgstr "需要重新启动会话"
+
+msgid "Set system default language"
+msgstr "设置系统默认语言"
+
+msgid "Software database is broken"
+msgstr "软件数据库损坏"
+
+msgid ""
+"Some translations or writing aids available for your chosen languages are "
+"not installed yet. Do you want to install them now?"
+msgstr "您选择的语言的部分可用翻译或写作帮助还没有安装。您希望现在安装吗？"
+
+msgid "System policy prevented setting default language"
+msgstr "系统策略阻止了设置默认语言"
+
+msgid ""
+"The language support files for your selected language seem to be incomplete. "
+"You can install the missing components by clicking on \"Run this action now"
+"\" and follow the instructions. An active internet connection is required. "
+"If you would like to do this at a later time, please use Language Support "
+"instead (click the icon at the very right of the top bar and select \"System "
+"Settings... -> Language Support\")."
+msgstr ""
+"您所选择的语言的支持文件可能不完整。要安装缺失的组件，您可以点击“现在执行此操"
+"作”并按照指示进行。此过程需要一个可用的网络连接。如果您需要稍后再进行，请使"
+"用“语言支持” (点击顶栏最右边的图标并选择“系统设置... -> 语言支持”)。"
+
+msgid "The language support is not installed completely"
+msgstr "语言支持没有安装完整"
+
+msgid "The new language settings will take effect once you have logged out."
+msgstr "当您注销后新的语言设置才会生效。"
+
+msgid ""
+"The system does not have information about the available languages yet. Do "
+"you want to perform a network update to get them now? "
+msgstr ""
+"此系统没有任何有关可用语言的信息，您希望现在执行网络更新来获取它们吗？ "
+
+msgid ""
+"This is perhaps a bug of this application. Please file a bug report at "
+"https://bugs.launchpad.net/ubuntu/+source/language-selector/+filebug"
+msgstr ""
+"这也许是该应用程序的一个问题。 请在 https://bugs.launchpad.net/ubuntu/"
+"+source/language-selector/+filebug?no-redirect 上报告这个问题。"
+
+msgid ""
+"This setting only affects the language your desktop and applications are "
+"displayed in. It does not set the system environment, like currency or date "
+"format settings. For that, use the settings in the Regional Formats tab.\n"
+"The order of the values displayed here decides which translations to use for "
+"your desktop. If translations for the first language are not available, the "
+"next one in this list will be tried. The last entry of this list is always "
+"\"English\".\n"
+"Every entry below \"English\" will be ignored."
+msgstr ""
+"这些设置只会影响您的桌面和应用程序显示的语言，不会影响系统环境的货币和日期格"
+"式。如需要设置，请切换到“地区格式”标签。\n"
+"这里显示的顺序决定了您的桌面使用的翻译。如果第一个语言的翻译不可用，将会尝试"
+"下一个。最后一个条目始终是“English”。\n"
+"所有在“English”之下的条目都将被忽略。"
+
+msgid ""
+"This will set the system environment like shown below and will also affect "
+"the preferred paper format and other region specific settings.\n"
+"If you want to display the desktop in a different language than this, please "
+"select it in the \"Language\" tab.\n"
+"Hence you should set this to a sensible value for the region in which you "
+"are located."
+msgstr ""
+"这里按照下面的显示设置系统，同时影响纸张尺寸等地区设置。\n"
+"如果您希望桌面显示不同的语言，请点击“语言”标签。\n"
+"因此，您应该按照您的地区设置一个合理的值。"
+
+msgid ""
+"Usually this is related to an error in your software archive or software "
+"manager. Check your preferences in Software Sources (click the icon at the "
+"very right of the top bar and select \"System Settings... -> Software Sources"
+"\")."
+msgstr ""
+"这通常与软件存档或软件管理器中的错误有关。请检查您在“软件源”中的设置 (点击顶"
+"栏最右边的图标并选择“系统设置... -> 软件源”)。"
+
+msgid ""
+"When a language is installed, individual users can choose it in their "
+"Language settings."
+msgstr "当某个语言安装后，用户可以在他们的语言设置里进行选择。"
+
+msgid "_Install"
+msgstr "安装(_I)"
+
+msgid "_Remind Me Later"
+msgstr "稍后提醒(_R)"
+
+msgid "_Update"
+msgstr "更新(_U)"
+
+msgid "alternative datadir"
+msgstr "可选的数据文件夹"
+
+msgid "check for the given package(s) only -- separate packagenames by comma"
+msgstr "仅检查给定的软件包 -- 用英文逗号分隔包名"
+
+msgid "don't verify installed language support"
+msgstr "不验证已安装的语言支持"
+
+msgid "none"
+msgstr "无"
+
+msgid "output all available language support packages for all languages"
+msgstr "为所有语言输出所有可用的语言支持包"
+
+msgid "show installed packages as well as missing ones"
+msgstr "同时显示已安装的和缺失的软件包"
+
+msgid "target language code"
+msgstr "目标语言代号"
+
+msgid ""
+"<small><b>Drag languages to arrange them in order of preference.</b>\n"
+"Changes take effect next time you log in.</small>"
+msgstr ""
+"<small><b>拖动语言来按偏好顺序排列它们。</b>"
+"变更将在您下次登录时生效。</small>"

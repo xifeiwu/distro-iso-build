@@ -1,0 +1,3730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cinnamon-control-center master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-09-22 15:49+0000\n"
+"PO-Revision-Date: 2012-09-20 23:27+0800\n"
+"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid " "
+msgstr " "
+
+msgid " — GNOME Volume Control Applet"
+msgstr " — GNOME 音量控制小程序"
+
+msgid "%a %R"
+msgstr "%a %R"
+
+msgid "%a %l:%M %p"
+msgstr "%A %H%M"
+
+msgid "%d Mb/s"
+msgstr "%d Mb/秒"
+
+msgid "%d of %d"
+msgstr "%d/%d"
+
+msgid "%d x %d"
+msgstr "%d x %d"
+
+msgid "%d x %d (%s)"
+msgstr "%d x %d (%s)"
+
+msgid "%d × %d"
+msgstr "%d × %d"
+
+msgid "%d-bit"
+msgstr "%d 位"
+
+msgid "%i %s %i %s"
+msgstr "%i %s %i %s"
+
+msgid "%i day ago"
+msgid_plural "%i days ago"
+msgstr[0] "%i 天前"
+
+msgid "%i hour"
+msgid_plural "%i hours"
+msgstr[0] "%i 小时"
+
+msgid "%i minute"
+msgid_plural "%i minutes"
+msgstr[0] "%i 分钟"
+
+msgid "%i month"
+msgid_plural "%i months"
+msgstr[0] "%i 个月"
+
+msgid "%i week"
+msgid_plural "%i weeks"
+msgstr[0] "%i 周"
+
+msgid "%i year"
+msgid_plural "%i years"
+msgstr[0] "%i 年"
+
+msgid ""
+"%s\n"
+"Run '%s --help' to see a full list of available command line options.\n"
+msgstr ""
+"%s\n"
+"运行 “%s --help” 查看所有可用的命令行选项。\n"
+
+msgid "%s Active Jobs"
+msgstr "%s 个活动的任务"
+
+msgid "%s Options"
+msgstr "%s 选项"
+
+msgid "%s VPN"
+msgstr "%s VPN"
+
+msgid "%s is still logged in"
+msgstr "%s 仍在登录状态"
+
+msgid "%u Input"
+msgid_plural "%u Inputs"
+msgstr[0] "%u 路输入"
+
+msgid "%u Output"
+msgid_plural "%u Outputs"
+msgstr[0] "%u 路输出"
+
+msgid "%u active"
+msgid_plural "%u active"
+msgstr[0] "%u 项活动任务"
+
+msgid "- System Settings"
+msgstr "- 系统设置"
+
+msgid "1 hour"
+msgstr "1 小时"
+
+msgid "1 minute"
+msgstr "1 分钟"
+
+msgid "10 minutes"
+msgstr "10 分钟"
+
+msgid "100%"
+msgstr "100%"
+
+msgid "125%"
+msgstr "125%"
+
+msgid "150%"
+msgstr "150%"
+
+msgid "2 minutes"
+msgstr "2 分钟"
+
+msgid "24-hour"
+msgstr "24 小时"
+
+msgid "3 minutes"
+msgstr "3 分钟"
+
+msgid "30 minutes"
+msgstr "30 分钟"
+
+msgid "30 seconds"
+msgstr "30 秒"
+
+msgid "5 minutes"
+msgstr "5 分钟"
+
+msgid "75%"
+msgstr "75%"
+
+msgid "802.1x supplicant configuration failed"
+msgstr "802.1x 客户端配置失败"
+
+msgid "802.1x supplicant disconnected"
+msgstr "802.1x 客户端已断开"
+
+msgid "802.1x supplicant failed"
+msgstr "802.1x 客户端失败"
+
+msgid "802.1x supplicant took too long to authenticate"
+msgstr "802.1x 客户端认证耗时过长"
+
+msgid ":"
+msgstr ":"
+
+msgid "<Unknown Action>"
+msgstr "<未知动作>"
+
+msgid "A user with name '%s' already exists."
+msgstr "名为“%s”的用户已存在。"
+
+msgid "A user with the username '%s' already exists"
+msgstr "以 %s 为用户名的用户已存在"
+
+msgid "AM/PM"
+msgstr "上午/下午"
+
+msgid "A_cceptance delay:"
+msgstr "可接受延迟(_C)："
+
+msgid "A_utomatic Login"
+msgstr "自动登录(_U)"
+
+msgid "Acc_eptance delay:"
+msgstr "可接受延迟(_E)："
+
+msgid "Account Information"
+msgstr "账户信息"
+
+msgid "Account _Type"
+msgstr "账户类型(_T)"
+
+msgctxt "Account type"
+msgid "Administrator"
+msgstr "管理员"
+
+msgctxt "Account type"
+msgid "Standard"
+msgstr "标准"
+
+msgid "Action"
+msgstr "动作"
+
+msgid "Active Jobs"
+msgstr "活动的任务"
+
+msgid "Ad-hoc"
+msgstr "Ad-hoc"
+
+msgid "Add Account"
+msgstr "添加账户"
+
+msgid "Add Device"
+msgstr "添加设备"
+
+msgid "Add Input Source"
+msgstr "添加输入源"
+
+msgid "Add Language"
+msgstr "添加语言"
+
+msgid "Add New Printer"
+msgstr "添加新打印机"
+
+msgid "Add Printer"
+msgstr "添加打印机"
+
+msgid "Add Region"
+msgstr "添加地区"
+
+msgid "Add Shortcut"
+msgstr "添加快捷键"
+
+msgid "Add User Account"
+msgstr "添加用户账户"
+
+msgid "Add a New Printer"
+msgstr "添加新打印机"
+
+msgid "Add a virtual device"
+msgstr "添加一个虚拟设备"
+
+msgid "Add account"
+msgstr "添加账户"
+
+msgid "Add an online account"
+msgstr "添加在线账户"
+
+msgid "Add device"
+msgstr "添加设备"
+
+msgid "Add new connection"
+msgstr "添加新连接"
+
+msgid "Add or remove users"
+msgstr "添加或删除用户"
+
+msgid "Add profile"
+msgstr "添加配置"
+
+msgid ""
+"Adding an account allows your applications to access it for documents, mail, "
+"contacts, calendar, chat and more."
+msgstr ""
+"添加一个账户，让您的应用程序访问账户的文档、邮件、联系人、日历、聊天等等。"
+
+msgid "Address"
+msgstr "地址"
+
+msgid "Adjust display resolution"
+msgstr "调整显示分辨率"
+
+msgid "Administrator Password"
+msgstr "管理员密码"
+
+msgid "Administrator _Name"
+msgstr "管理员名称(_N)"
+
+msgid "Air_plane Mode"
+msgstr "飞行模式(_P)"
+
+msgid "All Settings"
+msgstr "全部设置"
+
+msgid "All files"
+msgstr "所有文件"
+
+msgid "Alternative Characters Key"
+msgstr "替代的字符键"
+
+msgid "An internal error occurred."
+msgstr "发生了一个内部错误。"
+
+msgid "Applications"
+msgstr "应用程序"
+
+msgid "April"
+msgstr "四月"
+
+msgid "Arabic"
+msgstr "阿拉伯语"
+
+msgid "Are you sure you want to remove the account?"
+msgstr "您确定要移除该账户吗？"
+
+msgid "Ask what to do"
+msgstr "询问如何处理"
+
+msgid "August"
+msgstr "八月"
+
+msgid "Authentication failed"
+msgstr "认证失败"
+
+msgid "Authentication is required to change user data"
+msgstr "改变用户数据需要认证"
+
+msgid "Authentication required"
+msgstr "需要认证"
+
+msgid "Auto Select"
+msgstr "自动选择"
+
+msgid "AutoIP service error"
+msgstr "自动 IP(AutoIP) 服务出错"
+
+msgid "AutoIP service failed"
+msgstr "自动 IP(AutoIP) 服务失败"
+
+msgid "AutoIP service failed to start"
+msgstr "自动 IP(AutoIP) 服务启动失败"
+
+msgid "Available Profiles"
+msgstr "可用配置"
+
+msgid "Available Profiles for Cameras"
+msgstr "可用的相机配置"
+
+msgid "Available Profiles for Displays"
+msgstr "可用的显示配置"
+
+msgid "Available Profiles for Printers"
+msgstr "可用的打印机配置"
+
+msgid "Available Profiles for Scanners"
+msgstr "可用的扫描仪配置"
+
+msgid "Available Profiles for Webcams"
+msgstr "可用的摄像头配置"
+
+msgid "Back"
+msgstr "后退"
+
+msgid "Background"
+msgstr "背景"
+
+msgid "Bark"
+msgstr "犬吠"
+
+msgid "Battery"
+msgstr "电池"
+
+msgctxt "Battery power"
+msgid "Caution"
+msgstr "警告"
+
+msgctxt "Battery power"
+msgid "Charging"
+msgstr "正在充电"
+
+msgctxt "Battery power"
+msgid "Charging - fully charged"
+msgstr "充电 -已充满"
+
+msgctxt "Battery power"
+msgid "Empty"
+msgstr "空"
+
+msgctxt "Battery power"
+msgid "Good"
+msgstr "充足"
+
+msgctxt "Battery power"
+msgid "Low"
+msgstr "低"
+
+msgid "Beep on Caps and Num Lock"
+msgstr "按 Caps 或 Num Lock 键时蜂鸣"
+
+msgid "Beep when a _modifer key is pressed"
+msgstr "当按下修饰键时发出蜂鸣声(_M)"
+
+msgid "Beep when a key is"
+msgstr "发出蜂鸣声当使用键"
+
+msgid "Beep when a key is _rejected"
+msgstr "当某个键被拒绝时发出蜂鸣声(_R)"
+
+msgid "Blu-ray video disc"
+msgstr "蓝光视频光盘"
+
+msgid "Bluetooth"
+msgstr "蓝牙"
+
+msgid "Bluetooth Settings"
+msgstr "蓝牙设置"
+
+msgid "Bluetooth connection failed"
+msgstr "蓝牙连接失败"
+
+msgid "Bluetooth is disabled"
+msgstr "蓝牙已禁用"
+
+msgid "Bluetooth is disabled by hardware switch"
+msgstr "蓝牙已通过硬件开关禁用"
+
+msgid "Bottom Button #%d"
+msgstr "底键 #%d"
+
+msgid "Bottom Half"
+msgstr "下半部分"
+
+msgid "Bounce Keys"
+msgstr "回弹键"
+
+msgid "Bounce keys typing delay"
+msgstr "回弹键输入延迟"
+
+msgid "Brightness"
+msgstr "亮度"
+
+msgid "Brightness & Lock"
+msgstr "亮度和锁屏"
+
+msgid "Brightness:"
+msgstr "亮度："
+
+msgid "Brightness;Lock;Dim;Blank;Monitor;"
+msgstr "亮度;锁定;渐暗;空白;显示器;Brightness;Lock;Dim;Blank;Monitor;"
+
+msgid "British English"
+msgstr "英国英语"
+
+msgid "Browse"
+msgstr "浏览"
+
+msgid "Browse Files..."
+msgstr "浏览文件..."
+
+msgid "Browse for more pictures"
+msgstr "浏览更多图片"
+
+msgid "Browse for more pictures..."
+msgstr "浏览更多图片..."
+
+msgid "Built-in"
+msgstr "内置"
+
+msgid "Button"
+msgstr "按键"
+
+msgid "CD _audio"
+msgstr "CD 音频(_A)"
+
+msgid "C_hoose a device for sound input:"
+msgstr "选择音频输入设备(_H)："
+
+msgid "C_hoose a device for sound output:"
+msgstr "选择音频输出设备(_H)："
+
+msgid "C_hoose an alert sound:"
+msgstr "选择警告声音(_H)："
+
+msgid "C_ommand:"
+msgstr "命令(_O)："
+
+msgid "C_onfirm password"
+msgstr "确认密码(_O)"
+
+msgid "C_ontinue"
+msgstr "继续(_O)"
+
+msgid "C_reate..."
+msgstr "创建(_R)..."
+
+msgid "Cable unplugged"
+msgstr "线缆被拔出"
+
+msgid "Calculating..."
+msgstr "正在计算..."
+
+msgid "Calibrate the device"
+msgstr "校准该设备"
+
+msgid "Calibrate..."
+msgstr "校准..."
+
+msgid "Calibrate…"
+msgstr "校准..."
+
+msgid "Calibration"
+msgstr "校准"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cancel Print Job"
+msgstr "取消打印机任务"
+
+msgid "Cannot log in as %s at the %s domain"
+msgstr "不能以 %s 身份登录 %s 域"
+
+msgid "Cannot remove automatically added profile"
+msgstr "不能移除自动添加的配置"
+
+msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
+msgstr ""
+"声卡;麦克风;话筒;音量;淡入淡出;均衡;蓝牙;耳机;耳麦;Card;Microphone;Volume;"
+"Fade;Balance;Bluetooth;Headset;"
+
+msgid "Carrier/link changed"
+msgstr "载波/连接已更改"
+
+msgid "Caution low UPS"
+msgstr "UPS 电量低"
+
+msgid "Caution low UPS, %s remaining"
+msgstr "UPS 电量低，剩余 %s"
+
+msgid "Caution low battery, %s remaining"
+msgstr "电池电量低，剩余 %s"
+
+msgid "Cellphone"
+msgstr "手机"
+
+msgid "Ch_ange"
+msgstr "更改(_A)"
+
+msgid "Change keyboard settings"
+msgstr "更改键盘设置"
+
+msgid "Change printer settings"
+msgstr "更改打印机设置"
+
+msgid "Change resolution and position of monitors and projectors"
+msgstr "更改显示器和投影仪的分辨率和位置"
+
+msgid "Change sound volume and sound events"
+msgstr "更改音量和声音事件"
+
+msgid "Change system time and date settings"
+msgstr "更改系统时间和日期设置"
+
+msgid "Change the background"
+msgstr "更改背景图像"
+
+msgid "Change your region and language settings"
+msgstr "更改您的区域和语言设置"
+
+msgid "Changes throughout the day"
+msgstr "该日内所有改变"
+
+msgid "Changing password for"
+msgstr "更改此用户的密码"
+
+msgid "Changing photo for:"
+msgstr "更换照片："
+
+msgid "Charging"
+msgstr "正在充电"
+
+msgid "Charging - %s until fully charged"
+msgstr "正在充电 - 剩余 %s"
+
+msgid "Charging - fully charged"
+msgstr "充电完成"
+
+msgid "Checking for Updates"
+msgstr "正在检查更新"
+
+msgid "China"
+msgstr "中国"
+
+msgid "Chinese (simplified)"
+msgstr "简体中文"
+
+msgid ""
+"Choose a picture that will be shown at the login screen for this account."
+msgstr "选择一个在登录屏幕上和此账户一同显示的图片。"
+
+msgid "Choose an input source"
+msgstr "选择一个输入源"
+
+msgid "Choose password at next login"
+msgstr "下次登录时更改密码"
+
+msgid "Clock;Timezone;Location;"
+msgstr "Clock;Timezone;Location;时钟;时区;位置;"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Closed Captioning"
+msgstr "闭合注释"
+
+msgid "Color"
+msgstr "色彩"
+
+msgid "Color Effects"
+msgstr "色彩效果"
+
+msgid "Color Effects:"
+msgstr "色彩效果："
+
+msgid "Color management settings"
+msgstr "色彩管理设置"
+
+msgid "Color:"
+msgstr "颜色："
+
+msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
+msgstr ""
+"颜色;色彩;配置;校准;打印机;显示;Color;ICC;Profile;Calibrate;Printer;Display;"
+
+msgid "Colors"
+msgstr "色彩"
+
+msgctxt "Colorspace fallback"
+msgid "Default CMYK"
+msgstr "默认 CMYK"
+
+msgctxt "Colorspace fallback"
+msgid "Default Gray"
+msgstr "默认灰度"
+
+msgctxt "Colorspace fallback"
+msgid "Default RGB"
+msgstr "默认 RGB"
+
+msgid "Colorspace: "
+msgstr "色彩空间："
+
+msgid "Compose Key"
+msgstr "组合键"
+
+msgid "Computer"
+msgstr "计算机"
+
+msgid "Configuration failed"
+msgstr "配置失败"
+
+msgid "Configure Bluetooth settings"
+msgstr "配置蓝牙设置"
+
+msgid "Connect to a Hidden Network"
+msgstr "连接到隐藏网络"
+
+msgid "Connected"
+msgstr "已连接"
+
+msgid "Connected Devices"
+msgstr "已连接的设备"
+
+msgid "Connecting"
+msgstr "正在连接"
+
+msgid "Connection"
+msgstr "连接"
+
+msgid "Connection dependency failed"
+msgstr "连接依赖失败"
+
+msgid "Connection disappeared"
+msgstr "连接丢失"
+
+msgid "Connection failed"
+msgstr "连接失败"
+
+msgid "Contrast:"
+msgstr "对比度："
+
+msgid "Control Center"
+msgstr "控制中心"
+
+msgid "Control the pointer using the keypad"
+msgstr "使用小键盘控制鼠标指针。"
+
+msgid "Control the pointer using the video camera."
+msgstr "使用摄像头控制鼠标指针"
+
+msgid "Convert to PS level 1"
+msgstr "转换为 PS 等级 1"
+
+msgid "Convert to PS level 2"
+msgstr "转换为 PS 等级 1"
+
+msgid "Copy Settings"
+msgstr "复制设置"
+
+msgid "Copy Settings..."
+msgstr "复制设置..."
+
+msgid "Copy a screenshot of a window to clipboard"
+msgstr "复制窗口截图到剪贴板"
+
+msgid "Copy a screenshot of an area to clipboard"
+msgstr "复制选区截图到剪贴板"
+
+msgid "Copy a screenshot to clipboard"
+msgstr "复制截图到剪贴板"
+
+msgid "Could not access '%s' device"
+msgstr "无法访问“%s”设备"
+
+msgid "Could not access any fingerprint readers"
+msgstr "无法访问指纹读取器"
+
+msgid "Could not detect displays"
+msgstr "无法检测显示器"
+
+msgid "Could not get screen information"
+msgstr "无法获得屏幕信息"
+
+msgid "Could not load ui: %s"
+msgstr "无法装入界面：%s"
+
+msgid "Could not save the monitor configuration"
+msgstr "无法保存显示器配置"
+
+msgid "Could not start finger capture on '%s' device"
+msgstr "无法在“%s”设备上启动指纹采集"
+
+msgid "Couldn't connect to the %s domain: %s"
+msgstr "无法连接到 %s 域：%s"
+
+msgid "Create a color profile for the selected device"
+msgstr "为所选设备创建一份色彩配置"
+
+msgid "Create a user account"
+msgstr "创建用户账户"
+
+msgid "Create virtual device"
+msgstr "创建虚拟设备"
+
+msgid "Crosshairs"
+msgstr "十字光标"
+
+msgid "Crosshairs:"
+msgstr "十字光标："
+
+msgid "Ctrl+Alt+Shift+Space"
+msgstr "Ctrl+Alt+Shift+Space"
+
+msgid "Ctrl+Alt+Space"
+msgstr "Ctrl+Alt+Space"
+
+msgid "Currency"
+msgstr "货币"
+
+msgid "Current _password"
+msgstr "当前密码(_P)"
+
+msgid "Current background"
+msgstr "当前背景"
+
+msgid "Cursor Blinking"
+msgstr "光标闪烁"
+
+msgid "Cursor _blinks in text fields"
+msgstr "文本域中光标闪烁(_B)"
+
+msgid "Cursor blink speed"
+msgstr "光标闪烁速度"
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "Custom Shortcut"
+msgstr "自定义快捷键"
+
+msgid "Custom Shortcuts"
+msgstr "自定义快捷键"
+
+msgid "DHCP client error"
+msgstr "DHCP 客户端错误"
+
+msgid "DHCP client failed"
+msgstr "DHCP 客户端失败"
+
+msgid "DHCP client failed to start"
+msgstr "DHCP 服务启动失败"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "D_elay:"
+msgstr "延时(_E)："
+
+msgid "Date & Time"
+msgstr "日期和时间"
+
+msgid "Date and Time preferences panel"
+msgstr "日期和时间首选项面板"
+
+msgid "Dates"
+msgstr "日期"
+
+msgid "Day"
+msgstr "日"
+
+msgid "December"
+msgstr "十二月"
+
+msgid "Decrease text size"
+msgstr "减小文本字号"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Default Applications"
+msgstr "默认应用程序"
+
+msgid "Default Route"
+msgstr "默认路由"
+
+msgid "Default: "
+msgstr "默认："
+
+msgid "Delete device"
+msgstr "删除设备"
+
+msgid "Delete registered fingerprints?"
+msgstr "要删除已登记的指纹吗？"
+
+msgid "Delete the selected user account"
+msgstr "删除选中的用户账户"
+
+msgid ""
+"Deleting a user while they are logged in can leave the system in an "
+"inconsistent state."
+msgstr "在用户已登录时删除账户可能导致系统处于不一致状态。"
+
+msgid "Details"
+msgstr "详细信息"
+
+msgid "Device"
+msgstr "设备"
+
+msgctxt "Device kind"
+msgid "Camera"
+msgstr "相机"
+
+msgctxt "Device kind"
+msgid "Display"
+msgstr "显示"
+
+msgctxt "Device kind"
+msgid "Printer"
+msgstr "打印机"
+
+msgctxt "Device kind"
+msgid "Scanner"
+msgstr "扫描仪"
+
+msgctxt "Device kind"
+msgid "Webcam"
+msgstr "摄像头"
+
+msgid "Device name"
+msgstr "设备名称"
+
+msgid "Device type:"
+msgstr "设备类型："
+
+msgid "Dialing attempt failed"
+msgstr "拨号尝试失败"
+
+msgid "Dialing request timed out"
+msgstr "拨号请求超时"
+
+msgid "Disable image"
+msgstr "禁用图像"
+
+msgid "Disable this account"
+msgstr "禁用此账户"
+
+msgid "Disable while _typing"
+msgstr "打字时禁用(_T)"
+
+msgid "Disabled"
+msgstr "禁用"
+
+msgid "Disconnected"
+msgstr "已断开"
+
+msgid "Disconnecting"
+msgstr "正在断开"
+
+msgid "Disk"
+msgstr "磁盘"
+
+msgid "Display Mapping"
+msgstr "显示映射"
+
+msgid "Display a textual description of speech and sounds"
+msgstr "显示语音和声音的文字描述。"
+
+msgid "Display language:"
+msgstr "显示语言："
+
+msgid "Displays"
+msgstr "显示"
+
+msgctxt "Distance"
+msgid "Long"
+msgstr "长"
+
+msgctxt "Distance"
+msgid "Short"
+msgstr "短"
+
+msgctxt "Distance"
+msgid "¼ Screen"
+msgstr "¼ 屏幕"
+
+msgctxt "Distance"
+msgid "½ Screen"
+msgstr "½ 屏幕"
+
+msgctxt "Distance"
+msgid "¾ Screen"
+msgstr "¾ 屏幕"
+
+msgid "Do nothing"
+msgstr "不处理"
+
+msgid ""
+"Do you want to delete your registered fingerprints so fingerprint login is "
+"disabled?"
+msgstr "您想要想删除已登记的指纹吗？这样做将禁用指纹登录。"
+
+msgid "Do you want to keep %s's files?"
+msgstr "您想要保留 %s 的文件吗？"
+
+msgid "Domain Administrator Login"
+msgstr "域管理员登录"
+
+msgid "Don't lock when at home"
+msgstr "在家时不锁定屏幕"
+
+msgid "Don't suspend"
+msgstr "不要挂起"
+
+msgid "Done!"
+msgstr "完成！"
+
+msgid "Double click, middle button"
+msgstr "双击，中键"
+
+msgid "Double click, primary button"
+msgstr "双击，主键"
+
+msgid "Double click, secondary button"
+msgstr "双击，次键"
+
+msgid "Double-click timeout"
+msgstr "双击超时"
+
+msgid "Down"
+msgstr "向下"
+
+msgid "Drag to change primary display."
+msgstr "拖拽以更改主显示设备。"
+
+msgid "Drip"
+msgstr "滴雨"
+
+msgid "Driver"
+msgstr "驱动器"
+
+msgid "Drivers"
+msgstr "驱动"
+
+msgid "Each device needs an up to date color profile to be color managed."
+msgstr "每个设备需要一份最新的色彩配置以进行色彩管理。"
+
+msgid "Eject"
+msgstr "弹出"
+
+msgid "Embed GhostScript fonts only"
+msgstr "只内嵌 GhostScript 字体"
+
+msgid "Empty"
+msgstr "电池已空"
+
+msgid "Enable Fingerprint Login"
+msgstr "启用指纹登录"
+
+msgid "Enable by Keyboard"
+msgstr "通过键盘启用"
+
+msgid "Enable debugging code"
+msgstr "启用调试代码"
+
+msgid "Enable this account"
+msgstr "启用此账户"
+
+msgid "Enable verbose mode"
+msgstr "启用详细模式"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "English"
+msgstr "英语"
+
+msgid "Enrolling fingerprints"
+msgstr "加入指纹识别"
+
+msgid "Enterprise"
+msgstr "企业"
+
+msgid "Eraser Pressure Feel"
+msgstr "擦除器压力感应"
+
+msgid "Error creating account"
+msgstr "创建账户出错"
+
+msgid "Error logging into the account"
+msgstr "登录到该账户出错"
+
+msgid "Error removing account"
+msgstr "移除账户出错"
+
+msgid "Examples"
+msgstr "示例"
+
+msgid "Existing connection was assumed"
+msgstr "已假定为现有连接"
+
+msgid "Experience"
+msgstr "用户体验"
+
+msgctxt "Experience"
+msgid "Fallback"
+msgstr "备用"
+
+msgctxt "Experience"
+msgid "Standard"
+msgstr "标准"
+
+msgid "Expired credentials. Please log in again."
+msgstr "证书过期。请重新登录。"
+
+msgid "Failed to add account"
+msgstr "添加账户失败"
+
+msgid "Failed to add new printer."
+msgstr "添加新打印机失败。"
+
+msgid "Failed to apply configuration: %s"
+msgstr "应用配置失败：%s"
+
+msgid "Failed to contact the accounts service"
+msgstr "联系账户服务失败"
+
+msgid "Failed to delete user"
+msgstr "删除用户失败"
+
+msgid "Failed to join domain"
+msgstr "加入域失败"
+
+msgid "Failed to log into domain"
+msgstr "登入域失败"
+
+msgid "Failed to register account"
+msgstr "注册用户失败"
+
+msgid "Failed to register with the requested network"
+msgstr "无法在请求的网络上注册"
+
+msgid "Failed to select the specified APN"
+msgstr "无法选择指定的 APN"
+
+msgid "Failed to start Sound Preferences: %s"
+msgstr "声音首选项启动失败：%s"
+
+msgid "Fair"
+msgstr "一般"
+
+msgid "Fast"
+msgstr "快"
+
+msgid "February"
+msgstr "二月"
+
+msgid "Firm"
+msgstr "紧"
+
+msgid "Firmware for the device may be missing"
+msgstr "可能缺少设备固件"
+
+msgid "Firmware missing"
+msgstr "固件缺失"
+
+msgid "Flash the entire screen"
+msgstr "闪烁整个屏幕"
+
+msgid "Flash the window title"
+msgstr "闪烁窗口标题栏"
+
+msgid "Flickr"
+msgstr "Flickr"
+
+msgid "Follow mouse cursor"
+msgstr "跟随鼠标光标"
+
+msgid "Forced _Fallback Mode"
+msgstr "强制使用备用模式(_F)"
+
+msgid "Forget"
+msgstr "忘记"
+
+msgid "Format:"
+msgstr "格式："
+
+msgid "Formats"
+msgstr "格式"
+
+msgid "Forward"
+msgstr "前进"
+
+msgid "France"
+msgstr "法国"
+
+msgid "French"
+msgstr "法语"
+
+msgid "From theme"
+msgstr "来自主题"
+
+msgid "Full Screen"
+msgstr "全屏幕"
+
+msgid "GOK"
+msgstr "GNOME 屏幕键盘"
+
+msgid "Gallery"
+msgstr "相册"
+
+msgid "Gateway"
+msgstr "网关"
+
+msgid "General"
+msgstr "常规"
+
+msgid "Generate a password"
+msgstr "生成密码"
+
+msgid "German"
+msgstr "德语"
+
+msgid "Germany"
+msgstr "德国"
+
+msgid "GhostScript pre-filtering"
+msgstr "GhostScript 预过滤"
+
+msgid "Glass"
+msgstr "敲窗"
+
+msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
+msgstr ""
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;网络;在"
+"线;聊天;日历;邮件;联系人;"
+
+msgid "Graphics"
+msgstr "图形"
+
+msgid "Group Name"
+msgstr "组名称"
+
+msgid "Group Password"
+msgstr "组密码"
+
+msgid "HD DVD video disc"
+msgstr "HD DVD 视频光盘"
+
+msgid "H_TTPS Proxy"
+msgstr "H_TTPS 代理"
+
+msgid "Hardware Address"
+msgstr "硬件地址"
+
+msgid "Hearing"
+msgstr "听觉"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "Hibernate"
+msgstr "休眠"
+
+msgid "High"
+msgstr "高"
+
+msgid "High Contrast"
+msgstr "高对比度"
+
+msgid "High contrast on or off"
+msgstr "高对比度开或关"
+
+msgid "Home folder"
+msgstr "主文件夹"
+
+msgid "Hover Click"
+msgstr "悬停点击"
+
+msgid "How to choose a strong password"
+msgstr "如何选择一个好密码"
+
+msgid "IMEI"
+msgstr "IMEI"
+
+msgid "IP Address"
+msgstr "IP 地址"
+
+msgid "IP configuration expired"
+msgstr "IP 配置过期"
+
+msgid "IP configuration failed"
+msgstr "IP 配置失败"
+
+msgid "IPv4 Address"
+msgstr "IPv4 地址"
+
+msgid "IPv6 Address"
+msgstr "IPv6 地址"
+
+msgid ""
+"If you have a connection to the Internet other than wireless, you can use it "
+"to share your internet connection with others."
+msgstr ""
+"如果您有除无线网络以外的方式连接到互联网，您可以使用它来与其他人分享你您的互"
+"联网连接。"
+
+msgid ""
+"If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
+msgstr "如果你重新分配快捷键 %s，则快捷键 %s 将被禁用"
+
+msgid ""
+"If you remove the device, you will have to set it up again before next use."
+msgstr "如果您移除该设备，下次使用前您需要重新设置它。"
+
+msgid "Ignores fast duplicate keypresses"
+msgstr "忽略快速重复按键"
+
+msgid ""
+"Image files can be dragged on this window to auto-complete the above fields."
+msgstr "可以将图像文件拖放到此窗口来自动填写以上字段。"
+
+msgid "Imperial"
+msgstr "英制"
+
+msgid ""
+"In order to use enterprise logins, this computer needs to be\n"
+"enrolled in the domain. Please have your network administrator\n"
+"type their domain password here."
+msgstr ""
+"要想使用企业登录，需要在域中\n"
+"注册该计算机。请网络管理员在此\n"
+"输入域密码。"
+
+msgid "Increase text size"
+msgstr "增大文本字号"
+
+msgid "InfiniBand device does not support connected mode"
+msgstr "高速互联设备不支持已连接模式"
+
+msgid "Infrastructure"
+msgstr "架构"
+
+msgid "Ink Level"
+msgstr "墨水量"
+
+msgid "Input"
+msgstr "输入"
+
+msgid "Input Source Settings"
+msgstr "输入源设置"
+
+msgid "Input Sources"
+msgstr "输入源"
+
+msgid "Input level:"
+msgstr "输入等级："
+
+msgid "Input source:"
+msgstr "输入源："
+
+msgid "Install Updates"
+msgstr "安装更新"
+
+msgid "Install languages..."
+msgstr "安装语言..."
+
+msgid "Invalid password, please try again"
+msgstr "无效密码，请重试"
+
+msgid ""
+"It is not possible to access the internet through your wireless while the "
+"hotspot is active."
+msgstr "当热点在使用时是无法通过无线网络访问互联网的。"
+
+msgid ""
+"It is possible to keep the home directory, mail spool and temporary files "
+"around when deleting a user account."
+msgstr "删除用户时可以保留用户主目录、电子邮件目录和临时文件。"
+
+msgid "January"
+msgstr "一月"
+
+msgid "Job State"
+msgstr "任务状态"
+
+msgid "Job Title"
+msgstr "任务标题"
+
+msgid "Jobs"
+msgstr "作业"
+
+msgid "July"
+msgstr "七月"
+
+msgid "June"
+msgstr "六月"
+
+msgid "Keep aspect ratio (letterbox):"
+msgstr "保持长宽比(邮筒)："
+
+msgid "Keep magnifier cursor centered"
+msgstr "保持放大镜中鼠标指针在该区域的正中位置"
+
+msgid "Key presses _repeat when key is held down"
+msgstr "按住某一键时重复该键(_R)"
+
+msgid "Keyboard"
+msgstr "键盘"
+
+msgid "Keyboard Settings"
+msgstr "键盘设置"
+
+msgid ""
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
+"AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
+msgstr ""
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
+"AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;键盘;鼠标;辅助功能;对比"
+"度;缩放;屏幕读取器;文本;字体;大小;粘滞键;慢速键;回弹键;鼠标键"
+
+msgid "Landscape"
+msgstr "横向"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Language;Layout;Keyboard;"
+msgstr "Language;Layout;Keyboard;语言;布局;键盘;"
+
+msgid "Large"
+msgstr "大"
+
+msgid "Large Text"
+msgstr "大号文本"
+
+msgid "Last used"
+msgstr "上次使用的"
+
+msgid "Launch calculator"
+msgstr "启动计算器"
+
+msgid "Launch email client"
+msgstr "启动邮件客户端"
+
+msgid "Launch help browser"
+msgstr "启动帮助浏览器"
+
+msgid "Launch media player"
+msgstr "启动媒体播放器"
+
+msgid "Launch web browser"
+msgstr "启动网页浏览器"
+
+msgid "Launchers"
+msgstr "启动器"
+
+msgid "Layout Settings"
+msgstr "布局设置"
+
+msgid "Learn more"
+msgstr "了解更多"
+
+msgid "Learn more about color management"
+msgstr "了解更多有关色彩管理的信息"
+
+msgid "Left Button #%d"
+msgstr "左键 #%d"
+
+msgid "Left Half"
+msgstr "左半部分"
+
+msgid "Left Mouse Button Click"
+msgstr "鼠标左键单击"
+
+msgid "Left Ring Mode #%d"
+msgstr "左环模式 #%d"
+
+msgid "Left Touchring Mode Switch"
+msgstr "左 Touchring 模式切换"
+
+msgid "Left Touchstrip Mode #%d"
+msgstr "左 Touchstrip 模式 #%d"
+
+msgid "Left Touchstrip Mode Switch"
+msgstr "左 Touchstrip 模式切换"
+
+msgid "Left little finger"
+msgstr "左手小指"
+
+msgid "Left middle finger"
+msgstr "左手中指"
+
+msgid "Left ring finger"
+msgstr "左手无名指"
+
+msgid "Left thumb"
+msgstr "左手拇指"
+
+msgid "Left-Handed Orientation"
+msgstr "惯用左手"
+
+msgid "Length:"
+msgstr "长度："
+
+msgid "Less than 1 week"
+msgstr "不到一周"
+
+msgid "Line busy"
+msgstr "线路忙"
+
+msgid "Link speed"
+msgstr "连接速度"
+
+msgid "Loading drivers database..."
+msgstr "正在载入驱动数据库..."
+
+msgid "Loading options..."
+msgstr "正在载入选项..."
+
+msgid "Location"
+msgstr "位置"
+
+msgid "Locations..."
+msgstr "位置..."
+
+msgid "Lock"
+msgstr "锁定"
+
+msgid "Lock screen"
+msgstr "锁定屏幕"
+
+msgid "Log in without a password"
+msgstr "不使用密码登录"
+
+msgid "Log out"
+msgstr "注销"
+
+msgid "Login Options"
+msgstr "登录选项"
+
+msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
+msgstr ""
+"登录;名称;指纹;头像;标志;密码;Login;Name;Fingerprint;Avatar;Logo;Face;"
+"Password;"
+
+msgid "Long"
+msgstr "长"
+
+msgid "Long Edge (Standard)"
+msgstr "长边(标准)"
+
+msgid "Low"
+msgstr "低"
+
+msgid "Low on a marker supply"
+msgstr "标记墨水不足"
+
+msgid "Low on developer"
+msgstr "显影剂不足"
+
+msgid "Low on paper"
+msgstr "纸张不足"
+
+msgid "Low on toner"
+msgstr "墨粉不足"
+
+msgid "Lower Button"
+msgstr "下键"
+
+msgid "M_usic"
+msgstr "音乐(_U)"
+
+msgid "Magnification:"
+msgstr "放大比率："
+
+msgid "Magnifier"
+msgstr "放大镜"
+
+msgid "Magnifier Position:"
+msgstr "放大镜区域位置："
+
+msgid "Magnifier cursor moves with contents"
+msgstr "放大镜中鼠标指针和被放大内容一同移动"
+
+msgid "Magnifier cursor pushes contents around"
+msgstr "放大镜中鼠标指针移动至其边缘时推挤被放大内容移动"
+
+msgid "Magnifier extends outside of screen"
+msgstr "使放大镜能够表示屏幕显示内容以外的区域"
+
+msgid "Manage online accounts"
+msgstr "管理在线账户"
+
+msgid "Manage user accounts"
+msgstr "管理用户账户"
+
+msgid "Manufacturer:"
+msgstr "厂商："
+
+msgid "Manufacturers"
+msgstr "厂商"
+
+msgid "Map Buttons"
+msgstr "映射按键"
+
+msgid "Map Buttons..."
+msgstr "按键映射..."
+
+msgid "Map buttons to functions"
+msgstr "将功能映射到按键"
+
+msgid "Map to Monitor..."
+msgstr "映射到显示器..."
+
+msgid "Map to single monitor"
+msgstr "映射到单个显示器..."
+
+msgid "March"
+msgstr "三月"
+
+msgid "May"
+msgstr "五月"
+
+msgid "Measurement"
+msgstr "度量衡"
+
+msgid "Media player"
+msgstr "媒体播放器"
+
+msgid "Memory"
+msgstr "内存"
+
+msgid "Mesh"
+msgstr "网格"
+
+msgid "Metric"
+msgstr "公制"
+
+msgid "Microphone Volume"
+msgstr "话筒音量"
+
+msgid "Middle Mouse Button Click"
+msgstr "鼠标中键单击"
+
+msgid "Mirrored Displays"
+msgstr "镜像显示"
+
+msgid "Mis-click detected, restarting..."
+msgstr "检测到误点击，正在重新开始..."
+
+msgid "Mobile broadband"
+msgstr "移动宽带"
+
+msgid "Mode Switch #%d"
+msgstr "模式切换 #%d"
+
+msgid "Model"
+msgstr "型号"
+
+msgid "Model:"
+msgstr "型号："
+
+msgid "Modem initialization failed"
+msgstr "调制解调器初始化失败"
+
+msgid "Modem not found"
+msgstr "未找到调制解调器"
+
+msgid "Monitor"
+msgstr "显示器"
+
+msgid "Month"
+msgstr "月"
+
+msgid "Motion _threshold:"
+msgstr "运动阈值(_T)："
+
+msgid "Mouse"
+msgstr "鼠标"
+
+msgid "Mouse & Touchpad"
+msgstr "鼠标和触摸板"
+
+msgid "Mouse Keys"
+msgstr "鼠标键"
+
+msgid "Mouse Preferences"
+msgstr "鼠标首选项"
+
+msgid "Mouse Settings"
+msgstr "鼠标设置"
+
+msgid "Mouse and Touchpad Settings"
+msgstr "鼠标和触摸板设置"
+
+msgid "Move Input Source Down"
+msgstr "下移输入源"
+
+msgid "Move Input Source Up"
+msgstr "上移输入源"
+
+msgid "Muted"
+msgstr "已静音"
+
+msgid "My Account"
+msgstr "我的账户"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Network"
+msgstr "网络"
+
+msgid "Network Name"
+msgstr "网络名称"
+
+msgid ""
+"Network details for %s including password and any custom configuration will "
+"be lost."
+msgstr "网络 %s 包括密码和全部自定义设置的细节都将丢失。"
+
+msgid "Network proxy"
+msgstr "网络代理"
+
+msgid "Network registration denied"
+msgstr "网络注册遭拒绝"
+
+msgid "Network registration timed out"
+msgstr "网络注册超时"
+
+msgid "Network settings"
+msgstr "网络设置"
+
+msgid "Network;Wireless;IP;LAN;Proxy;"
+msgstr "Network;Wireless;IP;LAN;Proxy;网络;无线;上网;局域网;代理;"
+
+msgid "Next track"
+msgstr "下一音轨"
+
+msgid "No"
+msgstr "否"
+
+msgid "No Action"
+msgstr "无动作"
+
+msgid "No Bluetooth adapters found"
+msgstr "未找到蓝牙适配器"
+
+msgid "No Desktop Background"
+msgstr "无桌面背景"
+
+msgid "No application is currently playing or recording audio."
+msgstr "没有程序正在播放或录制音频。"
+
+msgid "No carrier could be established"
+msgstr "无法建立载波"
+
+msgid "No devices supporting color management detected"
+msgstr "没有检测到支持色彩管理的设备"
+
+msgid "No dial tone"
+msgstr "无拨号音"
+
+msgid "No online accounts configured"
+msgstr "未设置在线账户"
+
+msgid "No pre-filtering"
+msgstr "无预过滤"
+
+msgid "No printers available"
+msgstr "无可用打印机"
+
+msgid "No printers detected."
+msgstr "未检测到打印机。"
+
+msgid "No profile"
+msgstr "无配置"
+
+msgid "No shortcut set"
+msgstr "未设置快捷键"
+
+msgid "No such domain or realm found"
+msgstr "未发现此域或 realm"
+
+msgid "No suitable driver found"
+msgstr "未找到合适的驱动"
+
+msgid "No supported way to authenticate with this domain"
+msgstr "没有支持这个域验证的方法"
+
+msgid "No tablet detected"
+msgstr "未检测到手写板"
+
+msgid "No user with the name '%s' exists."
+msgstr "名为“%s”的用户不存在。"
+
+msgid "None"
+msgstr "无"
+
+msgid "Not connected"
+msgstr "未连接"
+
+msgid "Not searching for networks"
+msgstr "不搜索网络"
+
+msgid "Not specified"
+msgstr "未指定"
+
+msgid "Note: may limit resolution options"
+msgstr "提醒：可能会限制分辨率选项"
+
+msgid "November"
+msgstr "十一月"
+
+msgid "Numbers"
+msgstr "数字"
+
+msgid "OS type"
+msgstr "操作系统类型"
+
+msgid "October"
+msgstr "十月"
+
+msgid "On Screen Keyboard"
+msgstr "屏幕键盘"
+
+msgid "On battery power"
+msgstr "使用电池"
+
+msgid "On screen keyboard"
+msgstr "屏幕键盘"
+
+msgid "OnBoard"
+msgstr "屏幕键盘"
+
+msgid "One Sided"
+msgstr "单面"
+
+msgid "Online Accounts"
+msgstr "在线账户"
+
+msgid "Open cover"
+msgstr "打开上盖"
+
+msgid "Open door"
+msgstr "打开后门"
+
+msgid "Open folder"
+msgstr "打开文件夹"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "Options..."
+msgstr "选项..."
+
+msgid "Orientation"
+msgstr "方向"
+
+msgid "Other Accounts"
+msgstr "其他账户"
+
+msgid "Other Media"
+msgstr "其他媒体"
+
+msgid "Other profile…"
+msgstr "其他配置..."
+
+msgid "Other..."
+msgstr "其他..."
+
+msgid "Out of a marker supply"
+msgstr "标记墨水用尽"
+
+msgid "Out of developer"
+msgstr "显影剂用尽"
+
+msgid "Out of paper"
+msgstr "纸张用尽"
+
+msgid "Out of range"
+msgstr "超出范围"
+
+msgid "Out of toner"
+msgstr "墨粉用尽"
+
+msgid "Output"
+msgstr "输出"
+
+msgid "Output Tray"
+msgstr "出纸托盘"
+
+msgid "Output:"
+msgstr "输出："
+
+msgid "Overlaps mouse cursor"
+msgstr "光标与鼠标指针重叠"
+
+msgid "Overview"
+msgstr "概况"
+
+msgid "PIN check failed"
+msgstr "PIN 检查未通过"
+
+msgid "PPP failed"
+msgstr "PPP 失败"
+
+msgid "PPP service disconnected"
+msgstr "PPP 服务已断开"
+
+msgid "PPP service failed to start"
+msgstr "PPP 服务启动失败"
+
+msgid "Pages per side"
+msgstr "每面页数"
+
+msgid "Paired"
+msgstr "已配对"
+
+msgid "Panel to display"
+msgstr "显示面板"
+
+msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
+msgstr ""
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;面板;投影仪;屏幕;分辨率;刷"
+"新;"
+
+msgid "Paper Source"
+msgstr "纸张来源"
+
+msgid "Paper Type"
+msgstr "纸张类型"
+
+msgid "Password could not be changed"
+msgstr "无法更改密码"
+
+msgctxt "Password mode"
+msgid "Account disabled"
+msgstr "账户已禁用"
+
+msgctxt "Password mode"
+msgid "None"
+msgstr "无"
+
+msgctxt "Password mode"
+msgid "To be set at next login"
+msgstr "下次登录时设置"
+
+msgctxt "Password strength"
+msgid "Fair"
+msgstr "一般"
+
+msgctxt "Password strength"
+msgid "Good"
+msgstr "好"
+
+msgctxt "Password strength"
+msgid "Not good enough"
+msgstr "不够好"
+
+msgctxt "Password strength"
+msgid "Strong"
+msgstr "强"
+
+msgctxt "Password strength"
+msgid "Too short"
+msgstr "太短"
+
+msgctxt "Password strength"
+msgid "Weak"
+msgstr "弱"
+
+msgid "Passwords do not match"
+msgstr "密码不匹配"
+
+msgid "Pause Printing"
+msgstr "暂停打印"
+
+msgid "Pause playback"
+msgstr "暂停播放"
+
+msgid "Peak detect"
+msgstr "峰值检测"
+
+msgid "Personal digital assistant"
+msgstr "个人数字助理(PDA)"
+
+msgid "Photograph"
+msgstr "照片"
+
+msgid "Picture CD"
+msgstr "图片 CD"
+
+msgid "Pictures"
+msgstr "图片"
+
+msgid "Play (or play/pause)"
+msgstr "播放(或者 播放/暂停）"
+
+msgid "Please choose another password."
+msgstr "请选择其他的密码。"
+
+msgid "Please contact your system administrator for help."
+msgstr "请联系系统管理员以寻求帮助。"
+
+msgid "Please make sure that the AccountService is installed and enabled."
+msgstr "请确定 AccountService 已经正确安装并启用。"
+
+msgid "Please plug in or turn on your Wacom tablet"
+msgstr "请插入并打开您的 Wacom 手写板"
+
+msgid ""
+"Please tap the target markers as they appear on screen to calibrate the "
+"tablet."
+msgstr "当标记出现在屏幕上时，请触摸它们，以校准您的平板电脑。"
+
+msgid "Please type your current password again."
+msgstr "请再次输入您的当前密码。"
+
+msgid "Pointing and Clicking"
+msgstr "指向和单击"
+
+msgid "Portrait"
+msgstr "纵向"
+
+msgid ""
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
+"PPD.GZ)"
+msgstr "PostScript 打印机描述文件(*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
+
+msgid "Power"
+msgstr "电源"
+
+msgctxt "Power"
+msgid "Bluetooth"
+msgstr "蓝牙"
+
+msgid "Power management settings"
+msgstr "电源管理设置"
+
+msgid "Power off"
+msgstr "电源关闭"
+
+msgid "Power;Sleep;Suspend;Hibernate;Battery;"
+msgstr "Power;Sleep;Suspend;Hibernate;Battery;电源;睡眠;挂起;休眠;电池;"
+
+msgid "Preferences;Settings;"
+msgstr "Preferences;Settings;首选项;设置;"
+
+msgid "Previous track"
+msgstr "上一音轨"
+
+msgid "Primary _button"
+msgstr "主按钮(_B)"
+
+msgid "Print _Test Page"
+msgstr "打印测试页(_T)"
+
+msgid "Printer Default"
+msgstr "打印机默认设置"
+
+msgctxt "Printer Option Group"
+msgid "Advanced"
+msgstr "高级"
+
+msgctxt "Printer Option Group"
+msgid "Color"
+msgstr "色彩"
+
+msgctxt "Printer Option Group"
+msgid "Finishing"
+msgstr "完成"
+
+msgctxt "Printer Option Group"
+msgid "General"
+msgstr "常规"
+
+msgctxt "Printer Option Group"
+msgid "Image Quality"
+msgstr "图像质量"
+
+msgctxt "Printer Option Group"
+msgid "Installable Options"
+msgstr "可安装选项"
+
+msgctxt "Printer Option Group"
+msgid "Job"
+msgstr "作业"
+
+msgctxt "Printer Option Group"
+msgid "Page Setup"
+msgstr "页面设置"
+
+msgid "Printer;Queue;Print;Paper;Ink;Toner;"
+msgstr ""
+"Printer;Queue;Print;Paper;Ink;Toner;打印机;队列;打印;纸张;墨水;墨粉;硒鼓;墨盒"
+
+msgid "Printers"
+msgstr "打印机"
+
+msgid "Processor"
+msgstr "处理器"
+
+msgid "Provide PPD File..."
+msgstr "提供 PPD 文件..."
+
+msgid "Provider"
+msgstr "提供商"
+
+msgid "Proxy"
+msgstr "代理"
+
+msgid "Puts a delay between when a key is pressed and when it is accepted"
+msgstr "当某键按下和接受(识别)之间插入延迟"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "R_otation"
+msgstr "旋转(_O)"
+
+msgid "Region & Language"
+msgstr "区域和语言"
+
+msgid "Region and Language"
+msgstr "区域和语言"
+
+msgid "Removable Media"
+msgstr "可移动介质"
+
+msgid "Remove '%s' from the list of devices?"
+msgstr "将“%s”从设备列表中移除吗？"
+
+msgid "Remove Account"
+msgstr "移除账户"
+
+msgid "Remove Device"
+msgstr "移除设备"
+
+msgid "Remove Input Source"
+msgstr "移除输入源"
+
+msgid "Remove Language"
+msgstr "移除语言"
+
+msgid "Remove Printer"
+msgstr "移除打印机"
+
+msgid "Remove Region"
+msgstr "移除区域"
+
+msgid "Remove Shortcut"
+msgstr "移除快捷键"
+
+msgid "Remove User Account"
+msgstr "移除用户账户"
+
+msgid "Remove a device"
+msgstr "移除设备"
+
+msgid "Remove profile"
+msgstr "移除配置"
+
+msgid "Repeat Keys"
+msgstr "重复键"
+
+msgid "Repeat keys speed"
+msgstr "重复键速度"
+
+msgid "Resolution"
+msgstr "分辨率"
+
+msgid "Resume Printing"
+msgstr "恢复打印"
+
+msgid "Reverse landscape"
+msgstr "横向倒转"
+
+msgid "Reverse portrait"
+msgstr "纵向倒转"
+
+msgid "Right Button #%d"
+msgstr "右键 #%d"
+
+msgid "Right Half"
+msgstr "右半部分"
+
+msgid "Right Mouse Button Click"
+msgstr "鼠标右键单击"
+
+msgid "Right Ring Mode #%d"
+msgstr "右环模式 #%d"
+
+msgid "Right Touchring Mode Switch"
+msgstr "右 Touchring 模式切换"
+
+msgid "Right Touchstrip Mode #%d"
+msgstr "右 Touchstrip 模式 #%d"
+
+msgid "Right Touchstrip Mode Switch"
+msgstr "右 Touchstrip 模式切换"
+
+msgid "Right little finger"
+msgstr "右手小指"
+
+msgid "Right middle finger"
+msgstr "右手中指"
+
+msgid "Right ring finger"
+msgstr "右手无名指"
+
+msgid "Right thumb"
+msgstr "右手拇指"
+
+msgid "Russian"
+msgstr "俄语"
+
+msgid "SIM Card not inserted"
+msgstr "未插入 SIM 卡"
+
+msgid "SIM Pin required"
+msgstr "要求 SIM PIN 码"
+
+msgid "SIM Puk required"
+msgstr "要求 SIM PUK 码"
+
+msgid "SIM wrong"
+msgstr "SIM 错误"
+
+msgid "S_peed:"
+msgstr "速度(_P)："
+
+msgid "Save a screenshot of a window to Pictures"
+msgstr "将窗口截图保存到图片目录"
+
+msgid "Save a screenshot of an area to Pictures"
+msgstr "将选区截图保存到图片目录"
+
+msgid "Save a screenshot to Pictures"
+msgstr "将屏幕截图保存到图片目录"
+
+msgid "Screen Calibration"
+msgstr "屏幕校准"
+
+msgid "Screen Reader"
+msgstr "屏幕阅读器"
+
+msgid "Screen brightness and lock settings"
+msgstr "配置屏幕亮度和锁定"
+
+msgid "Screen part:"
+msgstr "屏幕区域："
+
+msgid "Screen turns off"
+msgstr "关闭屏幕"
+
+msgid "Screenshots"
+msgstr "截图"
+
+msgid "Scroll Down"
+msgstr "向下滚动"
+
+msgid "Scroll Left"
+msgstr "向左滚动"
+
+msgid "Scroll Right"
+msgstr "向右滚动"
+
+msgid "Scroll Up"
+msgstr "向上滚动"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search for network printers or filter result"
+msgstr "搜索网络打印机或过滤结果"
+
+msgid "Searching for preferred drivers..."
+msgstr "正在搜索首选的驱动..."
+
+msgid "Secondary click delay"
+msgstr "次要点击延迟"
+
+msgid "Secrets were required, but not provided"
+msgstr "需要认证凭据，但没有提供"
+
+msgid "Section"
+msgstr "节"
+
+msgid "Security"
+msgstr "安全性"
+
+msgid "Security key"
+msgstr "安全密钥"
+
+msgid "Security type"
+msgstr "加密类型"
+
+msgid "Seeing"
+msgstr "视觉"
+
+msgid "Select"
+msgstr "选择"
+
+msgid "Select Background"
+msgstr "选择背景"
+
+msgid "Select ICC Profile File"
+msgstr "选择 ICC 配置文件"
+
+msgid "Select PPD File"
+msgstr "选择 PPD 文件"
+
+msgid "Select Printer Driver"
+msgstr "选择打印机驱动"
+
+msgid "Select a display language (change will be applied next time you log in)"
+msgstr "选择界面语言(将在下次登录时应用)"
+
+msgid "Select a language"
+msgstr "选择一种语言"
+
+msgid ""
+"Select a monitor to change its properties; drag it to rearrange its "
+"placement."
+msgstr "选择一台显示器来更改它的属性；拖动它来排列位置。"
+
+msgid "Select a region"
+msgstr "选择一个地区"
+
+msgid "Select a region (change will be applied the next time you log in)"
+msgstr "选择一个地区(将在下次登录时应用更改)"
+
+msgid "Select an application for audio CDs"
+msgstr "选择播放音频 CD 的应用程序"
+
+msgid "Select an application for software CDs"
+msgstr "选择要在插入软件 CD 时运行的应用程序"
+
+msgid "Select an application for video DVDs"
+msgstr "选择播放视频 DVD 的应用程序"
+
+msgid "Select an application to run when a camera is connected"
+msgstr "选择要在连接相机后运行的应用程序"
+
+msgid "Select an application to run when a music player is connected"
+msgstr "选择要在连接音乐播放器后运行的应用程序"
+
+msgid "Select an input source to add"
+msgstr "选择一个要添加的输入源"
+
+msgid "Select from database..."
+msgstr "从数据库选择..."
+
+msgid "Select how media should be handled"
+msgstr "选择如何处理介质"
+
+msgid "Select how other media should be handled"
+msgstr "选择如何处理其他介质"
+
+msgid "Select keyboards or other input sources"
+msgstr "选择键盘或其他输入源"
+
+msgid "Select the interface to use for the new service"
+msgstr "选择用于新服务的接口"
+
+msgid "Selecting finger"
+msgstr "选择手指"
+
+msgid "Send Files..."
+msgstr "发送文件..."
+
+msgid "September"
+msgstr "九月"
+
+msgid "Set Up New Device"
+msgstr "设置新设备"
+
+msgid "Set a password now"
+msgstr "现在设置密码"
+
+msgid "Set for all users"
+msgstr "为所有用户设置"
+
+msgid "Set the time one hour ahead."
+msgstr "将时间向前调一小时。"
+
+msgid "Set the time one hour back."
+msgstr "将时间向后调一小时。"
+
+msgid "Set the time one minute ahead."
+msgstr "将时间向前调一分钟。"
+
+msgid "Set the time one minute back."
+msgstr "将时间向后调一分钟。"
+
+msgid "Set this profile for all users on this computer"
+msgstr "为此计算机上的所有用户设置此配置"
+
+msgid "Set your Wacom tablet preferences"
+msgstr "设置您的 Wacom 手写板首选项"
+
+msgid "Set your mouse and touchpad preferences"
+msgstr "设置您的鼠标和触摸板首选项"
+
+msgid "Setting new driver..."
+msgstr "正在设置新驱动..."
+
+msgid "Settings for the selected device:"
+msgstr "选中设备的设置："
+
+msgid "Shared connection service failed"
+msgstr "共享连接服务失败"
+
+msgid "Shared connection service failed to start"
+msgstr "共享连接服务启动失败"
+
+msgid "Short"
+msgstr "短"
+
+msgid "Short Edge (Flip)"
+msgstr "短边(翻转)"
+
+msgid "Shortcut Settings"
+msgstr "快捷键设置"
+
+msgid "Shortcut;Repeat;Blink;"
+msgstr "Shortcut;Repeat;Blink;快捷键;重复;闪烁;"
+
+msgid "Shortcuts"
+msgstr "快捷键"
+
+msgid "Show Keyboard Layout"
+msgstr "显示键盘布局"
+
+msgid "Show _notifications when locked"
+msgstr "锁定时显示通知(_N)"
+
+msgid "Show desktop volume control"
+msgstr "显示桌面音量控制"
+
+msgid "Show help options"
+msgstr "显示帮助选项"
+
+msgid "Show the overview"
+msgstr "显示摘要"
+
+msgctxt "Signal strength"
+msgid "Excellent"
+msgstr "良好"
+
+msgctxt "Signal strength"
+msgid "Good"
+msgstr "较好"
+
+msgctxt "Signal strength"
+msgid "None"
+msgstr "无"
+
+msgctxt "Signal strength"
+msgid "Ok"
+msgstr "一般"
+
+msgctxt "Signal strength"
+msgid "Weak"
+msgstr "微弱"
+
+msgid "Simulated Secondary Click"
+msgstr "模拟次要点击"
+
+msgid "Single click, middle button"
+msgstr "单击，中键"
+
+msgid "Single click, primary button"
+msgstr "单击，主键"
+
+msgid "Single click, secondary button"
+msgstr "单击，次键"
+
+msgid "Slow"
+msgstr "慢"
+
+msgid "Slow Keys"
+msgstr "慢速键"
+
+msgid "Slow keys typing delay"
+msgstr "慢速键输入延迟"
+
+msgid "Small"
+msgstr "小"
+
+msgid "Soft"
+msgstr "软"
+
+msgid "Software"
+msgstr "软件"
+
+msgid "Sonar"
+msgstr "声纳"
+
+msgid ""
+"Sorry! The system printing service\n"
+"doesn't seem to be available."
+msgstr "对不起，系统打印服务似乎不可用。"
+
+msgid "Sound"
+msgstr "声音"
+
+msgid "Sound Effects"
+msgstr "声音效果"
+
+msgid "Sound Output Volume"
+msgstr "输出音量"
+
+msgid "Sound Preferences"
+msgstr "声音首选项"
+
+msgid "Sound Settings"
+msgstr "声音设置"
+
+msgid "Sound and Media"
+msgstr "声音和媒体"
+
+msgid "Spain"
+msgstr "西班牙"
+
+msgid "Spanish"
+msgstr "西班牙语"
+
+msgid "Speaker Testing for %s"
+msgstr "%s 扬声器测试"
+
+msgid "Status unknown"
+msgstr "未知状态"
+
+msgid "Status unknown (missing)"
+msgstr "未知状态(丢失)"
+
+msgid "Sticky Keys"
+msgstr "粘滞键"
+
+msgid "Stop"
+msgstr "停止"
+
+msgid "Stop hotspot and disconnect any users?"
+msgstr "停止热点并断开所有用户？"
+
+msgid "Stop playback"
+msgstr "停止播放"
+
+msgid "Strength"
+msgstr "强度"
+
+msgid "Stylus"
+msgstr "写字笔"
+
+msgid "Subwoofer"
+msgstr "超低音"
+
+msgid "Summary"
+msgstr "摘要"
+
+msgid "Super Video CD"
+msgstr "超级 VCD"
+
+msgid "Supply"
+msgstr "耗材"
+
+msgid "Supply Level"
+msgstr "耗材量"
+
+msgid "Supported ICC profiles"
+msgstr "支持的 ICC 配置"
+
+msgid "Suspend when inactive for"
+msgstr "在此时间内无操作则挂起："
+
+msgid "Switch Modes"
+msgstr "模式切换"
+
+msgid "Switch between AM and PM."
+msgstr "在上午(AM)和下午(PM)间切换。"
+
+msgid "Switch off to connect to a wireless network"
+msgstr "关闭以连接到无线网络"
+
+msgid "Switch to next source"
+msgstr "切换至下个源"
+
+msgid "Switch to previous source"
+msgstr "切换至上个源"
+
+msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
+msgstr "切换无线网热点会使得您从 <b>%s</b> 断线。"
+
+msgid "System"
+msgstr "系统"
+
+msgid "System Information"
+msgstr "系统信息"
+
+msgid "System Settings"
+msgstr "系统设置"
+
+msgid "System Sounds"
+msgstr "系统声音"
+
+msgid "System Up-To-Date"
+msgstr "系统已是最新"
+
+msgid "System settings"
+msgstr "系统设置"
+
+msgid "Tablet"
+msgstr "手写板"
+
+msgid "Tablet (absolute)"
+msgstr "手写板(绝对)"
+
+msgid "Tablet Preferences"
+msgstr "手写板首选项"
+
+msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
+msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;手写板;手写板;写字笔;擦除器;鼠标;"
+
+msgid "Take a photo..."
+msgstr "照相..."
+
+msgid "Take a photograph"
+msgstr "照相"
+
+msgid "Tap to _click"
+msgstr "轻触表示点击(_C)"
+
+msgid "Test"
+msgstr "测试"
+
+msgid "Test page"
+msgstr "测试页"
+
+msgid "Test profile: "
+msgstr "测试配置："
+
+msgid "Testing event sound"
+msgstr "测试事件声音"
+
+msgid "The current password is not correct"
+msgstr "当前密码错误"
+
+msgid "The device is already in use."
+msgstr "设备使用中。"
+
+msgid "The device type is not currently supported."
+msgstr "目前不支持该设备类型。"
+
+msgid ""
+"The login screen, system accounts and new user accounts use the system-wide "
+"Region and Language settings."
+msgstr "登录屏幕、系统账户和新用户均使用系统的“区域和语言”设置。"
+
+msgid ""
+"The login screen, system accounts and new user accounts use the system-wide "
+"Region and Language settings. You may change the system settings to match "
+"yours."
+msgstr ""
+"登录屏幕、系统账户和新用户均使用系统的“区域和语言”设置。您可以在那里按需修改"
+"相关系统设置。"
+
+msgid "The measuring instrument does not support printer profiling."
+msgstr "测量仪器不支持打印机校正。"
+
+msgid ""
+"The measuring instrument is not detected. Please check it is turned on and "
+"correctly connected."
+msgstr "没有检测到测量仪器。请检查它是否打开和正确连接。"
+
+msgid "The new password does not contain enough different characters"
+msgstr "新密码必须包含足够的不同字符"
+
+msgid "The new password has already been used recently."
+msgstr "新密码在最近已经使用过。"
+
+msgid "The new password is too short"
+msgstr "新密码太短"
+
+msgid "The new password is too simple"
+msgstr "新密码太简单"
+
+msgid "The new password must contain numeric or special characters"
+msgstr "新密码必须包含数字或特殊字符"
+
+msgid "The next login will attempt to use the standard experience."
+msgstr "下次登录将尝试提供标准用户体验。"
+
+msgid ""
+"The next login will use the fallback mode intended for unsupported graphics "
+"hardware."
+msgstr "下次登录将使用为不支持的显示硬件而设计的备用模式。"
+
+msgid "The old and new passwords are the same"
+msgstr "新密码和旧密码相同"
+
+msgid "The old and new passwords are too similar"
+msgstr "新密码和旧密码太相似"
+
+msgid "The optical photo conductor is near end of life"
+msgstr "感光鼓接近使用寿命"
+
+msgid "The optical photo conductor is no longer functioning"
+msgstr "感光鼓无法工作"
+
+msgid "The passwords do not match"
+msgstr "密码不匹配"
+
+msgid ""
+"The shortcut \"%s\" cannot be used because it will become impossible to type "
+"using this key.\n"
+"Please try with a key such as Control, Alt or Shift at the same time."
+msgstr ""
+"“%s”不能用作快捷键，因为使用此键将无法正常输入。\n"
+"请组合 Ctrl、Alt 或 Shift 键再试一次"
+
+msgid ""
+"The shortcut \"%s\" is already used for\n"
+"\"%s\""
+msgstr ""
+"快捷键“%s”已被用于\n"
+"“%s”"
+
+msgid "The system network services are not compatible with this version."
+msgstr "系统的网络服务与此版本的网络管理器不兼容。"
+
+msgid "The username cannot start with a '-'"
+msgstr "用户名不能以“-”开头"
+
+msgid "The username is too long"
+msgstr "用户名太长"
+
+msgid ""
+"The username must only consist of:\n"
+" ➣ letters from the English alphabet\n"
+" ➣ digits\n"
+" ➣ any of the characters '.', '-' and '_'"
+msgstr ""
+"用户名只能包含：\n"
+" ➣ 英文字母\n"
+" ➣ 数字\n"
+" ➣ “.”、“-”或“_”"
+
+msgid "Thick"
+msgstr "粗"
+
+msgid "Thickness:"
+msgstr "粗细："
+
+msgid "Thin"
+msgstr "细"
+
+msgid ""
+"This device does not have a profile suitable for whole-screen color "
+"correction."
+msgstr "此设备没有一份适于全屏色彩修正的配置。"
+
+msgid "This device has an old profile that may no longer be accurate."
+msgstr "此设备有一份可能已经不准确的旧配置。"
+
+msgid "This device is not color managed."
+msgstr "此设备没有进行色彩管理。"
+
+msgid "This device is using manufacturing calibrated data."
+msgstr "此设备正在使用出厂校准数据。"
+
+msgid ""
+"This hint may be displayed at the login screen.  It will be visible to all "
+"users of this system.  Do <b>not</b> include the password here."
+msgstr ""
+"这个提示可能显示在登录屏幕。它将对此系统的所有用户可见。请 <b>不要</b> 把密码"
+"写在这里。"
+
+msgid "This is not recommended for untrusted public networks."
+msgstr "对于不可信的公共网络，不建议这样做。"
+
+msgid "This user does not exist."
+msgstr "该用户不存在。"
+
+msgid "This will not remove the account on the server."
+msgstr "这不会将该账户从服务器上移除。"
+
+msgid "Time"
+msgstr "时间"
+
+msgid "Times"
+msgstr "时间"
+
+msgid "Tip Pressure Feel"
+msgstr "指尖压力感应"
+
+msgid ""
+"Tip: <a href=\"screen\">screen brightness</a> affects how much power is used"
+msgstr "提示：<a href=\"screen\">屏幕亮度</a>影响电量使用"
+
+msgid "Tip: Enterprise domain or realm name"
+msgstr "提示：企业域或 realm 名"
+
+msgid "To change time or date settings, you need to authenticate."
+msgstr "修改时间或日期设置，您需要获得管理员权限。"
+
+msgid ""
+"To create a user account,\n"
+"click the * icon first"
+msgstr ""
+"要创建用户账户，\n"
+"请先点击 * 图标"
+
+msgid ""
+"To delete the selected user account,\n"
+"click the * icon first"
+msgstr ""
+"要删除选中的用户账户，\n"
+"请先点击 * 图标"
+
+msgid ""
+"To edit a shortcut, click the row and hold down the new keys or press "
+"Backspace to clear."
+msgstr ""
+"要编辑快捷键，请单击相应的行，然后输入新按键组合，或按 Backspace 清除。"
+
+msgid ""
+"To enable fingerprint login, you need to save one of your fingerprints, "
+"using the '%s' device."
+msgstr "要启用指纹登录，你需要使用“%s”设备来保存您的一个指纹。"
+
+msgid ""
+"To make changes,\n"
+"click the * icon first"
+msgstr ""
+"要进行更改，\n"
+"请先点击 * 图标"
+
+msgid "Toner Level"
+msgstr "碳粉量"
+
+msgid "Top Button"
+msgstr "上键"
+
+msgid "Top Button #%d"
+msgstr "上键 #%d"
+
+msgid "Top Half"
+msgstr "上半部分"
+
+msgid "Touchpad"
+msgstr "触摸板"
+
+msgid "Touchpad (relative)"
+msgstr "触摸板(相对)"
+
+msgid "Tracking Mode"
+msgstr "跟踪模式"
+
+msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
+msgstr ""
+"Trackpad;Pointer;Click;Tap;Double;Button;Trackball;触摸板;指针;点击;单击;双"
+"击;按钮;轨迹球;"
+
+msgid "Treats a sequence of modifier keys as a key combination"
+msgstr "将一串修改过的键当作一个组合键"
+
+msgid "Trigger a click when the pointer hovers"
+msgstr "指针悬停时执行点击。"
+
+msgid "Trigger a secondary click by holding down the primary button"
+msgstr "按住鼠标主键不放时触发次击"
+
+msgid "Try clicking, double clicking, scrolling"
+msgstr "尝试单击，双击，滚动"
+
+msgid "Turn accessibility features on and off using the keyboard"
+msgstr "通过键盘开关辅助功能特性"
+
+msgid "Turn on or off:"
+msgstr "打开或关闭："
+
+msgid "Turn on-screen keyboard on or off"
+msgstr "开关屏幕键盘"
+
+msgid "Turn screen reader on or off"
+msgstr "开关屏幕阅读器"
+
+msgid "Turn zoom on or off"
+msgstr "开关屏幕缩放"
+
+msgid "Two Sided"
+msgstr "双面"
+
+msgid "Two _finger scroll"
+msgstr "双指滚动(_F)"
+
+msgid "Two-sided"
+msgstr "双面"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Typing"
+msgstr "打字"
+
+msgid "Unavailable"
+msgstr "不可用"
+
+msgid "Uncalibrated"
+msgstr "未校准"
+
+msgid "Uninterruptible power supply"
+msgstr "不间断电源(UPS)"
+
+msgid "United States"
+msgstr "美国"
+
+msgid "Universal Access"
+msgstr "通用辅助功能"
+
+msgid "Universal Access Preferences"
+msgstr "通用辅助功能首选项"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Unknown error"
+msgstr "未知错误"
+
+msgid "Unknown model"
+msgstr "未知型号"
+
+msgid "Unknown time"
+msgstr "未知时间"
+
+msgid "Unmanaged"
+msgstr "未托管"
+
+msgid "Unspecified"
+msgstr "未指定"
+
+msgid "Up"
+msgstr "向上"
+
+msgid "Use a visual indication when an alert sound occurs"
+msgstr "当警告声发生时使用视觉提示"
+
+msgid "Used by %s"
+msgstr "已被 %s 使用"
+
+msgid "User Accounts"
+msgstr "用户账户"
+
+msgid "User Icon"
+msgstr "用户图标"
+
+msgid "Username"
+msgstr "用户名"
+
+msgid "Using UPS power"
+msgstr "使用 UPS"
+
+msgid "Using UPS power - %s remaining"
+msgstr "使用 UPS - 剩余 %s"
+
+msgid "Using battery power"
+msgstr "使用电池"
+
+msgid "Using battery power - %s remaining"
+msgstr "使用电池 - 剩余 %s"
+
+msgid "VESA: %s"
+msgstr "VESA：%s"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "VPN Type"
+msgstr "VPN 类型"
+
+msgid "Version %s"
+msgstr "版本 %s"
+
+msgid "Version of this application"
+msgstr "此应用程序的版本"
+
+msgid "Video CD"
+msgstr "视频 CD"
+
+msgid "Video Mouse"
+msgstr "动态鼠标"
+
+msgid "View details"
+msgstr "查看详情"
+
+msgid "Visibility"
+msgstr "可见性"
+
+msgid "Visibility of “%s”"
+msgstr "“%s”的可见性"
+
+msgid "Visual Alerts"
+msgstr "视觉警告"
+
+msgid "Volume Control"
+msgstr "音量控制"
+
+msgid "Volume down"
+msgstr "减小音量"
+
+msgid "Volume mute"
+msgstr "静音"
+
+msgid "Volume up"
+msgstr "增大音量"
+
+msgid "WEP"
+msgstr "WEP"
+
+msgid "WPA"
+msgstr "WPA"
+
+msgid "WPA2"
+msgstr "WPA2"
+
+msgid "Wacom Tablet"
+msgstr "Wacom 手写板"
+
+msgctxt "Wacom action-type"
+msgid "None"
+msgstr "无"
+
+msgctxt "Wacom action-type"
+msgid "Send Keystroke"
+msgstr "发送按键"
+
+msgctxt "Wacom action-type"
+msgid "Switch Monitor"
+msgstr "切换显示器"
+
+msgid "Wallpaper;Screen;Desktop;"
+msgstr "Wallpaper;Screen;Desktop;壁纸;墙纸;屏幕;桌面;背景;"
+
+msgid "Wallpapers"
+msgstr "壁纸"
+
+msgid "Waste receptacle almost full"
+msgstr "废粉仓将满"
+
+msgid "Waste receptacle full"
+msgstr "废粉仓已满"
+
+msgid ""
+"Web Proxy Autodiscovery is used when a Configuration URL is not provided."
+msgstr "若未提供配置 URL，将使用网络代理自动发现。"
+
+msgid "When plugged in"
+msgstr "电源插入时"
+
+msgid "When power is _critically low"
+msgstr "电量严重不足时(_C)："
+
+msgid "White on black:"
+msgstr "白底黑字："
+
+msgctxt "Wifi security"
+msgid "None"
+msgstr "无"
+
+msgid "Windows software"
+msgstr "Windows 软件"
+
+msgid "Wired"
+msgstr "有线"
+
+msgid "Wireless"
+msgstr "无线"
+
+msgid "Wireless Hotspot"
+msgstr "无线热点"
+
+msgid "Wireless keyboard"
+msgstr "无线键盘"
+
+msgid "Wireless mouse"
+msgstr "无线鼠标"
+
+msgid "Wrong password"
+msgstr "密码错误"
+
+msgid "Year"
+msgstr "年"
+
+msgid "Yes"
+msgstr "是"
+
+msgid ""
+"You are not allowed to access the device. Contact your system administrator."
+msgstr "您未被允许访问该设备。请联系您的系统管理员。"
+
+msgid "You cannot delete your own account."
+msgstr "您不能删除自己的账户。"
+
+msgid "You need to confirm the password"
+msgstr "你需要重新输入密码以便确认"
+
+msgid "You need to enter a new password"
+msgstr "您需要输入一个新密码"
+
+msgid "You need to enter your current password"
+msgstr "您需要输入当前密码"
+
+msgid ""
+"Your fingerprint was successfully saved. You should now be able to log in "
+"using your fingerprint reader."
+msgstr "您的指纹已成功保存。您现在应该可以使用指纹读取器登录了。"
+
+msgid "Your password has been changed since you initially authenticated!"
+msgstr "您的密码在您首次登录后已经更改！"
+
+msgid "Your secondary battery is empty"
+msgstr "您的辅电池已空"
+
+msgid "Your secondary battery is fully charged"
+msgstr "您的辅电池已充满"
+
+msgid "Your settings"
+msgstr "我的设置"
+
+msgid "Zoom"
+msgstr "缩放"
+
+msgctxt "Zoom Grayscale"
+msgid "Color"
+msgstr "色彩"
+
+msgctxt "Zoom Grayscale"
+msgid "Full"
+msgstr "完全"
+
+msgctxt "Zoom Grayscale"
+msgid "None"
+msgstr "无"
+
+msgid "Zoom Options"
+msgstr "缩放选项"
+
+msgid "Zoom in"
+msgstr "放大"
+
+msgid "Zoom in:"
+msgstr "放大："
+
+msgid "Zoom out"
+msgstr "缩小"
+
+msgid "Zoom out:"
+msgstr "缩小："
+
+msgid "_Action"
+msgstr "动作(_A)"
+
+msgid "_Action:"
+msgstr "动作(_A)："
+
+msgid "_Add"
+msgstr "添加(_A)"
+
+msgid "_Alert volume:"
+msgstr "警告音量(_A)："
+
+msgid "_Balance:"
+msgstr "均衡(_B)："
+
+msgid "_Calendar"
+msgstr "日历(_C)"
+
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+msgid "_City:"
+msgstr "城市(_C)："
+
+msgid "_Configuration URL"
+msgstr "配置 URL(_C)"
+
+msgid "_Configure..."
+msgstr "配置(_C)..."
+
+msgid "_Connect"
+msgstr "连接(_C)"
+
+msgid "_DVD video"
+msgstr "_DVD 视频"
+
+msgid "_Default"
+msgstr "默认(_D)"
+
+msgid "_Delay:"
+msgstr "延时(_D)："
+
+msgid "_Delete Files"
+msgstr "删除文件(_D)"
+
+msgid "_Delete Fingerprints"
+msgstr "删除指纹(_D)"
+
+msgid "_Detect Displays"
+msgstr "检测显示(_D)"
+
+msgid "_Dim screen to save power"
+msgstr "调暗屏幕以省电(_D)"
+
+msgid "_Disable if two keys are pressed together"
+msgstr "若同时按下两个键则禁用(_D)"
+
+msgid "_Disconnect"
+msgstr "断开连接(_D)"
+
+msgid "_Domain"
+msgstr "域(_D)"
+
+msgid "_Double-click"
+msgstr "双击(_D)"
+
+msgid "_Enterprise Login"
+msgstr "企业登录(_E)"
+
+msgid "_FTP Proxy"
+msgstr "_FTP 代理"
+
+msgid "_Fade:"
+msgstr "淡入淡出(_F)："
+
+msgid "_Fingerprint Login"
+msgstr "指纹登录(_F)"
+
+msgid "_Forget Network"
+msgstr "忘记网络(_F)"
+
+msgid "_Full name"
+msgstr "全名(_F)"
+
+msgid "_Generate a password"
+msgstr "生成密码(_G)"
+
+msgid "_HTTP Proxy"
+msgstr "_HTTP 代理"
+
+msgid "_Hint"
+msgstr "提示(_H)"
+
+msgid "_Import"
+msgstr "导入(_I)"
+
+msgid "_Input volume:"
+msgstr "输入音量(_I)："
+
+msgid "_Interface"
+msgstr "接口(_I)"
+
+msgid "_Keep Files"
+msgstr "保留文件(_K)"
+
+msgid "_Language"
+msgstr "语言(_L)"
+
+msgid "_Left"
+msgstr "左(_L)"
+
+msgid "_Left index finger"
+msgstr "左手食指(_L)"
+
+msgid "_Local Account"
+msgstr "本地账户(_L)"
+
+msgid "_Lock screen after:"
+msgstr "定时锁定屏幕(_L)："
+
+msgid "_Log In"
+msgstr "登录(_L)"
+
+msgid "_Login Name"
+msgstr "登录名(_L)"
+
+msgid "_Mail"
+msgstr "邮件(_M)"
+
+msgid "_Method"
+msgstr "方法(_M)"
+
+msgid "_Mirror displays"
+msgstr "镜像显示(_M)"
+
+msgid "_Music player"
+msgstr "音乐播放器(_M)"
+
+msgid "_Mute"
+msgstr "静音(_M)"
+
+msgid "_Name:"
+msgstr "名称(_N)："
+
+msgid "_Network Time"
+msgstr "网络时间(_N)"
+
+msgid "_Never prompt or start programs on media insertion"
+msgstr "介质插入时从不提示或启动程序(_N)"
+
+msgid "_New password"
+msgstr "新密码(_N)"
+
+msgid "_Options"
+msgstr "选项(_O)"
+
+msgid "_Options..."
+msgstr "选项(_O)..."
+
+msgid "_Other Media..."
+msgstr "其他媒体(_O)..."
+
+msgid "_Other finger:"
+msgstr "其他手指(_O)："
+
+msgid "_Output volume:"
+msgstr "输出音量(_O)："
+
+msgid "_Password"
+msgstr "密码(_P)"
+
+msgid "_Photos"
+msgstr "照片(_P)"
+
+msgid "_Pointer speed"
+msgstr "指针速度(_P)"
+
+msgid "_Profile:"
+msgstr "配置(_P)："
+
+msgid "_Reassign"
+msgstr "重新分配(_R)"
+
+msgid "_Region:"
+msgstr "地区(_R)："
+
+msgid "_Remove"
+msgstr "移除(_R)"
+
+msgid "_Resolution"
+msgstr "分辨率(_R)"
+
+msgid "_Right"
+msgstr "右(_R)"
+
+msgid "_Right index finger"
+msgstr "右手食指(_R)"
+
+msgid "_Select"
+msgstr "选择(_S)"
+
+msgid "_Settings..."
+msgstr "设置(_S)..."
+
+msgid "_Show"
+msgstr "显示(_S)"
+
+msgid "_Show password"
+msgstr "显示密码(_S)"
+
+msgid "_Socks Host"
+msgstr "_Socks 主机"
+
+msgid "_Software"
+msgstr "软件(_S)"
+
+msgid "_Sound Preferences"
+msgstr "声音首选项(_S)"
+
+msgid "_Speed:"
+msgstr "速度(_S)："
+
+msgid "_Stop Hotspot"
+msgstr "停止热点(_S)"
+
+msgid "_Subwoofer:"
+msgstr "重低音(_S)："
+
+msgid "_Test Speakers"
+msgstr "测试扬声器(_T)"
+
+msgid "_Test Your Settings"
+msgstr "测试您的设置(_T)"
+
+msgid "_Test flash"
+msgstr "文字闪烁(_T)"
+
+msgid "_Turn On"
+msgstr "开启(_T)"
+
+msgid "_Turn screen off when inactive for:"
+msgstr "在此时间内无操作则关闭屏幕(_T)："
+
+msgid "_Type:"
+msgstr "类型(_T)："
+
+msgid "_Use as Hotspot..."
+msgstr "用作热点(_U)..."
+
+msgid "_Username"
+msgstr "用户名(_U)"
+
+msgid "_Video"
+msgstr "视频(_V)"
+
+msgid "_Web"
+msgstr "网络(_W)"
+
+msgid "accepted"
+msgstr "已接受"
+
+msgid "audio DVD"
+msgstr "音频 DVD"
+
+msgctxt "background, style"
+msgid "Center"
+msgstr "居中"
+
+msgctxt "background, style"
+msgid "Fill"
+msgstr "填充"
+
+msgctxt "background, style"
+msgid "Scale"
+msgstr "比例放大"
+
+msgctxt "background, style"
+msgid "Span"
+msgstr "适合宽度"
+
+msgctxt "background, style"
+msgid "Tile"
+msgstr "平铺"
+
+msgctxt "background, style"
+msgid "Zoom"
+msgstr "缩放"
+
+msgctxt "balance"
+msgid "Front"
+msgstr "前"
+
+msgctxt "balance"
+msgid "Left"
+msgstr "左"
+
+msgctxt "balance"
+msgid "Maximum"
+msgstr "最大"
+
+msgctxt "balance"
+msgid "Minimum"
+msgstr "最小"
+
+msgctxt "balance"
+msgid "Rear"
+msgstr "后"
+
+msgctxt "balance"
+msgid "Right"
+msgstr "右"
+
+msgid "blank Blu-ray disc"
+msgstr "空白蓝光光盘"
+
+msgid "blank CD disc"
+msgstr "空白 CD 光盘"
+
+msgid "blank DVD disc"
+msgstr "空白 DVD 光盘"
+
+msgid "blank HD DVD disc"
+msgstr "空白 HD DVD 光盘"
+
+msgid ""
+"device;system;information;memory;processor;version;default;application;"
+"fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr ""
+"device;system;information;memory;processor;version;default;application;"
+"fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;设备;"
+"系统;信息;内存;处理器;CPU;版本;默认;应用程序;备用;回滚;喜好;cd;dvd;音频;视频;"
+"光盘;光碟;盘片;可擦写;可移除;媒体;介质;自动运行;"
+
+msgctxt "display panel, rotation"
+msgid "180 Degrees"
+msgstr "180 度"
+
+msgctxt "display panel, rotation"
+msgid "Clockwise"
+msgstr "顺时针"
+
+msgctxt "display panel, rotation"
+msgid "Counterclockwise"
+msgstr "逆时针"
+
+msgctxt "display panel, rotation"
+msgid "Normal"
+msgstr "正常"
+
+msgid "e-book reader"
+msgstr "电子书阅读器"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "时"
+
+msgid "label"
+msgstr "标签"
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "分"
+
+msgid "multiple sizes"
+msgstr "多个尺寸"
+
+msgid "never"
+msgstr "从不"
+
+msgid "page 1"
+msgstr "第 1 页"
+
+msgid "page 2"
+msgstr "第 2 页"
+
+msgid "page 3"
+msgstr "第 3 页"
+
+msgid "pressed"
+msgstr "已按下"
+
+msgctxt "print job"
+msgid "Aborted"
+msgstr "已中止"
+
+msgctxt "print job"
+msgid "Canceled"
+msgstr "已取消"
+
+msgctxt "print job"
+msgid "Completed"
+msgstr "已完成"
+
+msgctxt "print job"
+msgid "Held"
+msgstr "挂起"
+
+msgctxt "print job"
+msgid "Pending"
+msgstr "等待中"
+
+msgctxt "print job"
+msgid "Processing"
+msgstr "处理中"
+
+msgctxt "print job"
+msgid "Stopped"
+msgstr "已停止"
+
+msgctxt "printer state"
+msgid "Configuring"
+msgstr "正在配置"
+
+msgctxt "printer state"
+msgid "Installing"
+msgstr "正在安装"
+
+msgctxt "printer state"
+msgid "Offline"
+msgstr "离线"
+
+msgctxt "printer state"
+msgid "Paused"
+msgstr "已暂停"
+
+msgctxt "printer state"
+msgid "Processing"
+msgstr "正在处理"
+
+msgctxt "printer state"
+msgid "Ready"
+msgstr "就绪"
+
+msgctxt "printer state"
+msgid "Stopped"
+msgstr "已停止"
+
+msgctxt "proxy method"
+msgid "Automatic"
+msgstr "自动"
+
+msgctxt "proxy method"
+msgid "Manual"
+msgstr "手动"
+
+msgctxt "proxy method"
+msgid "None"
+msgstr "无"
+
+msgid "rejected"
+msgstr "已拒绝"
+
+msgid "today"
+msgstr "今天"
+
+msgctxt "universal access, contrast"
+msgid "High"
+msgstr "高"
+
+msgctxt "universal access, contrast"
+msgid "High/Inverse"
+msgstr "高/反色"
+
+msgctxt "universal access, contrast"
+msgid "Low"
+msgstr "低"
+
+msgctxt "universal access, contrast"
+msgid "Normal"
+msgstr "普通"
+
+msgctxt "universal access, text size"
+msgid "Large"
+msgstr "大"
+
+msgctxt "universal access, text size"
+msgid "Larger"
+msgstr "较大"
+
+msgctxt "universal access, text size"
+msgid "Normal"
+msgstr "正常"
+
+msgctxt "universal access, text size"
+msgid "Small"
+msgstr "小"
+
+msgctxt "universal access, zoom"
+msgid "Zoom"
+msgstr "缩放"
+
+msgctxt "volume"
+msgid "100%"
+msgstr "100%"
+
+msgctxt "volume"
+msgid "Unamplified"
+msgstr "减弱"
+
+msgid "yesterday"
+msgstr "昨天"
+
+msgid "Layouts"
+msgstr "布局"
+
+msgid "Add Layout"
+msgstr "添加布局"
+
+msgid "All displays"
+msgstr "所有显示"
+
+msgid "Allow different layouts for individual windows"
+msgstr "允许各个窗口拥有不同的布局"
+
+msgid "Apply system wide"
+msgstr "应用到整个系统"
+
+msgid "Choose a Layout"
+msgstr "选择布局"
+
+msgid "Keyboard Layout"
+msgstr "键盘布局"
+
+msgid "Keyboard Layout Options"
+msgstr "键盘布局选项"
+
+msgid "L_auncher placement"
+msgstr "启动器布局(_A)"
+
+msgid "Launch terminal"
+msgstr "启动终端"
+
+msgid "Layout"
+msgstr "布局"
+
+msgid "Mode:"
+msgstr "模式："
+
+msgid "Move Down"
+msgstr "下移"
+
+msgid "Move Up"
+msgstr "上移"
+
+msgid "Never"
+msgstr "从不"
+
+msgid "New windows use the default layout"
+msgstr "新窗口使用默认布局"
+
+msgid "New windows use the previous window's layout"
+msgstr "新窗口中使用前一窗口的布局"
+
+msgid "Play sound through"
+msgstr "使用以下输出播放声音："
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Preview Layout"
+msgstr "预览布局"
+
+msgid "Record sound from"
+msgstr "录制声音，从："
+
+msgid "Remove Layout"
+msgstr "移除布局"
+
+msgid ""
+"Replace the current keyboard layout settings with the\n"
+"default settings"
+msgstr "使用默认设置替换当前键盘布局"
+
+msgid "Require my password when waking from suspend"
+msgstr "从挂起状态唤醒时需要密码"
+
+msgid "Reset to De_faults"
+msgstr "重置为默认值(_F)"
+
+msgid "S_ticky edges"
+msgstr "粘滞边缘(_T)"
+
+msgid "Settings for %s"
+msgstr "%s 设置"
+
+msgid "Settings for the selected device"
+msgstr "已选设备的设置"
+
+msgid "Shortcut"
+msgstr "快捷键"
+
+msgid "Show battery status in the _menu bar"
+msgstr "在菜单栏显示电池状态(_M)"
+
+msgid "Suspend"
+msgstr "挂起"
+
+msgid "Take a screenshot"
+msgstr "对屏幕截图"
+
+msgid "Take a screenshot of a window"
+msgstr "对窗口截图"
+
+msgid "Take a screenshot of an area"
+msgstr "对选区截图"
+
+msgid "Test Sound"
+msgstr "测试声音"
+
+msgid "Test:"
+msgstr "测试："
+
+msgid "Use the same layout for all windows"
+msgstr "所有窗口使用相同的布局"
+
+msgid "View and edit keyboard layout options"
+msgstr "查看并编辑键盘布局选项"
+
+msgid "When battery is charging/in use"
+msgstr "电池正在充电/使用时"
+
+msgid "When battery is present"
+msgstr "存在电池时"
+
+msgid "When the lid is closed"
+msgstr "合上盖子时"
+
+msgid "_All Settings"
+msgstr "全部设置(_A)"
+
+msgid "Get more languages..."
+msgstr "获取更多语言"
+
+

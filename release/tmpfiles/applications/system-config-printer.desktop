@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Printers
+Name[zh_CN]=打印机
+Comment=Configure printers
+Comment[zh_CN]=配置打印机
+Exec=system-config-printer
+Terminal=false
+Type=Application
+Icon=printer
+StartupNotify=true
+#NotShowIn=KDE;GNOME;
+X-Ubuntu-Gettext-Domain=system-config-printer
+Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;Printing;
+X-GNOME-Settings-Panel=printing
+Keywords=Printer;Queue;Print;Paper;Ink;Toner;
+X-Desktop-File-Install-Version=0.21

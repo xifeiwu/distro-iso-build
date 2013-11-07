@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=AptUrl
+GenericName=APTURL
+Comment=Install a package
+Exec=/usr/bin/apturl %u
+Terminal=false
+Type=Application
+Categories=PackageManager;GTK;System;Settings;
+MimeType=x-scheme-handler/apt;
+NoDisplay=true
+

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Disks
+Name[zh_CN]=磁盘
+Comment=Manage Drives and Media
+Comment[zh_CN]=管理驱动和媒体
+Exec=gnome-disks
+Icon=gnome-disks
+Terminal=false
+Type=Application
+StartupNotify=true
+X-GNOME-DocPath=palimpsest/palimpsest.xml
+Categories=GNOME;GTK;Utility;HardwareSettings;System;HardwareSettings;
+X-Ubuntu-Gettext-Domain=gnome-disk-utility

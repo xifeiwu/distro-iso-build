@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Disk Usage Analyzer
+Name[zh_CN]=硬盘分析工具
+Comment=Check folder sizes and available disk space
+TryExec=baobab
+Exec=baobab
+Icon=baobab
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=inode/directory;
+Categories=GTK;GNOME;System;Filesystem;
+NotShowIn=KDE;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-utils
+X-GNOME-Bugzilla-Component=baobab
+X-GNOME-Bugzilla-Version=3.6.4
+X-Ubuntu-Gettext-Domain=baobab

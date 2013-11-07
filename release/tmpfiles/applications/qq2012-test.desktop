@@ -1,0 +1,14 @@
+
+[Desktop Entry]
+Categories=Network;InstantMessaging;
+Name=QQ2012
+Name[zh_CN]=腾讯QQ2012
+Icon=/opt/longene/qq2012/qq2012.png
+Exec=/opt/longene/qq2012/qq2012.sh
+StartupNotify=true
+Terminal=false
+Type=Application
+Name[en]=QQ2012
+Name[en_US]=QQ2012
+Comment=QQ2012
+Comment[zh_CN]=腾讯QQ2012

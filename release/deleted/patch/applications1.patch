@@ -1,0 +1,344 @@
+diff -uN squashfs-root/usr/share/applications_raw/aptoncd.desktop squashfs-root/usr/share/applications/aptoncd.desktop
+--- squashfs-root/usr/share/applications_raw/aptoncd.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/aptoncd.desktop	2013-09-12 10:51:05.223533978 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=APTonCD
++Name=APT 软件库创建器
+ GenericName=Package Backup Tool
+ Comment=Create an Installation Disc
+ Version=1.0
+diff -uN squashfs-root/usr/share/applications_raw/apturl_mime.desktop squashfs-root/usr/share/applications/apturl_mime.desktop
+--- squashfs-root/usr/share/applications_raw/apturl_mime.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/apturl_mime.desktop	2013-09-12 10:52:41.615708444 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=AptUrl
++Name=APT一键安装工具
+ GenericName=APTURL
+ Comment=Install a package
+ Exec=/usr/bin/apturl %u
+diff -uN squashfs-root/usr/share/applications_raw/banshee-audiocd.desktop squashfs-root/usr/share/applications/banshee-audiocd.desktop
+--- squashfs-root/usr/share/applications_raw/banshee-audiocd.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/banshee-audiocd.desktop	2013-09-12 10:55:31.906746803 +0800
+@@ -3,7 +3,7 @@
+ NoDisplay=true
+ MimeType=x-content/audio-cdda;
+ Version=1.0
+-Name=Banshee
++Name=Banshee音乐播放器
+ GenericName=Media Player
+ X-GNOME-FullName=Banshee Media Player
+ Comment=Play and organize your media collection
+diff -uN squashfs-root/usr/share/applications_raw/banshee.desktop squashfs-root/usr/share/applications/banshee.desktop
+--- squashfs-root/usr/share/applications_raw/banshee.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/banshee.desktop	2013-09-12 10:55:15.686746388 +0800
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Exec=banshee --redirect-log --play-enqueued %U
+ Version=1.0
+-Name=Banshee
++Name=Banshee音乐播放器
+ GenericName=Media Player
+ X-GNOME-FullName=Banshee Media Player
+ Comment=Play and organize your media collection
+diff -uN squashfs-root/usr/share/applications_raw/banshee-media-player.desktop squashfs-root/usr/share/applications/banshee-media-player.desktop
+--- squashfs-root/usr/share/applications_raw/banshee-media-player.desktop	2013-09-12 10:42:26.521000701 +0800
++++ squashfs-root/usr/share/applications/banshee-media-player.desktop	2013-09-12 10:55:38.542746973 +0800
+@@ -3,7 +3,7 @@
+ NoDisplay=true
+ MimeType=x-content/audio-player;
+ Version=1.0
+-Name=Banshee
++Name=Banshee音乐播放器
+ GenericName=Media Player
+ X-GNOME-FullName=Banshee Media Player
+ Comment=Play and organize your media collection
+diff -uN squashfs-root/usr/share/applications_raw/baobab.desktop squashfs-root/usr/share/applications/baobab.desktop
+--- squashfs-root/usr/share/applications_raw/baobab.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/baobab.desktop	2013-09-12 11:12:29.626772862 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Disk Usage Analyzer
++Name=硬盘分析工具
+ Comment=Check folder sizes and available disk space
+ TryExec=baobab
+ Exec=baobab
+diff -uN squashfs-root/usr/share/applications_raw/bluetooth-sendto.desktop squashfs-root/usr/share/applications/bluetooth-sendto.desktop
+--- squashfs-root/usr/share/applications_raw/bluetooth-sendto.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/bluetooth-sendto.desktop	2013-09-12 10:56:14.138747885 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Bluetooth Transfer
++Name=蓝牙传输
+ Comment=Send files via Bluetooth
+ Icon=bluetooth
+ Exec=bluetooth-sendto
+diff -uN squashfs-root/usr/share/applications_raw/bluetooth-wizard.desktop squashfs-root/usr/share/applications/bluetooth-wizard.desktop
+--- squashfs-root/usr/share/applications_raw/bluetooth-wizard.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/bluetooth-wizard.desktop	2013-09-12 10:56:00.110747526 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Bluetooth Device Setup
++Name=蓝牙设备安装
+ Comment=Setup Bluetooth devices
+ Icon=bluetooth
+ Exec=bluetooth-wizard
+diff -uN squashfs-root/usr/share/applications_raw/brasero.desktop squashfs-root/usr/share/applications/brasero.desktop
+--- squashfs-root/usr/share/applications_raw/brasero.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/brasero.desktop	2013-09-12 11:06:53.002764243 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Brasero
++Name=Brasero光盘刻录工具
+ GenericName=Disc Burner and Copier
+ Comment=Create and copy CDs and DVDs
+ Categories=GTK;GNOME;AudioVideo;DiscBurning;
+diff -uN squashfs-root/usr/share/applications_raw/brasero-nautilus.desktop squashfs-root/usr/share/applications/brasero-nautilus.desktop
+--- squashfs-root/usr/share/applications_raw/brasero-nautilus.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/brasero-nautilus.desktop	2013-09-12 11:09:43.338768604 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=CD/DVD Creator
++Name=CD/DVD 刻录工具
+ Comment=Create CDs and DVDs
+ Categories=GNOME;GTK;System;
+ TryExec=nautilus
+diff -uN squashfs-root/usr/share/applications_raw/caribou.desktop squashfs-root/usr/share/applications/caribou.desktop
+--- squashfs-root/usr/share/applications_raw/caribou.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/caribou.desktop	2013-09-12 11:09:04.066767599 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Caribou
++Name=Caribou屏幕键盘
+ GenericName=Virtual on-screen keyboard
+ Comment=Enter text with a virtual keyboard
+ Exec=caribou
+diff -uN squashfs-root/usr/share/applications_raw/cinnamon2d.desktop squashfs-root/usr/share/applications/cinnamon2d.desktop
+--- squashfs-root/usr/share/applications_raw/cinnamon2d.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/cinnamon2d.desktop	2013-09-12 11:10:49.870770308 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=Application
+-Name=Cinnamon 2D
++Name=Cinnamon 2D桌面管理器
+ Comment=Window management and application launching
+ Exec=/usr/bin/cinnamon2d
+ Categories=GNOME;GTK;System;Core;
+diff -uN squashfs-root/usr/share/applications_raw/cinnamon-control-center.desktop squashfs-root/usr/share/applications/cinnamon-control-center.desktop
+--- squashfs-root/usr/share/applications_raw/cinnamon-control-center.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/cinnamon-control-center.desktop	2013-09-12 11:11:02.078770621 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Cinnamon Control Center
++Name=Cinnamon控制中心
+ Icon=preferences-system
+ Exec=cinnamon-control-center --overview
+ Terminal=false
+diff -uN squashfs-root/usr/share/applications_raw/cinnamon.desktop squashfs-root/usr/share/applications/cinnamon.desktop
+--- squashfs-root/usr/share/applications_raw/cinnamon.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/cinnamon.desktop	2013-09-12 11:10:34.122769905 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Type=Application
+-Name=Cinnamon
++Name=Cinnamon桌面管理器
+ Comment=Window management and application launching
+ Exec=/usr/bin/cinnamon-launcher
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+diff -uN squashfs-root/usr/share/applications_raw/cinnamon-menu-editor.desktop squashfs-root/usr/share/applications/cinnamon-menu-editor.desktop
+--- squashfs-root/usr/share/applications_raw/cinnamon-menu-editor.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/cinnamon-menu-editor.desktop	2013-09-12 11:11:24.470771194 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Cinnamon Menu Editor
++Name=Cinnamon菜单编辑器
+ Comment=Edit the entries of the Cinnamon menu applet
+ Exec=cinnamon-menu-editor
+ Icon=alacarte
+diff -uN squashfs-root/usr/share/applications_raw/evince.desktop squashfs-root/usr/share/applications/evince.desktop
+--- squashfs-root/usr/share/applications_raw/evince.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/evince.desktop	2013-09-12 11:12:48.186773337 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Document Viewer
++Name=文档阅读器
+ Comment=View multi-page documents
+ TryExec=evince
+ Exec=evince %U
+diff -uN squashfs-root/usr/share/applications_raw/fcitx-config-gtk3.desktop squashfs-root/usr/share/applications/fcitx-config-gtk3.desktop
+--- squashfs-root/usr/share/applications_raw/fcitx-config-gtk3.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/fcitx-config-gtk3.desktop	2013-09-12 11:13:34.390774520 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Fcitx Config Tool
++Name=Fcitx输入法配置工具
+ Comment=Fcitx GUI Config Tool
+ Exec=fcitx-config-gtk3
+ Icon=fcitx
+diff -uN squashfs-root/usr/share/applications_raw/fcitx.desktop squashfs-root/usr/share/applications/fcitx.desktop
+--- squashfs-root/usr/share/applications_raw/fcitx.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/fcitx.desktop	2013-09-12 11:13:10.950773920 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Fcitx
++Name=Fcitx输入法
+ Name[de]=Fcitx
+ Name[es]=Fcitx
+ Name[ja]=Fcitx
+diff -uN squashfs-root/usr/share/applications_raw/file-roller.desktop squashfs-root/usr/share/applications/file-roller.desktop
+--- squashfs-root/usr/share/applications_raw/file-roller.desktop	2013-09-12 10:42:26.521000701 +0800
++++ squashfs-root/usr/share/applications/file-roller.desktop	2013-09-12 10:53:44.535154056 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Archive Manager
++Name=归档管理工具
+ Comment=Create and modify an archive
+ Keywords=zip;tar;extract;unpack;
+ TryExec=file-roller
+diff -uN squashfs-root/usr/share/applications_raw/gcalctool.desktop squashfs-root/usr/share/applications/gcalctool.desktop
+--- squashfs-root/usr/share/applications_raw/gcalctool.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/gcalctool.desktop	2013-09-12 11:07:12.834764751 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Calculator
++Name=计算器
+ Comment=Perform arithmetic, scientific or financial calculations
+ Keywords=calculation;arithmetic;scientific;financial;
+ Exec=gnome-calculator
+diff -uN squashfs-root/usr/share/applications_raw/gcr-prompter.desktop squashfs-root/usr/share/applications/gcr-prompter.desktop
+--- squashfs-root/usr/share/applications_raw/gcr-prompter.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/gcr-prompter.desktop	2013-09-12 10:49:15.336615166 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Access Prompt
++Name=访问提示
+ Comment=Unlock access to passwords and other secrets
+ Icon=security-medium
+ Exec=/usr/lib/gcr/gcr-prompter
+diff -uN squashfs-root/usr/share/applications_raw/gedit.desktop squashfs-root/usr/share/applications/gedit.desktop
+--- squashfs-root/usr/share/applications_raw/gedit.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/gedit.desktop	2013-09-12 11:15:02.178776768 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=gedit
++Name=gedit编辑器
+ GenericName=Text Editor
+ Comment=Edit text files
+ Exec=gedit %U
+diff -uN squashfs-root/usr/share/applications_raw/gimp.desktop squashfs-root/usr/share/applications/gimp.desktop
+--- squashfs-root/usr/share/applications_raw/gimp.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gimp.desktop	2013-09-12 11:15:15.334777105 +0800
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Name=GIMP Image Editor
++Name=GIMP图片编辑器
+ GenericName=Image Editor
+ Comment=Create images and edit photographs
+ Exec=gimp-2.8 %U
+diff -uN squashfs-root/usr/share/applications_raw/gnome-disk-image-mounter.desktop squashfs-root/usr/share/applications/gnome-disk-image-mounter.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-disk-image-mounter.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/gnome-disk-image-mounter.desktop	2013-09-12 11:11:56.826772022 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Disk Image Mounter
++Name=磁盘挂载器
+ Comment=Mount Disk Images
+ Exec=gnome-disk-image-mounter %U
+ Icon=drive-removable-media
+diff -uN squashfs-root/usr/share/applications_raw/gnome-disks.desktop squashfs-root/usr/share/applications/gnome-disks.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-disks.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gnome-disks.desktop	2013-09-12 11:12:07.154772287 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Disks
++Name=磁盘
+ Comment=Manage Drives and Media
+ Exec=gnome-disks
+ Icon=gnome-disks
+diff -uN squashfs-root/usr/share/applications_raw/gnome-font-viewer.desktop squashfs-root/usr/share/applications/gnome-font-viewer.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-font-viewer.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gnome-font-viewer.desktop	2013-09-12 11:14:49.594776446 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Font Viewer
++Name=字体
+ Comment=View fonts on your system
+ Keywords=fonts;fontface;
+ Icon=preferences-desktop-font
+diff -uN squashfs-root/usr/share/applications_raw/gnome-system-monitor-kde.desktop squashfs-root/usr/share/applications/gnome-system-monitor-kde.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-system-monitor-kde.desktop	2013-09-12 10:42:26.521000701 +0800
++++ squashfs-root/usr/share/applications/gnome-system-monitor-kde.desktop	2013-09-12 11:15:28.550777444 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=GNOME System Monitor
++Name=GNOME系统监视器
+ Comment=View current processes and monitor system state
+ TryExec=gnome-system-monitor
+ Exec=gnome-system-monitor
+diff -uN squashfs-root/usr/share/applications_raw/gnome-terminal.desktop squashfs-root/usr/share/applications/gnome-terminal.desktop
+--- squashfs-root/usr/share/applications_raw/gnome-terminal.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gnome-terminal.desktop	2013-09-12 15:24:45.560712227 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Terminal
++Name=终端
+ Comment=Use the command line
+ TryExec=gnome-terminal
+ Exec=gnome-terminal
+diff -uN squashfs-root/usr/share/applications_raw/google-chrome.desktop squashfs-root/usr/share/applications/google-chrome.desktop
+--- squashfs-root/usr/share/applications_raw/google-chrome.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/google-chrome.desktop	2013-09-12 11:15:51.654778035 +0800
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Version=1.0
+-Name=Google Chrome
++Name=Google Chrome网络浏览器
+ # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+ # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+ GenericName=Web Browser
+diff -uN squashfs-root/usr/share/applications_raw/gparted.desktop squashfs-root/usr/share/applications/gparted.desktop
+--- squashfs-root/usr/share/applications_raw/gparted.desktop	2013-09-12 10:42:26.533000702 +0800
++++ squashfs-root/usr/share/applications/gparted.desktop	2013-09-12 11:16:10.602778520 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=GParted
++Name=GParted磁盘分区工具
+ GenericName=Partition Editor
+ X-GNOME-FullName=GParted Partition Editor
+ Comment=Create, reorganize, and delete partitions
+diff -uN squashfs-root/usr/share/applications_raw/gthumb.desktop squashfs-root/usr/share/applications/gthumb.desktop
+--- squashfs-root/usr/share/applications_raw/gthumb.desktop	2013-09-12 10:42:26.521000701 +0800
++++ squashfs-root/usr/share/applications/gthumb.desktop	2013-09-12 11:16:36.546779185 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=gThumb
++Name=gThumb图像浏览器
+ Name[am]=gThumb
+ Name[az]=gThumb
+ Name[be]=gThumb
+diff -uN squashfs-root/usr/share/applications_raw/gucharmap.desktop squashfs-root/usr/share/applications/gucharmap.desktop
+--- squashfs-root/usr/share/applications_raw/gucharmap.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gucharmap.desktop	2013-09-12 11:10:14.606769405 +0800
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Character Map
++Name=字符映射表
+ Comment=Insert special characters into documents
+ Exec=gucharmap
+ Icon=accessories-character-map
+diff -uN squashfs-root/usr/share/applications_raw/gufw.desktop squashfs-root/usr/share/applications/gufw.desktop
+--- squashfs-root/usr/share/applications_raw/gufw.desktop	2013-09-12 10:42:26.517000701 +0800
++++ squashfs-root/usr/share/applications/gufw.desktop	2013-09-12 11:14:11.270775465 +0800
+@@ -3,7 +3,7 @@
+ Type=Application
+ Terminal=false
+ Exec=gufw
+-Name=Firewall Configuration
++Name=Firewall设定
+ Name[zh_TW]=防火牆設定
+ Name[vi]=Cấu hình tường lửa
+ Name[uk]=Конфігурація брандмауера

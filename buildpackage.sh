@@ -9,7 +9,7 @@ fi
 
 if [ -e $1 ] ; then
     if [ ! -d $1 ] ; then
-        echo You should make sure the outpath $1 is a dir
+        echo You should make sure the appoutpath $1 is a dir
         exit -1
     fi
 else
@@ -48,7 +48,29 @@ do
      echo 
      echo Building $dir ...
      cd $SRCCOSPATH/$dir
-
+     dpkg-buildpackage -tc
+     echo Finish building $dir.
+   fi
+done 
+echo
+echo Finish building deb package
+echo
+echo Move deb package
+for file in `ls $SRCDesktopPATH | sort`
+do
+   if [ -f $SRCDesktopPATH/$file ] ; then
+     echo move $file
+     mv $SRCDesktopPATH/$file $APPOUTPATH/
+   fi
+done 
+for file in `ls $SRCCOSPATH | sort`
+do
+   if [ -f $SRCCOSPATH/$file ] ; then
+     echo move $file
+     mv $SRCCOSPATH/$file $APPOUTPATH/
+   fi
+done 
+echo Finish moving deb package
 ######
 # End
 ######

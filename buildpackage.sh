@@ -12,6 +12,11 @@ if [ -e $1 ] ; then
         echo You should make sure the appoutpath $1 is a dir
         exit -1
     fi
+    for file in `ls $1 | sort`
+    do
+        echo You should make sure the appoutpath $1 is a blank dir
+        exit -1
+    done 
 else
     mkdir $1
 fi

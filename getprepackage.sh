@@ -1,6 +1,6 @@
 #~/bin/sh
 set -e
-
+ 
 if [ $# -lt 1 ] ; then
     echo You should execute this script with three param at least as follow:
     echo sh $0 PREAPPPATH

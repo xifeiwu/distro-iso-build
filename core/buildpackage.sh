@@ -1,6 +1,5 @@
 #~/bin/sh
-set -e
-
+set -e 
 if [ $# -lt 1 ] ; then
     echo You should execute this script with three param at least as follow:
     echo sh $0 APPOUTPATH
@@ -43,7 +42,7 @@ do
      echo 
      echo Building $dir ...
      cd $SRCDesktopPATH/$dir
-     dpkg-buildpackage -tc
+     dpkg-buildpackage -b -uc -tc
      echo Finish building $dir.
    fi
 done 
@@ -53,7 +52,7 @@ do
      echo 
      echo Building $dir ...
      cd $SRCCOSPATH/$dir
-     dpkg-buildpackage -tc
+     dpkg-buildpackage -b -uc -tc
      echo Finish building $dir.
    fi
 done 

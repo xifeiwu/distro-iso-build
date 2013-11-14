@@ -36,6 +36,11 @@ function repo()
     $T/.repo/repo/repo $*
 }
 
+function resource()
+{
+    source $T/build/envsetup.sh
+}
+
 function chmaster()
 {
     T=$(gettop)
@@ -136,14 +141,67 @@ function mkiso()
 
 function mcos()
 {
+    ISONLINE=0
+    if [ ! $# -lt 1 ] ; then 
+        if [ "$1" == "--online" ] ; then
+            ISONLINE=1
+        else
+            echo ERROR: unknown param: $1
+            return
+        fi
+    fi
     T=$(gettop)
     if [ "$T" ]; then
-        echo TODO: Need to be finished.
-        #getprepkg
-        #mall
-        #uniso
+        getprepkg || return
+        mall || return
+        uniso || return
+
         #sh $T/build/release.sh $ISOPATH $OUT/preapp $OUT/out
-        #mkiso
+        #Install zh_CN deb and Input Method deb.
+        sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
+
+        #Install popular software
+        sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
+        sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
+        sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
+        sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
+
+        #Install ssh and close root user with ssh authority.
+        sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
+
+        #Install Self software
+        sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
+        sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
+
+        #Change iso files
+        sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
+        sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
+
+        #Change some zh_CN LC_MESSAGES
+        sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return
+
+        #Change system name in some where. This shell file also will install some software in cos source list.
+        sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return
+
+        if [ $ISONLINE == 1 ] ; then
+            sudo sh $T/build/release/packages.sh $T/build/release/ $OUTPATH || return
+        else
+            sudo sh $T/build/core/packages_locale.sh $T/build/release/ $OUTPATH || return
+            return
+        fi
+
+        #Change some icon\theme\applications name and so on.
+        sudo sh $T/build/release/mktheme.sh $OUTPATH || return
+        sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return
+        sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
+
+        #fix a bug of wps when first opened.
+        sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
+
+        #Install cos boot splash
+        sudo sh $T/build/release/installcossplash.sh $OUTPATH $APPPATH || return
+
+        mkiso || return
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -157,7 +215,21 @@ function m()
             echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
             return
         fi 
-        dpkg-buildpackage -tc
+        dpkg-buildpackage -tc $*
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function mm()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -f debian/rules ] ; then
+            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
+            return
+        fi 
+        dpkg-buildpackage $*
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -182,7 +254,7 @@ function mall()
 {
     T=$(gettop)
     if [ "$T" ]; then
-	sh $T/build/buildpackage.sh $OUT/app
+	sh $T/build/core/buildpackage.sh $OUT/app
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -316,7 +388,7 @@ function godir () {
 function getprepkg ()
 {
     T=$(gettop)
-    sh $T/build/getprepackage.sh $OUT
+    sh $T/build/core/getprepackage.sh $OUT
 }
 
 if [ "x$SHELL" != "x/bin/bash" ]; then

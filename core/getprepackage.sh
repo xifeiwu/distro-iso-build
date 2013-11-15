@@ -19,7 +19,7 @@ fi
 ScriptPATH=$(cd "$(dirname $0)"; pwd)
 WORKPATH=$(cd $1; pwd)
 PREAPPPATH=$WORKPATH/preapp
-if [ -e $PREAPPATH ] ; then
+if [ -e $PREAPPPATH ] ; then
     if [ ! -d $PREAPPPATH ] ; then
         echo You should make sure the preapppath $PREAPPPATH is a dir
         exit -1

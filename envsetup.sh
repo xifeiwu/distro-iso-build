@@ -1,10 +1,11 @@
-function hcos() {
+function hh() {
 cat <<EOF
 Invoke ". build/envsetup.sh" from your shell to add the following functions to your environment:
 - croot:   Changes directory to the top of the tree.
+- cmaster: repo forall -c git checkout -b master remotes/m/master
 - mcos:    Build all and generate iso.
 - mall:    Build all packages in cos and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
-- m:       Builds the package in the current directory.
+- m:       Same as mc.
 - mc:      Builds the package and clean the source dir in the current directory.
 - mnc:     Builds the package and doesn't clean the source dir in the current directory.
 - uniso:   Export iso file to workout/out dir.
@@ -25,6 +26,11 @@ EOF
     echo $A
 }
 
+function hcos()
+{
+    hh
+}
+
 function repo()
 {
     T=$(gettop)
@@ -41,7 +47,7 @@ function resource()
     source $T/build/envsetup.sh
 }
 
-function chmaster()
+function cmaster()
 {
     T=$(gettop)
     if [ ! "$T" ]; then
@@ -156,8 +162,9 @@ function mcos()
         mall || return
         uniso || return
 
-        #sh $T/build/release.sh $ISOPATH $OUT/preapp $OUT/out
         #Install zh_CN deb and Input Method deb.
+        OUTPATH=$OUT/out
+        APPPATH=$OUT/preapp
         sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
 
         #Install popular software
@@ -186,8 +193,9 @@ function mcos()
         if [ $ISONLINE == 1 ] ; then
             sudo sh $T/build/release/packages.sh $T/build/release/ $OUTPATH || return
         else
+            sudo mv $OUT/appbuilt $OUT/out/squashfs-root/
             sudo sh $T/build/core/packages_locale.sh $T/build/release/ $OUTPATH || return
-            return
+            sudo mv $OUT/out/squashfs-root/appbuilt $OUT/
         fi
 
         #Change some icon\theme\applications name and so on.
@@ -254,7 +262,7 @@ function mall()
 {
     T=$(gettop)
     if [ "$T" ]; then
-	sh $T/build/core/buildpackage.sh $OUT/app
+	sh $T/build/core/buildpackage.sh $OUT/appbuilt
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -388,7 +396,13 @@ function godir () {
 function getprepkg ()
 {
     T=$(gettop)
-    sh $T/build/core/getprepackage.sh $OUT
+    if [ "$T" ]; then
+        cd $(gettop)
+        sh $T/build/core/getprepackage.sh $OUT
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+    
 }
 
 if [ "x$SHELL" != "x/bin/bash" ]; then

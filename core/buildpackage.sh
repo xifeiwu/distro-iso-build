@@ -21,8 +21,8 @@ else
 fi
 
 ScriptPATH=$(cd "$(dirname $0)"; pwd)
-SRCDesktopPATH=$(cd "$(dirname $0)/../desktop"; pwd)
-SRCCOSPATH=$(cd "$(dirname $0)/../cos"; pwd)
+SRCDesktopPATH=$(cd "$(dirname $0)/../../desktop"; pwd)
+SRCCOSPATH=$(cd "$(dirname $0)/../../cos"; pwd)
 
 APPOUTPATH=$(cd $1; pwd)
 

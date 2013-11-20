@@ -7,7 +7,6 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - mall:    Build all packages in cos and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
 - m:       Same as mc.
 - mc:      Builds the package and clean the source dir in the current directory.
-- mnc:     Builds the package and doesn't clean the source dir in the current directory.
 - uniso:   Export iso file to workout/out dir.
 - mkiso:   Generate iso file into workout dir from workout/out file.
 - cgrep:   Greps on all local C/C++ files.
@@ -67,6 +66,7 @@ function setpaths()
     fi
 
     export OUT=$T/workout
+    export APPOUT=appout
     export ISOPATH=$OUT/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso
 }
 
@@ -129,6 +129,12 @@ function uniso()
         if [ ! -e $OUT ] ; then
             mkdir $OUT
         fi
+        dpkg -s squashfs-tools > /dev/null
+        if [ ! $? == 0 ] ; then
+            echo
+            echo ERROR: squashfs-tools has not been installed. uniso can not be executed.
+            return
+        fi
         sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
@@ -153,11 +159,14 @@ function mcos()
             ISONLINE=1
         else
             echo ERROR: unknown param: $1
-            return
+            return -1
         fi
     fi
     T=$(gettop)
     if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
         getprepkg || return
         mall || return
         uniso || return
@@ -193,9 +202,12 @@ function mcos()
         if [ $ISONLINE == 1 ] ; then
             sudo sh $T/build/release/packages.sh $T/build/release/ $OUTPATH || return
         else
-            sudo mv $OUT/appbuilt $OUT/out/squashfs-root/
+            sudo mv $OUT/$APPOUT $OUT/out/squashfs-root/
+            sudo cp $T/build/core/repos-conf.pl $OUT/out/squashfs-root/
+            #tTODO
             sudo sh $T/build/core/packages_locale.sh $T/build/release/ $OUTPATH || return
-            sudo mv $OUT/out/squashfs-root/appbuilt $OUT/
+            sudo rm $OUT/out/squashfs-root/repos-conf.pl
+            sudo mv $OUT/out/squashfs-root/$APPOUT $OUT/
         fi
 
         #Change some icon\theme\applications name and so on.
@@ -218,41 +230,76 @@ function mcos()
 function m()
 {
     T=$(gettop)
-    if [ "$T" ]; then
-        if [ ! -f debian/rules ] ; then
-            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
-            return
-        fi 
-        dpkg-buildpackage -tc $*
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
+    mm -tc $*
 }
 
 function mm()
 {
     T=$(gettop)
     if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
         if [ ! -f debian/rules ] ; then
             echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
-            return
-        fi 
+            return 1
+        fi
+        if ls ../*.* >/dev/null 2>&1 ; then
+            echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
+            echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
+            return 1
+        fi
+        dpkg-checkbuilddeps
+        if [ ! $? == 0 ] ; then
+            return 1
+        fi
         dpkg-buildpackage $*
+        echo
+        ls -1 ../*.*
+        mv ../*.* $OUT/$APPOUT
+        echo Finished. These files above has been moved into $OUT/$APPOUT
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
-function mc()
+function check()
 {
-    m $*
+    checkdep
 }
 
-function mnc()
+function checkdep()
+{
+    dpkg-checkbuilddeps 2>&1 | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+}
+
+function checkdepall()
 {
     T=$(gettop)
     if [ "$T" ]; then
-        dpkg-buildpackage
+        SRCDesktopPATH=$T/desktop
+        SRCCOSPATH=$T/cos
+        CURDIR=$PWD
+        echo check build dependencies and conflicts of all deb package
+        echo
+        for dir in `ls $SRCDesktopPATH | sort`
+        do
+            if [ -d $SRCDesktopPATH/$dir ] ; then
+                cd $SRCDesktopPATH/$dir
+                dpkg-checkbuilddeps 2>&1 | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+            fi
+        done 
+        for dir in `ls $SRCCOSPATH | sort`
+        do
+            if [ -d $SRCCOSPATH/$dir ] ; then
+                cd $SRCCOSPATH/$dir
+                dpkg-checkbuilddeps 2>&1 | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+            fi
+        done 
+        echo
+        echo Finish building deb package
+        cd $CURDIR
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -262,7 +309,32 @@ function mall()
 {
     T=$(gettop)
     if [ "$T" ]; then
-	sh $T/build/core/buildpackage.sh $OUT/appbuilt
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
+        echo Warning: checkdepall should be executed befor make all.
+        
+	sh $T/build/core/buildpackage.sh $OUT/$APPOUT
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function cmove()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -e $OUT/$APPOUT ] ; then
+            mkdir -p $OUT/$APPOUT
+        fi
+        if [ ! -f debian/rules ] ; then
+            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
+            return 1
+        fi
+        if ls ../*.* >/dev/null 2>&1 ; then
+            mv ../*.* $OUT/$APPOUT/
+            return
+        fi
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -397,6 +469,9 @@ function getprepkg ()
 {
     T=$(gettop)
     if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
         cd $(gettop)
         sh $T/build/core/getprepackage.sh $OUT
     else

@@ -58,7 +58,6 @@ chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mymi
 cp mymint/casper/filesystem.manifest mymint/casper/filesystem.manifest-desktop
 sed -i '/ubiquity/d' mymint/casper/filesystem.manifest-desktop
 sed -i '/casper/d' mymint/casper/filesystem.manifest-desktop
-sed -i '/gparted/d' mymint/casper/filesystem.manifest-desktop
 sed -i '/libdebian-installer/d' mymint/casper/filesystem.manifest-desktop
 sed -i '/user-setup/d' mymint/casper/filesystem.manifest-desktop
 

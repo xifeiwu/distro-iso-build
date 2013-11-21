@@ -19,11 +19,8 @@ cp -r ${MATERIALDIR}/packages/deb-replace.sh ${WORKDIR}/squashfs-root/tmp/
 cp -r ${MATERIALDIR}/packages/repos-conf.pl ${WORKDIR}/squashfs-root/tmp/
 
 cd ${WORKDIR}
-chroot squashfs-root /bin/bash -c "[ -e /proc/mounts ] && umount /proc/"
-chroot squashfs-root /bin/bash -c "mount none /proc -t proc"
 #chroot squashfs-root /bin/bash -c "dpkg -i /tmp/cos-upgrade_2013.09.30_i386.deb && cos-upgrade"
 chroot squashfs-root /bin/bash -c "bash /tmp/deb-replace.sh"
-chroot squashfs-root /bin/bash -c "umount /proc/"
 
 mintwelcome_mo="squashfs-root/usr/share/linuxmint/locale/zh_CN/LC_MESSAGES/mintwelcome.mo"
 cp ${MATERIALDIR}/packages/mintwelcome.mo ${WORKDIR}/${mintwelcome_mo}

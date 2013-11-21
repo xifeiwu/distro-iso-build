@@ -30,8 +30,6 @@ fi
 
 sudo cp -r ${KERNELSOURCEDIR} $CHROOTDIR
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd sources && sh kernel-build.sh"
-sudo mount -t proc -o bind /proc ${CHROOTDIR}/proc
-sudo mount -t devtmpfs -o bind /dev ${CHROOTDIR}/dev
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd sources/kernel-build && dpkg -i linux-image*.deb"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd sources/kernel-build && dpkg -i linux-headers*.deb"
@@ -41,8 +39,6 @@ sudo chroot ${CHROOTDIR} /bin/bash -c "update-grub && rm -rf sources"
 sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get install -y unionfs-fuse"
 sudo chroot ${CHROOTDIR} /bin/bash -c "mkinitramfs -o /initrd.gz 3.8.0-cos-v0.5-i686"
 
-sudo umount ${CHROOTDIR}/proc
-sudo umount ${CHROOTDIR}/dev
 
 sudo cp ${CHROOTDIR}/initrd.gz ${CHROOTDIR}/boot/initrd.lz
 sudo cp ${CHROOTDIR}/initrd.gz ${MKISOOUTDIR}/mymint/casper/initrd.lz

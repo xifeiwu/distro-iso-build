@@ -56,17 +56,6 @@ function resource()
     source $T/build/envsetup.sh
 }
 
-function cmaster()
-{
-    T=$(gettop)
-    if [ ! "$T" ]; then
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return
-    fi
-    
-    repo forall -c git checkout -b master remotes/m/master
-}
-
 function setpaths()
 {
     T=$(gettop)
@@ -135,6 +124,27 @@ function gettop
     fi
 }
 
+function croot()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        cd $(gettop)
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function cmaster()
+{
+    T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return
+    fi
+    
+    repo forall -c git checkout -b master remotes/m/master
+}
+
 function checktools()
 {
     dpkg -s squashfs-tools > /dev/null
@@ -152,6 +162,57 @@ function checktools()
         return 1
     fi
     return 0
+}
+
+function check()
+{
+    checktools
+    checkdepall
+}
+
+function checkdep()
+{
+    tmpstr=`dpkg-checkbuilddeps 2>&1`
+    tmpres=$?
+    echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+    return $tmpres
+}
+
+function checkdepall()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        SRCDesktopPATH=$T/desktop
+        SRCCOSPATH=$T/cos
+        CURDIR=$PWD
+        echo check build dependencies and conflicts of all deb package
+        echo
+        for dir in `ls $SRCDesktopPATH | sort`
+        do
+            if [ -d $SRCDesktopPATH/$dir ] ; then
+                cd $SRCDesktopPATH/$dir
+                echo checking $dir
+                tmpstr=`dpkg-checkbuilddeps 2>&1`
+                tmpres=$?
+                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+            fi
+        done 
+        for dir in `ls $SRCCOSPATH | sort`
+        do
+            if [ -d $SRCCOSPATH/$dir ] ; then
+                cd $SRCCOSPATH/$dir
+                echo checking $dir
+                tmpstr=`dpkg-checkbuilddeps 2>&1`
+                tmpres=$?
+                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+            fi
+        done 
+        echo
+        echo Finish checking building deb packages
+        cd $CURDIR
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
 }
 
 function uniso()
@@ -173,6 +234,160 @@ function mkiso()
     T=$(gettop)
     if [ "$T" ]; then
         sudo sh $T/build/mkiso.sh $OUT/out $OUT
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function m()
+{
+    T=$(gettop)
+    mm -tc $*
+}
+
+function mm()
+{
+    T=$(gettop)
+    ISINSTALL=0
+    if [ $# -gt 0 ] ; then
+        if [ "$1" == "--install" ] ; then
+            shift
+            ISINSTALL=1
+        fi
+    fi
+    if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
+        checktools || return 1
+        if [ ! -f debian/rules ] ; then
+            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
+            return 1
+        fi
+        if ls ../*.* >/dev/null 2>&1 ; then
+            echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
+            echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
+            return 1
+        fi
+        dpkg-checkbuilddeps
+        if [ ! $? == 0 ] ; then
+            return 1
+        fi
+        dpkg-buildpackage -d $*
+        echo
+        echo The list of deb files generated.
+        ls -1 ../*.deb
+        echo
+        HASDEBFILE=0
+        for file in `ls ../*.deb | sort`
+        do
+            if [ -f $file ] ; then
+                HASDEBFILE=1
+                DEBNAME=`dpkg -f $file Package`
+                addrepository $file
+                if [ $ISINSTALL == 1 ] ; then
+                    installdeb $DEBNAME
+                fi 
+            fi
+        done 
+        if [ $HASDEBFILE == 0 ] ; then
+            echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
+            return 1
+        fi
+        echo Finished. These deb files above has been added into repository.
+        cmove
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+}
+
+function mi()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        mm --install -tc
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function mall()
+{
+    T=$(gettop)
+    LASTSTEP=0
+    if [ -e $BUILDALLSTEP ] ; then
+        LASTSTEP=`cat $BUILDALLSTEP`
+    fi
+    for i in "$@"
+    do
+        if [ "$i" == "--online" ] ; then
+            ISONLINE=1
+        else
+            if [ "$i" -ge 0 ] 2>/dev/null ; then
+                LASTSTEP=$i
+            fi
+        fi
+    done
+    if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
+        echo Building all deb packages
+
+        SRCDesktopPATH=$T/desktop
+        SRCCOSPATH=$T/cos
+        CURDIR=$PWD
+        if [ $LASTSTEP == 0 ] ; then
+            checkdepall || grep dpkg-checkbuilddeps
+            if [ $? -ne 0 ] ; then
+                echo Error: some dependencis has not been met.
+                return 1
+            fi
+        fi
+        echo
+        step=0
+        for dir in `ls $SRCDesktopPATH | sort`
+        do
+            if [ -d $SRCDesktopPATH/$dir ] ; then
+                ((step++))
+                if [ $step -lt $LASTSTEP ] ; then
+                    continue
+                fi
+                echo $step >$BUILDALLSTEP
+                cd $SRCDesktopPATH/$dir
+                echo $step building $dir
+                mm -tc
+                if [ $? -ne 0 ] ; then
+                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
+                    return 1
+                fi
+            fi
+        done 
+        for dir in `ls $SRCCOSPATH | sort`
+        do
+            if [ -d $SRCCOSPATH/$dir ] ; then
+                ((step++))
+                if [ $step -lt $LASTSTEP ] ; then
+                    continue
+                fi
+                echo $step >$BUILDALLSTEP
+                cd $SRCCOSPATH/$dir
+                echo $step building $dir
+                mm -tc
+                if [ $? -ne 0 ] ; then
+                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
+                    return 1
+                fi
+            fi
+        done 
+        ((step++))
+        echo $step >$BUILDALLSTEP
+        echo
+        echo Finish building all deb packages
+        echo  
+        echo If you want to build all deb packages again, you can enter mall 0
+        cd $CURDIR
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -292,6 +507,7 @@ function mcos()
             else
                 uninstallalldeb || return
                 installdeb "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
+                mountdir
             fi
             echo 16 >$BUILDCOSSTEP
         fi
@@ -335,227 +551,15 @@ function mcos()
     fi
 }
 
-function m()
+function getprepkg ()
 {
     T=$(gettop)
-    mm -tc $*
-}
-
-function mm()
-{
-    T=$(gettop)
-    ISINSTALL=0
-    if [ $# -gt 0 ] ; then
-        if [ "$1" == "--install" ] ; then
-            shift
-            ISINSTALL=1
-        fi
-    fi
     if [ "$T" ]; then
         if [ ! -e $OUT ] ; then
             mkdir $OUT
         fi
-        checktools || return 1
-        if [ ! -f debian/rules ] ; then
-            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
-            return 1
-        fi
-        if ls ../*.* >/dev/null 2>&1 ; then
-            echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
-            echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
-            return 1
-        fi
-        dpkg-checkbuilddeps
-        if [ ! $? == 0 ] ; then
-            return 1
-        fi
-        dpkg-buildpackage -d $*
-        echo
-        echo The list of deb files generated.
-        ls -1 ../*.deb
-        echo
-        HASDEBFILE=0
-        for file in `ls ../*.deb | sort`
-        do
-            if [ -f $file ] ; then
-                HASDEBFILE=1
-                DEBNAME=`dpkg -f $file Package`
-                addrepository $file
-                if [ $ISINSTALL == 1 ] ; then
-                    mountdir
-                    installdeb $DEBNAME
-                    umountdir
-                fi 
-            fi
-        done 
-        if [ $HASDEBFILE == 0 ] ; then
-            echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
-            return 1
-        fi
-        echo Finished. These deb files above has been added into repository.
-        cmove
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return 1
-    fi
-}
-
-function mi()
-{
-    T=$(gettop)
-    if [ "$T" ]; then
-        mm --install -tc
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
-}
-
-function check()
-{
-    checktools
-    checkdepall
-}
-
-function checkdep()
-{
-    tmpstr=`dpkg-checkbuilddeps 2>&1`
-    tmpres=$?
-    echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
-    return $tmpres
-}
-
-function checkdepall()
-{
-    T=$(gettop)
-    if [ "$T" ]; then
-        SRCDesktopPATH=$T/desktop
-        SRCCOSPATH=$T/cos
-        CURDIR=$PWD
-        echo check build dependencies and conflicts of all deb package
-        echo
-        for dir in `ls $SRCDesktopPATH | sort`
-        do
-            if [ -d $SRCDesktopPATH/$dir ] ; then
-                cd $SRCDesktopPATH/$dir
-                echo checking $dir
-                tmpstr=`dpkg-checkbuilddeps 2>&1`
-                tmpres=$?
-                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
-            fi
-        done 
-        for dir in `ls $SRCCOSPATH | sort`
-        do
-            if [ -d $SRCCOSPATH/$dir ] ; then
-                cd $SRCCOSPATH/$dir
-                echo checking $dir
-                tmpstr=`dpkg-checkbuilddeps 2>&1`
-                tmpres=$?
-                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
-            fi
-        done 
-        echo
-        echo Finish checking building deb packages
-        cd $CURDIR
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
-}
-
-function mall()
-{
-    T=$(gettop)
-    LASTSTEP=0
-    if [ -e $BUILDALLSTEP ] ; then
-        LASTSTEP=`cat $BUILDALLSTEP`
-    fi
-    for i in "$@"
-    do
-        if [ "$i" == "--online" ] ; then
-            ISONLINE=1
-        else
-            if [ "$i" -ge 0 ] 2>/dev/null ; then
-                LASTSTEP=$i
-            fi
-        fi
-    done
-    if [ "$T" ]; then
-        if [ ! -e $OUT ] ; then
-            mkdir $OUT
-        fi
-        echo Building all deb packages
-
-        SRCDesktopPATH=$T/desktop
-        SRCCOSPATH=$T/cos
-        CURDIR=$PWD
-        if [ $LASTSTEP == 0 ] ; then
-            checkdepall || grep dpkg-checkbuilddeps
-            if [ $? -ne 0 ] ; then
-                echo Error: some dependencis has not been met.
-                return 1
-            fi
-        fi
-        echo
-        step=0
-        for dir in `ls $SRCDesktopPATH | sort`
-        do
-            if [ -d $SRCDesktopPATH/$dir ] ; then
-                ((step++))
-                if [ $step -lt $LASTSTEP ] ; then
-                    continue
-                fi
-                echo $step >$BUILDALLSTEP
-                cd $SRCDesktopPATH/$dir
-                echo $step building $dir
-                mm -tc
-                if [ $? -ne 0 ] ; then
-                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
-                    return 1
-                fi
-            fi
-        done 
-        for dir in `ls $SRCCOSPATH | sort`
-        do
-            if [ -d $SRCCOSPATH/$dir ] ; then
-                ((step++))
-                if [ $step -lt $LASTSTEP ] ; then
-                    continue
-                fi
-                echo $step >$BUILDALLSTEP
-                cd $SRCCOSPATH/$dir
-                echo $step building $dir
-                mm -tc
-                if [ $? -ne 0 ] ; then
-                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
-                    return 1
-                fi
-            fi
-        done 
-        ((step++))
-        echo $step >$BUILDALLSTEP
-        echo
-        echo Finish building all deb packages
-        echo  
-        echo If you want to build all deb packages again, you can enter mall 0
-        cd $CURDIR
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
-}
-
-function cmove()
-{
-    T=$(gettop)
-    if [ "$T" ]; then
-        if [ ! -f debian/rules ] ; then
-            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
-            return 1
-        fi
-        for file in `ls ../ | sort`
-        do
-            if [ -f ../$file ] ; then
-                mv ../$file $OUT/$APPOUT
-            fi
-        done 
+        cd $(gettop)
+        sh $T/build/core/getprepackage.sh $OUT
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -581,6 +585,31 @@ function umountdir()
     sudo umount $OUT/out/squashfs-root/dev/pts
     sudo umount $OUT/out/squashfs-root/dev
     sudo umount $OUT/out/squashfs-root/proc
+}
+
+function uninstallalldeb()
+{
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
+}
+
+function cmove()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -f debian/rules ] ; then
+            echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
+            return 1
+        fi
+        for file in `ls ../ | sort`
+        do
+            if [ -f ../$file ] ; then
+                mv ../$file $OUT/$APPOUT
+            fi
+        done 
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
 }
 
 function addrepository()
@@ -625,12 +654,6 @@ Components: main" > $REPOSITORY/debian/conf/distributions
     
 }
 
-function uninstallalldeb()
-{
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
-}
-
 function installdeb()
 {
     echo These deb package $@ will be installed in $OUT/out/squashfs-root
@@ -644,6 +667,7 @@ function installdeb()
         sudo mkdir $OUT/out/squashfs-root/repository
     fi
     sudo mount --bind $REPOSITORY $OUT/out/squashfs-root/repository
+    mountdir
 
     echo "deb file:///repository/debian iceblue main" > /tmp/cos-dev-repository.list
     sudo mv /tmp/cos-dev-repository.list $OUT/out/squashfs-root/etc/apt/sources.list.d/
@@ -651,25 +675,14 @@ function installdeb()
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $@ "
     sudo rm $OUT/out/squashfs-root/etc/apt/sources.list.d/cos-dev-repository.list
 
+    umountdir
     sudo umount $OUT/out/squashfs-root/repository
     sudo rmdir $OUT/out/squashfs-root/repository
 }
 
 function installalldeb()
 {
-    mountdir
     installdeb "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
-    umountdir
-}
-
-function croot()
-{
-    T=$(gettop)
-    if [ "$T" ]; then
-        cd $(gettop)
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
 }
 
 function pid()
@@ -785,21 +798,6 @@ function godir () {
         pathname=${lines[0]}
     fi
     cd $T/$pathname
-}
-
-function getprepkg ()
-{
-    T=$(gettop)
-    if [ "$T" ]; then
-        if [ ! -e $OUT ] ; then
-            mkdir $OUT
-        fi
-        cd $(gettop)
-        sh $T/build/core/getprepackage.sh $OUT
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
-    
 }
 
 if [ "x$SHELL" != "x/bin/bash" ]; then

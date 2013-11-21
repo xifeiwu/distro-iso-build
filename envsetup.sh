@@ -370,18 +370,24 @@ function mm()
         echo The list of deb files generated.
         ls -1 ../*.deb
         echo
+        HASDEBFILE=0
         for file in `ls ../*.deb | sort`
         do
-            DEBNAME=`dpkg -f $file Package`
             if [ -f $file ] ; then
+                HASDEBFILE=1
+                DEBNAME=`dpkg -f $file Package`
                 addrepository $file
+                if [ $ISINSTALL == 1 ] ; then
+                    mountdir
+                    installdeb $DEBNAME
+                    umountdir
+                fi 
             fi
-            if [ $ISINSTALL == 1 ] ; then
-                mountdir
-                installdeb $DEBNAME
-                umountdir
-            fi 
         done 
+        if [ $HASDEBFILE == 0 ] ; then
+            echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
+            return 1
+        fi
         echo Finished. These deb files above has been added into repository.
         cmove
     else
@@ -428,7 +434,9 @@ function checkdepall()
             if [ -d $SRCDesktopPATH/$dir ] ; then
                 cd $SRCDesktopPATH/$dir
                 echo checking $dir
-                dpkg-checkbuilddeps 2>&1 | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+                tmpstr=`dpkg-checkbuilddeps 2>&1`
+                tmpres=$?
+                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
             fi
         done 
         for dir in `ls $SRCCOSPATH | sort`
@@ -436,7 +444,9 @@ function checkdepall()
             if [ -d $SRCCOSPATH/$dir ] ; then
                 cd $SRCCOSPATH/$dir
                 echo checking $dir
-                dpkg-checkbuilddeps 2>&1 | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+                tmpstr=`dpkg-checkbuilddeps 2>&1`
+                tmpres=$?
+                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
             fi
         done 
         echo
@@ -473,12 +483,12 @@ function mall()
         SRCDesktopPATH=$T/desktop
         SRCCOSPATH=$T/cos
         CURDIR=$PWD
-        if [ ! -e $OUT/hasmakeallonce ] ; then
+        if [ $LASTSTEP == 0 ] ; then
             checkdepall || grep dpkg-checkbuilddeps
-        fi
-        if [ $? -ne 0 ] ; then
-            echo Error: some dependencis has not been met.
-            return 1
+            if [ $? -ne 0 ] ; then
+                echo Error: some dependencis has not been met.
+                return 1
+            fi
         fi
         echo
         step=0
@@ -491,7 +501,8 @@ function mall()
                 fi
                 echo $step >$BUILDALLSTEP
                 cd $SRCDesktopPATH/$dir
-                m
+                echo $step building $dir
+                mm -tc
                 if [ $? -ne 0 ] ; then
                     echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
                     return 1
@@ -507,7 +518,8 @@ function mall()
                 fi
                 echo $step >$BUILDALLSTEP
                 cd $SRCCOSPATH/$dir
-                m
+                echo $step building $dir
+                mm -tc
                 if [ $? -ne 0 ] ; then
                     echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
                     return 1
@@ -516,9 +528,6 @@ function mall()
         done 
         ((step++))
         echo $step >$BUILDALLSTEP
-        if [ ! -e $OUT/hasmakeallonce ] ; then
-            echo TRUE > $OUT/hasmakeallonce
-        fi
         echo
         echo Finish building all deb packages
         echo  
@@ -589,6 +598,27 @@ Components: main" > $REPOSITORY/debian/conf/distributions
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
+}
+
+function listappinrep()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -e $REPOSITORY/debian/conf ] ; then
+            mkdir -p $REPOSITORY/debian/conf
+        fi
+        if [ ! -f $REPOSITORY/debian/conf/distributions ] ; then
+            echo "Origin: Debian
+Label: Debian
+Codename: iceblue
+Architectures: i386
+Components: main" > $REPOSITORY/debian/conf/distributions
+        fi
+        reprepro -b $REPOSITORY/debian list iceblue
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+    
 }
 
 function uninstallalldeb()

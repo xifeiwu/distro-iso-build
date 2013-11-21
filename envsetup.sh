@@ -140,6 +140,10 @@ function checktools()
     dpkg -s squashfs-tools > /dev/null
     if [ ! $? == 0 ] ; then
         echo ERROR: squashfs-tools has not been installed.
+        dpkg -s reprepro > /dev/null
+        if [ ! $? == 0 ] ; then
+            echo ERROR: reprepro has not been installed.
+        fi
         return 1
     fi
     dpkg -s reprepro > /dev/null

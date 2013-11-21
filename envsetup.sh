@@ -16,6 +16,7 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - psgrep:    Greps on all local py js files.
 - jgrep:     Greps on all local Java files.
 - godir:     Go to the directory containing a file.
+- hcos:      show more help.
 
 Look at the source to view more functions. The complete list is:
 EOF
@@ -30,7 +31,13 @@ EOF
 
 function hcos()
 {
-    hh
+    T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return
+    fi
+
+    cat $T/docs/repo_help.txt | more
 }
 
 function repo()

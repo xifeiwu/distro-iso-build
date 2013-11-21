@@ -1,20 +1,21 @@
 function hh() {
 cat <<EOF
 Invoke ". build/envsetup.sh" from your shell to add the following functions to your environment:
-- croot:   Changes directory to the top of the tree.
-- cmaster: repo forall -c git checkout -b master remotes/m/master
-- check:   check the tools and dependencies to should be installed.
-- m:       Build the package and clean the source dir in the current directory.
-- mm:      Build the package and not clean the source dir in the current directory.
-- mi:       Build and install the package and clean the source dir in the current directory.
-- mcos:    Build all and generate iso.
-- mall:    Build all packages in cos and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
-- uniso:   Export iso file to workout/out dir.
-- mkiso:   Generate iso file into workout dir from workout/out file.
-- cgrep:   Greps on all local C/C++ files.
-- psgrep:  Greps on all local py js files.
-- jgrep:   Greps on all local Java files.
-- godir:   Go to the directory containing a file.
+- croot:     Changes directory to the top of the tree.
+- cmaster:   repo forall -c git checkout -b master remotes/m/master
+- check:     Check the tools and dependencies to should be installed.
+- getprepkg: Get raw iso and some deb packages such as wps.
+- m:         Build the package and clean the source dir in the current directory.
+- mm:        Build the package and not clean the source dir in the current directory.
+- mi:        Build and install the package and clean the source dir in the current directory.
+- mcos:      Build all and generate iso.
+- mall:      Build all packages in cos and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
+- uniso:     Export iso file to workout/out dir.
+- mkiso:     Generate iso file into workout dir from workout/out file.
+- cgrep:     Greps on all local C/C++ files.
+- psgrep:    Greps on all local py js files.
+- jgrep:     Greps on all local Java files.
+- godir:     Go to the directory containing a file.
 
 Look at the source to view more functions. The complete list is:
 EOF
@@ -369,7 +370,9 @@ function mm()
                 addrepository $file
             fi
             if [ $ISINSTALL == 1 ] ; then
+                mountdir
                 installdeb $DEBNAME
+                umountdir
             fi 
         done 
         echo Finished. These deb files above has been added into repository.
@@ -594,7 +597,6 @@ function installdeb()
         echo Error: no debname param
         return 1
     fi
-    mountdir
     if [ -e $OUT/out/squashfs-root/repository ] ; then
         sudo umount $OUT/out/squashfs-root/repository
     else
@@ -610,7 +612,6 @@ function installdeb()
 
     sudo umount $OUT/out/squashfs-root/repository
     sudo rmdir $OUT/out/squashfs-root/repository
-    umountdir
 }
 
 function installalldeb()

@@ -266,6 +266,7 @@ function mm()
         fi
         if ls ../*.* >/dev/null 2>&1 ; then
             echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
+            echo
             echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
             return 1
         fi
@@ -279,22 +280,24 @@ function mm()
         ls -1 ../*.deb
         echo
         HASDEBFILE=0
+        DEBTOINSTALL=""
         for file in `ls ../*.deb | sort`
         do
             if [ -f $file ] ; then
                 HASDEBFILE=1
                 DEBNAME=`dpkg -f $file Package`
+                DEBTOINSTALL=`echo $DEBTOINSTALL $DEBNAME`
                 addrepository $file
-                if [ $ISINSTALL == 1 ] ; then
-                    installdeb $DEBNAME
-                fi 
             fi
         done 
         if [ $HASDEBFILE == 0 ] ; then
             echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
             return 1
         fi
-        echo Finished. These deb files above has been added into repository.
+        echo Info: These deb files above has been added into repository.
+        if [ $ISINSTALL == 1 ] ; then
+           installdeb "$DEBTOINSTALL"
+        fi 
         cmove
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
@@ -321,12 +324,8 @@ function mall()
     fi
     for i in "$@"
     do
-        if [ "$i" == "--online" ] ; then
-            ISONLINE=1
-        else
-            if [ "$i" -ge 0 ] 2>/dev/null ; then
-                LASTSTEP=$i
-            fi
+        if [ "$i" -ge 0 ] 2>/dev/null ; then
+            LASTSTEP=$i
         fi
     done
     if [ "$T" ]; then
@@ -502,13 +501,13 @@ function mcos()
 
         if [ $BUITSTEP -lt 16 ] ; then
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
+                uninstallmintdeb || return
             if [ $ISONLINE == 1 ] ; then
-                sudo sh $T/build/release/packages.sh $T/build/release/ $OUTPATH || return
+                installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
             else
-                uninstallalldeb || return
-                installdeb "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
-                mountdir
+                installdeball 
             fi
+                mountdir
             echo 16 >$BUILDCOSSTEP
         fi
 
@@ -587,12 +586,6 @@ function umountdir()
     sudo umount $OUT/out/squashfs-root/proc
 }
 
-function uninstallalldeb()
-{
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
-}
-
 function cmove()
 {
     T=$(gettop)
@@ -654,13 +647,78 @@ Components: main" > $REPOSITORY/debian/conf/distributions
     
 }
 
-function installdeb()
+function uninstallmintdeb()
 {
-    echo These deb package $@ will be installed in $OUT/out/squashfs-root
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
+}
+
+function uninstalldeb()
+{
     if [ $# -lt 1 ] ; then
         echo Error: no debname param
         return 1
     fi
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge $@"
+}
+
+function installdebonline()
+{
+    if [ $# -lt 1 ] ; then
+        echo Error: no debname param
+        return 1
+    fi
+    deblist=""
+    debnum=`echo $@ | wc -w`
+    if [ $debnum -gt 1 ] ; then
+        for name in $@
+        do
+            while read line
+            do
+                if [ "$name" == "$line" ] ; then
+                    continue 2
+                fi
+            done < $T/build/core/ignorepackage
+            deblist=`echo $deblist $name`
+            echo $deblist
+        done
+    else
+        deblist="$@"
+    fi
+    echo These deb package $deblist will be installed in $OUT/out/squashfs-root
+    mountdir
+
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"'
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean"
+    echo `echo $deblist | wc -w` package\(s\) has been installed.
+
+    umountdir
+}
+
+function installdeb()
+{
+    if [ $# -lt 1 ] ; then
+        echo Error: no debname param
+        return 1
+    fi
+    deblist=""
+    debnum=`echo $@ | wc -w`
+    if [ $debnum -gt 1 ] ; then
+        for name in $@
+        do
+            while read line
+            do
+                if [ "$name" == "$line" ] ; then
+                    continue 2
+                fi
+            done < $T/build/core/ignorepackage
+            deblist=`echo $deblist $name`
+        done
+    else
+        deblist="$@"
+    fi
+    echo These deb package $deblist will be installed in $OUT/out/squashfs-root
     if [ -e $OUT/out/squashfs-root/repository ] ; then
         sudo umount $OUT/out/squashfs-root/repository
     else
@@ -672,7 +730,10 @@ function installdeb()
     echo "deb file:///repository/debian iceblue main" > /tmp/cos-dev-repository.list
     sudo mv /tmp/cos-dev-repository.list $OUT/out/squashfs-root/etc/apt/sources.list.d/
     sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-dev-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"'
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $@ "
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean"
+    echo `echo $deblist | wc -w` package\(s\) has been installed.
+
     sudo rm $OUT/out/squashfs-root/etc/apt/sources.list.d/cos-dev-repository.list
 
     umountdir
@@ -680,9 +741,49 @@ function installdeb()
     sudo rmdir $OUT/out/squashfs-root/repository
 }
 
-function installalldeb()
+function installdeball()
 {
-    installdeb "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
+    ISONLINE=0
+    for i in "$@"
+    do
+        if [ "$i" == "--online" ] ; then
+            ISONLINE=1
+        fi
+    done
+    deblist=""
+    for line in `listappinrep | cut -f 2 -d ' ' | sort`
+    do
+       deblist=`echo $deblist $line` 
+    done
+    if [ $ISONLINE -eq 0 ] ; then
+        installdeb $deblist
+    else
+        installdebonline $deblist
+    fi
+}
+
+function runiso()
+{
+    echo
+    i=0
+    for file in `ls $OUT/ | grep iso | sort`
+    do
+        echo -    $i : $file
+        ((i++))
+    done 
+    echo You can choose one iso as above to run by kvm.
+    read -p "Enter number:" no
+    i=0
+    for file in `ls $OUT/ | grep iso | sort`
+    do
+        if [ $i == $no ] ; then
+            echo Tips: After kvm running, you can press any key to continue. 
+            echo command: kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d
+            kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d &
+            break
+        fi
+        ((i++))
+    done 
 }
 
 function pid()

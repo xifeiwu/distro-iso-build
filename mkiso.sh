@@ -2,7 +2,7 @@
 set -e
 
 OUTPATH=$PWD/mkiso_out
-ISONAME="mymint-1.0-i386-`date +%Y%m%d%H%M`.iso"
+ISONAME="mycos-i386-`date +%Y%m%d%H%M`.iso"
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then

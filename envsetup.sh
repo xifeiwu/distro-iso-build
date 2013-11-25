@@ -899,7 +899,7 @@ function runiso()
     i=0
     for file in `ls $OUT/ | grep iso | sort`
     do
-        if [ $i == $no ] ; then
+        if [ "$i" == "$no" ] ; then
             echo Tips: After kvm running, you can press any key to continue. 
             echo command: kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d
             kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d &

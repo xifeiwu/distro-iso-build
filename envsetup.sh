@@ -5,6 +5,7 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - cmaster:   repo forall -c git checkout -b master remotes/m/master
 - check:     Check the tools and dependencies to should be installed.
 - getprepkg: Get raw iso and some deb packages such as wps.
+- cclean:    Clean the workout dir excepte raw mint.iso and preapp dir.
 - m:         Build the package and clean the source dir in the current directory.
 - mm:        Build the package and not clean the source dir in the current directory.
 - mi:        Build and install the package and clean the source dir in the current directory.
@@ -65,10 +66,10 @@ function setpaths()
     fi
 
     export OUT=$T/workout
-    export APPOUT=appout
+    export APPOUT=debsaved
     export REPOSITORY=$OUT/repository
-    export BUILDCOSSTEP=$OUT/buildcosstep
-    export BUILDALLSTEP=$OUT/buildallstep
+    export BUILDCOSSTEP=$OUT/out/buildcosstep
+    export BUILDALLSTEP=$REPOSITORY/buildallstep
     export ISOPATH=$OUT/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso
 }
 
@@ -131,6 +132,7 @@ function croot()
         cd $(gettop)
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -139,7 +141,7 @@ function cmaster()
     T=$(gettop)
     if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return
+        return 1
     fi
     
     repo forall -c git checkout -b master remotes/m/master
@@ -191,7 +193,7 @@ function checkdepall()
         do
             if [ -d $SRCDesktopPATH/$dir ] ; then
                 cd $SRCDesktopPATH/$dir
-                echo checking $dir
+                echo checking dependencies of $dir
                 tmpstr=`dpkg-checkbuilddeps 2>&1`
                 tmpres=$?
                 echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
@@ -212,6 +214,7 @@ function checkdepall()
         cd $CURDIR
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -226,6 +229,7 @@ function uniso()
         sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -236,18 +240,27 @@ function mkiso()
         sudo sh $T/build/mkiso.sh $OUT/out $OUT
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
 function m()
 {
     T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     mm -tc $*
 }
 
 function mm()
 {
     T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     ISINSTALL=0
     if [ $# -gt 0 ] ; then
         if [ "$1" == "--install" ] ; then
@@ -312,12 +325,17 @@ function mi()
         mm --install -tc
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
 function mall()
 {
     T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     LASTSTEP=0
     if [ -e $BUILDALLSTEP ] ; then
         LASTSTEP=`cat $BUILDALLSTEP`
@@ -329,8 +347,8 @@ function mall()
         fi
     done
     if [ "$T" ]; then
-        if [ ! -e $OUT ] ; then
-            mkdir $OUT
+        if [ ! -e $REPOSITORY ] ; then
+            mkdir -p $REPOSITORY
         fi
         echo Building all deb packages
 
@@ -414,92 +432,93 @@ function mcos()
 
     T=$(gettop)
     if [ "$T" ]; then
-        if [ ! -e $OUT ] ; then
-            mkdir $OUT
-        fi
-        echo Building COS Desktop ...
-        if [ $BUITSTEP -lt 1 ] ; then
-            getprepkg || return
-            echo 1 >$BUILDCOSSTEP
-        fi
-        if [ $BUITSTEP -lt 2 ] ; then
-            checktools || return
-            mall || return
-            echo 2 >$BUILDCOSSTEP
-        fi
-        if [ $BUITSTEP -lt 3 ] ; then
-            uniso || return
-            echo 3 >$BUILDCOSSTEP
-        fi
-
         #Install zh_CN deb and Input Method deb.
         OUTPATH=$OUT/out
         APPPATH=$OUT/preapp
 
+        if [ ! -e $OUT/out ] ; then
+            mkdir -p $OUT/out
+        fi
+        echo Building COS Desktop ...
+        if [ $BUITSTEP -le 1 ] ; then
+            echo 1 >$BUILDCOSSTEP
+            getprepkg || return
+        fi
+        if [ $BUITSTEP -le 2 ] ; then
+            echo 2 >$BUILDCOSSTEP
+            checktools || return
+            mall || return
+        fi
+        if [ $BUITSTEP -le 3 ] ; then
+            echo 3 >$BUILDCOSSTEP
+            uniso || return
+        fi
+
         mountdir
 
-        if [ $BUITSTEP -lt 4 ] ; then
-            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 4 ] ; then
             echo 4 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
         fi
 
         #Install popular software
-        if [ $BUITSTEP -lt 5 ] ; then
-            sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 5 ] ; then
             echo 5 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -lt 6 ] ; then
-            sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 6 ] ; then
             echo 6 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -lt 7 ] ; then
-            sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 7 ] ; then
             echo 7 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -lt 8 ] ; then
-            sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 8 ] ; then
             echo 8 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
         fi
 
         #Install ssh and close root user with ssh authority.
-        if [ $BUITSTEP -lt 9 ] ; then
-            sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 9 ] ; then
             echo 9 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
         fi
 
         #Install Self software
-        if [ $BUITSTEP -lt 10 ] ; then
-            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 10 ] ; then
             echo 10 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -lt 11 ] ; then
-            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 11 ] ; then
             echo 11 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
         fi
 
         #Change iso files
-        if [ $BUITSTEP -lt 12 ] ; then
-            sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
+        if [ $BUITSTEP -le 12 ] ; then
             echo 12 >$BUILDCOSSTEP
+            sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -lt 13 ] ; then
-            sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
+        if [ $BUITSTEP -le 13 ] ; then
             echo 13 >$BUILDCOSSTEP
+            sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
         fi
 
         #Change some zh_CN LC_MESSAGES
-        if [ $BUITSTEP -lt 14 ] ; then
-            sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return
+        if [ $BUITSTEP -le 14 ] ; then
             echo 14 >$BUILDCOSSTEP
+            sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return
         fi
 
         #Change system name in some where. This shell file also will install some software in cos source list.
-        if [ $BUITSTEP -lt 15 ] ; then
-            sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return
+        if [ $BUITSTEP -le 15 ] ; then
             echo 15 >$BUILDCOSSTEP
+            sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return
         fi
 
-        if [ $BUITSTEP -lt 16 ] ; then
+        if [ $BUITSTEP -le 16 ] ; then
+            echo 16 >$BUILDCOSSTEP
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
                 uninstallmintdeb || return
             if [ $ISONLINE == 1 ] ; then
@@ -508,37 +527,36 @@ function mcos()
                 installdeball 
             fi
                 mountdir
-            echo 16 >$BUILDCOSSTEP
         fi
 
         #Change some icon\theme\applications name and so on.
-        if [ $BUITSTEP -lt 17 ] ; then
-            sudo sh $T/build/release/mktheme.sh $OUTPATH || return
+        if [ $BUITSTEP -le 17 ] ; then
             echo 17 >$BUILDCOSSTEP
+            sudo sh $T/build/release/mktheme.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -lt 18 ] ; then
-            sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return
+        if [ $BUITSTEP -le 18 ] ; then
             echo 18 >$BUILDCOSSTEP
+            sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -lt 19 ] ; then
-            sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
+        if [ $BUITSTEP -le 19 ] ; then
             echo 19 >$BUILDCOSSTEP
+            sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
         fi
         #fix a bug of wps when first opened.
-        if [ $BUITSTEP -lt 20 ] ; then
-            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
+        if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDCOSSTEP
+            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
         fi
 
         #Install cos boot splash
-        if [ $BUITSTEP -lt 21 ] ; then
-            sudo sh $T/build/release/installcossplash.sh $OUTPATH $APPPATH || return
-            echo 21 >$BUILDCOSSTEP
-        fi
+        #if [ $BUITSTEP -le 21 ] ; then
+        #    sudo sh $T/build/release/installcossplash.sh $OUTPATH $APPPATH || return
+        #    echo 21 >$BUILDCOSSTEP
+        #fi
 
         umountdir
 
-        if [ $BUITSTEP -lt 22 ] ; then
+        if [ $BUITSTEP -le 21 ] ; then
             mkiso || return
             echo 100 >$BUILDCOSSTEP
         fi
@@ -561,6 +579,7 @@ function getprepkg ()
         sh $T/build/core/getprepackage.sh $OUT
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -594,6 +613,9 @@ function cmove()
             echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
             return 1
         fi
+        if [ ! -e $OUT/$APPOUT/ ] ; then
+            mkdir $OUT/$APPOUT
+        fi
         for file in `ls ../ | sort`
         do
             if [ -f ../$file ] ; then
@@ -602,6 +624,46 @@ function cmove()
         done 
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+}
+
+function cclean()
+{
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+    echo Warning: These dirs or files in workout/ follow will be remove:
+    echo $OUT/out
+    echo $REPOSITORY
+    echo $OUT/$APPOUT
+    read -p "Are you sure to remove these above dirs or files  Y/N:" answer
+    if [[ "$answer" == "Y" || "$answer" == "y" ]] ; then
+        umountdir
+        if [ -e $OUT/buildallstep ] ; then
+            rm $OUT/buildallstep
+        fi
+        if [ -e $OUT/buildcosstep ] ; then
+            rm $OUT/buildcosstep
+        fi
+        if [  -e $OUT/out ] ; then
+             sudo rm -r $OUT/out
+        fi
+        if [  -e $REPOSITORY ] ; then
+            rm -r $REPOSITORY
+        fi
+        if [  -e $OUT/$APPOUT ] ; then
+            rm -r $OUT/$APPOUT
+        fi 
+        if [  -e $OUT/appout ] ; then
+            rm -r $OUT/appout
+        fi 
+        if [  -e $OUT/appbuilt ] ; then
+            rm -r $OUT/appbuilt
+        fi 
+        echo Finished cleaning workout dir.
     fi
 }
 
@@ -623,6 +685,7 @@ Components: main" > $REPOSITORY/debian/conf/distributions
         reprepro -b $REPOSITORY/debian includedeb iceblue $1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -643,20 +706,40 @@ Components: main" > $REPOSITORY/debian/conf/distributions
         reprepro -b $REPOSITORY/debian list iceblue
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
     
 }
 
 function uninstallmintdeb()
 {
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -e $OUT/out/squashfs-root ] ; then
+            echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+            return 1
+        fi
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
 }
 
 function uninstalldeb()
 {
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     if [ $# -lt 1 ] ; then
         echo Error: no debname param
+        return 1
+    fi
+    if [ ! -e $OUT/out/squashfs-root ] ; then
+        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
         return 1
     fi
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge $@"
@@ -664,8 +747,17 @@ function uninstalldeb()
 
 function installdebonline()
 {
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     if [ $# -lt 1 ] ; then
         echo Error: no debname param
+        return 1
+    fi
+    if [ ! -e $OUT/out/squashfs-root ] ; then
+        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
         return 1
     fi
     deblist=""
@@ -698,8 +790,17 @@ function installdebonline()
 
 function installdeb()
 {
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     if [ $# -lt 1 ] ; then
         echo Error: no debname param
+        return 1
+    fi
+    if [ ! -e $OUT/out/squashfs-root ] ; then
+        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
         return 1
     fi
     deblist=""
@@ -743,6 +844,11 @@ function installdeb()
 
 function installdeball()
 {
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     ISONLINE=0
     for i in "$@"
     do
@@ -764,6 +870,11 @@ function installdeball()
 
 function runiso()
 {
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
     echo
     i=0
     for file in `ls $OUT/ | grep iso | sort`

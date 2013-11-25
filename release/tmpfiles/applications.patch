@@ -1,5 +1,5 @@
-diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
---- applications_old/aptoncd.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/aptoncd.desktop applications/aptoncd.desktop
+--- applications_raw/aptoncd.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/aptoncd.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,12 +0,0 @@
 -[Desktop Entry]
@@ -14,79 +14,78 @@ diff -uN applications_old/aptoncd.desktop applications/aptoncd.desktop
 -StartupNotify=true
 -Categories=System;Settings;
 -X-Ubuntu-Gettext-Domain=aptoncd
-diff -uN applications_old/banshee-audiocd.desktop applications/banshee-audiocd.desktop
---- applications_old/banshee-audiocd.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/banshee-audiocd.desktop	2013-10-23 16:09:32.234757970 +0800
-@@ -3,7 +3,7 @@
- NoDisplay=true
+diff -uN applications_raw/banshee-audiocd.desktop applications/banshee-audiocd.desktop
+--- applications_raw/banshee-audiocd.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/banshee-audiocd.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -4,6 +4,7 @@
  MimeType=x-content/audio-cdda;
  Version=1.0
--Name=Banshee
-+Name=Banshee音乐播放器
+ Name=Banshee
++Name[zh_CN]=Banshee音乐播放器
  GenericName=Media Player
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
-diff -uN applications_old/banshee.desktop applications/banshee.desktop
---- applications_old/banshee.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/banshee.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,7 +1,7 @@
- [Desktop Entry]
+diff -uN applications_raw/banshee.desktop applications/banshee.desktop
+--- applications_raw/banshee.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/banshee.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -2,6 +2,7 @@
  Exec=banshee --redirect-log --play-enqueued %U
  Version=1.0
--Name=Banshee
-+Name=Banshee音乐播放器
+ Name=Banshee
++Name[zh_CN]=Banshee音乐播放器
  GenericName=Media Player
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
-diff -uN applications_old/banshee-media-player.desktop applications/banshee-media-player.desktop
---- applications_old/banshee-media-player.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/banshee-media-player.desktop	2013-10-23 16:09:32.234757970 +0800
-@@ -3,7 +3,7 @@
+diff -uN applications_raw/banshee-media-player.desktop applications/banshee-media-player.desktop
+--- applications_raw/banshee-media-player.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/banshee-media-player.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -3,7 +3,8 @@
  NoDisplay=true
  MimeType=x-content/audio-player;
  Version=1.0
 -Name=Banshee
 +Name=Banshee音乐播放器
++Name[zh_CN]=Banshee音乐播放器
  GenericName=Media Player
  X-GNOME-FullName=Banshee Media Player
  Comment=Play and organize your media collection
-diff -uN applications_old/baobab.desktop applications/baobab.desktop
---- applications_old/baobab.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/baobab.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/baobab.desktop applications/baobab.desktop
+--- applications_raw/baobab.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/baobab.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Disk Usage Analyzer
-+Name=硬盘分析工具
+ Name=Disk Usage Analyzer
++Name[zh_CN]=硬盘分析工具
  Comment=Check folder sizes and available disk space
  TryExec=baobab
  Exec=baobab
-diff -uN applications_old/bluetooth-sendto.desktop applications/bluetooth-sendto.desktop
---- applications_old/bluetooth-sendto.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/bluetooth-sendto.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/bluetooth-sendto.desktop applications/bluetooth-sendto.desktop
+--- applications_raw/bluetooth-sendto.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/bluetooth-sendto.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Bluetooth Transfer
-+Name=蓝牙传输
+ Name=Bluetooth Transfer
++Name[zh_CN]=蓝牙传输
  Comment=Send files via Bluetooth
  Icon=bluetooth
  Exec=bluetooth-sendto
-diff -uN applications_old/bluetooth-wizard.desktop applications/bluetooth-wizard.desktop
---- applications_old/bluetooth-wizard.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/bluetooth-wizard.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/bluetooth-wizard.desktop applications/bluetooth-wizard.desktop
+--- applications_raw/bluetooth-wizard.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/bluetooth-wizard.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Bluetooth Device Setup
-+Name=蓝牙设备安装
+ Name=Bluetooth Device Setup
++Name[zh_CN]=蓝牙设备安装
  Comment=Setup Bluetooth devices
  Icon=bluetooth
  Exec=bluetooth-wizard
-diff -uN applications_old/brasero.desktop applications/brasero.desktop
---- applications_old/brasero.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/brasero.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,8 +1,8 @@
+diff -uN applications_raw/brasero.desktop applications/brasero.desktop
+--- applications_raw/brasero.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/brasero.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,8 +1,9 @@
  [Desktop Entry]
--Name=Brasero
-+Name=Brasero光盘刻录工具
+ Name=Brasero
++Name[zh_CN]=Brasero光盘刻录工具
  GenericName=Disc Burner and Copier
  Comment=Create and copy CDs and DVDs
 -Categories=GTK;GNOME;AudioVideo;DiscBurning;
@@ -94,49 +93,49 @@ diff -uN applications_old/brasero.desktop applications/brasero.desktop
  MimeType=application/x-cd-image;application/x-cdrdao-toc;application/x-cue;application/x-toc;audio/x-scpls;audio/x-ms-asx;audio/x-mp3-playlist;audio/x-mpegurl;application/x-brasero;x-content/audio-cdda;x-content/video-dvd;x-content/video-vcd;x-content/video-svcd;x-content/image-picturecd;
  Exec=brasero %U
  Icon=brasero
-diff -uN applications_old/brasero-nautilus.desktop applications/brasero-nautilus.desktop
---- applications_old/brasero-nautilus.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/brasero-nautilus.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/brasero-nautilus.desktop applications/brasero-nautilus.desktop
+--- applications_raw/brasero-nautilus.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/brasero-nautilus.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=CD/DVD Creator
-+Name=CD/DVD 刻录工具
+ Name=CD/DVD Creator
++Name[zh_CN]=CD/DVD 刻录工具
  Comment=Create CDs and DVDs
  Categories=GNOME;GTK;System;
  TryExec=nautilus
-diff -uN applications_old/caribou.desktop applications/caribou.desktop
---- applications_old/caribou.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/caribou.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/caribou.desktop applications/caribou.desktop
+--- applications_raw/caribou.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/caribou.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Caribou
-+Name=Caribou屏幕键盘
+ Name=Caribou
++Name[zh_CN]=Caribou屏幕键盘
  GenericName=Virtual on-screen keyboard
  Comment=Enter text with a virtual keyboard
  Exec=caribou
-diff -uN applications_old/cinnamon-control-center.desktop applications/cinnamon-control-center.desktop
---- applications_old/cinnamon-control-center.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/cinnamon-control-center.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/cinnamon-control-center.desktop applications/cinnamon-control-center.desktop
+--- applications_raw/cinnamon-control-center.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/cinnamon-control-center.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Cinnamon Control Center
-+Name=Cinnamon控制中心
+ Name=Cinnamon Control Center
++Name[zh_CN]=Cinnamon控制中心
  Icon=preferences-system
  Exec=cinnamon-control-center --overview
  Terminal=false
-diff -uN applications_old/cinnamon-network-panel.desktop applications/cinnamon-network-panel.desktop
---- applications_old/cinnamon-network-panel.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/cinnamon-network-panel.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/cinnamon-network-panel.desktop applications/cinnamon-network-panel.desktop
+--- applications_raw/cinnamon-network-panel.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/cinnamon-network-panel.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Network
-+Name=网络设置
+ Name=Network
++Name[zh_CN]=网络设置
  Comment=Network settings
  Exec=cinnamon-settings network
  Icon=network-workgroup
-diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settings.desktop
---- applications_old/cinnamon-settings.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/cinnamon-settings.desktop	2013-10-23 16:09:32.238757970 +0800
+diff -uN applications_raw/cinnamon-settings.desktop applications/cinnamon-settings.desktop
+--- applications_raw/cinnamon-settings.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/cinnamon-settings.desktop	2013-11-08 11:13:38.800457817 +0800
 @@ -3,7 +3,7 @@
  Icon=preferences-system
  Terminal=false
@@ -146,7 +145,7 @@ diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settin
  StartupNotify=false
  OnlyShowIn=GNOME;
  Keywords=Preferences;Settings;
-@@ -46,10 +46,10 @@
+@@ -46,10 +46,11 @@
  Name[tr]=Sistem Ayarları
  Name[ug]=سىستېما تەڭشىكى
  Name[uk]=Системні параметри
@@ -154,18 +153,18 @@ diff -uN applications_old/cinnamon-settings.desktop applications/cinnamon-settin
 +Name[zh_CN]=系统设置面板
  Name[zh_TW]=系統設定
  
--Comment=Control Center
-+Comment=系统控制中心
+ Comment=Control Center
  Comment[fr]=Centre de Contrôle
++Comment[zh_CN]=系统控制中心
  
  
-diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon-sound-nua-panel.desktop
---- applications_old/cinnamon-sound-nua-panel.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/cinnamon-sound-nua-panel.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,12 +1,12 @@
+diff -uN applications_raw/cinnamon-sound-nua-panel.desktop applications/cinnamon-sound-nua-panel.desktop
+--- applications_raw/cinnamon-sound-nua-panel.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/cinnamon-sound-nua-panel.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,12 +1,13 @@
  [Desktop Entry]
--Name=Sound
-+Name=声音
+ Name=Sound
++Name[zh_CN]=声音
  Comment=Change sound volume and sound events
  Exec=cinnamon-settings sound
  Icon=multimedia-volume-control
@@ -177,8 +176,8 @@ diff -uN applications_old/cinnamon-sound-nua-panel.desktop applications/cinnamon
  OnlyShowIn=GNOME;
  X-Cinnamon-Settings-Panel=sound-nua
  # Translators: those are keywords for the sound control-center panel
-diff -uN applications_old/cinnamon-universal-access-panel.desktop applications/cinnamon-universal-access-panel.desktop
---- applications_old/cinnamon-universal-access-panel.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/cinnamon-universal-access-panel.desktop applications/cinnamon-universal-access-panel.desktop
+--- applications_raw/cinnamon-universal-access-panel.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/cinnamon-universal-access-panel.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,69 +0,0 @@
 -[Desktop Entry]
@@ -250,9 +249,9 @@ diff -uN applications_old/cinnamon-universal-access-panel.desktop applications/c
 -Keywords[zh_TW]=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;鍵盤;滑鼠;無障礙;對比;螢幕閱讀器;文字;字型;大小;相黏鍵;遲緩鍵;彈跳鍵;滑鼠按鍵;
 -X-Ubuntu-Gettext-Domain=cinnamon-control-center-1.0
 -
-diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinnamon-user-accounts-panel.desktop
---- applications_old/cinnamon-user-accounts-panel.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/cinnamon-user-accounts-panel.desktop	2013-10-23 16:09:32.238757970 +0800
+diff -uN applications_raw/cinnamon-user-accounts-panel.desktop applications/cinnamon-user-accounts-panel.desktop
+--- applications_raw/cinnamon-user-accounts-panel.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/cinnamon-user-accounts-panel.desktop	2013-11-08 11:13:38.800457817 +0800
 @@ -6,7 +6,7 @@
  Terminal=false
  Type=Application
@@ -262,31 +261,31 @@ diff -uN applications_old/cinnamon-user-accounts-panel.desktop applications/cinn
  OnlyShowIn=GNOME;
  X-Cinnamon-Settings-Panel=user-accounts
  # Translators: those are keywords for the user accounts control-center panel
-diff -uN applications_old/eog.desktop applications/eog.desktop
---- applications_old/eog.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/eog.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/eog.desktop applications/eog.desktop
+--- applications_raw/eog.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/eog.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Image Viewer
--Comment=Browse and rotate images
-+Name=图片查看器
-+Comment=图片查看
+ Name=Image Viewer
++Name[zh_CN]=图片查看器
+ Comment=Browse and rotate images
++Comment[zh_CN]=图片查看
  TryExec=eog
  Exec=eog %U
  Icon=eog
-diff -uN applications_old/evince.desktop applications/evince.desktop
---- applications_old/evince.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/evince.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/evince.desktop applications/evince.desktop
+--- applications_raw/evince.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/evince.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Document Viewer
--Comment=View multi-page documents
-+Name=PDF阅读器
-+Comment=阅读PDF文档
+ Name=Document Viewer
++Name[zh_CN]=PDF阅读器
+ Comment=View multi-page documents
++Comment[zh_CN]=阅读PDF文档
  TryExec=evince
  Exec=evince %U
  StartupNotify=true
-@@ -12,6 +12,6 @@
+@@ -12,6 +14,6 @@
  X-GNOME-Bugzilla-Product=evince
  X-GNOME-Bugzilla-Component=BugBuddyBugs
  X-GNOME-Bugzilla-Version=3.6.1
@@ -294,8 +293,8 @@ diff -uN applications_old/evince.desktop applications/evince.desktop
 +Categories=GNOME;GTK;Office;Viewer;VectorGraphics;
  MimeType=application/pdf;application/x-bzpdf;application/x-gzpdf;application/x-xzpdf;application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;application/x-dvi;application/x-bzdvi;application/x-gzdvi;image/vnd.djvu;image/tiff;application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/oxps;application/vnd.ms-xpsdocument;
  X-Ubuntu-Gettext-Domain=evince
-diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gtk3.desktop
---- applications_old/fcitx-config-gtk3.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/fcitx-config-gtk3.desktop applications/fcitx-config-gtk3.desktop
+--- applications_raw/fcitx-config-gtk3.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/fcitx-config-gtk3.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -309,8 +308,8 @@ diff -uN applications_old/fcitx-config-gtk3.desktop applications/fcitx-config-gt
 -NoDisplay=true
 -X-KDE-StartupNotify=false
 -StartupNotify=false
-diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool.desktop
---- applications_old/fcitx-configtool.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/fcitx-configtool.desktop applications/fcitx-configtool.desktop
+--- applications_raw/fcitx-configtool.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/fcitx-configtool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -336,18 +335,18 @@ diff -uN applications_old/fcitx-configtool.desktop applications/fcitx-configtool
 -Categories=Settings;
 -X-KDE-StartupNotify=false
 -StartupNotify=false
-diff -uN applications_old/fcitx.desktop applications/fcitx.desktop
---- applications_old/fcitx.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/fcitx.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/fcitx.desktop applications/fcitx.desktop
+--- applications_raw/fcitx.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/fcitx.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Fcitx
-+Name=Fcitx输入法
+ Name=Fcitx
++Name[zh_CN]=Fcitx输入法
  Name[de]=Fcitx
  Name[es]=Fcitx
  Name[ja]=Fcitx
-diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
---- applications_old/file-roller.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/file-roller.desktop applications/file-roller.desktop
+--- applications_raw/file-roller.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/file-roller.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,18 +0,0 @@
 -[Desktop Entry]
@@ -368,9 +367,9 @@ diff -uN applications_old/file-roller.desktop applications/file-roller.desktop
 -X-GNOME-Bugzilla-Component=general
 -X-GNOME-Bugzilla-Version=3.6.3
 -X-Ubuntu-Gettext-Domain=file-roller
-diff -uN applications_old/firefox.desktop applications/firefox.desktop
---- applications_old/firefox.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/firefox.desktop	2013-10-23 16:09:32.238757970 +0800
+diff -uN applications_raw/firefox.desktop applications/firefox.desktop
+--- applications_raw/firefox.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/firefox.desktop	2013-11-08 11:13:38.800457817 +0800
 @@ -1,7 +1,7 @@
  [Desktop Entry]
  Version=1.0
@@ -473,30 +472,30 @@ diff -uN applications_old/firefox.desktop applications/firefox.desktop
 +Name[zh_TW]=開啟新隱私瀏覽視窗
  Exec=firefox -private-window
  OnlyShowIn=Unity;
-diff -uN applications_old/gcalctool.desktop applications/gcalctool.desktop
---- applications_old/gcalctool.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gcalctool.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gcalctool.desktop applications/gcalctool.desktop
+--- applications_raw/gcalctool.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/gcalctool.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Calculator
--Comment=Perform arithmetic, scientific or financial calculations
-+Name=计算器
-+Comment=计算器
+ Name=Calculator
++Name[zh_CN]=计算器
+ Comment=Perform arithmetic, scientific or financial calculations
++Comment[zh_CN]=计算器
  Keywords=calculation;arithmetic;scientific;financial;
  Exec=gnome-calculator
  Icon=accessories-calculator
-diff -uN applications_old/gcr-prompter.desktop applications/gcr-prompter.desktop
---- applications_old/gcr-prompter.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gcr-prompter.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/gcr-prompter.desktop applications/gcr-prompter.desktop
+--- applications_raw/gcr-prompter.desktop	2013-11-08 11:13:38.804457817 +0800
++++ applications/gcr-prompter.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Access Prompt
-+Name=访问提示
+ Name=Access Prompt
++Name[zh_CN]=访问提示
  Comment=Unlock access to passwords and other secrets
  Icon=security-medium
  Exec=/usr/lib/gcr/gcr-prompter
-diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
---- applications_old/gdebi.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/gdebi.desktop applications/gdebi.desktop
+--- applications_raw/gdebi.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/gdebi.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,13 +0,0 @@
 -[Desktop Entry]
@@ -512,51 +511,51 @@ diff -uN applications_old/gdebi.desktop applications/gdebi.desktop
 -NotShowIn=KDE;
 -X-Ubuntu-Gettext-Domain=gdebi
 -StartupNotify=true
-diff -uN applications_old/gedit.desktop applications/gedit.desktop
---- applications_old/gedit.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gedit.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/gedit.desktop applications/gedit.desktop
+--- applications_raw/gedit.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gedit.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
 -Name=gedit
-+Name=gedit编辑器
++Name=Gedit
++Name[zh_CN]=Gedit编辑器
  GenericName=Text Editor
  Comment=Edit text files
  Exec=gedit %U
-diff -uN applications_old/gimp.desktop applications/gimp.desktop
---- applications_old/gimp.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gimp.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,9 +1,9 @@
- [Desktop Entry]
+diff -uN applications_raw/gimp.desktop applications/gimp.desktop
+--- applications_raw/gimp.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gimp.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -2,8 +2,10 @@
  Version=1.0
  Type=Application
--Name=GIMP Image Editor
-+Name=GIMP图片编辑器
+ Name=GIMP Image Editor
++Nam[zh_CN]e=GIMP图片编辑器
  GenericName=Image Editor
--Comment=Create images and edit photographs
-+Comment=创建并编辑图片
+ Comment=Create images and edit photographs
++Comment[zh_CN]=创建并编辑图片
  Exec=gimp-2.8 %U
  TryExec=gimp-2.8
  Icon=gimp
-diff -uN applications_old/gnome-disk-image-mounter.desktop applications/gnome-disk-image-mounter.desktop
---- applications_old/gnome-disk-image-mounter.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-disk-image-mounter.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gnome-disk-image-mounter.desktop applications/gnome-disk-image-mounter.desktop
+--- applications_raw/gnome-disk-image-mounter.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-disk-image-mounter.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,7 @@
  [Desktop Entry]
  Encoding=UTF-8
--Name=Disk Image Mounter
-+Name=磁盘挂载器
+ Name=Disk Image Mounter
++Nam[zh_CN]e=磁盘挂载器
  Comment=Mount Disk Images
  Exec=gnome-disk-image-mounter %U
  Icon=drive-removable-media
-diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
---- applications_old/gnome-disks.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-disks.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,11 +1,11 @@
+diff -uN applications_raw/gnome-disks.desktop applications/gnome-disks.desktop
+--- applications_raw/gnome-disks.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-disks.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,11 +1,13 @@
  [Desktop Entry]
--Name=Disks
--Comment=Manage Drives and Media
-+Name=磁盘
-+Comment=管理驱动和媒体
+ Name=Disks
++Name[zh_CN]=磁盘
+ Comment=Manage Drives and Media
++Comment[zh_CN]=管理驱动和媒体
  Exec=gnome-disks
  Icon=gnome-disks
  Terminal=false
@@ -566,8 +565,8 @@ diff -uN applications_old/gnome-disks.desktop applications/gnome-disks.desktop
 -Categories=GNOME;GTK;Utility;HardwareSettings;Settings;HardwareSettings;
 +Categories=GNOME;GTK;Utility;HardwareSettings;System;HardwareSettings;
  X-Ubuntu-Gettext-Domain=gnome-disk-utility
-diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-viewer.desktop
---- applications_old/gnome-font-viewer.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/gnome-font-viewer.desktop applications/gnome-font-viewer.desktop
+--- applications_raw/gnome-font-viewer.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gnome-font-viewer.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,17 +0,0 @@
 -[Desktop Entry]
@@ -587,8 +586,8 @@ diff -uN applications_old/gnome-font-viewer.desktop applications/gnome-font-view
 -X-GNOME-Bugzilla-OtherBinaries=gnome-thumbnail-font
 -X-GNOME-Bugzilla-Version=3.7.5
 -X-Ubuntu-Gettext-Domain=gnome-font-viewer
-diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-power-statistics.desktop
---- applications_old/gnome-power-statistics.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/gnome-power-statistics.desktop applications/gnome-power-statistics.desktop
+--- applications_raw/gnome-power-statistics.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gnome-power-statistics.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,16 +0,0 @@
 -[Desktop Entry]
@@ -607,66 +606,66 @@ diff -uN applications_old/gnome-power-statistics.desktop applications/gnome-powe
 -X-GNOME-Bugzilla-Version=3.6.0
 -X-Desktop-File-Install-Version=0.10
 -X-Ubuntu-Gettext-Domain=gnome-power-manager
-diff -uN applications_old/gnome-screenshot.desktop applications/gnome-screenshot.desktop
---- applications_old/gnome-screenshot.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-screenshot.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gnome-screenshot.desktop applications/gnome-screenshot.desktop
+--- applications_raw/gnome-screenshot.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-screenshot.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Screenshot
--Comment=Save images of your screen or individual windows
-+Name=截图工具
-+Comment=保存屏幕图像
+ Name=Screenshot
++Name[zh_CN]=截图工具
+ Comment=Save images of your screen or individual windows
++Comment[zh_CN]=保存屏幕图像
  Exec=gnome-screenshot --interactive
  Terminal=false
  Type=Application
-diff -uN applications_old/gnome-system-log.desktop applications/gnome-system-log.desktop
---- applications_old/gnome-system-log.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-system-log.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gnome-system-log.desktop applications/gnome-system-log.desktop
+--- applications_raw/gnome-system-log.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-system-log.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=System Log
--Comment=View or monitor system log files
-+Name=系统日志
-+Comment=查看并管理系统日志
+ Name=System Log
++Name[zh_CN]=系统日志
+ Comment=View or monitor system log files
++Comment[zh_CN]=查看并管理系统日志
  Exec=gnome-system-log
  Icon=logview
  Terminal=false
-diff -uN applications_old/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
---- applications_old/gnome-system-monitor.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-system-monitor.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gnome-system-monitor.desktop applications/gnome-system-monitor.desktop
+--- applications_raw/gnome-system-monitor.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-system-monitor.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=System Monitor
--Comment=View current processes and monitor system state
-+Name=任务管理器
-+Comment=查看当前进程并管理计算机状态
+ Name=System Monitor
++Name[zh_CN]=任务管理器
+ Comment=View current processes and monitor system state
++Comment[zh_CN]=查看当前进程并管理计算机状态
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
  Icon=utilities-system-monitor
-diff -uN applications_old/gnome-system-monitor-kde.desktop applications/gnome-system-monitor-kde.desktop
---- applications_old/gnome-system-monitor-kde.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-system-monitor-kde.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/gnome-system-monitor-kde.desktop applications/gnome-system-monitor-kde.desktop
+--- applications_raw/gnome-system-monitor-kde.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-system-monitor-kde.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=GNOME System Monitor
-+Name=GNOME系统监视器
+ Name=GNOME System Monitor
++Name[zh_CN]=GNOME系统监视器
  Comment=View current processes and monitor system state
  TryExec=gnome-system-monitor
  Exec=gnome-system-monitor
-diff -uN applications_old/gnome-terminal.desktop applications/gnome-terminal.desktop
---- applications_old/gnome-terminal.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gnome-terminal.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/gnome-terminal.desktop applications/gnome-terminal.desktop
+--- applications_raw/gnome-terminal.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gnome-terminal.desktop	2013-11-08 11:13:38.800457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Terminal
--Comment=Use the command line
-+Name=终端
-+Comment=使用控制台
+ Name=Terminal
++Name[zh_CN]=终端
+ Comment=Use the command line
++Comment[zh_CN]=使用控制台
  TryExec=gnome-terminal
  Exec=gnome-terminal
  Icon=utilities-terminal
-diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
---- applications_old/gnome-user-share-properties.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/gnome-user-share-properties.desktop applications/gnome-user-share-properties.desktop
+--- applications_raw/gnome-user-share-properties.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gnome-user-share-properties.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -684,28 +683,28 @@ diff -uN applications_old/gnome-user-share-properties.desktop applications/gnome
 -X-GNOME-Bugzilla-Component=general
 -X-Ubuntu-Gettext-Domain=gnome-user-share
 -
-diff -uN applications_old/google-chrome.desktop applications/google-chrome.desktop
---- applications_old/google-chrome.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/google-chrome.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/google-chrome.desktop applications/google-chrome.desktop
+--- applications_raw/google-chrome.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/google-chrome.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,6 +1,7 @@
  [Desktop Entry]
  Version=1.0
--Name=Google Chrome
-+Name=Google 浏览器
+ Name=Google Chrome
++Name[zh_CN]=Google 浏览器
  # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
  # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
  GenericName=Web Browser
-diff -uN applications_old/gparted.desktop applications/gparted.desktop
---- applications_old/gparted.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gparted.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/gparted.desktop applications/gparted.desktop
+--- applications_raw/gparted.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gparted.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=GParted
-+Name=GParted磁盘分区工具
+ Name=GParted
++Name[zh_CN]=GParted磁盘分区工具
  GenericName=Partition Editor
  X-GNOME-FullName=GParted Partition Editor
  Comment=Create, reorganize, and delete partitions
-@@ -7,6 +7,6 @@
+@@ -7,6 +8,6 @@
  Icon=gparted
  Terminal=false
  Type=Application
@@ -713,16 +712,9 @@ diff -uN applications_old/gparted.desktop applications/gparted.desktop
 +Categories=GNOME;System;Filesystem;
  StartupNotify=true
  X-Ubuntu-Gettext-Domain=gparted
-diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
---- applications_old/gthumb.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gthumb.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=gThumb
-+Name=gThumb图像浏览器
- Name[am]=gThumb
- Name[az]=gThumb
- Name[be]=gThumb
+diff -uN applications_raw/gthumb.desktop applications/gthumb.desktop
+--- applications_raw/gthumb.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gthumb.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -56,9 +56,9 @@
  Name[uk]=gThumb
  Name[vi]=gThumb
@@ -736,8 +728,8 @@ diff -uN applications_old/gthumb.desktop applications/gthumb.desktop
  GenericName=Image Viewer
  GenericName[ar]=عارض الصّور
  GenericName[ca]=Visualitzador d'imatges
-diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
---- applications_old/gucharmap.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/gucharmap.desktop applications/gucharmap.desktop
+--- applications_raw/gucharmap.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gucharmap.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,14 +0,0 @@
 -[Desktop Entry]
@@ -754,36 +746,34 @@ diff -uN applications_old/gucharmap.desktop applications/gucharmap.desktop
 -X-GNOME-Bugzilla-Version=3.6.1
 -StartupNotify=true
 -X-Ubuntu-Gettext-Domain=gucharmap
-diff -uN applications_old/gufw.desktop applications/gufw.desktop
---- applications_old/gufw.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/gufw.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -3,7 +3,7 @@
- Type=Application
+diff -uN applications_raw/gufw.desktop applications/gufw.desktop
+--- applications_raw/gufw.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/gufw.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -4,6 +4,7 @@
  Terminal=false
  Exec=gufw
--Name=Firewall Configuration
-+Name=防火墙设定
+ Name=Firewall Configuration
++Name[zh_CN]=防火墙设定
  Name[zh_TW]=防火牆設定
  Name[vi]=Cấu hình tường lửa
  Name[uk]=Конфігурація брандмауера
-@@ -34,7 +34,7 @@
- Name[bg]=Конфигуриране на защитна стена
+@@ -35,6 +36,7 @@
  Name[ast]=Configuración del tornafueos
  Name[ar]=إعدادات الجدار الناري
--Comment=Allows you to configure ufw firewall
-+Comment=设定防火墙
+ Comment=Allows you to configure ufw firewall
++Comment[zh_CN]=设定防火墙
  Comment[zh_TW]=允許您設定 ufw 防火牆
  Comment[vi]=Cho phép bạn cấu hình tường lửa ufw
  Comment[uk]=Дозволяє налаштувати брандмауер uwf
-@@ -66,5 +66,5 @@
+@@ -66,5 +68,5 @@
  Comment[ast]=Permite configurar el tornafuéu ufw
  Comment[ar]=يسٌمح لك بإعداد الجدار الناري UFW
  Icon=gufw.png
 -Categories=System;Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
 +Categories=Settings;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;
  X-GNOME-Settings-Panel=gufw.png
-diff -uN applications_old/im-config.desktop applications/im-config.desktop
---- applications_old/im-config.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/im-config.desktop applications/im-config.desktop
+--- applications_raw/im-config.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/im-config.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,21 +0,0 @@
 -[Desktop Entry]
@@ -807,8 +797,8 @@ diff -uN applications_old/im-config.desktop applications/im-config.desktop
 -Terminal=false
 -Icon=input-keyboard
 -Categories=Settings
-diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.desktop
---- applications_old/itweb-settings.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/itweb-settings.desktop applications/itweb-settings.desktop
+--- applications_raw/itweb-settings.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/itweb-settings.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,8 +0,0 @@
 -[Desktop Entry]
@@ -819,32 +809,18 @@ diff -uN applications_old/itweb-settings.desktop applications/itweb-settings.des
 -Terminal=false
 -Type=Application
 -Categories=Settings;
-diff -uN applications_old/mintBackup.desktop applications/mintBackup.desktop
---- applications_old/mintBackup.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintBackup.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Backup Tool
-+Name=备份工具
- Name[en_GB]=Backup Tool
- Name[ko]=백업 도구
- Name[hr]=Alat za Kopiranje
+diff -uN applications_raw/mintBackup.desktop applications/mintBackup.desktop
+--- applications_raw/mintBackup.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintBackup.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -138,4 +138,4 @@
  Terminal=false
  Type=Application
  Encoding=UTF-8
 -Categories=Application;System;Settings
 +Categories=Application;System;
-diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.desktop
---- applications_old/mintBackup_mime.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintBackup_mime.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Backup Tool
-+Name=备份工具
- Name[en_GB]=Backup Tool
- Name[ko]=백업 도구
- Name[hr]=Alat za Kopiranje
+diff -uN applications_raw/mintBackup_mime.desktop applications/mintBackup_mime.desktop
+--- applications_raw/mintBackup_mime.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintBackup_mime.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -138,6 +138,6 @@
  Terminal=false
  Type=Application
@@ -853,31 +829,25 @@ diff -uN applications_old/mintBackup_mime.desktop applications/mintBackup_mime.d
 +Categories=Application;System;
  NoDisplay=true
  MimeType=application/x-backup;
-diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
---- applications_old/mintdrivers.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintdrivers.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/mintdrivers.desktop applications/mintdrivers.desktop
+--- applications_raw/mintdrivers.desktop	2013-11-22 17:20:13.899640783 +0800
++++ applications/mintdrivers.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Driver Manager
-+Name=驱动管理
+ Name=Driver Manager
++Name[zh_CN]=驱动管理
  Name[ro]=Driver Manager
  Name[et]=Ajuri haldur
  Name[sk]=Správca ovládačov
-@@ -29,7 +29,7 @@
- Name[ms]=Pengurus Pemacu
+@@ -30,6 +31,7 @@
  Name[ca]=Driver Manager
  Name[fr_CA]=Gestionnaire de pilotes
--Comment=Manage the drivers for your devices
-+Comment=管理设备驱动
+ Comment=Manage the drivers for your devices
++Comment[zh_CN]=管理设备驱动
  Comment[ro]=Manage the drivers for your devices
  Comment[et]=Halda ajureid oma seadmes
  Comment[sk]=Správa ovládačov pre vaše zariadenia
-@@ -60,11 +60,11 @@
- Comment[ca]=Manage the drivers for your devices
- Comment[fr_CA]=Gérer les pilotes de vos périphériques
- Exec=driver-manager
--Icon=jockey
-+Icon=/usr/share/icons/hicolor/scalable/apps/driver-manager.svg
+@@ -64,7 +66,7 @@
  Terminal=false
  X-MultipleArgs=false
  Type=Application
@@ -886,16 +856,9 @@ diff -uN applications_old/mintdrivers.desktop applications/mintdrivers.desktop
  X-GNOME-Settings-Panel=driver-manager
  X-KDE-SubstituteUID=true
  X-Ubuntu-Gettext-Domain=mintdrivers
-diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
---- applications_old/mintInstall.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintInstall.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Software Manager
-+Name=软件中心
- Name[ms]=Pengurus Perisian
- Name[hi]=सॉफ्टवेयर प्रबंधक
- Name[lb]=Software Manager
+diff -uN applications_raw/mintInstall.desktop applications/mintInstall.desktop
+--- applications_raw/mintInstall.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintInstall.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -44,7 +44,7 @@
  Name[ko]=소프트웨어 관리자
  Name[is]=Hugbúnaðarstjórnun
@@ -917,16 +880,9 @@ diff -uN applications_old/mintInstall.desktop applications/mintInstall.desktop
 -Categories=Application;System;Settings
 +Categories=Application;System;
  NotShowIn=KDE;
-diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.desktop
---- applications_old/mintInstall_kde.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintInstall_kde.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Software Manager
-+Name=软件中心
- Name[ms]=Pengurus Perisian
- Name[hi]=सॉफ्टवेयर प्रबंधक
- Name[lb]=Software Manager
+diff -uN applications_raw/mintInstall_kde.desktop applications/mintInstall_kde.desktop
+--- applications_raw/mintInstall_kde.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintInstall_kde.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -44,7 +44,7 @@
  Name[ko]=소프트웨어 관리자
  Name[is]=Hugbúnaðarstjórnun
@@ -943,16 +899,9 @@ diff -uN applications_old/mintInstall_kde.desktop applications/mintInstall_kde.d
 -Categories=Application;System;Settings
 +Categories=Application;System;
  OnlyShowIn=KDE;
-diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime.desktop
---- applications_old/mintInstall_mime.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintInstall_mime.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Software Manager
-+Name=软件中心
- Name[ms]=Pengurus Perisian
- Name[hi]=सॉफ्टवेयर प्रबंधक
- Name[lb]=Software Manager
+diff -uN applications_raw/mintInstall_mime.desktop applications/mintInstall_mime.desktop
+--- applications_raw/mintInstall_mime.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintInstall_mime.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -44,7 +44,7 @@
  Name[ko]=소프트웨어 관리자
  Name[is]=Hugbúnaðarstjórnun
@@ -970,8 +919,8 @@ diff -uN applications_old/mintInstall_mime.desktop applications/mintInstall_mime
 +Categories=Application;System;
  NoDisplay=true
  MimeType=application/x-mint;
-diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
---- applications_old/mintNanny.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/mintNanny.desktop applications/mintNanny.desktop
+--- applications_raw/mintNanny.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/mintNanny.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,134 +0,0 @@
 -[Desktop Entry]
@@ -1108,15 +1057,15 @@ diff -uN applications_old/mintNanny.desktop applications/mintNanny.desktop
 -Encoding=UTF-8
 -Categories=Application;System;Settings;
 -StartupNotify=false
-diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
---- applications_old/mintsources.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintsources.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,12 +1,12 @@
+diff -uN applications_raw/mintsources.desktop applications/mintsources.desktop
+--- applications_raw/mintsources.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintsources.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,12 +1,14 @@
  [Desktop Entry]
--Name=Software Sources
--Comment=Configure the sources for installable software and updates
-+Name=软件源
-+Comment=设置软件安装和更新源
+ Name=Software Sources
++Name[zh_CN]=软件源
+ Comment=Configure the sources for installable software and updates
++Comment[zh_CN]=设置软件安装和更新源
  Exec=software-sources
  Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg
  Terminal=false
@@ -1127,8 +1076,8 @@ diff -uN applications_old/mintsources.desktop applications/mintsources.desktop
  X-GNOME-Settings-Panel=software-properties
  MimeType=text/x-apt-sources-list;
  X-KDE-SubstituteUID=true
-diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
---- applications_old/mintstick.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/mintstick.desktop applications/mintstick.desktop
+--- applications_raw/mintstick.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/mintstick.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1146,8 +1095,8 @@ diff -uN applications_old/mintstick.desktop applications/mintstick.desktop
 -Comment[de]="Einen bootfähigen USB-Stick erstellen"
 -Categories=GNOME;GTK;Utility;
 -NotShowIn=KDE;
-diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.desktop
---- applications_old/mintstick-kde.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/mintstick-kde.desktop applications/mintstick-kde.desktop
+--- applications_raw/mintstick-kde.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/mintstick-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1165,25 +1114,25 @@ diff -uN applications_old/mintstick-kde.desktop applications/mintstick-kde.deskt
 -Comment[de]="Einen bootfähigen USB-Stick erstellen"
 -Categories=System;
 -OnlyShowIn=KDE;
-diff -uN applications_old/mintUpdate.desktop applications/mintUpdate.desktop
---- applications_old/mintUpdate.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mintUpdate.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/mintUpdate.desktop applications/mintUpdate.desktop
+--- applications_raw/mintUpdate.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mintUpdate.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Update Manager
-+Name=更新管理
+ Name=Update Manager
++Name[zh_CN]=更新管理
  Name[en_GB]=Update Manager
  Name[ko]=업데이트 관리자
  Name[hr]=Upravitelj nadogradnjama
-@@ -130,5 +130,5 @@
+@@ -130,5 +131,5 @@
  Terminal=false
  Type=Application
  Encoding=UTF-8
 -Categories=Application;System;Settings;
 +Categories=Application;System;
  StartupNotify=false
-diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
---- applications_old/mintWelcome.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/mintWelcome.desktop applications/mintWelcome.desktop
+--- applications_raw/mintWelcome.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/mintWelcome.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -1354,28 +1303,28 @@ diff -uN applications_old/mintWelcome.desktop applications/mintWelcome.desktop
 -Encoding=UTF-8
 -Categories=GNOME;GTK;Settings;DesktopSettings;
 -StartupNotify=false
-diff -uN applications_old/mono-runtime.desktop applications/mono-runtime.desktop
---- applications_old/mono-runtime.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mono-runtime.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/mono-runtime.desktop applications/mono-runtime.desktop
+--- applications_raw/mono-runtime.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mono-runtime.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Mono Runtime
-+Name=Mono运行时环境
+ Name=Mono Runtime
++Name[zh_CN]=Mono运行时环境
  Exec=mono
  Terminal=false
  Type=Application
-diff -uN applications_old/mono-runtime-terminal.desktop applications/mono-runtime-terminal.desktop
---- applications_old/mono-runtime-terminal.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/mono-runtime-terminal.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/mono-runtime-terminal.desktop applications/mono-runtime-terminal.desktop
+--- applications_raw/mono-runtime-terminal.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/mono-runtime-terminal.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Mono Runtime (Terminal)
-+Name=Mono运行时环境 (命令行)
+ Name=Mono Runtime (Terminal)
++Name[zh_CN]=Mono运行时环境 (命令行)
  Exec=mono
  Terminal=true
  Type=Application
-diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
---- applications_old/ndisgtk.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/ndisgtk.desktop applications/ndisgtk.desktop
+--- applications_raw/ndisgtk.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/ndisgtk.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,11 +0,0 @@
 -[Desktop Entry]
@@ -1389,35 +1338,28 @@ diff -uN applications_old/ndisgtk.desktop applications/ndisgtk.desktop
 -Categories=System;Settings;
 -X-Ubuntu-Gettext-Domain=ndisgtk
 -
-diff -uN applications_old/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
---- applications_old/ndisgtk-kde.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/ndisgtk-kde.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/ndisgtk-kde.desktop applications/ndisgtk-kde.desktop
+--- applications_raw/ndisgtk-kde.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/ndisgtk-kde.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Windows Wireless Drivers
-+Name=Windows兼容无线管理工具
+ Name=Windows Wireless Drivers
++Name[zh_CN]=Windows兼容无线管理工具
  Comment=Ndiswrapper driver installation tool
  Exec=kdesu /usr/sbin/ndisgtk -- --kde
  Icon=ndisgtk.png
-diff -uN applications_old/nemo-autorun-software.desktop applications/nemo-autorun-software.desktop
---- applications_old/nemo-autorun-software.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/nemo-autorun-software.desktop	2013-10-23 16:09:32.238757970 +0800
+diff -uN applications_raw/nemo-autorun-software.desktop applications/nemo-autorun-software.desktop
+--- applications_raw/nemo-autorun-software.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/nemo-autorun-software.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -148,4 +148,4 @@
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=nemo
  X-GNOME-Bugzilla-Component=general
 -X-GNOME-Bugzilla-Version=1.8.2
 +X-GNOME-Bugzilla-Version=1.8.3
-diff -uN applications_old/nemo.desktop applications/nemo.desktop
---- applications_old/nemo.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/nemo.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
- [Desktop Entry]
--Name=Files
-+Name=资源管理器
- Name[af]=Files
- Name[am]=Files
- Name[ar]=الملفات
+diff -uN applications_raw/nemo.desktop applications/nemo.desktop
+--- applications_raw/nemo.desktop	2013-11-22 17:20:02.947640522 +0800
++++ applications/nemo.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -132,8 +132,8 @@
  Name[wa]=Files
  Name[yi]=Files
@@ -1429,38 +1371,30 @@ diff -uN applications_old/nemo.desktop applications/nemo.desktop
  Name[zh_HK]=檔案
  Name[zh_TW]=檔案
  Name[zu]=Files
-@@ -286,6 +286,6 @@
- X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=nemo
- X-GNOME-Bugzilla-Component=general
--X-GNOME-Bugzilla-Version=1.8.2
-+X-GNOME-Bugzilla-Version=1.8.3
- 
- 
-diff -uN applications_old/nm-applet.desktop applications/nm-applet.desktop
---- applications_old/nm-applet.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/nm-applet.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/nm-applet.desktop applications/nm-applet.desktop
+--- applications_raw/nm-applet.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/nm-applet.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Network
-+Name=网络连接
+ Name=Network
++Name[zh_CN]=网络连接
  Comment=Manage your network connections
  Icon=nm-device-wireless
  Exec=nm-applet
-diff -uN applications_old/nm-connection-editor.desktop applications/nm-connection-editor.desktop
---- applications_old/nm-connection-editor.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/nm-connection-editor.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/nm-connection-editor.desktop applications/nm-connection-editor.desktop
+--- applications_raw/nm-connection-editor.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/nm-connection-editor.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Network Connections
--Comment=Manage and change your network connection settings
-+Name=网络连接管理
-+Comment=管理并修改网络连接
+ Name=Network Connections
++Name[zh_CN]=网络连接管理
+ Comment=Manage and change your network connection settings
++Comment[zh_CN]=管理并修改网络连接
  Icon=preferences-system-network
  Exec=nm-connection-editor
  Terminal=false
-diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-policytool.desktop
---- applications_old/openjdk-7-policytool.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/openjdk-7-policytool.desktop applications/openjdk-7-policytool.desktop
+--- applications_raw/openjdk-7-policytool.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/openjdk-7-policytool.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -1473,35 +1407,35 @@ diff -uN applications_old/openjdk-7-policytool.desktop applications/openjdk-7-po
 -Type=Application
 -Icon=openjdk-7
 -Categories=Settings;
-diff -uN applications_old/pidgin.desktop applications/pidgin.desktop
---- applications_old/pidgin.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/pidgin.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/pidgin.desktop applications/pidgin.desktop
+--- applications_raw/pidgin.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/pidgin.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Pidgin Internet Messenger
-+Name=Pidgin即时消息
+ Name=Pidgin Internet Messenger
++Name[zh_CN]=Pidgin即时消息
  GenericName=Internet Messenger
  Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
  Exec=pidgin
-diff -uN applications_old/qq2012-test.desktop applications/qq2012-test.desktop
---- applications_old/qq2012-test.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/qq2012-test.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,7 +1,7 @@
- 
+diff -uN applications_raw/qq2012-test.desktop applications/qq2012-test.desktop
+--- applications_raw/qq2012-test.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/qq2012-test.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -2,6 +2,7 @@
  [Desktop Entry]
  Categories=Network;InstantMessaging;
--Name=QQ2012
-+Name=腾讯QQ2012
+ Name=QQ2012
++Name[zh_CN]=腾讯QQ2012
  Icon=/opt/longene/qq2012/qq2012.png
  Exec=/opt/longene/qq2012/qq2012.sh
  StartupNotify=true
-@@ -9,3 +9,4 @@
+@@ -9,3 +10,5 @@
  Type=Application
  Name[en]=QQ2012
  Name[en_US]=QQ2012
-+Comment=腾讯QQ2012
-diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
---- applications_old/seahorse.desktop	2013-10-23 16:09:32.242757970 +0800
++Comment=QQ2012
++Comment[zh_CN]=腾讯QQ2012
+diff -uN applications_raw/seahorse.desktop applications/seahorse.desktop
+--- applications_raw/seahorse.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/seahorse.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,15 +0,0 @@
 -[Desktop Entry]
@@ -1519,15 +1453,15 @@ diff -uN applications_old/seahorse.desktop applications/seahorse.desktop
 -X-GNOME-Bugzilla-Version=3.6.3
 -X-GNOME-DocPath=seahorse/seahorse.xml
 -X-Ubuntu-Gettext-Domain=seahorse
-diff -uN applications_old/session-properties.desktop applications/session-properties.desktop
---- applications_old/session-properties.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/session-properties.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,12 +1,12 @@
+diff -uN applications_raw/session-properties.desktop applications/session-properties.desktop
+--- applications_raw/session-properties.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/session-properties.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,12 +1,14 @@
  [Desktop Entry]
--Name=Startup Applications
--Comment=Choose what applications to start when you log in
-+Name=开机启动项
-+Comment=选择开机启动的程序
+ Name=Startup Applications
++Name[zh_CN]=开机启动项
+ Comment=Choose what applications to start when you log in
++Comment[zh_CN]=选择开机启动的程序
  Exec=gnome-session-properties
  Icon=session-properties
  Terminal=false
@@ -1538,8 +1472,8 @@ diff -uN applications_old/session-properties.desktop applications/session-proper
  OnlyShowIn=GNOME;Unity;
  NoDisplay=false
  X-GNOME-Bugzilla-Bugzilla=GNOME
-diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
---- applications_old/simple-scan.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/simple-scan.desktop applications/simple-scan.desktop
+--- applications_raw/simple-scan.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/simple-scan.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,10 +0,0 @@
 -[Desktop Entry]
@@ -1552,16 +1486,16 @@ diff -uN applications_old/simple-scan.desktop applications/simple-scan.desktop
 -StartupNotify=true
 -Categories=GNOME;GTK;Graphics;Scanning;
 -X-GNOME-Gettext-Domain=simple-scan
-diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
---- applications_old/synaptic.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/synaptic.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,11 +1,11 @@
+diff -uN applications_raw/synaptic.desktop applications/synaptic.desktop
+--- applications_raw/synaptic.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/synaptic.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,11 +1,13 @@
  [Desktop Entry]
--Name=Synaptic Package Manager
-+Name=新立得软件包管理器
+ Name=Synaptic Package Manager
++Name[zh_CN]=新立得软件包管理器
  GenericName=Package Manager
--Comment=Install, remove and upgrade software packages
-+Comment=安装，卸载，升级软件包
+ Comment=Install, remove and upgrade software packages
++Comment[zh_CN]=安装，卸载，升级软件包
  Exec=synaptic-pkexec
  Icon=synaptic
  Terminal=false
@@ -1570,8 +1504,8 @@ diff -uN applications_old/synaptic.desktop applications/synaptic.desktop
 +Categories=PackageManager;GTK;System;
  NotShowIn=KDE;
  X-Ubuntu-Gettext-Domain=synaptic
-diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
---- applications_old/synaptic-kde.desktop	2013-10-23 16:09:32.242757970 +0800
+diff -uN applications_raw/synaptic-kde.desktop applications/synaptic-kde.desktop
+--- applications_raw/synaptic-kde.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/synaptic-kde.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,168 +0,0 @@
 -[Desktop Entry]
@@ -1742,16 +1676,16 @@ diff -uN applications_old/synaptic-kde.desktop applications/synaptic-kde.desktop
 -Categories=PackageManager;System;
 -X-KDE-SubstituteUID=true
 -OnlyShowIn=KDE;
-diff -uN applications_old/system-config-printer.desktop applications/system-config-printer.desktop
---- applications_old/system-config-printer.desktop	2013-10-23 16:09:32.242757970 +0800
-+++ applications/system-config-printer.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,15 +1,15 @@
+diff -uN applications_raw/system-config-printer.desktop applications/system-config-printer.desktop
+--- applications_raw/system-config-printer.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/system-config-printer.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,15 +1,17 @@
  [Desktop Entry]
  Encoding=UTF-8
--Name=Printers
--Comment=Configure printers
-+Name=打印机
-+Comment=配置打印机
+ Name=Printers
++Name[zh_CN]=打印机
+ Comment=Configure printers
++Comment[zh_CN]=配置打印机
  Exec=system-config-printer
  Terminal=false
  Type=Application
@@ -1765,17 +1699,9 @@ diff -uN applications_old/system-config-printer.desktop applications/system-conf
  X-GNOME-Settings-Panel=printing
  Keywords=Printer;Queue;Print;Paper;Ink;Toner;
  X-Desktop-File-Install-Version=0.21
-diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
---- applications_old/tomboy.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/tomboy.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
- 
- [Desktop Entry]
--Name=Tomboy Notes
-+Name=Tomboy记事本
- Name[af]=Tomboy-notas
- Name[ar]=ملاحظات تومبوي
- Name[as]=Tomboy টোকাসমূহ
+diff -uN applications_raw/tomboy.desktop applications/tomboy.desktop
+--- applications_raw/tomboy.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/tomboy.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -73,7 +73,7 @@
  Name[ug]=Tomboy ئىزاھلىرى
  Name[uk]=Примітки Tomboy
@@ -1785,49 +1711,39 @@ diff -uN applications_old/tomboy.desktop applications/tomboy.desktop
  Name[zh_HK]=Tomboy 筆記
  Name[zh_TW]=Tomboy 筆記
  Comment=Take notes, link ideas, and stay organized
-diff -uN applications_old/totem.desktop applications/totem.desktop
---- applications_old/totem.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/totem.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/totem.desktop applications/totem.desktop
+--- applications_raw/totem.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/totem.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Videos
--Comment=Play movies
-+Name=视频
-+Comment=播放电影
+ Name=Videos
++Name[zh_CN]=视频
+ Comment=Play movies
++Comment[zh_CN]=播放电影
  Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
  Exec=totem %U
  Icon=totem
-diff -uN applications_old/transmission-gtk.desktop applications/transmission-gtk.desktop
---- applications_old/transmission-gtk.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/transmission-gtk.desktop	2013-10-23 16:09:32.238757970 +0800
-@@ -1,5 +1,5 @@
+diff -uN applications_raw/transmission-gtk.desktop applications/transmission-gtk.desktop
+--- applications_raw/transmission-gtk.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/transmission-gtk.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,5 +1,6 @@
  [Desktop Entry]
--Name=Transmission
-+Name=BT下载器
+ Name=Transmission
++Name[zh_CN]=BT下载器
  GenericName=BitTorrent Client
  X-GNOME-FullName=Transmission BitTorrent Client
  X-GNOME-FullName[ar]=ترانزميشن، عميل «بت تورنت»
-@@ -64,7 +64,7 @@
- X-GNOME-FullName[vi]=Trình khách BitTorrent Transmission
+@@ -65,6 +66,7 @@
  X-GNOME-FullName[zh_CN]=Transmission BitTorrent 客户端
  X-GNOME-FullName[zh_TW]=Transmission BitTorrent 用戶端
--Comment=Download and share files over BitTorrent
-+Comment=下载和分享文件
+ Comment=Download and share files over BitTorrent
++Comment[zh_CN]=下载和分享文件
  Exec=transmission-gtk %U
  Icon=transmission
  Terminal=false
-diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
---- applications_old/ubiquity-gtkui.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/ubiquity-gtkui.desktop	2013-10-23 16:09:32.242757970 +0800
-@@ -2,7 +2,7 @@
- Type=Application
- Version=1.0
- # Do not translate the word "RELEASE".  It is used as a marker by casper.
--Name=Install RELEASE
-+Name=安装Release
- Name[am]=የተለቀቀውን መግጠሚያ
- Name[ar]=ثبّت RELEASE
- Name[ast]=Instalar RELEASE
+diff -uN applications_raw/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
+--- applications_raw/ubiquity-gtkui.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/ubiquity-gtkui.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -124,7 +124,7 @@
  Exec=ubiquity --desktop %k gtk_ui
  Icon=ubiquity
@@ -1837,8 +1753,8 @@ diff -uN applications_old/ubiquity-gtkui.desktop applications/ubiquity-gtkui.des
  NotShowIn=KDE;
  #X-Ubuntu-Gettext-Domain=ubiquity-desktop
  X-Ayatana-Appmenu-Show-Stubs=False
-diff -uN applications_old/upload-manager.desktop applications/upload-manager.desktop
---- applications_old/upload-manager.desktop	2013-10-23 16:09:32.246757970 +0800
+diff -uN applications_raw/upload-manager.desktop applications/upload-manager.desktop
+--- applications_raw/upload-manager.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/upload-manager.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,130 +0,0 @@
 -[Desktop Entry]
@@ -1971,13 +1887,13 @@ diff -uN applications_old/upload-manager.desktop applications/upload-manager.des
 -Encoding=UTF-8
 -Categories=Application;System;Settings
 -StartupNotify=false
-diff -uN applications_old/vino-preferences.desktop applications/vino-preferences.desktop
---- applications_old/vino-preferences.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/vino-preferences.desktop	2013-10-23 16:09:32.242757970 +0800
-@@ -1,12 +1,12 @@
+diff -uN applications_raw/vino-preferences.desktop applications/vino-preferences.desktop
+--- applications_raw/vino-preferences.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/vino-preferences.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,12 +1,13 @@
  [Desktop Entry]
--Name=Desktop Sharing
-+Name=远程桌面
+ Name=Desktop Sharing
++Name[zh_CN]=远程桌面
  Comment=Choose how other users can remotely view your desktop
  Exec=vino-preferences
  Icon=preferences-desktop-remote-desktop
@@ -1989,23 +1905,15 @@ diff -uN applications_old/vino-preferences.desktop applications/vino-preferences
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=vino
  X-GNOME-Bugzilla-Component=Preferences Dialog
-diff -uN applications_old/vlc.desktop applications/vlc.desktop
---- applications_old/vlc.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/vlc.desktop	2013-10-23 16:09:32.242757970 +0800
-@@ -1,6 +1,6 @@
- [Desktop Entry]
- Version=1.0
--Name=VLC media player
-+Name=VLC播放器
- GenericName=Media player
- Comment=Read, capture, broadcast your multimedia streams
- Name[bn]=VLC মিডিয়া প্লেয়ার
+diff -uN applications_raw/vlc.desktop applications/vlc.desktop
+--- applications_raw/vlc.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/vlc.desktop	2013-11-08 11:13:38.804457817 +0800
 @@ -11,7 +11,7 @@
  Name[ca]=Reproductor multimèdia VLC
  GenericName[ca]=Reproductor multimèdia
  Comment[ca]=Reproduïu, captureu i difoneu fluxos multimèdia
 -Name[de]=VLC Media Player
-+Name[de]=VLC播放器
++Name[de]=VLC media player
  GenericName[de]=Medienwiedergabe
  Comment[de]=Wiedergabe, Aufnahme und Verbreitung Ihrer Multimedia-Streams
  Name[es]=Reproductor multimedia VLC
@@ -2014,28 +1922,10 @@ diff -uN applications_old/vlc.desktop applications/vlc.desktop
  GenericName[lt]=Leistuvė
  Comment[lt]=Groti, įrašyti, siųsti įvairialypės terpės kūrinius
 -Name[nl]=VLC Media Player
-+Name[nl]=VLC播放器
++Name[nl]=VLC media player
  GenericName[nl]=Mediaspeler
  Comment[nl]=Uw multimediastreams afspelen, opnemen en uitzenden
  Name[nn]=VLC mediespelar
-@@ -62,7 +62,7 @@
- Comment[nn]=Spel av, ta opp og send ut multimedia
- Name[pa]=VLC ਮੀਡਿਆ ਪਲੇਅਰ
- Comment[pa]=ਆਪਣੀ ਮਲਟੀਮੀਡਿਆ ਸਟਰੀਮ ਪੜ੍ਹੋ, ਕੈਪਚਰ ਤੇ ਬਰਾਡਕਾਸਟ ਕਰੋ 
--Name[pl]=VLC media player
-+Name[pl]=VLC播放器
- GenericName[pl]=Odtwarzacz multimedialny
- Comment[pl]=Odczytywanie, przechwytywanie i nadawanie strumieni multimedialnych
- Name[pt_BR]=Reprodutor de Mídias VLC
-@@ -71,7 +71,7 @@
- Name[ru]=Медиаплеер VLC
- GenericName[ru]=Медиаплеер
- Comment[ru]=Универсальный проигрыватель видео и аудио
--Name[sk]=VLC media player
-+Name[sk]=VLC播放器
- Comment[sk]=Naèítavajte, zaznamenávajte, vysielajte svoje multimediálne streamy
- Name[sv]=Mediaspelaren VLC
- GenericName[sv]=Mediaspelaren
 @@ -85,7 +85,7 @@
  Name[wa]=Djouweu d' media VLC
  GenericName[wa]=Djouweu d' media
@@ -2045,8 +1935,8 @@ diff -uN applications_old/vlc.desktop applications/vlc.desktop
  GenericName[zh_CN]=媒体播放器
  Comment[zh_CN]=为您读取、捕获或发送多媒体流
  Name[zh_TW]=VLC 媒體播放器
-diff -uN applications_old/xchat.desktop applications/xchat.desktop
---- applications_old/xchat.desktop	2013-10-23 16:09:32.246757970 +0800
+diff -uN applications_raw/xchat.desktop applications/xchat.desktop
+--- applications_raw/xchat.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/xchat.desktop	1970-01-01 08:00:00.000000000 +0800
 @@ -1,23 +0,0 @@
 -[Desktop Entry]
@@ -2072,15 +1962,15 @@ diff -uN applications_old/xchat.desktop applications/xchat.desktop
 -Type=Application
 -Categories=Network;
 -StartupNotify=true
-diff -uN applications_old/yelp.desktop applications/yelp.desktop
---- applications_old/yelp.desktop	2013-10-23 16:09:32.246757970 +0800
-+++ applications/yelp.desktop	2013-10-23 16:09:32.242757970 +0800
-@@ -1,6 +1,6 @@
+diff -uN applications_raw/yelp.desktop applications/yelp.desktop
+--- applications_raw/yelp.desktop	2013-11-08 11:13:38.808457818 +0800
++++ applications/yelp.desktop	2013-11-08 11:13:38.804457817 +0800
+@@ -1,6 +1,8 @@
  [Desktop Entry]
--Name=Help
--Comment=Get help with Linux Mint
-+Name=帮助
-+Comment=获取COS Desktop帮助
+ Name=Help
++Name[zh_CN]=帮助
+ Comment=Get help with Linux Mint
++Comment[zh_CN]=获取COS Desktop帮助
  OnlyShowIn=GNOME;Unity;
  Exec=yelp %u
  Icon=help-browser

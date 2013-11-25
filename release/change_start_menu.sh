@@ -10,13 +10,13 @@ run_patch(){
 set +e
 patch --dry-run -N $*
 ERROR=$?
-set -e
 if [ $ERROR -eq 0 ] ; then
     patch -N $*
 else
     patch -R -N $*
     patch -N $*
 fi
+set -e
 }
 
 OUTPATH=$(cd $1; pwd)
@@ -30,8 +30,7 @@ if [ ! -x "$applicationPath" ] ; then
     exit -1
 fi
 cd $OUTPATH/squashfs-root/usr/share
-sudo rm -r $applicationPath/*.desktop
-sudo cp -r $DISTURBPATH/tmpfiles/applications/*.desktop $applicationPath/
+run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
 echo "Patch applications directory successfully!"
 
 #directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories

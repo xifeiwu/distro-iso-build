@@ -222,8 +222,8 @@ function uniso()
 {
     T=$(gettop)
     if [ "$T" ]; then
-        if [ ! -e $OUT ] ; then
-            mkdir $OUT
+        if [ ! -e $OUT/out ] ; then
+            mkdir -p $OUT/out
         fi
         checktools || return 1
         sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
@@ -416,6 +416,11 @@ function mcos()
     BUITSTEP=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
+        if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
+            BUITSTEP=$BUITSTEP
+        else
+            BUITSTEP=0
+        fi
     fi
     for i in "$@"
     do
@@ -438,7 +443,14 @@ function mcos()
 
         if [ ! -e $OUT/out ] ; then
             mkdir -p $OUT/out
+        else
+            touch $BUILDCOSSTEP 2>/dev/null
+            if [ $? -ne 0 ] ; then
+                Group=`groups $USER | cut -d ' ' -f 1`
+                sudo chown $Group.$USER $OUT/out
+            fi
         fi
+
         echo Building COS Desktop ...
         if [ $BUITSTEP -le 1 ] ; then
             echo 1 >$BUILDCOSSTEP

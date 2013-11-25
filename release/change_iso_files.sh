@@ -7,23 +7,16 @@ if [ -z "$1" ] ; then
     exit -1
 fi
 
-run_patch(){
-set +e
-patch --dry-run -N $*
-ERROR=$?
-set -e
-echo error:$ERROR.
-if [ $ERROR -eq 0 ] ; then
-    patch -N $*
-else
-    patch -R -N $*
-    patch -N $*
-fi
-}
-
 OUTPATH=$(cd $1; pwd)
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
-. $DISTURBPATH/set_version.sh
+if [ ! $COSVERSION ] ; then
+    echo Error: no COSVERSION env set.
+    exit -1
+fi
+if [ ! $COSVERSIONNAME ] ; then
+    echo Error: no COSVERSIONNAME env set.
+    exit -1
+fi
 
 echo Generate some info file in iso.
 echo COS Desktop $COSVERSION "$COSVERSIONNAME" - Release i386 \(`date +%Y%m%d`\)>$OUTPATH/mymint/.disk/info

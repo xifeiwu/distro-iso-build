@@ -46,6 +46,8 @@ echo ISOPATH=$ISOPATH
 echo APPPATH=$APPPATH
 echo OUTPATH=$OUTPATH
 
+. $ScriptPATH/set_version.sh
+
 ######
 #Unzip iso
 ######

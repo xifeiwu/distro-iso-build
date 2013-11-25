@@ -57,13 +57,15 @@ function resource()
     source $T/build/envsetup.sh
 }
 
-function setpaths()
+function setenv()
 {
     T=$(gettop)
     if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return
     fi
+
+    . $T/build/set_version.sh
 
     export OUT=$T/workout
     export APPOUT=debsaved
@@ -1033,5 +1035,5 @@ if [ "x$SHELL" != "x/bin/bash" ]; then
             ;;
     esac
 fi
-setpaths
+setenv
 addcompletions

@@ -903,8 +903,8 @@ function runiso()
     do
         if [ "$i" == "$no" ] ; then
             echo Tips: After kvm running, you can press any key to continue. 
-            echo command: kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d
-            kvm -m 512 -cdrom /home/j/projects/workout/$file -boot order=d &
+            echo command: kvm -m 512 -cdrom ${OUT}/$file -boot order=d
+            kvm -m 512 -cdrom ${OUT}/$file -boot order=d &
             break
         fi
         ((i++))

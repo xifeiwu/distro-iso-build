@@ -9,6 +9,9 @@ fi
 
 OUTPATH=$(cd $1; pwd)
 DISTURBPATH=$(cd "$(dirname $0)"; pwd)
+
+. $DISTURBPATH/../set_version.sh $OUTPATH
+
 if [ ! $COSVERSION ] ; then
     echo Error: no COSVERSION env set.
     exit -1

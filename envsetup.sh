@@ -655,7 +655,8 @@ function cclean()
     echo $OUT/$APPOUT
     read -p "Are you sure to remove these above dirs or files  Y/N:" answer
     if [[ "$answer" == "Y" || "$answer" == "y" ]] ; then
-        umountdir
+        echo Umounting dir...
+        umountdir 2>/dev/null
         if [ -e $OUT/buildallstep ] ; then
             rm $OUT/buildallstep
         fi
@@ -663,18 +664,23 @@ function cclean()
             rm $OUT/buildcosstep
         fi
         if [  -e $OUT/out ] ; then
-             sudo rm -r $OUT/out
+            echo Deleting $OUT/out ...
+            sudo rm -r $OUT/out
         fi
         if [  -e $REPOSITORY ] ; then
+            echo Deleting $REPOSITORY ...
             rm -r $REPOSITORY
         fi
         if [  -e $OUT/$APPOUT ] ; then
+            echo Deleting $OUT/$APPOUT ...
             rm -r $OUT/$APPOUT
         fi 
         if [  -e $OUT/appout ] ; then
+            echo Deleting $OUT/appout ...
             rm -r $OUT/appout
         fi 
         if [  -e $OUT/appbuilt ] ; then
+            echo Deleting $OUT/$appbuilt ...
             rm -r $OUT/appbuilt
         fi 
         echo Finished cleaning workout dir.

@@ -5,7 +5,7 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - cmaster:   repo forall -c git checkout -b master remotes/m/master
 - check:     Check the tools and dependencies to should be installed.
 - getprepkg: Get raw iso and some deb packages such as wps.
-- cclean:    Clean the workout dir excepte raw mint.iso and preapp dir.
+- cclean:    Clean the workout dir excepte raw mint.iso and $PREAPP dir.
 - m:         Build the package and clean the source dir in the current directory.
 - mm:        Build the package and not clean the source dir in the current directory.
 - mi:        Build and install the package and clean the source dir in the current directory.
@@ -69,10 +69,14 @@ function setenv()
 
     export OUT=$T/workout
     export APPOUT=debsaved
+    export PREAPP=preapp
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export ISOPATH=$OUT/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso
+    export RAWISONAME=linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso
+    export ISOPATH=$OUT/$RAWISONAME
+    export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
+    export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
 }
 
 function addcompletions()
@@ -441,7 +445,7 @@ function mcos()
     if [ "$T" ]; then
         #Install zh_CN deb and Input Method deb.
         OUTPATH=$OUT/out
-        APPPATH=$OUT/preapp
+        APPPATH=$OUT/$PREAPP
 
         if [ ! -e $OUT/out ] ; then
             mkdir -p $OUT/out
@@ -575,7 +579,9 @@ function mcos()
             echo 100 >$BUILDCOSSTEP
         fi
         echo Finish building COS Desktop.
-        echo
+        echo ======
+        echo Tips: You can enter runiso command to run the iso generated.
+        echo ======
         echo If you want to build COS Desktop again, you can enter mcos 0
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
@@ -590,7 +596,7 @@ function getprepkg ()
             mkdir $OUT
         fi
         cd $(gettop)
-        sh $T/build/core/getprepackage.sh $OUT
+        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWISOADDRESS $RAWPREAPPADDRESS
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -908,7 +914,9 @@ function runiso()
     for file in `ls $OUT/ | grep iso | sort`
     do
         if [ "$i" == "$no" ] ; then
+            echo ======
             echo Tips: After kvm running, you can press any key to continue. 
+            echo ======
             echo command: kvm -m 512 -cdrom ${OUT}/$file -boot order=d
             kvm -m 512 -cdrom ${OUT}/$file -boot order=d &
             break

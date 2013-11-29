@@ -73,7 +73,7 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso
+    export RAWISONAME=cos_orig_v0.9.iso
     export ISOPATH=$OUT/$RAWISONAME
     export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/

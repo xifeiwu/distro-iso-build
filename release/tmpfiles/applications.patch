@@ -529,7 +529,7 @@ diff -uN applications_raw/gimp.desktop applications/gimp.desktop
  Version=1.0
  Type=Application
  Name=GIMP Image Editor
-+Nam[zh_CN]e=GIMP图片编辑器
++Name[zh_CN]=GIMP图片编辑器
  GenericName=Image Editor
  Comment=Create images and edit photographs
 +Comment[zh_CN]=创建并编辑图片
@@ -543,7 +543,7 @@ diff -uN applications_raw/gnome-disk-image-mounter.desktop applications/gnome-di
  [Desktop Entry]
  Encoding=UTF-8
  Name=Disk Image Mounter
-+Nam[zh_CN]e=磁盘挂载器
++Name[zh_CN]=磁盘挂载器
  Comment=Mount Disk Images
  Exec=gnome-disk-image-mounter %U
  Icon=drive-removable-media

@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Name=GIMP Image Editor
-Nam[zh_CN]e=GIMP图片编辑器
+Name[zh_CN]=GIMP图片编辑器
 GenericName=Image Editor
 Comment=Create images and edit photographs
 Comment[zh_CN]=创建并编辑图片

@@ -11,10 +11,10 @@ set +e
 patch --dry-run -N $*
 ERROR=$?
 if [ $ERROR -eq 0 ] ; then
-    patch -N $*
+    patch -t -s -N $*
 else
-    patch -R -N $*
-    patch -N $*
+    patch -t -s -R -N $*
+    patch -t -s -N $*
 fi
 set -e
 }

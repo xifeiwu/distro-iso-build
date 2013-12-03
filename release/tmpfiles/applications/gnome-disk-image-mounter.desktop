@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Disk Image Mounter
-Nam[zh_CN]e=磁盘挂载器
+Name[zh_CN]=磁盘挂载器
 Comment=Mount Disk Images
 Exec=gnome-disk-image-mounter %U
 Icon=drive-removable-media

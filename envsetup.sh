@@ -364,11 +364,11 @@ function mall()
         if [ $LASTSTEP == 0 ] ; then
             echo check build dependencies and conflicts of all deb package
             checkdepall | grep dpkg-checkbuilddeps
-            echo Finish checking building deb packages
             if [ $? -eq 0 ] ; then
                 echo Error: some dependencis has not been met.
                 return 1
             fi
+            echo Finish checking building deb packages
         fi
         echo
         step=0

@@ -362,8 +362,10 @@ function mall()
         SRCCOSPATH=$T/cos
         CURDIR=$PWD
         if [ $LASTSTEP == 0 ] ; then
-            checkdepall || grep dpkg-checkbuilddeps
-            if [ $? -ne 0 ] ; then
+            echo check build dependencies and conflicts of all deb package
+            checkdepall | grep dpkg-checkbuilddeps
+            echo Finish checking building deb packages
+            if [ $? -eq 0 ] ; then
                 echo Error: some dependencis has not been met.
                 return 1
             fi

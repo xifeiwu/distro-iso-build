@@ -7,3 +7,8 @@ mint-meta-mate
 mint-meta-xfce
 nemo-dbg
 nemo-fileroller
+cups-browsed
+libcupsfilters1
+libcupsfilters-dev
+libfontembed1
+libfontembed-dev

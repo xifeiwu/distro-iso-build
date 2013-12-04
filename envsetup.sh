@@ -662,8 +662,23 @@ function cclean()
     echo $OUT/out
     echo $REPOSITORY
     echo $OUT/$APPOUT
-    read -p "Are you sure to remove these above dirs or files  Y/N:" answer
-    if [[ "$answer" == "Y" || "$answer" == "y" ]] ; then
+
+    CONDITION="N"
+    if [ $# -ge 1 ] ; then
+        for i in "$@"
+        do
+            if [[ "$i" == "-Y" || "$i" == "-y" ]] ; then
+                CONDITION="Y"
+	    else
+	        echo Warning: You can remove these above dirs or files -Y/-y
+	    fi
+        done 
+    else 
+        read -p "Are you sure to remove these above dirs or files  Y/N:" answer
+        CONDITION="$answer"
+    fi
+    
+    if [[ "$CONDITION" == "Y" || "$CONDITION" == "y" ]] ; then
         echo Umounting dir...
         umountdir 2>/dev/null
         if [ -e $OUT/buildallstep ] ; then

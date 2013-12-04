@@ -564,6 +564,7 @@ function mcos()
         if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDCOSSTEP
             sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
+            sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return
         fi
 
         #Install cos boot splash

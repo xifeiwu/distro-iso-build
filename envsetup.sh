@@ -488,6 +488,7 @@ function mcos()
         fi
         if [ $BUITSTEP -le 6 ] ; then
             echo 6 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installfirefox.sh $OUTPATH $APPPATH || return
             sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
         fi
         if [ $BUITSTEP -le 7 ] ; then

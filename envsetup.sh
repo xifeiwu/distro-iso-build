@@ -155,16 +155,16 @@ function cmaster()
 
 function checktools()
 {
-    dpkg -s squashfs-tools > /dev/null
+    command -v unsquashfs > /dev/null
     if [ ! $? == 0 ] ; then
         echo ERROR: squashfs-tools has not been installed.
-        dpkg -s reprepro > /dev/null
+        command -v reprepro > /dev/null
         if [ ! $? == 0 ] ; then
             echo ERROR: reprepro has not been installed.
         fi
         return 1
     fi
-    dpkg -s reprepro > /dev/null
+    command -v reprepro > /dev/null
     if [ ! $? == 0 ] ; then
         echo ERROR: reprepro has not been installed.
         return 1
@@ -568,6 +568,7 @@ function mcos()
             echo 20 >$BUILDCOSSTEP
             sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
             sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return
+            sudo sh $T/build/release/change_networking.sh $OUTPATH || return
         fi
 
         #Install cos boot splash

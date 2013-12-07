@@ -283,13 +283,16 @@ function mm()
             echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
             return 1
         fi
-        if ls ../*.* >/dev/null 2>&1 ; then
-            echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
-            echo
-            echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
-            return 1
-        fi
-        dpkg-checkbuilddeps
+        for file in `ls ../ | sort`
+        do
+            if [ -f ../$file ] ; then
+                echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
+                echo
+                echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
+                return 1
+            fi
+        done 
+        checkdep
         if [ ! $? == 0 ] ; then
             return 1
         fi
@@ -602,6 +605,7 @@ function getprepkg ()
         fi
         cd $(gettop)
         sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWISOADDRESS $RAWPREAPPADDRESS
+        addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1

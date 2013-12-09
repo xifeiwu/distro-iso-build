@@ -50,6 +50,12 @@ function repo()
     fi
     
     $T/.repo/repo/repo $*
+
+    if [ $# -eq 1 ] ; then
+        if [ "$1" == "sync" ] ; then
+            source $T/build/envsetup.sh
+        fi
+    fi
 }
 
 function resource()

@@ -14,13 +14,15 @@ else
     exit -1
 fi
 
-echo -e "\033[31m - custom packages. \033[0m"
+echo -e "\033[31m-custom repo for packages. \033[0m"
 cp -r ${MATERIALDIR}/packages/deb-replace.sh ${WORKDIR}/squashfs-root/tmp/
 cp -r ${MATERIALDIR}/packages/repos-conf.pl ${WORKDIR}/squashfs-root/tmp/
 
 cd ${WORKDIR}
 #chroot squashfs-root /bin/bash -c "dpkg -i /tmp/cos-upgrade_2013.09.30_i386.deb && cos-upgrade"
 chroot squashfs-root /bin/bash -c "bash /tmp/deb-replace.sh"
+
+echo -e "\033[31m-custom repo for packages finished. \033[0m"
 
 #mintwelcome_mo="squashfs-root/usr/share/linuxmint/locale/zh_CN/LC_MESSAGES/mintwelcome.mo"
 #cp ${MATERIALDIR}/packages/mintwelcome.mo ${WORKDIR}/${mintwelcome_mo}

@@ -44,11 +44,11 @@ run_patch(){
     fi
 }
 
-echo -e "\033[31m - custom ubiquity. \033[0m"
+echo -e "\033[31m-custom ubiquity. \033[0m"
 cd ${MATERIALDIR}/ubiquity
 set +e
-diff -urNa squashfs-root-raw squashfs-root > /tmp/ubiquity.patch
+diff -ura squashfs-root-raw squashfs-root > /tmp/ubiquity.patch
 set -e
 run_patch -p0 -d ${WORKDIR}/ -i /tmp/ubiquity.patch
 rm /tmp/ubiquity.patch
-echo -e "\033[31m - custom ubiquity finished. \033[0m"
+echo -e "\033[31m-custom ubiquity finished. \033[0m"

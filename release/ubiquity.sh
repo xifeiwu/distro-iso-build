@@ -52,3 +52,12 @@ set -e
 run_patch -p0 -d ${WORKDIR}/ -i /tmp/ubiquity.patch
 rm /tmp/ubiquity.patch
 echo -e "\033[31m-custom ubiquity finished. \033[0m"
+
+echo -e "\033[31m-custom ubiquity-slideshow. \033[0m"
+cd ${MATERIALDIR}/ubiquity-slideshow
+set +e
+diff -ura squashfs-root-raw squashfs-root > /tmp/ubiquity-slideshow.patch
+set -e
+run_patch -p0 -d ${WORKDIR}/ -i /tmp/ubiquity-slideshow.patch
+rm /tmp/ubiquity-slideshow.patch
+echo -e "\033[31m-custom ubiquity-slideshow finished. \033[0m"

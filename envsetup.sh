@@ -574,7 +574,7 @@ function mcos()
 		sudo mkdir $OUTPATH/squashfs-root/usr/share/apps/goldendict
 	    fi
 	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dicts.tar.gz -C $OUTPATH/squashfs-root/usr/share/apps/goldendict/
-	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dictscache.tar.gz $OUTPATH/squashfs-root/etc/skel/
+	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dictscache.tar.gz -C $OUTPATH/squashfs-root/etc/skel/
 	fi
 
         #Change some icon\theme\applications name and so on.

@@ -79,7 +79,7 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=cos_orig_v0.9_nvi+s3g.iso2.iso
+    export RAWISONAME=cos_orig_v0.9.iso
     export ISOPATH=$OUT/$RAWISONAME
     export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/

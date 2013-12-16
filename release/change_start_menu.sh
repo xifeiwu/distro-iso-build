@@ -31,6 +31,8 @@ if [ ! -x "$applicationPath" ] ; then
 fi
 cd $OUTPATH/squashfs-root/usr/share
 run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
+rm -r $OUTPATH/squashfs-root/usr/share/applications/*.rej
+rm -r $OUTPATH/squashfs-root/usr/share/applications/*.orig
 echo "Patch applications directory successfully!"
 
 #directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories

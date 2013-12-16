@@ -14,41 +14,6 @@ diff -uN applications_raw/aptoncd.desktop applications/aptoncd.desktop
 -StartupNotify=true
 -Categories=System;Settings;
 -X-Ubuntu-Gettext-Domain=aptoncd
-diff -uN applications_raw/banshee-audiocd.desktop applications/banshee-audiocd.desktop
---- applications_raw/banshee-audiocd.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/banshee-audiocd.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -4,6 +4,7 @@
- MimeType=x-content/audio-cdda;
- Version=1.0
- Name=Banshee
-+Name[zh_CN]=Banshee音乐播放器
- GenericName=Media Player
- X-GNOME-FullName=Banshee Media Player
- Comment=Play and organize your media collection
-diff -uN applications_raw/banshee.desktop applications/banshee.desktop
---- applications_raw/banshee.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/banshee.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -2,6 +2,7 @@
- Exec=banshee --redirect-log --play-enqueued %U
- Version=1.0
- Name=Banshee
-+Name[zh_CN]=Banshee音乐播放器
- GenericName=Media Player
- X-GNOME-FullName=Banshee Media Player
- Comment=Play and organize your media collection
-diff -uN applications_raw/banshee-media-player.desktop applications/banshee-media-player.desktop
---- applications_raw/banshee-media-player.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/banshee-media-player.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -3,7 +3,8 @@
- NoDisplay=true
- MimeType=x-content/audio-player;
- Version=1.0
--Name=Banshee
-+Name=Banshee音乐播放器
-+Name[zh_CN]=Banshee音乐播放器
- GenericName=Media Player
- X-GNOME-FullName=Banshee Media Player
- Comment=Play and organize your media collection
 diff -uN applications_raw/baobab.desktop applications/baobab.desktop
 --- applications_raw/baobab.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/baobab.desktop	2013-11-08 11:13:38.800457817 +0800
@@ -79,30 +44,6 @@ diff -uN applications_raw/bluetooth-wizard.desktop applications/bluetooth-wizard
  Comment=Setup Bluetooth devices
  Icon=bluetooth
  Exec=bluetooth-wizard
-diff -uN applications_raw/brasero.desktop applications/brasero.desktop
---- applications_raw/brasero.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/brasero.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -1,8 +1,9 @@
- [Desktop Entry]
- Name=Brasero
-+Name[zh_CN]=Brasero光盘刻录工具
- GenericName=Disc Burner and Copier
- Comment=Create and copy CDs and DVDs
--Categories=GTK;GNOME;AudioVideo;DiscBurning;
-+Categories=GTK;GNOME;System;DiscBurning;
- MimeType=application/x-cd-image;application/x-cdrdao-toc;application/x-cue;application/x-toc;audio/x-scpls;audio/x-ms-asx;audio/x-mp3-playlist;audio/x-mpegurl;application/x-brasero;x-content/audio-cdda;x-content/video-dvd;x-content/video-vcd;x-content/video-svcd;x-content/image-picturecd;
- Exec=brasero %U
- Icon=brasero
-diff -uN applications_raw/brasero-nautilus.desktop applications/brasero-nautilus.desktop
---- applications_raw/brasero-nautilus.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/brasero-nautilus.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -1,5 +1,6 @@
- [Desktop Entry]
- Name=CD/DVD Creator
-+Name[zh_CN]=CD/DVD 刻录工具
- Comment=Create CDs and DVDs
- Categories=GNOME;GTK;System;
- TryExec=nautilus
 diff -uN applications_raw/caribou.desktop applications/caribou.desktop
 --- applications_raw/caribou.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/caribou.desktop	2013-11-08 11:13:38.800457817 +0800
@@ -261,18 +202,6 @@ diff -uN applications_raw/cinnamon-user-accounts-panel.desktop applications/cinn
  OnlyShowIn=GNOME;
  X-Cinnamon-Settings-Panel=user-accounts
  # Translators: those are keywords for the user accounts control-center panel
-diff -uN applications_raw/eog.desktop applications/eog.desktop
---- applications_raw/eog.desktop	2013-11-08 11:13:38.804457817 +0800
-+++ applications/eog.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -1,6 +1,8 @@
- [Desktop Entry]
- Name=Image Viewer
-+Name[zh_CN]=图片查看器
- Comment=Browse and rotate images
-+Comment[zh_CN]=图片查看
- TryExec=eog
- Exec=eog %U
- Icon=eog
 diff -uN applications_raw/evince.desktop applications/evince.desktop
 --- applications_raw/evince.desktop	2013-11-08 11:13:38.804457817 +0800
 +++ applications/evince.desktop	2013-11-08 11:13:38.800457817 +0800
@@ -522,20 +451,6 @@ diff -uN applications_raw/gedit.desktop applications/gedit.desktop
  GenericName=Text Editor
  Comment=Edit text files
  Exec=gedit %U
-diff -uN applications_raw/gimp.desktop applications/gimp.desktop
---- applications_raw/gimp.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/gimp.desktop	2013-11-08 11:13:38.800457817 +0800
-@@ -2,8 +2,10 @@
- Version=1.0
- Type=Application
- Name=GIMP Image Editor
-+Name[zh_CN]=GIMP图片编辑器
- GenericName=Image Editor
- Comment=Create images and edit photographs
-+Comment[zh_CN]=创建并编辑图片
- Exec=gimp-2.8 %U
- TryExec=gimp-2.8
- Icon=gimp
 diff -uN applications_raw/gnome-disk-image-mounter.desktop applications/gnome-disk-image-mounter.desktop
 --- applications_raw/gnome-disk-image-mounter.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gnome-disk-image-mounter.desktop	2013-11-08 11:13:38.800457817 +0800
@@ -683,17 +598,6 @@ diff -uN applications_raw/gnome-user-share-properties.desktop applications/gnome
 -X-GNOME-Bugzilla-Component=general
 -X-Ubuntu-Gettext-Domain=gnome-user-share
 -
-diff -uN applications_raw/google-chrome.desktop applications/google-chrome.desktop
---- applications_raw/google-chrome.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/google-chrome.desktop	2013-11-08 11:13:38.804457817 +0800
-@@ -1,6 +1,7 @@
- [Desktop Entry]
- Version=1.0
- Name=Google Chrome
-+Name[zh_CN]=Google 浏览器
- # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
- # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
- GenericName=Web Browser
 diff -uN applications_raw/gparted.desktop applications/gparted.desktop
 --- applications_raw/gparted.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/gparted.desktop	2013-11-08 11:13:38.804457817 +0800
@@ -1407,33 +1311,6 @@ diff -uN applications_raw/openjdk-7-policytool.desktop applications/openjdk-7-po
 -Type=Application
 -Icon=openjdk-7
 -Categories=Settings;
-diff -uN applications_raw/pidgin.desktop applications/pidgin.desktop
---- applications_raw/pidgin.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/pidgin.desktop	2013-11-08 11:13:38.804457817 +0800
-@@ -1,5 +1,6 @@
- [Desktop Entry]
- Name=Pidgin Internet Messenger
-+Name[zh_CN]=Pidgin即时消息
- GenericName=Internet Messenger
- Comment=Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, MSN, Yahoo and more
- Exec=pidgin
-diff -uN applications_raw/qq2012-test.desktop applications/qq2012-test.desktop
---- applications_raw/qq2012-test.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/qq2012-test.desktop	2013-11-08 11:13:38.804457817 +0800
-@@ -2,6 +2,7 @@
- [Desktop Entry]
- Categories=Network;InstantMessaging;
- Name=QQ2012
-+Name[zh_CN]=腾讯QQ2012
- Icon=/opt/longene/qq2012/qq2012.png
- Exec=/opt/longene/qq2012/qq2012.sh
- StartupNotify=true
-@@ -9,3 +10,5 @@
- Type=Application
- Name[en]=QQ2012
- Name[en_US]=QQ2012
-+Comment=QQ2012
-+Comment[zh_CN]=腾讯QQ2012
 diff -uN applications_raw/seahorse.desktop applications/seahorse.desktop
 --- applications_raw/seahorse.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/seahorse.desktop	1970-01-01 08:00:00.000000000 +0800
@@ -1723,24 +1600,6 @@ diff -uN applications_raw/totem.desktop applications/totem.desktop
  Keywords=Video;Movie;Film;Clip;Series;Player;DVD;TV;Disc;
  Exec=totem %U
  Icon=totem
-diff -uN applications_raw/transmission-gtk.desktop applications/transmission-gtk.desktop
---- applications_raw/transmission-gtk.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/transmission-gtk.desktop	2013-11-08 11:13:38.804457817 +0800
-@@ -1,5 +1,6 @@
- [Desktop Entry]
- Name=Transmission
-+Name[zh_CN]=BT下载器
- GenericName=BitTorrent Client
- X-GNOME-FullName=Transmission BitTorrent Client
- X-GNOME-FullName[ar]=ترانزميشن، عميل «بت تورنت»
-@@ -65,6 +66,7 @@
- X-GNOME-FullName[zh_CN]=Transmission BitTorrent 客户端
- X-GNOME-FullName[zh_TW]=Transmission BitTorrent 用戶端
- Comment=Download and share files over BitTorrent
-+Comment[zh_CN]=下载和分享文件
- Exec=transmission-gtk %U
- Icon=transmission
- Terminal=false
 diff -uN applications_raw/ubiquity-gtkui.desktop applications/ubiquity-gtkui.desktop
 --- applications_raw/ubiquity-gtkui.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/ubiquity-gtkui.desktop	2013-11-08 11:13:38.804457817 +0800
@@ -1905,36 +1764,6 @@ diff -uN applications_raw/vino-preferences.desktop applications/vino-preferences
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=vino
  X-GNOME-Bugzilla-Component=Preferences Dialog
-diff -uN applications_raw/vlc.desktop applications/vlc.desktop
---- applications_raw/vlc.desktop	2013-11-08 11:13:38.808457818 +0800
-+++ applications/vlc.desktop	2013-11-08 11:13:38.804457817 +0800
-@@ -11,7 +11,7 @@
- Name[ca]=Reproductor multimèdia VLC
- GenericName[ca]=Reproductor multimèdia
- Comment[ca]=Reproduïu, captureu i difoneu fluxos multimèdia
--Name[de]=VLC Media Player
-+Name[de]=VLC media player
- GenericName[de]=Medienwiedergabe
- Comment[de]=Wiedergabe, Aufnahme und Verbreitung Ihrer Multimedia-Streams
- Name[es]=Reproductor multimedia VLC
-@@ -54,7 +54,7 @@
- Name[lt]=VLC leistuvė 
- GenericName[lt]=Leistuvė
- Comment[lt]=Groti, įrašyti, siųsti įvairialypės terpės kūrinius
--Name[nl]=VLC Media Player
-+Name[nl]=VLC media player
- GenericName[nl]=Mediaspeler
- Comment[nl]=Uw multimediastreams afspelen, opnemen en uitzenden
- Name[nn]=VLC mediespelar
-@@ -85,7 +85,7 @@
- Name[wa]=Djouweu d' media VLC
- GenericName[wa]=Djouweu d' media
- Comment[wa]=Lét, egaloye, evoye vos floûs multimedia
--Name[zh_CN]=VLC media player
-+Name[zh_CN]=VLC播放器
- GenericName[zh_CN]=媒体播放器
- Comment[zh_CN]=为您读取、捕获或发送多媒体流
- Name[zh_TW]=VLC 媒體播放器
 diff -uN applications_raw/xchat.desktop applications/xchat.desktop
 --- applications_raw/xchat.desktop	2013-11-08 11:13:38.808457818 +0800
 +++ applications/xchat.desktop	1970-01-01 08:00:00.000000000 +0800

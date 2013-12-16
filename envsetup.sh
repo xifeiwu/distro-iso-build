@@ -79,7 +79,7 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=cos_orig_v0.9.iso
+    export RAWISONAME=cos_orig_v0.9_nvi+s3g.iso2.iso
     export ISOPATH=$OUT/$RAWISONAME
     export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
@@ -469,112 +469,130 @@ function mcos()
         fi
 
         echo Building COS Desktop ...
-        if [ $BUITSTEP -le 1 ] ; then
-            echo 1 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 10 ] ; then
+            echo 10 >$BUILDCOSSTEP
             getprepkg || return
         fi
-        if [ $BUITSTEP -le 2 ] ; then
-            echo 2 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 20 ] ; then
+            echo 20 >$BUILDCOSSTEP
             checktools || return
             mall || return
         fi
-        if [ $BUITSTEP -le 3 ] ; then
-            echo 3 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 30 ] ; then
+            echo 30 >$BUILDCOSSTEP
             uniso || return
         fi
 
         mountdir
 
-        if [ $BUITSTEP -le 4 ] ; then
-            echo 4 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 40 ] ; then
+            echo 40 >$BUILDCOSSTEP
             sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
         fi
 
         #Install popular software
-        if [ $BUITSTEP -le 5 ] ; then
-            echo 5 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 50 ] ; then
+            echo 50 >$BUILDCOSSTEP
             sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -le 6 ] ; then
-            echo 6 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 51 ] ; then
+            echo 51 >$BUILDCOSSTEP
             sudo sh $T/build/release/installfirefox.sh $OUTPATH $APPPATH || return
-            sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
+#            sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -le 7 ] ; then
-            echo 7 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 52 ] ; then
+            echo 52 >$BUILDCOSSTEP
             sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -le 8 ] ; then
-            echo 8 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 53 ] ; then
+            echo 53 >$BUILDCOSSTEP
+#            sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
         fi
 
         #Install ssh and close root user with ssh authority.
-        if [ $BUITSTEP -le 9 ] ; then
-            echo 9 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 54 ] ; then
+            echo 54 >$BUILDCOSSTEP
             sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
         fi
 
         #Install Self software
-        if [ $BUITSTEP -le 10 ] ; then
-            echo 10 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 55 ] ; then
+            echo 55 >$BUILDCOSSTEP
+#            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
         fi
-        if [ $BUITSTEP -le 11 ] ; then
-            echo 11 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
+        if [ $BUITSTEP -le 56 ] ; then
+            echo 56 >$BUILDCOSSTEP
+#            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
         fi
 
         #Change iso files
-        if [ $BUITSTEP -le 12 ] ; then
-            echo 12 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 60 ] ; then
+            echo 60 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -le 13 ] ; then
-            echo 13 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 70 ] ; then
+            echo 70 >$BUILDCOSSTEP
             sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
         fi
 
         #Change some zh_CN LC_MESSAGES
-        if [ $BUITSTEP -le 14 ] ; then
-            echo 14 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 80 ] ; then
+            echo 80 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return
         fi
 
         #Change system name in some where. This shell file also will install some software in cos source list.
-        if [ $BUITSTEP -le 15 ] ; then
-            echo 15 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 90 ] ; then
+            echo 90 >$BUILDCOSSTEP
             sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return
         fi
 
-        if [ $BUITSTEP -le 16 ] ; then
-            echo 16 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 100 ] ; then
+            echo 100 >$BUILDCOSSTEP
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
-                uninstallmintdeb || return
+            uninstallmintdeb || return
+	    #wangyu: Debs should be removed by the information of Local Application Group
+	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5" || return
             if [ $ISONLINE == 1 ] ; then
-                installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-meta-codecs cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
+                installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
             else
-                installdeball 
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments" 
             fi
-                mountdir
+            mountdir
         fi
 
+	#wangyu: Install apps from local application group.
+	if [ $BUITSTEP -le 101 ] ; then
+	    echo 101 >$BUILDCOSSTEP
+   	    for line in `find $OUT/$PREAPP/appByLocalGroup/ -name "*.deb"`
+	    do
+                addrepository $line
+    	    done
+	    installdeball
+            mountdir
+	    if [ ! -x $OUTPATH/squashfs-root/usr/share/apps/goldendict ] ; then
+		sudo mkdir $OUTPATH/squashfs-root/usr/share/apps/goldendict
+	    fi
+	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dicts.tar.gz -C $OUTPATH/squashfs-root/usr/share/apps/goldendict/
+	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dictscache.tar.gz -C $OUTPATH/squashfs-root/etc/skel/
+	fi
+
         #Change some icon\theme\applications name and so on.
-        if [ $BUITSTEP -le 17 ] ; then
-            echo 17 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 110 ] ; then
+            echo 110 >$BUILDCOSSTEP
             sudo sh $T/build/release/mktheme.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -le 18 ] ; then
-            echo 18 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 120 ] ; then
+            echo 120 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return
         fi
-        if [ $BUITSTEP -le 19 ] ; then
-            echo 19 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 130 ] ; then
+            echo 130 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
         fi
         #fix a bug of wps when first opened.
-        if [ $BUITSTEP -le 20 ] ; then
-            echo 20 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 140 ] ; then
+            echo 140 >$BUILDCOSSTEP
             sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
             sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return
             sudo sh $T/build/release/change_networking.sh $OUTPATH || return
@@ -588,10 +606,11 @@ function mcos()
 
         umountdir
 
-        if [ $BUITSTEP -le 21 ] ; then
+        if [ $BUITSTEP -le 150 ] ; then
+            echo 150 >$BUILDCOSSTEP
             mkiso || return
-            echo 100 >$BUILDCOSSTEP
         fi
+        echo 200 >$BUILDCOSSTEP
         echo Finish building COS Desktop.
         echo ======
         echo Tips: You can enter runiso command to run the iso generated.

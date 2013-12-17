@@ -72,6 +72,7 @@ function setenv()
     fi
 
     . $T/build/set_version.sh
+    . $T/build/core/install_kernel.sh
 
     export OUT=$T/workout
     export APPOUT=debsaved
@@ -79,10 +80,12 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=cos_orig_v0.9.iso
+    export RAWISONAME=linuxmint-15-cinnamon-dvd-32bit.iso
     export ISOPATH=$OUT/$RAWISONAME
     export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
+    export KERNEL_VERSION=3.8.13
+    export KERNEL_VERSION_FULL=3.8.13.13-cos-i686
 }
 
 function addcompletions()
@@ -233,27 +236,26 @@ function checkdepall()
 function uniso()
 {
     T=$(gettop)
-    if [ "$T" ]; then
-        if [ ! -e $OUT/out ] ; then
-            mkdir -p $OUT/out
-        fi
-        checktools || return 1
-        sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
-    else
+    if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+    if [ ! -e $OUT/out ] ; then
+        mkdir -p $OUT/out
+    fi
+    checktools || return 1
+    sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
 }
 
 function mkiso()
 {
     T=$(gettop)
-    if [ "$T" ]; then
-        sudo sh $T/build/mkiso.sh $OUT/out $OUT
-    else
+    if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+    umountdir
+    sudo sh $T/build/mkiso.sh $OUT/out $OUT
 }
 
 function m()
@@ -487,12 +489,13 @@ function mcos()
 
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
+            intkernel || return
         fi
 
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
             sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
         fi
         if [ $BUITSTEP -le 51 ] ; then
@@ -645,7 +648,7 @@ function mountdir()
         sudo umount $OUT/out/squashfs-root/dev
         sudo umount $OUT/out/squashfs-root/proc
     fi
-    sudo mount -o bind /dev $OUT/out/squashfs-root/dev
+    sudo mount -t devtmpf -o bind /dev $OUT/out/squashfs-root/dev
     sudo mount -t proc -o bind /proc $OUT/out/squashfs-root/proc
     sudo mount none -t devpts $OUT/out/squashfs-root/dev/pts
     sudo mount none -t sysfs $OUT/out/squashfs-root/sys

@@ -609,6 +609,13 @@ function mcos()
 
         umountdir
 
+        if [ $BUITSTEP -le 149 ] ; then
+            echo 149 >$BUILDCOSSTEP
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
+            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/vmlinuz
+            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/initrd.lz
+        fi
+
         if [ $BUITSTEP -le 150 ] ; then
             echo 150 >$BUILDCOSSTEP
             mkiso || return

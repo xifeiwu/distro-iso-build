@@ -33,3 +33,7 @@ echo Success generating info file.
 echo change mymint/isolinux/splash.png
 cp $DISTURBPATH/isolinux/splash.jpg $OUTPATH/mymint/isolinux/splash.jpg
 echo success changing splash.jpg
+
+echo change casper username and hostname
+sed -i 's/mint/cos/' $OUTPATH/squashfs-root/etc/casper.conf
+echo success changing casper username and hostname

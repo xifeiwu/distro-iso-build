@@ -566,12 +566,21 @@ function mcos()
 
 	#wangyu: Install apps from local application group.
 	if [ $BUITSTEP -le 101 ] ; then
-	    echo 101 >$BUILDCOSSTEP
-   	    for line in `find $OUT/$PREAPP/appByLocalGroup/ -name "*.deb"`
+            echo 101 >$BUILDCOSSTEP
+            HASDEBFILE=0
+            DEBTOINSTALL=""
+            for line in `find $OUT/$PREAPP/appByLocalGroup/ -name "*.deb"`
 	    do
+                HASDEBFILE=1
+                DEBNAME=`dpkg -f $line Package`
+                DEBTOINSTALL=`echo $DEBTOINSTALL $DEBNAME`
                 addrepository $line
     	    done
-	    installdeball
+            if [ $HASDEBFILE == 0 ] ; then
+                echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
+                return 1
+            fi
+            installdeb "$DEBTOINSTALL"
             mountdir
 	    if [ ! -x $OUTPATH/squashfs-root/usr/share/apps/goldendict ] ; then
 		sudo mkdir $OUTPATH/squashfs-root/usr/share/apps/goldendict
@@ -607,14 +616,14 @@ function mcos()
         #    echo 21 >$BUILDCOSSTEP
         #fi
 
-        umountdir
-
         if [ $BUITSTEP -le 149 ] ; then
             echo 149 >$BUILDCOSSTEP
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
             sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/vmlinuz
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/initrd.lz
         fi
+
+        umountdir
 
         if [ $BUITSTEP -le 150 ] ; then
             echo 150 >$BUILDCOSSTEP

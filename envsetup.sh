@@ -73,6 +73,7 @@ function setenv()
 
     . $T/build/set_version.sh
     . $T/build/core/install_kernel.sh
+    . $T/build/core/vendor/install_nvidia_lenovo.sh
 
     export OUT=$T/workout
     export APPOUT=debsaved
@@ -433,6 +434,7 @@ function mcos()
 {
     ISONLINE=0
     BUITSTEP=0
+    IS4LENOVO=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -445,6 +447,8 @@ function mcos()
     do
         if [ "$i" == "--online" ] ; then
             ISONLINE=1
+        elif [ "$i" == "--lenovo" ] ; then
+            IS4LENOVO=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -490,6 +494,13 @@ function mcos()
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDCOSSTEP
             intkernel || return
+        fi
+
+        if [ $BUITSTEP -le 41 ] ; then
+            echo 41 >$BUILDCOSSTEP
+            if [ $IS4LENOVO -eq 1 ] ; then
+                intnvidiadriver || return
+            fi
         fi
 
         #Install popular software
@@ -616,11 +627,16 @@ function mcos()
         #    echo 21 >$BUILDCOSSTEP
         #fi
 
-        if [ $BUITSTEP -le 149 ] ; then
-            echo 149 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 148 ] ; then
+            echo 148 >$BUILDCOSSTEP
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
             sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/vmlinuz
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/initrd.lz
+        fi
+
+        if [ $BUITSTEP -le 149 ] ; then
+            echo 149 >$BUILDCOSSTEP
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
         fi
 
         umountdir
@@ -665,7 +681,7 @@ function mountdir()
         sudo umount $OUT/out/squashfs-root/proc
     fi
     sudo mount -t devtmpf -o bind /dev $OUT/out/squashfs-root/dev
-    sudo mount -t proc -o bind /proc $OUT/out/squashfs-root/proc
+    sudo mount -t proc proc $OUT/out/squashfs-root/proc
     sudo mount none -t devpts $OUT/out/squashfs-root/dev/pts
     sudo mount none -t sysfs $OUT/out/squashfs-root/sys
 }

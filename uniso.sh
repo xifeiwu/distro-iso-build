@@ -29,7 +29,7 @@ fi
 ISOPATH=$1
 OUTPATH=$(cd $2; pwd)
 
-echo uniso.sh will export iso file to $OUTPATH, the dir tree like this:
+echo uniso.sh will export iso $ISOPATH file to $OUTPATH, the dir tree like this:
 echo +mkiso_out
 echo \|---mymint---------------  The files contained in iso.
 echo \|---initrd_lz------------  The files contained in iso/casper/initrd_lz

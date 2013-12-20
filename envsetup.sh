@@ -72,6 +72,8 @@ function setenv()
     fi
 
     . $T/build/set_version.sh
+    . $T/build/core/install_kernel.sh
+    . $T/build/core/vendor/install_nvidia_lenovo.sh
 
     export OUT=$T/workout
     export APPOUT=debsaved
@@ -79,10 +81,12 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=cos_orig_v0.9_nvi+s3g.iso2.iso
+    export RAWISONAME=linuxmint-15-cinnamon-dvd-32bit.iso
     export ISOPATH=$OUT/$RAWISONAME
     export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
+    export KERNEL_VERSION=3.8.13
+    export KERNEL_VERSION_FULL=3.8.13.13-cos-i686
 }
 
 function addcompletions()
@@ -233,27 +237,26 @@ function checkdepall()
 function uniso()
 {
     T=$(gettop)
-    if [ "$T" ]; then
-        if [ ! -e $OUT/out ] ; then
-            mkdir -p $OUT/out
-        fi
-        checktools || return 1
-        sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
-    else
+    if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+    if [ ! -e $OUT/out ] ; then
+        mkdir -p $OUT/out
+    fi
+    checktools || return 1
+    sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
 }
 
 function mkiso()
 {
     T=$(gettop)
-    if [ "$T" ]; then
-        sudo sh $T/build/mkiso.sh $OUT/out $OUT
-    else
+    if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+    umountdir
+    sudo sh $T/build/mkiso.sh $OUT/out $OUT
 }
 
 function m()
@@ -431,6 +434,7 @@ function mcos()
 {
     ISONLINE=0
     BUITSTEP=0
+    IS4LENOVO=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -443,6 +447,8 @@ function mcos()
     do
         if [ "$i" == "--online" ] ; then
             ISONLINE=1
+        elif [ "$i" == "--lenovo" ] ; then
+            IS4LENOVO=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -487,12 +493,20 @@ function mcos()
 
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
+            intkernel || return
+        fi
+
+        if [ $BUITSTEP -le 41 ] ; then
+            echo 41 >$BUILDCOSSTEP
+            if [ $IS4LENOVO -eq 1 ] ; then
+                intnvidiadriver || return
+            fi
         fi
 
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
             sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
         fi
         if [ $BUITSTEP -le 51 ] ; then
@@ -552,7 +566,7 @@ function mcos()
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
             uninstallmintdeb || return
 	    #wangyu: Debs should be removed by the information of Local Application Group
-	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5" || return
+	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return
             if [ $ISONLINE == 1 ] ; then
                 installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
             else
@@ -563,12 +577,21 @@ function mcos()
 
 	#wangyu: Install apps from local application group.
 	if [ $BUITSTEP -le 101 ] ; then
-	    echo 101 >$BUILDCOSSTEP
-   	    for line in `find $OUT/$PREAPP/appByLocalGroup/ -name "*.deb"`
+            echo 101 >$BUILDCOSSTEP
+            HASDEBFILE=0
+            DEBTOINSTALL=""
+            for line in `find $OUT/$PREAPP/appByLocalGroup/ -name "*.deb"`
 	    do
+                HASDEBFILE=1
+                DEBNAME=`dpkg -f $line Package`
+                DEBTOINSTALL=`echo $DEBTOINSTALL $DEBNAME`
                 addrepository $line
     	    done
-	    installdeball
+            if [ $HASDEBFILE == 0 ] ; then
+                echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
+                return 1
+            fi
+            installdeb "$DEBTOINSTALL"
             mountdir
 	    if [ ! -x $OUTPATH/squashfs-root/usr/share/apps/goldendict ] ; then
 		sudo mkdir $OUTPATH/squashfs-root/usr/share/apps/goldendict
@@ -603,6 +626,18 @@ function mcos()
         #    sudo sh $T/build/release/installcossplash.sh $OUTPATH $APPPATH || return
         #    echo 21 >$BUILDCOSSTEP
         #fi
+
+        if [ $BUITSTEP -le 148 ] ; then
+            echo 148 >$BUILDCOSSTEP
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
+            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/vmlinuz
+            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/initrd.lz
+        fi
+
+        if [ $BUITSTEP -le 149 ] ; then
+            echo 149 >$BUILDCOSSTEP
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
+        fi
 
         umountdir
 
@@ -645,8 +680,8 @@ function mountdir()
         sudo umount $OUT/out/squashfs-root/dev
         sudo umount $OUT/out/squashfs-root/proc
     fi
-    sudo mount -o bind /dev $OUT/out/squashfs-root/dev
-    sudo mount -t proc -o bind /proc $OUT/out/squashfs-root/proc
+    sudo mount -t devtmpf -o bind /dev $OUT/out/squashfs-root/dev
+    sudo mount -t proc proc $OUT/out/squashfs-root/proc
     sudo mount none -t devpts $OUT/out/squashfs-root/dev/pts
     sudo mount none -t sysfs $OUT/out/squashfs-root/sys
 }

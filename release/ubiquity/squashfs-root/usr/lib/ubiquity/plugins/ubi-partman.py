@@ -611,8 +611,8 @@ class PageGtk(PageBase):
             ("replace", "replace_partition"),
             ("use_device", "use_device"),
             ("manual", "custom_partitioning"),
-#            ("some_device_crypto", "use_crypto"),
-#            ("some_device_lvm", "use_lvm"),
+            ("some_device_crypto", "use_crypto"),
+            ("some_device_lvm", "use_lvm"),
         )
 
         if 'some_device_crypto' in extra_options:

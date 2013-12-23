@@ -15,8 +15,8 @@ if [ -d $OUTPATH/initrd_lz ] ; then
     rm -f -r $OUTPATH/initrd_lz
 fi
 
-if [ -d $OUTPATH/mymint ] ; then
-    rm -f -r $OUTPATH/mymint
+if [ -d $OUTPATH/mycos ] ; then
+    rm -f -r $OUTPATH/mycos
 fi
 cd $WORKPATH
 git pull

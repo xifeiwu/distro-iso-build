@@ -41,9 +41,9 @@ sudo chroot ${CHROOTDIR} /bin/bash -c "mkinitramfs -o /initrd.gz 3.8.0-cos-v0.5-
 
 
 sudo cp ${CHROOTDIR}/initrd.gz ${CHROOTDIR}/boot/initrd.lz
-sudo cp ${CHROOTDIR}/initrd.gz ${MKISOOUTDIR}/mymint/casper/initrd.lz
+sudo cp ${CHROOTDIR}/initrd.gz ${MKISOOUTDIR}/mycos/casper/initrd.lz
 sudo rm -f ${CHROOTDIR}/initrd.gz
-sudo cp ${CHROOTDIR}/boot/vmlinuz-3.8.0-cos-v0.5-i686 ${MKISOOUTDIR}/mymint/casper/vmlinuz
+sudo cp ${CHROOTDIR}/boot/vmlinuz-3.8.0-cos-v0.5-i686 ${MKISOOUTDIR}/mycos/casper/vmlinuz
 
 
 
@@ -51,7 +51,7 @@ cd ${MKISOOUTDIR}
 if [ ! -e initrd_lz ] ; then
     echo lzma initrd.lz
     mkdir initrd_lz
-    cp mymint/casper/initrd.lz initrd_lz/initrd.lz
+    cp mycos/casper/initrd.lz initrd_lz/initrd.lz
     echo warning: now, it is supported the format of initrd.lz is gzip, not lzma. If it is lzma, you should change it.
     cd initrd_lz
     mv initrd.lz initrd.gz

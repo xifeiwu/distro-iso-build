@@ -1,0 +1,13 @@
+This directory contains the documents needed for making livecd system.
+
+install/
+Smart Boot Manager software, not being used for now.
+
+isolinux/
+This directory contains files from syslinux(isolinux.bin, vesamenu.c32), memtest, and configurations for livecd start.
+
+preseed/
+cos.seed file.
+
+.disk/
+Some configurations for livecd system.

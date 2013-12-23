@@ -62,12 +62,12 @@ cp $DISTURBPATH/tmpfiles/icon.png $OUTPATH/squashfs-root/usr/lib/linuxmint/mintI
 echo "Reconfig software center icon succefully!"
 
 #Here we will reconfig software sources...
-if [ ! -x $DISTURBPATH/tmpfiles/Iceblue ] ; then
-    echo "The config file of software source does not exist!"
-    exit -1
-fi
-cp -r $DISTURBPATH/tmpfiles/Iceblue $OUTPATH/squashfs-root/usr/share/mintsources/
-echo "Set up software sources succefully!"
+#if [ ! -x $DISTURBPATH/tmpfiles/Iceblue ] ; then
+#    echo "The config file of software source does not exist!"
+#    exit -1
+#fi
+#cp -r $DISTURBPATH/tmpfiles/Iceblue $OUTPATH/squashfs-root/usr/share/mintsources/
+#echo "Set up software sources succefully!"
 
 #change start menu icon
 echo change squashfs-root/usr/share/cinnamon/theme/menu.png

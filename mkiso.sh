@@ -31,13 +31,13 @@ GENISOPATH=$(cd $2; pwd)
 
 cd $OUTPATH
 
-if [ ! -e mymint ] ; then
-    echo error: mymint does not exist. exit.
+if [ ! -e mycos ] ; then
+    echo error: mycos does not exist. exit.
     exit -1
 fi
 
-if [ ! -e mymint/casper ] ; then
-    echo error: mymint/casper does not exist. exit.
+if [ ! -e mycos/casper ] ; then
+    echo error: mycos/casper does not exist. exit.
     exit -1
 fi
 
@@ -54,12 +54,12 @@ fi
 echo mkiso.sh will generate iso file $ISONAME in $GENISOPATH.
 
 echo generate manifest.
-chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mymint/casper/filesystem.manifest
-cp mymint/casper/filesystem.manifest mymint/casper/filesystem.manifest-desktop
-sed -i '/ubiquity/d' mymint/casper/filesystem.manifest-desktop
-sed -i '/casper/d' mymint/casper/filesystem.manifest-desktop
-sed -i '/libdebian-installer/d' mymint/casper/filesystem.manifest-desktop
-sed -i '/user-setup/d' mymint/casper/filesystem.manifest-desktop
+chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mycos/casper/filesystem.manifest
+cp mycos/casper/filesystem.manifest mycos/casper/filesystem.manifest-desktop
+sed -i '/ubiquity/d' mycos/casper/filesystem.manifest-desktop
+sed -i '/casper/d' mycos/casper/filesystem.manifest-desktop
+sed -i '/libdebian-installer/d' mycos/casper/filesystem.manifest-desktop
+sed -i '/user-setup/d' mycos/casper/filesystem.manifest-desktop
 
 #echo gzip initrd
 #cd initrd_lz
@@ -68,20 +68,21 @@ sed -i '/user-setup/d' mymint/casper/filesystem.manifest-desktop
 #fi
 #find . | cpio --quiet --dereference -o -H newc>./initrd
 #gzip initrd
-#mv initrd.gz ../mymint/casper/initrd.lz
+#mv initrd.gz ../mycos/casper/initrd.lz
 #cd ..
 
 echo mksquashfs
-rm -rf mymint/casper/filesystem.squashfs
-mksquashfs squashfs-root mymint/casper/filesystem.squashfs 
+rm -rf mycos/casper/filesystem.squashfs
+mksquashfs squashfs-root mycos/casper/filesystem.squashfs 
 
 echo gen md5sum
-cd mymint
+cd mycos
+find . -type f -print0 | xargs -0 md5sum > MD5SUMS
 find . -type f -print0 | xargs -0 md5sum > md5sum.txt
 cd ..
 
 echo  mkisofs
-cd mymint
+cd mycos
 mkisofs -r -V "COS Desktop" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
 echo mkiso has finished.
 cd ..

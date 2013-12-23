@@ -246,6 +246,7 @@ function uniso()
     fi
     checktools || return 1
     sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
+    sudo sh $T/build/livecd/create_livecd.sh $OUT/out
 }
 
 function mkiso()
@@ -530,24 +531,24 @@ function mcos()
         fi
 
         #Install Self software
-        if [ $BUITSTEP -le 55 ] ; then
-            echo 55 >$BUILDCOSSTEP
+#        if [ $BUITSTEP -le 55 ] ; then
+#            echo 55 >$BUILDCOSSTEP
 #            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
-        fi
-        if [ $BUITSTEP -le 56 ] ; then
-            echo 56 >$BUILDCOSSTEP
+#        fi
+#        if [ $BUITSTEP -le 56 ] ; then
+#            echo 56 >$BUILDCOSSTEP
 #            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
-        fi
+#        fi
 
         #Change iso files
-        if [ $BUITSTEP -le 60 ] ; then
-            echo 60 >$BUILDCOSSTEP
-            sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
-        fi
-        if [ $BUITSTEP -le 70 ] ; then
-            echo 70 >$BUILDCOSSTEP
-            sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
-        fi
+#        if [ $BUITSTEP -le 60 ] ; then
+#            echo 60 >$BUILDCOSSTEP
+#            sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
+#        fi
+#        if [ $BUITSTEP -le 70 ] ; then
+#            echo 70 >$BUILDCOSSTEP
+#            sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
+#        fi
 
         #Change some zh_CN LC_MESSAGES
         if [ $BUITSTEP -le 80 ] ; then
@@ -630,8 +631,8 @@ function mcos()
         if [ $BUITSTEP -le 148 ] ; then
             echo 148 >$BUILDCOSSTEP
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
-            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/vmlinuz
-            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mymint/casper/initrd.lz
+            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz
+            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz
         fi
 
         if [ $BUITSTEP -le 149 ] ; then

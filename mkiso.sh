@@ -60,6 +60,7 @@ sed -i '/ubiquity/d' mycos/casper/filesystem.manifest-desktop
 sed -i '/casper/d' mycos/casper/filesystem.manifest-desktop
 sed -i '/libdebian-installer/d' mycos/casper/filesystem.manifest-desktop
 sed -i '/user-setup/d' mycos/casper/filesystem.manifest-desktop
+printf $(sudo du -sx --block-size=1 . | cut -f1) > mycos/casper/filesystem.size
 
 #echo gzip initrd
 #cd initrd_lz

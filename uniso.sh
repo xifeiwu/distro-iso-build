@@ -47,14 +47,21 @@ if [ ! -d $OUTPATH/mycos ] ; then
     fi
 
     echo copy iso/casper to mycos, just wait for some minutes.
-    cp -r $OUTPATH/mintiso/casper $OUTPATH/mycos
+    mkdir $OUTPATH/mycos/casper
+    cp $OUTPATH/mintiso/casper/initrd.lz $OUTPATH/mycos/casper/
+    cp $OUTPATH/mintiso/casper/vmlinuz $OUTPATH/mycos/casper/
+    if [ ! -e squashfs-root ] ; then
+        echo unsquashfs mycos/casper/filesystem.squashfs
+        echo just wait for some minutes.
+        unsquashfs $OUTPATH/mintiso/casper/filesystem.squashfs
+    else
+        echo warning:squashfs-root has exist, it is expected filesystem.squashfs has been executed unsquashfs normally.    
+    fi
     umount $OUTPATH/mintiso
     rmdir $OUTPATH/mintiso
 else
     echo warning:mycos has exist, it is expected iso/* has been copied to mycos dir.
 fi
-
-cd $OUTPATH
 
 #if [ ! -e initrd_lz ] ; then
 #    echo gunzip initrd.lz
@@ -71,12 +78,4 @@ cd $OUTPATH
 #    echo warning: initrd_lz has exist, it is expected initrd.lz has been decompressed normally.
 #fi
 
-if [ ! -e squashfs-root ] ; then
-    echo unsquashfs mycos/casper/filesystem.squashfs
-    echo just wait for some minutes.
-    unsquashfs mycos/casper/filesystem.squashfs
-else
-    echo warning:squashfs-root has exist, it is expected filesystem.squashfs has been executed unsquashfs normally.    
-fi
-
-#echo uniso has finished.
+echo uniso has finished.

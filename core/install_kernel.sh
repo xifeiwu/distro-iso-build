@@ -23,7 +23,7 @@ function intkernel()
    sudo rm $OUT/out/squashfs-root/linux-headers-${KERNEL_VERSION_FULL}*.deb
    sudo rm $OUT/out/squashfs-root/linux-image-${KERNEL_VERSION_FULL}*.deb
 
-   sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz
-   sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz
+#   sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz
+#   sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz
    echo "replace kernel successfull !"
 }

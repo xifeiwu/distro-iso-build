@@ -35,15 +35,6 @@ rm -r $OUTPATH/squashfs-root/usr/share/applications/*.rej
 rm -r $OUTPATH/squashfs-root/usr/share/applications/*.orig
 echo "Patch applications directory successfully!"
 
-#directoryPath=$OUTPATH/squashfs-root/usr/share/desktop-directories
-#if [ ! -x "$directoryPath" ] ; then
-#    echo "The desktop directory does not exist!"
-#    exit -1
-#fi
-#cd $OUTPATH/squashfs-root/usr/share
-#run_patch -p0 -i $DISTURBPATH/tmpfiles/desktop-directories.patch
-#echo "Patch desktop directory successfully!"
-
 mdmApplicationsPath=$OUTPATH/squashfs-root/usr/share/mdm/applications
 if [ ! -x "$mdmApplicationsPath" ] ; then
     echo "The mdm applications directory does not exist!"
@@ -60,14 +51,6 @@ echo "Reconfig help menu succefully!"
 echo "Reconfig favorite menu succefully!"
 cp $DISTURBPATH/tmpfiles/icon.png $OUTPATH/squashfs-root/usr/lib/linuxmint/mintInstall/
 echo "Reconfig software center icon succefully!"
-
-#Here we will reconfig software sources...
-#if [ ! -x $DISTURBPATH/tmpfiles/Iceblue ] ; then
-#    echo "The config file of software source does not exist!"
-#    exit -1
-#fi
-#cp -r $DISTURBPATH/tmpfiles/Iceblue $OUTPATH/squashfs-root/usr/share/mintsources/
-#echo "Set up software sources succefully!"
 
 #change start menu icon
 echo change squashfs-root/usr/share/cinnamon/theme/menu.png

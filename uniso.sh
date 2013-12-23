@@ -50,6 +50,7 @@ if [ ! -d $OUTPATH/mycos ] ; then
     mkdir $OUTPATH/mycos/casper
     cp $OUTPATH/mintiso/casper/initrd.lz $OUTPATH/mycos/casper/
     cp $OUTPATH/mintiso/casper/vmlinuz $OUTPATH/mycos/casper/
+    cd $OUTPATH
     if [ ! -e squashfs-root ] ; then
         echo unsquashfs mycos/casper/filesystem.squashfs
         echo just wait for some minutes.

@@ -5,6 +5,7 @@ Smart Boot Manager software, not being used for now.
 
 isolinux/
 This directory contains files from syslinux(isolinux.bin, vesamenu.c32), memtest, and configurations for livecd start.
+memtest is copied from linuxmint, and memtest86*** is downloaded from http://memtest.org/.
 
 preseed/
 cos.seed file.

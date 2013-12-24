@@ -1,14 +1,25 @@
-This directory contains the documents needed for making livecd system.
+Files/
+1. create_livecd.sh
+   This shell file will create direcory which contains the documents needed for making livecd system as below.
+        |----isolinux/
+                  This directory contains files from syslinux
+        |----preseed/
+                  cos.seed file.
+        |----.disk/
+                  Some configurations for livecd system.
+        (not used now)|----install/
+                  Smart Boot Manager software, not being used for now.
 
-install/
-Smart Boot Manager software, not being used for now.
+2. files
+   This dir contains some file need be used in create_livecd.sh.
 
-isolinux/
-This directory contains files from syslinux(isolinux.bin, vesamenu.c32), memtest, and configurations for livecd start.
-memtest is copied from linuxmint, and memtest86*** is downloaded from http://memtest.org/.
+└── isolinux
+    ├── isolinux.bin
+    |         downloaded from              
+    ├── memtest86+-5.01.bin
+    |         downloaded from http://memtest.org/
+    ├── splash.jpg
+    |         made by cos project.
+    └── vesamenu.c32
+              downloaded from 
 
-preseed/
-cos.seed file.
-
-.disk/
-Some configurations for livecd system.

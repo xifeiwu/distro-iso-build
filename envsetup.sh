@@ -508,20 +508,14 @@ function mcos()
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP
             sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
-            sudo sh $T/build/release/installwps.sh $OUTPATH $APPPATH || return
         fi
         if [ $BUITSTEP -le 51 ] ; then
             echo 51 >$BUILDCOSSTEP
             sudo sh $T/build/release/installfirefox.sh $OUTPATH $APPPATH || return
-#            sudo sh $T/build/release/installchrome.sh $OUTPATH $APPPATH || return
         fi
         if [ $BUITSTEP -le 52 ] ; then
             echo 52 >$BUILDCOSSTEP
             sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
-        fi
-        if [ $BUITSTEP -le 53 ] ; then
-            echo 53 >$BUILDCOSSTEP
-#            sudo sh $T/build/release/installwineqq.sh $OUTPATH $APPPATH || return
         fi
 
         #Install ssh and close root user with ssh authority.
@@ -529,26 +523,6 @@ function mcos()
             echo 54 >$BUILDCOSSTEP
             sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
         fi
-
-        #Install Self software
-#        if [ $BUITSTEP -le 55 ] ; then
-#            echo 55 >$BUILDCOSSTEP
-#            sudo sh $T/build/release/installrdpdesk.sh $OUTPATH $APPPATH || return
-#        fi
-#        if [ $BUITSTEP -le 56 ] ; then
-#            echo 56 >$BUILDCOSSTEP
-#            sudo sh $T/build/release/installqtadb.sh $OUTPATH $APPPATH || return
-#        fi
-
-        #Change iso files
-#        if [ $BUITSTEP -le 60 ] ; then
-#            echo 60 >$BUILDCOSSTEP
-#            sudo sh $T/build/release/change_iso_files.sh $OUTPATH || return
-#        fi
-#        if [ $BUITSTEP -le 70 ] ; then
-#            echo 70 >$BUILDCOSSTEP
-#            sudo sh $T/build/release/remove_wubi.sh $OUTPATH || return
-#        fi
 
         #Change some zh_CN LC_MESSAGES
         if [ $BUITSTEP -le 80 ] ; then

@@ -37,7 +37,7 @@ fi
 mkdir $OUTPATH/mycos/.disk
 
 cp $LIVECDPATH/files/isolinux/isolinux.bin $OUTPATH/mycos/isolinux
-cp $LIVECDPATH/files/isolinux/memtest $OUTPATH/mycos/isolinux
+cp $LIVECDPATH/files/isolinux/memtest86+-5.01.bin $OUTPATH/mycos/isolinux/memtest
 cp $LIVECDPATH/files/isolinux/vesamenu.c32 $OUTPATH/mycos/isolinux
 cp $LIVECDPATH/files/isolinux/splash.jpg $OUTPATH/mycos/isolinux
 cfgstr="

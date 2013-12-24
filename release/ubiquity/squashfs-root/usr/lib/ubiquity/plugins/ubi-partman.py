@@ -22,6 +22,7 @@ import os
 import re
 import shutil
 import signal
+import sys
 
 import debconf
 
@@ -1283,6 +1284,15 @@ class PageGtk(PageBase):
     def update_partman(self, disk_cache, partition_cache, cache_order):
         from gi.repository import Gtk, GObject
         from ubiquity import segmented_bar
+        if disk_cache == {} and partition_cache == {} and cache_order ==[]:
+            self.partition_button_new_label.set_sensitive(False)
+            self.partition_button_new.set_sensitive(False)
+            self.partition_button_edit.set_sensitive(False)
+            self.partition_button_delete.set_sensitive(False)
+            self.partition_problem_dialog.run()
+            self.partition_problem_dialog.hide()
+            sys.exit(1)
+
         if self.partition_bars:
             for p in list(self.partition_bars.values()):
                 self.segmented_bar_vbox.remove(p)

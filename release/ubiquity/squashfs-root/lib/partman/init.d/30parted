@@ -60,6 +60,14 @@ if [ ! -f /var/run/parted_server.pid ]; then
 	fi
 	mkdir $DEVICES || true
 
+        count=0
+        for partdev in $(parted_devices |
+		sed 's,^/dev/\(ide\|scsi\|[hs]d\|md/\?[0-9]\+\),!/dev/\1,' |
+		sort |
+		sed 's,^!,,' ); do
+                count=`expr $count + 1`
+        done
+
 	IFS="$NL"
 	for partdev in $(parted_devices |
 		sed 's,^/dev/\(ide\|scsi\|[hs]d\|md/\?[0-9]\+\),!/dev/\1,' |
@@ -87,13 +95,13 @@ if [ ! -f /var/run/parted_server.pid ]; then
 		fi
 
 		# Skip devices that are part of a dmraid device
-#		if type dmraid >/dev/null 2>&1 && \
-#		   dmraid -r -c >/dev/null 2>&1; then
-#			if part_of_sataraid $device && \
-#			   [ -f /var/lib/disk-detect/activate_dmraid ]; then
-#				continue
-#			fi
-#		fi
+		if  [ "$count" -gt "2" ] && type dmraid >/dev/null 2>&1 && \
+		   dmraid -r -c >/dev/null 2>&1; then
+			if part_of_sataraid $device && \
+			   [ -f /var/lib/disk-detect/activate_dmraid ]; then
+				continue
+			fi
+		fi
 
 		# Skip devices that are part of a multipathed device
 		if part_of_multipath $device; then

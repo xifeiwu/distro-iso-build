@@ -1174,25 +1174,25 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
       </object>
     </child>
   </object>
-  <object class="GtkDialog" id="partition_problem_dialog">
+  <object class="GtkDialog" id="partition_fail_dialog">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Partition Problem</property>
+    <property name="title" translatable="yes">No storage was found</property>
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <signal name="realize" handler="set_window_hints" swapped="no"/>
     <child internal-child="vbox">
-      <object class="GtkBox" id="partition_problem_dialog-vbox4">
+      <object class="GtkBox" id="partition_fail_dialog-vbox4">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox" id="partition_problem_dialog-action_area4">
+          <object class="GtkButtonBox" id="partition_fail_dialog-action_area4">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="partition_problem_closebutton">
+              <object class="GtkButton" id="partition_fail_closebutton">
                 <property name="label">gtk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -1216,21 +1216,21 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
           </packing>
         </child>
         <child>
-          <object class="GtkAlignment" id="partition_problem_alignment27">
+          <object class="GtkAlignment" id="partition_fail_alignment27">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">6</property>
             <child>
-              <object class="GtkBox" id="partition_problem_vbox51">
+              <object class="GtkBox" id="partition_fail_vbox51">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkLabel" id="partition_problem_heading_label">
+                  <object class="GtkLabel" id="partition_fail_heading_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Partiion problem&lt;/b&gt;&lt;/big&gt;</property>
+                    <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;No storage was found&lt;/b&gt;&lt;/big&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="single_line_mode">True</property>
                   </object>
@@ -1241,7 +1241,7 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHSeparator" id="partition_problem_hseparator11">
+                  <object class="GtkHSeparator" id="partition_fail_hseparator11">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                   </object>
@@ -1253,11 +1253,11 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="partition_problem_detail_label">
+                  <object class="GtkLabel" id="partition_fail_text_label">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Sorry to notice you that no hard disk was found by ubiquity. Gparted may be help you, the location as follows: Menu->Administration->Gparted Partition Editor.</property>
+                    <property name="label" translatable="yes">Sorry to notice you that no storage was found by ubiquity, it may be caused by two reasons: storage is not connected to motherboard, or storage is in a bad format. The later can be fixed by tool of Gparted, which can be invoked at Menu->Administration->Gparted Partition Editor.</property>
                     <property name="wrap">True</property>
                   </object>
                   <packing>
@@ -1279,7 +1279,7 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-7">partition_problem_closebutton</action-widget>
+      <action-widget response="-7">partition_fail_closebutton</action-widget>
     </action-widgets>
   </object>
 

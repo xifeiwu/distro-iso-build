@@ -1289,8 +1289,8 @@ class PageGtk(PageBase):
             self.partition_button_new.set_sensitive(False)
             self.partition_button_edit.set_sensitive(False)
             self.partition_button_delete.set_sensitive(False)
-            self.partition_problem_dialog.run()
-            self.partition_problem_dialog.hide()
+            self.partition_fail_dialog.run()
+            self.partition_fail_dialog.hide()
             sys.exit(1)
 
         if self.partition_bars:

@@ -20,6 +20,8 @@ fi
 ScriptPATH=$(cd "$(dirname $0)"; pwd)
 ROOTPATH=$(cd $1; pwd)
 DRIVERTARFILE=$2
+DRIVERPATCHPATH=$3
+KERNELVER=$4
 
 echo The driver $DRIVERTARFILE will be installed into root path: $ROOTPATH
 
@@ -31,8 +33,23 @@ echo Tar jxvf $DRIVERTARFILE
 cd $ROOTPATH
 sudo tar jxvf $DRIVERTARFILE
 
+######
+# patch to driver
+######
+echo patching to driver
+sudo cp $DRIVERPATCHPATH -a $ROOTPATH
+cd $ROOTPATH/S3G-InstallPkg-i386
+sudo patch -p0 < ../patches/patch-$4.patch
+cd ..
+
+######
+# install driver
+######
 echo Install driver of s3g
-sudo chroot $ROOTPATH /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh"
+sudo chroot $ROOTPATH /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh $4 i386"
+sudo chroot $ROOTPATH /bin/bash -c "cd /etc/init.d && patch -p0 </patches/x11-common.patch"
+sudo chroot $ROOTPATH /bin/bash -c "chmod 777 /etc/init.d/compat-detect && chmod 777 /etc/init.d/detect_card.sh"
+sudo chroot $ROOTPATH /bin/bash -c "rm -rf patches"
 sudo chroot $ROOTPATH /bin/bash -c "update-initramfs -u"
 
 echo Finish installing s3g driver.

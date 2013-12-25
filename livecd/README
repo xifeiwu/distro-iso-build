@@ -15,11 +15,11 @@ Files/
 
 └── isolinux
     ├── isolinux.bin
-    |         downloaded from              
+    |         downloaded from https://launchpad.net/ubuntu/+source/syslinux/3:4.05+dfsg-6+deb7u2ubuntu1, and path is core/isolinux.bin
     ├── memtest86+-5.01.bin
     |         downloaded from http://memtest.org/
     ├── splash.jpg
     |         made by cos project.
     └── vesamenu.c32
-              downloaded from 
+              downloaded from https://launchpad.net/ubuntu/+source/syslinux/3:4.05+dfsg-6+deb7u2ubuntu1, and path is com32/menu/vesamenu.c32
 

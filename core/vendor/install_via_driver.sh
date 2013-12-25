@@ -39,7 +39,7 @@ sudo tar jxvf $DRIVERTARFILE
 echo patching to driver
 sudo cp $DRIVERPATCHPATH -a $ROOTPATH
 cd $ROOTPATH/S3G-InstallPkg-i386
-sudo patch -p0 < ../patches/patch-$4.patch
+sudo patch -p1 < ../patches/patch-$4.patch
 cd ..
 
 ######

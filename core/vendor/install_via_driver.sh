@@ -30,15 +30,15 @@ echo The driver $DRIVERTARFILE will be installed into root path: $ROOTPATH
 ######
 echo Tar jxvf $DRIVERTARFILE
 #sudo tar jxvf ../../preapp/s3g-Chrome64x-15.00.02c-CL135330-i386\(1202\).tar.bz2
-cd $ROOTPATH
+cd $ROOTPATH/squashfs-root
 sudo tar jxvf $DRIVERTARFILE
 
 ######
 # patch to driver
 ######
 echo patching to driver
-sudo cp $DRIVERPATCHPATH -a $ROOTPATH
-cd $ROOTPATH/S3G-InstallPkg-i386
+sudo cp $DRIVERPATCHPATH -a $ROOTPATH/squashfs-root
+cd $ROOTPATH/squashfs-root/S3G-InstallPkg-i386
 sudo patch -p1 < ../patches/patch-$4.patch
 cd ..
 
@@ -46,11 +46,11 @@ cd ..
 # install driver
 ######
 echo Install driver of s3g
-sudo chroot $ROOTPATH /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh $4 i386"
-sudo chroot $ROOTPATH /bin/bash -c "cd /etc/init.d && patch -p0 </patches/x11-common.patch"
-sudo chroot $ROOTPATH /bin/bash -c "chmod 777 /etc/init.d/compat-detect && chmod 777 /etc/init.d/detect_card.sh"
-sudo chroot $ROOTPATH /bin/bash -c "rm -rf patches"
-sudo chroot $ROOTPATH /bin/bash -c "update-initramfs -u"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh $4 i386"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "cd /etc/init.d && patch -p0 </patches/x11-common.patch"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "chmod 777 /etc/init.d/compat-detect && chmod 777 /etc/init.d/detect_card.sh"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "rm -rf patches"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "update-initramfs -u"
 
 echo Finish installing s3g driver.
 

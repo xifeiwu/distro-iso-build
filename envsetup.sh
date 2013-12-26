@@ -436,6 +436,7 @@ function mcos()
     ISONLINE=0
     BUITSTEP=0
     IS4LENOVO=0
+    IS4S3G=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -450,6 +451,8 @@ function mcos()
             ISONLINE=1
         elif [ "$i" == "--lenovo" ] ; then
             IS4LENOVO=1
+        elif [ "$i" == "--s3g" ] ; then
+            IS4S3G=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -501,6 +504,13 @@ function mcos()
             echo 41 >$BUILDCOSSTEP
             if [ $IS4LENOVO -eq 1 ] ; then
                 intnvidiadriver || return
+            fi
+        fi
+
+        if [ $BUITSTEP -le 42 ] ; then
+            echo 42 >$BUILDCOSSTEP
+            if [ $IS4S3G -eq 1 ] ; then
+                sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return
             fi
         fi
 

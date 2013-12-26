@@ -25,6 +25,18 @@ KERNELVER=$4
 
 echo The driver $DRIVERTARFILE will be installed into root path: $ROOTPATH
 
+function delete_initrd()
+{
+    for file in `ls $ROOTPATH/squashfs-root/boot/ |grep initrd`
+    do 
+        if [ "$file" != "initrd.img-$KERNELVER" ]
+        then 
+            sudo rm $ROOTPATH/squashfs-root/boot/$file
+            echo delete $file 
+        fi 
+    done
+}
+
 ######
 # Begin
 ######
@@ -39,19 +51,19 @@ sudo tar jxvf $DRIVERTARFILE
 echo patching to driver
 sudo cp $DRIVERPATCHPATH -a $ROOTPATH/squashfs-root
 cd $ROOTPATH/squashfs-root/S3G-InstallPkg-i386
-sudo patch -p1 < ../patches/patch-$4.patch
+sudo patch -p1 < ../patches/patch-$KERNELVER.patch
 cd ..
 
 ######
 # install driver
 ######
 echo Install driver of s3g
-sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh $4 i386"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "cd S3G-InstallPkg-i386 && sh install.sh $KERNELVER i386"
 sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "cd /etc/init.d && patch -p0 </patches/x11-common.patch"
 sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "chmod 777 /etc/init.d/compat-detect && chmod 777 /etc/init.d/detect_card.sh"
-sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "rm -rf patches"
+sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "rm -rf patches S3G-InstallPkg-i386"
+delete_initrd
 sudo chroot $ROOTPATH/squashfs-root /bin/bash -c "update-initramfs -u"
-
 echo Finish installing s3g driver.
 
 ######

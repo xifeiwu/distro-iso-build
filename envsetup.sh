@@ -437,6 +437,7 @@ function mcos()
     BUITSTEP=0
     IS4LENOVO=0
     IS4S3G=0
+    IS4TEST=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -453,6 +454,8 @@ function mcos()
             IS4LENOVO=1
         elif [ "$i" == "--s3g" ] ; then
             IS4S3G=1
+	elif [ "$i" == "--test" ] ; then
+	    IS4TEST=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -619,15 +622,34 @@ function mcos()
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz
         fi
 
-        if [ $BUITSTEP -le 149 ] ; then
-            echo 149 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 150 ] ; then
+            echo 150 >$BUILDCOSSTEP
+            if [ $IS4TEST -eq 1 ] ; then
+                #wangyu: Build iso version for test group
+                echo "Start building test version..."
+                sudo sed -i 's/^managed=false/managed=true/g' $OUTPATH/squashfs-root/etc/NetworkManager/NetworkManager.conf
+                echo "End of reconfig /etc/NetworkManager/NetworkManager.conf file..."
+
+                sudo cp $OUT/$PREAPP/fileForTest/rc.local $OUTPATH/squashfs-root/etc/
+                echo "End of reconfig /etc/rc.local file..."
+
+		sudo mkdir $OUTPATH/squashfs-root/tmp/fileForTest
+                sudo cp -r $OUT/$PREAPP/fileForTest/*/* $OUTPATH/squashfs-root/tmp/fileForTest
+                sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd tmp/fileForTest && dpkg -i -E *.deb"
+		sudo rm -rf $OUTPATH/squashfs-root/tmp/*
+            fi
+        fi
+
+
+        if [ $BUITSTEP -le 190 ] ; then
+            echo 190 >$BUILDCOSSTEP
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
         fi
 
         umountdir
 
-        if [ $BUITSTEP -le 150 ] ; then
-            echo 150 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 200 ] ; then
+            echo 200 >$BUILDCOSSTEP
             mkiso || return
         fi
         echo 200 >$BUILDCOSSTEP

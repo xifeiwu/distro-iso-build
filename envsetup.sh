@@ -696,10 +696,24 @@ function mountdir()
 
 function umountdir()
 {
+    RETVALUE=0
     sudo umount $OUT/out/squashfs-root/sys
+    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+	$RETVALUE=2
+    fi
     sudo umount $OUT/out/squashfs-root/dev/pts
+    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+        $RETVALUE=2
+    fi
     sudo umount $OUT/out/squashfs-root/dev
+    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+        $RETVALUE=2
+    fi
     sudo umount $OUT/out/squashfs-root/proc
+    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+        $RETVALUE=2
+    fi
+    return $RETVALUE
 }
 
 function cmove()
@@ -755,6 +769,10 @@ function cclean()
     if [[ "$CONDITION" == "Y" || "$CONDITION" == "y" ]] ; then
         echo Umounting dir...
         umountdir 2>/dev/null
+	if [ "$?" -ne "0" ] ; then
+	    echo "The device can not be umounted now... Please restart the computer and try it again!"
+	    return
+	fi	
         if [ -e $OUT/buildallstep ] ; then
             rm $OUT/buildallstep
         fi

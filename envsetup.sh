@@ -552,6 +552,7 @@ function mcos()
         if [ $BUITSTEP -le 100 ] ; then
             echo 100 >$BUILDCOSSTEP
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
+	    umountdir
             uninstallmintdeb || return
 	    #wangyu: Debs should be removed by the information of Local Application Group
 	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return

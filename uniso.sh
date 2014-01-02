@@ -26,43 +26,32 @@ else
     mkdir $2
 fi
 
-ISOPATH=$1
+SQUASHFS=$1
 OUTPATH=$(cd $2; pwd)
 
-echo uniso.sh will export iso $ISOPATH file to $OUTPATH, the dir tree like this:
+echo uniso.sh will export iso $SQUASHFS file to $OUTPATH, the dir tree like this:
 echo +mkiso_out
-echo \|---mycos---------------  The files contained in iso.
-echo \|---initrd_lz------------  The files contained in iso/casper/initrd_lz
-echo \\---squashfs-root--------  The files contained in iso/casper/filesystem.squashfs
+echo \\---squashfs-root--------  The files contained in filesystem.squashfs
 
 if [ ! -d $OUTPATH/mycos ] ; then
     mkdir $OUTPATH/mycos
 
-    if [ ! -e mintiso ] ; then
-        echo mount iso to $OUTPATH/mintiso
-        mkdir $OUTPATH/mintiso
-        mount -o loop $ISOPATH $OUTPATH/mintiso
-    else
-        echo warning:mintiso has exist, it is expected iso has been mounted normally.
-    fi
-
-    echo copy iso/casper to mycos, just wait for some minutes.
     mkdir $OUTPATH/mycos/casper
-    cp $OUTPATH/mintiso/casper/initrd.lz $OUTPATH/mycos/casper/
-    cp $OUTPATH/mintiso/casper/vmlinuz $OUTPATH/mycos/casper/
     cd $OUTPATH
     if [ ! -e squashfs-root ] ; then
         echo unsquashfs mycos/casper/filesystem.squashfs
         echo just wait for some minutes.
-        unsquashfs $OUTPATH/mintiso/casper/filesystem.squashfs
+        unsquashfs $SQUASHFS
     else
         echo warning:squashfs-root has exist, it is expected filesystem.squashfs has been executed unsquashfs normally.    
     fi
-    umount $OUTPATH/mintiso
-    rmdir $OUTPATH/mintiso
 else
     echo warning:mycos has exist, it is expected iso/* has been copied to mycos dir.
 fi
+
+#wangyu:Copy vmlinuz and initrd.lz to casper, to make sure user can excute mkiso without customization.
+sudo cp $OUTPATH/squashfs-root/boot/vmlinuz-3.8.0-19-generic $OUTPATH/mycos/casper/vmlinuz
+sudo cp $OUTPATH/squashfs-root/boot/initrd.img-3.8.0-19-generic $OUTPATH/mycos/casper/initrd.lz
 
 #if [ ! -e initrd_lz ] ; then
 #    echo gunzip initrd.lz

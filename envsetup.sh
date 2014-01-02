@@ -81,9 +81,9 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWISONAME=linuxmint-15-cinnamon-dvd-32bit.iso
-    export ISOPATH=$OUT/$RAWISONAME
-    export RAWISOADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWISONAME
+    export RAWSQUASHFSNAME=filesystem-linuxmint-15-cinnamon-32bit.squashfs
+    export ISOPATH=$OUT/$RAWSQUASHFSNAME
+    export RAWSQUASHFSADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWSQUASHFSNAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
     export KERNEL_VERSION=3.8.13
     export KERNEL_VERSION_FULL=3.8.13.13-cos-i686
@@ -673,7 +673,7 @@ function getprepkg ()
             mkdir $OUT
         fi
         cd $(gettop)
-        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWISOADDRESS $RAWPREAPPADDRESS
+        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWSQUASHFSADDRESS $RAWPREAPPADDRESS
         addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."

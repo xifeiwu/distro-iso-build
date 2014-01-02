@@ -46,7 +46,7 @@ echo The prebuilt deb package will be downloaded in $PREAPPPATH
 # Begin
 ######
 echo
-echo Copying raw iso
+echo Copying raw squashfs
 echo 
 #rsync -av box@192.168.162.142:/home/box/Workspace/Public/linuxmint-15-cinnamon-dvd-32bit-1-4kernel-3.iso $WORKPATH
 rsync -av --progress $3 $WORKPATH

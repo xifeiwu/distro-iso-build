@@ -603,19 +603,14 @@ function mcos()
             echo 130 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
         fi
-        #fix a bug of wps when first opened.
+
+        #fix some bugs by change files directly.
         if [ $BUITSTEP -le 140 ] ; then
             echo 140 >$BUILDCOSSTEP
-            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH || return
+            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH $OUT/$PREAPP  || return
             sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return
             sudo sh $T/build/release/change_networking.sh $OUTPATH || return
         fi
-
-        #Install cos boot splash
-        #if [ $BUITSTEP -le 21 ] ; then
-        #    sudo sh $T/build/release/installcossplash.sh $OUTPATH $APPPATH || return
-        #    echo 21 >$BUILDCOSSTEP
-        #fi
 
         if [ $BUITSTEP -le 148 ] ; then
             echo 148 >$BUILDCOSSTEP

@@ -35,7 +35,7 @@ function hcos()
     T=$(gettop)
     if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return
+        return 1
     fi
 
     cat $T/docs/repo_help.txt | more
@@ -46,7 +46,7 @@ function repo()
     T=$(gettop)
     if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return
+        return 1
     fi
     
     $T/.repo/repo/repo $*
@@ -68,7 +68,7 @@ function setenv()
     T=$(gettop)
     if [ ! "$T" ]; then
         echo "Couldn't locate the top of the tree.  Try setting TOP."
-        return
+        return 1
     fi
 
     . $T/build/set_version.sh
@@ -95,12 +95,12 @@ function addcompletions()
 
     # Keep us from trying to run in something that isn't bash.
     if [ -z "${BASH_VERSION}" ]; then
-        return
+        return 1
     fi
 
     # Keep us from trying to run in bash that's too old.
     if [ ${BASH_VERSINFO[0]} -lt 3 ]; then
-        return
+        return 1
     fi
 
     dir="sdk/bash_completion"
@@ -184,8 +184,8 @@ function checktools()
 
 function check()
 {
-    checktools
-    checkdepall
+    checktools || return 1
+    checkdepall || return 1
 }
 
 function checkdep()
@@ -245,8 +245,8 @@ function uniso()
         mkdir -p $OUT/out
     fi
     checktools || return 1
-    sudo sh $T/build/uniso.sh $ISOPATH $OUT/out
-    sudo sh $T/build/livecd/create_livecd.sh $OUT/out
+    sudo sh $T/build/uniso.sh $ISOPATH $OUT/out || return 1
+    sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
 }
 
 function mkiso()
@@ -257,7 +257,7 @@ function mkiso()
         return 1
     fi
     umountdir
-    sudo sh $T/build/mkiso.sh $OUT/out $OUT
+    sudo sh $T/build/mkiso.sh $OUT/out $OUT || return 1
 }
 
 function m()
@@ -484,85 +484,87 @@ function mcos()
         echo Building COS Desktop ...
         if [ $BUITSTEP -le 10 ] ; then
             echo 10 >$BUILDCOSSTEP
-            getprepkg || return
+            getprepkg || return 1
         fi
         if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDCOSSTEP
-            checktools || return
-            mall || return
+            checktools || return 1
+            mall || return 1
         fi
         if [ $BUITSTEP -le 30 ] ; then
             echo 30 >$BUILDCOSSTEP
-            uniso || return
+            uniso || return 1
         fi
 
-        mountdir
+        mountdir || return 1
 
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDCOSSTEP
-            intkernel || return
+            intkernel || return 1
         fi
 
         if [ $BUITSTEP -le 41 ] ; then
             echo 41 >$BUILDCOSSTEP
             if [ $IS4LENOVO -eq 1 ] ; then
-                intnvidiadriver || return
+                intnvidiadriver || return 1
             fi
         fi
 
         if [ $BUITSTEP -le 42 ] ; then
             echo 42 >$BUILDCOSSTEP
             if [ $IS4S3G -eq 1 ] ; then
-                sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return
+                sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
             fi
         fi
 
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return
+            sudo sh $T/build/release/installzh_CN.sh $OUTPATH $APPPATH || return 1
         fi
         if [ $BUITSTEP -le 51 ] ; then
             echo 51 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installfirefox.sh $OUTPATH $APPPATH || return
+            sudo sh $T/build/release/installfirefox.sh $OUTPATH $APPPATH || return 1
         fi
         if [ $BUITSTEP -le 52 ] ; then
             echo 52 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return
+            sudo sh $T/build/release/installvim.sh $OUTPATH $APPPATH || return 1
         fi
 
         #Install ssh and close root user with ssh authority.
         if [ $BUITSTEP -le 54 ] ; then
             echo 54 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return
+            sudo sh $T/build/release/installssh.sh $OUTPATH $APPPATH || return 1
         fi
 
         #Change some zh_CN LC_MESSAGES
         if [ $BUITSTEP -le 80 ] ; then
             echo 80 >$BUILDCOSSTEP
-            sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return
+            sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return 1
         fi
 
         #Change system name in some where. This shell file also will install some software in cos source list.
         if [ $BUITSTEP -le 90 ] ; then
             echo 90 >$BUILDCOSSTEP
-            sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return
+            sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return 1
         fi
 
         if [ $BUITSTEP -le 100 ] ; then
             echo 100 >$BUILDCOSSTEP
-            sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return
-	    umountdir
-            uninstallmintdeb || return
+            sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return 1
+            mountdir  || return 1
+            uninstallmintdeb || return 1
 	    #wangyu: Debs should be removed by the information of Local Application Group
 		#The cause of umount failure pacakage is "pidgin"
-	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1 banshee-extension-soundmenu rhythmbox-plugin-cdrecorder libbrasero-media3-1" || return
+	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk pidgin pidgin-data pidgin-facebookchat pidgin-libnotify brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1 banshee-extension-soundmenu rhythmbox-plugin-cdrecorder libbrasero-media3-1" || return 1
+            umountdir || return 1
+            uninstalldeb "pidgin pidgin-data pidgin-facebookchat pidgin-libnotify" || return 1
             if [ $ISONLINE == 1 ] ; then
-                installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade" 
+                installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade"  || return 1
             else
-                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments" 
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments" || return 1
             fi
-            mountdir
+            mountdir || return 1
         fi
 
 	#wangyu: Install apps from local application group.
@@ -575,14 +577,14 @@ function mcos()
                 HASDEBFILE=1
                 DEBNAME=`dpkg -f $line Package`
                 DEBTOINSTALL=`echo $DEBTOINSTALL $DEBNAME`
-                addrepository $line
+                addrepository $line || return 1
     	    done
             if [ $HASDEBFILE == 0 ] ; then
                 echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
                 return 1
             fi
-            installdeb "$DEBTOINSTALL"
-            mountdir
+            installdeb "$DEBTOINSTALL" || return 1
+            mountdir || return 1
 	    if [ ! -x $OUTPATH/squashfs-root/usr/share/apps/goldendict ] ; then
 		sudo mkdir $OUTPATH/squashfs-root/usr/share/apps/goldendict
 	    fi
@@ -593,23 +595,23 @@ function mcos()
         #Change some icon\theme\applications name and so on.
         if [ $BUITSTEP -le 110 ] ; then
             echo 110 >$BUILDCOSSTEP
-            sudo sh $T/build/release/mktheme.sh $OUTPATH || return
+            sudo sh $T/build/release/mktheme.sh $OUTPATH || return 1
         fi
         if [ $BUITSTEP -le 120 ] ; then
             echo 120 >$BUILDCOSSTEP
-            sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return
+            sudo sh $T/build/release/change_start_menu_icons.sh $OUTPATH || return 1
         fi
         if [ $BUITSTEP -le 130 ] ; then
             echo 130 >$BUILDCOSSTEP
-            sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return
+            sudo sh $T/build/release/change_start_menu.sh $OUTPATH || return 1
         fi
 
         #fix some bugs by change files directly.
         if [ $BUITSTEP -le 140 ] ; then
             echo 140 >$BUILDCOSSTEP
-            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH $OUT/$PREAPP  || return
-            sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return
-            sudo sh $T/build/release/change_networking.sh $OUTPATH || return
+            sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH $OUT/$PREAPP  || return 1
+            sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return 1
+            sudo sh $T/build/release/change_networking.sh $OUTPATH || return 1
         fi
 
 	if [ $BUITSTEP -le 141 ] ; then
@@ -621,9 +623,9 @@ function mcos()
 
         if [ $BUITSTEP -le 148 ] ; then
             echo 148 >$BUILDCOSSTEP
-            sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u"
-            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz
-            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u" || return 1
+            sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz || return 1
+            sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz || return 1
         fi
 
         if [ $BUITSTEP -le 150 ] ; then
@@ -639,7 +641,7 @@ function mcos()
 
 		sudo mkdir $OUTPATH/squashfs-root/tmp/fileForTest
                 sudo cp -r $OUT/$PREAPP/fileForTest/*/* $OUTPATH/squashfs-root/tmp/fileForTest
-                sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd tmp/fileForTest && dpkg -i -E *.deb"
+                sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd tmp/fileForTest && dpkg -i -E *.deb" || return 1
 		sudo rm -rf $OUTPATH/squashfs-root/tmp/*
             fi
         fi
@@ -650,11 +652,11 @@ function mcos()
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
         fi
 
-        umountdir
+        umountdir || return 1
 
         if [ $BUITSTEP -le 200 ] ; then
             echo 200 >$BUILDCOSSTEP
-            mkiso || return
+            mkiso || return 1
         fi
         echo 200 >$BUILDCOSSTEP
         echo Finish building COS Desktop.
@@ -675,8 +677,8 @@ function getprepkg ()
             mkdir $OUT
         fi
         cd $(gettop)
-        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWSQUASHFSADDRESS $RAWPREAPPADDRESS
-        addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb
+        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWSQUASHFSADDRESS $RAWPREAPPADDRESS || return 1
+        addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -691,10 +693,10 @@ function mountdir()
         sudo umount $OUT/out/squashfs-root/dev
         sudo umount $OUT/out/squashfs-root/proc
     fi
-    sudo mount -t devtmpf -o bind /dev $OUT/out/squashfs-root/dev
-    sudo mount -t proc proc $OUT/out/squashfs-root/proc
-    sudo mount none -t devpts $OUT/out/squashfs-root/dev/pts
-    sudo mount none -t sysfs $OUT/out/squashfs-root/sys
+    sudo mount -t devtmpf -o bind /dev $OUT/out/squashfs-root/dev || return 1
+    sudo mount -t proc proc $OUT/out/squashfs-root/proc || return 1
+    sudo mount none -t devpts $OUT/out/squashfs-root/dev/pts || return 1
+    sudo mount none -t sysfs $OUT/out/squashfs-root/sys || return 1
 }
 
 function umountdir()
@@ -771,10 +773,10 @@ function cclean()
     
     if [[ "$CONDITION" == "Y" || "$CONDITION" == "y" ]] ; then
         echo Umounting dir...
-        umountdir 2>/dev/null
+        umountdir 2>/dev/null 
 	if [ "$?" -ne "0" ] ; then
 	    echo "The device can not be umounted now... Please restart the computer and try it again!"
-	    return
+	    return 1
 	fi	
         if [ -e $OUT/buildallstep ] ; then
             rm $OUT/buildallstep
@@ -821,7 +823,7 @@ Architectures: i386
 Components: main" > $REPOSITORY/debian/conf/distributions
         fi
         reprepro -b $REPOSITORY/debian remove iceblue `dpkg -f $1 Package`
-        reprepro -b $REPOSITORY/debian includedeb iceblue $1
+        reprepro -b $REPOSITORY/debian includedeb iceblue $1 || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -859,7 +861,7 @@ function uninstallmintdeb()
             return 1
         fi
         sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
-        sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons "
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --force-all --purge mint-themes mint-x-icons " || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -881,7 +883,7 @@ function uninstalldeb()
         echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
         return 1
     fi
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge $@"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge $@" || return 1
 }
 
 function installdebonline()
@@ -917,14 +919,14 @@ function installdebonline()
         deblist="$@"
     fi
     echo These deb package $deblist will be installed in $OUT/out/squashfs-root
-    mountdir
+    mountdir || return 1
 
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"'
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"' || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean" || return 1
     echo `echo $deblist | wc -w` package\(s\) has been installed.
 
-    umountdir
+    umountdir || return 1
 }
 
 function installdeb()
@@ -965,13 +967,13 @@ function installdeb()
         sudo mkdir $OUT/out/squashfs-root/repository
     fi
     sudo mount --bind $REPOSITORY $OUT/out/squashfs-root/repository
-    mountdir
+    mountdir || return 1
 
     echo "deb file:///repository/debian iceblue main" > /tmp/cos-dev-repository.list
     sudo mv /tmp/cos-dev-repository.list $OUT/out/squashfs-root/etc/apt/sources.list.d/
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-dev-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"'
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-dev-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"' || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean" || return 1
     echo `echo $deblist | wc -w` package\(s\) has been installed.
 
     sudo rm $OUT/out/squashfs-root/etc/apt/sources.list.d/cos-dev-repository.list
@@ -1001,9 +1003,9 @@ function installdeball()
        deblist=`echo $deblist $line` 
     done
     if [ $ISONLINE -eq 0 ] ; then
-        installdeb $deblist
+        installdeb $deblist || return 1
     else
-        installdebonline $deblist
+        installdebonline $deblist || return 1
     fi
 }
 
@@ -1112,7 +1114,7 @@ esac
 function godir () {
     if [[ -z "$1" ]]; then
         echo "Usage: godir <regex>"
-        return
+        return 1
     fi
     T=$(gettop)
     if [[ ! -f $T/filelist ]]; then
@@ -1125,7 +1127,7 @@ function godir () {
     lines=($(\grep "$1" $T/filelist | sed -e 's/\/[^/]*$//' | sort | uniq))
     if [[ ${#lines[@]} = 0 ]]; then
         echo "Not found"
-        return
+        return 1
     fi
     local pathname
     local choice

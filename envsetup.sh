@@ -517,6 +517,11 @@ function mcos()
             fi
         fi
 
+        if [ $BUITSTEP -le 43 ] ; then
+            echo 43 >$BUILDCOSSTEP
+            sudo sh $T/build/release/installnouveau.sh $OUTPATH $APPPATH || return 1
+        fi        
+
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP

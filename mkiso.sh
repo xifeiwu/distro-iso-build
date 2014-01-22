@@ -65,6 +65,7 @@ sed -i '/casper/d' mycos/casper/filesystem.manifest-desktop
 sed -i '/libdebian-installer/d' mycos/casper/filesystem.manifest-desktop
 sed -i '/user-setup/d' mycos/casper/filesystem.manifest-desktop
 printf $(sudo du -sx --block-size=1 . | cut -f1) > mycos/casper/filesystem.size
+sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd /home && rm -r *"
 
 #echo gzip initrd
 #cd initrd_lz

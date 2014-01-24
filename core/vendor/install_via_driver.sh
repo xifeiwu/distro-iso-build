@@ -51,6 +51,7 @@ sudo tar jxvf $DRIVERTARFILE
 echo patching to driver
 sudo cp $DRIVERPATCHPATH -a $ROOTPATH/squashfs-root
 cd $ROOTPATH/squashfs-root/S3G-InstallPkg-i386
+#sudo patch -p1 < ../patches/s3g.patch
 sudo patch -p1 < ../patches/patch-$KERNELVER.patch
 cd ..
 

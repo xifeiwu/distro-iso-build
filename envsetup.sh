@@ -520,7 +520,12 @@ function mcos()
         if [ $BUITSTEP -le 43 ] ; then
             echo 43 >$BUILDCOSSTEP
             sudo sh $T/build/release/installnouveau.sh $OUTPATH $APPPATH || return 1
-        fi        
+        fi
+        
+        if [ $BUITSTEP -le 44 ] ; then
+            echo 44 >$BUILDCOSSTEP
+            sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
+        fi       
 
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then

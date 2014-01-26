@@ -46,7 +46,7 @@ if [ ! -d $OUTPATH/mycos ] ; then
     if [ ! -e mintiso ] ; then
         echo mount iso to $OUTPATH/mintiso
         mkdir $OUTPATH/mintiso
-        mount -o loop $ISOPATH $OUTPATH/mintiso
+        mount -o loop $SQUASHFS $OUTPATH/mintiso
     else
         echo warning:mintiso has exist, it is expected iso has been mounted normally.
     fi

@@ -75,7 +75,12 @@ function setenv()
     . $T/build/core/install_kernel.sh
     . $T/build/core/vendor/install_nvidia_lenovo.sh
 
+    export COSARCH=i386
+    export BASE_RELEASE=raring
+    export BASE_RELEASE_WEB=http://192.168.160.169/ubuntu/
+
     export OUT=$T/workout
+    export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
     export REPOSITORY=$OUT/repository
@@ -429,6 +434,19 @@ function mall()
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
+}
+
+function mroot()
+{
+    if [ -d $OUT/out ] ; then
+        echo ERROR:out dir has exist.
+        return 1
+    fi
+    mkdir -p $OUT/out || return 1
+
+    echo Begin to debootstrap...
+    sudo debootstrap --arch=${COSARCH} ${BASE_RELEASE} $ROOTFS ${BASE_RELEASE_WEB} || return 1
+    echo End debootstraping...
 }
 
 function mcos()

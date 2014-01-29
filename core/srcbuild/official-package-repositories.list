@@ -7,9 +7,13 @@
 #deb http://192.168.160.169/cos3/ubuntu raring main restricted universe multiverse
 #deb http://192.168.160.169/cos3/ubuntu raring-updates main restricted universe multiverse
 
-deb http://192.168.160.169/cos2/mint olivia main upstream import
-deb http://192.168.160.169/cos2/ubuntu raring main restricted universe multiverse
-deb http://192.168.160.169/cos2/ubuntu raring-updates main restricted universe multiverse
+#deb http://192.168.160.169/cos2/mint olivia main upstream import
+#deb http://192.168.160.169/cos2/ubuntu raring main restricted universe multiverse
+#deb http://192.168.160.169/cos2/ubuntu raring-updates main restricted universe multiverse
+
+deb http://192.168.160.169/cos3/ubuntu/ raring main restricted universe multiverse
+deb http://192.168.160.169/cos3/ubuntu/ raring-updates main restricted universe multiverse
+deb http://192.168.160.169/cos3/mint/ olivia main upstream import
 
 # official
 deb http://192.168.160.169/mint olivia main upstream import

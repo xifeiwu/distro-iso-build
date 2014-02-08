@@ -19,8 +19,7 @@ if [ ! $COSVERSIONNAME ] ; then
 fi
 
 if [ ! -x $OUTPATH/mycos ] ; then
-    echo error: there is no mycos path
-    exit -1
+    mkdir  $OUTPATH/mycos
 fi
 
 if [ ! -z $OUTPATH/mycos/isolinux ] ; then

@@ -37,14 +37,15 @@ if [ ! -e mycos ] ; then
 fi
 
 if [ ! -e mycos/casper ] ; then
-    echo error: mycos/casper does not exist. exit.
-    exit -1
+#    echo error: mycos/casper does not exist. exit.
+#    exit -1
+    mkdir mycos/casper
 fi
 
-#if [ ! -e initrd_lz ] ; then
-#    echo error: initrd_lz does not exist. exit.
-#    exit -1
-#fi
+if [ ! -e mycos/casper/initrd.lz ] ; then
+    echo error: initrd.lz does not exist. exit.
+    exit -1
+fi
 
 if [ ! -e squashfs-root ] ; then
     echo error: squashfs-root does not exist. exit.

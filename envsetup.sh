@@ -262,6 +262,9 @@ function mkiso()
         return 1
     fi
     umountdir
+    if [ ! -e $OUT/out/mycos/isolinux ] ; then
+        sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+    fi
     sudo sh $T/build/mkiso.sh $OUT/out $OUT || return 1
 }
 
@@ -438,11 +441,11 @@ function mall()
 
 function mroot()
 {
-    if [ -d $OUT/out ] ; then
-        echo ERROR:out dir has exist.
-        return 1
-    fi
-    mkdir -p $OUT/out || return 1
+#    if [ -d $OUT/out ] ; then
+#        echo ERROR:out dir has exist.
+#        return 1
+#    fi
+#    mkdir -p $OUT/out || return 1
 
     echo Begin to debootstrap...
     sudo debootstrap --arch=${COSARCH} --no-check-gpg ${BASE_RELEASE} $ROOTFS ${BASE_RELEASE_WEB}  || return 1
@@ -525,7 +528,7 @@ function mrootbuilder()
     sudo chroot chroot /bin/bash -c "apt-get clean"
 
     #clean squashfs
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
+#    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/preferences"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/apt.conf.d/99myown"
 
@@ -549,6 +552,7 @@ function mcos()
     IS4LENOVO=0
     IS4S3G=0
     IS4TEST=0
+    ISFROMSRC=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -567,6 +571,8 @@ function mcos()
             IS4S3G=1
 	elif [ "$i" == "--test" ] ; then
 	    IS4TEST=1
+	elif [ "$i" == "--srcbuild" ] ; then
+	    ISFROMSRC=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -604,7 +610,12 @@ function mcos()
         fi
         if [ $BUITSTEP -le 30 ] ; then
             echo 30 >$BUILDCOSSTEP
-            uniso || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+	        mroot || return 1
+		mrootbuilder || return 1
+	    else
+                uniso || return 1
+	   fi
         fi
 
 	if [ $BUITSTEP -le 31 ] ; then
@@ -639,11 +650,6 @@ function mcos()
             sudo sh $T/build/release/installnouveau.sh $OUTPATH $APPPATH || return 1
         fi
         
-        if [ $BUITSTEP -le 44 ] ; then
-            echo 44 >$BUILDCOSSTEP
-            sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
-        fi       
-
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP
@@ -744,6 +750,12 @@ function mcos()
 
         if [ $BUITSTEP -le 148 ] ; then
             echo 148 >$BUILDCOSSTEP
+	    if [ ! -e $OUT/out/mycos ] ; then
+		mkdir $OUT/out/mycos
+	    fi
+	    if [ ! -e $OUT/out/mycos/casper ] ; then
+    	        mkdir $OUT/out/mycos/casper
+	    fi
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u" || return 1
             sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz || return 1
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz || return 1

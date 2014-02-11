@@ -11,9 +11,15 @@ fi
 
 COSDISTURBREPOIP=124.16.141.172
 COSREPOIP=124.16.141.149
-echo "deb http://${COSDISTURBREPOIP}/cos iceblue main" > /tmp/cos-repository.list
+echo "deb http://${COSDISTURBREPOIP}/cos iceblue main universe" > /tmp/cos-repository.list
 sudo mv /tmp/cos-repository.list $CHROOTDIR/etc/apt/sources.list.d/
 sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos/project/keyring.gpg | apt-key add -"
+sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos/project/coskeyring.gpg | apt-key add -"
+sed -i '1i\Package: *\
+Pin: release n=iceblue\
+Pin-Priority: 750\
+
+    ' ${CHROOTDIR}/etc/apt/preferences
 echo "deb http://${COSREPOIP}/repos/cos cos main
 deb http://${COSREPOIP}/repos/mint olivia main upstream import
 deb http://${COSREPOIP}/repos/ubuntu raring main restricted universe multiverse

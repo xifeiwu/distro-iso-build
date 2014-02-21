@@ -37,9 +37,8 @@ if [ ! -e mycos ] ; then
 fi
 
 if [ ! -e mycos/casper ] ; then
-#    echo error: mycos/casper does not exist. exit.
-#    exit -1
-    mkdir mycos/casper
+    echo error: mycos/casper does not exist. exit.
+    exit -1
 fi
 
 if [ ! -e mycos/casper/initrd.lz ] ; then

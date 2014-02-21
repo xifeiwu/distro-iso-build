@@ -27,13 +27,13 @@ fi
 sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
-sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get install -y autoconf libtool libpthread-stubs0-dev libpciaccess-dev xutils-dev xserver-xorg-dev"
+#sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get install -y autoconf libtool libpthread-stubs0-dev libpciaccess-dev xutils-dev xserver-xorg-dev"
 sudo chroot ${CHROOTDIR} /bin/bash -c "tar xvf nouveau.tar.gz && cd /nouveau && tar xvf drm-2.4.51.tar.gz && tar xvf xf86-video-nouveau-1.0.10.tar.gz"
 sudo chroot ${CHROOTDIR} /bin/bash -c "source /nouveau/nouveau-env.sh && cd /nouveau/drm-2.4.51/ && ./autogen.sh --prefix=/usr && make && make install"
 sudo chroot ${CHROOTDIR} /bin/bash -c "source /nouveau/nouveau-env.sh && cd /nouveau/xf86-video-nouveau-1.0.10/ && ./autogen.sh --prefix=/usr && make && make install"
 
 
-sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /nouveau /var/cache/apt/archives/*.deb /nouveau.tar.gz"
+sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /nouveau /nouveau.tar.gz"
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /home/*"
 
 

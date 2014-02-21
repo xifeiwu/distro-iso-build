@@ -25,7 +25,7 @@ KERNELVER=$4
 
 echo The driver $DRIVERTARFILE will be installed into root path: $ROOTPATH
 
-function delete_initrd()
+delete_initrd()
 {
     for file in `ls $ROOTPATH/squashfs-root/boot/ |grep initrd`
     do 

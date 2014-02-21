@@ -650,10 +650,19 @@ function mcos()
 
         if [ $BUITSTEP -le 43 ] ; then
             echo 43 >$BUILDCOSSTEP
-            sudo sh $T/build/release/installnouveau.sh $OUTPATH $APPPATH || return 1
-	#    uninstalldeb "autoconf automake autotools-dev libdrm-dev libkms1 libltdl-dev libpciaccess-dev libpixman-1-dev libpthread-stubs0 libpthread-stubs0-dev libtool libx11-dev libx11-doc libxau-dev libxcb1-dev libxdmcp-dev libxkbfile-dev m4 mesa-common-dev x11proto-core-dev x11proto-dri2-dev x11proto-fonts-dev x11proto-gl-dev x11proto-input-dev x11proto-kb-dev x11proto-randr-dev x11proto-render-dev x11proto-resource-dev x11proto-scrnsaver-dev x11proto-video-dev x11proto-xext-dev x11proto-xf86dri-dev x11proto-xinerama-dev xorg-sgml-doctools xserver-xorg-dev xtrans-dev xutils-dev" || return 1
+            sudo sh $T/build/core/vendor/installnouveau.sh $OUTPATH $APPPATH || return 1
         fi
         
+        if [ $BUITSTEP -le 44 ] ; then
+            echo 44 >$BUILDCOSSTEP
+            sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
+        fi       
+
+        if [ $BUITSTEP -le 45 ] ; then
+            echo 45 >$BUILDCOSSTEP
+            sudo sh $T/build/core/vendor/installxf86-video-ati.sh $OUTPATH $APPPATH || return 1
+        fi
+
         #Install popular software
         if [ $BUITSTEP -le 50 ] ; then
             echo 50 >$BUILDCOSSTEP

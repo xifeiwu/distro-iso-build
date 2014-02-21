@@ -75,13 +75,18 @@ function setenv()
     . $T/build/core/install_kernel.sh
     . $T/build/core/vendor/install_nvidia_lenovo.sh
 
+    export COSARCH=i386
+    export BASE_RELEASE=raring
+    export BASE_RELEASE_WEB=http://192.168.160.169/cos3/ubuntu/
+
     export OUT=$T/workout
+    export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWSQUASHFSNAME=filesystem-linuxmint-15-cinnamon-32bit.squashfs
+    export RAWSQUASHFSNAME=filesystem-zhoupeng-20140108.squashfs
     export ISOPATH=$OUT/$RAWSQUASHFSNAME
     export RAWSQUASHFSADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWSQUASHFSNAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
@@ -246,7 +251,6 @@ function uniso()
     fi
     checktools || return 1
     sudo sh $T/build/uniso.sh $ISOPATH $OUT/out || return 1
-    sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
 }
 
 function mkiso()
@@ -431,6 +435,112 @@ function mall()
     fi
 }
 
+function mroot()
+{
+#    if [ -d $OUT/out ] ; then
+#        echo ERROR:out dir has exist.
+#        return 1
+#    fi
+#    mkdir -p $OUT/out || return 1
+
+    echo Begin to debootstrap...
+    sudo debootstrap --arch=${COSARCH} --no-check-gpg ${BASE_RELEASE} $ROOTFS ${BASE_RELEASE_WEB}  || return 1
+    echo End debootstraping...
+}
+
+function mrootbuilder()
+{
+    if [ ! -d $OUT/out/squashfs-root ] ; then
+        echo ERROR:out/squashfs-root dir has not exist.
+        return 1
+    fi
+    T=$(gettop)
+    sudo mount --bind /dev $OUT/out/squashfs-root/dev
+    sudo cp /etc/hosts $OUT/out/squashfs-root/etc/hosts
+    sudo cp /etc/resolv.conf $OUT/out/squashfs-root/etc/resolv.conf
+    sudo cp $T/build/core/srcbuild/official-package-repositories.list $OUT/out/squashfs-root/etc/apt/sources.list
+    sudo cp $T/build/core/srcbuild/preferences $OUT/out/squashfs-root/etc/apt/preferences
+    sudo cp $T/build/core/srcbuild/99myown $OUT/out/squashfs-root/etc/apt/apt.conf.d/99myown
+
+    #backup /sbin/initctl in squashfs-root
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo cp /sbin/initctl /sbin/initctl.bak"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "mount none -t proc /proc"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "mount none -t sysfs /sys"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "mount none -t devpts /dev/pts"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "export HOME=/root"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "export LC_ALL=C"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get update"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes dbus" # ???
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dbus-uuidgen > /var/lib/dbus/machine-id"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --local --rename --add /sbin/initctl"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "ln -s /bin/true /sbin/initctl"
+    sudo rm -f $T/build/core/srcbuild/fail_stage1
+    sudo rm -f $T/build/core/srcbuild/fail_stage2
+    sudo rm -f $T/build/core/srcbuild/fail_stage3
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -f install"
+
+    # stage1
+    echo "------------------------------stage1------------------------------------------"
+    while read list
+    do
+        pkgsname=`echo $list | awk '{print $1}'`
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --allow-unauthenticated ${pkgsname}"
+        if [ $? -ne 0 ];then
+                echo $pkgsname >>  $T/build/core/srcbuild/fail_stage1
+        fi
+    done < $T/build/core/srcbuild/filesystem.manifest
+
+    # stage1.1 install close source pkgs (Third party packages not in official)
+    echo "------------------------------stage1.1------------------------------------------"
+    sudo mkdir $OUT/out/squashfs-root/3rdpart
+    sudo cp  $T/build/core/srcbuild/3rdpart/*.deb $OUT/out/squashfs-root/3rdpart
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd 3rdpart && dpkg -i *.deb"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf 3rdpart"
+
+    # stage 2
+    echo "------------------------------stage2------------------------------------------"
+    while read pkgsname
+    do
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --allow-unauthenticated ${pkgsname}"
+        if [ $? -ne 0 ];then
+                echo $pkgsname >>  $T/build/core/srcbuild/fail_stage2
+        fi
+    done <  $T/build/core/srcbuild/fail_stage1
+
+    # stage3 force install
+    echo "------------------------------stage3------------------------------------------"
+    while read pkgsname
+    do
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --force-yes --allow-unauthenticated ${pkgsname}"
+        if [ $? -ne 0 ];then
+                echo $pkgsname >>  $T/build/core/srcbuild/fail_stage3
+        fi
+    done <  $T/build/core/srcbuild/fail_stage2
+
+    # clean unnecessary packages
+    echo "-----------apt-get autoremove, clean unnecessary dependency packages---------"
+    # autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
+    sudo chroot chroot /bin/bash -c "apt-get autoremove"
+    sudo chroot chroot /bin/bash -c "apt-get clean"
+
+    #clean squashfs
+#    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/preferences"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/apt.conf.d/99myown"
+
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /var/lib/dbus/machine-id"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /sbin/initctl"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --rename --remove /sbin/initctl"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get clean"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf /tmp/*"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/resolv.conf"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /proc"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /sys"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /dev/pts"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "exit"
+    sudo umount -l $OUT/out/squashfs-root/dev
+}
+
 function mcos()
 {
     ISONLINE=0
@@ -438,6 +548,7 @@ function mcos()
     IS4LENOVO=0
     IS4S3G=0
     IS4TEST=0
+    ISFROMSRC=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -456,6 +567,8 @@ function mcos()
             IS4S3G=1
 	elif [ "$i" == "--test" ] ; then
 	    IS4TEST=1
+	elif [ "$i" == "--srcbuild" ] ; then
+	    ISFROMSRC=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -493,14 +606,32 @@ function mcos()
         fi
         if [ $BUITSTEP -le 30 ] ; then
             echo 30 >$BUILDCOSSTEP
-            uniso || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+	        mroot || return 1
+		mrootbuilder || return 1
+                sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+	    else
+                uniso || return 1
+                sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+	   fi
         fi
+
+	if [ $BUITSTEP -le 31 ] ; then
+            echo 31 >$BUILDCOSSTEP
+	    if [ $ISFROMSRC -eq 1 ] ; then
+                sudo cp $T/build/release/tmpfiles/mdm/mdm.conf $OUTPATH/squashfs-root/etc/mdm/
+                uninstalldeb "symbol-fonts account-plugin-facebook account-plugin-flickr account-plugin-google account-plugin-twitter alacarte appmenu-gtk appmenu-gtk3 appmenu-qt appmenu-qt5 apport apport-symptoms bamfdaemon banshee-extension-soundmenu bison cdparanoia cdrdao compiz compiz-core compiz-gnome compiz-plugins-default curl dconf-tools docbook-xsl flex freepats friends-facebook friends-twitter gir1.2-panelapplet-4.0 gir1.2-rb-3.0 gir1.2-unity-5.0 gnome-applets gnome-applets-data gnome-control-center gnome-control-center-data gnome-control-center-signon gnome-control-center-unity gnome-media gnome-session gnome-session-fallback gnome-user-guide gromit gstreamer0.10-gnomevfs hud humanity-icon-theme icoutils indicator-applet-complete indicator-appmenu indicator-datetime indicator-messages indicator-power indicator-printers indicator-session indicator-sound k3b k3b-data kate-data katepart kde-runtime kde-runtime-data kde-style-oxygen kde-window-manager kde-window-manager-common kdelibs-bin kdelibs5-data kdelibs5-plugins kdoctools kubuntu-debug-installer libattica0.4 libbamf3-1 libbison-dev libcompizconfig0 libdlrestrictions1 libencode-locale-perl libfile-listing-perl libfl-dev libflac++6 libfont-afm-perl libgnome-control-center1 libgnome-media-profiles-3.0-0 libgnome2-canvas-perl libgnome2-perl libgnome2-vfs-perl libgnomevfs2-extra libhtml-form-perl libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libibus-1.0-0 libio-socket-ssl-perl libk3b6 libkactivities-bin libkactivities-models1 libkactivities6 libkatepartinterfaces4 libkcddb4 libkcmutils4 libkde3support4 libkdeclarative5 libkdecorations4abi1 libkdecore5 libkdesu5 libkdeui5 libkdewebkit5 libkdnssd4 libkemoticons4 libkfile4 libkhtml5 libkidletime4 libkio5 libkjsapi4 libkjsembed4 libkmediaplayer4 libknewstuff3-4 libknotifyconfig4 libkntlm4 libkparts4 libkpty4 libkrosscore4 libktexteditor4 libkwineffects1abi4 libkwinglutils1abi1 libkwinnvidiahack4 libkworkspace4abi2 libkxmlrpcclient4 liblwp-mediatypes-perl liblwp-protocol-https-perl libmusicbrainz5-0 libmysqlclient18 libnepomuk4 libnepomukcore4abi1 libnepomukquery4a libnepomukutils4 libnet-http-perl libnet-ssleay-perl libntrack-qt4-1 libntrack0 libnux-4.0-0 libphonon4 libplasma3 libpolkit-qt-1-1 libpoppler-qt4-4 libqapt2 libqapt2-runtime libqca2 libqt4-qt3support libqt4-sql-mysql librhythmbox-core6 libsolid4 libsoprano4 libstreamanalyzer0 libstreams0 libthreadweaver4 libunity-core-6.0-5 libunity-misc4 libunity-webapps0 libvirtodbc0 libwww-perl libwww-robotrules-perl libxcb-damage0 libxml2-utils mysql-common nautilus nepomuk-core nepomuk-core-data notification-daemon ntrack-module-libnl-0 odbcinst odbcinst1debian2 oxygen-icon-theme phonon phonon-backend-gstreamer plasma-scriptengine-javascript python-zeitgeist python3-apport python3-dbus.mainloop.qt python3-distupgrade python3-problem-report python3-pyqt4 python3-sip python3-update-manager qapt-batch rhythmbox rhythmbox-data rhythmbox-mozilla rhythmbox-plugin-cdrecorder rhythmbox-plugin-zeitgeist rhythmbox-plugins rhythmbox-ubuntuone shared-desktop-ontologies soprano-daemon ubiquity-frontend-kde ubuntu-release-upgrader-core unity unity-asset-pool unity-common unity-lens-applications unity-lens-files unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video unity-scope-gdrive unity-scope-musicstores unity-scope-video-remote unity-services unity-webapps-service update-manager-core vcdimager virtuoso-minimal virtuoso-opensource-6.1-bin virtuoso-opensource-6.1-common xul-ext-ubufox zeitgeist zeitgeist-core zeitgeist-datahub build-essential debhelper dh-apparmor dpkg-dev firefox-globalmenu g++ g++-4.7 html2text kbuild libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libmail-sendmail-perl libstdc++6-4.7-dev libsys-hostname-long-perl module-assistant openjdk-6-jre openjdk-6-jre-headless openjdk-6-jre-lib po-debconf thunderbird-globalmenu virtualbox-guest-source xchat-indicator" || return 1
+            fi
+	fi
 
         mountdir || return 1
 
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDCOSSTEP
             intkernel || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+	        uninstalldeb "linux-headers-3.8.0-33 linux-headers-3.8.0-33-generic linux-image-3.8.0-33-generic linux-image-extra-3.8.0-33-generic" || return 1
+            fi
         fi
 
         if [ $BUITSTEP -le 41 ] ; then
@@ -579,9 +710,15 @@ function mcos()
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return 1
             mountdir  || return 1
             uninstallmintdeb || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+                uninstalldeb mint-info-xfce || return 1
+            fi
 	    #wangyu: Debs should be removed by the information of Local Application Group
 		#The cause of umount failure pacakage is "pidgin"
 	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+                uninstalldeb "mint-info-xfce banshee-extension-soundmenu" || return 1
+            fi
             umountdir || return 1
             uninstalldeb "pidgin pidgin-data pidgin-facebookchat pidgin-libnotify" || return 1
             if [ $ISONLINE == 1 ] ; then
@@ -590,8 +727,11 @@ function mcos()
                 installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments" || return 1
             fi
             mountdir || return 1
+	    if [ $ISFROMSRC -eq 1 ] ; then
+	        sudo sed -i 's/^DefaultSession=default.desktop/DefaultSession=cinnamon.desktop/g' $OUTPATH/squashfs-root/usr/share/mdm/defaults.conf || return 1
+                sudo sed -i 's/^DefaultSession=default.desktop/DefaultSession=cinnamon.desktop/g' $OUTPATH/squashfs-root/usr/share/ubuntu-system-adjustments/mdm/defaults.conf || return 1
+            fi
         fi
-
 	#wangyu: Install apps from local application group.
 	if [ $BUITSTEP -le 101 ] ; then
             echo 101 >$BUILDCOSSTEP
@@ -791,7 +931,7 @@ function cclean()
     
     if [[ "$CONDITION" == "Y" || "$CONDITION" == "y" ]] ; then
         echo Umounting dir...
-        umountdir 2>/dev/null 
+        umountdir 2>/dev/null
 	if [ "$?" -ne "0" ] ; then
 	    echo "The device can not be umounted now... Please restart the computer and try it again!"
 	    return 1

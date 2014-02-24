@@ -26,6 +26,10 @@ if [ ! -d $2 ] ; then
     exit -1
 fi
 
+if [ $# -gt 2 ] ; then
+    ISONAME=$3
+fi
+
 OUTPATH=$(cd $1; pwd)
 GENISOPATH=$(cd $2; pwd)
 

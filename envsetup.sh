@@ -261,7 +261,11 @@ function mkiso()
         return 1
     fi
     umountdir
-    sudo sh $T/build/mkiso.sh $OUT/out $OUT || return 1
+    if [ $# -gt 0 ] ; then
+        sudo sh $T/build/mkiso.sh $OUT/out $OUT $1 || return 1
+    else
+        sudo sh $T/build/mkiso.sh $OUT/out $OUT || return 1
+    fi
 }
 
 function m()
@@ -812,9 +816,10 @@ function mcos()
 
         umountdir || return 1
 
+        ISONAME="mycos-i386-`date +%Y%m%d%H%M`.iso"
         if [ $BUITSTEP -le 200 ] ; then
             echo 200 >$BUILDCOSSTEP
-            mkiso || return 1
+            mkiso $ISONAME || return 1
         fi
         echo 200 >$BUILDCOSSTEP
         echo Finish building COS Desktop.
@@ -910,60 +915,65 @@ function cclean()
         return 1
     fi
     echo Warning: These dirs or files in workout/ follow will be remove:
-    echo $OUT/out
-    echo $REPOSITORY
-    echo $OUT/$APPOUT
 
     CONDITION="N"
+    is4out=0
     if [ $# -ge 1 ] ; then
         for i in "$@"
         do
             if [[ "$i" == "-Y" || "$i" == "-y" ]] ; then
                 CONDITION="Y"
+	    elif [[ "$i" == "out" ]] ; then
+                is4out=1
 	    else
-	        echo Warning: You can remove these above dirs or files -Y/-y
+                echo Error: unknown param $i
+	        echo -y: You can remove these above dirs or files -Y/-y
+                echo out: You can remove onle out dir
+                return
 	    fi
         done 
-    else 
+    fi
+    if [ $CONDITION == "N" ] ; then
+        echo $OUT/out
+        if [ $is4out == 0 ] ; then
+            echo $REPOSITORY
+            echo $OUT/$APPOUT
+        fi
         read -p "Are you sure to remove these above dirs or files  Y/N:" answer
         CONDITION="$answer"
     fi
-    
+
     if [[ "$CONDITION" == "Y" || "$CONDITION" == "y" ]] ; then
+        echo Removing start...
         echo Umounting dir...
         umountdir 2>/dev/null
 	if [ "$?" -ne "0" ] ; then
 	    echo "The device can not be umounted now... Please restart the computer and try it again!"
 	    return 1
 	fi	
-        if [ -e $OUT/buildallstep ] ; then
-            rm $OUT/buildallstep
-        fi
-        if [ -e $OUT/buildcosstep ] ; then
-            rm $OUT/buildcosstep
-        fi
         if [  -e $OUT/out ] ; then
             echo Deleting $OUT/out ...
             sudo rm -r $OUT/out
         fi
-        if [  -e $REPOSITORY ] ; then
-            echo Deleting $REPOSITORY ...
-            rm -r $REPOSITORY
+        if [ $is4out==0 ] ; then
+            if [  -e $REPOSITORY ] ; then
+                echo Deleting $REPOSITORY ...
+                rm -r $REPOSITORY
+            fi
+            if [  -e $OUT/$APPOUT ] ; then
+                echo Deleting $OUT/$APPOUT ...
+                rm -r $OUT/$APPOUT
+            fi 
         fi
-        if [  -e $OUT/$APPOUT ] ; then
-            echo Deleting $OUT/$APPOUT ...
-            rm -r $OUT/$APPOUT
-        fi 
-        if [  -e $OUT/appout ] ; then
-            echo Deleting $OUT/appout ...
-            rm -r $OUT/appout
-        fi 
-        if [  -e $OUT/appbuilt ] ; then
-            echo Deleting $OUT/$appbuilt ...
-            rm -r $OUT/appbuilt
-        fi 
         echo Finished cleaning workout dir.
+    else
+        echo Removing is cancelled.
     fi
+}
+
+function ccleanout()
+{
+    cclean out
 }
 
 function addrepository()

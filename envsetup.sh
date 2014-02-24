@@ -252,6 +252,7 @@ function uniso()
     fi
     checktools || return 1
     sudo sh $T/build/uniso.sh $ISOPATH $OUT/out || return 1
+    sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
 }
 
 function mkiso()
@@ -617,7 +618,6 @@ function mcos()
                 sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
 	    else
                 uniso || return 1
-                sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
 	   fi
         fi
 

@@ -92,7 +92,7 @@ if [ ! -d $OUTPATH/mycos ] ; then
         echo warning:squashfs-root has exist, it is expected filesystem.squashfs has been executed unsquashfs normally.    
     fi
 else
-    echo warning:mycos has exist, it is expected iso/* has been copied to mycos dir.
+    echo warning:mycos has exist, it is expected squashfs file has been unsquashfsed to mycos dir.
 fi
 
 #wangyu:Copy vmlinuz and initrd.lz to casper, to make sure user can excute mkiso without customization.

@@ -793,8 +793,8 @@ function mcos()
 
         if [ $BUITSTEP -le 190 ] ; then
             echo 190 >$BUILDCOSSTEP
-            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
-            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /home && rm -r *"
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r -f *"
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /home && rm -r -f *"
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get clean"
         fi
 
@@ -808,7 +808,8 @@ function mcos()
             if [ ! -d $OUTPATH/squashfs-root/usr/share/cosdesktop ] ; then
                 mkdir -p $OUTPATH/squashfs-root/usr/share/cosdesktop
             fi
-            echo $NOWTIME>$OUTPATH/squashfs-root/usr/share/cosdesktop/buildtime
+            echo $NOWTIME>/tmp/buildtime
+            sudo mv /tmp/buildtime $OUTPATH/squashfs-root/usr/share/cosdesktop/buildtime
             mkiso $ISOFILENAME || return 1
         fi
         echo Finish building COS Desktop.
@@ -982,7 +983,7 @@ function cclean()
                 rm -r $OUT/$APPOUT
             fi 
         fi
-        echo Finished cleaning workout dir.
+        echo Finished cleaning dir.
     else
         echo Removing is cancelled.
     fi

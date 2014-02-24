@@ -851,6 +851,17 @@ class PageGtk(PageBase):
                     cell.set_property('text', '%s' % opt[1])
                     break
 
+    def partman_column_label(self, unused_column, cell, model, iterator, user_data):
+        cell.set_property('text', '')
+        if not (model[iterator][1] and 'id' in model[iterator][1]):
+            return
+        partition = model[iterator][1]['parted']
+        devicelabels = self.deviceLabels()
+        for (dev, label) in devicelabels:
+            arrs = label.split('\"', 1)
+            if len(arrs) == 2 and partition['path'] in dev:
+                cell.set_property('text', arrs[0])
+
     @plugin.only_this_page
     def partman_popup(self, widget, event):
         from gi.repository import Gtk
@@ -1116,15 +1127,15 @@ class PageGtk(PageBase):
                 self.controller.dbfilter.edit_partition(devpart, **edits)
 
     def plugin_translate(self, lang):
-        symbolic_widgets = ['partition_button_new', 'partition_button_delete']
-        for widget_name in symbolic_widgets:
+        widgets_names = ['partition_button_new', 'partition_button_delete', 'partition_button_edit']
+        for widget_name in widgets_names:
             widget = getattr(self, widget_name)
-            text = widget.get_label()
+            text = self.controller.get_string(text_name)
             if len(text) == 0:
                 continue
             a11y = widget.get_accessible()
             a11y.set_name(text)
-            widget.set_label('')
+            widget.set_label(text)
 
     @plugin.only_this_page
     def on_partition_use_combo_changed(self, combobox):
@@ -1281,6 +1292,21 @@ class PageGtk(PageBase):
         self.controller.allow_change_step(False)
         self.controller.dbfilter.undo()
 
+    def deviceLabels(self):
+        labels = []
+        try:
+            with open('/var/lib/partman/deviceLabels') as deviceLabels:
+                for line in deviceLabels:
+                    line = misc.utf8(line.rstrip('\n'), errors='replace')
+                    fields = line.split('LABEL=\"', 1)
+                    if len(fields == 2)
+                        (dev, label) = fields
+                        labels.append((dev, label))
+                        continue
+        except IOError
+            pass
+        return labels
+
     def update_partman(self, disk_cache, partition_cache, cache_order):
         from gi.repository import Gtk, GObject
         from ubiquity import segmented_bar
@@ -1358,6 +1384,13 @@ class PageGtk(PageBase):
             column_syst.set_cell_data_func(cell_syst, self.partman_column_syst)
             column_syst.set_sizing(Gtk.TreeViewColumnSizing.AUTOSIZE)
             self.partition_list_treeview.append_column(column_syst)
+
+            cell_label = Gtk.CellRendererText()
+            column_label = Gtk.TreeViewColumn(
+                self.controller.get_string('partition_column_label'), cell_label)
+            column_label.set_cell_data_func(cell_label, self.partman_column_label)
+            column_label.set_sizing(Gtk.TreeViewColumnSizing.AUTOSIZE)
+            self.partition_list_treeview.append_column(column_label)
 
             self.partition_list_treeview.set_model(partition_tree_model)
 

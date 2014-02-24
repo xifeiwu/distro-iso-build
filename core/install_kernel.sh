@@ -14,7 +14,7 @@ function intkernel()
 
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg -i -E linux-image-${KERNEL_VERSION_FULL}*.deb linux-headers-${KERNEL_VERSION_FULL}*.deb"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "ln -s /usr/src/linux-headers-${KERNEL_VERSION_FULL} /lib/modules/${KERNEL_VERSION_FULL}/build"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /lib/modules/${KERNEL_VERSION_FULL} && rm -rf kernel"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf /lib/modules/${KERNEL_VERSION_FULL}/kernel && rm -rf /lib/modules/${KERNEL_VERSION_FULL}/modules.dep"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg -i linux-image-${KERNEL_VERSION_FULL}*.deb linux-headers-${KERNEL_VERSION_FULL}*.deb"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge linux-generic linux-headers-generic linux-image-generic linux-headers-3.8.0-19-generic linux-headers-3.8.0-19 linux-image-extra-3.8.0-19-generic linux-image-3.8.0-19-generic"
    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf /home/*"

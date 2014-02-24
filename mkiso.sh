@@ -26,6 +26,10 @@ if [ ! -d $2 ] ; then
     exit -1
 fi
 
+if [ $# -gt 2 ] ; then
+    ISONAME=$3
+fi
+
 OUTPATH=$(cd $1; pwd)
 GENISOPATH=$(cd $2; pwd)
 
@@ -41,10 +45,10 @@ if [ ! -e mycos/casper ] ; then
     exit -1
 fi
 
-#if [ ! -e initrd_lz ] ; then
-#    echo error: initrd_lz does not exist. exit.
-#    exit -1
-#fi
+if [ ! -e mycos/casper/initrd.lz ] ; then
+    echo error: initrd.lz does not exist. exit.
+    exit -1
+fi
 
 if [ ! -e squashfs-root ] ; then
     echo error: squashfs-root does not exist. exit.

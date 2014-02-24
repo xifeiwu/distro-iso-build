@@ -28,13 +28,13 @@ sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
 sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get remove -y xserver-xorg-video-ati xserver-xorg-video-radeon"
-sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get install -y libcogl-dev autoconf xserver-xorg-dev xutils-dev libtool"
+#sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get install -y libcogl-dev autoconf xserver-xorg-dev xutils-dev libtool libpthread-stubs0-dev libpciaccess-dev"
 sudo chroot ${CHROOTDIR} /bin/bash -c "tar xvf ati.tar.gz && cd /ati && tar xvf xf86-video-ati-7.3.0.tar.gz && cd tools && tar xvf glamor-egl-0.6.0.tar.gz && tar xvf libdrm-2.4.52.tar.gz"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd ati/tools/libdrm-2.4.52 && ./configure && make &&make install"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd ati/tools/glamor-egl-0.6.0 && ./autogen.sh --prefix=/usr && make && make install"
 sudo chroot ${CHROOTDIR} /bin/bash -c "cd ati/xf86-video-ati-7.3.0 && ./autogen.sh --prefix=/usr && make && make install"
 
-sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /ati"
+sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /ati /ati.tar.gz"
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /home/*"
 
 

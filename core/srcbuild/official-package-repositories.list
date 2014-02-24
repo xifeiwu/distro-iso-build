@@ -1,0 +1,23 @@
+# by ourself
+#deb http://192.168.160.169/cos/mint olivia main upstream import
+#deb http://192.168.160.169/cos/ubuntu raring main restricted universe multiverse
+#deb http://192.168.160.169/cos/ubuntu raring-updates main restricted universe multiverse
+
+#deb http://192.168.160.169/cos3/mint olivia main upstream import
+#deb http://192.168.160.169/cos3/ubuntu raring main restricted universe multiverse
+#deb http://192.168.160.169/cos3/ubuntu raring-updates main restricted universe multiverse
+
+#deb http://192.168.160.169/cos2/mint olivia main upstream import
+#deb http://192.168.160.169/cos2/ubuntu raring main restricted universe multiverse
+#deb http://192.168.160.169/cos2/ubuntu raring-updates main restricted universe multiverse
+
+deb http://192.168.160.169/cos3/ubuntu/ raring main restricted universe multiverse
+deb http://192.168.160.169/cos3/ubuntu/ raring-updates main restricted universe multiverse
+deb http://192.168.160.169/cos3/mint/ olivia main upstream import
+
+# official
+deb http://192.168.160.169/mint olivia main upstream import
+deb http://192.168.160.169/ubuntu raring main restricted universe multiverse
+deb http://192.168.160.169/ubuntu raring-updates main restricted universe multiverse
+deb http://192.168.160.169/security/ubuntu/ raring-security main restricted universe multiverse
+deb http://192.168.160.169/canonical/ubuntu/ raring partner

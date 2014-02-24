@@ -1116,7 +1116,6 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
                     <property name="use_action_appearance">False</property>
                     <property name="label" translatable="yes">Add...</property>
                     <property name="use_underline">True</property>
-                    <property name="icon_name">list-add-symbolic</property>
                     <signal name="clicked" handler="on_partition_list_new_activate" swapped="no"/>
                   </object>
                   <packing>
@@ -1132,7 +1131,6 @@ Logical Volume Management (LVM) lets Linux Mint treat multiple physical volumes 
                     <property name="use_action_appearance">False</property>
                     <property name="label" translatable="yes">Delete</property>
                     <property name="use_underline">True</property>
-                    <property name="icon_name">list-remove-symbolic</property>
                     <signal name="clicked" handler="on_partition_list_delete_activate" swapped="no"/>
                   </object>
                   <packing>

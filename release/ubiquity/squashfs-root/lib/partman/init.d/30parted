@@ -135,7 +135,9 @@ if [ ! -f /var/run/parted_server.pid ]; then
 			cd /
 			rm -rf $dev
 		fi
-	done
+	doncmae
+
+    blkid -d > /var/lib/partman/deviceLabels
 
 	db_get partman/filter_mounted
 	if [ "$RET" = true ]; then

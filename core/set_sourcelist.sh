@@ -16,7 +16,7 @@ sudo mv /tmp/cos-repository.list $CHROOTDIR/etc/apt/sources.list.d/
 sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos/project/keyring.gpg | apt-key add -"
 sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos/project/coskeyring.gpg | apt-key add -"
 
-codename=`sed -n '2p' /etc/apt/preferences | awk '{print $3}'`
+codename=`sed -n '2p' ${CHROOTDIR}/etc/apt/preferences | awk '{print $3}'`
 if [ "${codename}" != "n=iceblue" ] ; then
     sed -i '1i\Package: *\
 Pin: release n=iceblue\

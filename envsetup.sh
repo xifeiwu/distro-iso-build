@@ -86,7 +86,8 @@ function setenv()
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export BUILDALLSTEP=$REPOSITORY/buildallstep
-    export RAWSQUASHFSNAME=filesystem-zhoupeng-20140108.squashfs
+    export RAWSQUASHFSNAME=filesystem-linuxmint-15-cinnamon-32bit.squashfs
+    export RAWSQUASHFSNAME_SRC=filesystem-zhoupeng-20140108.squashfs
     export ISOPATH=$OUT/$RAWSQUASHFSNAME
     export RAWSQUASHFSADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWSQUASHFSNAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
@@ -790,8 +791,30 @@ function mcos()
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz || return 1
         fi
 
-        if [ $BUITSTEP -le 150 ] ; then
-            echo 150 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 190 ] ; then
+            echo 190 >$BUILDCOSSTEP
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /home && rm -r *"
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get clean"
+        fi
+
+        umountdir || return 1
+
+        NOWTIME=`date +%Y%m%d%H%M`
+        ISONAME="mycos-i386-$NOWTIME"
+        ISOFILENAME="$ISONAME.iso"
+        if [ $BUITSTEP -le 200 ] ; then
+            echo 200 >$BUILDCOSSTEP
+            if [ ! -d $OUTPATH/squashfs-root/usr/share/cosdesktop ] ; then
+                mkdir -p $OUTPATH/squashfs-root/usr/share/cosdesktop
+            fi
+            echo $NOWTIME>$OUTPATH/squashfs-root/usr/share/cosdesktop/buildtime
+            mkiso $ISOFILENAME || return 1
+        fi
+        echo Finish building COS Desktop.
+
+        if [ $BUITSTEP -le 250 ] ; then
+            echo 250 >$BUILDCOSSTEP
             if [ $IS4TEST -eq 1 ] ; then
                 #wangyu: Build iso version for test group
                 echo "Start building test version..."
@@ -805,24 +828,18 @@ function mcos()
                 sudo cp -r $OUT/$PREAPP/fileForTest/*/* $OUTPATH/squashfs-root/tmp/fileForTest
                 sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd tmp/fileForTest && dpkg -i -E *.deb" || return 1
 		sudo rm -rf $OUTPATH/squashfs-root/tmp/*
+
             fi
         fi
 
-
-        if [ $BUITSTEP -le 190 ] ; then
-            echo 190 >$BUILDCOSSTEP
-            sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r *"
+        if [ $BUITSTEP -le 255 ] ; then
+            echo 255 >$BUILDCOSSTEP
+            if [ $IS4TEST -eq 1 ] ; then
+                ISOTESTFILENAME="$ISONAME-test.iso"
+                mkiso $ISOTESTFILENAME || return 1
+            fi
         fi
 
-        umountdir || return 1
-
-        ISONAME="mycos-i386-`date +%Y%m%d%H%M`.iso"
-        if [ $BUITSTEP -le 200 ] ; then
-            echo 200 >$BUILDCOSSTEP
-            mkiso $ISONAME || return 1
-        fi
-        echo 200 >$BUILDCOSSTEP
-        echo Finish building COS Desktop.
         echo ======
         echo Tips: You can enter runiso command to run the iso generated.
         echo ======
@@ -955,7 +972,7 @@ function cclean()
             echo Deleting $OUT/out ...
             sudo rm -r $OUT/out
         fi
-        if [ $is4out==0 ] ; then
+        if [ $is4out == 0 ] ; then
             if [  -e $REPOSITORY ] ; then
                 echo Deleting $REPOSITORY ...
                 rm -r $REPOSITORY

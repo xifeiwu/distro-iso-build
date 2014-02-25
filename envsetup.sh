@@ -13,6 +13,8 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - mall:      Build all packages in cos and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
 - uniso:     Export iso file to workout/out dir.
 - mkiso:     Generate iso file into workout dir from workout/out file.
+- runiso:    Run iso by kvm command.
+- flashiso:  Flash iso by usb-creator-gtk command.
 - cgrep:     Greps on all local C/C++ files.
 - psgrep:    Greps on all local py js files.
 - jgrep:     Greps on all local Java files.
@@ -1233,6 +1235,54 @@ function runiso()
         fi
         ((i++))
     done 
+}
+
+function flashiso()
+{
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+    echo
+
+    command -v usb-creator-gtk > /dev/null
+    if [ ! $? == 0 ] ; then
+        echo Error: usb-creator-gtk is not installed. You can install it by enter the follow command.
+        echo sudo apt-get install usb-creator-gtk
+        return 1
+    fi
+
+    creator_version=`dpkg -s usb-creator-gtk | grep Version | cut -d ' ' -f 2`
+    if [ $creator_version \< "0.2.47.2" ] ; then
+        if [ $# -eq 0 ] || [ ! $1 == "-f" ] ; then
+            echo Error: the version of usb-creator-gtk is less than 0.2.47.2, so maybe you will get core dump error when executing.
+            echo You can ignore this check with -f param.
+            echo Or you can update it now with the following command.
+            echo sudo apt-get install usb-creator-gtk
+            return 1
+        fi
+    fi
+
+    i=0
+    for file in `ls $OUT/ | grep iso | sort`
+    do
+        echo -    $i : $file
+        ((i++))
+    done
+    echo You can choose one iso as above to flash by usb-creator-gtk.
+    read -p "Enter number:" no
+    i=0
+    for file in `ls $OUT/ | grep iso | sort`
+    do
+        if [ "$i" == "$no" ] ; then
+            echo ======
+            echo command: usb-creator-gtk -i ${OUT}/$file -n
+            usb-creator-gtk -i ${OUT}/$file -n
+            break
+        fi
+        ((i++))
+    done
 }
 
 function pid()

@@ -55,10 +55,6 @@ if [ ! -e squashfs-root ] ; then
     exit -1
 fi
 
-echo change casper username and hostname
-sed -i 's/mint/cos/' $OUTPATH/squashfs-root/etc/casper.conf
-echo success changing casper username and hostname
-
 echo mkiso.sh will generate iso file $ISONAME in $GENISOPATH.
 
 echo generate manifest.

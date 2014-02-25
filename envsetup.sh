@@ -743,6 +743,7 @@ function mcos()
                 sudo sed -i 's/^DefaultSession=default.desktop/DefaultSession=cinnamon.desktop/g' $OUTPATH/squashfs-root/usr/share/ubuntu-system-adjustments/mdm/defaults.conf || return 1
             fi
         fi
+
 	#wangyu: Install apps from local application group.
 	if [ $BUITSTEP -le 101 ] ; then
             echo 101 >$BUILDCOSSTEP
@@ -788,6 +789,8 @@ function mcos()
             sudo sh $T/build/release/set_username_for_WPS.sh $OUTPATH $OUT/$PREAPP  || return 1
             sudo sh $T/build/release/remove_update_userdir.sh $OUTPATH || return 1
             sudo sh $T/build/release/change_networking.sh $OUTPATH || return 1
+            echo change casper username and hostname
+            sudo sed -i 's/mint/cos/' $OUTPATH/squashfs-root/etc/casper.conf
         fi
 
         if [ $BUITSTEP -le 148 ] ; then

@@ -83,6 +83,7 @@ sudo sh $ScriptPATH/release/change_zh_CN.sh $OUTPATH
 #sudo sh $ScriptPATH/release/custom.sh $OUTPATH
 sh $ScriptPATH/release/ubiquity.sh $ScriptPATH/release/ $OUTPATH
 sh $ScriptPATH/release/packages.sh $ScriptPATH/release/ $OUTPATH
+sh $ScriptPATH/release/ubiquity_zoneinfo.sh $OUTPATH
 
 #Change some icon\theme\applications name and so on.
 sudo sh $ScriptPATH/release/mktheme.sh $OUTPATH

@@ -1130,7 +1130,7 @@ class PageGtk(PageBase):
         widgets_names = ['partition_button_new', 'partition_button_delete', 'partition_button_edit']
         for widget_name in widgets_names:
             widget = getattr(self, widget_name)
-            text = self.controller.get_string(text_name)
+            text = self.controller.get_string(widget_name)
             if len(text) == 0:
                 continue
             a11y = widget.get_accessible()
@@ -1299,11 +1299,11 @@ class PageGtk(PageBase):
                 for line in deviceLabels:
                     line = misc.utf8(line.rstrip('\n'), errors='replace')
                     fields = line.split('LABEL=\"', 1)
-                    if len(fields == 2)
+                    if len(fields) == 2:
                         (dev, label) = fields
                         labels.append((dev, label))
                         continue
-        except IOError
+        except IOError:
             pass
         return labels
 

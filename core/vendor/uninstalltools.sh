@@ -27,7 +27,7 @@ fi
 #sudo cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
-sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get remove -y libcogl-dev autoconf xserver-xorg-dev xutils-dev libtool"
+sudo chroot ${CHROOTDIR} /bin/bash -c "apt-get autoremove -y libcogl-dev autoconf xserver-xorg-dev xutils-dev libtool"
 
 sudo chroot ${CHROOTDIR} /bin/bash -c "rm -rf /home/*"
 

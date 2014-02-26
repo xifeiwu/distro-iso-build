@@ -780,7 +780,9 @@ function _mcos()
         #Change some icon\theme\applications name and so on.
         if [ $BUITSTEP -le 110 ] ; then
             echo 110 >$BUILDCOSSTEP
-            sudo sh $T/build/release/mktheme.sh $OUTPATH || return 1
+#           sudo sh $T/build/release/mktheme.sh $OUTPATH || return 1
+#	    sudo rm -rf $OUTPATH/squashfs-root/usr/share/themes/Linux\ Mint/
+	    uninstalldeb "cinnamon-themes" || return 1
         fi
         if [ $BUITSTEP -le 120 ] ; then
             echo 120 >$BUILDCOSSTEP

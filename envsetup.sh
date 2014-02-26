@@ -551,6 +551,12 @@ function mrootbuilder()
 
 function mcos()
 {
+    NOWTIME=`date +%Y%m%d%H%M`
+    _mcos $* | tee /tmp/mcos_${NOWTIME}.log
+}
+
+function _mcos()
+{
     ISONLINE=0
     BUITSTEP=0
     IS4LENOVO=0

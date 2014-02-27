@@ -25,8 +25,8 @@ Pin-Priority: 750\
     ' ${CHROOTDIR}/etc/apt/preferences
 fi
 
-echo "deb http://${COSREPOIP}/repos/cos cos main
-deb http://${COSREPOIP}/repos/mint olivia main upstream import
+#echo "deb http://${COSREPOIP}/repos/cos cos main
+echo "deb http://${COSREPOIP}/repos/mint olivia main upstream import
 deb http://${COSREPOIP}/repos/ubuntu raring main restricted universe multiverse
 deb http://${COSREPOIP}/repos/ubuntu raring-security main restricted universe multiverse
 deb http://${COSREPOIP}/repos/ubuntu raring-updates main restricted universe multiverse

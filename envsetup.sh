@@ -875,6 +875,24 @@ function _mcos()
         fi
         echo Finish building COS Desktop.
 
+        if [ $BUITSTEP -le 230 ] ; then
+            echo 230 >$BUILDCOSSTEP
+            sudo sh $T/build/debug/installkdump.sh $OUTPATH $APPPATH || return 1
+        fi
+
+        if [ $BUITSTEP -le 231 ] ; then
+            echo 231 >$BUILDCOSSTEP
+            ISODEBUGFILENAME="$ISONAME-debug.iso"
+            mkiso $ISODEBUGFILENAME || return 1
+        fi
+        echo 231 >$BUILDCOSSTEP
+        
+        if [ $BUITSTEP -le 232 ] ; then
+            echo 232 >$BUILDCOSSTEP
+            sudo sh $T/build/debug/uninstallkdump.sh $OUTPATH $APPPATH || return 1
+        fi
+        echo Finish building COS Desktop DEBUG.
+
         if [ $BUITSTEP -le 250 ] ; then
             echo 250 >$BUILDCOSSTEP
             if [ $IS4TEST -eq 1 ] ; then

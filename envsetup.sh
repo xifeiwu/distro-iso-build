@@ -1216,14 +1216,17 @@ function installdeb()
     sudo mount --bind $REPOSITORY $OUT/out/squashfs-root/repository
     mountdir || return 1
 
-    echo "deb file:///repository/debian iceblue main" > /tmp/cos-dev-repository.list
-    sudo mv /tmp/cos-dev-repository.list $OUT/out/squashfs-root/etc/apt/sources.list.d/
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c 'sudo apt-get update -o Dir::Etc::sourcelist="sources.list.d/cos-dev-repository.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"' || return 1
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir::Etc::sourcelist=\"sources.list.d/cos-dev-repository.list\" $deblist" || return 1
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get clean" || return 1
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/state
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/cache
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/etc
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/etc/preferences.d
+    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/var/log/apt/
+    echo "deb file:///repository/debian iceblue main" > $OUT/out/squashfs-root/tmp/apt/root/etc/sources.list
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get update -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0 $deblist" || return 1
     echo `echo $deblist | wc -w` package\(s\) has been installed.
-
-    sudo rm $OUT/out/squashfs-root/etc/apt/sources.list.d/cos-dev-repository.list
+    sudo rm -rf $OUT/out/squashfs-root/tmp/apt
 
     umountdir
     sudo umount $OUT/out/squashfs-root/repository

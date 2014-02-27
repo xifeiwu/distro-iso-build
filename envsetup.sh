@@ -549,6 +549,26 @@ function mrootbuilder()
     sudo umount -l $OUT/out/squashfs-root/dev
 }
 
+#Create link libudev.so.0 -> libudev.so.1
+function createlink()
+{
+    paths=(
+        "/lib/x86_64-linux-gnu/libudev.so.1" # Ubuntu, Xubuntu, Mint
+        "/usr/lib64/libudev.so.1" # SUSE, Fedora
+        "/usr/lib/libudev.so.1" # Arch, Fedora 32bit
+        "/lib/i386-linux-gnu/libudev.so.1" # Ubuntu 32bit
+    )
+    for i in "${paths[@]}"
+    do
+        if [ -f $i ] ; then
+        dirpath=$(dirname $i)
+        sudo ln -sf "$i" $dirpath/libudev.so.0
+        echo "create link succefull "
+        break
+        fi
+    done
+}
+
 function mcos()
 {
     ISONLINE=0
@@ -610,6 +630,7 @@ function mcos()
         if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDCOSSTEP
             checktools || return 1
+            createlink || return 1
             mall || return 1
         fi
         if [ $BUITSTEP -le 30 ] ; then
@@ -701,26 +722,31 @@ function mcos()
         fi
 
         #Change some zh_CN LC_MESSAGES
-        if [ $BUITSTEP -le 80 ] ; then
-            echo 80 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 70 ] ; then
+            echo 70 >$BUILDCOSSTEP
             sudo sh $T/build/release/change_zh_CN.sh $OUTPATH || return 1
         fi
 
         #Change system name in some where. This shell file also will install some software in cos source list.
-        if [ $BUITSTEP -le 90 ] ; then
-            echo 90 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 80 ] ; then
+            echo 80 >$BUILDCOSSTEP
             sudo sh $T/build/release/ubiquity.sh $T/build/release/ $OUTPATH || return 1
         fi
 
         #Change time zone info
-        if [ $BUITSTEP -le 95 ] ; then
-            echo 95 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 81 ] ; then
+            echo 81 >$BUILDCOSSTEP
             sudo sh $T/build/release/ubiquity_zoneinfo.sh $OUTPATH || return 1
         fi
 
+        #Reset sourcelist
+        if [ $BUITSTEP -le 90 ] ; then
+            echo 90 >$BUILDCOSSTEP           
+            sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return 1
+        fi        
+
         if [ $BUITSTEP -le 100 ] ; then
             echo 100 >$BUILDCOSSTEP
-            sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return 1
             mountdir  || return 1
             uninstallmintdeb || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
@@ -737,7 +763,7 @@ function mcos()
             if [ $ISONLINE == 1 ] ; then
                 installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade"  || return 1
             else
-                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cosfeedback cospatchmgr" || return 1
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cospatchmgr" || return 1
             fi
             mountdir || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
@@ -800,6 +826,22 @@ function mcos()
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "update-initramfs -u" || return 1
             sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz || return 1
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz || return 1
+        fi
+
+		
+
+        #Install deb by apt-get install 
+        if [ $BUITSTEP -le 161 ] ; then
+            echo 161 >$BUILDCOSSTEP
+            echo 'Install qt5-qmake and qt5-default g++'
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get update"
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get -y install qt5-qmake qt5-default g++" || return 1
+            echo "Install qt5-qmake and qt5-default successfull~"
+            echo "Install cosfeedback"
+            sudo cp $OUT/debsaved/cosfeedback*.deb $OUTPATH/squashfs-root/tmp/cosfeedback.deb || return 1
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "sudo dpkg -i /tmp/cosfeedback.deb" || return 1
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "rm -r /tmp/cosfeedback.deb" || return 1
+            echo "Install cosfeedback successfull~"
         fi
 
         if [ $BUITSTEP -le 190 ] ; then

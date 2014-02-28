@@ -85,9 +85,9 @@ function setenv()
     export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
+    export BUILDCOSDIRS="cos desktop"
     export REPOSITORY=$OUT/repository
     export BUILDCOSSTEP=$OUT/out/buildcosstep
-    export BUILDALLSTEP=$REPOSITORY/buildallstep
     export RAWSQUASHFSNAME=filesystem-linuxmint-15-cinnamon-32bit.squashfs
     export RAWSQUASHFSNAME_SRC=filesystem-zhoupeng-20140108.squashfs
     export ISOPATH=$OUT/$RAWSQUASHFSNAME
@@ -310,7 +310,7 @@ function mm()
             if [ -f ../$file ] ; then
                 echo ERROR: The files in parent dir should be moved into somewhere. Maybe they are the last files generated when last building.
                 echo
-                echo tips: cmove: you should enter cmove command to move this files into $OUT/$APPOUT dir.
+                echo tips: cmove: you should enter cmove command to clean these files.
                 return 1
             fi
         done 
@@ -336,13 +336,16 @@ function mm()
         done 
         if [ $HASDEBFILE == 0 ] ; then
             echo ERROR: No deb file generated. Some error happened in dpkg-buildpackage -d $*
+            cmove || return 1
             return 1
+        else
+            git log -1 | head -n 1 >$OUT/$APPOUT/$maindir/$dir/logid
+            cmove --built || return 1
+            echo Info: These deb files above has been added into repository.
+            if [ $ISINSTALL == 1 ] ; then
+               installdeb "$DEBTOINSTALL" || return 1
+            fi 
         fi
-        echo Info: These deb files above has been added into repository.
-        if [ $ISINSTALL == 1 ] ; then
-           installdeb "$DEBTOINSTALL"
-        fi 
-        cmove
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -353,7 +356,7 @@ function mi()
 {
     T=$(gettop)
     if [ "$T" ]; then
-        mm --install -tc
+        mm --install -tc || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -367,26 +370,23 @@ function mall()
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
-    LASTSTEP=0
-    if [ -e $BUILDALLSTEP ] ; then
-        LASTSTEP=`cat $BUILDALLSTEP`
-    fi
-    for i in "$@"
-    do
-        if [ "$i" -ge 0 ] 2>/dev/null ; then
-            LASTSTEP=$i
-        fi
-    done
     if [ "$T" ]; then
         if [ ! -e $REPOSITORY ] ; then
             mkdir -p $REPOSITORY
         fi
-        echo Building all deb packages
-
+        isskipcheck=0
+        if [ $# -ge 1 ] ; then
+            for i in "$@"
+            do
+    	    if [[ "$i" == "--skip" ]] ; then
+                    isskipcheck=1
+                fi
+            done 
+        fi
         SRCDesktopPATH=$T/desktop
         SRCCOSPATH=$T/cos
         CURDIR=$PWD
-        if [ $LASTSTEP == 0 ] ; then
+        if [ $isskipcheck -eq 0 ] ; then
             echo check build dependencies and conflicts of all deb package
             checkdepall | grep dpkg-checkbuilddeps
             if [ $? -eq 0 ] ; then
@@ -395,48 +395,39 @@ function mall()
             fi
             echo Finish checking building deb packages
         fi
+        echo ===
+        echo ===================Building all deb packages=======================
         echo
-        step=0
-        for dir in `ls $SRCDesktopPATH | sort`
+        for maindir in $BUILDCOSDIRS
         do
-            if [ -d $SRCDesktopPATH/$dir ] ; then
-                ((step++))
-                if [ $step -lt $LASTSTEP ] ; then
-                    continue
+            for dir in `ls $T/$maindir | sort`
+            do
+                if [ -d $T/$maindir/$dir ] ; then
+                    echo =======Building $maindir/$dir
+                    cd $T/$maindir/$dir
+                    nowlogid=`git log -1 | head -n 1`
+                    lastlogid="##"
+                    if [ -f $OUT/$APPOUT/$maindir/$dir/logid ] ; then
+                        lastlogid=`cat $OUT/$APPOUT/$maindir/$dir/logid`
+                    else
+                        mkdir -p $OUT/$APPOUT/$maindir/$dir
+                    fi
+                    if [ ! "$nowlogid" == "$lastlogid" ] ; then
+                        echo Git log from $lastlogid to $nowlogid
+                        mm -tc || return 1
+                        if [ $? -ne 0 ] ; then
+                            echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
+                            return 1
+                        fi
+                    else
+                        echo No update in $dir, so it do not need to be rebuilt.
+                    fi
                 fi
-                echo $step >$BUILDALLSTEP
-                cd $SRCDesktopPATH/$dir
-                echo $step building $dir
-                mm -tc
-                if [ $? -ne 0 ] ; then
-                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
-                    return 1
-                fi
-            fi
-        done 
-        for dir in `ls $SRCCOSPATH | sort`
-        do
-            if [ -d $SRCCOSPATH/$dir ] ; then
-                ((step++))
-                if [ $step -lt $LASTSTEP ] ; then
-                    continue
-                fi
-                echo $step >$BUILDALLSTEP
-                cd $SRCCOSPATH/$dir
-                echo $step building $dir
-                mm -tc
-                if [ $? -ne 0 ] ; then
-                    echo Error has happened when building $dir. Please check the log above. You can enter checkdepall to find the whole list of dependencies to require.
-                    return 1
-                fi
-            fi
-        done 
-        ((step++))
-        echo $step >$BUILDALLSTEP
+            done 
+        done
         echo
         echo Finish building all deb packages
         echo  
-        echo If you want to build all deb packages again, you can enter mall 0
         cd $CURDIR
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
@@ -990,13 +981,28 @@ function cmove()
             echo ERROR: No file debian/rules founded. Maybe this is not a debian package source dir.
             return 1
         fi
-        if [ ! -e $OUT/$APPOUT/ ] ; then
-            mkdir $OUT/$APPOUT
+        isclean=1
+        if [ $# -ge 1 ] ; then
+            for i in "$@"
+            do
+    	    if [[ "$i" == "--built" ]] ; then
+                    isclean=0
+                fi
+            done 
+        fi
+        dir=$(basename $PWD)
+        maindir=$(basename $(dirname $PWD))
+        if [ ! -d $OUT/$APPOUT/$maindir/$dir ] ; then
+            mkdir -p $OUT/$APPOUT/$maindir/$dir || return 1
         fi
         for file in `ls ../ | sort`
         do
             if [ -f ../$file ] ; then
-                mv ../$file $OUT/$APPOUT
+                if [ $isclean -eq 0 ] ; then
+                    mv -f ../$file $OUT/$APPOUT/$maindir/$dir/ || return 1
+                else
+                    rm -f ../$file || return 1
+                fi
             fi
         done 
     else

@@ -478,6 +478,7 @@ function mrootbuilder()
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "export HOME=/root"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "export LC_ALL=C"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes update" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y -f install" || return 1
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes install dbus" || return 1 # ???
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dbus-uuidgen > /var/lib/dbus/machine-id"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --local --rename --add /sbin/initctl"

@@ -86,7 +86,8 @@ function setenv()
     export APPOUT=debsaved
     export PREAPP=preapp
     export BUILDCOSDIRS="cos desktop"
-    export REPOSITORY=$OUT/repository
+    export REPODIRNAME=repository
+    export REPOSITORY=$OUT/$REPODIRNAME
     export BUILDCOSSTEP=$OUT/out/buildcosstep
     export RAWSQUASHFSNAME=filesystem-linuxmint-15-cinnamon-32bit.squashfs
     export RAWSQUASHFSNAME_SRC=filesystem-zhoupeng-20140108.squashfs
@@ -1021,28 +1022,30 @@ function cclean()
     echo Warning: These dirs or files in workout/ follow will be remove:
 
     CONDITION="N"
-    is4out=0
+    dirclean=out
     if [ $# -ge 1 ] ; then
         for i in "$@"
         do
             if [[ "$i" == "-Y" || "$i" == "-y" ]] ; then
                 CONDITION="Y"
 	    elif [[ "$i" == "out" ]] ; then
-                is4out=1
+                dirclean="out"
+	    elif [[ "$i" == "app" ]] ; then
+                dirclean="$APPOUT $REPODIRNAME"
+	    elif [[ "$i" == "all" ]] ; then
+                dirclean="out $APPOUT $REPODIRNAME"
 	    else
                 echo Error: unknown param $i
-	        echo -y: You can remove these above dirs or files -Y/-y
-                echo out: You can remove onle out dir
+	        echo -y: You can ensure remove these above dirs or files -Y/-y
+                echo out: You can remove only out dir
+                echo app: You can remove $APPOUT $REPODIRNAME dir
+                echo all: You can remove out $APPOUT $REPODIRNAME dir
                 return
 	    fi
         done 
     fi
     if [ $CONDITION == "N" ] ; then
-        echo $OUT/out
-        if [ $is4out == 0 ] ; then
-            echo $REPOSITORY
-            echo $OUT/$APPOUT
-        fi
+        echo $OUT/ $dirclean
         read -p "Are you sure to remove these above dirs or files  Y/N:" answer
         CONDITION="$answer"
     fi
@@ -1055,20 +1058,13 @@ function cclean()
 	    echo "The device can not be umounted now... Please restart the computer and try it again!"
 	    return 1
 	fi	
-        if [  -e $OUT/out ] ; then
-            echo Deleting $OUT/out ...
-            sudo rm -r $OUT/out
+        for dir in $dirclean
+        do
+            if [  -e $OUT/$dir ] ; then
+            echo Deleting $OUT/$dir ...
+            sudo rm -r $OUT/$dir
         fi
-        if [ $is4out == 0 ] ; then
-            if [  -e $REPOSITORY ] ; then
-                echo Deleting $REPOSITORY ...
-                rm -r $REPOSITORY
-            fi
-            if [  -e $OUT/$APPOUT ] ; then
-                echo Deleting $OUT/$APPOUT ...
-                rm -r $OUT/$APPOUT
-            fi 
-        fi
+        done
         echo Finished cleaning dir.
     else
         echo Removing is cancelled.

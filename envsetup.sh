@@ -521,8 +521,8 @@ function mrootbuilder()
     # clean unnecessary packages
     echo "-----------apt-get autoremove, clean unnecessary dependency packages---------"
     # autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
-    sudo chroot chroot /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
-    sudo chroot chroot /bin/bash -c "apt-get -y --force-yes clean" || return 1
+    sudo chroot /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
+    sudo chroot /bin/bash -c "apt-get -y --force-yes clean" || return 1
 
     #clean squashfs
 #    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
@@ -762,7 +762,7 @@ function _mcos()
             if [ $ISONLINE == 1 ] ; then
                 installdebonline "ubuntu-system-adjustments cos-mdm-themes cos-local-repository cos-flashplugin cos-flashplugin-11 cos-meta-cinnamon cos-meta-core cos-stylish-addon cosdrivers cos-artwork-cinnamon cossources cosbackup cosstick coswifi cos-artwork-gnome cos-themes cos-artwork-common cos-backgrounds-iceblue cos-x-icons cossystem coswelcome cosinstall cosinstall-icons cosnanny cosupdate cosupload cos-info-iceblue cos-common cos-mirrors cos-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade"  || return 1
             else
-                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cospatchmgr" || return 1
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver cos-artwork-cinnamon cos-artwork-common cos-artwork-gnome cos-backgrounds-iceblue cosbackup cos-common cosdrivers cos-flashplugin cos-flashplugin-11 cos-info-iceblue cosinstall cosinstall-icons cos-local-repository cos-mdm-themes cos-meta-core cos-mirrors cosnanny cossources cosstick cos-stylish-addon cossystem cos-themes cos-translations cosupdate cos-upgrade cosupload coswelcome coswifi cos-x-icons gir1.2-gtop-2.0 libfcitx-qt5-0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cospatchmgr" || return 1
             fi
             mountdir || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
@@ -932,6 +932,7 @@ function getprepkg ()
         cd $(gettop)
         sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWSQUASHFSADDRESS $RAWPREAPPADDRESS || return 1
         addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
+        addrepository $OUT/$PREAPP/libfcitx-qt5-0_0.1.1-2_i386.deb || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1

@@ -485,7 +485,7 @@ function mrootbuilder()
     sudo rm -f $T/build/core/srcbuild/fail_stage1
     sudo rm -f $T/build/core/srcbuild/fail_stage2
     sudo rm -f $T/build/core/srcbuild/fail_stage3
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes -f install" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y -f install" || return 1
 
     # stage1
     echo "------------------------------stage1------------------------------------------"

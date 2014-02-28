@@ -477,15 +477,15 @@ function mrootbuilder()
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "mount none -t devpts /dev/pts"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "export HOME=/root"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "export LC_ALL=C"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get update"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes dbus" # ???
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes update" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes install dbus" || return 1 # ???
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dbus-uuidgen > /var/lib/dbus/machine-id"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --local --rename --add /sbin/initctl"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "ln -s /bin/true /sbin/initctl"
     sudo rm -f $T/build/core/srcbuild/fail_stage1
     sudo rm -f $T/build/core/srcbuild/fail_stage2
     sudo rm -f $T/build/core/srcbuild/fail_stage3
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -f install"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes -f install" || return 1
 
     # stage1
     echo "------------------------------stage1------------------------------------------"
@@ -528,8 +528,8 @@ function mrootbuilder()
     # clean unnecessary packages
     echo "-----------apt-get autoremove, clean unnecessary dependency packages---------"
     # autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
-    sudo chroot chroot /bin/bash -c "apt-get autoremove"
-    sudo chroot chroot /bin/bash -c "apt-get clean"
+    sudo chroot chroot /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
+    sudo chroot chroot /bin/bash -c "apt-get -y --force-yes clean" || return 1
 
     #clean squashfs
 #    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
@@ -539,7 +539,7 @@ function mrootbuilder()
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /var/lib/dbus/machine-id"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /sbin/initctl"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --rename --remove /sbin/initctl"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get clean"
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes clean"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf /tmp/*"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/resolv.conf"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /proc"

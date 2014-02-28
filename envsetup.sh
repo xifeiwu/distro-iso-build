@@ -502,7 +502,7 @@ function mrootbuilder()
     echo "------------------------------stage2------------------------------------------"
     while read pkgsname
     do
-        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --allow-unauthenticated ${pkgsname}"
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get install --yes --allow-unauthenticated ${pkgsname}"
         if [ $? -ne 0 ];then
                 echo $pkgsname >>  $T/build/core/srcbuild/fail_stage2
         fi
@@ -512,7 +512,7 @@ function mrootbuilder()
     echo "------------------------------stage3------------------------------------------"
     while read pkgsname
     do
-        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --force-yes --allow-unauthenticated ${pkgsname}"
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get install --yes --force-yes --allow-unauthenticated ${pkgsname}"
         if [ $? -ne 0 ];then
                 echo $pkgsname >>  $T/build/core/srcbuild/fail_stage3
         fi

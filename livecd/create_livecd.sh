@@ -18,7 +18,7 @@ if [ ! $COSVERSIONNAME ] ; then
     exit -1
 fi
 
-if [ ! -d $OUTPATH/mycos ] ; then
+if [ ! -d $OUTPATH/mycos/casper ] ; then
     mkdir -p $OUTPATH/mycos/casper
     #echo error: there is no mycos path
     #exit -1

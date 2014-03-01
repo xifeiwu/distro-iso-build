@@ -485,7 +485,7 @@ function mrootbuilder()
     while read list
     do
         pkgsname=`echo $list | awk '{print $1}'`
-        sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get install --yes --allow-unauthenticated ${pkgsname}"
+        sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get install --yes --allow-unauthenticated ${pkgsname}"
         if [ $? -ne 0 ];then
                 echo $pkgsname >>  $T/build/core/srcbuild/fail_stage1
         fi
@@ -521,8 +521,8 @@ function mrootbuilder()
     # clean unnecessary packages
     echo "-----------apt-get autoremove, clean unnecessary dependency packages---------"
     # autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
-    sudo chroot /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
-    sudo chroot /bin/bash -c "apt-get -y --force-yes clean" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes clean" || return 1
 
     #clean squashfs
 #    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"

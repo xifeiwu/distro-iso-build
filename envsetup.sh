@@ -534,7 +534,9 @@ function mrootbuilder()
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg-divert --rename --remove /sbin/initctl"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes clean"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf /tmp/*"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/resolv.conf"
+    echo "nameserver 8.8.8.8">/tmp/resolv.conf
+    sudo cp /tmp/resolv.conf $OUT/out/squashfs-root/etc/resolv.conf
+    #sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/resolv.conf"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /proc"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /sys"
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "umount -lf /dev/pts"

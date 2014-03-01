@@ -85,7 +85,7 @@ function setenv()
     export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
-    export BUILDCOSDIRS="cos desktop"
+    export BUILDCOSDIRS="mint desktop"
     export REPODIRNAME=repository
     export REPOSITORY=$OUT/$REPODIRNAME
     export BUILDCOSSTEP=$OUT/out/buildcosstep
@@ -210,7 +210,7 @@ function checkdepall()
     T=$(gettop)
     if [ "$T" ]; then
         SRCDesktopPATH=$T/desktop
-        SRCCOSPATH=$T/cos
+        SRCCOSPATH=$T/mint
         CURDIR=$PWD
         echo check build dependencies and conflicts of all deb package
         echo
@@ -760,9 +760,9 @@ function _mcos()
             umountdir || return 1
             uninstalldeb "pidgin pidgin-data pidgin-facebookchat pidgin-libnotify" || return 1
             if [ $ISONLINE == 1 ] ; then
-                installdebonline "ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-themes mint-artwork-common mint-backgrounds-olivia mint-x-icons mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-olivia mint-common mint-mirrors mint-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade"  || return 1
+                installdebonline "ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-themes mint-artwork-common mint-backgrounds-olivia mint-x-icons mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cos-upgrade"  || return 1
             else
-                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver mint-artwork-cinnamon mint-artwork-common mint-artwork-gnome mint-backgrounds-olivia mintbackup mint-common mintdrivers mint-flashplugin mint-flashplugin-11 mint-info-olivia mintinstall mintinstall-icons mint-local-repository mint-mdm-themes mint-meta-core mint-mirrors mintnanny mintsources mintstick mint-stylish-addon mintsystem mint-themes mint-translations mintupdate cos-upgrade mintupload mintwelcome mintwifi mint-x-icons gir1.2-gtop-2.0 libfcitx-qt5-0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 libcinnamon-control-center-dev nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cospatchmgr" || return 1
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver mint-artwork-cinnamon mint-artwork-common mint-artwork-gnome mint-backgrounds-olivia mintbackup mint-common mintdrivers mint-flashplugin mint-flashplugin-11 mint-info-cinnamon mintinstall mintinstall-icons mint-local-repository mint-mdm-themes mint-meta-core mint-mirrors mintnanny mintsources mintstick mint-stylish-addon mintsystem mint-themes mint-translations mintupdate cos-upgrade mintupload mintwelcome mintwifi mint-x-icons gir1.2-gtop-2.0 libfcitx-qt5-0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cospatchmgr" || return 1
             fi
             mountdir || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then

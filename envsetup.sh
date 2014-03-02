@@ -752,14 +752,13 @@ function _mcos()
             mountdir  || return 1
             uninstallmintdeb || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
-                uninstalldeb mint-info-xfce || return 1
+                uninstalldebbyapt "mint-info-xfce libdnet libgadu3 libhal1 libmagickcore5 libmagickwand5 libprelude2 libunwind8 menu imagemagick-common liblqr-1-0" || return 1
             fi
 	    #wangyu: Debs should be removed by the information of Local Application Group
 		#The cause of umount failure pacakage is "pidgin"
 	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
                 uninstalldeb "mint-info-xfce banshee-extension-soundmenu" || return 1
-                uninstalldebbyapt "libdnet libgadu3 libhal1 libmagickcore5 libmagickwand5 libprelude2 libunwind8 menu imagemagick-common liblqr-1-0" || return 1
             fi
             umountdir || return 1
             uninstalldeb "pidgin pidgin-data pidgin-facebookchat pidgin-libnotify" || return 1

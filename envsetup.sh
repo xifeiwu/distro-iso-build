@@ -1153,7 +1153,7 @@ function uninstalldebbyapt()
         echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
         return 1
     fi
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge $@" || return 1
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get --ignore-missing --yes --force-yes purge $@" || return 1
 }
 
 function uninstalldeb()

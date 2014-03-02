@@ -1,3 +1,3 @@
 #/bin/bash
-export COSVERSION=1.0
+export COSVERSION=1.1
 export COSVERSIONNAME=IceBlue

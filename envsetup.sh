@@ -744,6 +744,7 @@ function _mcos()
         if [ $BUITSTEP -le 90 ] ; then
             echo 90 >$BUILDCOSSTEP           
             sudo sh $T/build/core/set_sourcelist.sh $OUTPATH/squashfs-root || return 1
+            sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm /etc/apt/sources.list"
         fi        
 
         if [ $BUITSTEP -le 100 ] ; then
@@ -758,6 +759,7 @@ function _mcos()
 	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
                 uninstalldeb "mint-info-xfce banshee-extension-soundmenu" || return 1
+                uninstalldebbyapt "libdnet libgadu3 libhal1 libmagickcore5 libmagickwand5 libprelude2 libunwind8 menu imagemagick-common liblqr-1-0" || return 1
             fi
             umountdir || return 1
             uninstalldeb "pidgin pidgin-data pidgin-facebookchat pidgin-libnotify" || return 1
@@ -830,8 +832,6 @@ function _mcos()
             sudo cp $OUT/out/squashfs-root/boot/vmlinuz-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/vmlinuz || return 1
             sudo cp $OUT/out/squashfs-root/boot/initrd.img-${KERNEL_VERSION_FULL} $OUT/out/mycos/casper/initrd.lz || return 1
         fi
-
-		
 
         #Install deb by apt-get install 
         if [ $BUITSTEP -le 161 ] ; then
@@ -1137,6 +1137,24 @@ function uninstallmintdeb()
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+}
+
+function uninstalldebbyapt()
+{
+    T=$(gettop)
+    if [ ! "$T" ] ; then
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+    if [ $# -lt 1 ] ; then
+        echo Error: no debname param
+        return 1
+    fi
+    if [ ! -e $OUT/out/squashfs-root ] ; then
+        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+        return 1
+    fi
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge $@" || return 1
 }
 
 function uninstalldeb()

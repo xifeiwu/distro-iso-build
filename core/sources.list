@@ -1,0 +1,6 @@
+deb http://124.16.141.149/repos/cos iceblue main partner
+deb http://124.16.141.149/repos/mint olivia main upstream import
+deb http://124.16.141.149/repos/ubuntu raring main restricted universe multiverse
+deb http://124.16.141.149/repos/ubuntu raring-updates main restricted universe multiverse
+deb http://124.16.141.149/repos/security-ubuntu/ubuntu raring-security main restricted universe multiverse
+deb http://124.16.141.149/repos/canonical/ubuntu raring partner

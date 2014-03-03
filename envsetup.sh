@@ -839,7 +839,7 @@ function _mcos()
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get -y install qt5-qmake qt5-default g++" || return 1
             echo "Install qt5-qmake and qt5-default successfull~"
             echo "Install cosfeedback"
-            sudo cp $OUT/debsaved/cosfeedback*.deb $OUTPATH/squashfs-root/tmp/cosfeedback.deb || return 1
+            sudo cp $OUT/debsaved/mint/cosfeedback/cosfeedback*.deb $OUTPATH/squashfs-root/tmp/cosfeedback.deb || return 1
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "sudo dpkg -i /tmp/cosfeedback.deb" || return 1
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "rm -r /tmp/cosfeedback.deb" || return 1
             echo "Install cosfeedback successfull~"

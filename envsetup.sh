@@ -273,6 +273,35 @@ function mkiso()
     fi
 }
 
+function mkiso_debug()
+{
+    if [ $# -lt 3 ] ; then
+        echo You should execute this cmd with three param at least as follow:
+        echo "mkiso_debug xxx.iso OUTPATH APPPATH"
+        return 1
+    fi
+
+    if [ ! -d $2 ] ; then
+        echo You should make sure the OUTPATH $1 is a dir
+        return 1
+    fi
+
+    if [ ! -d $3 ] ; then
+        echo You should make sure the APPPATH $2 is a dir
+        return 1
+    fi
+
+    T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "fail to locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+
+    sudo sh $T/build/debug/installkdump.sh $2 $3 || return 1
+    mkiso $1 || return 1
+    sudo sh $T/build/debug/uninstallkdump.sh $2 $3 || return 1
+}
+
 function m()
 {
     T=$(gettop)
@@ -580,6 +609,7 @@ function _mcos()
     IS4S3G=0
     IS4TEST=0
     ISFROMSRC=0
+    IS4DEBUG=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -878,23 +908,14 @@ function _mcos()
         fi
         echo Finish building COS Desktop.
 
-        if [ $BUITSTEP -le 230 ] ; then
-            echo 230 >$BUILDCOSSTEP
-            sudo sh $T/build/debug/installkdump.sh $OUTPATH $APPPATH || return 1
+        if [ $IS4DEBUG -eq 1 ] ; then
+            if [ $BUITSTEP -le 230 ] ; then
+                echo 230 >$BUILDCOSSTEP
+                ISODEBUGFILENAME="$ISONAME-debug.iso"
+                mkiso_debug $ISODEBUGFILENAME $OUTPATH $APPPATH || return 1
+            fi
+            echo Finish building COS Desktop DEBUG.
         fi
-
-        if [ $BUITSTEP -le 231 ] ; then
-            echo 231 >$BUILDCOSSTEP
-            ISODEBUGFILENAME="$ISONAME-debug.iso"
-            mkiso $ISODEBUGFILENAME || return 1
-        fi
-        echo 231 >$BUILDCOSSTEP
-        
-        if [ $BUITSTEP -le 232 ] ; then
-            echo 232 >$BUILDCOSSTEP
-            sudo sh $T/build/debug/uninstallkdump.sh $OUTPATH $APPPATH || return 1
-        fi
-        echo Finish building COS Desktop DEBUG.
 
         if [ $BUITSTEP -le 250 ] ; then
             echo 250 >$BUILDCOSSTEP

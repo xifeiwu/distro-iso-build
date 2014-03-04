@@ -608,8 +608,8 @@ function _mcos()
     IS4LENOVO=0
     IS4S3G=0
     IS4TEST=0
-    ISFROMSRC=0
     IS4DEBUG=0
+    ISFROMSRC=0
     if [ -e $BUILDCOSSTEP ] ; then
         BUITSTEP=`cat $BUILDCOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -628,6 +628,8 @@ function _mcos()
             IS4S3G=1
 	elif [ "$i" == "--test" ] ; then
 	    IS4TEST=1
+	elif [ "$i" == "--debug" ] ; then
+	    IS4DEBUG=1
 	elif [ "$i" == "--srcbuild" ] ; then
 	    ISFROMSRC=1
         else
@@ -908,13 +910,13 @@ function _mcos()
         fi
         echo Finish building COS Desktop.
 
-        if [ $IS4DEBUG -eq 1 ] ; then
-            if [ $BUITSTEP -le 230 ] ; then
-                echo 230 >$BUILDCOSSTEP
+        if [ $BUITSTEP -le 230 ] ; then
+            echo 230 >$BUILDCOSSTEP
+            if [ $IS4DEBUG -eq 1 ] ; then
                 ISODEBUGFILENAME="$ISONAME-debug.iso"
                 mkiso_debug $ISODEBUGFILENAME $OUTPATH $APPPATH || return 1
+                echo Finish building COS Desktop DEBUG.
             fi
-            echo Finish building COS Desktop DEBUG.
         fi
 
         if [ $BUITSTEP -le 250 ] ; then

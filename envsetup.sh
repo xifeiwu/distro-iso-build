@@ -795,6 +795,7 @@ function _mcos()
 	    #wangyu: Debs should be removed by the information of Local Application Group
 		#The cause of umount failure pacakage is "pidgin"
 	    uninstalldeb "cos-meta-codecs libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-emailmerge libreoffice-gnome libreoffice-gtk libreoffice-help-en-gb libreoffice-help-en-us libreoffice-help-zh-cn libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-ogltrans libreoffice-presentation-minimizer libreoffice-writer mythes-en-us banshee gimp gimp-data gimp-help-common gimp-help-en eog transmission-common transmission-gtk brasero vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse libvlccore5 libvlc5 brasero-cdrkit brasero-common libbrasero-media3-1" || return 1
+            uninstalldeb "xchat xchat-common" || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then
                 uninstalldeb "mint-info-xfce banshee-extension-soundmenu" || return 1
             fi

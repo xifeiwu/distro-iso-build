@@ -45,11 +45,11 @@ cp $DISTURBPATH/tmpfiles/applications/evince.desktop .
 rm -f fcitx-config-gtk3.desktop
 rm -f fcitx-configtool.desktop
 cp $DISTURBPATH/tmpfiles/applications/fcitx.desktop .
-rm -f file-roller.desktop
+#rm -f file-roller.desktop
 cp $DISTURBPATH/tmpfiles/applications/firefox.desktop .
 cp $DISTURBPATH/tmpfiles/applications/gcalctool.desktop .
 cp $DISTURBPATH/tmpfiles/applications/gcr-prompter.desktop .
-rm -f gdebi.desktop
+#rm -f gdebi.desktop
 cp $DISTURBPATH/tmpfiles/applications/gedit.desktop .
 cp $DISTURBPATH/tmpfiles/applications/gnome-disk-image-mounter.desktop .
 cp $DISTURBPATH/tmpfiles/applications/gnome-disks.desktop .
@@ -99,7 +99,7 @@ cp $DISTURBPATH/tmpfiles/applications/totem.desktop .
 cp $DISTURBPATH/tmpfiles/applications/ubiquity-gtkui.desktop .
 rm -f upload-manager.desktop
 cp $DISTURBPATH/tmpfiles/applications/vino-preferences.desktop .
-rm -f xchat.desktop
+#rm -f xchat.desktop
 cp $DISTURBPATH/tmpfiles/applications/yelp.desktop .
 #run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
 #rm -r $OUTPATH/squashfs-root/usr/share/applications/*.rej

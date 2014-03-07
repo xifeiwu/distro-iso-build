@@ -9,7 +9,7 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - m:         Build the package and clean the source dir in the current directory.
 - mm:        Build the package and not clean the source dir in the current directory.
 - mi:        Build and install the package and clean the source dir in the current directory.
-- mcos:      Build all and generate iso.
+- mos:       Build all and generate iso.
 - mall:      Build all packages in $OSNAME and desktop dir, and then move these .deb .tar.gz .dsc .changes file to workout/app dir.
 - uniso:     Export iso file to workout/out dir.
 - mkiso:     Generate iso file into workout dir from workout/out file.
@@ -19,7 +19,7 @@ Invoke ". build/envsetup.sh" from your shell to add the following functions to y
 - psgrep:    Greps on all local py js files.
 - jgrep:     Greps on all local Java files.
 - godir:     Go to the directory containing a file.
-- hcos:      show more help.
+- hos:       show more help.
 
 Look at the source to view more functions. The complete list is:
 EOF
@@ -32,7 +32,7 @@ EOF
     echo $A
 }
 
-function hcos()
+function hos()
 {
     T=$(gettop)
     if [ ! "$T" ]; then
@@ -594,13 +594,13 @@ function createlink()
     done
 }
 
-function mcos()
+function mos()
 {
     NOWTIME=`date +%Y%m%d%H%M`
-    _mcos $* | tee /tmp/mcos_${NOWTIME}.log
+    _mos $* | tee /tmp/mos_${NOWTIME}.log
 }
 
-function _mcos()
+function _mos()
 {
     ISONLINE=0
     BUITSTEP=0
@@ -681,12 +681,23 @@ function _mcos()
 	if [ $BUITSTEP -le 31 ] ; then
             echo 31 >$BUILDOSSTEP
 	    if [ $ISFROMSRC -eq 1 ] ; then
-                sudo cp $T/build/release/tmpfiles/mdm/mdm.conf $OUTPATH/squashfs-root/etc/mdm/
+                sudo cp $T/build/release/tmpfiles/mdm/mdm.conf $OUTPATH/squashfs-root/etc/mdm/ || return 1
                 uninstalldeb "account-plugin-facebook account-plugin-flickr account-plugin-google account-plugin-twitter alacarte appmenu-gtk appmenu-gtk3 appmenu-qt appmenu-qt5 apport apport-symptoms bamfdaemon banshee-extension-soundmenu bison cdparanoia cdrdao compiz compiz-core compiz-gnome compiz-plugins-default curl dconf-tools docbook-xsl flex freepats friends-facebook friends-twitter gir1.2-panelapplet-4.0 gir1.2-rb-3.0 gir1.2-unity-5.0 gnome-applets gnome-applets-data gnome-control-center gnome-control-center-data gnome-control-center-signon gnome-control-center-unity gnome-media gnome-session gnome-session-fallback gnome-user-guide gromit gstreamer0.10-gnomevfs hud humanity-icon-theme icoutils indicator-applet-complete indicator-appmenu indicator-datetime indicator-messages indicator-power indicator-printers indicator-session indicator-sound k3b k3b-data kate-data katepart kde-runtime kde-runtime-data kde-style-oxygen kde-window-manager kde-window-manager-common kdelibs-bin kdelibs5-data kdelibs5-plugins kdoctools kubuntu-debug-installer libattica0.4 libbamf3-1 libbison-dev libcompizconfig0 libdlrestrictions1 libencode-locale-perl libfile-listing-perl libfl-dev libflac++6 libfont-afm-perl libgnome-control-center1 libgnome-media-profiles-3.0-0 libgnome2-canvas-perl libgnome2-perl libgnome2-vfs-perl libgnomevfs2-extra libhtml-form-perl libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libibus-1.0-0 libio-socket-ssl-perl libk3b6 libkactivities-bin libkactivities-models1 libkactivities6 libkatepartinterfaces4 libkcddb4 libkcmutils4 libkde3support4 libkdeclarative5 libkdecorations4abi1 libkdecore5 libkdesu5 libkdeui5 libkdewebkit5 libkdnssd4 libkemoticons4 libkfile4 libkhtml5 libkidletime4 libkio5 libkjsapi4 libkjsembed4 libkmediaplayer4 libknewstuff3-4 libknotifyconfig4 libkntlm4 libkparts4 libkpty4 libkrosscore4 libktexteditor4 libkwineffects1abi4 libkwinglutils1abi1 libkwinnvidiahack4 libkworkspace4abi2 libkxmlrpcclient4 liblwp-mediatypes-perl liblwp-protocol-https-perl libmusicbrainz5-0 libmysqlclient18 libnepomuk4 libnepomukcore4abi1 libnepomukquery4a libnepomukutils4 libnet-http-perl libnet-ssleay-perl libntrack-qt4-1 libntrack0 libnux-4.0-0 libphonon4 libplasma3 libpolkit-qt-1-1 libpoppler-qt4-4 libqapt2 libqapt2-runtime libqca2 libqt4-qt3support libqt4-sql-mysql librhythmbox-core6 libsolid4 libsoprano4 libstreamanalyzer0 libstreams0 libthreadweaver4 libunity-core-6.0-5 libunity-misc4 libunity-webapps0 libvirtodbc0 libwww-perl libwww-robotrules-perl libxcb-damage0 libxml2-utils mysql-common nautilus nepomuk-core nepomuk-core-data notification-daemon ntrack-module-libnl-0 odbcinst odbcinst1debian2 oxygen-icon-theme phonon phonon-backend-gstreamer plasma-scriptengine-javascript python-zeitgeist python3-apport python3-dbus.mainloop.qt python3-distupgrade python3-problem-report python3-pyqt4 python3-sip python3-update-manager qapt-batch rhythmbox rhythmbox-data rhythmbox-mozilla rhythmbox-plugin-cdrecorder rhythmbox-plugin-zeitgeist rhythmbox-plugins rhythmbox-ubuntuone shared-desktop-ontologies soprano-daemon ubiquity-frontend-kde ubuntu-release-upgrader-core unity unity-asset-pool unity-common unity-lens-applications unity-lens-files unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video unity-scope-gdrive unity-scope-musicstores unity-scope-video-remote unity-services unity-webapps-service update-manager-core vcdimager virtuoso-minimal virtuoso-opensource-6.1-bin virtuoso-opensource-6.1-common xul-ext-ubufox zeitgeist zeitgeist-core zeitgeist-datahub build-essential debhelper dh-apparmor dpkg-dev firefox-globalmenu g++ g++-4.7 html2text kbuild libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libmail-sendmail-perl libstdc++6-4.7-dev libsys-hostname-long-perl module-assistant openjdk-6-jre openjdk-6-jre-headless openjdk-6-jre-lib po-debconf thunderbird-globalmenu virtualbox-guest-source xchat-indicator" || return 1
             fi
 	fi
 
         mountdir || return 1
+
+        #Reset sourcelist
+        if [ $BUITSTEP -le 35 ] ; then
+            echo 35 >$BUILDCOSSTEP           
+            sudo cp $T/build/core/sources.list $OUTPATH/squashfs-root/etc/apt/sources.list.d/official-package-repositories.list || return 1
+            sudo cp $T/build/core/cdos-keyring_2014.03.07_all.deb $OUTPATH/squashfs-root/tmp/ || return 1
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdos-keyring_2014.03.07_all.deb" || return 1
+            sudo rm $OUTPATH/squashfs-root/tmp/cdos-keyring_2014.03.07_all.deb || return 1
+            sudo rm $OUTPATH/squashfs-root/etc/apt/sources.list || return 1
+            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get update" || return 1
+        fi        
 
         if [ $BUITSTEP -le 40 ] ; then
             echo 40 >$BUILDOSSTEP
@@ -766,17 +777,6 @@ function _mcos()
             echo 81 >$BUILDOSSTEP
             sudo sh $T/build/release/ubiquity_zoneinfo.sh $OUTPATH || return 1
         fi
-
-        #Reset sourcelist
-        if [ $BUITSTEP -le 90 ] ; then
-            echo 90 >$BUILDCOSSTEP           
-            sudo cp $T/build/core/sources.list $OUTPATH/squashfs-root/etc/apt/sources.list.d/official-package-repositories.list
-            sudo cp $T/build/core/cos-keyring_2014.02.21_all.deb $OUTPATH/squashfs-root/tmp/
-            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdos-keyring_2014.03.07_all.deb" || return 1
-            sudo rm $OUTPATH/squashfs-root/tmp/cos-keyring_2014.02.21_all.deb
-            sudo rm $OUTPATH/squashfs-root/etc/apt/sources.list
-            sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get update" || return 1
-        fi        
 
         if [ $BUITSTEP -le 100 ] ; then
             echo 100 >$BUILDOSSTEP
@@ -904,9 +904,9 @@ VERSION_ID=\"$OSVERSION\"" | sudo tee $OUTPATH/squashfs-root/etc/os-release
                 mkdir -p $OUTPATH/squashfs-root/usr/share$OSNAME/
             fi
             if [ $ISFROMSRC -eq 1 ] ; then
-                echo source $NOWTIME | sudo tee $OUTPATH/squashfs-root/usr/share/cosdesktop/buildtime
+                echo source $NOWTIME | sudo tee $OUTPATH/squashfs-root/usr/share/$OSNAME/buildtime
             else
-                echo normal $NOWTIME | sudo tee $OUTPATH/squashfs-root/usr/share/cosdesktop/buildtime
+                echo normal $NOWTIME | sudo tee $OUTPATH/squashfs-root/usr/share/$OSNAME/buildtime
             fi
             mkiso $ISOFILENAME || return 1
         fi
@@ -951,7 +951,7 @@ VERSION_ID=\"$OSVERSION\"" | sudo tee $OUTPATH/squashfs-root/etc/os-release
         echo ======
         echo Tips: You can enter runiso command to run the iso generated.
         echo ======
-        echo If you want to build $OSFULLNAME again, you can enter mcos 0
+        echo If you want to build $OSFULLNAME again, you can enter mos 0
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -1169,7 +1169,7 @@ function uninstallmintdeb()
     T=$(gettop)
     if [ "$T" ]; then
         if [ ! -e $OUT/out/squashfs-root ] ; then
-            echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+            echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
             return 1
         fi
         sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-meta-codecs mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-search-addon mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-artwork-common mint-backgrounds-olivia mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations"
@@ -1192,7 +1192,7 @@ function uninstalldebbyapt()
         return 1
     fi
     if [ ! -e $OUT/out/squashfs-root ] ; then
-        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+        echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
         return 1
     fi
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "DEBIAN_FRONTEND=noninteractive apt-get --ignore-missing --yes --force-yes purge $@" || return 1
@@ -1210,7 +1210,7 @@ function uninstalldeb()
         return 1
     fi
     if [ ! -e $OUT/out/squashfs-root ] ; then
-        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+        echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
         return 1
     fi
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg --purge $@" || return 1
@@ -1228,7 +1228,7 @@ function installdebonline()
         return 1
     fi
     if [ ! -e $OUT/out/squashfs-root ] ; then
-        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+        echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
         return 1
     fi
     deblist=""
@@ -1271,7 +1271,7 @@ function installdeb()
         return 1
     fi
     if [ ! -e $OUT/out/squashfs-root ] ; then
-        echo Error: No squashfs-root dir exist. Have you executed mcos or uniso once?
+        echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
         return 1
     fi
     deblist=""

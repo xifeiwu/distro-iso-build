@@ -85,7 +85,7 @@ function setenv()
     export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
-    export BUILDOSDIRS="$OSNAME mint desktop"
+    export BUILDOSDIRS="$OSNAME mint desktop language"
     export REPODIRNAME=repository
     export REPOSITORY=$OUT/$REPODIRNAME
     export BUILDOSSTEP=$OUT/out/buildosstep
@@ -215,26 +215,19 @@ function checkdepall()
         CURDIR=$PWD
         echo check build dependencies and conflicts of all deb package
         echo
-        for dir in `ls $SRCDesktopPATH | sort`
+        for maindir in $BUILDOSDIRS
         do
-            if [ -d $SRCDesktopPATH/$dir ] ; then
-                cd $SRCDesktopPATH/$dir
-                echo checking dependencies of $dir
-                tmpstr=`dpkg-checkbuilddeps 2>&1`
-                tmpres=$?
-                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
-            fi
-        done 
-        for dir in `ls $SRCCOSPATH | sort`
-        do
-            if [ -d $SRCCOSPATH/$dir ] ; then
-                cd $SRCCOSPATH/$dir
-                echo checking $dir
-                tmpstr=`dpkg-checkbuilddeps 2>&1`
-                tmpres=$?
-                echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
-            fi
-        done 
+            for dir in `ls $T/$maindir | sort`
+            do
+                if [ -d $T/$maindir/$dir ] ; then
+                    cd $T/$maindir/$dir
+                    echo checking dependencies of $dir
+                    tmpstr=`dpkg-checkbuilddeps 2>&1`
+                    tmpres=$?
+                    echo $tmpstr | awk '{gsub(/\([^\(\)]*\)/, ""); print}'
+                fi
+            done 
+        done
         echo
         echo Finish checking building deb packages
         cd $CURDIR
@@ -690,7 +683,7 @@ function _mos()
 
         #Reset sourcelist
         if [ $BUITSTEP -le 35 ] ; then
-            echo 35 >$BUILDCOSSTEP           
+            echo 35 >$BUILDOSSTEP
             sudo cp $T/build/core/sources.list $OUTPATH/squashfs-root/etc/apt/sources.list.d/official-package-repositories.list || return 1
             sudo cp $T/build/core/cdos-keyring_2014.03.07_all.deb $OUTPATH/squashfs-root/tmp/ || return 1
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdos-keyring_2014.03.07_all.deb" || return 1
@@ -913,11 +906,11 @@ VERSION_ID=\"$OSVERSION\"" | sudo tee $OUTPATH/squashfs-root/etc/os-release
         echo Finish building $OSFULLNAME.
 
         if [ $BUITSTEP -le 230 ] ; then
-            echo 230 >$BUILDCOSSTEP
+            echo 230 >$BUILDOSSTEP
             if [ $IS4DEBUG -eq 1 ] ; then
                 ISODEBUGFILENAME="$ISONAME-debug.iso"
                 mkiso_debug $ISODEBUGFILENAME $OUTPATH $APPPATH || return 1
-                echo Finish building COS Desktop DEBUG.
+                echo Finish building $OSFULLNAME DEBUG.
             fi
         fi
 

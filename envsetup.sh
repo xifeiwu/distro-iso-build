@@ -210,8 +210,6 @@ function checkdepall()
 {
     T=$(gettop)
     if [ "$T" ]; then
-        SRCDesktopPATH=$T/desktop
-        SRCCOSPATH=$T/mint
         CURDIR=$PWD
         echo check build dependencies and conflicts of all deb package
         echo
@@ -997,6 +995,10 @@ function umountdir()
         $RETVALUE=2
     fi
     sudo umount $OUT/out/squashfs-root/proc
+    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+        $RETVALUE=2
+    fi
+    sudo umount $OUT/out/squashfs-root/repository
     if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
         $RETVALUE=2
     fi

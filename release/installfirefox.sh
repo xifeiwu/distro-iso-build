@@ -5,7 +5,7 @@ set -e
 
 CHROOTDIR=~/pcos/mkiso_out/squashfs-root
 DEBDIR=~/pcos/app
-DEBNAME=firefox_25.0+build3-0ubuntu0.13.04.1_i386_cos.deb
+DEBNAME=firefox_25.0+build3-0ubuntu0.13.04.1_i386.deb
 XPINAME=langpack-zh-CN@firefox.mozilla.org.xpi
 
 if [ -z "$1" ] ; then
@@ -30,7 +30,7 @@ mkdir ${CHROOTDIR}/app
 cp ${DEBDIR}/${DEBNAME} ${CHROOTDIR}/app
 
 #chroot ${CHROOTDIR} /bin/bash -c "dpkg -r firefox"
-chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i -E firefox_25.0+build3-0ubuntu0.13.04.1_i386_cos.deb"
+chroot ${CHROOTDIR} /bin/bash -c "cd app && dpkg -i -E $DEBNAME"
 
 cp ${DEBDIR}/${XPINAME} ${CHROOTDIR}/app
 chroot ${CHROOTDIR} /bin/bash -c "cd app && cp langpack-zh-CN@firefox.mozilla.org.xpi /usr/lib/firefox-addons/extensions/"

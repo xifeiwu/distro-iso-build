@@ -101,9 +101,6 @@ rm -f upload-manager.desktop
 cp $DISTURBPATH/tmpfiles/applications/vino-preferences.desktop .
 rm -f xchat.desktop
 cp $DISTURBPATH/tmpfiles/applications/yelp.desktop .
-#run_patch -p0 -i $DISTURBPATH/tmpfiles/applications.patch
-#rm -r $OUTPATH/squashfs-root/usr/share/applications/*.rej
-#rm -r $OUTPATH/squashfs-root/usr/share/applications/*.orig
 echo "Patch applications directory successfully!"
 
 mdmApplicationsPath=$OUTPATH/squashfs-root/usr/share/mdm/applications
@@ -114,21 +111,7 @@ fi
 cd $OUTPATH/squashfs-root/usr/share/mdm/applications
 rm -f mdmflexiserver.desktop
 cp  $DISTURBPATH/tmpfiles/mdm/applications/mdmsetup.desktop .
-#run_patch -p0 -i $DISTURBPATH/tmpfiles/mdm_applications.patch
 echo "Patch mdm applications directory successfully!"
-
-cp $DISTURBPATH/tmpfiles/yelp.desktop $OUTPATH/squashfs-root/usr/share/ubuntu-system-adjustments/yelp/
-echo "Reconfig help menu succefully!"
-
-#cp $DISTURBPATH/tmpfiles/org.cinnamon.gschema.xml $OUTPATH/squashfs-root/usr/share/glib-2.0/schemas/
-#echo "Reconfig favorite menu succefully!"
-#cp $DISTURBPATH/tmpfiles/icon.png $OUTPATH/squashfs-root/usr/lib/linuxmint/mintInstall/
-#echo "Reconfig software center icon succefully!"
-
-#change start menu icon
-echo change squashfs-root/usr/share/cinnamon/theme/menu.png
-cp -f $DISTURBPATH/materials/menu.png $OUTPATH/squashfs-root/usr/share/cinnamon/theme/
-echo "Menu icon changed!"
 
 echo "Reconfig start menu successfully!"
 

@@ -4,7 +4,7 @@ Files/
         |----isolinux/
                   This directory contains files from syslinux
         |----preseed/
-                  cos.seed file.
+                  $OSNAME.seed file.
         |----.disk/
                   Some configurations for livecd system.
         (not used now)|----install/
@@ -19,7 +19,7 @@ Files/
     ├── memtest86+-5.01.bin
     |         downloaded from http://memtest.org/
     ├── splash.jpg
-    |         made by cos project.
+    |         made by $OSNAME project.
     └── vesamenu.c32
               downloaded from https://launchpad.net/ubuntu/+source/syslinux/3:4.05+dfsg-6+deb7u2ubuntu1, and path is com32/menu/vesamenu.c32
 

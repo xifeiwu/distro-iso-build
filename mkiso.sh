@@ -2,7 +2,7 @@
 set -e
 
 OUTPATH=$PWD/mkiso_out
-ISONAME="mycos-i386-`date +%Y%m%d%H%M`.iso"
+ISONAME="$OSNAME-i386-`date +%Y%m%d%H%M`.iso"
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
@@ -32,20 +32,22 @@ fi
 
 OUTPATH=$(cd $1; pwd)
 GENISOPATH=$(cd $2; pwd)
+SCRIPTPATH=$(cd "$(dirname $0)"; pwd)
+. $SCRIPTPATH/set_version.sh
 
 cd $OUTPATH
 
-if [ ! -e mycos ] ; then
-    echo error: mycos does not exist. exit.
+if [ ! -e $OSNAME ] ; then
+    echo error: $OSNAME does not exist. exit.
     exit -1
 fi
 
-if [ ! -e mycos/casper ] ; then
-    echo error: mycos/casper does not exist. exit.
+if [ ! -e $OSNAME/casper ] ; then
+    echo error: $OSNAME/casper does not exist. exit.
     exit -1
 fi
 
-if [ ! -e mycos/casper/initrd.lz ] ; then
+if [ ! -e $OSNAME/casper/initrd.lz ] ; then
     echo error: initrd.lz does not exist. exit.
     exit -1
 fi
@@ -58,13 +60,13 @@ fi
 echo mkiso.sh will generate iso file $ISONAME in $GENISOPATH.
 
 echo generate manifest.
-chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > mycos/casper/filesystem.manifest
-cp mycos/casper/filesystem.manifest mycos/casper/filesystem.manifest-desktop
-sed -i '/ubiquity/d' mycos/casper/filesystem.manifest-desktop
-sed -i '/casper/d' mycos/casper/filesystem.manifest-desktop
-sed -i '/libdebian-installer/d' mycos/casper/filesystem.manifest-desktop
-sed -i '/user-setup/d' mycos/casper/filesystem.manifest-desktop
-printf $(sudo du -sx --block-size=1 . | cut -f1) > mycos/casper/filesystem.size
+chroot squashfs-root dpkg-query -W --showformat='${Package} ${Version}\n' > $OSNAME/casper/filesystem.manifest
+cp $OSNAME/casper/filesystem.manifest $OSNAME/casper/filesystem.manifest-desktop
+sed -i '/ubiquity/d' $OSNAME/casper/filesystem.manifest-desktop
+sed -i '/casper/d' $OSNAME/casper/filesystem.manifest-desktop
+sed -i '/libdebian-installer/d' $OSNAME/casper/filesystem.manifest-desktop
+sed -i '/user-setup/d' $OSNAME/casper/filesystem.manifest-desktop
+printf $(sudo du -sx --block-size=1 . | cut -f1) > $OSNAME/casper/filesystem.size
 sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd /home && rm -rf *"
 
 #echo gzip initrd
@@ -74,22 +76,22 @@ sudo chroot $OUTPATH/squashfs-root /bin/bash -c "cd /home && rm -rf *"
 #fi
 #find . | cpio --quiet --dereference -o -H newc>./initrd
 #gzip initrd
-#mv initrd.gz ../mycos/casper/initrd.lz
+#mv initrd.gz ../$OSNAME/casper/initrd.lz
 #cd ..
 
 echo mksquashfs
-rm -rf mycos/casper/filesystem.squashfs
-mksquashfs squashfs-root mycos/casper/filesystem.squashfs 
+rm -rf $OSNAME/casper/filesystem.squashfs
+mksquashfs squashfs-root $OSNAME/casper/filesystem.squashfs 
 
 echo gen md5sum
-cd mycos
+cd $OSNAME
 find . -type f -print0 | xargs -0 md5sum > MD5SUMS
 find . -type f -print0 | xargs -0 md5sum > md5sum.txt
 cd ..
 
 echo  mkisofs
-cd mycos
-mkisofs -r -V "COS Desktop" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
+cd $OSNAME
+mkisofs -r -V "$OSFULLNAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o "$GENISOPATH/$ISONAME" .
 echo mkiso has finished.
 cd ..
 ls -l $GENISOPATH/$ISONAME

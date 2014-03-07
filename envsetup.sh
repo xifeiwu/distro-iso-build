@@ -170,6 +170,7 @@ function cmaster()
     fi
     
     repo forall -c git checkout -b master remotes/m/master
+    repo forall -c git config push.default upstream
 }
 
 function checktools()

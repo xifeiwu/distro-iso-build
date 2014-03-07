@@ -95,7 +95,7 @@ function setenv()
     export RAWSQUASHFSADDRESS=box@192.168.162.142:/home/box/Workspace/Public/$RAWSQUASHFSNAME
     export RAWPREAPPADDRESS=box@192.168.162.142:/home/box/Workspace/Public/app/
     export KERNEL_VERSION=3.8.13
-    export KERNEL_VERSION_FULL=3.8.13.13-cos-i686
+    export KERNEL_VERSION_FULL=3.8.13.13-cdos
 }
 
 function addcompletions()

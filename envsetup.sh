@@ -998,9 +998,11 @@ function umountdir()
     if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
         $RETVALUE=2
     fi
-    sudo umount $OUT/out/squashfs-root/repository
-    if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
-        $RETVALUE=2
+    if [ -e $OUT/out/squashfs-root/repository ] ; then
+        sudo umount $OUT/out/squashfs-root/repository
+        if [[ "$?" -ne "0" && "$?" -ne "1" ]] ; then
+            $RETVALUE=2
+        fi
     fi
     return $RETVALUE
 }
@@ -1088,7 +1090,19 @@ function cclean()
         mount | grep $OUT/out/squashfs-root
 	if [ "$?" -eq "0" ] ; then
             echo "The device can not be umounted now... Please restart the computer and try it again!"
-            return 1
+            echo move squashfs-root/dev+proc+sys to another tmpdir
+            todeldir="bin boot etc home lib media mnt opt root run sbin selinux src tmp usr var"
+            for dir in $todeldir
+            do
+                if [ -e $OUT/out/squashfs-root/$dir ] ; then
+                    echo Deleting $OUT/out/squashfs-root/$dir ...
+                    sudo rm -rf $OUT/out/squashfs-root/$dir
+                fi
+            done
+            sudo rm -rf $OUT/out/$OSNAME
+            cd $OUT/
+            mv out out_$(date +%Y%m%d%H%M)
+
             #sudo fuser -k $OUT/out/squashfs-root
             #umountdir 2>/dev/null
             #mount | grep $OUT/out/squashfs-root
@@ -1306,9 +1320,9 @@ function installdeb()
     echo `echo $deblist | wc -w` package\(s\) has been installed.
     sudo rm -rf $OUT/out/squashfs-root/tmp/apt
 
-    umountdir
     sudo umount $OUT/out/squashfs-root/repository
     sudo rmdir $OUT/out/squashfs-root/repository
+    umountdir
 }
 
 function installdeball()

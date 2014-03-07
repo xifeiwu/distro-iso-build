@@ -85,7 +85,7 @@ function setenv()
     export ROOTFS=$OUT/out/squashfs-root
     export APPOUT=debsaved
     export PREAPP=preapp
-    export BUILDOSDIRS="$OSNAME mint desktop language"
+    export BUILDOSDIRS="$OSNAME mint desktop"
     export REPODIRNAME=repository
     export REPOSITORY=$OUT/$REPODIRNAME
     export BUILDOSSTEP=$OUT/out/buildosstep

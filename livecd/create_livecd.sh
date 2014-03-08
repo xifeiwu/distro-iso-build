@@ -19,9 +19,9 @@ if [ ! $OSVERSIONFULLNAME ] ; then
     exit -1
 fi
 
-if [ ! -d $OUTPATH/mycos/casper ] ; then
-    mkdir -p $OUTPATH/mycos/casper
-    #echo error: there is no mycos path
+if [ ! -d $OUTPATH/$isodir/casper ] ; then
+    mkdir -p $OUTPATH/$isodir/casper
+    #echo error: there is no $isodir path
     #exit -1
 fi
 

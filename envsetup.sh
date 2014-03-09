@@ -1088,7 +1088,7 @@ function cclean()
         echo Umounting dir...
         umountdir 2>/dev/null
         mount | grep $OUT/out/squashfs-root
-	if [ "$?" -eq "0" ] ; then
+	if [ "$?" -eq "0" -o -e $OUT/out/squashfs-root/proc/mounts ] ; then
             echo "The device can not be umounted now... Please restart the computer and try it again!"
             echo move squashfs-root/dev+proc+sys to another tmpdir
             todeldir="bin boot etc home lib media mnt opt root run sbin selinux src tmp usr var"

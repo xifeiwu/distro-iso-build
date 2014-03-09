@@ -19,8 +19,8 @@ if [ ! $OSVERSIONFULLNAME ] ; then
     exit -1
 fi
 
-if [ ! -d $OUTPATH/$isodir ] ; then
-    mkdir $OUTPATH/$isodir
+if [ ! -d $OUTPATH/$isodir/casper ] ; then
+    mkdir -p $OUTPATH/$isodir/casper
     #echo error: there is no $isodir path
     #exit -1
 fi

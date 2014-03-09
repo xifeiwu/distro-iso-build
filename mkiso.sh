@@ -2,7 +2,6 @@
 set -e
 
 OUTPATH=$PWD/mkiso_out
-ISONAME="$OSNAME-i386-`date +%Y%m%d%H%M`.iso"
 echo warning:you should run as root. But be careful!
 
 if [ "$USER" != "root" ] ; then
@@ -26,14 +25,15 @@ if [ ! -d $2 ] ; then
     exit -1
 fi
 
-if [ $# -gt 2 ] ; then
-    ISONAME=$3
-fi
 
 OUTPATH=$(cd $1; pwd)
 GENISOPATH=$(cd $2; pwd)
 SCRIPTPATH=$(cd "$(dirname $0)"; pwd)
 . $SCRIPTPATH/set_version.sh
+ISONAME="$OSNAME-i386-`date +%Y%m%d%H%M`.iso"
+if [ $# -gt 2 ] ; then
+    ISONAME=$3
+fi
 
 cd $OUTPATH
 

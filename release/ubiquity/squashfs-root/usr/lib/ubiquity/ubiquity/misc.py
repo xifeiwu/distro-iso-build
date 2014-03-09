@@ -482,7 +482,7 @@ def get_release():
         #     syslog.syslog(syslog.LOG_ERR, 'Unable to determine the release.')
 
         # if not get_release.release_info:
-        get_release.release_info = ReleaseInfo(name='COS Desktop', version='0.5')
+        get_release.release_info = ReleaseInfo(name='CDOS', version='1.0')
     return get_release.release_info
 
 get_release.release_info = None

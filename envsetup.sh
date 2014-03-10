@@ -312,12 +312,18 @@ function mm()
         return 1
     fi
     ISINSTALL=0
-    if [ $# -gt 0 ] ; then
+    ISLOCAL=0
+    while [ $# -gt 0 ]; do
         if [ "$1" == "--install" ] ; then
             shift
             ISINSTALL=1
+        elif [ "$1" == "--local" ] ; then
+            shift
+            ISLOCAL=1
+        else
+            break
         fi
-    fi
+    done
     if [ "$T" ]; then
         if [ ! -e $OUT ] ; then
             mkdir $OUT
@@ -365,7 +371,11 @@ function mm()
             cmove --built || return 1
             echo Info: These deb files above has been added into repository.
             if [ $ISINSTALL == 1 ] ; then
-               installdeb "$DEBTOINSTALL" || return 1
+                if [ $ISLOCAL == 0 ] ; then
+                    installdeb "$DEBTOINSTALL" || return 1
+                else
+                    installdebtolocal "$DEBTOINSTALL" || return 1
+                fi
             fi 
         fi
     else
@@ -379,6 +389,17 @@ function mi()
     T=$(gettop)
     if [ "$T" ]; then
         mm --install -tc || return 1
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+}
+
+function mil()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        mm --install --local -tc || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -1268,6 +1289,11 @@ function installdebonline()
     umountdir || return 1
 }
 
+function installdebtolocal()
+{
+    installdeb --root / $*
+}
+
 function installdeb()
 {
     T=$(gettop)
@@ -1275,11 +1301,22 @@ function installdeb()
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
     fi
+    rootdir=$OUT/out/squashfs-root
+    if [ $# -gt 2 ] ; then
+        if [ "$1" == "--root" ] ; then
+            if [ "$2" == "/" ] ; then
+                rootdir=
+            else
+                rootdir=$2
+            fi
+            shift 2
+        fi
+    fi
     if [ $# -lt 1 ] ; then
         echo Error: no debname param
         return 1
     fi
-    if [ ! -e $OUT/out/squashfs-root ] ; then
+    if [ ! -e $rootdir/ ] ; then
         echo Error: No squashfs-root dir exist. Have you executed mos or uniso once?
         return 1
     fi
@@ -1299,30 +1336,35 @@ function installdeb()
     else
         deblist="$@"
     fi
-    echo These deb package $deblist will be installed in $OUT/out/squashfs-root
-    if [ -e $OUT/out/squashfs-root/repository ] ; then
-        sudo umount $OUT/out/squashfs-root/repository
+    echo These deb package $deblist will be installed in $rootdir/
+    localrepo=$rootdir/repository
+    if [ -e $localrepo ] ; then
+        sudo umount $localrepo
     else
-        sudo mkdir $OUT/out/squashfs-root/repository
+        sudo mkdir $localrepo
     fi
-    sudo mount --bind $REPOSITORY $OUT/out/squashfs-root/repository
-    mountdir || return 1
+    sudo mount --bind $REPOSITORY $localrepo
+    if [ "$rootdir/" == "/" ] ; then
+        mountdir || return 1
+    fi
 
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/state
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/cache
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/etc
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/etc/preferences.d
-    mkdir -p $OUT/out/squashfs-root/tmp/apt/root/var/log/apt/
-    echo "deb file:///repository/debian iceblue main" > $OUT/out/squashfs-root/tmp/apt/root/etc/sources.list
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get update -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0" || return 1
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0 $deblist" || return 1
+    mkdir -p $rootdir/tmp/apt/root/
+    mkdir -p $rootdir/tmp/apt/root/state
+    mkdir -p $rootdir/tmp/apt/root/cache
+    mkdir -p $rootdir/tmp/apt/root/etc
+    mkdir -p $rootdir/tmp/apt/root/etc/preferences.d
+    mkdir -p $rootdir/tmp/apt/root/var/log/apt/
+    echo "deb file:///repository/debian iceblue main" > $rootdir/tmp/apt/root/etc/sources.list
+    sudo chroot $rootdir/ /bin/bash -c "sudo apt-get update -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0" || return 1
+    sudo chroot $rootdir/ /bin/bash -c "sudo apt-get install -y --force-yes --reinstall -o Dir=/tmp/apt/root/ -o Dir::State=state -o Dir::Cache=cache -o Dir::Etc=etc -o Dir::Etc::sourcelist=sources.list -o APT::Get::List-Cleanup=0 $deblist" || return 1
     echo `echo $deblist | wc -w` package\(s\) has been installed.
-    sudo rm -rf $OUT/out/squashfs-root/tmp/apt
+    sudo rm -rf $rootdir/tmp/apt
 
-    sudo umount $OUT/out/squashfs-root/repository
-    sudo rmdir $OUT/out/squashfs-root/repository
-    umountdir
+    sudo umount $localrepo
+    sudo rmdir $localrepo
+    if [ "$rootdir/" == "/" ] ; then
+        umountdir
+    fi
 }
 
 function installdeball()

@@ -367,6 +367,8 @@ function mm()
             cmove || return 1
             return 1
         else
+            dir=$(basename $PWD)
+            maindir=$(basename $(dirname $PWD))
             git log -1 | head -n 1 >$OUT/$APPOUT/$maindir/$dir/logid
             cmove --built || return 1
             echo Info: These deb files above has been added into repository.

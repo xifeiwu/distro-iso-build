@@ -294,6 +294,40 @@ function mkiso_debug()
     sudo sh $T/build/debug/uninstallkdump.sh $2 $3 || return 1
 }
 
+function mkiso_oem()
+{
+    if [ $# -lt 3 ] ; then
+        echo You should execute this cmd with three param at least as follow:
+        echo "mkiso_oem xxx.iso OUTPATH APPPATH"
+        return 1
+    fi
+
+    if [ ! -d $2 ] ; then
+        echo You should make sure the OUTPATH $2 is a dir
+        return 1
+    fi
+
+    if [ ! -d $3 ] ; then
+        echo You should make sure the APPPATH $3 is a dir
+        return 1
+    fi
+
+    T=$(gettop)
+    if [ ! "$T" ]; then
+        echo "fail to locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+
+    sudo sh $T/build/oem/preoem.sh $2 $3 || return 1
+    umountdir
+    if [ $# -gt 0 ] ; then
+        sudo sh $T/build/oem/mkiso_oem.sh $OUT/out $OUT $1 || return 1
+    else
+        sudo sh $T/build/oem/mkiso_oem.sh $OUT/out $OUT || return 1
+    fi
+    sudo sh $T/build/oem/postoem.sh $2 $3 || return 1
+}
+
 function m()
 {
     T=$(gettop)
@@ -623,6 +657,7 @@ function _mos()
     IS4TEST=0
     IS4DEBUG=0
     ISFROMSRC=0
+    IS4OEM=0
     if [ -e $BUILDOSSTEP ] ; then
         BUITSTEP=`cat $BUILDOSSTEP`
         if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
@@ -645,6 +680,8 @@ function _mos()
 	    IS4DEBUG=1
 	elif [ "$i" == "--srcbuild" ] ; then
 	    ISFROMSRC=1
+	elif [ "$i" == "--oem" ] ; then
+	    IS4OEM=1
         else
             if [ "$i" -gt 0 ] 2>/dev/null ; then
                 BUITSTEP=$i
@@ -932,6 +969,15 @@ VERSION_ID=\"$OSVERSION\"" | sudo tee $OUTPATH/squashfs-root/etc/os-release
                 ISODEBUGFILENAME="$ISONAME-debug.iso"
                 mkiso_debug $ISODEBUGFILENAME $OUTPATH $APPPATH || return 1
                 echo Finish building $OSFULLNAME DEBUG.
+            fi
+        fi
+
+        if [ $BUITSTEP -le 240 ] ; then
+            echo 240 >$BUILDOSSTEP
+            if [ $IS4OEM -eq 1 ] ; then
+                ISODEBUGFILENAME="$ISONAME-oem.iso"
+                mkiso_oem $ISODEBUGFILENAME $OUTPATH $APPPATH || return 1
+                echo Finish building $OSFULLNAME OEM.
             fi
         fi
 

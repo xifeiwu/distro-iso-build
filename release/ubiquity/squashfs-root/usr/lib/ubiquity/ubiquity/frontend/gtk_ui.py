@@ -1494,12 +1494,12 @@ class Wizard(BaseFrontend):
         for i in range(len(self.pages))[index + 1:]:
             self.dot_grid.get_child_at(i, 0).set_fraction(0)
 
-        if current == 5:
-            container = self.steps.get_nth_page(6)
+        if current == 4:
+            container = self.steps.get_nth_page(5)
             for c in container.get_children():
                 c.hide()
-        if current == 6:
-            container = self.steps.get_nth_page(6)
+        if current == 5:
+            container = self.steps.get_nth_page(5)
             for c in container.get_children():
                 c.show()
 

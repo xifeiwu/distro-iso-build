@@ -41,12 +41,12 @@ mkdir $OUTPATH/$isodir/.disk
 cp $LIVECDPATH/files/isolinux/isolinux.bin $OUTPATH/$isodir/isolinux
 cp $LIVECDPATH/files/isolinux/memtest86+-5.01.bin $OUTPATH/$isodir/isolinux/memtest
 cp $LIVECDPATH/files/isolinux/vesamenu.c32 $OUTPATH/$isodir/isolinux
-cp $LIVECDPATH/files/isolinux/splash.jpg $OUTPATH/$isodir/isolinux
+cp $LIVECDPATH/files/isolinux/splash.png $OUTPATH/$isodir/isolinux
 cfgstr="
 default vesamenu.c32
 timeout 100
 
-menu background splash.jpg
+menu background splash.png
 menu title Welcome to $OSFULLNAME "$OSVERSION" 32-bit
 
 menu color screen	37;40      #80ffffff #00000000 std

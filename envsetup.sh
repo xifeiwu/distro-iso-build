@@ -1262,6 +1262,15 @@ function _mos()
 	    sudo tar xf $OUT/$PREAPP/appByLocalGroup/GolderDict_dictionary/dictscache.tar.gz -C $OUTPATH/squashfs-root/etc/skel/
 	fi
 
+	#wangyu: Install software center
+        if [ $BUITSTEP -le 102 ] ; then
+            echo 102 >$BUILDOSSTEP
+	    sudo cp -r $OUT/$PREAPP/cdossoftcenter $OUTPATH/squashfs-root/tmp/
+	    sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get -f install"
+	    sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdossoftcenter/*.deb"
+	    sudo rm -rf $OUTPATH/squashfs-root/tmp/cdossoftcenter
+        fi
+
         #Change some icon\theme\applications name and so on.
         if [ $BUITSTEP -le 110 ] ; then
             echo 110 >$BUILDOSSTEP

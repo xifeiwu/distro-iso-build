@@ -33,7 +33,9 @@ deb http://${COSREPOIP}/repos/ubuntu raring-updates main restricted universe mul
 deb http://${COSREPOIP}/repos/ubuntu raring-proposed main restricted universe multiverse
 deb http://${COSREPOIP}/repos/ubuntu raring-backports main restricted universe multiverse
 deb http://${COSREPOIP}/repos/security-ubuntu/ubuntu raring-security main restricted universe multiverse
-deb http://${COSREPOIP}/repos/canonical/ubuntu raring partner" >/tmp/official-package-repositories.list
+deb http://${COSREPOIP}/repos/canonical/ubuntu raring partner
+deb http://${COSDISTURBREPOIP}/cdos pony main universe partner" >/tmp/official-package-repositories.list
 sudo mv /tmp/official-package-repositories.list $CHROOTDIR/etc/apt/sources.list.d/
 sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSREPOIP}/repos/cos.gpg.key | apt-key add -"
+sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cdos/project/keyring.gpg | apt-key add -"
 echo Finished generating cos source list.

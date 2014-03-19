@@ -1309,7 +1309,8 @@ function _mos()
         if [ $BUITSTEP -le 102 ] ; then
             echo 102 >$BUILDOSSTEP
 	    sudo cp -r $OUT/$PREAPP/cdossoftcenter $OUTPATH/squashfs-root/tmp/ || return 1
-	    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y -f install" || return 1
+	    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y install libqt5core5 libqt5gui5 libqt5network5 libqt5dbus5 libxcb-icccm4 libxcb-image0 libxcb-render-util0 libxcb-sync0 libqt5opengl5 libqt5printsupport5 libqt5sql5 libqt5widgets5" || return 1
+	    sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y --force-yes autoremove" || return 1
 	    sudo chroot $OUT/out/squashfs-root /bin/bash -c "dpkg -i /tmp/cdossoftcenter/*.deb" || return 1
 	    sudo rm -rf $OUT/out/squashfs-root/tmp/cdossoftcenter
         fi

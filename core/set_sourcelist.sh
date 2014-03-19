@@ -19,7 +19,7 @@ sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos
 codename=`sed -n '2p' ${CHROOTDIR}/etc/apt/preferences | awk '{print $3}'`
 if [ "${codename}" != "n=iceblue" ] ; then
     sed -i '1i\Package: *\
-Pin: release n=iceblue\
+Pin: release l=CDOS\
 Pin-Priority: 750\
 
     ' ${CHROOTDIR}/etc/apt/preferences

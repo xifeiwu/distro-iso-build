@@ -17,7 +17,7 @@ sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos
 sudo chroot $CHROOTDIR /bin/bash -c "wget -q -O - http://${COSDISTURBREPOIP}/cos/project/coskeyring.gpg | apt-key add -"
 
 codename=`sed -n '2p' ${CHROOTDIR}/etc/apt/preferences | awk '{print $3}'`
-if [ "${codename}" != "n=iceblue" ] ; then
+if [ "${codename}" != "l=CDOS" ] ; then
     sed -i '1i\Package: *\
 Pin: release l=CDOS\
 Pin-Priority: 750\

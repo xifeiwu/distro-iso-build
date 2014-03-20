@@ -1171,6 +1171,7 @@ function _mos()
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdos-keyring_2014.03.07_all.deb" || return 1
             sudo rm $OUTPATH/squashfs-root/tmp/cdos-keyring_2014.03.07_all.deb || return 1
             sudo rm $OUTPATH/squashfs-root/etc/apt/sources.list || return 1
+            sudo touch $OUTPATH/squashfs-root/etc/apt/sources.list || return 1
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "apt-get update" || return 1
         fi        
 

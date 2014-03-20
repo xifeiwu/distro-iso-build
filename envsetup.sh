@@ -1167,6 +1167,7 @@ function _mos()
         if [ $BUITSTEP -le 35 ] ; then
             echo 35 >$BUILDOSSTEP
             sudo cp $T/build/core/sources.list $OUTPATH/squashfs-root/etc/apt/sources.list.d/official-package-repositories.list || return 1
+            sudo cp $T/build/core/preferences $OUTPATH/squashfs-root/etc/apt/preferences || return 1
             sudo cp $T/build/core/cdos-keyring_2014.03.07_all.deb $OUTPATH/squashfs-root/tmp/ || return 1
             sudo chroot $OUTPATH/squashfs-root /bin/bash -c "dpkg -i /tmp/cdos-keyring_2014.03.07_all.deb" || return 1
             sudo rm $OUTPATH/squashfs-root/tmp/cdos-keyring_2014.03.07_all.deb || return 1

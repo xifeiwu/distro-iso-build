@@ -812,20 +812,6 @@ function _mcustomos()
             sudo sh $T/build/core/vendor/installtools.sh $OUTPATH $APPPATH || return 1
         fi
 
-        if [ $BUITSTEP -le 42 ] ; then
-            echo 42 >$BUILDOSSTEP
-            if [ $IS4LENOVO -eq 1 ] ; then
-                intnvidiadriver || return 1
-            fi
-        fi
-
-        if [ $BUITSTEP -le 43 ] ; then
-            echo 43 >$BUILDOSSTEP
-            if [ $IS4S3G -eq 1 ] ; then
-                sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
-            fi
-        fi
-
         if [ $BUITSTEP -le 44 ] ; then
             echo 44 >$BUILDOSSTEP
             sudo sh $T/build/core/vendor/installnouveau.sh $OUTPATH $APPPATH || return 1
@@ -1187,20 +1173,6 @@ function _mos()
         if [ $BUITSTEP -le 41 ] ; then
             echo 41 >$BUILDOSSTEP
             sudo sh $T/build/core/vendor/installtools.sh $OUTPATH $APPPATH || return 1
-        fi
-
-        if [ $BUITSTEP -le 42 ] ; then
-            echo 42 >$BUILDOSSTEP
-            if [ $IS4LENOVO -eq 1 ] ; then
-                intnvidiadriver || return 1
-            fi
-        fi
-
-        if [ $BUITSTEP -le 43 ] ; then
-            echo 43 >$BUILDOSSTEP
-            if [ $IS4S3G -eq 1 ] ; then
-                sudo sh $T/build/core/vendor/install_via_driver.sh $OUTPATH $APPPATH/drivers/s3g/s3g-138603.tar.bz2 $APPPATH/drivers/s3g/patches $KERNEL_VERSION_FULL || return 1
-            fi
         fi
 
         if [ $BUITSTEP -le 44 ] ; then

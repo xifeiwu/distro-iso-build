@@ -70,11 +70,11 @@ rm -f itweb-settings.desktop
 cp $DISTURBPATH/tmpfiles/applications/mintBackup.desktop .
 cp $DISTURBPATH/tmpfiles/applications/mintBackup_mime.desktop .
 cp $DISTURBPATH/tmpfiles/applications/mintdrivers.desktop .
-cp $DISTURBPATH/tmpfiles/applications/mintInstall.desktop .
-cp $DISTURBPATH/tmpfiles/applications/mintInstall_kde.desktop .
-cp $DISTURBPATH/tmpfiles/applications/mintInstall_mime.desktop .
+rm -f mintInstall.desktop
+rm -f mintInstall_kde.desktop
+rm -f mintInstall_mime.desktop
 rm -f mintNanny.desktop
-cp $DISTURBPATH/tmpfiles/applications/mintsources.desktop .
+rm -f mintsources.desktop
 rm -f mintstick.desktop
 rm -f mintstick-kde.desktop
 cp $DISTURBPATH/tmpfiles/applications/mintUpdate.desktop .

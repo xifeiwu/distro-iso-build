@@ -16,11 +16,14 @@ OUTPATH=$1
 DEBDIR=$2
 
 echo set default username for WPS, add $OUTPATH/squashfs-root/etc/skel/.config/Software/Kingsoft.conf
-mypath=$OUTPATH/squashfs-root/etc/skel/.config/Software
-if [ ! -x "$mypath" ] ; then
+mypath=$OUTPATH/squashfs-root/etc/skel/.config/Kingsoft
+if [ ! -d "$mypath" ] ; then
     mkdir $mypath
 fi
-cp $DISTURBPATH/tmpfiles/Kingsoft.conf $OUTPATH/squashfs-root/etc/skel/.config/Software/
+echo "[6.0]
+common\AcceptedEULA=true
+common\wpshomeoptions\StartWithHome=0
+common\wpshomeoptions\StartWithBlank=1" | sudo tee $mypath/Office.conf
 
 mkdir $OUTPATH/squashfs-root/app
 cp ${DEBDIR}/symbol-fonts_1.2_all.deb -a ${OUTPATH}/squashfs-root/app/

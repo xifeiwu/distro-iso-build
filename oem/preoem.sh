@@ -46,6 +46,9 @@ sudo mount -t proc proc $CHROOTDIR/proc
 
 chroot ${CHROOTDIR} /bin/bash -c "echo 'chroot to squashfs-root'"
 chroot ${CHROOTDIR} /bin/bash -c "cd /usr/share/oem && dpkg -i -E bogl-bterm_0.1.18-8ubuntu1_i386.deb tasksel_2.88ubuntu14_all.deb tasksel-data_2.88ubuntu14_all.deb ubiquity-frontend-debconf_2.14.8-1linuxmint2_all.deb"
+chroot ${CHROOTDIR} /bin/bash -c "apt-get update"
+chroot ${CHROOTDIR} /bin/bash -c "apt-get -y install oem-config oem-config-gtk oem-config-debconf"
+chroot ${CHROOTDIR} /bin/bash -c "apt-get -y remove oem-config oem-config-gtk oem-config-debconf"
 
 #replace preseed and linuxconf
 mv ${CDOSDIR}/isolinux/isolinux.cfg ${DEBDIR}/
@@ -134,14 +137,14 @@ d-i clock-setup/utc boolean false
 d-i time/zone string Asia/Shanghai
 
 # PARTION分区部分，默认将根目录挂载到整个磁盘
-#d-i partman-auto/disk string /dev/sda
-#d-i partman-auto/method string regular
-#d-i partman-auto/choose_recipe \ 
-#         select All files in one partition
-#d-i partman/confirm_write_new_label boolean true
-#d-i partman/choose_partition \
-#         select Finish partitioning and write changes to disk
-#d-i partman/confirm boolean true
+d-i partman-auto/disk string /dev/sda
+d-i partman-auto/method string regular
+d-i partman-auto/choose_recipe \ 
+         select All files in one partition
+d-i partman/confirm_write_new_label boolean true
+d-i partman/choose_partition \
+         select Finish partitioning and write changes to disk
+d-i partman/confirm boolean true
 
 # Account setup
 d-i passwd/user-fullname string oem
@@ -151,9 +154,9 @@ d-i passwd/user-password password cdosoem
 d-i passwd/user-password-again password cdosoem
 
 #FINISH FIRST初次完成安装，提示重启
-d-i finish-install/reboot_in_progress note
+#d-i finish-install/reboot_in_progress note
 #d-i debian-installer/exit/halt boolean true
-#d-i debian-installer/exit/poweroff boolean true"
+d-i debian-installer/exit/poweroff boolean true"
 
 echo "$cfgstr" > ${CDOSDIR}/isolinux/isolinux.cfg
 echo "$seed" > ${CDOSDIR}/preseed/$OSNAME.seed

@@ -952,6 +952,13 @@ VERSION_ID=\"$OSVERSION\"" | sudo tee $OUTPATH/squashfs-root/etc/os-release
             echo "Install cdosfeedback successfull~"
         fi
 
+        if [ $BUITSTEP -le 162 ] ; then
+            echo 162 >$BUILDOSSTEP
+            echo 'Install fcitx-frontend-qt5 fcitx-libs-qt5'
+            installdeb "fcitx-frontend-qt5 fcitx-libs-qt5"
+            echo "Install fcitx-frontend-qt5 fcitx-libs-qt5 successfull~"
+        fi
+
         if [ $BUITSTEP -le 190 ] ; then
             echo 190 >$BUILDOSSTEP
             sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd /tmp && rm -r -f *"
@@ -1043,6 +1050,9 @@ function getprepkg ()
         sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $RAWSQUASHFSADDRESS $RAWPREAPPADDRESS || return 1
         addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
         addrepository $OUT/$PREAPP/libfcitx-qt5-0_0.1.1-2_i386.deb || return 1
+        addrepository $OUT/$PREAPP/fcitx-frontend-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
+        addrepository $OUT/$PREAPP/fcitx-libs-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
+       
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1

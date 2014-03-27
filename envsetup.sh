@@ -404,7 +404,12 @@ function mm()
         else
             dir=$(basename $PWD)
             maindir=$(basename $(dirname $PWD))
-            git log -1 | head -n 1 >$OUT/$APPOUT/$maindir/$dir/logid
+            if [ ! -d $OUT/$APPOUT/$maindir/$dir ] ; then
+                mkdir -p $OUT/$APPOUT/$maindir/$dir
+            fi
+            if [ -d .git ] ; then
+                git log -1 | head -n 1 >$OUT/$APPOUT/$maindir/$dir/logid
+            fi
             cmove --built || return 1
             echo Info: These deb files above has been added into repository.
             if [ $ISINSTALL == 1 ] ; then
@@ -483,13 +488,19 @@ function mall()
                 if [ -d $T/$maindir/$dir ] ; then
                     echo =======Building $maindir/$dir
                     cd $T/$maindir/$dir
-                    nowlogid=`git log -1 | head -n 1`
+                    haschanged=1
+                    if [ -d .git ] ; then
+                        haschanged=`git status -s | wc -l`
+                    fi
                     lastlogid="##"
+                    nowlogid="###"
                     if [ -f $OUT/$APPOUT/$maindir/$dir/logid ] ; then
                         lastlogid=`cat $OUT/$APPOUT/$maindir/$dir/logid`
-                    else
-                        mkdir -p $OUT/$APPOUT/$maindir/$dir
                     fi
+                    if [ $haschanged -eq 0 ] ; then
+                        nowlogid=`git log -1 | head -n 1`
+                    fi
+                    mkdir -p $OUT/$APPOUT/$maindir/$dir
                     if [ ! "$nowlogid" == "$lastlogid" ] ; then
                         echo Git log from $lastlogid to $nowlogid
                         mm -tc || return 1
@@ -816,6 +827,11 @@ function _mos()
         if [ $BUITSTEP -le 81 ] ; then
             echo 81 >$BUILDOSSTEP
             sudo sh $T/build/release/ubiquity_zoneinfo.sh $OUTPATH || return 1
+        fi
+
+        if [ $BUITSTEP -le 82 ] ; then
+            echo 82 >$BUILDOSSTEP
+            sudo sh $T/build/release/installgnomesettings.sh $OUTPATH  $APPPATH|| return 1
         fi
 
         if [ $BUITSTEP -le 100 ] ; then

@@ -1255,6 +1255,11 @@ function _mos()
             sudo sh $T/build/release/ubiquity_zoneinfo.sh $OUTPATH || return 1
         fi
 
+        if [ $BUITSTEP -le 82 ] ; then
+            echo 82 >$BUILDOSSTEP
+            sudo sh $T/build/release/installgnomesettings.sh $OUTPATH  $APPPATH|| return 1
+        fi
+
         if [ $BUITSTEP -le 100 ] ; then
             echo 100 >$BUILDOSSTEP
             mountdir  || return 1

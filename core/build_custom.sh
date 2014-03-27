@@ -6,36 +6,144 @@ function setcustomenv()
     export SERVERPATH=/home/box/Workspace/Public/wshare/
 }
 
+function mytest()
+{
+    ISONLINE=0
+    BUITSTEP=0
+    IS4LENOVO=0
+    IS4S3G=0
+    IS4TEST=0
+    IS4DEBUG=0
+    ISFROMSRC=0
+    IS4OEM=0
+    ISLOCAL=0
+    ISONSERVER=0
+    if [ -e $BUILDOSSTEP ] ; then
+        BUITSTEP=`cat $BUILDOSSTEP`
+        if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
+            BUITSTEP=$BUITSTEP
+        else
+            BUITSTEP=0
+        fi
+    fi
+
+    for i in "$@"
+    do
+        if [ "$i" == "--online" ] ; then
+            ISONLINE=1
+        elif [ "$i" == "--lenovo" ] ; then
+            IS4LENOVO=1
+        elif [ "$i" == "--s3g" ] ; then
+            IS4S3G=1
+	elif [ "$i" == "--test" ] ; then
+	    IS4TEST=1
+	elif [ "$i" == "--debug" ] ; then
+	    IS4DEBUG=1
+	elif [ "$i" == "--srcbuild" ] ; then
+	    ISFROMSRC=1
+	elif [ "$i" == "--oem" ] ; then
+	    IS4OEM=1
+        elif [ "$i" == "--local" ] ; then
+            ISLOCAL=1
+        elif [ "$i" == "--onserver" ] ; then
+            ISONSERVER=1
+        else
+            if [ "$i" -gt 0 ] 2>/dev/null ; then
+                BUITSTEP=$i
+            elif [ "$i" == 0 ] ; then
+                BUITSTEP=$i
+            fi
+        fi
+    done
+    echo "BUITSTEP = $BUITSTEP"
+
+    T=$(gettop)
+    if [ "$T" ]; then
+        #Install zh_CN deb and Input Method deb.
+        OUTPATH=$OUT/out
+        APPPATH=$OUT/$PREAPP
+
+        if [ $BUITSTEP -le 30 ] ; then
+            if [ $ISONSERVER -eq 1 ] ; then
+                echo "begin mkworkoutdir onserver"
+                mkworkoutdir $SERVERPATH
+            else
+                if [ $ISLOCAL -eq 1 ] ; then
+                    if [ ! -d $BASEOUT ] ; then
+                        echo "Error! workout_base dir not found.Please execute _mbaseos 0"
+                        return 1
+                    else
+                        echo "begin mkworkoutdir onlocal"
+                        mkworkoutdir $BASEOUT
+                    fi
+                else
+                    echo "rsync -av --delete --progress $WSHAREPATH $OUT from server"
+                    rsync -av --delete --exclude="cdos*.iso" --progress $WSHAREPATH $OUT
+                    uniso || return 1
+                fi
+            fi
+#            sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+        fi
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
 function mkworkoutdir()
 {
     T=$(gettop)
     if [ "$T" ]; then
         if [ ! -d $OUT ]; then
-            mkdir $OUT
+            mkdir -p $OUT
         fi
         if [ -e $APPPATH ]; then
             sudo rm -rf $APPPATH
         fi
         ln -s $1/$PREAPP $APPPATH
+
         if [ -e $OUT/$RAWSQUASHFSNAME ]; then
             sudo rm -rf $OUT/$RAWSQUASHFSNAME
         fi
         ln -s $1/$RAWSQUASHFSNAME $OUT/$RAWSQUASHFSNAME
+
         if [ -e $OUT/$REPODIRNAME ]; then
             sudo rm -rf $OUT/$REPODIRNAME
         fi
         ln -s $1/$REPODIRNAME $OUT/$REPODIRNAME
+
         if [ -e $OUT/$APPOUT ]; then
             sudo rm -rf $OUT/$APPOUT
         fi
         ln -s $1/$APPOUT $OUT/$APPOUT
-#        if [ -d $OUT/out ]; then
-#            sudo rm -rf $OUT/out
-#        fi
-#        rsync -av --delete --progress $1/out/ $OUT/out
+
+        echo "rsync out"
         rsync -av --delete --progress $1/out/ $OUT/out
+        if [ -d $OUT/$RAWSQUASHFSNAME ]; then
+            sudo rm -rf $OUT/$RAWSQUASHFSNAME
+        fi
+        echo "rsync $RAWSQUASHFSNAME"
+        rsync -av --progress $1/$RAWSQUASHFSNAME $OUT
+        echo "uniso $RAWSQUASHFSNAME"
+        uniso || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
+    fi
+}
+
+function getcustomprepkg ()
+{
+    T=$(gettop)
+    if [ "$T" ]; then
+        if [ ! -e $OUT ] ; then
+            mkdir $OUT
+        fi
+        cd $(gettop)
+        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $WSHAREPATH/$RAWSQUASHFSNAME $RAWPREAPPADDRESS || return 1
+        addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
+        addrepository $OUT/$PREAPP/libfcitx-qt5-0_0.1.1-2_i386.deb || return 1
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
     fi
 }
 
@@ -84,7 +192,7 @@ function _mbaseos()
         echo Building $OSFULLNAME...
         if [ $BUITSTEP -le 10 ] ; then
             echo 10 >$BUILDOSSTEP
-            getprepkg || return 1
+            getcustomprepkg || return 1
         fi
         if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDOSSTEP
@@ -92,25 +200,33 @@ function _mbaseos()
             createlink || return 1
             mall || return 1
         fi
-        if [ $BUITSTEP -le 30 ] ; then
-            echo 30 >$BUILDOSSTEP
+        if [ $BUITSTEP -le 25 ] ; then
+            echo 25 >$BUILDOSSTEP
 	    mroot || return 1
-	    mrootbuilder || return 1
-            sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+	    mrootbuilder || return 1  
+        fi
+        if [ $BUITSTEP -le 26 ] ; then
+            if [ -e $OUT/$RAWSQUASHFSNAME ]; then
+                echo "rm $RAWSQUASHFSNAME"
+                sudo rm -rf $OUT/$RAWSQUASHFSNAME
+            fi
+            echo "mksquashfs"
+            sudo mksquashfs $OUT/out/squashfs-root $OUT/$RAWSQUASHFSNAME
+            echo "rm $OUT/out/squashfs-root"
+            sudo rm -rf $OUT/out/squashfs-root
 
-            if [ $ISONSERVER -eq 1 ] ; then  #jenkins上需要上传baseos内容
+            if [ $ISONSERVER -eq 1 ] ; then  #若jenkins，则需要上传baseos内容
+                echo "rsync to jenkins"
                 rsync -av --delete --progress $OUT/ $SERVERPATH
             else 
                 if [ -d $BASEOUT ]; then
                     sudo rm -rf $BASEOUT
                 fi
+                echo "mv $BASEOUT"
                 mv $OUT $BASEOUT
             fi
             echo "rsync succeed!"
         fi
-
-        
-
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
@@ -173,8 +289,7 @@ function _mcustomos()
         OUTPATH=$OUT/out
         APPPATH=$OUT/$PREAPP
 
-	if [ $BUITSTEP -le 31 ] ; then
-            echo 31 >$BUILDOSSTEP
+        if [ $BUITSTEP -le 30 ] ; then
             if [ $ISONSERVER -eq 1 ] ; then
                 echo "begin mkworkoutdir onserver"
                 mkworkoutdir $SERVERPATH
@@ -190,11 +305,18 @@ function _mcustomos()
                 else
                     echo "rsync -av --delete --progress $WSHAREPATH $OUT from server"
                     rsync -av --delete --exclude="cdos*.iso" --progress $WSHAREPATH $OUT
+                    uniso || return 1
                 fi
             fi
+#            sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
+        fi
 
+	if [ $BUITSTEP -le 31 ] ; then
+            echo 31 >$BUILDOSSTEP
 	    if [ $ISFROMSRC -eq 1 ] ; then
+                echo "begin cp"
                 sudo cp $T/build/release/tmpfiles/mdm/mdm.conf $OUTPATH/squashfs-root/etc/mdm/ || return 1
+                echo "uninstalldeb"
                 uninstalldeb "account-plugin-facebook account-plugin-flickr account-plugin-google account-plugin-twitter alacarte appmenu-gtk appmenu-gtk3 appmenu-qt appmenu-qt5 apport apport-symptoms bamfdaemon banshee-extension-soundmenu bison cdparanoia cdrdao compiz compiz-core compiz-gnome compiz-plugins-default curl dconf-tools docbook-xsl flex freepats friends-facebook friends-twitter gir1.2-panelapplet-4.0 gir1.2-rb-3.0 gir1.2-unity-5.0 gnome-applets gnome-applets-data gnome-control-center gnome-control-center-data gnome-control-center-signon gnome-control-center-unity gnome-media gnome-session gnome-session-fallback gnome-user-guide gromit gstreamer0.10-gnomevfs hud humanity-icon-theme icoutils indicator-applet-complete indicator-appmenu indicator-datetime indicator-messages indicator-power indicator-printers indicator-session indicator-sound k3b k3b-data kate-data katepart kde-runtime kde-runtime-data kde-style-oxygen kde-window-manager kde-window-manager-common kdelibs-bin kdelibs5-data kdelibs5-plugins kdoctools kubuntu-debug-installer libattica0.4 libbamf3-1 libbison-dev libcompizconfig0 libdlrestrictions1 libencode-locale-perl libfile-listing-perl libfl-dev libflac++6 libfont-afm-perl libgnome-control-center1 libgnome-media-profiles-3.0-0 libgnome2-canvas-perl libgnome2-perl libgnome2-vfs-perl libgnomevfs2-extra libhtml-form-perl libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libibus-1.0-0 libio-socket-ssl-perl libk3b6 libkactivities-bin libkactivities-models1 libkactivities6 libkatepartinterfaces4 libkcddb4 libkcmutils4 libkde3support4 libkdeclarative5 libkdecorations4abi1 libkdecore5 libkdesu5 libkdeui5 libkdewebkit5 libkdnssd4 libkemoticons4 libkfile4 libkhtml5 libkidletime4 libkio5 libkjsapi4 libkjsembed4 libkmediaplayer4 libknewstuff3-4 libknotifyconfig4 libkntlm4 libkparts4 libkpty4 libkrosscore4 libktexteditor4 libkwineffects1abi4 libkwinglutils1abi1 libkwinnvidiahack4 libkworkspace4abi2 libkxmlrpcclient4 liblwp-mediatypes-perl liblwp-protocol-https-perl libmusicbrainz5-0 libmysqlclient18 libnepomuk4 libnepomukcore4abi1 libnepomukquery4a libnepomukutils4 libnet-http-perl libnet-ssleay-perl libntrack-qt4-1 libntrack0 libnux-4.0-0 libphonon4 libplasma3 libpolkit-qt-1-1 libpoppler-qt4-4 libqapt2 libqapt2-runtime libqca2 libqt4-qt3support libqt4-sql-mysql librhythmbox-core6 libsolid4 libsoprano4 libstreamanalyzer0 libstreams0 libthreadweaver4 libunity-core-6.0-5 libunity-misc4 libunity-webapps0 libvirtodbc0 libwww-perl libwww-robotrules-perl libxcb-damage0 libxml2-utils mysql-common nautilus nepomuk-core nepomuk-core-data notification-daemon ntrack-module-libnl-0 odbcinst odbcinst1debian2 oxygen-icon-theme phonon phonon-backend-gstreamer plasma-scriptengine-javascript python-zeitgeist python3-apport python3-dbus.mainloop.qt python3-distupgrade python3-problem-report python3-pyqt4 python3-sip python3-update-manager qapt-batch rhythmbox rhythmbox-data rhythmbox-mozilla rhythmbox-plugin-cdrecorder rhythmbox-plugin-zeitgeist rhythmbox-plugins rhythmbox-ubuntuone shared-desktop-ontologies soprano-daemon ubiquity-frontend-kde ubuntu-release-upgrader-core unity unity-asset-pool unity-common unity-lens-applications unity-lens-files unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video unity-scope-gdrive unity-scope-musicstores unity-scope-video-remote unity-services unity-webapps-service update-manager-core vcdimager virtuoso-minimal virtuoso-opensource-6.1-bin virtuoso-opensource-6.1-common xul-ext-ubufox zeitgeist zeitgeist-core zeitgeist-datahub build-essential debhelper dh-apparmor dpkg-dev firefox-globalmenu g++ g++-4.7 html2text kbuild libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libmail-sendmail-perl libstdc++6-4.7-dev libsys-hostname-long-perl module-assistant openjdk-6-jre openjdk-6-jre-headless openjdk-6-jre-lib po-debconf thunderbird-globalmenu virtualbox-guest-source xchat-indicator" || return 1
             fi
 	fi
@@ -299,7 +421,7 @@ function _mcustomos()
             if [ $ISONLINE == 1 ] ; then
                 installdebonline "ubuntu-system-adjustments mint-mdm-themes mint-local-repository mint-flashplugin mint-flashplugin-11 mint-meta-cinnamon mint-meta-core mint-stylish-addon mintdrivers mint-artwork-cinnamon mintsources mintbackup mintstick mintwifi mint-artwork-gnome mint-themes mint-artwork-common mint-backgrounds-olivia mint-x-icons mintsystem mintwelcome mintinstall mintinstall-icons mintnanny mintupdate mintupload mint-info-cinnamon mint-common mint-mirrors mint-translations cinnamon cinnamon-common cinnamon-screensaver nemo nemo-data nemo-share cdos-upgrade"  || return 1
             else
-                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver mint-artwork-cinnamon mint-artwork-common mint-artwork-gnome mint-backgrounds-olivia mintbackup mint-common mintdrivers mint-flashplugin mint-flashplugin-11 mint-info-cinnamon mintinstall-icons mint-local-repository mint-mdm-themes mint-meta-core mint-mirrors mintnanny mintstick mint-stylish-addon mintsystem mint-themes mint-translations mintupdate cdos-upgrade mintupload mintwelcome mintwifi mint-x-icons gir1.2-gtop-2.0 libfcitx-qt5-0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cdospatchmgr gnome-icon-theme-symbolic" || return 1
+                installdeb "cinnamon cinnamon-common cinnamon-control-center cinnamon-control-center-data cinnamon-screensaver mint-artwork-cinnamon mint-artwork-common mint-artwork-gnome mint-backgrounds-olivia mintbackup mint-common mintdrivers mint-flashplugin mint-flashplugin-11 mint-info-cinnamon mintinstall-icons mint-local-repository mint-mdm-themes mint-meta-core mint-mirrors mintsources mintnanny mintstick mint-stylish-addon mintsystem mint-themes mint-translations mintupdate cdos-upgrade mintupload mintwelcome mintwifi mint-x-icons gir1.2-gtop-2.0 libfcitx-qt5-0 gnome-screenshot gnome-system-monitor libcinnamon-control-center1 nemo nemo-data nemo-share ubuntu-system-adjustments libtimezonemap1 gir1.2-timezonemap-1.0 cdospatchmgr gnome-icon-theme-symbolic" || return 1
             fi
             mountdir || return 1
 	    if [ $ISFROMSRC -eq 1 ] ; then

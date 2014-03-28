@@ -2,91 +2,8 @@ function setcustomenv()
 {
     export BASEOUTNAME=workout_base
     export BASEOUT=$T/$BASEOUTNAME
-    export WSHAREPATH=box@192.168.162.142:/home/box/Workspace/Public/wshare/
-    export SERVERPATH=/home/box/Workspace/Public/wshare/
-}
-
-function mytest()
-{
-    ISONLINE=0
-    BUITSTEP=0
-    IS4LENOVO=0
-    IS4S3G=0
-    IS4TEST=0
-    IS4DEBUG=0
-    ISFROMSRC=0
-    IS4OEM=0
-    ISLOCAL=0
-    ISONSERVER=0
-    if [ -e $BUILDOSSTEP ] ; then
-        BUITSTEP=`cat $BUILDOSSTEP`
-        if [ "$BUITSTEP" -gt 0 ] 2>/dev/null ; then
-            BUITSTEP=$BUITSTEP
-        else
-            BUITSTEP=0
-        fi
-    fi
-
-    for i in "$@"
-    do
-        if [ "$i" == "--online" ] ; then
-            ISONLINE=1
-        elif [ "$i" == "--lenovo" ] ; then
-            IS4LENOVO=1
-        elif [ "$i" == "--s3g" ] ; then
-            IS4S3G=1
-	elif [ "$i" == "--test" ] ; then
-	    IS4TEST=1
-	elif [ "$i" == "--debug" ] ; then
-	    IS4DEBUG=1
-	elif [ "$i" == "--srcbuild" ] ; then
-	    ISFROMSRC=1
-	elif [ "$i" == "--oem" ] ; then
-	    IS4OEM=1
-        elif [ "$i" == "--local" ] ; then
-            ISLOCAL=1
-        elif [ "$i" == "--onserver" ] ; then
-            ISONSERVER=1
-        else
-            if [ "$i" -gt 0 ] 2>/dev/null ; then
-                BUITSTEP=$i
-            elif [ "$i" == 0 ] ; then
-                BUITSTEP=$i
-            fi
-        fi
-    done
-    echo "BUITSTEP = $BUITSTEP"
-
-    T=$(gettop)
-    if [ "$T" ]; then
-        #Install zh_CN deb and Input Method deb.
-        OUTPATH=$OUT/out
-        APPPATH=$OUT/$PREAPP
-
-        if [ $BUITSTEP -le 30 ] ; then
-            if [ $ISONSERVER -eq 1 ] ; then
-                echo "begin mkworkoutdir onserver"
-                mkworkoutdir $SERVERPATH
-            else
-                if [ $ISLOCAL -eq 1 ] ; then
-                    if [ ! -d $BASEOUT ] ; then
-                        echo "Error! workout_base dir not found.Please execute _mbaseos 0"
-                        return 1
-                    else
-                        echo "begin mkworkoutdir onlocal"
-                        mkworkoutdir $BASEOUT
-                    fi
-                else
-                    echo "rsync -av --delete --progress $WSHAREPATH $OUT from server"
-                    rsync -av --delete --exclude="cdos*.iso" --progress $WSHAREPATH $OUT
-                    uniso || return 1
-                fi
-            fi
-#            sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
-        fi
-    else
-        echo "Couldn't locate the top of the tree.  Try setting TOP."
-    fi
+    export WSHAREPATH=box@192.168.162.142:/home/box/Workspace/Public/wshare
+    export SERVERPATH=/home/box/Workspace/Public/wshare
 }
 
 function mkworkoutdir()
@@ -117,12 +34,15 @@ function mkworkoutdir()
         ln -s $1/$APPOUT $OUT/$APPOUT
 
         echo "rsync out"
-        rsync -av --delete --progress $1/out/ $OUT/out
-        if [ -d $OUT/$RAWSQUASHFSNAME ]; then
-            sudo rm -rf $OUT/$RAWSQUASHFSNAME
+        if [ -d $OUT/out ]; then
+#            sudo rm -rf $OUT/out
+            cclean out -y
         fi
-        echo "rsync $RAWSQUASHFSNAME"
-        rsync -av --progress $1/$RAWSQUASHFSNAME $OUT
+#        rsync -av --progress $1/out/ $OUT/out
+        if [ -d $1/out ]; then
+            cp -a $1/out $OUT/out
+        fi
+
         echo "uniso $RAWSQUASHFSNAME"
         uniso || return 1
     else
@@ -192,6 +112,7 @@ function _mbaseos()
         echo Building $OSFULLNAME...
         if [ $BUITSTEP -le 10 ] ; then
             echo 10 >$BUILDOSSTEP
+#            getprepkg || return 1
             getcustomprepkg || return 1
         fi
         if [ $BUITSTEP -le 20 ] ; then
@@ -213,11 +134,14 @@ function _mbaseos()
             echo "mksquashfs"
             sudo mksquashfs $OUT/out/squashfs-root $OUT/$RAWSQUASHFSNAME
             echo "rm $OUT/out/squashfs-root"
-            sudo rm -rf $OUT/out/squashfs-root
+#            sudo rm -rf $OUT/out/squashfs-root
+            cclean out -y
 
             if [ $ISONSERVER -eq 1 ] ; then  #若jenkins，则需要上传baseos内容
                 echo "rsync to jenkins"
-                rsync -av --delete --progress $OUT/ $SERVERPATH
+#                rsync -av --delete --progress $OUT/ $SERVERPATH
+                rm -rf $SERVERPATH/*
+                rsync -av --progress $OUT/ $SERVERPATH
             else 
                 if [ -d $BASEOUT ]; then
                     sudo rm -rf $BASEOUT
@@ -303,12 +227,16 @@ function _mcustomos()
                         mkworkoutdir $BASEOUT
                     fi
                 else
-                    echo "rsync -av --delete --progress $WSHAREPATH $OUT from server"
-                    rsync -av --delete --exclude="cdos*.iso" --progress $WSHAREPATH $OUT
+                    if [ -d $OUT ]; then
+                        cclean out -y
+                        sudo rm -rf $APPPATH $OUT/$RAWSQUASHFSNAME $OUT/$REPODIRNAME $OUT/$APPOUT
+                    fi
+                    
+                    echo "rsync -av --delete --progress $WSHAREPATH/ $OUT from server"
+                    rsync -av --delete --exclude="cdos*.iso" --progress $WSHAREPATH/ $OUT
                     uniso || return 1
                 fi
             fi
-#            sudo sh $T/build/livecd/create_livecd.sh $OUT/out || return 1
         fi
 
 	if [ $BUITSTEP -le 31 ] ; then

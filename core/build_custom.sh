@@ -59,6 +59,7 @@ function getbaseprepkg ()
             mkdir $OUT
         fi
         cd $(gettop)
+        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $WSHAREPATH/$RAWSQUASHFSNAME $RAWPREAPPADDRESS || return 1
         addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
         addrepository $OUT/$PREAPP/fcitx-frontend-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
         addrepository $OUT/$PREAPP/fcitx-libs-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
@@ -144,8 +145,8 @@ function _mbaseos()
                 rm -rf $SERVERPATH/*
                 rsync -av --progress $OUT/$RAWSQUASHFSNAME $SERVERPATH
                 rsync -av --delete --progress $OUT/$APPOUT $SERVERPATH
-                rsync -av --delete --progress $OUT/$REPOSITORY $SERVERPATH
-                rsync -av --delete --progress $SERVERAPPPATH $SERVERPATH
+                rsync -av --delete --progress $REPOSITORY $SERVERPATH
+                rsync -av --delete --progress $OUT/$PREAPP $SERVERPATH
             else 
                 if [ -d $BASEOUT ]; then
                     sudo rm -rf $BASEOUT

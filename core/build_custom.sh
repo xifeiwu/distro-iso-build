@@ -4,6 +4,7 @@ function setcustomenv()
     export BASEOUT=$T/$BASEOUTNAME
     export WSHAREPATH=box@192.168.162.142:/home/box/Workspace/Public/wshare
     export SERVERPATH=/home/box/Workspace/Public/wshare
+    export SERVERAPPPATH=/home/box/Workspace/Public/app
 }
 
 function mkworkoutdir()
@@ -50,7 +51,7 @@ function mkworkoutdir()
     fi
 }
 
-function getcustomprepkg ()
+function getbaseprepkg ()
 {
     T=$(gettop)
     if [ "$T" ]; then
@@ -58,9 +59,9 @@ function getcustomprepkg ()
             mkdir $OUT
         fi
         cd $(gettop)
-        sh $T/build/core/getprepackage.sh $OUT $OUT/$PREAPP $WSHAREPATH/$RAWSQUASHFSNAME $RAWPREAPPADDRESS || return 1
         addrepository $OUT/$PREAPP/gir1.2-gtop-2.0_2.28.4-3_i386.deb || return 1
-        addrepository $OUT/$PREAPP/libfcitx-qt5-0_0.1.1-2_i386.deb || return 1
+        addrepository $OUT/$PREAPP/fcitx-frontend-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
+        addrepository $OUT/$PREAPP/fcitx-libs-qt5_0.1.1-0~22~ubuntu13.04.1_i386.deb || return 1
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
         return 1
@@ -113,7 +114,7 @@ function _mbaseos()
         if [ $BUITSTEP -le 10 ] ; then
             echo 10 >$BUILDOSSTEP
 #            getprepkg || return 1
-            getcustomprepkg || return 1
+            getbaseprepkg || return 1
         fi
         if [ $BUITSTEP -le 20 ] ; then
             echo 20 >$BUILDOSSTEP
@@ -127,6 +128,7 @@ function _mbaseos()
 	    mrootbuilder || return 1  
         fi
         if [ $BUITSTEP -le 26 ] ; then
+            echo 26 >$BUILDOSSTEP
             if [ -e $OUT/$RAWSQUASHFSNAME ]; then
                 echo "rm $RAWSQUASHFSNAME"
                 sudo rm -rf $OUT/$RAWSQUASHFSNAME
@@ -134,14 +136,16 @@ function _mbaseos()
             echo "mksquashfs"
             sudo mksquashfs $OUT/out/squashfs-root $OUT/$RAWSQUASHFSNAME
             echo "rm $OUT/out/squashfs-root"
-#            sudo rm -rf $OUT/out/squashfs-root
-            cclean out -y
+#            cclean out -y
 
             if [ $ISONSERVER -eq 1 ] ; then  #若jenkins，则需要上传baseos内容
                 echo "rsync to jenkins"
 #                rsync -av --delete --progress $OUT/ $SERVERPATH
                 rm -rf $SERVERPATH/*
-                rsync -av --progress $OUT/ $SERVERPATH
+                rsync -av --progress $OUT/$RAWSQUASHFSNAME $SERVERPATH
+                rsync -av --delete --progress $OUT/$APPOUT $SERVERPATH
+                rsync -av --delete --progress $OUT/$REPOSITORY $SERVERPATH
+                rsync -av --delete --progress $SERVERAPPPATH $SERVERPATH
             else 
                 if [ -d $BASEOUT ]; then
                     sudo rm -rf $BASEOUT
@@ -214,6 +218,7 @@ function _mcustomos()
         APPPATH=$OUT/$PREAPP
 
         if [ $BUITSTEP -le 30 ] ; then
+            echo 30 >$BUILDOSSTEP
             if [ $ISONSERVER -eq 1 ] ; then
                 echo "begin mkworkoutdir onserver"
                 mkworkoutdir $SERVERPATH

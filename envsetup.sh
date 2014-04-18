@@ -478,8 +478,7 @@ function mall()
             fi
             echo Finish checking building deb packages
         fi
-        echo ===
-        echo ===================Building all deb packages=======================
+        echo "===================Building all deb packages======================="
         echo
         for maindir in $BUILDOSDIRS
         do

@@ -581,10 +581,10 @@ function mrootbuilder()
 
     # stage1.1 install close source pkgs (Third party packages not in official)
     echo "------------------------------stage1.1------------------------------------------"
-    sudo mkdir $OUT/out/squashfs-root/3rdpart
-    sudo cp  $T/build/core/srcbuild/3rdpart/*.deb $OUT/out/squashfs-root/3rdpart
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd 3rdpart && dpkg -i *.deb"
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf 3rdpart"
+    sudo mkdir $OUT/out/squashfs-root/3rdpart || return
+    sudo cp  $T/build/core/srcbuild/3rdpart/*.deb $OUT/out/squashfs-root/3rdpart || return
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd 3rdpart && dpkg -i *.deb" || return
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf 3rdpart" || return
 
     # stage 2
     echo "------------------------------stage2------------------------------------------"

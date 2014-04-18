@@ -584,7 +584,7 @@ function mrootbuilder()
         if [ $? -ne 0 ];then
                 echo $pkgsname >>  $T/build/core/srcbuild/fail_stage1
         fi
-    done < $T/build/core/srcbuild/filesystem.manifest
+    done < $T/build/core/srcbuild/filesystem.manifest.debinstall
 
     # stage 2
     echo "------------------------------stage2------------------------------------------"

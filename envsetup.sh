@@ -568,6 +568,13 @@ function mrootbuilder()
     sudo rm -f $T/build/core/srcbuild/fail_stage3
     sudo chroot $OUT/out/squashfs-root /bin/bash -c "apt-get -y -f install" || return 1
 
+    # stage0 install close source pkgs (Third party packages not in official)
+    echo "------------------------------stage0------------------------------------------"
+    sudo mkdir $OUT/out/squashfs-root/3rdpart || return
+    sudo cp  $T/build/core/srcbuild/3rdpart/*.deb $OUT/out/squashfs-root/3rdpart || return
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd 3rdpart && dpkg -i *.deb" || return
+    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf 3rdpart" || return
+
     # stage1
     echo "------------------------------stage1------------------------------------------"
     while read list
@@ -578,13 +585,6 @@ function mrootbuilder()
                 echo $pkgsname >>  $T/build/core/srcbuild/fail_stage1
         fi
     done < $T/build/core/srcbuild/filesystem.manifest
-
-    # stage1.1 install close source pkgs (Third party packages not in official)
-    echo "------------------------------stage1.1------------------------------------------"
-    sudo mkdir $OUT/out/squashfs-root/3rdpart || return
-    sudo cp  $T/build/core/srcbuild/3rdpart/*.deb $OUT/out/squashfs-root/3rdpart || return
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "cd 3rdpart && dpkg -i *.deb" || return
-    sudo chroot $OUT/out/squashfs-root /bin/bash -c "rm -rf 3rdpart" || return
 
     # stage 2
     echo "------------------------------stage2------------------------------------------"
